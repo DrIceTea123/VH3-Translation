@@ -63,4 +63,14 @@ public final class VpCompatibility {
         if (removed != 1) throw new IllegalStateException("Expected exactly one VP ownership group; got " + removed);
         return result;
     }
+
+    /** 发布输入可能已经移除接管规则；无冲突时原样复制，有一组时迁移，重复组仍报错。 */
+    public static JsonArray prepareConfiguration(JsonArray original, PatchSpec spec) {
+        for (JsonElement element : original) {
+            if (element.isJsonObject() && ownsMethod(element.getAsJsonObject(), spec)) {
+                return withoutOwnedMethod(original, spec);
+            }
+        }
+        return original.deepCopy();
+    }
 }

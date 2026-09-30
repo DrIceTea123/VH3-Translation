@@ -10,6 +10,8 @@ dependencies {
 def targetJar = providers.gradleProperty('vaultJar').map { rootProject.file(it) }
         .getOrElse(rootProject.file('../../origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar'))
 def vpSource = rootProject.file('../program/基础+硬编码汉化/config/vaultpatcher_asm/the_vault-asm_complex.json')
+// 工程已移除接管规则；旧规则仅用于导入及冲突回归测试，不再随汉化配置发布。
+def vpLegacySource = rootProject.file('translations/vp/combat_stats.json')
 
 tasks.named('processResources') {
     inputs.property 'mod_version', project.version
@@ -21,9 +23,11 @@ tasks.named('jar') {
 }
 tasks.named('test') {
     inputs.file targetJar
-    inputs.file vpSource
+    inputs.dir vpSource.parentFile
+    inputs.file vpLegacySource
     systemProperty 'vh3.test.targetJar', targetJar.absolutePath
-    systemProperty 'vh3.test.vpSource', vpSource.absolutePath
+    systemProperty 'vh3.test.vpSource', vpLegacySource.absolutePath
+    systemProperty 'vh3.test.programVpDirectory', vpSource.parentFile.absolutePath
 }
 tasks.register('verifyTarget', JavaExec) {
     dependsOn classes
@@ -41,7 +45,7 @@ tasks.register('importMobNames', JavaExec) {
     dependsOn classes
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'com.dricetea.vh3patch.transformer.PatchTool'
-    args 'import-names', vpSource.absolutePath, targetJar.absolutePath, rootProject.projectDir.absolutePath
+    args 'import-names', vpLegacySource.absolutePath, targetJar.absolutePath, rootProject.projectDir.absolutePath
 }
 tasks.register('prepareVpConfig', JavaExec) {
     dependsOn classes

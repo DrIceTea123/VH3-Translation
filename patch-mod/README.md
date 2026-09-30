@@ -11,7 +11,7 @@
 | Minecraft / Java | 1.18.2 / JDK 17 |
 | Forge | 40.3.11 |
 | 整合包 / 核心 mod | 3.21.7 / 1.18.2-3.21.6.6884 |
-| 补丁原型 | 0.1.0 |
+| 补丁版本 | 1.0.1 |
 | Gradle / ForgeGradle | 8.8 / 6.0.54 |
 | ModLauncher / ASM | 9.1.3 / 9.7.1 |
 
@@ -46,12 +46,18 @@
 
 构建产物在 `build/distribution/`：
 
-- `vh3_translation_patch-transformer-0.1.0.jar`
-- `vh3_translation_patch-0.1.0.jar`
+- `vh3_translation_patch-transformer-1.0.1.jar`
+- `vh3_translation_patch-1.0.1.jar`
 - `compat/config/vaultpatcher_asm/the_vault-asm_complex.json`
 - `compat/vp-migration-report.json`
 
-`build` 包括测试、目标 JAR 哈希与方法摘要检查、转换后字节码分析和发布映射处理；不会启动游戏、安装文件或提交 Git。
+`build` 包括测试、目标 JAR 哈希与方法摘要检查、转换后字节码分析和发布映射处理；不会启动游戏、修改游戏实例或提交 Git。
+
+完整 `build` 通过后会执行 `exportToProgram`，将两个同版本 JAR 复制到 `../program/基础+硬编码汉化/mods/`，逐字节验证复制结果，并仅删除此目录中本补丁的旧版 JAR。其他模组文件不受影响。JAR 继续按仓库现有规则忽略，不自动纳入 Git。
+
+版本号在 `gradle.properties` 的 `mod_version` 中维护，采用 `1.x.x`，本次从 `1.0.1` 开始。普通修改为 `1.0.1 → 1.0.2 → 1.0.3`；依赖的 the_vault 核心版本更新时小版本号和修订号均加一，例如 `1.0.3 → 1.1.4`，**修订号始终不重置**。编译重试或对同一份内容重复打包不重复递增。`check`、`test` 和 `distribution` 本身不复制到工程，完整 `build` 或单独 `exportToProgram` 才会执行验证后的复制。
+
+普通修改完成后执行 `.\build.ps1 -BumpPatch`，将修订号加一并构建、导出。核心版本适配需先审查并更新目标清单和依赖，再执行 `.\build.ps1 -BumpCore`，同时将小版本号和修订号加一。脚本不自动猜测上游版本变化。同一轮失败重试用 `.\build.ps1`，不要再次带递增参数；首次 `1.0.1` 已写入配置，直接构建即可。
 
 可单独运行：
 
@@ -94,12 +100,14 @@
 
 ## VP 共存与首次联测
 
-生成的兼容文件只删除由本补丁接管的一个 `formatMobName` 规则组；其他 JSON 规则语义保持一致。现有 `program/` 配置不被修改。
+`program/` 中原有的 `formatMobName` 规则已经替换为 `_comment`，原位置说明结算怪物名称由 VTP 的 `combat_stats` 模块接管。其他规则保留。旧规则的 237 对词条另存于 `translations/vp/combat_stats.json`，仅供导入和冲突回归测试，不发布到 VP 配置目录。
+
+兼容配置生成工具现在支持已迁移输入：没有接管规则时原样复制（含接管注释），有一组时移除，存在重复组仍报错。构建不再反复改写 `program/`；当前迁移报告的 `removedGroups` 为 0 是正常情况。
 
 后续在独立测试副本中联测时：
 
 1. 同时放入两个同版本 JAR。
-2. 先使用当前工程的 main/long/complex 三份配置及对应 config.json；备份测试副本的 `the_vault-asm_complex.json`，对照迁移报告，再使用生成的兼容文件。旧 ulti 布局应先按 `docs/maintenance/vp-asm-layout.md` 完成重组；若测试副本配置与当前工程不同，应先合并差异，不直接覆盖。
+2. 使用当前工程已移除接管规则的 main/long/complex 三份配置及对应 config.json，或使用构建生成的兼容文件。备份测试副本中的旧配置后再合并更新。旧 ulti 布局应先按 `docs/maintenance/vp-asm-layout.md` 完成重组；若测试副本配置与当前工程不同，应先合并差异，不直接覆盖。
 3. 处理 VP 旧缓存。首次测试建议在测试副本的 `config/vaultpatcher_asm/config.json` 中设置 `debug_mode.use_cache=false`；工程和真实实例的配置不会由本构建脚本自动更改。
 4. 检查启动日志的 preflight 消息和目标类加载时的 applied 消息，验证结算页，以及编辑配置后 F3+T 重载、错误配置保留旧值的行为。
 5. 需要回退时，移除两个 JAR 并恢复旧 VP 配置，重新处理缓存。

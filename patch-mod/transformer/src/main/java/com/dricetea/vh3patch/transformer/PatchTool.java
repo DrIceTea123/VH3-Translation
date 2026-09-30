@@ -67,7 +67,7 @@ public final class PatchTool {
                 JsonArray original = readJson(input).getAsJsonArray();
                 JsonArray migrated = original;
                 for (PatchModule module : PatchModules.all()) {
-                    migrated = VpCompatibility.withoutOwnedMethod(migrated, module.spec());
+                    migrated = VpCompatibility.prepareConfiguration(migrated, module.spec());
                 }
                 writeJson(output.resolve("config/vaultpatcher_asm/" + input.getFileName()),
                         migrated);
@@ -77,7 +77,7 @@ public final class PatchTool {
                 report.addProperty("retainedGroups", migrated.size());
                 report.addProperty("sourceUnmodified", true);
                 writeJson(output.resolve("vp-migration-report.json"), report);
-                System.out.println("Generated VP compatibility copy; removed registered modules' owned method groups.");
+                System.out.println("Generated VP compatibility copy; removed groups: " + (original.size() - migrated.size()));
             }
             case "import-names" -> importNames(input, Path.of(args[2]), Path.of(args[3]), new CombatStatsModule().spec());
             default -> throw new IllegalArgumentException("Unknown command: " + args[0]);

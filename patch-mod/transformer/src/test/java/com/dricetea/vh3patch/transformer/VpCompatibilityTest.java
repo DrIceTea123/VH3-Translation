@@ -36,4 +36,23 @@ class VpCompatibilityTest {
         JsonArray compatible = VpCompatibility.withoutOwnedMethod(PatchTool.readJson(vpSource).getAsJsonArray(), spec);
         assertThrows(IllegalStateException.class, () -> VpCompatibility.withoutOwnedMethod(compatible, spec));
     }
+
+    @Test void currentProgramIsCompatibleAndKeepsTakeoverComment() throws Exception {
+        Path directory = Path.of(System.getProperty("vh3.test.programVpDirectory"));
+        assertDoesNotThrow(() -> VpCompatibility.assertCompatible(directory, spec));
+        JsonArray current = PatchTool.readJson(directory.resolve("the_vault-asm_complex.json")).getAsJsonArray();
+        assertEquals(current, VpCompatibility.prepareConfiguration(current, spec));
+        assertTrue(java.util.stream.StreamSupport.stream(current.spliterator(), false).anyMatch(item -> item.isJsonObject()
+                && item.getAsJsonObject().has("_comment")
+                && item.getAsJsonObject().get("_comment").getAsString().contains("VTP")
+                && item.getAsJsonObject().get("_comment").getAsString().contains("combat_stats")));
+    }
+
+    @Test void publishedPreparationRemovesSingleConflictButRejectsDuplicates() throws Exception {
+        JsonArray source = PatchTool.readJson(vpSource).getAsJsonArray();
+        assertEquals(VpCompatibility.withoutOwnedMethod(source, spec), VpCompatibility.prepareConfiguration(source, spec));
+        JsonArray duplicate = source.deepCopy();
+        duplicate.addAll(source.deepCopy());
+        assertThrows(IllegalStateException.class, () -> VpCompatibility.prepareConfiguration(duplicate, spec));
+    }
 }

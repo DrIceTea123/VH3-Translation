@@ -31,4 +31,39 @@ tasks.register('distribution', Sync) {
     from(project(':transformer').layout.buildDirectory.dir('compat')) { into 'compat' }
 }
 tasks.named('check') { dependsOn ':transformer:check', ':runtime:check', ':transformer:verifyTarget' }
-tasks.named('build') { dependsOn ':transformer:build', ':runtime:build', 'distribution' }
+tasks.register('exportToProgram') {
+    group = 'distribution'
+    description = 'Verify and export the latest paired patch JARs to the translation program.'
+    dependsOn 'check', 'distribution'
+    doLast {
+        if (!(project.version.toString() ==~ /1\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)/)) {
+            throw new GradleException('Export requires a 1.x.x mod_version in gradle.properties')
+        }
+        def names = ["vh3_translation_patch-${project.version}.jar".toString(),
+                     "vh3_translation_patch-transformer-${project.version}.jar".toString()]
+        def source = layout.buildDirectory.dir('distribution').get().asFile.toPath()
+        def destination = rootProject.file('../program/基础+硬编码汉化/mods').toPath().toAbsolutePath().normalize()
+        // 只处理本项目的两个 JAR；不能对整个 mods 使用 Sync，否则会删掉其他模组。
+        names.each { name ->
+            if (!java.nio.file.Files.isRegularFile(source.resolve(name))) {
+                throw new GradleException("Missing paired artifact: ${name}")
+            }
+        }
+        java.nio.file.Files.createDirectories(destination)
+        names.each { name ->
+            java.nio.file.Files.copy(source.resolve(name), destination.resolve(name),
+                    java.nio.file.StandardCopyOption.REPLACE_EXISTING)
+            if (java.nio.file.Files.mismatch(source.resolve(name), destination.resolve(name)) != -1L) {
+                throw new GradleException("Export verification failed: ${name}")
+            }
+        }
+        // 新配套文件均已复制并验证后，只清理此目录内本补丁旧版本，避免重复加载。
+        destination.toFile().listFiles()?.findAll { entry ->
+            entry.isFile() && (entry.name ==~ /vh3_translation_patch(-transformer)?-[0-9]+\.[0-9]+\.[0-9]+\.jar/) &&
+                    !names.contains(entry.name)
+        }?.each { entry -> java.nio.file.Files.delete(entry.toPath()) }
+        logger.lifecycle("Exported ${project.version}: ${destination}")
+    }
+}
+
+tasks.named('build') { dependsOn ':transformer:build', ':runtime:build', 'exportToProgram' }
