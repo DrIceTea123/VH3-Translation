@@ -80,7 +80,7 @@ Source: "{tmp}\{#I18nDlName}"; DestDir: "{app}\mods\"; Flags: external ; Compone
 Source: "{tmp}\{#VmctDlName}"; DestDir: "{app}\mods\"; Flags: external ; Components: vmct;
 Source: "{tmp}\{#JechDlName}"; DestDir: "{app}\mods\"; Flags: external ; Components: jech;
 Source: "{tmp}\{#OculusDlName}"; DestDir: "{app}\mods\"; Flags: external ; Components: ocu;
-Source: "..\..\7z\*"; DestDir: "{tmp}\7z"; Flags: ignoreversion ; Components: basic;
+Source: "..\..\iss-7z\*"; DestDir: "{tmp}\7z"; Flags: ignoreversion ; Components: basic;
 
 [Run]
 Filename: "{cmd}"; Parameters: "/c start https://www.bilibili.com/read/cv25168950/"; Flags: shellexec postinstall unchecked ; Description: "前往汉化专栏点赞投币！"
