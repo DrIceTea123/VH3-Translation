@@ -1,6 +1,7 @@
 package com.dricetea.vh3patch.transformer;
 
 import com.google.gson.*;
+import com.dricetea.vh3patch.transformer.modules.CombatStatsModule;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.tree.ClassNode;
 
@@ -12,7 +13,7 @@ import java.util.Locale;
 import java.util.Set;
 import java.util.jar.JarFile;
 
-/** Offline commands only; never writes to the input JAR or live game configuration. */
+/** 离线工具：只生成工作产物，不修改上游 JAR 或玩家的游戏配置。 */
 public final class PatchTool {
     private static final Gson JSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
     private static final Set<String> VANILLA = Set.of("chicken", "zombie", "husk", "drowned", "skeleton",
@@ -23,48 +24,62 @@ public final class PatchTool {
 
     public static void main(String[] args) throws Exception {
         if (args.length < 2) throw new IllegalArgumentException("inspect|verify|prepare-vp|import-names <input> [output]");
-        PatchSpec spec = PatchSpec.load();
         Path input = Path.of(args[1]);
         switch (args[0]) {
             case "inspect" -> {
-                ClassNode node = TargetJar.read(input, spec, true);
-                System.out.println("method.sha256=" + MethodFingerprint.of(new MobNamePatch(spec).target(node)));
+                for (PatchModule module : PatchModules.all()) {
+                    ClassNode node = TargetJar.read(input, module.spec(), true);
+                    System.out.println(module.spec().moduleId() + ".method.sha256=" + MethodFingerprint.of(module.target(node)));
+                }
             }
             case "verify" -> {
                 Path output = Path.of(args[2]);
-                ClassNode node = TargetJar.read(input, spec, true);
-                new MobNamePatch(spec).apply(node);
-                ClassWriter writer = new ClassWriter(0);
-                node.accept(writer);
-                Path classFile = output.resolve(spec.className() + ".class");
-                Files.createDirectories(classFile.getParent());
-                Files.write(classFile, writer.toByteArray());
-                JsonObject report = new JsonObject();
-                report.addProperty("targetVersion", spec.targetVersion());
-                report.addProperty("jarSha256", spec.jarHash());
-                report.addProperty("method", spec.className() + "." + spec.methodName() + spec.descriptor());
-                report.addProperty("fingerprintAlgorithm", "asm-method-v1");
-                report.addProperty("methodSha256", spec.fingerprint());
-                report.addProperty("returnHooks", spec.returnCount());
-                report.addProperty("bytecodeAnalysis", "passed");
-                report.addProperty("gameTested", false);
-                writeJson(output.resolve("report.json"), report);
+                JsonArray reports = new JsonArray();
+                for (var group : PatchModules.byClass().values()) {
+                    ClassNode node = TargetJar.read(input, group.get(0).spec(), true);
+                    for (PatchModule module : group) {
+                        PatchSpec spec = module.spec();
+                        TargetJar.read(input, spec, true);
+                        module.apply(node);
+                        JsonObject report = new JsonObject();
+                        report.addProperty("module", spec.moduleId());
+                        report.addProperty("targetVersion", spec.targetVersion());
+                        report.addProperty("jarSha256", spec.jarHash());
+                        report.addProperty("method", spec.className() + "." + spec.methodName() + spec.descriptor());
+                        report.addProperty("fingerprintAlgorithm", "asm-method-v1");
+                        report.addProperty("methodSha256", spec.fingerprint());
+                        report.addProperty("returnHooks", spec.returnCount());
+                        report.addProperty("bytecodeAnalysis", "passed");
+                        report.addProperty("gameTested", false);
+                        reports.add(report);
+                    }
+                    ClassWriter writer = new ClassWriter(0);
+                    node.accept(writer);
+                    Path classFile = output.resolve(node.name + ".class");
+                    Files.createDirectories(classFile.getParent());
+                    Files.write(classFile, writer.toByteArray());
+                }
+                writeJson(output.resolve("report.json"), reports);
                 System.out.println("Target hash, method fingerprint and bytecode verification passed.");
             }
             case "prepare-vp" -> {
                 Path output = Path.of(args[2]);
                 JsonArray original = readJson(input).getAsJsonArray();
+                JsonArray migrated = original;
+                for (PatchModule module : PatchModules.all()) {
+                    migrated = VpCompatibility.withoutOwnedMethod(migrated, module.spec());
+                }
                 writeJson(output.resolve("config/vaultpatcher_asm/" + input.getFileName()),
-                        VpCompatibility.withoutOwnedMethod(original, spec));
+                        migrated);
                 JsonObject report = new JsonObject();
                 report.addProperty("inputSha256", MethodFingerprint.sha256(Files.readAllBytes(input)));
-                report.addProperty("removedGroups", 1);
-                report.addProperty("retainedGroups", original.size() - 1);
+                report.addProperty("removedGroups", original.size() - migrated.size());
+                report.addProperty("retainedGroups", migrated.size());
                 report.addProperty("sourceUnmodified", true);
                 writeJson(output.resolve("vp-migration-report.json"), report);
-                System.out.println("Generated VP compatibility copy; removed exactly one owned method group.");
+                System.out.println("Generated VP compatibility copy; removed registered modules' owned method groups.");
             }
-            case "import-names" -> importNames(input, Path.of(args[2]), Path.of(args[3]), spec);
+            case "import-names" -> importNames(input, Path.of(args[2]), Path.of(args[3]), new CombatStatsModule().spec());
             default -> throw new IllegalArgumentException("Unknown command: " + args[0]);
         }
     }
@@ -94,11 +109,12 @@ public final class PatchTool {
             if (english.has("entity.the_vault." + path)) namespace = "the_vault";
             else if (VANILLA.contains(path)) namespace = "minecraft";
             else { unresolved.add(item.deepCopy()); continue; }
-            String key = "vh3_translation_patch.mob." + namespace + "." + path;
+            // 仅此模块以实体路径查表；语言文件用于核实来源，不作为运行期配置格式。
+            String key = path;
             if (translated.has(key)) throw new IllegalStateException("Duplicate import key: " + key);
             translated.add(key, item.get("value"));
         }
-        writeJson(output.resolve("runtime/src/main/resources/assets/vh3_translation_patch/lang/zh_cn.json"), translated);
+        writeJson(output.resolve("runtime/src/main/resources/" + spec.defaultConfigResource()), translated);
         JsonObject report = new JsonObject();
         report.addProperty("sourceSha256", MethodFingerprint.sha256(Files.readAllBytes(vpSource)));
         report.addProperty("sourceCount", allPairs.size());
@@ -106,7 +122,7 @@ public final class PatchTool {
         report.add("unresolved", unresolved);
         report.add("originalPairs", allPairs);
         writeJson(output.resolve("translations/mob-name-import.json"), report);
-        System.out.println("Imported " + translated.size() + " ID-scoped overrides; preserved " + unresolved.size()
+        System.out.println("Imported " + translated.size() + " module mappings; preserved " + unresolved.size()
                 + " unresolved legacy names in the import report.");
     }
 

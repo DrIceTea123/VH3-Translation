@@ -8,11 +8,16 @@ import org.objectweb.asm.tree.analysis.BasicVerifier;
 
 import java.util.List;
 
-/** Never loads Minecraft or the_vault classes in the SERVICE layer. */
-public final class MobNamePatch {
+/** 通用返回值钩子：仅适用于实例方法 (String)String，不承担任何模块的翻译逻辑。 */
+public final class StringReturnPatch {
     private final PatchSpec spec;
 
-    public MobNamePatch(PatchSpec spec) { this.spec = spec; }
+    public StringReturnPatch(PatchSpec spec) {
+        if (!spec.descriptor().equals("(Ljava/lang/String;)Ljava/lang/String;")) {
+            throw new IllegalArgumentException("StringReturnPatch requires an instance (String)String method");
+        }
+        this.spec = spec;
+    }
 
     public MethodNode target(ClassNode node) {
         if (!node.name.equals(spec.className())) throw new IllegalStateException("Wrong target class: " + node.name);
@@ -25,7 +30,7 @@ public final class MobNamePatch {
     public void apply(ClassNode node) {
         MethodNode original = target(node);
         for (AbstractInsnNode instruction : original.instructions) {
-            if (instruction instanceof MethodInsnNode call && call.owner.equals(PatchSpec.HELPER)) {
+            if (instruction instanceof MethodInsnNode call && call.owner.equals(spec.helperClass())) {
                 throw new IllegalStateException("Patch already applied; check duplicate installations");
             }
         }
@@ -37,6 +42,7 @@ public final class MobNamePatch {
         if ((original.access & (Opcodes.ACC_STATIC | Opcodes.ACC_ABSTRACT | Opcodes.ACC_NATIVE)) != 0) {
             throw new IllegalStateException("Unexpected target method access flags");
         }
+        // 先改副本，只有摘要、返回点数量和字节码分析全部通过，才替换原方法。
         MethodNode patched = new MethodNode(Opcodes.ASM9, original.access, original.name, original.desc,
                 original.signature, original.exceptions.toArray(String[]::new));
         original.accept(patched);
@@ -46,14 +52,15 @@ public final class MobNamePatch {
                 InsnList hook = new InsnList();
                 hook.add(new VarInsnNode(Opcodes.ALOAD, 1));
                 hook.add(new InsnNode(Opcodes.SWAP));
-                hook.add(new MethodInsnNode(Opcodes.INVOKESTATIC, PatchSpec.HELPER, "translate",
+                hook.add(new MethodInsnNode(Opcodes.INVOKESTATIC, spec.helperClass(), "translate",
                         PatchSpec.HELPER_DESCRIPTOR, false));
                 patched.instructions.insertBefore(instruction, hook);
                 returns++;
             }
         }
         if (returns != spec.returnCount()) throw new IllegalStateException("Unexpected return count: " + returns);
-        // The hook consumes [fallback, id] and leaves one String, so existing frames remain valid.
+        // 返回前已有原结果；压入原始参数再交换，交给 translate(原始参数, 原结果)。
+        // 调用后仍只有一个 String，原栈帧保持有效。
         patched.maxStack = Math.max(patched.maxStack, 2);
         try {
             new Analyzer<>(new BasicVerifier()).analyze(node.name, patched);

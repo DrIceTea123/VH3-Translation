@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.jar.JarFile;
 
+/** 只读上游 JAR：先校验完整文件，再解析目标类；任何生成结果均写入构建目录。 */
 public final class TargetJar {
     private TargetJar() {}
 

@@ -11,7 +11,7 @@ import java.util.HexFormat;
 import java.util.IdentityHashMap;
 import java.util.Set;
 
-/** Version 1: ignore frames, line numbers, local names and unused debug labels. */
+/** 摘要算法 v1：忽略栈帧、行号、局部变量名和无用调试标签，只在副本上归一化。 */
 public final class MethodFingerprint {
     private MethodFingerprint() {}
 
@@ -22,6 +22,7 @@ public final class MethodFingerprint {
         copy.localVariables = null;
         copy.visibleLocalVariableAnnotations = null;
         copy.invisibleLocalVariableAnnotations = null;
+        // 跳转与异常处理所依赖的标签必须保留，不能把真实控制流当作调试信息删掉。
         Set<LabelNode> used = Collections.newSetFromMap(new IdentityHashMap<>());
         for (AbstractInsnNode instruction : copy.instructions) {
             if (instruction instanceof JumpInsnNode jump) used.add(jump.label);

@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Set;
 
 public final class VpCompatibility {
     private VpCompatibility() {}
@@ -16,11 +15,11 @@ public final class VpCompatibility {
         JsonObject target = rule.getAsJsonObject("target_class");
         if (!target.has("name") || !target.get("name").getAsString().replace('.', '/').equals(spec.className())) return false;
         if (target.has("method")) return spec.methodName().equals(target.get("method").getAsString());
-        // Class-wide rules are retained unless they modify literals actually used by this method.
+        // 仅当整类规则修改了该模块声明的相关常量时，才判定它与方法补丁冲突。
         if (rule.has("pairs") && rule.get("pairs").isJsonArray()) {
             for (JsonElement pair : rule.getAsJsonArray("pairs")) {
                 if (pair.isJsonObject() && pair.getAsJsonObject().has("key")
-                        && Set.of(":", "_", " ").contains(pair.getAsJsonObject().get("key").getAsString())) return true;
+                        && spec.ownedLiterals().contains(pair.getAsJsonObject().get("key").getAsString())) return true;
             }
         }
         return false;
@@ -37,7 +36,7 @@ public final class VpCompatibility {
                     throw new IllegalStateException("Cannot validate VP configuration: " + path.getFileName(), e);
                 }
                 if (hasConflict(root, spec)) {
-                    throw new IllegalStateException("VP still owns formatMobName in " + path.getFileName()
+                    throw new IllegalStateException("VP still owns " + spec.moduleId() + "/" + spec.methodName() + " in " + path.getFileName()
                             + ". Generate and install the reviewed compatibility configuration, then clear VP cache.");
                 }
             }

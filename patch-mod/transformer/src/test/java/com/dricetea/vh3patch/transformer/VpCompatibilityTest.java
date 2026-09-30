@@ -1,5 +1,7 @@
 package com.dricetea.vh3patch.transformer;
 
+import com.dricetea.vh3patch.transformer.modules.CombatStatsModule;
+
 import com.google.gson.JsonArray;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
@@ -10,7 +12,7 @@ import java.nio.file.Path;
 import static org.junit.jupiter.api.Assertions.*;
 
 class VpCompatibilityTest {
-    private final PatchSpec spec = PatchSpec.load();
+    private final PatchSpec spec = new CombatStatsModule().spec();
     private final Path vpSource = Path.of(System.getProperty("vh3.test.vpSource"));
 
     @Test void originalConflictFailsAndCompatibilityPreservesOtherRules(@TempDir Path temp) throws Exception {

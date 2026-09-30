@@ -1,5 +1,7 @@
 package com.dricetea.vh3patch.transformer;
 
+import com.dricetea.vh3patch.transformer.modules.CombatStatsModule;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 import org.objectweb.asm.ClassWriter;
@@ -14,30 +16,30 @@ import java.util.jar.Manifest;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PreflightTest {
-    private final PatchSpec production = PatchSpec.load();
+    private final PatchSpec production = new CombatStatsModule().spec();
 
     @Test void matchingPairAndTargetPass(@TempDir Path game) throws Exception {
         PatchSpec fixture = targetFixture(game);
         companion(game, production.patchVersion());
-        assertDoesNotThrow(() -> TranslationTransformationService.preflight(game, fixture));
+        assertDoesNotThrow(() -> TranslationTransformationService.preflight(game, new CombatStatsModule(fixture)));
     }
 
     @Test void missingCompanionBlocksStartup(@TempDir Path game) throws Exception {
         PatchSpec fixture = targetFixture(game);
-        assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, fixture));
+        assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, new CombatStatsModule(fixture)));
     }
 
     @Test void mismatchedCompanionBlocksStartup(@TempDir Path game) throws Exception {
         PatchSpec fixture = targetFixture(game);
         companion(game, "wrong-version");
-        assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, fixture));
+        assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, new CombatStatsModule(fixture)));
     }
 
     @Test void duplicateTargetBlocksStartup(@TempDir Path game) throws Exception {
         PatchSpec fixture = targetFixture(game);
         companion(game, production.patchVersion());
         Files.copy(game.resolve("mods/target.jar"), game.resolve("mods/duplicate.jar"));
-        assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, fixture));
+        assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, new CombatStatsModule(fixture)));
     }
 
     @Test void vpConflictBlocksStartup(@TempDir Path game) throws Exception {
@@ -46,7 +48,7 @@ class PreflightTest {
         Path config = game.resolve("config/vaultpatcher_asm/rules.json");
         Files.createDirectories(config.getParent());
         Files.copy(Path.of(System.getProperty("vh3.test.vpSource")), config);
-        assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, fixture));
+        assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, new CombatStatsModule(fixture)));
     }
 
     private PatchSpec targetFixture(Path game) throws Exception {
@@ -62,7 +64,8 @@ class PreflightTest {
         }
         return new PatchSpec(production.patchVersion(), production.targetVersion(),
                 MethodFingerprint.sha256(Files.readAllBytes(jar)), production.className(), production.methodName(),
-                production.descriptor(), production.fingerprint(), production.returnCount());
+                production.descriptor(), production.fingerprint(), production.returnCount(),
+                production.moduleId(), production.helperClass(), production.ownedLiterals());
     }
 
     private void companion(Path game, String version) throws Exception {
@@ -70,8 +73,8 @@ class PreflightTest {
         manifest.getMainAttributes().put(Attributes.Name.MANIFEST_VERSION, "1.0");
         manifest.getMainAttributes().putValue("VH3-Patch-Runtime", version);
         try (var output = new JarOutputStream(Files.newOutputStream(game.resolve("mods/runtime.jar")), manifest)) {
-            for (String name : new String[]{PatchSpec.HELPER + ".class", "META-INF/mods.toml",
-                    "assets/vh3_translation_patch/lang/zh_cn.json"}) {
+            for (String name : new String[]{production.helperClass() + ".class", "META-INF/mods.toml",
+                    production.defaultConfigResource()}) {
                 output.putNextEntry(new JarEntry(name));
                 output.write(new byte[]{0});
                 output.closeEntry();

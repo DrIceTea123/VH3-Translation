@@ -13,7 +13,7 @@ def vpSource = rootProject.file('../program/基础+硬编码汉化/config/vaultp
 
 tasks.named('processResources') {
     inputs.property 'mod_version', project.version
-    filesMatching('vh3-patch.properties') { expand mod_version: project.version }
+    filesMatching('patches/*.properties') { expand mod_version: project.version }
 }
 tasks.named('jar') {
     manifest.attributes('Automatic-Module-Name': 'com.dricetea.vh3patch.transformer',
