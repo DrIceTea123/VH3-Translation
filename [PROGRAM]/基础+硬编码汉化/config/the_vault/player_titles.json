@@ -1,0 +1,3379 @@
+{
+  "titles": {
+    "PREFIX": {
+
+      "grand": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u50b2\u6162\u7684",
+            "color": "#aaaaaa"
+          },
+          "CHAT": {
+            "text": "\u50b2\u6162\u7684",
+            "color": "#aaaaaa"
+          }
+        },
+        "cost": 1
+      },
+      "commander": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6307\u6325\u5b98",
+            "color": "#aaaaaa"
+          },
+          "CHAT": {
+            "text": "\u6307\u6325\u5b98",
+            "color": "#aaaaaa"
+          }
+        },
+        "cost": 1
+      },
+      "mega": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5927\u578b",
+            "color": "#aaaaaa"
+          },
+          "CHAT": {
+            "text": "\u5927\u578b",
+            "color": "#aaaaaa"
+          }
+        },
+        "cost": 1
+      },
+      "slayer": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6740\u624b",
+            "color": "#f04848"
+          },
+          "CHAT": {
+            "text": "\u6740\u624b",
+            "color": "#f04848"
+          }
+        },
+        "cost": 1
+      },
+      "omega": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u7ec8\u7109\u7ea7",
+            "color": "#6AFF00"
+          },
+          "CHAT": {
+            "text": "\u7ec8\u7109\u7ea7",
+            "color": "#6AFF00"
+          }
+        },
+        "cost": 1
+      },
+      "epic": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u53f2\u8bd7\u7ea7",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u53f2\u8bd7\u7ea7",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "shady": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u9634\u6697\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u9634\u6697\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "scrappy": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u7834\u70c2\u7ea7",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u7834\u70c2\u7ea7",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "fantastic": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6781\u4f73\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u6781\u4f73\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "stunning": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u9707\u64bc\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u9707\u64bc\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "gorgeous": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u7f8e\u4e3d\u52a8\u4eba\u7684",
+            "color": "#ff64e7"
+          },
+          "CHAT": {
+            "text": "\u7f8e\u4e3d\u52a8\u4eba\u7684",
+            "color": "#ff64e7"
+          }
+        },
+        "cost": 1
+      },
+      "humble": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5351\u5fae\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u5351\u5fae\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "noble": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u9ad8\u8d35\u7684",
+            "color": "#c9a227"
+          },
+          "CHAT": {
+            "text": "\u9ad8\u8d35\u7684",
+            "color": "#c9a227"
+          }
+        },
+        "cost": 1
+      },
+      "ancient": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u8fdc\u53e4\u7684",
+            "color": "#8b7355"
+          },
+          "CHAT": {
+            "text": "\u8fdc\u53e4\u7684",
+            "color": "#8b7355"
+          }
+        },
+        "cost": 1
+      },
+      "shadow": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6697\u5f71",
+            "color": "#3d3d3d"
+          },
+          "CHAT": {
+            "text": "\u6697\u5f71",
+            "color": "#3d3d3d"
+          }
+        },
+        "cost": 1
+      },
+      "storm": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u98ce\u66b4",
+            "color": "#7eb6ff"
+          },
+          "CHAT": {
+            "text": "\u98ce\u66b4",
+            "color": "#7eb6ff"
+          }
+        },
+        "cost": 1
+      },
+      "iron": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u94c1\u5236",
+            "color": "#c0c0c0"
+          },
+          "CHAT": {
+            "text": "\u94c1\u5236",
+            "color": "#c0c0c0"
+          }
+        },
+        "cost": 1
+      },
+      "golden": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u91d1\u5236",
+            "color": "#ffd700"
+          },
+          "CHAT": {
+            "text": "\u91d1\u5236",
+            "color": "#ffd700"
+          }
+        },
+        "cost": 1
+      },
+      "crimson": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u7eef\u7ea2",
+            "color": "#dc143c"
+          },
+          "CHAT": {
+            "text": "\u7eef\u7ea2",
+            "color": "#dc143c"
+          }
+        },
+        "cost": 1
+      },
+      "azure": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u851a\u84dd",
+            "color": "#007fff"
+          },
+          "CHAT": {
+            "text": "\u851a\u84dd",
+            "color": "#007fff"
+          }
+        },
+        "cost": 1
+      },
+      "emerald": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u7eff\u5b9d\u77f3",
+            "color": "#50c878"
+          },
+          "CHAT": {
+            "text": "\u7eff\u5b9d\u77f3",
+            "color": "#50c878"
+          }
+        },
+        "cost": 1
+      },
+      "arcane": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5965\u672f",
+            "color": "#9932cc"
+          },
+          "CHAT": {
+            "text": "\u5965\u672f",
+            "color": "#9932cc"
+          }
+        },
+        "cost": 1
+      },
+      "dread": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u53ef\u6015\u7684",
+            "color": "#8b0000"
+          },
+          "CHAT": {
+            "text": "\u53ef\u6015\u7684",
+            "color": "#8b0000"
+          }
+        },
+        "cost": 1
+      },
+      "frost": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u971c\u51bb",
+            "color": "#b0e0e6"
+          },
+          "CHAT": {
+            "text": "\u971c\u51bb",
+            "color": "#b0e0e6"
+          }
+        },
+        "cost": 1
+      },
+      "infernal": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5730\u72f1",
+            "color": "#ff4500"
+          },
+          "CHAT": {
+            "text": "\u5730\u72f1",
+            "color": "#ff4500"
+          }
+        },
+        "cost": 1
+      },
+      "celestial": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5929\u4ed9",
+            "color": "#fffacd"
+          },
+          "CHAT": {
+            "text": "\u5929\u4ed9",
+            "color": "#fffacd"
+          }
+        },
+        "cost": 1
+      },
+      "void": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u865a\u7a7a",
+            "color": "#2f0f3d"
+          },
+          "CHAT": {
+            "text": "\u865a\u7a7a",
+            "color": "#2f0f3d"
+          }
+        },
+        "cost": 1
+      },
+      "savage": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u91ce\u86ee\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u91ce\u86ee\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "royal": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u7687\u5bb6",
+            "color": "#7851a9"
+          },
+          "CHAT": {
+            "text": "\u7687\u5bb6",
+            "color": "#7851a9"
+          }
+        },
+        "cost": 1
+      },
+      "mighty": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u52c7\u731b\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u52c7\u731b\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "swift": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u654f\u6377\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u654f\u6377\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "silent": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6c89\u9ed8\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u6c89\u9ed8\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "mystic": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u795e\u79d8\u7684",
+            "color": "#e066ff"
+          },
+          "CHAT": {
+            "text": "\u795e\u79d8\u7684",
+            "color": "#e066ff"
+          }
+        },
+        "cost": 1
+      },
+      "wicked": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u90aa\u6076\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u90aa\u6076\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "blessed": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u53d7\u795d\u798f\u7684",
+            "color": "#fff8dc"
+          },
+          "CHAT": {
+            "text": "\u53d7\u795d\u798f\u7684",
+            "color": "#fff8dc"
+          }
+        },
+        "cost": 1
+      },
+      "cursed": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u53d7\u8bc5\u5492\u7684",
+            "color": "#4a0080"
+          },
+          "CHAT": {
+            "text": "\u53d7\u8bc5\u5492\u7684",
+            "color": "#4a0080"
+          }
+        },
+        "cost": 1
+      },
+      "elder": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5e74\u8001\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u5e74\u8001\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "young": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5e74\u8f7b\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u5e74\u8f7b\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "dark": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u9ed1\u6697\u7684",
+            "color": "#1a1a1a"
+          },
+          "CHAT": {
+            "text": "\u9ed1\u6697\u7684",
+            "color": "#1a1a1a"
+          }
+        },
+        "cost": 1
+      },
+      "bright": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u660e\u4eae\u7684",
+            "color": "#ffffe0"
+          },
+          "CHAT": {
+            "text": "\u660e\u4eae\u7684",
+            "color": "#ffffe0"
+          }
+        },
+        "cost": 1
+      },
+      "radiant": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u707f\u70c2\u7684",
+            "color": "#ffec8b"
+          },
+          "CHAT": {
+            "text": "\u707f\u70c2\u7684",
+            "color": "#ffec8b"
+          }
+        },
+        "cost": 1
+      },
+      "grim": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u51b7\u9177\u7684",
+            "color": "#555555"
+          },
+          "CHAT": {
+            "text": "\u51b7\u9177\u7684",
+            "color": "#555555"
+          }
+        },
+        "cost": 1
+      },
+      "fierce": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u72c2\u70ed\u7684",
+            "color": "#ff6347"
+          },
+          "CHAT": {
+            "text": "\u72c2\u70ed\u7684",
+            "color": "#ff6347"
+          }
+        },
+        "cost": 1
+      },
+      "gentle": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6e29\u67d4\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u6e29\u67d4\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "wild": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u91ce\u86ee\u7684",
+            "color": "#228b22"
+          },
+          "CHAT": {
+            "text": "\u91ce\u86ee\u7684",
+            "color": "#228b22"
+          }
+        },
+        "cost": 1
+      },
+      "tame": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u9a6f\u670d\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u9a6f\u670d\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "primal": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u539f\u521d\u7684",
+            "color": "#8b4513"
+          },
+          "CHAT": {
+            "text": "\u539f\u521d\u7684",
+            "color": "#8b4513"
+          }
+        },
+        "cost": 1
+      },
+      "eternal": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6c38\u6052\u7684",
+            "color": "#daa520"
+          },
+          "CHAT": {
+            "text": "\u6c38\u6052\u7684",
+            "color": "#daa520"
+          }
+        },
+        "cost": 1
+      },
+      "fallen": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5815\u843d\u7684",
+            "color": "#696969"
+          },
+          "CHAT": {
+            "text": "\u5815\u843d\u7684",
+            "color": "#696969"
+          }
+        },
+        "cost": 1
+      },
+      "risen": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u590d\u751f\u7684",
+            "color": "#fafad2"
+          },
+          "CHAT": {
+            "text": "\u590d\u751f\u7684",
+            "color": "#fafad2"
+          }
+        },
+        "cost": 1
+      },
+      "spectral": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5149\u7075\u7684",
+            "color": "#b0c4de"
+          },
+          "CHAT": {
+            "text": "\u5149\u7075\u7684",
+            "color": "#b0c4de"
+          }
+        },
+        "cost": 1
+      },
+      "phantom": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u865a\u5e7b\u7684",
+            "color": "#778899"
+          },
+          "CHAT": {
+            "text": "\u865a\u5e7b\u7684",
+            "color": "#778899"
+          }
+        },
+        "cost": 1
+      },
+      "legendary": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u4f20\u5947\u7684",
+            "color": "#ff8c00"
+          },
+          "CHAT": {
+            "text": "\u4f20\u5947\u7684",
+            "color": "#ff8c00"
+          }
+        },
+        "cost": 1
+      },
+      "mythic": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u795e\u8bdd\u7684",
+            "color": "#ff1493"
+          },
+          "CHAT": {
+            "text": "\u795e\u8bdd\u7684",
+            "color": "#ff1493"
+          }
+        },
+        "cost": 1
+      },
+      "heroic": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u82f1\u96c4",
+            "color": "#4169e1"
+          },
+          "CHAT": {
+            "text": "\u82f1\u96c4",
+            "color": "#4169e1"
+          }
+        },
+        "cost": 1
+      },
+      "valiant": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u52c7\u8005",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u52c7\u8005",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "fearless": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u65e0\u754f\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u65e0\u754f\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "ruthless": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u65e0\u60c5\u7684",
+            "color": "#8b0000"
+          },
+          "CHAT": {
+            "text": "\u65e0\u60c5\u7684",
+            "color": "#8b0000"
+          }
+        },
+        "cost": 1
+      },
+      "cunning": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u72e1\u733e\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u72e1\u733e\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "clever": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u806a\u660e\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u806a\u660e\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "wise": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u667a\u6167\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u667a\u6167\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "fool": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u611a\u7b28\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u611a\u7b28\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "mad": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6c14\u6124\u7684",
+            "color": "#ff00ff"
+          },
+          "CHAT": {
+            "text": "\u6c14\u6124\u7684",
+            "color": "#ff00ff"
+          }
+        },
+        "cost": 1
+      },
+      "crazy": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u75af\u72c2\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u75af\u72c2\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "stoic": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u575a\u5fcd\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u575a\u5fcd\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "proud": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u81ea\u8c6a\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u81ea\u8c6a\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "lost": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u8ff7\u5931\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u8ff7\u5931\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "found": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u88ab\u53d1\u73b0\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u88ab\u53d1\u73b0\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "hidden": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u9690\u85cf\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u9690\u85cf\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "supreme": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u81f3\u5c0a\u7684",
+            "color": "#ffd700"
+          },
+          "CHAT": {
+            "text": "\u81f3\u5c0a\u7684",
+            "color": "#ffd700"
+          }
+        },
+        "cost": 1
+      },
+      "ultimate": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u7ec8\u6781",
+            "color": "#ff4500"
+          },
+          "CHAT": {
+            "text": "\u7ec8\u6781",
+            "color": "#ff4500"
+          }
+        },
+        "cost": 1
+      },
+      "divine": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u795e\u5723\u7684",
+            "color": "#fffaf0"
+          },
+          "CHAT": {
+            "text": "\u795e\u5723\u7684",
+            "color": "#fffaf0"
+          }
+        },
+        "cost": 1
+      },
+      "demonic": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6076\u9b54",
+            "color": "#8b0000"
+          },
+          "CHAT": {
+            "text": "\u6076\u9b54",
+            "color": "#8b0000"
+          }
+        },
+        "cost": 1
+      },
+      "angelic": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5929\u4f7f",
+            "color": "#fffafa"
+          },
+          "CHAT": {
+            "text": "\u5929\u4f7f",
+            "color": "#fffafa"
+          }
+        },
+        "cost": 1
+      },
+      "abyssal": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6df1\u6e0a",
+            "color": "#191970"
+          },
+          "CHAT": {
+            "text": "\u6df1\u6e0a",
+            "color": "#191970"
+          }
+        },
+        "cost": 1
+      },
+      "titanic": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6cf0\u5766",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u6cf0\u5766",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "colossal": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5de8\u5927\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u5de8\u5927\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "tiny": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5fae\u5c0f\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u5fae\u5c0f\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "giant": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5de8\u4eba",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u5de8\u4eba",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "volcanic": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u706b\u5c71\u7684",
+            "color": "#ff4500"
+          },
+          "CHAT": {
+            "text": "\u706b\u5c71\u7684",
+            "color": "#ff4500"
+          }
+        },
+        "cost": 1
+      },
+      "glacial": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u51b0\u5ddd\u7684",
+            "color": "#e0ffff"
+          },
+          "CHAT": {
+            "text": "\u51b0\u5ddd\u7684",
+            "color": "#e0ffff"
+          }
+        },
+        "cost": 1
+      },
+      "thunder": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u95ea\u7535",
+            "color": "#ffff00"
+          },
+          "CHAT": {
+            "text": "\u95ea\u7535",
+            "color": "#ffff00"
+          }
+        },
+        "cost": 1
+      },
+      "electric": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u7535\u52a8",
+            "color": "#00ffff"
+          },
+          "CHAT": {
+            "text": "\u7535\u52a8",
+            "color": "#00ffff"
+          }
+        },
+        "cost": 1
+      },
+      "toxic": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5267\u6bd2\u7684",
+            "color": "#32cd32"
+          },
+          "CHAT": {
+            "text": "\u5267\u6bd2\u7684",
+            "color": "#32cd32"
+          }
+        },
+        "cost": 1
+      },
+      "venomous": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6bd2\u6db2",
+            "color": "#9acd32"
+          },
+          "CHAT": {
+            "text": "\u6bd2\u6db2",
+            "color": "#9acd32"
+          }
+        },
+        "cost": 1
+      },
+      "blood": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u8840\u6db2",
+            "color": "#b22222"
+          },
+          "CHAT": {
+            "text": "\u8840\u6db2",
+            "color": "#b22222"
+          }
+        },
+        "cost": 1
+      },
+      "bone": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u9aa8\u5934",
+            "color": "#fffaf0"
+          },
+          "CHAT": {
+            "text": "\u9aa8\u5934",
+            "color": "#fffaf0"
+          }
+        },
+        "cost": 1
+      },
+      "steel": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u94a2\u94c1",
+            "color": "#71797e"
+          },
+          "CHAT": {
+            "text": "\u94a2\u94c1",
+            "color": "#71797e"
+          }
+        },
+        "cost": 1
+      },
+      "chrome": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5f02\u8272",
+            "color": "#dbe4eb"
+          },
+          "CHAT": {
+            "text": "\u5f02\u8272",
+            "color": "#dbe4eb"
+          }
+        },
+        "cost": 1
+      },
+      "obsidian": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u9ed1\u66dc\u77f3",
+            "color": "#3d3d4e"
+          },
+          "CHAT": {
+            "text": "\u9ed1\u66dc\u77f3",
+            "color": "#3d3d4e"
+          }
+        },
+        "cost": 1
+      },
+      "crystal": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6c34\u6676",
+            "color": "#a7d8de"
+          },
+          "CHAT": {
+            "text": "\u6c34\u6676",
+            "color": "#a7d8de"
+          }
+        },
+        "cost": 1
+      },
+      "diamond": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u94bb\u77f3",
+            "color": "#b9f2ff"
+          },
+          "CHAT": {
+            "text": "\u94bb\u77f3",
+            "color": "#b9f2ff"
+          }
+        },
+        "cost": 1
+      },
+      "ruby": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u7ea2\u5b9d\u77f3",
+            "color": "#e0115f"
+          },
+          "CHAT": {
+            "text": "\u7ea2\u5b9d\u77f3",
+            "color": "#e0115f"
+          }
+        },
+        "cost": 1
+      },
+      "sapphire": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u84dd\u5b9d\u77f3",
+            "color": "#0f52ba"
+          },
+          "CHAT": {
+            "text": "\u84dd\u5b9d\u77f3",
+            "color": "#0f52ba"
+          }
+        },
+        "cost": 1
+      },
+      "amethyst": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u7d2b\u6c34\u6676",
+            "color": "#9966cc"
+          },
+          "CHAT": {
+            "text": "\u7d2b\u6c34\u6676",
+            "color": "#9966cc"
+          }
+        },
+        "cost": 1
+      },
+      "onyx": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u739b\u7459",
+            "color": "#353935"
+          },
+          "CHAT": {
+            "text": "\u739b\u7459",
+            "color": "#353935"
+          }
+        },
+        "cost": 1
+      },
+      "jade": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u7fe1\u7fe0",
+            "color": "#00a86b"
+          },
+          "CHAT": {
+            "text": "\u7fe1\u7fe0",
+            "color": "#00a86b"
+          }
+        },
+        "cost": 1
+      },
+      "opal": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6b27\u6cca",
+            "color": "#a8c3bc"
+          },
+          "CHAT": {
+            "text": "\u6b27\u6cca",
+            "color": "#a8c3bc"
+          }
+        },
+        "cost": 1
+      },
+      "pearl": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u73cd\u73e0",
+            "color": "#eae0c8"
+          },
+          "CHAT": {
+            "text": "\u73cd\u73e0",
+            "color": "#eae0c8"
+          }
+        },
+        "cost": 1
+      },
+      "cosmic": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5b87\u5b99\u7684",
+            "color": "#2e2d88"
+          },
+          "CHAT": {
+            "text": "\u5b87\u5b99\u7684",
+            "color": "#2e2d88"
+          }
+        },
+        "cost": 1
+      },
+      "stellar": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6052\u661f\u7684",
+            "color": "#ffefd5"
+          },
+          "CHAT": {
+            "text": "\u6052\u661f\u7684",
+            "color": "#ffefd5"
+          }
+        },
+        "cost": 1
+      },
+      "lunar": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6708\u4eae\u7684",
+            "color": "#c0c0c0"
+          },
+          "CHAT": {
+            "text": "\u6708\u4eae\u7684",
+            "color": "#c0c0c0"
+          }
+        },
+        "cost": 1
+      },
+      "solar": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u592a\u9633\u7684",
+            "color": "#ffdf00"
+          },
+          "CHAT": {
+            "text": "\u592a\u9633\u7684",
+            "color": "#ffdf00"
+          }
+        },
+        "cost": 1
+      },
+      "astral": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u661f\u9645\u7684",
+            "color": "#7b68ee"
+          },
+          "CHAT": {
+            "text": "\u661f\u9645\u7684",
+            "color": "#7b68ee"
+          }
+        },
+        "cost": 1
+      },
+      "terra": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u571f\u7cfb",
+            "color": "#cd853f"
+          },
+          "CHAT": {
+            "text": "\u571f\u7cfb",
+            "color": "#cd853f"
+          }
+        },
+        "cost": 1
+      },
+      "aqua": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6c34\u7cfb",
+            "color": "#00ffff"
+          },
+          "CHAT": {
+            "text": "\u6c34\u7cfb",
+            "color": "#00ffff"
+          }
+        },
+        "cost": 1
+      },
+      "pyro": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u706b\u7cfb",
+            "color": "#ff4500"
+          },
+          "CHAT": {
+            "text": "\u706b\u7cfb",
+            "color": "#ff4500"
+          }
+        },
+        "cost": 1
+      },
+      "aero": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u7ffc\u7cfb",
+            "color": "#87ceeb"
+          },
+          "CHAT": {
+            "text": "\u7ffc\u7cfb",
+            "color": "#87ceeb"
+          }
+        },
+        "cost": 1
+      },
+      "necro": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6b7b\u7075\u7cfb",
+            "color": "#301934"
+          },
+          "CHAT": {
+            "text": "\u6b7b\u7075\u7cfb",
+            "color": "#301934"
+          }
+        },
+        "cost": 1
+      },
+      "chrono": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u65f6\u95f4\u7cfb",
+            "color": "#c9a227"
+          },
+          "CHAT": {
+            "text": "\u65f6\u95f4\u7cfb",
+            "color": "#c9a227"
+          }
+        },
+        "cost": 1
+      },
+      "techno": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u79d1\u6280\u7cfb",
+            "color": "#00ff00"
+          },
+          "CHAT": {
+            "text": "\u79d1\u6280\u7cfb",
+            "color": "#00ff00"
+          }
+        },
+        "cost": 1
+      },
+      "bio": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u751f\u7269\u7cfb",
+            "color": "#228b22"
+          },
+          "CHAT": {
+            "text": "\u751f\u7269\u7cfb",
+            "color": "#228b22"
+          }
+        },
+        "cost": 1
+      },
+      "cyber": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u672a\u6765\u98ce",
+            "color": "#00ffff"
+          },
+          "CHAT": {
+            "text": "\u672a\u6765\u98ce",
+            "color": "#00ffff"
+          }
+        },
+        "cost": 1
+      },
+      "retro": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u590d\u53e4\u98ce",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u590d\u53e4\u98ce",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "neo": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u65b0\u6f6e",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u65b0\u6f6e",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "ultra": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u8d85-",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u8d85-",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "hyper": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6781-",
+            "color": "#ff69b4"
+          },
+          "CHAT": {
+            "text": "\u6781-",
+            "color": "#ff69b4"
+          }
+        },
+        "cost": 1
+      },
+      "super": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u8d85\u7ea7",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u8d85\u7ea7",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "alpha": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u963f\u5c14\u6cd5",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u963f\u5c14\u6cd5",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "beta": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u8d1d\u5854",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u8d1d\u5854",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "delta": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5fb7\u5c14\u5854",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u5fb7\u5c14\u5854",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "sigma": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u897f\u683c\u739b",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u897f\u683c\u739b",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "gamma": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u4f3d\u9a6c",
+            "color": "#32cd32"
+          },
+          "CHAT": {
+            "text": "\u4f3d\u9a6c",
+            "color": "#32cd32"
+          }
+        },
+        "cost": 1
+      },
+      "zeta": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6cfd\u5854",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u6cfd\u5854",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+
+      "of_doom": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u672b\u65e5",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u672b\u65e5",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_magnificent": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6770\u51fa\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u6770\u51fa\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_gray": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u9634\u6c89\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u9634\u6c89\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_terrible": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u53ef\u6015\u7684",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u53ef\u6015\u7684",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "of_chaos": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u6df7\u6c8c",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u6df7\u6c8c",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_damned": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u8be5\u6b7b\u7684",
+            "color": "#8b0000"
+          },
+          "CHAT": {
+            "text": "\u8be5\u6b7b\u7684",
+            "color": "#8b0000"
+          }
+        },
+        "cost": 1
+      }
+
+    },
+    "SUFFIX": {
+      "lord": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u52cb\u7235",
+            "color": "#e4fcff"
+          },
+          "CHAT": {
+            "text": "\u52cb\u7235",
+            "color": "#e4fcff"
+          }
+        },
+        "cost": 1
+      },
+      "lady": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5973\u58eb",
+            "color": "#e4fcff"
+          },
+          "CHAT": {
+            "text": "\u5973\u58eb",
+            "color": "#e4fcff"
+          }
+        },
+        "cost": 1
+      },
+      "captain": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u8239\u957f",
+            "color": "#aaaaaa"
+          },
+          "CHAT": {
+            "text": "\u8239\u957f",
+            "color": "#aaaaaa"
+          }
+        },
+        "cost": 1
+      },
+      "baron": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u7537\u7235",
+            "color": "#aaaaaa"
+          },
+          "CHAT": {
+            "text": "\u7537\u7235",
+            "color": "#aaaaaa"
+          }
+        },
+        "cost": 1
+      },
+      "master": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5927\u5e08",
+            "color": "#aaaaaa"
+          },
+          "CHAT": {
+            "text": "\u5927\u5e08",
+            "color": "#aaaaaa"
+          }
+        },
+        "cost": 1
+      },
+      "sir": {
+        "display": {
+          "TAB_LIST": {
+            "text": "\u5148\u751f",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "\u5148\u751f",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_great": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u4f1f\u4eba",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u4f1f\u4eba",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_geezer": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u602a\u4eba",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u602a\u4eba",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_stars": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6765\u81ea\u661f\u661f",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u6765\u81ea\u661f\u661f",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_ancients": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6765\u81ea\u8fdc\u53e4",
+            "color": "#FF0000"
+          },
+          "CHAT": {
+            "text": "-\u6765\u81ea\u8fdc\u53e4",
+            "color": "#FF0000"
+          }
+        },
+        "cost": 1
+      },
+      "the_fierce": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u51f6\u731b",
+            "color": "#ff6347"
+          },
+          "CHAT": {
+            "text": "-\u51f6\u731b",
+            "color": "#ff6347"
+          }
+        },
+        "cost": 1
+      },
+      "the_bold": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5927\u80c6",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u5927\u80c6",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_swift": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u795e\u901f",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u795e\u901f",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_cunning": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5978\u8bc8",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u5978\u8bc8",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_plonker": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u7b28\u86cb",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u7b28\u86cb",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_eternal": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6c38\u751f\u8005",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u6c38\u751f\u8005",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_wise": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u667a\u8005",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u667a\u8005",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_noob": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u65b0\u624b",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u65b0\u624b",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_creator": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u521b\u9020\u73a9\u5bb6",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u521b\u9020\u73a9\u5bb6",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_redstoner": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u7ea2\u77f3\u73a9\u5bb6",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u7ea2\u77f3\u73a9\u5bb6",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_slab": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5efa\u7b51\u73a9\u5bb6",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u5efa\u7b51\u73a9\u5bb6",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_explorer": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u63a2\u7d22\u8005",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u63a2\u7d22\u8005",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_hunter": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u730e\u4eba",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u730e\u4eba",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_treasure_hunter": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u8d85\u7ea7\u5b9d\u85cf\u730e\u4eba",
+            "color": "#ffc926"
+          },
+          "CHAT": {
+            "text": "-\u8d85\u7ea7\u5b9d\u85cf\u730e\u4eba",
+            "color": "#ffc926"
+          }
+        },
+        "cost": 1
+      },
+      "the_brave": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u52c7\u6562\u8005",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u52c7\u6562\u8005",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "of_destruction": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6bc1\u706d\u8005",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u6bc1\u706d\u8005",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_silent": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5df2\u9759\u97f3",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u5df2\u9759\u97f3",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_shadow": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5f71\u5b50",
+            "color": "#3d3d3d"
+          },
+          "CHAT": {
+            "text": "-\u5f71\u5b50",
+            "color": "#3d3d3d"
+          }
+        },
+        "cost": 1
+      },
+      "the_phantom": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5e7b\u50cf",
+            "color": "#778899"
+          },
+          "CHAT": {
+            "text": "-\u5e7b\u50cf",
+            "color": "#778899"
+          }
+        },
+        "cost": 1
+      },
+      "the_ghost": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u9b3c\u9b42",
+            "color": "#f8f8ff"
+          },
+          "CHAT": {
+            "text": "-\u9b3c\u9b42",
+            "color": "#f8f8ff"
+          }
+        },
+        "cost": 1
+      },
+      "the_undying": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u4e0d\u6b7b\u65cf",
+            "color": "#daa520"
+          },
+          "CHAT": {
+            "text": "-\u4e0d\u6b7b\u65cf",
+            "color": "#daa520"
+          }
+        },
+        "cost": 1
+      },
+      "the_immortal": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u957f\u751f\u79cd",
+            "color": "#ffd700"
+          },
+          "CHAT": {
+            "text": "-\u957f\u751f\u79cd",
+            "color": "#ffd700"
+          }
+        },
+        "cost": 1
+      },
+      "the_legend": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u4f20\u8bf4",
+            "color": "#ff8c00"
+          },
+          "CHAT": {
+            "text": "-\u4f20\u8bf4",
+            "color": "#ff8c00"
+          }
+        },
+        "cost": 1
+      },
+      "the_myth": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u795e\u8bdd",
+            "color": "#e066ff"
+          },
+          "CHAT": {
+            "text": "-\u795e\u8bdd",
+            "color": "#e066ff"
+          }
+        },
+        "cost": 1
+      },
+      "the_hero": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u82f1\u96c4",
+            "color": "#4169e1"
+          },
+          "CHAT": {
+            "text": "-\u82f1\u96c4",
+            "color": "#4169e1"
+          }
+        },
+        "cost": 1
+      },
+      "the_villain": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u53cd\u6d3e",
+            "color": "#8b0000"
+          },
+          "CHAT": {
+            "text": "-\u53cd\u6d3e",
+            "color": "#8b0000"
+          }
+        },
+        "cost": 1
+      },
+      "the_wanderer": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6d41\u6d6a\u8005",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u6d41\u6d6a\u8005",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_traveler": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u65c5\u884c\u8005",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u65c5\u884c\u8005",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_finder": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5bfb\u627e\u8005",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u5bfb\u627e\u8005",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_collector": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6536\u85cf\u5bb6",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u6536\u85cf\u5bb6",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_hoarder": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u56e4\u56e4\u9f20",
+            "color": "#ffc926"
+          },
+          "CHAT": {
+            "text": "-\u56e4\u56e4\u9f20",
+            "color": "#ffc926"
+          }
+        },
+        "cost": 1
+      },
+      "the_builder": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5efa\u7b51\u5e08",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u5efa\u7b51\u5e08",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_destroyer": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u7834\u574f\u738b",
+            "color": "#8b0000"
+          },
+          "CHAT": {
+            "text": "-\u7834\u574f\u738b",
+            "color": "#8b0000"
+          }
+        },
+        "cost": 1
+      },
+      "the_conqueror": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5360\u9886\u8005",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u5360\u9886\u8005",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_defender": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5b88\u62a4\u8005",
+            "color": "#4682b4"
+          },
+          "CHAT": {
+            "text": "-\u5b88\u62a4\u8005",
+            "color": "#4682b4"
+          }
+        },
+        "cost": 1
+      },
+      "the_protector": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u4fdd\u62a4\u8005",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u4fdd\u62a4\u8005",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_guardian": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5b88\u536b",
+            "color": "#4169e1"
+          },
+          "CHAT": {
+            "text": "-\u5b88\u536b",
+            "color": "#4169e1"
+          }
+        },
+        "cost": 1
+      },
+      "the_warden": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u76d1\u5b88\u8005",
+            "color": "#008b8b"
+          },
+          "CHAT": {
+            "text": "-\u76d1\u5b88\u8005",
+            "color": "#008b8b"
+          }
+        },
+        "cost": 1
+      },
+      "the_champion": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u51a0\u519b",
+            "color": "#ffd700"
+          },
+          "CHAT": {
+            "text": "-\u51a0\u519b",
+            "color": "#ffd700"
+          }
+        },
+        "cost": 1
+      },
+      "the_slayer": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6740\u624b",
+            "color": "#f04848"
+          },
+          "CHAT": {
+            "text": "-\u6740\u624b",
+            "color": "#f04848"
+          }
+        },
+        "cost": 1
+      },
+      "the_vanquisher": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5f81\u670d\u8005",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u5f81\u670d\u8005",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_relentless": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u65e0\u60c5",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u65e0\u60c5",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_unstoppable": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u4e0d\u53ef\u963b\u6321",
+            "color": "#ff4500"
+          },
+          "CHAT": {
+            "text": "-\u4e0d\u53ef\u963b\u6321",
+            "color": "#ff4500"
+          }
+        },
+        "cost": 1
+      },
+      "the_invincible": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u65e0\u654c",
+            "color": "#ffd700"
+          },
+          "CHAT": {
+            "text": "-\u65e0\u654c",
+            "color": "#ffd700"
+          }
+        },
+        "cost": 1
+      },
+      "the_unbreakable": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u4e0d\u53ef\u7834\u574f",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u4e0d\u53ef\u7834\u574f",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_untamed": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u72c2\u91ce",
+            "color": "#228b22"
+          },
+          "CHAT": {
+            "text": "-\u72c2\u91ce",
+            "color": "#228b22"
+          }
+        },
+        "cost": 1
+      },
+      "the_wild": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u91ce\u751f",
+            "color": "#228b22"
+          },
+          "CHAT": {
+            "text": "-\u91ce\u751f",
+            "color": "#228b22"
+          }
+        },
+        "cost": 1
+      },
+      "the_savage": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u91ce\u86ee\u4eba",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u91ce\u86ee\u4eba",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_primal": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u539f\u59cb\u4eba",
+            "color": "#8b4513"
+          },
+          "CHAT": {
+            "text": "-\u539f\u59cb\u4eba",
+            "color": "#8b4513"
+          }
+        },
+        "cost": 1
+      },
+      "the_ancient": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u8fdc\u53e4\u751f\u7269",
+            "color": "#8b7355"
+          },
+          "CHAT": {
+            "text": "-\u8fdc\u53e4\u751f\u7269",
+            "color": "#8b7355"
+          }
+        },
+        "cost": 1
+      },
+      "the_elder": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u8001\u5e74\u4eba",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u8001\u5e74\u4eba",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_young": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u9752\u5e74\u4eba",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u9752\u5e74\u4eba",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_ageless": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u4e0d\u706d",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u4e0d\u706d",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_timeless": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6c38\u6052",
+            "color": "#c9a227"
+          },
+          "CHAT": {
+            "text": "-\u6c38\u6052",
+            "color": "#c9a227"
+          }
+        },
+        "cost": 1
+      },
+      "the_forgotten": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5df2\u9057\u5fd8",
+            "color": "#696969"
+          },
+          "CHAT": {
+            "text": "-\u5df2\u9057\u5fd8",
+            "color": "#696969"
+          }
+        },
+        "cost": 1
+      },
+      "the_remembered": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6c38\u8fdc\u94ed\u8bb0",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u6c38\u8fdc\u94ed\u8bb0",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_chosen": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5929\u9009\u8005",
+            "color": "#ffd700"
+          },
+          "CHAT": {
+            "text": "-\u5929\u9009\u8005",
+            "color": "#ffd700"
+          }
+        },
+        "cost": 1
+      },
+      "the_forsaken": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u88ab\u9057\u5f03",
+            "color": "#4a0080"
+          },
+          "CHAT": {
+            "text": "-\u88ab\u9057\u5f03",
+            "color": "#4a0080"
+          }
+        },
+        "cost": 1
+      },
+      "the_blessed": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u53d7\u795d\u798f",
+            "color": "#fff8dc"
+          },
+          "CHAT": {
+            "text": "-\u53d7\u795d\u798f",
+            "color": "#fff8dc"
+          }
+        },
+        "cost": 1
+      },
+      "the_cursed": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u53d7\u8bc5\u5492",
+            "color": "#4a0080"
+          },
+          "CHAT": {
+            "text": "-\u53d7\u8bc5\u5492",
+            "color": "#4a0080"
+          }
+        },
+        "cost": 1
+      },
+      "the_redeemed": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u88ab\u6551\u8d4e",
+            "color": "#fffaf0"
+          },
+          "CHAT": {
+            "text": "-\u88ab\u6551\u8d4e",
+            "color": "#fffaf0"
+          }
+        },
+        "cost": 1
+      },
+      "the_fallen": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5df2\u5815\u843d",
+            "color": "#696969"
+          },
+          "CHAT": {
+            "text": "-\u5df2\u5815\u843d",
+            "color": "#696969"
+          }
+        },
+        "cost": 1
+      },
+      "the_risen": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5df2\u590d\u6d3b",
+            "color": "#fafad2"
+          },
+          "CHAT": {
+            "text": "-\u5df2\u590d\u6d3b",
+            "color": "#fafad2"
+          }
+        },
+        "cost": 1
+      },
+      "the_lost": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5df2\u8ff7\u5931",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u5df2\u8ff7\u5931",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_found": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u88ab\u627e\u5230",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u88ab\u627e\u5230",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_seeker": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6293\u6355\u8005",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u6293\u6355\u8005",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "of_light": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5149\u660e",
+            "color": "#fffacd"
+          },
+          "CHAT": {
+            "text": "-\u5149\u660e",
+            "color": "#fffacd"
+          }
+        },
+        "cost": 1
+      },
+      "of_darkness": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u9ed1\u6697",
+            "color": "#1a1a1a"
+          },
+          "CHAT": {
+            "text": "-\u9ed1\u6697",
+            "color": "#1a1a1a"
+          }
+        },
+        "cost": 1
+      },
+      "of_fire": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u706b",
+            "color": "#ff4500"
+          },
+          "CHAT": {
+            "text": "-\u706b",
+            "color": "#ff4500"
+          }
+        },
+        "cost": 1
+      },
+      "of_ice": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u51b0",
+            "color": "#b0e0e6"
+          },
+          "CHAT": {
+            "text": "-\u51b0",
+            "color": "#b0e0e6"
+          }
+        },
+        "cost": 1
+      },
+      "of_storms": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u98ce\u66b4",
+            "color": "#7eb6ff"
+          },
+          "CHAT": {
+            "text": "-\u98ce\u66b4",
+            "color": "#7eb6ff"
+          }
+        },
+        "cost": 1
+      },
+      "of_thunder": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u95ea\u7535",
+            "color": "#ffff00"
+          },
+          "CHAT": {
+            "text": "-\u95ea\u7535",
+            "color": "#ffff00"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_void": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u865a\u7a7a",
+            "color": "#2f0f3d"
+          },
+          "CHAT": {
+            "text": "-\u865a\u7a7a",
+            "color": "#2f0f3d"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_abyss": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6df1\u6e0a",
+            "color": "#191970"
+          },
+          "CHAT": {
+            "text": "-\u6df1\u6e0a",
+            "color": "#191970"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_deep": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6df1\u5c42",
+            "color": "#000080"
+          },
+          "CHAT": {
+            "text": "-\u6df1\u5c42",
+            "color": "#000080"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_depths": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6df1\u6697",
+            "color": "#000080"
+          },
+          "CHAT": {
+            "text": "-\u6df1\u6697",
+            "color": "#000080"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_sky": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5929\u7a7a",
+            "color": "#87ceeb"
+          },
+          "CHAT": {
+            "text": "-\u5929\u7a7a",
+            "color": "#87ceeb"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_heavens": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5929\u5802",
+            "color": "#fffaf0"
+          },
+          "CHAT": {
+            "text": "-\u5929\u5802",
+            "color": "#fffaf0"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_cosmos": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5b87\u5b99",
+            "color": "#2e2d88"
+          },
+          "CHAT": {
+            "text": "-\u5b87\u5b99",
+            "color": "#2e2d88"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_moon": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6708",
+            "color": "#c0c0c0"
+          },
+          "CHAT": {
+            "text": "-\u6708",
+            "color": "#c0c0c0"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_sun": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u65e5",
+            "color": "#ffdf00"
+          },
+          "CHAT": {
+            "text": "-\u65e5",
+            "color": "#ffdf00"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_north": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5317",
+            "color": "#b0e0e6"
+          },
+          "CHAT": {
+            "text": "-\u5317",
+            "color": "#b0e0e6"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_south": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5357",
+            "color": "#ff6347"
+          },
+          "CHAT": {
+            "text": "-\u5357",
+            "color": "#ff6347"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_east": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u4e1c",
+            "color": "#ffdf00"
+          },
+          "CHAT": {
+            "text": "-\u4e1c",
+            "color": "#ffdf00"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_west": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u897f",
+            "color": "#ff8c00"
+          },
+          "CHAT": {
+            "text": "-\u897f",
+            "color": "#ff8c00"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_wilds": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6765\u81ea\u91ce\u5916",
+            "color": "#228b22"
+          },
+          "CHAT": {
+            "text": "-\u6765\u81ea\u91ce\u5916",
+            "color": "#228b22"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_forest": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6765\u81ea\u68ee\u6797",
+            "color": "#228b22"
+          },
+          "CHAT": {
+            "text": "-\u6765\u81ea\u68ee\u6797",
+            "color": "#228b22"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_mountain": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6765\u81ea\u7fa4\u5c71",
+            "color": "#808080"
+          },
+          "CHAT": {
+            "text": "-\u6765\u81ea\u7fa4\u5c71",
+            "color": "#808080"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_sea": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6765\u81ea\u5927\u6d77",
+            "color": "#006994"
+          },
+          "CHAT": {
+            "text": "-\u6765\u81ea\u5927\u6d77",
+            "color": "#006994"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_desert": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6765\u81ea\u6c99\u6f20",
+            "color": "#c2b280"
+          },
+          "CHAT": {
+            "text": "-\u6765\u81ea\u6c99\u6f20",
+            "color": "#c2b280"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_tundra": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6765\u81ea\u51bb\u571f",
+            "color": "#e0ffff"
+          },
+          "CHAT": {
+            "text": "-\u6765\u81ea\u51bb\u571f",
+            "color": "#e0ffff"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_jungle": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6765\u81ea\u4e1b\u6797",
+            "color": "#228b22"
+          },
+          "CHAT": {
+            "text": "-\u6765\u81ea\u4e1b\u6797",
+            "color": "#228b22"
+          }
+        },
+        "cost": 1
+      },
+      "of_the_swamp": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6765\u81ea\u6cbc\u6cfd",
+            "color": "#4a5d23"
+          },
+          "CHAT": {
+            "text": "-\u6765\u81ea\u6cbc\u6cfd",
+            "color": "#4a5d23"
+          }
+        },
+        "cost": 1
+      },
+      "the_miner": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u77ff\u5de5",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u77ff\u5de5",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_crafter": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5236\u4f5c\u5e08",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u5236\u4f5c\u5e08",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_enchanter": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u9644\u9b54\u5e08",
+            "color": "#9932cc"
+          },
+          "CHAT": {
+            "text": "-\u9644\u9b54\u5e08",
+            "color": "#9932cc"
+          }
+        },
+        "cost": 1
+      },
+      "the_alchemist": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u70bc\u91d1\u672f\u58eb",
+            "color": "#daa520"
+          },
+          "CHAT": {
+            "text": "-\u70bc\u91d1\u672f\u58eb",
+            "color": "#daa520"
+          }
+        },
+        "cost": 1
+      },
+      "the_blacksmith": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u94c1\u5320",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u94c1\u5320",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_farmer": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u519c\u6c11",
+            "color": "#228b22"
+          },
+          "CHAT": {
+            "text": "-\u519c\u6c11",
+            "color": "#228b22"
+          }
+        },
+        "cost": 1
+      },
+      "the_merchant": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5546\u4eba",
+            "color": "#ffd700"
+          },
+          "CHAT": {
+            "text": "-\u5546\u4eba",
+            "color": "#ffd700"
+          }
+        },
+        "cost": 1
+      },
+      "the_scholar": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5b66\u8005",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u5b66\u8005",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_sage": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5723\u4eba",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u5723\u4eba",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_sorcerer": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5deb\u5e08",
+            "color": "#9932cc"
+          },
+          "CHAT": {
+            "text": "-\u5deb\u5e08",
+            "color": "#9932cc"
+          }
+        },
+        "cost": 1
+      },
+      "the_wizard": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u9b54\u6cd5\u5e08",
+            "color": "#4169e1"
+          },
+          "CHAT": {
+            "text": "-\u9b54\u6cd5\u5e08",
+            "color": "#4169e1"
+          }
+        },
+        "cost": 1
+      },
+      "the_mage": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6cd5\u5e08",
+            "color": "#e066ff"
+          },
+          "CHAT": {
+            "text": "-\u6cd5\u5e08",
+            "color": "#e066ff"
+          }
+        },
+        "cost": 1
+      },
+      "the_warrior": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6218\u58eb",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u6218\u58eb",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_knight": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u9a91\u58eb",
+            "color": "#c0c0c0"
+          },
+          "CHAT": {
+            "text": "-\u9a91\u58eb",
+            "color": "#c0c0c0"
+          }
+        },
+        "cost": 1
+      },
+      "the_paladin": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5723\u9a91\u58eb",
+            "color": "#ffd700"
+          },
+          "CHAT": {
+            "text": "-\u5723\u9a91\u58eb",
+            "color": "#ffd700"
+          }
+        },
+        "cost": 1
+      },
+      "the_assassin": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u523a\u5ba2",
+            "color": "#3d3d3d"
+          },
+          "CHAT": {
+            "text": "-\u523a\u5ba2",
+            "color": "#3d3d3d"
+          }
+        },
+        "cost": 1
+      },
+      "the_rogue": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6d41\u6c13",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u6d41\u6c13",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_ranger": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6e38\u4fa0",
+            "color": "#228b22"
+          },
+          "CHAT": {
+            "text": "-\u6e38\u4fa0",
+            "color": "#228b22"
+          }
+        },
+        "cost": 1
+      },
+      "the_bard": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u541f\u6e38\u8bd7\u4eba",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u541f\u6e38\u8bd7\u4eba",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_cleric": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u7267\u5e08",
+            "color": "#fffaf0"
+          },
+          "CHAT": {
+            "text": "-\u7267\u5e08",
+            "color": "#fffaf0"
+          }
+        },
+        "cost": 1
+      },
+      "the_druid": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u5fb7\u9c81\u4f0a",
+            "color": "#228b22"
+          },
+          "CHAT": {
+            "text": "-\u5fb7\u9c81\u4f0a",
+            "color": "#228b22"
+          }
+        },
+        "cost": 1
+      },
+      "the_berserker": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u72c2\u6218\u58eb",
+            "color": "#ff4500"
+          },
+          "CHAT": {
+            "text": "-\u72c2\u6218\u58eb",
+            "color": "#ff4500"
+          }
+        },
+        "cost": 1
+      },
+      "the_barbarian": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u91ce\u86ee\u4eba",
+            "color": "#8b4513"
+          },
+          "CHAT": {
+            "text": "-\u91ce\u86ee\u4eba",
+            "color": "#8b4513"
+          }
+        },
+        "cost": 1
+      },
+      "the_monk": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u548c\u5c1a",
+            "color": "#AAAAAA"
+          },
+          "CHAT": {
+            "text": "-\u548c\u5c1a",
+            "color": "#AAAAAA"
+          }
+        },
+        "cost": 1
+      },
+      "the_necromancer": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u6b7b\u7075\u6cd5\u5e08",
+            "color": "#301934"
+          },
+          "CHAT": {
+            "text": "-\u6b7b\u7075\u6cd5\u5e08",
+            "color": "#301934"
+          }
+        },
+        "cost": 1
+      },
+      "the_summoner": {
+        "display": {
+          "TAB_LIST": {
+            "text": "-\u53ec\u5524\u5e08",
+            "color": "#9932cc"
+          },
+          "CHAT": {
+            "text": "-\u53ec\u5524\u5e08",
+            "color": "#9932cc"
+          }
+        },
+        "cost": 1
+      }
+
+    }
+  }
+}

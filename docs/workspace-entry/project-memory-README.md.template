@@ -1,0 +1,5 @@
+# 共享记忆已迁移
+
+Git 初始化后，唯一有效的项目记忆位置为 `../vh3-translation/project-memory/`。
+
+请先读取该目录的 README.md，再按顺序读取快照和未归并 notes。不要在本旧目录新增记录。工作区根 AGENTS.md 已指向新位置。

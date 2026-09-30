@@ -1,0 +1,615 @@
+{
+  "tree": {
+    "type": "prestige",
+    "skills": [
+      {
+        "type": "tiered",
+        "id": "ShadowCloakPower",
+        "name": "\u6697\u5f71\u7684\u9762\u7eb1",
+        "tiers": [
+          {
+            "type": "activatable_trinket_power",
+            "trinketEffectId": "the_vault:shadow_cloak",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 50,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "tier": 1,
+            "requiredGreedTier": 1
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "BountyCooldownReduction",
+        "name": "\u4e0d\u61c8\u7684\u8ffd\u6c42",
+        "tiers": [
+          {
+            "type": "no_bounties_cooldown_power",
+            "minutesReduction": 1000,
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 50,
+            "regretPointCost": 2,
+            "unlockLevel": 0,
+            "id": "bounty_cooldown_1",
+            "tier": 1,
+            "requiredGreedTier": 1
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "FallImmunity",
+        "name": "\u7075\u6c14\u7684\u795d\u798f",
+        "tiers": [
+          {
+            "type": "trinket_power",
+            "trinketEffectId": "the_vault:elven_socks",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 50,
+            "regretPointCost": 3,
+            "unlockLevel": 0,
+            "id": "fall_immunity_1",
+            "tier": 1,
+            "requiredGreedTier": 1
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "AetherSparkTrinket",
+        "name": "\u4ee5\u592a\u7684\u6d41\u7130",
+        "tiers": [
+          {
+            "type": "activatable_trinket_power",
+            "trinketEffectId": "the_vault:aether",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 100,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "aether_spark_1",
+            "tier": 2,
+            "requiredGreedTier": 2
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "KineticImmunity",
+        "name": "\u51b2\u51fb\u7684\u6d88\u6563",
+        "tiers": [
+          {
+            "type": "gear_attribute_boolean_power",
+            "attribute": "the_vault:kinetic_immunity",
+            "value": true,
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 100,
+            "regretPointCost": 3,
+            "unlockLevel": 0,
+            "id": "kinetic_immunity_1",
+            "tier": 2,
+            "requiredGreedTier": 2
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "Shielded",
+        "name": "\u5c4f\u969c\u7684\u5e87\u62a4",
+        "tiers": [
+          {
+            "type": "shielded_power",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 100,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "percentageOfHearts": 1,
+            "id": "shielded_power_1",
+            "tier": 2,
+            "requiredGreedTier": 2
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "PickupRange",
+        "name": "\u91cd\u529b\u7684\u5ef6\u5c55",
+        "tiers": [
+          {
+            "type": "magnet_mastery",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 200,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "pickup_range_1",
+            "tier": 3,
+            "requiredGreedTier": 3
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "BlackMarketRerolls",
+        "name": "\u9ed1\u5e02\u7684\u5bc6\u8bed",
+        "tiers": [
+          {
+            "type": "black_market_rerolls_power",
+            "costMultiplier": 3,
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 200,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "black_market_rerolls_1",
+            "tier": 3,
+            "requiredGreedTier": 3
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "EnderAnchorPower",
+        "name": "\u951a\u5b9a\u7684\u5171\u9e23",
+        "tiers": [
+          {
+            "type": "activatable_trinket_power",
+            "trinketEffectId": "the_vault:ender_anchor",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 200,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "ender_anchor_1",
+            "tier": 3,
+            "requiredGreedTier": 3
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "ChainMiner",
+        "name": "\u91c7\u6398\u7684\u8fde\u9501",
+        "tiers": [
+          {
+            "type": "chain_miner_power",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 400,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "chain_miner_1",
+            "tier": 4,
+            "requiredGreedTier": 4
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "NoVoidUses",
+        "name": "\u540a\u5760\u7684\u6c38\u5b58",
+        "tiers": [
+          {
+            "type": "no_uses_power",
+            "itemId": "the_vault:vault_necklace",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 400,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "void_stone_uses_1",
+            "tier": 4,
+            "requiredGreedTier": 4
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "CrateTier",
+        "name": "\u56de\u62a5\u7684\u6177\u6168",
+        "tiers": [
+          {
+            "type": "crate_tier_power",
+            "extraTier": 1,
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 400,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "crate_tier_1",
+            "tier": 4,
+            "requiredGreedTier": 4
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "ChampionsDamage",
+        "name": "\u80dc\u8005\u7684\u4f18\u52bf",
+        "tiers": [
+          {
+            "type": "champion_damage_power",
+            "attribute": "the_vault:damage_champion",
+            "value": 0.5,
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 600,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "champions_damage_1",
+            "tier": 5,
+            "requiredGreedTier": 5
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "TripleJump",
+        "name": "\u68f1\u5f69\u7684\u7fbd\u821e",
+        "tiers": [
+          {
+            "type": "triplejump_power",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 600,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "triple_jump_power_1",
+            "tier": 5,
+            "requiredGreedTier": 5
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "GluttonyPower",
+        "name": "\u9955\u992e\u7684\u6807\u8bb0",
+        "tiers": [
+          {
+            "type": "instant_item_use_power",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 600,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "tier": 5,
+            "requiredGreedTier": 5
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "SuperCrystals",
+        "name": "\u5723\u6676\u7684\u79d8\u7ec7",
+        "tiers": [
+          {
+            "type": "super_crystals_power",
+            "extraCapacity": 100,
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 800,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "super_crystals_1",
+            "tier": 6,
+            "requiredGreedTier": 6
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "NoCharmsUses",
+        "name": "\u62a4\u7b26\u7684\u6301\u76c8",
+        "tiers": [
+          {
+            "type": "no_uses_power",
+            "itemId": "the_vault:vault_god_charm",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 800,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "charm_uses_1",
+            "tier": 6,
+            "requiredGreedTier": 6
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "StepUpPower",
+        "name": "\u8df3\u86d9\u7684\u6b65\u4f10",
+        "tiers": [
+          {
+            "type": "activatable_trinket_power",
+            "trinketEffectId": "the_vault:high_heels",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 800,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "step_up_1",
+            "tier": 6,
+            "requiredGreedTier": 6
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "CatDodge",
+        "name": "\u732b\u732b\u7684\u6069\u5178",
+        "tiers": [
+          {
+            "type": "activatable_trinket_power",
+            "trinketEffectId": "the_vault:cat_in_a_jar",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 1000,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "cat_dodge_1",
+            "tier": 7,
+            "requiredGreedTier": 7
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "TreasureHunterPower",
+        "name": "\u5b9d\u85cf\u7684\u6e34\u6c42",
+        "tiers": [
+          {
+            "type": "treasure_hunter_power",
+            "bonusPerStack": 0.05,
+            "maxStacks": 20,
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 1000,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "treasure_hunter_power_1",
+            "tier": 7,
+            "requiredGreedTier": 7
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "RegenerationPower",
+        "name": "\u82b1\u74e3\u7684\u8d60\u793c",
+        "tiers": [
+          {
+            "type": "potion_effect_power",
+            "effectId": "minecraft:regeneration",
+            "ambient": true,
+            "visible": false,
+            "amplifier": 0,
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 1200,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "regeneration_1",
+            "tier": 8,
+            "requiredGreedTier": 8
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "BlackMarketer",
+        "name": "\u9ed1\u5e02\u7684\u6df1\u6f5c",
+        "tiers": [
+          {
+            "type": "black_marketer_power",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 1200,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "black_marketer_1",
+            "tier": 8,
+            "requiredGreedTier": 8
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "TemporalShardChance",
+        "name": "\u6c38\u6052\u7684\u8e2a\u8ff9",
+        "tiers": [
+          {
+            "type": "temporal_shard_chance_power",
+            "chance": 0.3,
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 1200,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "temporal_shard_chance_1",
+            "tier": 8,
+            "requiredGreedTier": 8
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "TheCarapace",
+        "name": "\u866b\u7532\u7684\u575a\u58f3",
+        "tiers": [
+          {
+            "type": "activatable_trinket_power",
+            "trinketEffectId": "the_vault:carapace",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 1400,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "carapace",
+            "tier": 9,
+            "requiredGreedTier": 9
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "NoTrinketUses",
+        "name": "\u9970\u54c1\u7684\u4e0d\u673d",
+        "tiers": [
+          {
+            "type": "no_uses_power",
+            "itemId": "the_vault:trinket",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 1400,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "trinket_uses_1",
+            "tier": 9,
+            "requiredGreedTier": 9
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "CommanderPower",
+        "name": "\u5c06\u9886\u7684\u6069\u5a01",
+        "tiers": [
+          {
+            "type": "commander_power",
+            "durationMultiplier": 2.0,
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 1400,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "commander_power_1",
+            "tier": 9,
+            "requiredGreedTier": 9
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "MovementSpeedMultiplier",
+        "name": "\u8fc5\u6377\u7684\u589e\u5e45",
+        "tiers": [
+          {
+            "type": "movement_speed_multiplier_power",
+            "multiplier": 1.25,
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 1600,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "movement_speed_multiplier_1",
+            "tier": 10,
+            "requiredGreedTier": 10
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "ToolDurabilityPower",
+        "name": "\u5de5\u5177\u7684\u6052\u56fa",
+        "tiers": [
+          {
+            "type": "tool_durability_power",
+            "damageReduction": 1.0,
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 1600,
+            "regretPointCost": 2,
+            "unlockLevel": 0,
+            "id": "tool_immunity_1",
+            "tier": 10,
+            "requiredGreedTier": 10
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "OriginalWardPower",
+        "name": "\u575a\u5b88\u7684\u4fe1\u5ff5",
+        "tiers": [
+          {
+            "type": "original_ward_power",
+            "thresholdTicks": 1200,
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 1800,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "original_ward_power_1",
+            "tier": 11,
+            "requiredGreedTier": 11
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "ElytraWings",
+        "name": "\u7fc5\u7ffc\u7684\u98de\u5347",
+        "tiers": [
+          {
+            "type": "wings_power",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 1800,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "tier": 11,
+            "requiredGreedTier": 11
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "GearDurabilityPower",
+        "name": "\u5251\u7532\u7684\u4e0d\u5213",
+        "tiers": [
+          {
+            "type": "gear_durability_power",
+            "damageReduction": 1.0,
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 1800,
+            "regretPointCost": 2,
+            "unlockLevel": 0,
+            "id": "gear_immortality_1",
+            "tier": 11,
+            "requiredGreedTier": 11
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "Fruity",
+        "name": "\u65f6\u95f4\u7684\u7efd\u653e",
+        "tiers": [
+          {
+            "type": "gear_attribute_power",
+            "attribute": "the_vault:fruit_effectiveness",
+            "value": 1,
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 2000,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "fruity_1",
+            "tier": 12,
+            "requiredGreedTier": 12
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "MasterfulPower",
+        "name": "\u624d\u80fd\u7684\u7cbe\u6e5b",
+        "tiers": [
+          {
+            "type": "masterful_power",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 2000,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "masterful_power_1",
+            "tier": 12,
+            "requiredGreedTier": 12
+          }
+        ]
+      },
+      {
+        "type": "tiered",
+        "id": "BerserkPower",
+        "name": "\u72c2\u66b4\u7684\u672c\u80fd",
+        "tiers": [
+          {
+            "type": "berserk_power",
+            "learnPointCost": 0,
+            "learnKnowledgeCost": 2000,
+            "regretPointCost": 1,
+            "unlockLevel": 0,
+            "id": "berserk_power_1",
+            "tier": 12,
+            "requiredGreedTier": 12
+          }
+        ]
+      }
+    ]
+  }
+}

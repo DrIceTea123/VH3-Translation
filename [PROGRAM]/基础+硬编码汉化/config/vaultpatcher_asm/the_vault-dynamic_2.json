@@ -1,0 +1,305 @@
+[
+    {
+        "name": "宝藏猎人主要硬编码汉化-动态替换部分2",
+        "desc": "硬编码半匹配部分。版本V2.6.15",
+        "authors": "KlparetlR、VM汉化组、ByF、DrIceTea",
+        "mods": "the_vault",
+        "dynamic": true
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.item.ItemLegendaryTreasure",
+            "method": "m_7373_"
+        },
+        "pairs": [
+            {
+                "key": "COMMON",
+                "value": "@普通"
+            },
+            {
+                "key": "RARE",
+                "value": "@稀有"
+            },
+            {
+                "key": "EPIC",
+                "value": "@史诗"
+            },
+            {
+                "key": "OMEGA",
+                "value": "@终焉"
+            }
+        ]
+    },
+    {
+        "_comment": "ordinal bug set 2: local = Mget, ordinal = 251"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.core.card.Card",
+            "method": "addText"
+        },
+        "pairs": [
+            {
+                "key": "Foil",
+                "value": "陪衬"
+            },
+            {
+                "key": "Offensive",
+                "value": "进攻"
+            },
+            {
+                "key": "Defensive",
+                "value": "防御"
+            },
+            {
+                "key": "Utility",
+                "value": "实用"
+            },
+            {
+                "key": "Magical",
+                "value": "魔法"
+            },
+            {
+                "key": "Essence",
+                "value": "精华"
+            },
+            {
+                "key": "Scaling",
+                "value": "强化"
+            }
+        ]
+    },
+    {
+        "_comment": "duplicated bug set: method = lambda$initializeElements$4, local = MtoUpperCase"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.accessibility.HunterOptionsSubmenu"
+        },
+        "pairs": [
+            {
+                "key": "NORMAL",
+                "value": "普通"
+            },
+            {
+                "key": "REDUCED",
+                "value": "少量"
+            }
+        ]
+    },
+    {
+        "_comment": "duplicated bug set: class = CrystalStatsContainerElement, method = <init>, local = MgetKey, ordinal = 894,900"
+    },
+    {
+        "target_class": {
+            "name": "@iskallia.vault.client.gui.screen.summary.element"
+        },
+        "pairs": [
+            {
+                "key": "Common",
+                "value": "普通"
+            },
+            {
+                "key": "Omega",
+                "value": "终焉"
+            },
+            {
+                "key": "Challenge",
+                "value": "挑战"
+            },
+            {
+                "key": "Other",
+                "value": "其他"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "@iskallia.vault.client.gui.screen.summary.element"
+        },
+        "pairs": [
+            {
+                "key": "common",
+                "value": "@普通"
+            },
+            {
+                "key": "omega",
+                "value": "@终焉"
+            },
+            {
+                "key": "challenge",
+                "value": "@挑战"
+            },
+            {
+                "key": "other",
+                "value": "@其他"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "@iskallia.vault.client.gui.screen.summary.element"
+        },
+        "pairs": [
+            {
+                "key": "Velara: ",
+                "value": "@维拉拉："
+            },
+            {
+                "key": "Tenos: ",
+                "value": "@特诺斯："
+            },
+            {
+                "key": "Wendarr: ",
+                "value": "@文达尔："
+            },
+            {
+                "key": "Idona: ",
+                "value": "@伊多纳："
+            }
+        ]
+    },
+    {
+        "_comment": "duplicated bug set: class = CrystalStatsContainerElement, method = lambda$new$5, local = Vdifficulty / Vvar10003"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.summary.element.CrystalStatsContainerElement"
+        },
+        "pairs": [
+            {
+                "key": "Normal",
+                "value": "@普通"
+            },
+            {
+                "key": "Hard",
+                "value": "@困难"
+            },
+            {
+                "key": "Challenging",
+                "value": "@疯狂"
+            },
+            {
+                "key": "Extreme",
+                "value": "@极限"
+            },
+            {
+                "key": "Impossible",
+                "value": "@不可能"
+            },
+            {
+                "key": "SPIDER",
+                "value": "@蜘蛛"
+            },
+            {
+                "key": "ILLAGER",
+                "value": "@灾厄村民"
+            },
+            {
+                "key": "ZOMBIE",
+                "value": "@僵尸"
+            },
+            {
+                "key": "SKELETON",
+                "value": "@骷髅"
+            },
+            {
+                "key": "PIGLIN",
+                "value": "@猪灵"
+            },
+            {
+                "key": "WITCH",
+                "value": "@女巫"
+            }
+        ]
+    },
+    {
+        "_comment": "vp bug set: method = lambda$addTooltipRarity$12, local = MgetName"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.gear.tooltip.VaultGearTooltipItem",
+            "method": "lambda$addTooltipRarity$12"
+        },
+        "pairs": [
+            {
+                "key": "Scrappy",
+                "value": "破烂"
+            },
+            {
+                "key": "Common",
+                "value": "普通"
+            },
+            {
+                "key": "Rare",
+                "value": "稀有"
+            },
+            {
+                "key": "Epic",
+                "value": "史诗"
+            },
+            {
+                "key": "Omega",
+                "value": "终焉"
+            },
+            {
+                "key": "Unique",
+                "value": "独特"
+            },
+            {
+                "key": "Scrappy+",
+                "value": "破烂+"
+            },
+            {
+                "key": "Common+",
+                "value": "普通+"
+            },
+            {
+                "key": "Rare+",
+                "value": "稀有+"
+            },
+            {
+                "key": "Epic+",
+                "value": "史诗+"
+            },
+            {
+                "key": "Royale",
+                "value": "皇家"
+            },
+            {
+                "key": "Royale Poor",
+                "value": "皇家劣质"
+            },
+            {
+                "key": "Chaos",
+                "value": "混沌"
+            },
+            {
+                "key": "Chaotic",
+                "value": "混沌"
+            },
+            {
+                "key": "Greed",
+                "value": "贪婪"
+            }
+        ]
+    },
+    {
+        "_comment": "duplicated bug set: local = Mcapitalize"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.item.CompanionItemClient"
+        },
+        "pairs": [
+            {
+                "key": "Legend",
+                "value": "@传奇"
+            },
+            {
+                "key": "Pet",
+                "value": "@宠物"
+            }
+        ]
+    }
+]

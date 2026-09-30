@@ -1,0 +1,2948 @@
+{
+  "globalCoinCost": 5,
+  "tierPools": {
+    "1": [
+      {
+        "type": "random_etching",
+        "weight": 5,
+        "minCoinCost": 10,
+        "maxCoinCost": 20
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "catalyst_t1",
+        "minCoinCost": 15,
+        "maxCoinCost": 30
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "super_inscriptions",
+        "minCoinCost": 20,
+        "maxCoinCost": 40
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "random_crystals",
+        "minCoinCost": 40,
+        "maxCoinCost": 100
+      },
+      {
+        "type": "pool",
+        "weight": 3,
+        "poolId": "greed_catalysts_t1",
+        "minCoinCost": 20,
+        "maxCoinCost": 35
+      }
+    ],
+    "2": [
+      {
+        "type": "random_etching",
+        "weight": 5,
+        "minCoinCost": 12,
+        "maxCoinCost": 22
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "catalyst_t1",
+        "minCoinCost": 17,
+        "maxCoinCost": 32
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "super_inscriptions",
+        "minCoinCost": 22,
+        "maxCoinCost": 42
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "random_crystals",
+        "minCoinCost": 42,
+        "maxCoinCost": 106
+      },
+      {
+        "type": "pool",
+        "weight": 3,
+        "poolId": "greed_catalysts_t1",
+        "minCoinCost": 22,
+        "maxCoinCost": 37
+      }
+    ],
+    "3": [
+      {
+        "type": "random_etching",
+        "weight": 5,
+        "minCoinCost": 14,
+        "maxCoinCost": 24
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "catalyst_t1",
+        "minCoinCost": 19,
+        "maxCoinCost": 34
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "super_inscriptions",
+        "minCoinCost": 24,
+        "maxCoinCost": 44
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "random_crystals",
+        "minCoinCost": 44,
+        "maxCoinCost": 112
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "greater_cores",
+        "minCoinCost": 40,
+        "maxCoinCost": 80
+      },
+      {
+        "type": "pool",
+        "weight": 3,
+        "poolId": "greed_catalysts_t1",
+        "minCoinCost": 24,
+        "maxCoinCost": 39
+      },
+      {
+        "type": "xp_burger",
+        "weight": 1,
+        "minAmount": 2000000,
+        "maxAmount": 10000000,
+        "minCoinCost": 40,
+        "maxCoinCost": 90
+      }
+    ],
+    "4": [
+      {
+        "type": "random_etching",
+        "weight": 5,
+        "minCoinCost": 16,
+        "maxCoinCost": 26
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "catalyst_t1",
+        "minCoinCost": 21,
+        "maxCoinCost": 36
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "super_inscriptions",
+        "minCoinCost": 26,
+        "maxCoinCost": 46
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "random_crystals",
+        "minCoinCost": 46,
+        "maxCoinCost": 118
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "greater_cores",
+        "minCoinCost": 42,
+        "maxCoinCost": 82
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_booster_packs",
+        "minCoinCost": 20,
+        "maxCoinCost": 40
+      },
+      {
+        "type": "pool",
+        "weight": 3,
+        "poolId": "greed_catalysts_t1",
+        "minCoinCost": 26,
+        "maxCoinCost": 41
+      },
+      {
+        "type": "xp_burger",
+        "weight": 1,
+        "minAmount": 2000000,
+        "maxAmount": 10000000,
+        "minCoinCost": 40,
+        "maxCoinCost": 90
+      }
+    ],
+    "5": [
+      {
+        "type": "random_etching",
+        "weight": 5,
+        "minCoinCost": 18,
+        "maxCoinCost": 28
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "catalyst_t1",
+        "minCoinCost": 23,
+        "maxCoinCost": 38
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "super_inscriptions",
+        "minCoinCost": 28,
+        "maxCoinCost": 48
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "random_crystals",
+        "minCoinCost": 48,
+        "maxCoinCost": 124
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "greater_cores",
+        "minCoinCost": 44,
+        "maxCoinCost": 84
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_booster_packs",
+        "minCoinCost": 22,
+        "maxCoinCost": 42
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_companion_relics",
+        "minCoinCost": 33,
+        "maxCoinCost": 53
+      },
+      {
+        "type": "pool",
+        "weight": 3,
+        "poolId": "catalyst_t2",
+        "minCoinCost": 25,
+        "maxCoinCost": 45
+      },
+      {
+        "type": "pool",
+        "weight": 3,
+        "poolId": "greed_catalysts_t1",
+        "minCoinCost": 28,
+        "maxCoinCost": 43
+      },
+      {
+        "type": "xp_burger",
+        "weight": 1,
+        "minAmount": 2000000,
+        "maxAmount": 10000000,
+        "minCoinCost": 40,
+        "maxCoinCost": 90
+      }
+    ],
+    "6": [
+      {
+        "type": "random_etching",
+        "weight": 5,
+        "minCoinCost": 20,
+        "maxCoinCost": 30
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "catalyst_t1",
+        "minCoinCost": 25,
+        "maxCoinCost": 40
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "super_inscriptions",
+        "minCoinCost": 30,
+        "maxCoinCost": 50
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "random_crystals",
+        "minCoinCost": 50,
+        "maxCoinCost": 130
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "greater_cores",
+        "minCoinCost": 46,
+        "maxCoinCost": 86
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_booster_packs",
+        "minCoinCost": 24,
+        "maxCoinCost": 44
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_companion_relics",
+        "minCoinCost": 35,
+        "maxCoinCost": 55
+      },
+      {
+        "type": "pool",
+        "weight": 3,
+        "poolId": "catalyst_t2",
+        "minCoinCost": 27,
+        "maxCoinCost": 49
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_catalysts_t2",
+        "minCoinCost": 25,
+        "maxCoinCost": 42
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_trinkets",
+        "minCoinCost": 40,
+        "maxCoinCost": 60
+      },
+      {
+        "type": "xp_burger",
+        "weight": 1,
+        "minAmount": 2000000,
+        "maxAmount": 10000000,
+        "minCoinCost": 40,
+        "maxCoinCost": 90
+      }
+    ],
+    "7": [
+      {
+        "type": "random_etching",
+        "weight": 5,
+        "minCoinCost": 22,
+        "maxCoinCost": 32
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "catalyst_t1",
+        "minCoinCost": 27,
+        "maxCoinCost": 42
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "super_inscriptions",
+        "minCoinCost": 32,
+        "maxCoinCost": 52
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "random_crystals",
+        "minCoinCost": 52,
+        "maxCoinCost": 136
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "greater_cores",
+        "minCoinCost": 48,
+        "maxCoinCost": 88
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_booster_packs",
+        "minCoinCost": 26,
+        "maxCoinCost": 46
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_companion_relics",
+        "minCoinCost": 37,
+        "maxCoinCost": 57
+      },
+      {
+        "type": "pool",
+        "weight": 3,
+        "poolId": "catalyst_t2",
+        "minCoinCost": 29,
+        "maxCoinCost": 53
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_catalysts_t2",
+        "minCoinCost": 27,
+        "maxCoinCost": 46
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_trinkets",
+        "minCoinCost": 42,
+        "maxCoinCost": 62
+      },
+      {
+        "type": "xp_burger",
+        "weight": 1,
+        "minAmount": 2000000,
+        "maxAmount": 10000000,
+        "minCoinCost": 40,
+        "maxCoinCost": 90
+      }
+    ],
+    "8": [
+      {
+        "type": "random_etching",
+        "weight": 5,
+        "minCoinCost": 24,
+        "maxCoinCost": 34
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "catalyst_t1",
+        "minCoinCost": 29,
+        "maxCoinCost": 44
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "super_inscriptions",
+        "minCoinCost": 34,
+        "maxCoinCost": 54
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "random_crystals",
+        "minCoinCost": 54,
+        "maxCoinCost": 142
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "greater_cores",
+        "minCoinCost": 50,
+        "maxCoinCost": 90
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_booster_packs",
+        "minCoinCost": 28,
+        "maxCoinCost": 48
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_companion_relics",
+        "minCoinCost": 39,
+        "maxCoinCost": 59
+      },
+      {
+        "type": "pool",
+        "weight": 3,
+        "poolId": "catalyst_t2",
+        "minCoinCost": 31,
+        "maxCoinCost": 57
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_catalysts_t2",
+        "minCoinCost": 29,
+        "maxCoinCost": 50
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_trinkets",
+        "minCoinCost": 44,
+        "maxCoinCost": 64
+      },
+      {
+        "type": "xp_burger",
+        "weight": 1,
+        "minAmount": 2000000,
+        "maxAmount": 10000000,
+        "minCoinCost": 40,
+        "maxCoinCost": 90
+      }
+    ],
+    "9": [
+      {
+        "type": "random_etching",
+        "weight": 5,
+        "minCoinCost": 26,
+        "maxCoinCost": 36
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "catalyst_t1",
+        "minCoinCost": 31,
+        "maxCoinCost": 46
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "super_inscriptions",
+        "minCoinCost": 36,
+        "maxCoinCost": 56
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "random_crystals",
+        "minCoinCost": 56,
+        "maxCoinCost": 148
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "greater_cores",
+        "minCoinCost": 52,
+        "maxCoinCost": 92
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_booster_packs",
+        "minCoinCost": 30,
+        "maxCoinCost": 50
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_companion_relics",
+        "minCoinCost": 41,
+        "maxCoinCost": 61
+      },
+      {
+        "type": "pool",
+        "weight": 3,
+        "poolId": "catalyst_t2",
+        "minCoinCost": 33,
+        "maxCoinCost": 61
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_catalysts_t2",
+        "minCoinCost": 31,
+        "maxCoinCost": 54
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_trinkets",
+        "minCoinCost": 46,
+        "maxCoinCost": 66
+      },
+      {
+        "type": "xp_burger",
+        "weight": 1,
+        "minAmount": 2000000,
+        "maxAmount": 10000000,
+        "minCoinCost": 40,
+        "maxCoinCost": 90
+      }
+    ],
+    "10": [
+      {
+        "type": "random_etching",
+        "weight": 5,
+        "minCoinCost": 28,
+        "maxCoinCost": 38
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "catalyst_t1",
+        "minCoinCost": 33,
+        "maxCoinCost": 48
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "super_inscriptions",
+        "minCoinCost": 38,
+        "maxCoinCost": 58
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "random_crystals",
+        "minCoinCost": 58,
+        "maxCoinCost": 154
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "greater_cores",
+        "minCoinCost": 54,
+        "maxCoinCost": 94
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_booster_packs",
+        "minCoinCost": 32,
+        "maxCoinCost": 52
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_companion_relics",
+        "minCoinCost": 43,
+        "maxCoinCost": 63
+      },
+      {
+        "type": "pool",
+        "weight": 3,
+        "poolId": "catalyst_t2",
+        "minCoinCost": 35,
+        "maxCoinCost": 65
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "catalyst_t3",
+        "minCoinCost": 35,
+        "maxCoinCost": 60
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_catalysts_t2",
+        "minCoinCost": 33,
+        "maxCoinCost": 58
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_trinkets",
+        "minCoinCost": 48,
+        "maxCoinCost": 68
+      },
+      {
+        "type": "xp_burger",
+        "weight": 1,
+        "minAmount": 2000000,
+        "maxAmount": 10000000,
+        "minCoinCost": 40,
+        "maxCoinCost": 90
+      }
+    ],
+    "11": [
+      {
+        "type": "random_etching",
+        "weight": 5,
+        "minCoinCost": 30,
+        "maxCoinCost": 40
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "catalyst_t1",
+        "minCoinCost": 35,
+        "maxCoinCost": 50
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "super_inscriptions",
+        "minCoinCost": 40,
+        "maxCoinCost": 60
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "random_crystals",
+        "minCoinCost": 60,
+        "maxCoinCost": 160
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "greater_cores",
+        "minCoinCost": 56,
+        "maxCoinCost": 96
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_booster_packs",
+        "minCoinCost": 34,
+        "maxCoinCost": 54
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_companion_relics",
+        "minCoinCost": 45,
+        "maxCoinCost": 65
+      },
+      {
+        "type": "pool",
+        "weight": 3,
+        "poolId": "catalyst_t2",
+        "minCoinCost": 37,
+        "maxCoinCost": 69
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "catalyst_t3",
+        "minCoinCost": 38,
+        "maxCoinCost": 66
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_catalysts_t2",
+        "minCoinCost": 35,
+        "maxCoinCost": 62
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_trinkets",
+        "minCoinCost": 50,
+        "maxCoinCost": 70
+      },
+      {
+        "type": "xp_burger",
+        "weight": 1,
+        "minAmount": 2000000,
+        "maxAmount": 10000000,
+        "minCoinCost": 40,
+        "maxCoinCost": 90
+      }
+    ],
+    "12": [
+      {
+        "type": "random_etching",
+        "weight": 5,
+        "minCoinCost": 32,
+        "maxCoinCost": 42
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "catalyst_t1",
+        "minCoinCost": 37,
+        "maxCoinCost": 52
+      },
+      {
+        "type": "pool",
+        "weight": 4,
+        "poolId": "super_inscriptions",
+        "minCoinCost": 42,
+        "maxCoinCost": 62
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "random_crystals",
+        "minCoinCost": 62,
+        "maxCoinCost": 166
+      },
+      {
+        "type": "pool",
+        "weight": 1,
+        "poolId": "greater_cores",
+        "minCoinCost": 58,
+        "maxCoinCost": 98
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_booster_packs",
+        "minCoinCost": 36,
+        "maxCoinCost": 56
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_companion_relics",
+        "minCoinCost": 47,
+        "maxCoinCost": 67
+      },
+      {
+        "type": "pool",
+        "weight": 3,
+        "poolId": "catalyst_t2",
+        "minCoinCost": 39,
+        "maxCoinCost": 73
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "catalyst_t3",
+        "minCoinCost": 41,
+        "maxCoinCost": 72
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_catalysts_t2",
+        "minCoinCost": 37,
+        "maxCoinCost": 66
+      },
+      {
+        "type": "pool",
+        "weight": 2,
+        "poolId": "greed_trinkets",
+        "minCoinCost": 52,
+        "maxCoinCost": 72
+      },
+      {
+        "type": "xp_burger",
+        "weight": 1,
+        "minAmount": 2000000,
+        "maxAmount": 10000000,
+        "minCoinCost": 40,
+        "maxCoinCost": 90
+      }
+    ]
+  },
+  "pools": {
+    "greed_trinkets": [
+      {
+        "weight": 10,
+        "minGreedTier": 6,
+        "maxGreedTier": -1,
+        "itemStack": {
+          "item": "the_vault:greed_trinket"
+        }
+      }
+    ],
+    "catalyst_t1": [
+      {
+        "type": "catalyst",
+        "weight": 10,
+        "minGreedTier": 0,
+        "maxGreedTier": -1,
+        "catalyst": {
+          "size": {
+            "type": "constant",
+            "count": 10
+          },
+          "modifierPool": "cascade_modifiers",
+          "minModifiers": 1,
+          "maxModifiers": 1,
+          "isSuper": true,
+          "isGreedy": false
+        }
+      }
+    ],
+    "catalyst_t2": [
+      {
+        "type": "catalyst",
+        "weight": 10,
+        "minGreedTier": 5,
+        "maxGreedTier": -1,
+        "catalyst": {
+          "size": {
+            "type": "constant",
+            "count": 12
+          },
+          "modifierPool": "good_modifiers",
+          "minModifiers": 1,
+          "maxModifiers": 2,
+          "isSuper": true,
+          "isGreedy": false
+        }
+      }
+    ],
+    "catalyst_t3": [
+      {
+        "type": "catalyst",
+        "weight": 10,
+        "minGreedTier": 10,
+        "maxGreedTier": -1,
+        "catalyst": {
+          "size": {
+            "type": "constant",
+            "count": 16
+          },
+          "modifierPool": "treasure_modifiers",
+          "minModifiers": 1,
+          "maxModifiers": 2,
+          "isSuper": true,
+          "isGreedy": false
+        }
+      }
+    ],
+    "random_crystals": [
+      {
+        "type": "random_crystal",
+        "weight": 50,
+        "minGreedTier": 0,
+        "maxGreedTier": -1,
+        "minCoinCost": 15,
+        "maxCoinCost": 20,
+        "crystal": {
+          "modifierPool": "normal_modifiers",
+          "minModifiers": 0,
+          "maxModifiers": 8,
+          "modifierPoolTwo": "treasure_modifiers",
+          "minModifiersTwo": 0,
+          "maxModifiersTwo": 1,
+          "modifierPoolThree": "temporal_modifiers",
+          "minModifiersThree": 0,
+          "maxModifiersThree": 1
+        }
+      }
+    ],
+    "greater_cores": [
+      {
+        "weight": 10,
+        "minGreedTier": 0,
+        "maxGreedTier": -1,
+        "itemStack": {
+          "item": "the_vault:deck_socket",
+          "nbt": "{Modifier:\"@greed\",ModifierRoll:\"greater\"}"
+        }
+      }
+    ],
+    "greed_catalysts_t1": [
+      {
+        "type": "catalyst",
+        "weight": 10,
+        "minGreedTier": 0,
+        "maxGreedTier": -1,
+        "catalyst": {
+          "size": {
+            "type": "uniform",
+            "min": 3,
+            "max": 4
+          },
+          "modifierPool": "cascade_modifiers",
+          "minModifiers": 1,
+          "maxModifiers": 1,
+          "isSuper": false,
+          "isGreedy": true
+        }
+      }
+    ],
+    "greed_catalysts_t2": [
+      {
+        "type": "catalyst",
+        "weight": 10,
+        "minGreedTier": 6,
+        "maxGreedTier": -1,
+        "catalyst": {
+          "size": {
+            "type": "uniform",
+            "min": 1,
+            "max": 2
+          },
+          "modifierPool": "cascade_modifiers",
+          "minModifiers": 1,
+          "maxModifiers": 1,
+          "isSuper": false,
+          "isGreedy": true
+        }
+      }
+    ],
+    "greed_booster_packs": [
+      {
+        "weight": 10,
+        "minGreedTier": 0,
+        "maxGreedTier": -1,
+        "itemStack": {
+          "item": "the_vault:booster_pack",
+          "nbt": "{id:\"the_vault:greed_pack\"}"
+        }
+      },
+      {
+        "weight": 6,
+        "minGreedTier": 6,
+        "maxGreedTier": -1,
+        "itemStack": {
+          "item": "the_vault:booster_pack",
+          "nbt": "{id:\"the_vault:mega_greed_pack\"}"
+        }
+      }
+    ],
+    "companion_super_relics": [],
+    "modified_super_inscriptions": [],
+    "super_inscriptions": [
+      {
+        "type": "inscription",
+        "weight": 32,
+        "minGreedTier": 0,
+        "maxGreedTier": -1,
+        "inscription": {
+          "rooms": [
+            {
+              "roomType": "COMMON",
+              "count": 1,
+              "color": 16777215
+            }
+          ],
+          "minTime": 1200,
+          "maxTime": 3600,
+          "isSuper": true,
+          "color": 16777215
+        }
+      },
+      {
+        "type": "inscription",
+        "weight": 8,
+        "minGreedTier": 0,
+        "maxGreedTier": -1,
+        "inscription": {
+          "rooms": [
+            {
+              "roomType": "OMEGA",
+              "count": 1,
+              "color": 7012096
+            }
+          ],
+          "minTime": 200,
+          "maxTime": 800,
+          "isSuper": true,
+          "color": 7012096
+        }
+      },
+      {
+        "type": "inscription",
+        "weight": 4,
+        "minGreedTier": 3,
+        "maxGreedTier": -1,
+        "inscription": {
+          "rooms": [
+            {
+              "roomType": "OMEGA",
+              "count": 1,
+              "color": 7012096
+            }
+          ],
+          "minTime": 1200,
+          "maxTime": 2400,
+          "isSuper": true,
+          "color": 7012096
+        }
+      }
+    ],
+    "greed_companion_relics": [
+      {
+        "weight": 10,
+        "minGreedTier": 0,
+        "maxGreedTier": -1,
+        "itemStack": {
+          "item": "the_vault:companion_relic",
+          "nbt": "{pool:\"the_vault:greed_coins\"}"
+        }
+      },
+      {
+        "weight": 10,
+        "minGreedTier": 0,
+        "maxGreedTier": -1,
+        "itemStack": {
+          "item": "the_vault:companion_relic",
+          "nbt": "{pool:\"the_vault:greed_wooden\"}"
+        }
+      },
+      {
+        "weight": 10,
+        "minGreedTier": 0,
+        "maxGreedTier": -1,
+        "itemStack": {
+          "item": "the_vault:companion_relic",
+          "nbt": "{pool:\"the_vault:greed_ornate\"}"
+        }
+      },
+      {
+        "weight": 10,
+        "minGreedTier": 0,
+        "maxGreedTier": -1,
+        "itemStack": {
+          "item": "the_vault:companion_relic",
+          "nbt": "{pool:\"the_vault:greed_gilded\"}"
+        }
+      },
+      {
+        "weight": 10,
+        "minGreedTier": 0,
+        "maxGreedTier": -1,
+        "itemStack": {
+          "item": "the_vault:companion_relic",
+          "nbt": "{pool:\"the_vault:greed_living\"}"
+        }
+      },
+      {
+        "weight": 10,
+        "minGreedTier": 0,
+        "maxGreedTier": -1,
+        "itemStack": {
+          "item": "the_vault:companion_relic",
+          "nbt": "{pool:\"the_vault:greed_plentiful\"}"
+        }
+      }
+    ]
+  },
+  "roomPoolsByType": {
+    "CHALLENGE": [
+      {
+        "pool": "the_vault:vault/rooms/challenge/crystal_caves",
+        "weight": 10,
+        "model": 5
+      },
+      {
+        "pool": "the_vault:vault/rooms/challenge/dragon",
+        "weight": 10,
+        "model": 7
+      },
+      {
+        "pool": "the_vault:vault/rooms/challenge/factory",
+        "weight": 10,
+        "model": 8
+      },
+      {
+        "pool": "the_vault:vault/rooms/challenge/laboratory",
+        "weight": 10,
+        "model": 20
+      },
+      {
+        "pool": "the_vault:vault/rooms/challenge/village",
+        "weight": 10,
+        "model": 13
+      },
+      {
+        "pool": "the_vault:vault/rooms/challenge/wildwest",
+        "weight": 10,
+        "model": 0
+      },
+      {
+        "pool": "the_vault:vault/rooms/challenge/x-mark",
+        "weight": 10,
+        "model": 15
+      },
+      {
+        "pool": "the_vault:vault/rooms/challenge/memory",
+        "weight": 10,
+        "model": 23
+      }
+    ],
+    "OMEGA": [
+      {
+        "pool": "the_vault:vault/rooms/omega/digsite2",
+        "weight": 1,
+        "model": 6
+      },
+      {
+        "pool": "the_vault:vault/rooms/omega/painting",
+        "weight": 10,
+        "model": 10
+      },
+      {
+        "pool": "the_vault:vault/rooms/omega/mine",
+        "weight": 4,
+        "model": 9
+      },
+      {
+        "pool": "the_vault:vault/rooms/omega/blacksmith",
+        "weight": 10,
+        "model": 1
+      },
+      {
+        "pool": "the_vault:vault/rooms/omega/pixel",
+        "weight": 10,
+        "model": 21
+      },
+      {
+        "pool": "the_vault:vault/rooms/omega/mush_room",
+        "weight": 10,
+        "model": 2
+      },
+      {
+        "pool": "the_vault:vault/rooms/omega/library",
+        "weight": 10,
+        "model": 3
+      },
+      {
+        "pool": "the_vault:vault/rooms/omega/cove",
+        "weight": 10,
+        "model": 4
+      },
+      {
+        "pool": "the_vault:vault/rooms/omega/warehouse",
+        "weight": 2,
+        "model": 24
+      }
+    ]
+  },
+  "modifierPools": {
+    "normal_modifiers": [
+      {
+        "modifier": "the_vault:wooden_cascade",
+        "weight": 10
+      },
+      {
+        "modifier": "the_vault:gilded_cascade",
+        "weight": 8
+      },
+      {
+        "modifier": "the_vault:living_cascade",
+        "weight": 8
+      },
+      {
+        "modifier": "the_vault:ornate_cascade",
+        "weight": 8
+      },
+      {
+        "modifier": "the_vault:coin_cascade",
+        "weight": 8
+      },
+      {
+        "modifier": "the_vault:plentiful",
+        "weight": 8
+      },
+      {
+        "modifier": "the_vault:more_mobs_cata",
+        "weight": 8
+      },
+      {
+        "modifier": "the_vault:gilded",
+        "weight": 3
+      },
+      {
+        "modifier": "the_vault:living",
+        "weight": 3
+      },
+      {
+        "modifier": "the_vault:ornate",
+        "weight": 3
+      },
+      {
+        "modifier": "the_vault:coin_pile",
+        "weight": 3
+      },
+      {
+        "modifier": "the_vault:wooden_bonus",
+        "weight": 4
+      }
+    ],
+    "cascade_modifiers": [
+      {
+        "modifier": "the_vault:wooden_cascade",
+        "weight": 10
+      },
+      {
+        "modifier": "the_vault:gilded_cascade",
+        "weight": 8
+      },
+      {
+        "modifier": "the_vault:living_cascade",
+        "weight": 8
+      },
+      {
+        "modifier": "the_vault:ornate_cascade",
+        "weight": 8
+      },
+      {
+        "modifier": "the_vault:coin_cascade",
+        "weight": 8
+      },
+      {
+        "modifier": "the_vault:plentiful",
+        "weight": 8
+      },
+      {
+        "modifier": "the_vault:more_mobs_cata",
+        "weight": 8
+      }
+    ],
+    "good_modifiers": [
+      {
+        "modifier": "the_vault:gilded",
+        "weight": 6
+      },
+      {
+        "modifier": "the_vault:living",
+        "weight": 6
+      },
+      {
+        "modifier": "the_vault:ornate",
+        "weight": 6
+      },
+      {
+        "modifier": "the_vault:coin_pile",
+        "weight": 6
+      },
+      {
+        "modifier": "the_vault:wooden_bonus",
+        "weight": 6
+      }
+    ],
+    "treasure_modifiers": [
+      {
+        "modifier": "the_vault:hoard",
+        "weight": 3
+      },
+      {
+        "modifier": "the_vault:treasure",
+        "weight": 3
+      },
+      {
+        "modifier": "the_vault:dungeon_doors",
+        "weight": 3
+      },
+      {
+        "modifier": "the_vault:vendoor_doors",
+        "weight": 3
+      }
+    ],
+    "temporal_modifiers": [
+      {
+        "modifier": "the_vault:overpower",
+        "weight": 50
+      },
+      {
+        "modifier": "the_vault:champion_domain",
+        "weight": 50
+      },
+      {
+        "modifier": "the_vault:loot_goblin",
+        "weight": 50
+      },
+      {
+        "modifier": "the_vault:door_hunter",
+        "weight": 50
+      },
+      {
+        "modifier": "the_vault:ultimate_regeneration",
+        "weight": 50
+      },
+      {
+        "modifier": "the_vault:kill_nuke",
+        "weight": 50
+      },
+      {
+        "modifier": "the_vault:kill_charm",
+        "weight": 50
+      },
+      {
+        "modifier": "the_vault:kill_hunter",
+        "weight": 50
+      },
+      {
+        "modifier": "the_vault:kill_totem",
+        "weight": 50
+      },
+      {
+        "modifier": "the_vault:bronze_nuke",
+        "weight": 50
+      },
+      {
+        "modifier": "the_vault:glued_mobs",
+        "weight": 50
+      },
+      {
+        "modifier": "the_vault:rock_solid",
+        "weight": 50
+      },
+      {
+        "modifier": "the_vault:pylon_hunter",
+        "weight": 50
+      },
+      {
+        "modifier": "the_vault:soul_fest",
+        "weight": 50
+      },
+      {
+        "modifier": "the_vault:daycare",
+        "weight": 50
+      },
+      {
+        "modifier": "the_vault:lunar",
+        "weight": 50
+      }
+    ]
+  },
+  "quests": [
+    {
+      "id": "the_vault:mega_wooden",
+      "displayName": "\u8d85\u7ea7\u6728\u5934\u4eba",
+      "description": "\u641c\u522e%target\u4e2a\u6728\u5236\u5b9d\u7bb1\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 5,
+      "repRewardMax": 12,
+      "weight": 10,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:wooden",
+        "counter": {
+          "variables": {},
+          "target": {
+            "min": 940,
+            "max": 1840,
+            "type": "uniform"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "loot_chest"
+      },
+      "icon": "the_vault:textures/gui/bingo/wooden.png"
+    },
+    {
+      "id": "the_vault:ornate_collector",
+      "displayName": "\u534e\u4e3d\u6536\u85cf\u5bb6",
+      "description": "\u641c\u522e%target\u4e2a\u534e\u4e3d\u5b9d\u7bb1\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 5,
+      "repRewardMax": 12,
+      "weight": 10,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:ornate",
+        "counter": {
+          "variables": {},
+          "target": {
+            "min": 235,
+            "max": 460,
+            "type": "uniform"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "loot_chest"
+      },
+      "icon": "the_vault:textures/gui/bingo/ornate_chests.png"
+    },
+    {
+      "id": "the_vault:gilded_plunderer",
+      "displayName": "\u9540\u91d1\u63a0\u593a\u8005",
+      "description": "\u641c\u522e%target\u4e2a\u9540\u91d1\u5b9d\u7bb1\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 5,
+      "repRewardMax": 12,
+      "weight": 10,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:gilded",
+        "counter": {
+          "variables": {},
+          "target": {
+            "min": 235,
+            "max": 460,
+            "type": "uniform"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "loot_chest"
+      },
+      "icon": "the_vault:textures/gui/bingo/gilded_chests.png"
+    },
+    {
+      "id": "the_vault:living_harvester",
+      "displayName": "\u6d3b\u5316\u6536\u5272\u673a",
+      "description": "\u641c\u522e%target\u4e2a\u6d3b\u5316\u5b9d\u7bb1\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 5,
+      "repRewardMax": 12,
+      "weight": 10,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:living",
+        "counter": {
+          "variables": {},
+          "target": {
+            "min": 235,
+            "max": 460,
+            "type": "uniform"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "loot_chest"
+      },
+      "icon": "the_vault:textures/gui/bingo/living_chests.png"
+    },
+    {
+      "id": "the_vault:horde_slaughter",
+      "displayName": "\u96c6\u7fa4\u5927\u5c60\u6740",
+      "description": "\u51fb\u6740%target\u4e2a\u96c6\u7fa4\u602a\u7269\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 5,
+      "repRewardMax": 12,
+      "weight": 10,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:mob_type/horde",
+        "counter": {
+          "variables": {},
+          "target": {
+            "min": 940,
+            "max": 1840,
+            "type": "uniform"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "kill_entity"
+      },
+      "icon": "the_vault:textures/gui/bingo/killhorde.png"
+    },
+    {
+      "id": "the_vault:assassin_purge",
+      "displayName": "\u523a\u5ba2\u5927\u6e05\u6d17",
+      "description": "\u51fb\u6740%target\u4e2a\u523a\u5ba2\u602a\u7269\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 5,
+      "repRewardMax": 12,
+      "weight": 10,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:mob_type/assassin",
+        "counter": {
+          "variables": {},
+          "target": {
+            "min": 376,
+            "max": 736,
+            "type": "uniform"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "kill_entity"
+      },
+      "icon": "the_vault:textures/gui/bingo/killassassin.png"
+    },
+    {
+      "id": "the_vault:tank_breaker",
+      "displayName": "\u5766\u514b\u7c89\u788e\u673a",
+      "description": "\u51fb\u6740%target\u4e2a\u5766\u514b\u602a\u7269\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 5,
+      "repRewardMax": 12,
+      "weight": 10,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:mob_type/tank",
+        "counter": {
+          "variables": {},
+          "target": {
+            "min": 94,
+            "max": 184,
+            "type": "uniform"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "kill_entity"
+      },
+      "icon": "the_vault:textures/gui/bingo/killtank.png"
+    },
+    {
+      "id": "the_vault:treasure_hunter",
+      "displayName": "\u73cd\u5b9d\u72e9\u730e\u8005",
+      "description": "\u6253\u5f00%target\u4e2a\u5b9d\u85cf\u5ba4\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 10,
+      "repRewardMax": 20,
+      "weight": 10,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "pre": "the_vault:treasure_door[open=false]",
+        "post": "the_vault:treasure_door[open=true]",
+        "counter": {
+          "variables": {},
+          "target": {
+            "min": 5,
+            "max": 10,
+            "type": "uniform"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "interact_block"
+      },
+      "icon": "the_vault:textures/gui/bingo/treasure_doors.png"
+    },
+    {
+      "id": "the_vault:ore_excavator",
+      "displayName": "\u77ff\u77f3\u6316\u6398\u673a",
+      "description": "\u6316\u6398%target\u4e2a\u5b9d\u5e93\u77ff\u77f3\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 5,
+      "repRewardMax": 12,
+      "weight": 10,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:ores[generated=true]",
+        "counter": {
+          "variables": {},
+          "target": {
+            "min": 2000,
+            "max": 3000,
+            "type": "uniform"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "mine_block"
+      },
+      "icon": "the_vault:textures/gui/bingo/minevaultore.png"
+    },
+    {
+      "id": "the_vault:champion_slayer",
+      "displayName": "\u51a0\u519b\u5c60\u5bb0\u5e08",
+      "description": "\u51fb\u8d25%target\u4e2a\u51a0\u519b\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 7200,
+      "repRewardMin": 8,
+      "repRewardMax": 18,
+      "weight": 10,
+      "scalar": 1.2,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:mob_type/champion",
+        "counter": {
+          "variables": {},
+          "target": {
+            "min": 5,
+            "max": 8,
+            "type": "uniform"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "kill_entity"
+      },
+      "icon": "the_vault:textures/gui/bingo/killchampion.png"
+    },
+    {
+      "id": "the_vault:dungeon_conqueror",
+      "displayName": "\u5730\u7262\u5f81\u670d\u8005",
+      "description": "\u51fb\u8d25%target\u4e2a\u5730\u7262\u9996\u9886\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 14400,
+      "repRewardMin": 10,
+      "repRewardMax": 20,
+      "weight": 10,
+      "scalar": 1.2,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:mob_type/dungeon_boss",
+        "counter": {
+          "variables": {},
+          "target": {
+            "min": 8,
+            "max": 15,
+            "type": "constant"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "kill_entity"
+      },
+      "icon": "the_vault:textures/gui/bingo/killdungeonboss.png"
+    },
+    {
+      "id": "the_vault:coin_collector",
+      "displayName": "\u94b1\u5e01\u6536\u85cf\u5bb6",
+      "description": "\u641c\u522e%target\u4e2a\u94b1\u5e01\u5806\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 5,
+      "repRewardMax": 12,
+      "weight": 10,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "the_vault:coin_pile[size=1]",
+        "counter": {
+          "variables": {},
+          "target": {
+            "min": 940,
+            "max": 1840,
+            "type": "uniform"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "mine_block"
+      },
+      "icon": "the_vault:textures/gui/bingo/lootcoins.png"
+    },
+    {
+      "id": "the_vault:flawless_coin_collector",
+      "displayName": "\u5b8c\u7f8e\u94b1\u5e01\u6536\u85cf\u5bb6",
+      "description": "\u641c\u522e%target\u4e2a\u94b1\u5e01\u5806\uff0c\u671f\u95f4\u4e0d\u53d7\u5230\u4f24\u5bb3\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "take_no_damage",
+        "children": [
+          {
+            "type": "mine_block",
+            "filter": "the_vault:coin_pile[size=1]",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 188,
+                "max": 368,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nodamagecoins.png"
+    },
+    {
+      "id": "the_vault:rapid_coin_collector",
+      "displayName": "\u5feb\u901f\u94b1\u5e01\u6536\u85cf\u5bb6",
+      "description": "\u57285\u5206\u949f\u5185\u641c\u522e%target\u4e2a\u94b1\u5e01\u5806\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "the_vault:coin_pile[size=1]",
+        "counter": {
+          "type": "sliding_timed_target",
+          "target": {
+            "type": "uniform",
+            "min": 282,
+            "max": 552
+          },
+          "window": {
+            "type": "constant",
+            "count": 6000
+          },
+          "variables": {}
+        },
+        "type": "mine_block"
+      },
+      "icon": "the_vault:textures/gui/bingo/rapidcoins.png"
+    },
+    {
+      "id": "the_vault:primitive_coin_collector",
+      "displayName": "\u539f\u59cb\u94b1\u5e01\u6536\u85cf\u5bb6",
+      "description": "\u641c\u522e%target\u4e2a\u94b1\u5e01\u5806\uff0c\u671f\u95f4\u4e0d\u4f7f\u7528\u6280\u80fd\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "use_no_mana",
+        "children": [
+          {
+            "type": "mine_block",
+            "filter": "the_vault:coin_pile[size=1]",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 282,
+                "max": 552,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/peacefulcoins.png"
+    },
+    {
+      "id": "the_vault:mega_multikill",
+      "displayName": "\u8d85\u7ea7\u5927\u91cf\u51fb\u6740",
+      "description": "\u51e0\u4e4e\u540c\u65f6\u51fb\u6740%target\u4e2a\u602a\u7269\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 14400,
+      "repRewardMin": 25,
+      "repRewardMax": 35,
+      "weight": 2,
+      "scalar": 1.2,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:mobs",
+        "counter": {
+          "type": "sliding_timed_target",
+          "target": {
+            "type": "uniform",
+            "min": 150,
+            "max": 200
+          },
+          "window": {
+            "type": "constant",
+            "count": 5
+          },
+          "variables": {}
+        },
+        "type": "kill_entity"
+      },
+      "icon": "the_vault:textures/gui/bingo/killmobs.png"
+    },
+    {
+      "id": "the_vault:flawless_wooden",
+      "displayName": "\u5b8c\u7f8e\u6728\u5236",
+      "description": "\u641c\u522e%target\u4e2a\u6728\u5236\u5b9d\u7bb1\uff0c\u671f\u95f4\u4e0d\u53d7\u5230\u4f24\u5bb3\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "take_no_damage",
+        "children": [
+          {
+            "type": "loot_chest",
+            "filter": "@the_vault:wooden",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 188,
+                "max": 368,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nodamagewooden.png"
+    },
+    {
+      "id": "the_vault:ascended_horde_slaughter",
+      "displayName": "\u5347\u534e\u96c6\u7fa4\u5927\u5c60\u6740",
+      "description": "\u51fb\u6740%target\u4e2a\u96c6\u7fa4\u602a\u7269\uff0c\u671f\u95f4\u4e0d\u53d7\u5230\u4f24\u5bb3\u4e14\u4e0d\u4f7f\u7528\u6280\u80fd\u3002",
+      "minTier": 5,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 20,
+      "repRewardMax": 30,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "use_no_mana",
+        "children": [
+          {
+            "type": "take_no_damage",
+            "children": [
+              {
+                "type": "kill_entity",
+                "filter": "@the_vault:mob_type/horde",
+                "counter": {
+                  "variables": {},
+                  "target": {
+                    "min": 300,
+                    "max": 400,
+                    "type": "uniform"
+                  },
+                  "predicate": "GREATER_OR_EQUAL_TO",
+                  "type": "target"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nodamagehorde.png"
+    },
+    {
+      "id": "the_vault:ascended_assassin_purge",
+      "displayName": "\u5347\u534e\u523a\u5ba2\u5927\u6e05\u6d17",
+      "description": "\u51fb\u6740%target\u4e2a\u523a\u5ba2\u602a\u7269\uff0c\u671f\u95f4\u4e0d\u53d7\u5230\u4f24\u5bb3\u4e14\u4e0d\u4f7f\u7528\u6280\u80fd\u3002",
+      "minTier": 5,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 20,
+      "repRewardMax": 30,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "use_no_mana",
+        "children": [
+          {
+            "type": "take_no_damage",
+            "children": [
+              {
+                "type": "kill_entity",
+                "filter": "@the_vault:mob_type/assassin",
+                "counter": {
+                  "variables": {},
+                  "target": {
+                    "min": 80,
+                    "max": 160,
+                    "type": "uniform"
+                  },
+                  "predicate": "GREATER_OR_EQUAL_TO",
+                  "type": "target"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nodamageassassin.png"
+    },
+    {
+      "id": "the_vault:ascended_tank_breaker",
+      "displayName": "\u5347\u534e\u5766\u514b\u7c89\u788e\u673a",
+      "description": "\u51fb\u6740%target\u4e2a\u5766\u514b\u602a\u7269\uff0c\u671f\u95f4\u4e0d\u53d7\u5230\u4f24\u5bb3\u4e14\u4e0d\u4f7f\u7528\u6280\u80fd\u3002",
+      "minTier": 5,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 20,
+      "repRewardMax": 30,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "use_no_mana",
+        "children": [
+          {
+            "type": "take_no_damage",
+            "children": [
+              {
+                "type": "kill_entity",
+                "filter": "@the_vault:mob_type/tank",
+                "counter": {
+                  "variables": {},
+                  "target": {
+                    "min": 20,
+                    "max": 40,
+                    "type": "uniform"
+                  },
+                  "predicate": "GREATER_OR_EQUAL_TO",
+                  "type": "target"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nodamagetanks.png"
+    },
+    {
+      "id": "the_vault:flawless_ornate",
+      "displayName": "\u5b8c\u7f8e\u534e\u4e3d",
+      "description": "\u641c\u522e%target\u4e2a\u534e\u4e3d\u5b9d\u7bb1\uff0c\u671f\u95f4\u4e0d\u53d7\u5230\u4f24\u5bb3\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "take_no_damage",
+        "children": [
+          {
+            "type": "loot_chest",
+            "filter": "@the_vault:ornate",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 47,
+                "max": 92,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nodamageornate.png"
+    },
+    {
+      "id": "the_vault:flawless_gilded",
+      "displayName": "\u5b8c\u7f8e\u9540\u91d1",
+      "description": "\u641c\u522e%target\u4e2a\u9540\u91d1\u5b9d\u7bb1\uff0c\u671f\u95f4\u4e0d\u53d7\u5230\u4f24\u5bb3\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "take_no_damage",
+        "children": [
+          {
+            "type": "loot_chest",
+            "filter": "@the_vault:gilded",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 47,
+                "max": 92,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nodamagegilded.png"
+    },
+    {
+      "id": "the_vault:flawless_living",
+      "displayName": "\u5b8c\u7f8e\u6d3b\u5316",
+      "description": "\u641c\u522e%target\u4e2a\u6d3b\u5316\u5b9d\u7bb1\uff0c\u671f\u95f4\u4e0d\u53d7\u5230\u4f24\u5bb3\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "take_no_damage",
+        "children": [
+          {
+            "type": "loot_chest",
+            "filter": "@the_vault:living",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 47,
+                "max": 92,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nodamageliving.png"
+    },
+    {
+      "id": "the_vault:flawless_horde_slaughter",
+      "displayName": "\u5b8c\u7f8e\u96c6\u7fa4\u5927\u5c60\u6740",
+      "description": "\u51fb\u6740%target\u4e2a\u96c6\u7fa4\u602a\u7269\uff0c\u671f\u95f4\u4e0d\u53d7\u5230\u4f24\u5bb3\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "take_no_damage",
+        "children": [
+          {
+            "type": "kill_entity",
+            "filter": "@the_vault:mob_type/horde",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 188,
+                "max": 368,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nodamagehorde.png"
+    },
+    {
+      "id": "the_vault:flawless_assassin_purge",
+      "displayName": "\u5b8c\u7f8e\u523a\u5ba2\u5927\u6e05\u6d17",
+      "description": "\u51fb\u6740%target\u4e2a\u523a\u5ba2\u602a\u7269\uff0c\u671f\u95f4\u4e0d\u53d7\u5230\u4f24\u5bb3\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "take_no_damage",
+        "children": [
+          {
+            "type": "kill_entity",
+            "filter": "@the_vault:mob_type/assassin",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 75,
+                "max": 147,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nodamageassassin.png"
+    },
+    {
+      "id": "the_vault:flawless_tank_breaker",
+      "displayName": "\u5b8c\u7f8e\u5766\u514b\u7c89\u788e\u673a",
+      "description": "\u51fb\u6740%target\u4e2a\u5766\u514b\u602a\u7269\uff0c\u671f\u95f4\u4e0d\u53d7\u5230\u4f24\u5bb3\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "take_no_damage",
+        "children": [
+          {
+            "type": "kill_entity",
+            "filter": "@the_vault:mob_type/tank",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 19,
+                "max": 37,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nodamagetanks.png"
+    },
+    {
+      "id": "the_vault:flawless_excavation",
+      "displayName": "\u5b8c\u7f8e\u5f00\u6398",
+      "description": "\u6316\u6398%target\u4e2a\u5b9d\u5e93\u77ff\u77f3\uff0c\u671f\u95f4\u4e0d\u53d7\u5230\u4f24\u5bb3\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "take_no_damage",
+        "children": [
+          {
+            "type": "mine_block",
+            "filter": "@the_vault:ores[generated=true]",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 400,
+                "max": 600,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nodamageores.png"
+    },
+    {
+      "id": "the_vault:flawless_champion_slayer",
+      "displayName": "\u5b8c\u7f8e\u51a0\u519b\u5c60\u5bb0\u5e08",
+      "description": "\u51fb\u8d25%target\u4e2a\u51a0\u519b\uff0c\u671f\u95f4\u4e0d\u53d7\u5230\u4f24\u5bb3\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 7200,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.2,
+      "task": {
+        "type": "take_no_damage",
+        "children": [
+          {
+            "type": "kill_entity",
+            "filter": "@the_vault:mob_type/champion",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 1,
+                "max": 2,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nodamagechampion.png"
+    },
+    {
+      "id": "the_vault:rapid_wooden",
+      "displayName": "\u5feb\u901f\u6728\u5236",
+      "description": "\u57285\u5206\u949f\u5185\u641c\u522e%target\u4e2a\u6728\u5236\u5b9d\u7bb1\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:wooden",
+        "counter": {
+          "type": "sliding_timed_target",
+          "target": {
+            "type": "uniform",
+            "min": 282,
+            "max": 552
+          },
+          "window": {
+            "type": "constant",
+            "count": 6000
+          },
+          "variables": {}
+        },
+        "type": "loot_chest"
+      },
+      "icon": "the_vault:textures/gui/bingo/rapidwooden.png"
+    },
+    {
+      "id": "the_vault:rapid_ornate",
+      "displayName": "\u5feb\u901f\u534e\u4e3d",
+      "description": "\u57285\u5206\u949f\u5185\u641c\u522e%target\u4e2a\u534e\u4e3d\u5b9d\u7bb1\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:ornate",
+        "counter": {
+          "type": "sliding_timed_target",
+          "target": {
+            "type": "uniform",
+            "min": 71,
+            "max": 138
+          },
+          "window": {
+            "type": "constant",
+            "count": 6000
+          },
+          "variables": {}
+        },
+        "type": "loot_chest"
+      },
+      "icon": "the_vault:textures/gui/bingo/rapidornate.png"
+    },
+    {
+      "id": "the_vault:rapid_gilded",
+      "displayName": "\u5feb\u901f\u9540\u91d1",
+      "description": "\u57285\u5206\u949f\u5185\u641c\u522e%target\u4e2a\u9540\u91d1\u5b9d\u7bb1\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:gilded",
+        "counter": {
+          "type": "sliding_timed_target",
+          "target": {
+            "type": "uniform",
+            "min": 71,
+            "max": 138
+          },
+          "window": {
+            "type": "constant",
+            "count": 6000
+          },
+          "variables": {}
+        },
+        "type": "loot_chest"
+      },
+      "icon": "the_vault:textures/gui/bingo/rapidgilded.png"
+    },
+    {
+      "id": "the_vault:rapid_living",
+      "displayName": "\u5feb\u901f\u6d3b\u5316",
+      "description": "\u57285\u5206\u949f\u5185\u641c\u522e%target\u4e2a\u6d3b\u5316\u5b9d\u7bb1\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:living",
+        "counter": {
+          "type": "sliding_timed_target",
+          "target": {
+            "type": "uniform",
+            "min": 71,
+            "max": 138
+          },
+          "window": {
+            "type": "constant",
+            "count": 6000
+          },
+          "variables": {}
+        },
+        "type": "loot_chest"
+      },
+      "icon": "the_vault:textures/gui/bingo/rapidliving.png"
+    },
+    {
+      "id": "the_vault:rapid_horde_slaughter",
+      "displayName": "\u5feb\u901f\u96c6\u7fa4\u5927\u5c60\u6740",
+      "description": "\u57285\u5206\u949f\u5185\u51fb\u6740%target\u4e2a\u96c6\u7fa4\u602a\u7269\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:mob_type/horde",
+        "counter": {
+          "type": "sliding_timed_target",
+          "target": {
+            "type": "uniform",
+            "min": 600,
+            "max": 1000
+          },
+          "window": {
+            "type": "constant",
+            "count": 6000
+          },
+          "variables": {}
+        },
+        "type": "kill_entity"
+      },
+      "icon": "the_vault:textures/gui/bingo/rapidhorde.png"
+    },
+    {
+      "id": "the_vault:rapid_assassin_purge",
+      "displayName": "\u5feb\u901f\u523a\u5ba2\u5927\u6e05\u6d17",
+      "description": "\u57285\u5206\u949f\u5185\u51fb\u6740%target\u4e2a\u523a\u5ba2\u602a\u7269\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:mob_type/assassin",
+        "counter": {
+          "type": "sliding_timed_target",
+          "target": {
+            "type": "uniform",
+            "min": 113,
+            "max": 221
+          },
+          "window": {
+            "type": "constant",
+            "count": 6000
+          },
+          "variables": {}
+        },
+        "type": "kill_entity"
+      },
+      "icon": "the_vault:textures/gui/bingo/rapidassassin.png"
+    },
+    {
+      "id": "the_vault:rapid_tank_breaker",
+      "displayName": "\u5feb\u901f\u5766\u514b\u7c89\u788e\u673a",
+      "description": "\u57285\u5206\u949f\u5185\u51fb\u6740%target\u4e2a\u5766\u514b\u602a\u7269\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:mob_type/tank",
+        "counter": {
+          "type": "sliding_timed_target",
+          "target": {
+            "type": "uniform",
+            "min": 28,
+            "max": 55
+          },
+          "window": {
+            "type": "constant",
+            "count": 6000
+          },
+          "variables": {}
+        },
+        "type": "kill_entity"
+      },
+      "icon": "the_vault:textures/gui/bingo/rapidtank.png"
+    },
+    {
+      "id": "the_vault:rapid_excavation",
+      "displayName": "\u5feb\u901f\u5f00\u6398",
+      "description": "\u57285\u5206\u949f\u5185\u6316\u6398%target\u4e2a\u5b9d\u5e93\u77ff\u77f3\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:ores[generated=true]",
+        "counter": {
+          "type": "sliding_timed_target",
+          "target": {
+            "type": "uniform",
+            "min": 600,
+            "max": 900
+          },
+          "window": {
+            "type": "constant",
+            "count": 6000
+          },
+          "variables": {}
+        },
+        "type": "mine_block"
+      },
+      "icon": "the_vault:textures/gui/bingo/minevaultore.png"
+    },
+    {
+      "id": "the_vault:rapid_champion_slayer",
+      "displayName": "\u5feb\u901f\u51a0\u519b\u5c60\u5bb0\u5e08",
+      "description": "\u57285\u5206\u949f\u5185\u51fb\u8d25%target\u4e2a\u51a0\u519b\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 7200,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.2,
+      "task": {
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:mob_type/champion",
+        "counter": {
+          "type": "sliding_timed_target",
+          "target": {
+            "type": "uniform",
+            "min": 2,
+            "max": 3
+          },
+          "window": {
+            "type": "constant",
+            "count": 6000
+          },
+          "variables": {}
+        },
+        "type": "kill_entity"
+      },
+      "icon": "the_vault:textures/gui/bingo/rapidchampion.png"
+    },
+    {
+      "id": "the_vault:primitive_wooden",
+      "displayName": "\u539f\u59cb\u6728\u5236",
+      "description": "\u641c\u522e%target\u4e2a\u6728\u5236\u5b9d\u7bb1\uff0c\u671f\u95f4\u4e0d\u4f7f\u7528\u6280\u80fd\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "use_no_mana",
+        "children": [
+          {
+            "type": "loot_chest",
+            "filter": "@the_vault:wooden",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 282,
+                "max": 552,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/peacefulwooden.png"
+    },
+    {
+      "id": "the_vault:primitive_ornate",
+      "displayName": "\u539f\u59cb\u534e\u4e3d",
+      "description": "\u641c\u522e%target\u4e2a\u534e\u4e3d\u5b9d\u7bb1\uff0c\u671f\u95f4\u4e0d\u4f7f\u7528\u6280\u80fd\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "use_no_mana",
+        "children": [
+          {
+            "type": "loot_chest",
+            "filter": "@the_vault:ornate",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 71,
+                "max": 138,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/peacefulornate.png"
+    },
+    {
+      "id": "the_vault:primitive_gilded",
+      "displayName": "\u539f\u59cb\u9540\u91d1",
+      "description": "\u641c\u522e%target\u4e2a\u9540\u91d1\u5b9d\u7bb1\uff0c\u671f\u95f4\u4e0d\u4f7f\u7528\u6280\u80fd\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "use_no_mana",
+        "children": [
+          {
+            "type": "loot_chest",
+            "filter": "@the_vault:gilded",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 71,
+                "max": 138,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/peacefulgilded.png"
+    },
+    {
+      "id": "the_vault:primitive_living",
+      "displayName": "\u539f\u59cb\u6d3b\u5316",
+      "description": "\u641c\u522e%target\u4e2a\u6d3b\u5316\u5b9d\u7bb1\uff0c\u671f\u95f4\u4e0d\u4f7f\u7528\u6280\u80fd\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "use_no_mana",
+        "children": [
+          {
+            "type": "loot_chest",
+            "filter": "@the_vault:living",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 71,
+                "max": 138,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/peacefulliving.png"
+    },
+    {
+      "id": "the_vault:primitive_horde_slaughter",
+      "displayName": "\u539f\u59cb\u96c6\u7fa4\u5927\u5c60\u6740",
+      "description": "\u51fb\u6740%target\u4e2a\u96c6\u7fa4\u602a\u7269\uff0c\u671f\u95f4\u4e0d\u4f7f\u7528\u6280\u80fd\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "use_no_mana",
+        "children": [
+          {
+            "type": "kill_entity",
+            "filter": "@the_vault:mob_type/horde",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 282,
+                "max": 552,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nomanahorde.png"
+    },
+    {
+      "id": "the_vault:primitive_assassin_purge",
+      "displayName": "\u539f\u59cb\u523a\u5ba2\u5927\u6e05\u6d17",
+      "description": "\u51fb\u6740%target\u4e2a\u523a\u5ba2\u602a\u7269\uff0c\u671f\u95f4\u4e0d\u4f7f\u7528\u6280\u80fd\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "use_no_mana",
+        "children": [
+          {
+            "type": "kill_entity",
+            "filter": "@the_vault:mob_type/assassin",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 113,
+                "max": 221,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nomanaassassin.png"
+    },
+    {
+      "id": "the_vault:primitive_tank_breaker",
+      "displayName": "\u539f\u59cb\u5766\u514b\u7c89\u788e\u673a",
+      "description": "\u51fb\u6740%target\u4e2a\u5766\u514b\u602a\u7269\uff0c\u671f\u95f4\u4e0d\u4f7f\u7528\u6280\u80fd\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "use_no_mana",
+        "children": [
+          {
+            "type": "kill_entity",
+            "filter": "@the_vault:mob_type/tank",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 28,
+                "max": 55,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nomanatank.png"
+    },
+    {
+      "id": "the_vault:primitive_excavation",
+      "displayName": "\u539f\u59cb\u5f00\u6398",
+      "description": "\u6316\u6398%target\u4e2a\u5b9d\u5e93\u77ff\u77f3\uff0c\u671f\u95f4\u4e0d\u4f7f\u7528\u6280\u80fd\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 3600,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.25,
+      "task": {
+        "type": "use_no_mana",
+        "children": [
+          {
+            "type": "mine_block",
+            "filter": "@the_vault:ores[generated=true]",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 600,
+                "max": 900,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/peacefulores.png"
+    },
+    {
+      "id": "the_vault:primitive_champion_slayer",
+      "displayName": "\u539f\u59cb\u51a0\u519b\u5c60\u5bb0\u5e08",
+      "description": "\u51fb\u8d25%target\u4e2a\u51a0\u519b\uff0c\u671f\u95f4\u4e0d\u4f7f\u7528\u6280\u80fd\u3002",
+      "minTier": 0,
+      "maxTier": -1,
+      "cooldownSeconds": 7200,
+      "repRewardMin": 15,
+      "repRewardMax": 25,
+      "weight": 5,
+      "scalar": 1.2,
+      "task": {
+        "type": "use_no_mana",
+        "children": [
+          {
+            "type": "kill_entity",
+            "filter": "@the_vault:mob_type/champion",
+            "counter": {
+              "variables": {},
+              "target": {
+                "min": 2,
+                "max": 3,
+                "type": "uniform"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            }
+          }
+        ]
+      },
+      "icon": "the_vault:textures/gui/bingo/nomanachampion.png"
+    }
+  ],
+  "maxQuestsPerTier": {
+    "0": 3,
+    "1": 3,
+    "2": 3
+  },
+  "challenges": [
+    {
+      "displayName": "\u4e0d\u7a33\u5b9a\u968f\u673a\u683c",
+      "description": "\u5c0f\u5fc3\u811a\u4e0b\uff0c\u5f53\u4f60\u811a\u4e0b\u7684\u5730\u9762\u88c2\u5f00\u65f6\uff0c\u4f60\u552f\u4e00\u7684\u51fa\u8def\u5c31\u662f\u628a\u7f51\u683c\u6d82\u6ee1\u3002",
+      "challengeCrystalId": "t1_shuffle_grounds",
+      "minTier": 1,
+      "maxTier": 1
+    },
+    {
+      "displayName": "\u904d\u5e03\u9677\u9631",
+      "description": "\u5982\u679c\u5927\u591a\u6570\u5b9d\u7bb1\u90fd\u6709\u9677\u9631\uff0c\u4f60\u80fd\u53ca\u65f6\u627e\u5230\u4f60\u9700\u8981\u7684\u4e1c\u897f\u5417\uff1f",
+      "challengeCrystalId": "scav_rolled",
+      "minTier": 2,
+      "maxTier": 2
+    },
+    {
+      "displayName": "\u7b26\u6587\u638c\u63a7",
+      "description": "\u53ea\u6709\u6700\u5f3a\u5927\u7684\u6218\u58eb\u624d\u80fd\u638c\u63a7\u7b26\u6587\u3002",
+      "challengeCrystalId": "rune_master",
+      "minTier": 3,
+      "maxTier": 3
+    },
+    {
+      "displayName": "\u7687\u5bb6\u4e4b\u738b",
+      "description": "\u4e00\u573a\u4ece\u96f6\u5f00\u59cb\u7684\u5192\u9669\uff0c\u4e00\u5f20\u767d\u7eb8\uff0c\u4f60\u4f1a\u5bb3\u6015\u5417\uff1f",
+      "challengeCrystalId": "royale_king",
+      "minTier": 4,
+      "maxTier": 4
+    },
+    {
+      "displayName": "\u6781\u901f60\u79d2",
+      "description": "\u662f\u4e00\u90e8\u597d\u7535\u5f71\uff0c\u4e0d\u8fc7\u8981\u662f\u5728\u5b9d\u5e93\u91cc\u7684\u8bdd\u2026\u2026",
+      "challengeCrystalId": "gone_in_60_seconds",
+      "minTier": 5,
+      "maxTier": 5
+    },
+    {
+      "displayName": "\u548c\u5e73\u4e3b\u4e49\u8005",
+      "description": "\u6240\u4ee5\u4f60\u89c9\u5f97\u8fd9\u6837\u66f4\u9ad8\u6548\u3001\u66f4\u5feb\u3001\u66f4\u597d\u3001\u66f4\u5f3a\uff1f\u4e0d\u4e00\u5b9a\u5427\u2026\u2026",
+      "challengeCrystalId": "the_pacifist",
+      "minTier": 6,
+      "maxTier": 6
+    },
+    {
+      "displayName": "\u6700\u5e78\u8fd0\u7684\u80dc\u5229",
+      "description": "\u4f60\u9700\u8981\u8fd0\u6c14\u3001\u64cd\u4f5c\u548c\u66f4\u591a\u7684\u8fd0\u6c14\u3002",
+      "challengeCrystalId": "luckiest_win",
+      "minTier": 7,
+      "maxTier": 7
+    },
+    {
+      "displayName": "\u6781\u901f\u5feb\u8dd1",
+      "description": "\u4f60\u8fd8\u8bb0\u5f97\u4ee5\u524d\u7684\u6837\u5b50\u5417\uff1f\u4f60\u628a\u5b83\u6d6a\u6f2b\u5316\u4e86\u5417\uff1f",
+      "challengeCrystalId": "the_speedrunner",
+      "minTier": 8,
+      "maxTier": 8
+    },
+    {
+      "displayName": "\u65f6\u95f4\u4f60\u5b9a",
+      "description": "\u4f60\u60f3\u5728\u5b9d\u5e93\u91cc\u5f85\u66f4\u4e45\u5417\uff0c\u6211\u4e0d\u77e5\u9053\uff0c\u8bd5\u8bd5\u5427\u3002",
+      "challengeCrystalId": "time_you_say",
+      "minTier": 9,
+      "maxTier": 9
+    },
+    {
+      "displayName": "\u6781\u901f\u5168\u8fde",
+      "description": "\u901f\u5ea6\u3001\u8fd0\u6c14\u548c\u7cbe\u51c6\u624d\u80fd\u8d62\u5f97\u6bd4\u8d5b\u3002",
+      "challengeCrystalId": "speed_blackout_bingo",
+      "minTier": 10,
+      "maxTier": 10
+    },
+    {
+      "displayName": "\u75af\u72c2\u5192\u9669",
+      "description": "\u602a\u7269\u662f\u7194\u5ca9\uff0c\u4e0d\u8981\u78b0\uff0c\u4e0d\u8981\u88ab\u6253\u5230\uff0c\u56e0\u4e3a\u4f60\u4f1a\u5931\u8d25\u7684\u3002",
+      "challengeCrystalId": "one_shot_frenzy",
+      "minTier": 11,
+      "maxTier": 11
+    },
+    {
+      "displayName": "\u5927\u5e86\u5178",
+      "description": "\u662f\u65f6\u5019\u5e86\u795d\u4e86\uff01\u662f\u5417\uff1f",
+      "challengeCrystalId": "celebrations",
+      "minTier": 12,
+      "maxTier": 12
+    }
+  ],
+  "maxChallengesPerTier": {
+    "0": 3,
+    "1": 3,
+    "2": 3,
+    "3": 4,
+    "4": 4,
+    "5": 4,
+    "6": 5,
+    "7": 5,
+    "8": 5,
+    "9": 5,
+    "10": 5
+  },
+  "challengeRebuyCoinCost": 5
+}

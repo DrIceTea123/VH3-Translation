@@ -1,0 +1,55 @@
+{
+  "sortnum": 5,
+  "name": "宝库传送门",
+  "icon": "the_vault:vault_stone",
+  "category": "patchouli:getting_started_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "将宝库之石灌注成宝库水晶之后，你需要建造一个$(l)传送门框架$()。$(br2)使用$(l)宝库水晶$()右击传送门框架可以打开一个通往宝库世界维度的大门。$(br2)传送门框架可以使用$(l)任意种类$()的$(l)宝库石$()来建造，包括宝库圆石。"
+    },
+    {
+      "type": "patchouli:multiblock",
+      "name": "宝库传送门",
+      "multiblock": {
+        "pattern": [
+          [
+            "    ",
+            "SVSS",
+            "    "
+          ],
+          [
+            "    ",
+            "B  P",
+            "    "
+          ],
+          [
+            "    ",
+            "S  V",
+            "    "
+          ],
+          [
+            "    ",
+            "V  S",
+            "    "
+          ],
+          [
+            "   0",
+            "PSCS",
+            "    "
+          ]
+        ],
+        "mapping": {
+          "S": "the_vault:vault_stone",
+          "P": "the_vault:polished_vault_stone",
+          "V": "the_vault:vault_cobblestone",
+          "B": "the_vault:bumbo_polished_vault_stone",
+          "C": "the_vault:chiseled_vault_stone"
+        },
+        "symmetrical": false
+      },
+      "enable_visualize": true,
+      "text": "传送门的大小最小为$(l)4x5$()，最大为$(l)23x23$()。"
+    }
+  ]
+}

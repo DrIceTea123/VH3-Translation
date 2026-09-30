@@ -1,0 +1,14 @@
+# VH3 翻译工作区入口
+
+本文件作用于本目录及其子目录。当前 Git 仓库与主工程已迁入 `vh3-translation/`。
+
+每个新对话必须先读取 `vh3-translation/AGENTS.md`，再按其要求读取 `vh3-translation/project-memory/README.md`、`STATE.md`、`RULES.md`、`DECISIONS.md`、`TODO.md` 及未归并的 notes；不能只读本入口就声称已了解项目。
+
+- 当前主工程：`vh3-translation/[PROGRAM]/`。
+- 共享记忆唯一维护位置：`vh3-translation/project-memory/`；日常记录授权继续有效。
+- 不清晰的功能需求或需要决策的部分，先向用户提问，并说明原因，不擅自决定。
+- 新内容放在合适的位置，必要时新建文件夹。
+- 原始输入、历史公告、参考表格、旧版翻译、checker、发布成品及 7-Zip 留在本目录，不属于子仓库；不因存在 TODO 就执行额外任务。
+- 不在文档、记忆或 Git 中记录用户提供的原始整合包实例路径；可记录有用的版本和模组信息。
+
+本文件是工作区入口。版本管理中的入口模板及同步方式见 `vh3-translation/docs/workspace-entry/`。

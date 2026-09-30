@@ -1,0 +1,593 @@
+{
+  "overworldInscriptionRecipes": [
+    {
+      "id": "the_vault:original_bumbo",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/originalbumbo\",model:0,color:3118792,display:{Name:'{\"text\":\"\u539f\u59cb\u602a\u8138\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 8,
+          "ITEM": "the_vault:vault_gold",
+          "NBT": "{}"
+        },
+        {
+          "AMOUNT": 4,
+          "ITEM": "the_vault:inscription_piece",
+          "NBT": "{}"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:gem_benitoite",
+          "NBT": "{}"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:vault_essence",
+          "NBT": "{}"
+        }
+      ]
+    },
+    {
+      "id": "the_vault:original_pacific",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/pacific\",model:0,color:3118792,display:{Name:'{\"text\":\"\u539f\u59cb\u592a\u5e73\u6d0b\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 8,
+          "ITEM": "the_vault:vault_gold",
+          "NBT": "{}"
+        },
+        {
+          "AMOUNT": 4,
+          "ITEM": "the_vault:inscription_piece",
+          "NBT": "{}"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:gem_benitoite",
+          "NBT": "{}"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:vault_essence",
+          "NBT": "{}"
+        }
+      ]
+    },
+    {
+      "id": "the_vault:dark_tower",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/darktower\",model:0,color:3118792,display:{Name:'{\"text\":\"\u6697\u9ed1\u4e4b\u5854\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 8,
+          "ITEM": "the_vault:vault_gold",
+          "NBT": "{}"
+        },
+        {
+          "AMOUNT": 4,
+          "ITEM": "the_vault:inscription_piece",
+          "NBT": "{}"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:gem_benitoite",
+          "NBT": "{}"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:vault_essence",
+          "NBT": "{}"
+        }
+      ]
+    },
+    {
+      "id": "the_vault:city_1",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/city_1\",model:0,color:3118792,display:{Name:'{\"text\":\"\u57ce\u5e021\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:city_2",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/city_2\",model:0,color:3118792,display:{Name:'{\"text\":\"\u57ce\u5e022\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:city_3",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/city_3\",model:0,color:3118792,display:{Name:'{\"text\":\"\u57ce\u5e023\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:city_4",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/city_4\",model:0,color:3118792,display:{Name:'{\"text\":\"\u57ce\u5e024\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:city_5",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/city_5\",model:0,color:3118792,display:{Name:'{\"text\":\"\u57ce\u5e025\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:city_6",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/city_6\",model:0,color:3118792,display:{Name:'{\"text\":\"\u57ce\u5e026\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:city_7",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/city_7\",model:0,color:3118792,display:{Name:'{\"text\":\"\u57ce\u5e027\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:city_8",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/city_8\",model:0,color:3118792,display:{Name:'{\"text\":\"\u57ce\u5e028\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:city_9",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/city_9\",model:0,color:3118792,display:{Name:'{\"text\":\"\u57ce\u5e029\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:city_10",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/city_10\",model:0,color:3118792,display:{Name:'{\"text\":\"\u57ce\u5e0210\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:city_11",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/city_11\",model:0,color:3118792,display:{Name:'{\"text\":\"\u57ce\u5e0211\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:fancy_1",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/fancy_1\",model:0,color:3118792,display:{Name:'{\"text\":\"\u7cbe\u81f41\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:fancy_2",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/fancy_2\",model:0,color:3118792,display:{Name:'{\"text\":\"\u7cbe\u81f42\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:fancy_3",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/fancy_3\",model:0,color:3118792,display:{Name:'{\"text\":\"\u7cbe\u81f43\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:fancy_4",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/fancy_4\",model:0,color:3118792,display:{Name:'{\"text\":\"\u7cbe\u81f44\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:fancy_5",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/fancy_5\",model:0,color:3118792,display:{Name:'{\"text\":\"\u7cbe\u81f45\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:fancy_6",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/fancy_6\",model:0,color:3118792,display:{Name:'{\"text\":\"\u7cbe\u81f46\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:medieval_1",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/medieval_1\",model:0,color:3118792,display:{Name:'{\"text\":\"\u4e2d\u4e16\u7eaa1\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:medieval_2",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/medieval_2\",model:0,color:3118792,display:{Name:'{\"text\":\"\u4e2d\u4e16\u7eaa2\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:medieval_3",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/medieval_3\",model:0,color:3118792,display:{Name:'{\"text\":\"\u4e2d\u4e16\u7eaa3\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:medieval_4",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/medieval_4\",model:0,color:3118792,display:{Name:'{\"text\":\"\u4e2d\u4e16\u7eaa4\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:medieval_5",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/medieval_5\",model:0,color:3118792,display:{Name:'{\"text\":\"\u4e2d\u4e16\u7eaa5\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:medieval_6",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/medieval_6\",model:0,color:3118792,display:{Name:'{\"text\":\"\u4e2d\u4e16\u7eaa6\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:medieval_7",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/medieval_7\",model:0,color:3118792,display:{Name:'{\"text\":\"\u4e2d\u4e16\u7eaa7\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:medieval_8",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/medieval_8\",model:0,color:3118792,display:{Name:'{\"text\":\"\u4e2d\u4e16\u7eaa8\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:douwskys_sky_island",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/douwskyisland\",model:0,color:3118792,display:{Name:\"{\\\"text\\\":\\\"Douwsky\u7684\u7a7a\u5c9b\\\",\\\"color\\\":\\\"#2F96C8\\\"}\"}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:the_floating_tower",
+      "creator": "davy101",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/floating_tower\",model:0,color:3118792,display:{Name:'{\"text\":\"\u6d6e\u7a7a\u5854\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:architects_blueprint",
+      "creator": "exqyu",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/floorplan_blueprint\",model:0,color:3118792,display:{Name:\"{\\\"text\\\":\\\"\u5efa\u7b51\u5e08\u84dd\u56fe\\\",\\\"color\\\":\\\"#2F96C8\\\"}\"}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:funko_dylan",
+      "creator": "exqyu",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/funko_dylan\",model:0,color:3118792,display:{Name:'{\"text\":\"Funko\u8fea\u4f26\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:memory_lane",
+      "creator": "massuus",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/memory_lane_2\",model:0,color:3118792,display:{Name:'{\"text\":\"\u6545\u5730\u91cd\u6e38\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:minangkabau_palace",
+      "creator": "exqyu",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/minangkabau\",model:0,color:3118792,display:{Name:'{\"text\":\"\u7c73\u5357\u5361\u4fdd\u5bab\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:rubiks_cube",
+      "creator": "exqyu",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/rubiks_cube\",model:0,color:3118792,display:{Name:\"{\\\"text\\\":\\\"\u9b54\u65b9\\\",\\\"color\\\":\\\"#2F96C8\\\"}\"}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:the_floating_colosseum",
+      "creator": "TheHybridDwarf",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/the_floating_colosseum\",model:0,color:3118792,display:{Name:'{\"text\":\"\u6d6e\u7a7a\u6597\u517d\u573a\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:velara_tree",
+      "creator": "exqyu",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/velara_tree\",model:0,color:3118792,display:{Name:'{\"text\":\"\u7ef4\u62c9\u62c9\u4e4b\u6811\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    },
+    {
+      "id": "the_vault:vault_hunters_portal",
+      "creator": "exqyu",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:overworld_inscription",
+        "NBT": "{structureId:\"the_vault:overworld/vh_wallpaper_portal\",model:0,color:3118792,display:{Name:'{\"text\":\"\u5b9d\u85cf\u730e\u4eba\u4f20\u9001\u95e8\",\"color\":\"#2F96C8\"}'}}"
+      },
+      "inputs": [
+        { "AMOUNT": 8, "ITEM": "the_vault:vault_gold", "NBT": "{}" },
+        { "AMOUNT": 4, "ITEM": "the_vault:inscription_piece", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:gem_benitoite", "NBT": "{}" },
+        { "AMOUNT": 64, "ITEM": "the_vault:vault_essence", "NBT": "{}" }
+      ]
+    }
+  ]
+}

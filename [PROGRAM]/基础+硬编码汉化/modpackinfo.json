@@ -1,0 +1,12 @@
+{
+  "modpack": {
+    "name": "宝藏猎人3",
+    "version": "3.21.7",
+    "translation": {
+      "id": "vault",
+      "url": "https://vmct-cn.top/modpacks/vault/",
+      "language": "zh_cn",
+      "version": "2.6.18"
+    }
+  }
+}

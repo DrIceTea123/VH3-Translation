@@ -1,0 +1,3433 @@
+{
+  "ETCHINGS": {
+    "the_vault:etching_blocking_mana": {
+      "name": "\u683c\u6321\u9b54\u529b",
+      "description": "\u683c\u6321\u4f1a\u6062\u590d<yellow>%dvalue<gray>\u70b9\u9b54\u529b\u503c",
+      "color": 16777215,
+      "affixType": "IMPLICIT",
+      "typeGroups": [
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_blocking_mana",
+          "group": "BlockEtching",
+          "identifier": "the_vault:etching_blocking_mana",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 2,
+                "max": 4,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 3,
+                "max": 6,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 5,
+                "max": 8,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 6,
+                "max": 10,
+                "step": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_chaining_penalty": {
+      "name": "\u8fde\u9501\u51cf\u60e9",
+      "description": "<#5c5db6>\u8fde\u9501\u653b\u51fb<gray>\u7684\u4f24\u5bb3\u8870\u51cf\u964d\u4f4e<yellow>%.0fpvalue%",
+      "color": 16777215,
+      "affixType": "PREFIX",
+      "typeGroups": [
+        "\u8fdb\u653b"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_chaining_penalty",
+          "group": "ChainingEtching",
+          "identifier": "the_vault:chaining_penalty",
+          "tags": [
+            "chaining"
+          ],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 0.02,
+                "max": 0.25,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 0.15,
+                "max": 0.5,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 0.35,
+                "max": 0.8,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 0.5,
+                "max": 0.8,
+                "step": 0.01
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_frost_nova_freeze": {
+      "name": "\u51b0\u971c\u65b0\u661f",
+      "description": "<gray>\u971c\u51bb\u65b0\u661f\u6709<yellow>%.0fpvalue%<gray>\u7684\u6982\u7387<#2FE1FA>\u51bb\u7ed3<gray>\u602a\u7269\uff08\u65bd\u52a0\u51b0\u7262\uff092\u79d2",
+      "color": 16777215,
+      "affixType": "PREFIX",
+      "typeGroups": [
+        "\u8fdb\u653b",
+        "\u9632\u5fa1"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_frost_nova_freeze",
+          "group": "NovaEtching",
+          "identifier": "the_vault:etching_frost_nova_freeze",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 0.1,
+                "max": 0.25,
+                "step": 0.05
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 0.2,
+                "max": 0.4,
+                "step": 0.05
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 0.3,
+                "max": 0.55,
+                "step": 0.05
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 0.45,
+                "max": 0.75,
+                "step": 0.05
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_glacial_shatter_explosion": {
+      "name": "\u51b0\u971c\u7206\u70b8",
+      "description": "<gray>\u51bb\u4f24\u7684\u602a\u7269\u88ab\u51fb\u788e\u65f6\u4f1a\u7206\u70b8\u51fa\u51b0\u7247\uff0c\u5728<yellow>%.1fvalueB<gray>\u683c\u8303\u56f4\u5185\u9020\u6210<yellow>%.0fpvalueA%<gray>\u7684<#C23627>\u653b\u51fb\u4f24\u5bb3<gray>",
+      "color": 16777215,
+      "affixType": "PREFIX",
+      "typeGroups": [
+        "\u8fdb\u653b"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_glacial_shatter_explosion",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_glacial_shatter_explosion",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "percentAD": {
+                  "min": 0.1,
+                  "max": 0.25,
+                  "step": 0.05
+                },
+                "radius": {
+                  "min": 2.0,
+                  "max": 3.0,
+                  "step": 0.5
+                }
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "percentAD": {
+                  "min": 0.2,
+                  "max": 0.4,
+                  "step": 0.05
+                },
+                "radius": {
+                  "min": 2.5,
+                  "max": 4.0,
+                  "step": 0.5
+                }
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "percentAD": {
+                  "min": 0.3,
+                  "max": 0.55,
+                  "step": 0.05
+                },
+                "radius": {
+                  "min": 3.5,
+                  "max": 5.0,
+                  "step": 0.5
+                }
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "percentAD": {
+                  "min": 0.45,
+                  "max": 0.75,
+                  "step": 0.05
+                },
+                "radius": {
+                  "min": 4.0,
+                  "max": 6.0,
+                  "step": 0.5
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_heal_cleanse": {
+      "name": "\u6cbb\u7597\u51c0\u5316",
+      "description": "<gray>\u6cbb\u7597\u7684\u540c\u65f6\u65bd\u653e\u4e00\u6b21<yellow>%dvalue<gray>\u7ea7\u51c0\u5316",
+      "color": 16777215,
+      "affixType": "PREFIX",
+      "typeGroups": [
+        "\u9632\u5fa1"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_heal_cleanse",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_heal_cleanse",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 1,
+                "max": 3,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 2,
+                "max": 5,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 4,
+                "max": 7,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 6,
+                "max": 10,
+                "step": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_ice_bolt_chunk_damage": {
+      "name": "\u51b0\u971c\u4f24\u5bb3",
+      "description": "<gray>\u51b0\u971c\u7206\u88c2\u9020\u6210\u4e00\u6b21<yellow>%.0fpvalue%<gray>\u7684<#C23627>\u653b\u51fb\u4f24\u5bb3",
+      "color": 16777215,
+      "affixType": "PREFIX",
+      "typeGroups": [
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_ice_bolt_chunk_damage",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_ice_bolt_chunk_damage",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 0.1,
+                "max": 0.3,
+                "step": 0.05
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 0.2,
+                "max": 0.5,
+                "step": 0.05
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 0.4,
+                "max": 0.7,
+                "step": 0.05
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 0.6,
+                "max": 1.0,
+                "step": 0.05
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_ice_bolt_effect": {
+      "name": "\u51b0\u9525\u6548\u679c",
+      "description": "\u51b0\u9525\u6709<yellow>%.0fpvalueB%<gray>\u7684\u6982\u7387\u65bd\u52a0\u51b0\u7262\uff0c\u6301\u7eed<yellow>%dvalueC<gray>\u79d2",
+      "color": 16777215,
+      "affixType": "PREFIX",
+      "typeGroups": [
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_ice_bolt_effect",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_ice_bolt_effect",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:glacial_shatter",
+                    "weight": 1.0
+                  }
+                ],
+                "chance": {
+                  "min": 0.2,
+                  "max": 0.4,
+                  "step": 0.05
+                },
+                "duration": {
+                  "min": 2,
+                  "max": 3,
+                  "step": 1
+                }
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:glacial_shatter",
+                    "weight": 1.0
+                  }
+                ],
+                "chance": {
+                  "min": 0.3,
+                  "max": 0.55,
+                  "step": 0.05
+                },
+                "duration": {
+                  "min": 2,
+                  "max": 3,
+                  "step": 1
+                }
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:glacial_shatter",
+                    "weight": 1.0
+                  }
+                ],
+                "chance": {
+                  "min": 0.45,
+                  "max": 0.7,
+                  "step": 0.05
+                },
+                "duration": {
+                  "min": 3,
+                  "max": 4,
+                  "step": 1
+                }
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:glacial_shatter",
+                    "weight": 1.0
+                  }
+                ],
+                "chance": {
+                  "min": 0.6,
+                  "max": 0.9,
+                  "step": 0.05
+                },
+                "duration": {
+                  "min": 3,
+                  "max": 5,
+                  "step": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_ice_bolt_lucky": {
+      "name": "\u5e78\u8fd0\u51b0\u9525",
+      "description": "\u51b0\u9525\u73b0\u5728\u53ef\u4ee5\u89e6\u53d1<#6DF5A3>\u5e78\u8fd0\u4e00\u51fb",
+      "color": 16777215,
+      "affixType": "PREFIX",
+      "typeGroups": [
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_ice_bolt_lucky",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_ice_bolt_lucky",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 4,
+                "max": 5,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 5,
+                "max": 6,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 6,
+                "max": 7,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 7,
+                "max": 10,
+                "step": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_ice_bolt_multicast": {
+      "name": "\u971c\u51bb\u5f39\u5e55",
+      "description": "\u51b0\u9525\u5728\u4e3b\u52a8\u65bd\u653e\u540e\u4f1a\u989d\u5916\u81ea\u52a8\u65bd\u653e<yellow>%dvalue<gray>\u6b21",
+      "color": 16777215,
+      "typeGroups": [
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_ice_bolt_multicast",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_ice_bolt_multicast",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 4,
+                "max": 5,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 5,
+                "max": 6,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 6,
+                "max": 8,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 7,
+                "max": 10,
+                "step": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_ice_bolt_pierce": {
+      "name": "\u7a7f\u523a\u51b0\u9525",
+      "description": "<gray>\u51b0\u9525\u4f1a\u7a7f\u900f<yellow>%dvalue<gray>\u4e2a\u602a\u7269",
+      "color": 16777215,
+      "typeGroups": [
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_ice_bolt_pierce",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_ice_bolt_pierce",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 4,
+                "max": 6,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 5,
+                "max": 8,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 7,
+                "max": 10,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 9,
+                "max": 15,
+                "step": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_implode_mana_regen": {
+      "name": "\u5185\u7206\u9006\u8f6c",
+      "description": "<gray>\u5185\u7206\u6bcf\u51fb\u6740\u4e00\u53ea\u602a\u7269\u63d0\u5347<yellow>%.0fpvalue%<gray>\u9b54\u529b\u518d\u751f\uff0c\u6301\u7eed10\u79d2",
+      "color": 16777215,
+      "typeGroups": [
+        "\u9632\u5fa1"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_implode_mana_regen",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_implode_mana_regen",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 0.01,
+                "max": 0.02,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 0.02,
+                "max": 0.03,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 0.03,
+                "max": 0.04,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 0.04,
+                "max": 0.06,
+                "step": 0.01
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_lucky_cooldown_reset": {
+      "name": "\u5e78\u8fd0\u91cd\u7f6e",
+      "description": "<gray>\u89e6\u53d1<#6DF5A3>\u5e78\u8fd0\u4e00\u51fb<gray>\u4f1a\u7acb\u5373\u91cd\u7f6e<yellow>%svalue/ability<gray>\u7684\u51b7\u5374",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b",
+        "\u9632\u5fa1",
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 12,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_lucky_cooldown_reset",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_lucky_cooldown_reset",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "strings": [
+                  {
+                    "value": "Nova_Slow",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Base",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Dot",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Dash_Base",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Dash_Damage",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Dash_Warp",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Heal_Base",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Heal_Group",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Heal_Cleanse",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Totem",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Totem_Player_Damage",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Totem_Mana_Regen",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Totem_Mob_Damage",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Fireball_Base",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Fireball_Volley",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Mana_Shield_Implode",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Hunter_Base",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Javelin_Sight",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Ice_Bolt_Blast",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Ghost_Walk",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Ghost_Walk_Spirit",
+                    "weight": 1.0
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_lucky_frost_nova": {
+      "name": "\u5e78\u8fd0\u65b0\u661f",
+      "description": "<gray>\u89e6\u53d1<#6DF5A3>\u5e78\u8fd0\u4e00\u51fb<gray>\u4f1a\u81ea\u52a8\u65bd\u653e<yellow>%dvalue<gray>\u7ea7\u971c\u51bb\u65b0\u661f",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b",
+        "\u9632\u5fa1"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_lucky_frost_nova",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_lucky_frost_nova",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 1,
+                "max": 3,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 2,
+                "max": 5,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 4,
+                "max": 7,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 6,
+                "max": 10,
+                "step": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_lucky_low_health": {
+      "name": "\u5e78\u8fd0\u589e\u5e45",
+      "description": "\u751f\u547d\u503c\u4f4e\u4e8e<yellow>%.0fpvalueB%<gray>\u65f6\uff0c<#6DF5A3>\u5e78\u8fd0\u4e00\u51fb<gray>\u6982\u7387\u63d0\u5347<yellow>%.0fpvalueA%",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b",
+        "\u9632\u5fa1"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_lucky_low_health",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_lucky_low_health",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "chance": {
+                  "min": 0.02,
+                  "max": 0.04,
+                  "step": 0.01
+                },
+                "healthThreshold": {
+                  "min": 0.5,
+                  "max": 0.5,
+                  "step": 0
+                }
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "chance": {
+                  "min": 0.03,
+                  "max": 0.06,
+                  "step": 0.01
+                },
+                "healthThreshold": {
+                  "min": 0.5,
+                  "max": 0.5,
+                  "step": 0
+                }
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "chance": {
+                  "min": 0.05,
+                  "max": 0.08,
+                  "step": 0.01
+                },
+                "healthThreshold": {
+                  "min": 0.5,
+                  "max": 0.5,
+                  "step": 0
+                }
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "chance": {
+                  "min": 0.07,
+                  "max": 0.12,
+                  "step": 0.01
+                },
+                "healthThreshold": {
+                  "min": 0.5,
+                  "max": 0.5,
+                  "step": 0
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_lucky_vulnerable": {
+      "name": "\u5e78\u8fd0\u6613\u4f24",
+      "description": "<gray>\u89e6\u53d1<#6DF5A3>\u5e78\u8fd0\u4e00\u51fb<gray>\u4f1a\u65bd\u52a0<yellow>%dvalueC<gray>\u5c42<yellow>\u6613\u4f24<gray>\uff0c\u6301\u7eed<yellow>%.1fvalueB<gray>\u79d2",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_lucky_vulnerable",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_lucky_vulnerable",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:vulnerable",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 1,
+                  "max": 4,
+                  "step": 1
+                },
+                "duration": {
+                  "min": 1.0,
+                  "max": 2.5,
+                  "step": 0.5
+                }
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:vulnerable",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 3,
+                  "max": 6,
+                  "step": 1
+                },
+                "duration": {
+                  "min": 2.0,
+                  "max": 3.5,
+                  "step": 0.5
+                }
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:vulnerable",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 5,
+                  "max": 8,
+                  "step": 1
+                },
+                "duration": {
+                  "min": 3.0,
+                  "max": 4.5,
+                  "step": 0.5
+                }
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:vulnerable",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 7,
+                  "max": 12,
+                  "step": 1
+                },
+                "duration": {
+                  "min": 4.0,
+                  "max": 6.0,
+                  "step": 0.5
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_smite_stun": {
+      "name": "\u7729\u6655\u60e9\u6212",
+      "description": "<gray>\u60e9\u6212\u6709<yellow>%.0fpvalue%<gray>\u7684\u6982\u7387\u7729\u6655\u602a\u7269",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_smite_stun",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_smite_stun",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 0.5,
+                "max": 0.65,
+                "step": 0.1,
+                "type": "uniformed_step"
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 0.55,
+                "max": 0.75,
+                "step": 0.1,
+                "type": "uniformed_step"
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 0.65,
+                "max": 0.9,
+                "step": 0.1,
+                "type": "uniformed_step"
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 0.8,
+                "max": 1.0,
+                "step": 0.1,
+                "type": "uniformed_step"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_smite_echo": {
+      "name": "\u5171\u9e23\u60e9\u6212",
+      "description": "<yellow>\u60e9\u6212<gray>\u4f1a\u5728\u9996\u6b21\u653b\u51fb\u540e0.5\u79d2\u989d\u5916\u8fdb\u884c\u4e00\u6b21\u653b\u51fb\uff0c\u9020\u6210\u539f\u4f24\u5bb3<yellow>%.0fpvalue%<gray>\u7684\u4f24\u5bb3",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_smite_echo",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_smite_echo",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 0.2,
+                "max": 0.4,
+                "step": 0.05,
+                "type": "uniformed_step"
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 0.3,
+                "max": 0.6,
+                "step": 0.05,
+                "type": "uniformed_step"
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 0.5,
+                "max": 0.85,
+                "step": 0.05,
+                "type": "uniformed_step"
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 0.7,
+                "max": 1.2,
+                "step": 0.05,
+                "type": "uniformed_step"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_nova_recast": {
+      "name": "\u65b0\u661f\u91cd\u73b0",
+      "description": "<gray>\u65b0\u661f\u7206\u53d1\u4f1a\u5728\u65bd\u653e\u540e\u7684<yellow>%tvalue<gray>\u79d2\u5185\u518d\u6b21\u65bd\u653e\u4e00\u6b21",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b",
+        "\u9632\u5fa1"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_nova_recast",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_nova_recast",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 20,
+                "max": 40,
+                "step": 10
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 30,
+                "max": 55,
+                "step": 10
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 45,
+                "max": 75,
+                "step": 10
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 60,
+                "max": 100,
+                "step": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_shield_bash_damage": {
+      "name": "\u76fe\u51fb\u4f24\u5bb3",
+      "description": "<gray>\u76fe\u724c\u91cd\u51fb\u989d\u5916\u9020\u6210<yellow>%.0fpvalue%<#C23627>\u653b\u51fb\u4f24\u5bb3",
+      "color": 16777215,
+      "typeGroups": [
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_shield_bash_damage",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_shield_bash_damage",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 0.1,
+                "max": 0.2,
+                "step": 0.05
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 0.15,
+                "max": 0.3,
+                "step": 0.05
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 0.25,
+                "max": 0.4,
+                "step": 0.05
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 0.3,
+                "max": 0.5,
+                "step": 0.05
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_extra_piercing_javelin": {
+      "name": "\u6563\u5c04\u7a7f\u523a",
+      "description": "<gray>\u7a7f\u523a\u6807\u67aa\u4f1a\u6cbf\u6c34\u5e73\u65b9\u5411\u989d\u5916\u53d1\u5c042\u53ea\u6807\u67aa\uff0c\u9020\u6210\u539f\u4f24\u5bb3<yellow>%.0fpvalue%<gray>\u7684\u4f24\u5bb3",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_extra_piercing_javelin",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_extra_piercing_javelin",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 0.3,
+                "max": 0.5,
+                "step": 0.05
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 0.4,
+                "max": 0.7,
+                "step": 0.05
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 0.6,
+                "max": 0.9,
+                "step": 0.05
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 0.8,
+                "max": 1.2,
+                "step": 0.05
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_piercing_javelin_ricochet": {
+      "name": "\u7a7f\u523a\u5f39\u5c04",
+      "description": "<gray>\u7a7f\u523a\u6807\u67aa\u5728\u7a7f\u523a\u65f6\u4f1a\u5f39\u5c04\uff0c\u5f39\u5c04\u9020\u6210\u7684\u4f24\u5bb3\u964d\u4f4e<yellow>%.0fpvalue%<gray>",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_piercing_javelin_ricochet",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_piercing_javelin_ricochet",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 0.2,
+                "max": 0.35,
+                "step": 0.05
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 0.3,
+                "max": 0.45,
+                "step": 0.05
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 0.4,
+                "max": 0.55,
+                "step": 0.05
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 0.5,
+                "max": 0.7,
+                "step": 0.05
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_poison_mana": {
+      "name": "\u5267\u6bd2\u9b54\u529b",
+      "description": "<gray>\u9020\u6210\u7684\u4e2d\u6bd2\u4f24\u5bb3\u6bcf\u6e38\u620f\u523b\u6062\u590d<yellow>%dvalue<gray>\u70b9\u9b54\u529b\u503c",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b",
+        "\u9632\u5fa1"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_poison_mana",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_poison_mana",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 1,
+                "max": 2,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 1,
+                "max": 3,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 2,
+                "max": 3,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 2,
+                "max": 4,
+                "step": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_scatter_mana": {
+      "name": "\u6563\u5c04\u9b54\u529b",
+      "description": "<gray>\u6563\u5c04\u6807\u67aa\u547d\u4e2d\u602a\u7269\u65f6\u6062\u590d<yellow>%dvalue<gray>\u70b9\u9b54\u529b\u503c",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_scatter_mana",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_scatter_mana",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 1,
+                "max": 3,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 2,
+                "max": 4,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 3,
+                "max": 5,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 4,
+                "max": 8,
+                "step": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_storm_arrow_blizzard_damage": {
+      "name": "\u66b4\u96ea\u4f24\u5bb3",
+      "description": "<gray>\u51b0\u6676\u66b4\u96ea\u6bcf\u6b21\u653b\u51fb\u989d\u5916\u9020\u6210<yellow>%.0fpvalue%<gray>\u7684\u6cd5\u672f\u4f24\u5bb3",
+      "color": 16777215,
+      "typeGroups": [
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_storm_arrow_blizzard_damage",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_storm_arrow_blizzard_damage",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 0.1,
+                "max": 0.2,
+                "step": 0.1
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 0.15,
+                "max": 0.3,
+                "step": 0.1
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 0.25,
+                "max": 0.45,
+                "step": 0.1
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 0.35,
+                "max": 0.6,
+                "step": 0.1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_nova_low_mana_damage": {
+      "name": "\u65b0\u661f\u589e\u4f24",
+      "description": "<gray>\u9b54\u529b\u503c\u4f4e\u4e8e<yellow>%.0fpvalueA%<gray>\u65f6\u65bd\u653e\u65b0\u661f\u7206\u53d1\u4f1a\u4f7f\u5176\u4f24\u5bb3\u63d0\u5347<yellow>%.0fpvalueB%",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b",
+        "\u9632\u5fa1"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_nova_low_mana_damage",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_nova_low_mana_damage",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "damageMultiplier": {
+                  "min": 0.4,
+                  "max": 0.6,
+                  "step": 0.1
+                },
+                "manaThreshold": {
+                  "min": 0.5,
+                  "max": 0.5,
+                  "step": 0
+                }
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "damageMultiplier": {
+                  "min": 0.5,
+                  "max": 0.75,
+                  "step": 0.1
+                },
+                "manaThreshold": {
+                  "min": 0.5,
+                  "max": 0.5,
+                  "step": 0
+                }
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "damageMultiplier": {
+                  "min": 0.65,
+                  "max": 0.9,
+                  "step": 0.1
+                },
+                "manaThreshold": {
+                  "min": 0.5,
+                  "max": 0.5,
+                  "step": 0
+                }
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "damageMultiplier": {
+                  "min": 0.8,
+                  "max": 1.2,
+                  "step": 0.1
+                },
+                "manaThreshold": {
+                  "min": 0.5,
+                  "max": 0.5,
+                  "step": 0
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_stone_fall_stun": {
+      "name": "\u843d\u5730\u51b2\u51fb",
+      "description": "<gray>\u77f3\u843d\u6709<yellow>%.0fpvalueA%<gray>\u7684\u6982\u7387\u5bf9<yellow>%svalueC/effect<gray>\u7684\u602a\u7269\u9020\u6210\u6301\u7eed\u51fb\u9000\u6548\u679c\uff0c\u6301\u7eed<red>%tvalueB<red>\u79d2",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_stone_fall_stun",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_stone_fall_stun",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:noai",
+                    "weight": 1.0
+                  }
+                ],
+                "chance": {
+                  "min": 0.2,
+                  "max": 0.4,
+                  "step": 0.05
+                },
+                "duration": {
+                  "min": 40,
+                  "max": 60,
+                  "step": 5.0
+                }
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:noai",
+                    "weight": 1.0
+                  }
+                ],
+                "chance": {
+                  "min": 0.3,
+                  "max": 0.6,
+                  "step": 0.05
+                },
+                "duration": {
+                  "min": 50,
+                  "max": 70,
+                  "step": 5.0
+                }
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:noai",
+                    "weight": 1.0
+                  }
+                ],
+                "chance": {
+                  "min": 0.5,
+                  "max": 0.85,
+                  "step": 0.05
+                },
+                "duration": {
+                  "min": 60,
+                  "max": 85,
+                  "step": 5.0
+                }
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:noai",
+                    "weight": 1.0
+                  }
+                ],
+                "chance": {
+                  "min": 0.7,
+                  "max": 1.0,
+                  "step": 0.05
+                },
+                "duration": {
+                  "min": 75,
+                  "max": 120,
+                  "step": 5.0
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_totem_mob_damage_ad": {
+      "name": "\u6df7\u4f24\u56fe\u817e",
+      "description": "<gray>\u4ec7\u6068\u56fe\u817e\u80fd\u989d\u5916\u9020\u6210\u653b\u51fb\u4f24\u5bb3",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b"
+      ],
+      "minGreedTier": 4,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_totem_mob_damage_ad",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_totem_mob_damage_ad",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "flag": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_totem_player_damage_ap": {
+      "name": "\u6cd5\u5f3a\u56fe\u817e",
+      "description": "<gray>\u6124\u6012\u56fe\u817e\u80fd\u989d\u5916\u63d0\u5347<$ability_power>\u6cd5\u672f\u4f24\u5bb3",
+      "color": 16777215,
+      "typeGroups": [
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 4,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_totem_player_damage_ap",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_totem_player_damage_ap",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "flag": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_mana_shield_nova": {
+      "name": "\u65b0\u661f\u62a4\u76fe",
+      "description": "<gray>\u65bd\u653e\u9b54\u529b\u62a4\u76fe\u7684\u540c\u65f6\u4f1a\u65bd\u653e<yellow>%dvalueB<gray>\u7ea7<yellow>%svalueA/ability<gray>",
+      "color": 16777215,
+      "typeGroups": [
+        "\u9632\u5fa1"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_mana_shield_nova",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_mana_shield_nova",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "ability": [
+                  {
+                    "value": "Nova_Slow",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Base",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Dot",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 2,
+                  "max": 6,
+                  "step": 1
+                }
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "ability": [
+                  {
+                    "value": "Nova_Slow",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Base",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Dot",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 4,
+                  "max": 10,
+                  "step": 1
+                }
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "ability": [
+                  {
+                    "value": "Nova_Slow",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Base",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Dot",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 8,
+                  "max": 14,
+                  "step": 1
+                }
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "ability": [
+                  {
+                    "value": "Nova_Slow",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Base",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Dot",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 12,
+                  "max": 20,
+                  "step": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_rampage_lucky_hit": {
+      "name": "\u72c2\u66b4\u5e78\u8fd0",
+      "description": "<gray>\u72c2\u66b4\u6fc0\u6d3b\u671f\u95f4\u4f1a\u63d0\u5347<yellow>%.0fpvalue%<$luckyHit>\u5e78\u8fd0\u4e00\u51fb<gray>\u6982\u7387",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_rampage_lucky_hit",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_rampage_lucky_hit",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 0.02,
+                "max": 0.04,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 0.03,
+                "max": 0.06,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 0.05,
+                "max": 0.08,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 0.07,
+                "max": 0.12,
+                "step": 0.01
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_dash_warp_nova": {
+      "name": "\u65b0\u661f\u51b2\u523a",
+      "description": "<gray>\u6298\u8dc3\u843d\u5730\u65f6\u4f1a\u65bd\u653e<yellow>%dvalueB<gray>\u7ea7<yellow>%svalueA/ability<gray>",
+      "color": 16777215,
+      "typeGroups": [
+        "\u9632\u5fa1"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_dash_warp_nova",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_dash_warp_nova",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "ability": [
+                  {
+                    "value": "Nova_Slow",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Base",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Dot",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 2,
+                  "max": 6,
+                  "step": 1
+                }
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "ability": [
+                  {
+                    "value": "Nova_Slow",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Base",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Dot",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 4,
+                  "max": 10,
+                  "step": 1
+                }
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "ability": [
+                  {
+                    "value": "Nova_Slow",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Base",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Dot",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 8,
+                  "max": 14,
+                  "step": 1
+                }
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "ability": [
+                  {
+                    "value": "Nova_Slow",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Base",
+                    "weight": 1.0
+                  },
+                  {
+                    "value": "Nova_Dot",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 12,
+                  "max": 20,
+                  "step": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_storm_arrow_blizzard_effect": {
+      "name": "\u66b4\u96ea\u6548\u679c",
+      "description": "<gray>\u51b0\u6676\u66b4\u96ea\u4f1a\u4e3a\u51fb\u4e2d\u7684\u602a\u7269\u65bd\u52a0<yellow>%dvalueC<gray>\u5c42<yellow>%svalueA/effect<gray>\uff0c\u6301\u7eed<yellow>%tvalueB<gray>\u79d2",
+      "color": 5476034,
+      "typeGroups": [
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_storm_arrow_blizzard_effect",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_storm_arrow_blizzard_effect",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:vulnerable",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 1,
+                  "max": 3,
+                  "step": 1
+                },
+                "duration": {
+                  "min": 20,
+                  "max": 40,
+                  "step": 10
+                }
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:vulnerable",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 2,
+                  "max": 5,
+                  "step": 1
+                },
+                "duration": {
+                  "min": 30,
+                  "max": 60,
+                  "step": 10
+                }
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:vulnerable",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 4,
+                  "max": 7,
+                  "step": 1
+                },
+                "duration": {
+                  "min": 50,
+                  "max": 80,
+                  "step": 10
+                }
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:vulnerable",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 6,
+                  "max": 10,
+                  "step": 1
+                },
+                "duration": {
+                  "min": 70,
+                  "max": 120,
+                  "step": 10
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_spirit_walk_ability": {
+      "name": "\u7075\u9b42\u65b0\u661f",
+      "description": "<gray>\u7075\u9b42\u6b65\u6548\u679c\u89e3\u9664\u65f6\u4f1a\u65bd\u653e<yellow>%dvalueB<gray>\u7ea7<yellow>%svalueA/ability<gray>",
+      "color": 16777215,
+      "typeGroups": [
+        "\u9632\u5fa1"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_spirit_walk_ability",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_spirit_walk_ability",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "ability": [
+                  {
+                    "value": "Nova_Slow",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 1,
+                  "max": 3,
+                  "step": 1
+                }
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "ability": [
+                  {
+                    "value": "Nova_Slow",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 2,
+                  "max": 5,
+                  "step": 1
+                }
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "ability": [
+                  {
+                    "value": "Nova_Slow",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 4,
+                  "max": 7,
+                  "step": 1
+                }
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "ability": [
+                  {
+                    "value": "Nova_Slow",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 6,
+                  "max": 10,
+                  "step": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_lucky_vortex": {
+      "name": "\u5e78\u8fd0\u6f29\u6da1",
+      "description": "<gray>\u89e6\u53d1<#6DF5A3>\u5e78\u8fd0\u4e00\u51fb<gray>\u4f1a\u751f\u6210\u4e00\u4e2a\u534a\u5f84<yellow>%dvalueA<gray>\u683c\u7684\u6f29\u6da1\uff0c\u6301\u7eed<yellow>%dvalueB<gray>\u79d2",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b",
+        "\u9632\u5fa1"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_lucky_vortex",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_lucky_vortex",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "radius": {
+                  "min": 4.0,
+                  "max": 5.5,
+                  "step": 1.0
+                },
+                "duration": {
+                  "min": 20,
+                  "max": 40,
+                  "step": 10
+                }
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "radius": {
+                  "min": 5.0,
+                  "max": 6.5,
+                  "step": 1.0
+                },
+                "duration": {
+                  "min": 30,
+                  "max": 60,
+                  "step": 10
+                }
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "radius": {
+                  "min": 6.0,
+                  "max": 7.5,
+                  "step": 1.0
+                },
+                "duration": {
+                  "min": 50,
+                  "max": 80,
+                  "step": 10
+                }
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "radius": {
+                  "min": 7.0,
+                  "max": 10.0,
+                  "step": 1.0
+                },
+                "duration": {
+                  "min": 70,
+                  "max": 120,
+                  "step": 10
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_totem_player_damage_effect": {
+      "name": "\u6613\u4f24\u56fe\u817e",
+      "description": "<gray>\u4ec7\u6068\u56fe\u817e\u4f1a\u4e3a\u547d\u4e2d\u7684\u602a\u7269\u65bd\u52a0<yellow>%dvalueC<gray>\u5c42<yellow>%svalueA/effect<gray>\uff0c\u6301\u7eed<yellow>%tvalueB<gray>\u79d2",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_totem_player_damage_effect",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_totem_player_damage_effect",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:vulnerable",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 1,
+                  "max": 3,
+                  "step": 1
+                },
+                "duration": {
+                  "min": 20,
+                  "max": 40,
+                  "step": 10
+                }
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:vulnerable",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 2,
+                  "max": 5,
+                  "step": 1
+                },
+                "duration": {
+                  "min": 30,
+                  "max": 60,
+                  "step": 10
+                }
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:vulnerable",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 4,
+                  "max": 7,
+                  "step": 1
+                },
+                "duration": {
+                  "min": 50,
+                  "max": 80,
+                  "step": 10
+                }
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "effect": [
+                  {
+                    "value": "the_vault:vulnerable",
+                    "weight": 1.0
+                  }
+                ],
+                "level": {
+                  "min": 6,
+                  "max": 10,
+                  "step": 1
+                },
+                "duration": {
+                  "min": 70,
+                  "max": 120,
+                  "step": 10
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_life_tap_extra_damage": {
+      "name": "\u5206\u6d41\u9644\u4f24",
+      "description": "<gray>\u751f\u547d\u5206\u6d41\u6bcf\u5438\u53d61\u70b9\u751f\u547d\u503c\u989d\u5916\u9020\u6210<yellow>%dvalue<gray>\u70b9\u4f24\u5bb3",
+      "color": 16777215,
+      "typeGroups": [
+        "\u9632\u5fa1"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_life_tap_extra_damage",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_life_tap_extra_damage",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 1,
+                "max": 2,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 2,
+                "max": 4,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 3,
+                "max": 5,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 4,
+                "max": 8,
+                "step": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_life_tap_lucky_hit": {
+      "name": "\u5e78\u8fd0\u5206\u6d41",
+      "description": "<gray>\u751f\u547d\u5206\u6d41\u6bcf\u51fb\u6740\u4e00\u53ea\u602a\u7269\u63d0\u5347<yellow>%.0fpvalueA%<gray>\u5e78\u8fd0\u4e00\u51fb\u6982\u7387\uff0c\u6301\u7eed<yellow>%tvalueB<gray>\u79d2",
+      "color": 16777215,
+      "typeGroups": [
+        "\u9632\u5fa1"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_life_tap_lucky_hit",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_life_tap_lucky_hit",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "chance": {
+                  "min": 0.005,
+                  "max": 0.01,
+                  "step": 0.005
+                },
+                "duration": {
+                  "min": 160,
+                  "max": 175,
+                  "step": 20
+                }
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "chance": {
+                  "min": 0.008,
+                  "max": 0.015,
+                  "step": 0.005
+                },
+                "duration": {
+                  "min": 170,
+                  "max": 185,
+                  "step": 20
+                }
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "chance": {
+                  "min": 0.012,
+                  "max": 0.018,
+                  "step": 0.005
+                },
+                "duration": {
+                  "min": 180,
+                  "max": 195,
+                  "step": 20
+                }
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "chance": {
+                  "min": 0.015,
+                  "max": 0.025,
+                  "step": 0.005
+                },
+                "duration": {
+                  "min": 190,
+                  "max": 220,
+                  "step": 20
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_earthquake_recast_delay": {
+      "name": "\u5730\u9707\u91cd\u73b0",
+      "description": "<gray>\u5730\u9707\u5728\u9996\u6b21\u653b\u51fb\u7684<yellow>%tvalue<gray>\u79d2\u540e\u4f1a\u518d\u65bd\u653e\u4e00\u6b21\u653b\u51fb",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_earthquake_recast_delay",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_earthquake_recast_delay",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 20,
+                "max": 30,
+                "step": 20
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 25,
+                "max": 40,
+                "step": 20
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 30,
+                "max": 50,
+                "step": 20
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 40,
+                "max": 70,
+                "step": 20
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_earthquake_chest_loot": {
+      "name": "\u5730\u9707\u641c\u522e",
+      "description": "<gray>\u5730\u9707\u4f1a\u641c\u522e\u5176\u5f71\u54cd\u8303\u56f4\u5185\u7684\u6218\u5229\u54c1\uff0c\u4e14\u62e5\u6709\u989d\u5916\u7684<yellow>%.0fpvalue%<gray>\u7269\u54c1\u6570\u91cf\u548c\u7269\u54c1\u7a00\u6709\u5ea6",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_earthquake_chest_loot",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_earthquake_chest_loot",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 0.25,
+                "max": 0.5,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 0.4,
+                "max": 0.7,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 0.6,
+                "max": 0.9,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 0.8,
+                "max": 1.25,
+                "step": 0.01
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_landmine_spawn": {
+      "name": "\u5730\u96f7\u91cd\u751f",
+      "description": "<gray>\u5730\u96f7\u5728\u7206\u70b8\u540e\u4f1a\u751f\u6210\u4e00\u4e2a\u65b0\u7684\u5730\u96f7",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b"
+      ],
+      "minGreedTier": 4,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_landmine_spawn",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_landmine_spawn",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "flag": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_arcane_pierce": {
+      "name": "\u5965\u672f\u7a7f\u523a",
+      "description": "<gray>\u5965\u672f\u4f1a\u7a7f\u900f<yellow>%dvalue<gray>\u4e2a\u602a\u7269",
+      "color": 16777215,
+      "typeGroups": [
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_arcane_pierce",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_arcane_pierce",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 2,
+                "max": 3,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 2,
+                "max": 4,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 2,
+                "max": 5,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 3,
+                "max": 5,
+                "step": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_rail_pierce": {
+      "name": "\u8f68\u9053\u7a7f\u523a",
+      "description": "<gray>\u5965\u672f\u8f68\u9053\u4f1a\u7a7f\u900f<yellow>%dvalue<gray>\u4e2a\u602a\u7269",
+      "color": 16777215,
+      "typeGroups": [
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_rail_pierce",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_rail_pierce",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 10,
+                "max": 13,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 12,
+                "max": 16,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 14,
+                "max": 18,
+                "step": 1
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 16,
+                "max": 25,
+                "step": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_arcane_rail_size": {
+      "name": "\u8f68\u9053\u5c3a\u5bf8",
+      "description": "<gray>\u5965\u672f\u8f68\u9053\u7684\u547d\u4e2d\u8303\u56f4\u63d0\u5347<yellow>%.0fpvalue%",
+      "color": 16777215,
+      "typeGroups": [
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_arcane_rail_size",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_arcane_rail_size",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 1,
+                "max": 2,
+                "step": 0.1
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 1.5,
+                "max": 3,
+                "step": 0.1
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 2.5,
+                "max": 4,
+                "step": 0.1
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 3,
+                "max": 5,
+                "step": 0.1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_lightning_strike_delay": {
+      "name": "\u95ea\u7535\u53cc\u51fb",
+      "description": "<#f5ac36>+\u95ea\u7535\u5288\u51fb\u4f1a\u5728\u5288\u51fb\u540e<#fad8a2>%tvalue<#f5ac36>\u79d2\u5728\u5288\u51fb\u4f4d\u7f6e\u518d\u8fdb\u884c\u4e00\u6b21\u5288\u51fb",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b",
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "affixType": "SUFFIX",
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_lightning_strike_delay",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_lightning_strike_delay",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 20,
+                "max": 20,
+                "step": 20
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 20,
+                "max": 40,
+                "step": 20
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 40,
+                "max": 60,
+                "step": 20
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 40,
+                "max": 80,
+                "step": 20
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_lightning_orb_size": {
+      "name": "\u7535\u7403\u81a8\u80c0",
+      "description": "<gray>\u7403\u72b6\u95ea\u7535\u7684\u5927\u5c0f\u63d0\u5347<yellow>%.0fpvalue%",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b",
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_lightning_orb_size",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_lightning_orb_size",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 0.5,
+                "max": 1.0,
+                "step": 0.1
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 0.8,
+                "max": 1.5,
+                "step": 0.1
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 1.2,
+                "max": 2.0,
+                "step": 0.1
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 1.5,
+                "max": 2.5,
+                "step": 0.1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_lightning_orb_kill_cooldown": {
+      "name": "\u7535\u7403\u901f\u51b7",
+      "description": "<gray>\u7403\u72b6\u95ea\u7535\u51fb\u6740\u602a\u7269\u65f6\u4f1a\u4f7f\u6280\u80fd\u51b7\u5374\u51cf\u5c11<yellow>%.0fpvalue%<gray>\u79d2",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b",
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_lightning_orb_kill_cooldown",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_lightning_orb_kill_cooldown",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 0.2,
+                "max": 0.4,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 0.3,
+                "max": 0.5,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 0.4,
+                "max": 0.7,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 0.6,
+                "max": 1.0,
+                "step": 0.01
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_lightning_orb_triple_damage": {
+      "name": "\u4e09\u91cd\u7535\u7403",
+      "description": "<gray>\u7403\u72b6\u95ea\u7535\u4f1a\u6c34\u5e73\u751f\u62103\u4e2a\u5c0f\u7403\uff0c\u6bcf\u4e2a\u5c0f\u7403\u9020\u6210\u7684\u4f24\u5bb3\u964d\u4f4e<yellow>%.0fpvalue%<gray>",
+      "color": 16777215,
+      "typeGroups": [
+        "\u8fdb\u653b",
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_lightning_orb_triple_damage",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_lightning_orb_triple_damage",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": 3,
+              "weight": 100,
+              "value": {
+                "min": 0.2,
+                "max": 0.3,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": 7,
+              "weight": 100,
+              "value": {
+                "min": 0.25,
+                "max": 0.4,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 8,
+              "maxGreedTier": 11,
+              "weight": 100,
+              "value": {
+                "min": 0.35,
+                "max": 0.5,
+                "step": 0.01
+              }
+            },
+            {
+              "minGreedTier": 12,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "min": 0.4,
+                "max": 0.6,
+                "step": 0.01
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_prism_anchor": {
+      "name": "\u68f1\u955c\u951a\u5b9a",
+      "description": "<gray>\u68f1\u955c\u672a\u547d\u4e2d\u751f\u7269\u65f6\u53ef\u4ee5\u9644\u7740\u5728\u65b9\u5757\u4e0a\uff0c\u5e76\u4f7f\u9020\u6210\u7684\u4f24\u5bb3\u964d\u4f4e",
+      "color": 16777215,
+      "typeGroups": [
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 0,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_prism_anchor",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_prism_anchor",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 0,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "flag": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "the_vault:etching_prism_split": {
+      "name": "\u68f1\u955c\u8272\u6563",
+      "description": "<gray>\u68f1\u955c\u4f1a\u5728\u6bcf\u6b21\u8109\u51b2\u65f6\u989d\u5916\u53d1\u5c04\u672a\u6fc0\u6d3b\u7684\u5149\u675f\u56fe\u6848\uff0c\u989d\u5916\u5149\u675f\u9020\u6210\u7684\u4f24\u5bb3\u964d\u4f4e",
+      "color": 16777215,
+      "typeGroups": [
+        "\u5b9e\u7528"
+      ],
+      "minGreedTier": 4,
+      "attributes": [
+        {
+          "attribute": "the_vault:etching_prism_split",
+          "group": "EtchingGroup",
+          "identifier": "the_vault:etching_prism_split",
+          "tags": [],
+          "tiers": [
+            {
+              "minGreedTier": 4,
+              "maxGreedTier": -1,
+              "weight": 100,
+              "value": {
+                "flag": true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "groups": {
+    "\u9632\u5fa1": [
+      "HELMET",
+      "CHESTPLATE",
+      "LEGGINGS",
+      "BOOTS"
+    ],
+    "\u8fdb\u653b": [
+      "SWORD",
+      "AXE"
+    ],
+    "\u5b9e\u7528": [
+      "FOCUS",
+      "WAND",
+      "SHIELD"
+    ],
+    "HELMET": [
+      "HELMET"
+    ],
+    "CHESTPLATE": [
+      "CHESTPLATE"
+    ],
+    "LEGGINGS": [
+      "LEGGINGS"
+    ],
+    "BOOTS": [
+      "BOOTS"
+    ],
+    "SWORD": [
+      "SWORD"
+    ],
+    "AXE": [
+      "AXE"
+    ],
+    "FOCUS": [
+      "FOCUS"
+    ],
+    "WAND": [
+      "WAND"
+    ],
+    "SHIELD": [
+      "SHIELD"
+    ],
+    "MAGNET": [
+      "MAGNET"
+    ],
+    "VOID_STONE": [
+      "VOID_STONE"
+    ],
+    "CHARM": [
+      "CHARM"
+    ]
+  }
+}

@@ -1,0 +1,4728 @@
+{
+  "data": {
+    "Dash_Base": {
+      "description": [
+        {
+          "text": "\u63a8\u52a8\u4f60\u5411\u4f60\u9762\u671d\u7684\u65b9\u5411\u51b2\u523a",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u8ddd\u79bb",
+          "color": "$distance"
+        },
+        {
+          "text": "\uff01\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "distance"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "distance"
+      ]
+    },
+    "Dash_Damage": {
+      "description": [
+        {
+          "text": "\u5c06\u4f60\u7684\u51b2\u523a\u53d8\u4e3a\u5b50\u5f39\uff0c\u5bf9\u6240\u6709\u649e\u5230\u7684\u751f\u7269\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u7269\u7406\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "distance",
+        "damage"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "distance",
+        "damage"
+      ]
+    },
+    "Dash_Warp": {
+      "description": [
+        {
+          "text": "\u53d1\u5c04\u4e00\u652f",
+          "color": "$text"
+        },
+        {
+          "text": "\u9b54\u6cd5\u7bad\u77e2",
+          "color": "$force"
+        },
+        {
+          "text": "\uff0c",
+          "color": "$text"
+        },
+        {
+          "text": "\u547d\u4e2d\u65f6",
+          "color": "$name"
+        },
+        {
+          "text": "\u5c06\u4f60\u4f20\u9001\u5230\u5b83\u7684\u4f4d\u7f6e\u3002\n\u5982\u679c\u547d\u4e2d\u751f\u7269\u6216\u5176\u4ed6\u73a9\u5bb6\uff0c\u4f1a\u4e0e\u5176\u4ea4\u6362\u4f4d\u7f6e\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "force"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "force"
+      ]
+    },
+    "Execute_Base": {
+      "description": [
+        {
+          "text": "\u4e0b\u6b21\u653b\u51fb\u547d\u4e2d\u65f6\uff0c\u5bf9\u76ee\u6807\u9020\u6210\u5176\u751f\u547d\u503c\u4e0a\u9650",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u6bd4\u4f8b",
+          "color": "$damage"
+        },
+        {
+          "text": "\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2297 \u4e0b\u6b21\u653b\u51fb\u89e6\u53d1\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "duration",
+        "damage"
+      ],
+      "next": [
+        "cooldown",
+        "duration",
+        "damage"
+      ]
+    },
+    "Farmer_Base": {
+      "description": [
+        {
+          "text": "\u6bcf\u9694",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$delay"
+        },
+        {
+          "text": "\uff0c\u589e\u52a0",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u4f5c\u7269\u7684\u751f\u957f\u901f\u5ea6\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u6280\u80fd\u4f5c\u7528\u76ee\u6807\uff1a\n",
+          "color": "$text"
+        },
+        {
+          "text": " \u2022 \u79cd\u5b50 \n",
+          "color": "$text"
+        },
+        {
+          "text": " \u2022 \u9a6c\u94c3\u85af \n",
+          "color": "$text"
+        },
+        {
+          "text": " \u2022 \u80e1\u841d\u535c \n",
+          "color": "$text"
+        },
+        {
+          "text": " \u2022 \u751c\u83dc\u6839 \n",
+          "color": "$text"
+        },
+        {
+          "text": " \u2022 \u4e9a\u9ebb\u79cd\u5b50 \n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25cf \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "manaCost",
+        "delay",
+        "rangeHorizontal",
+        "rangeVertical"
+      ],
+      "next": [
+        "manaCost",
+        "delay",
+        "rangeHorizontal",
+        "rangeVertical"
+      ]
+    },
+    "Farmer_Animal": {
+      "description": [
+        {
+          "text": "\u5728\u63d0\u5347\u4f5c\u7269\u7684\u751f\u957f\u901f\u5ea6\u7684\u540c\u65f6\uff0c\u4e5f\u53ef\u4ee5\u4f7f\u9644\u8fd1",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u5c0f\u52a8\u7269",
+          "color": "$baby"
+        },
+        {
+          "text": "\u548c\u5c0f\u6751\u6c11\u6bcf\u9694",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$delay"
+        },
+        {
+          "text": "\u6709",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u6982\u7387",
+          "color": "$chance"
+        },
+        {
+          "text": "\u957f\u5927\u3002\n\n\u6280\u80fd\u4f5c\u7528\u76ee\u6807\uff1a\n \u2022 \u79cd\u5b50\n \u2022 \u9a6c\u94c3\u85af\n \u2022 \u80e1\u841d\u535c\n \u2022 \u751c\u83dc\u6839\n \u2022 \u4e9a\u9ebb\u79cd\u5b50\n \u2022 \u5c0f\u52a8\u7269\n \u2022 \u5c0f\u6751\u6c11\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25cf \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "manaCost",
+        "delay",
+        "rangeHorizontal",
+        "rangeVertical",
+        "chance"
+      ],
+      "next": [
+        "manaCost",
+        "delay",
+        "rangeHorizontal",
+        "rangeVertical",
+        "chance"
+      ]
+    },
+    "Farmer_Cactus": {
+      "description": [
+        {
+          "text": "\u6bcf\u9694",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$delay"
+        },
+        {
+          "text": "\uff0c\u589e\u52a0",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u4f5c\u7269\u7684\u751f\u957f\u901f\u5ea6\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u9664\u6240\u6709\u57fa\u7840\u6280\u80fd\u7684\u4f5c\u7528\u76ee\u6807\u5916\uff0c\u8fd8\u5305\u62ec\uff1a\n",
+          "color": "$text"
+        },
+        {
+          "text": " \u2022 \u4ed9\u4eba\u638c \n",
+          "color": "$text"
+        },
+        {
+          "text": " \u2022 \u7518\u8517 \n",
+          "color": "$text"
+        },
+        {
+          "text": " \u2022 \u4e0b\u754c\u75a3 \n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25cf \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "manaCost",
+        "delay",
+        "rangeHorizontal",
+        "rangeVertical"
+      ],
+      "next": [
+        "manaCost",
+        "delay",
+        "rangeHorizontal",
+        "rangeVertical"
+      ]
+    },
+    "Farmer_Melon": {
+      "description": [
+        {
+          "text": "\u6bcf\u9694",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$delay"
+        },
+        {
+          "text": "\uff0c\u589e\u52a0",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u4f5c\u7269\u7684\u751f\u957f\u901f\u5ea6\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u9664\u6240\u6709\u57fa\u7840\u6280\u80fd\u7684\u4f5c\u7528\u76ee\u6807\u5916\uff0c\u8fd8\u5305\u62ec\uff1a\n",
+          "color": "$text"
+        },
+        {
+          "text": " \u2022 \u897f\u74dc \n",
+          "color": "$text"
+        },
+        {
+          "text": " \u2022 \u5357\u74dc \n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25cf \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "manaCost",
+        "delay",
+        "rangeHorizontal",
+        "rangeVertical"
+      ],
+      "next": [
+        "manaCost",
+        "delay",
+        "rangeHorizontal",
+        "rangeVertical"
+      ]
+    },
+    "Ghost_Walk_Base": {
+      "description": [
+        {
+          "text": "\u4f7f\u4f60\u9690\u8eab",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\u3002\u6280\u80fd\u671f\u95f4\u8fdb\u884c\u653b\u51fb\u5c06\u89e3\u9664\u6548\u679c\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "adjustedDuration"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "adjustedDuration"
+      ]
+    },
+    "Ghost_Walk_Spirit": {
+      "description": [
+        {
+          "text": "\u4f7f\u4f60\u9690\u8eab",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\u7075\u9b42\u6b65",
+          "color": "$name"
+        },
+        {
+          "text": "\u671f\u95f4\u8fdb\u884c\u653b\u51fb\u3001\u7834\u574f\u65b9\u5757\u6216\u6253\u5f00\u5bb9\u5668\u90fd\u5c06\u89e3\u9664\u6548\u679c\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "adjustedDuration"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "adjustedDuration"
+      ]
+    },
+    "Heal_Base": {
+      "description": [
+        {
+          "text": "\u4e3a\u81ea\u5df1\u63d0\u4f9b",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cbb\u7597",
+          "color": "$heal"
+        },
+        {
+          "text": "\uff0c\u6062\u590d\u751f\u547d\u503c\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "heal"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "heal"
+      ]
+    },
+    "Heal_Cleanse": {
+      "description": [
+        {
+          "text": "\u4e0d\u518d\u63d0\u4f9b\u6cbb\u7597\uff0c\u6539\u4e3a\u51c0\u5316\u62e5\u6709\u7684\u6240\u6709\u8d1f\u9762\u6548\u679c\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Heal_Group": {
+      "description": [
+        {
+          "text": "\u6cbb\u7597\u6548\u679c\u53ef\u4ee5\u5f71\u54cd\u5bfb\u5b9d\u5c0f\u961f\u4e2d\u7684\u6240\u6709\u6210\u5458\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$heal"
+        },
+        {
+          "text": "\u7684\u5c0f\u961f\u6210\u5458\u83b7\u5f97\u6ee1\u989d",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cbb\u7597",
+          "color": "$heal"
+        },
+        {
+          "text": "\uff0c\u8303\u56f4\u5916\u7684\u5176\u4ed6\u5c0f\u961f\u6210\u5458\u83b7\u5f97\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cbb\u7597\u91cf",
+          "color": "$heal"
+        },
+        {
+          "text": "\u51cf\u534a\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "heal",
+        "adjustedRadius"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "heal",
+        "adjustedRadius"
+      ]
+    },
+    "Hunter_Base": {
+      "description": [
+        {
+          "text": "\u5728",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u65f6\u95f4\u5185",
+          "color": "$duration"
+        },
+        {
+          "text": "\uff0c\u9ad8\u4eae\u663e\u793a",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u6240\u6709\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u5174\u8da3\u70b9",
+          "color": "$qhighlight"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u5174\u8da3\u70b9\u5305\u62ec",
+          "color": "$text"
+        },
+        {
+          "text": "\u6240\u6709\u5b9d\u7bb1",
+          "color": "$chance"
+        },
+        {
+          "text": "\u3001",
+          "color": "$text"
+        },
+        {
+          "text": "\u94b1\u5e01",
+          "color": "$chance"
+        },
+        {
+          "text": "\u3001",
+          "color": "$text"
+        },
+        {
+          "text": "\u795e\u4e4b\u796d\u575b",
+          "color": "$chance"
+        },
+        {
+          "text": "\u548c",
+          "color": "$text"
+        },
+        {
+          "text": "\u5b9d\u5e93\u76ee\u6807\u70b9",
+          "color": "$chance"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "adjustedDuration",
+        "adjustedRadius"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "adjustedDuration",
+        "adjustedRadius"
+      ]
+    },
+    "Hunter_Blocks": {
+      "description": [
+        {
+          "text": "\u6280\u80fd\u6548\u679c\u53d8\u4e3a\u5728",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u65f6\u95f4\u5185",
+          "color": "$duration"
+        },
+        {
+          "text": "\u9ad8\u4eae\u663e\u793a",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u6240\u6709\u7684\u5b9d\u5e93\u76ee\u6807\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "duration",
+        "radius"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "duration",
+        "radius"
+      ]
+    },
+    "Hunter_Wooden": {
+      "description": [
+        {
+          "text": "\u6280\u80fd\u6548\u679c\u53d8\u4e3a\u5728",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u65f6\u95f4\u5185",
+          "color": "$duration"
+        },
+        {
+          "text": "\u9ad8\u4eae\u663e\u793a",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u6240\u6709\u7684\u6728\u5236\u5b9d\u7bb1\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "duration",
+        "radius"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "duration",
+        "radius"
+      ]
+    },
+    "Hunter_Gilded": {
+      "description": [
+        {
+          "text": "\u6280\u80fd\u6548\u679c\u53d8\u4e3a\u5728",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u65f6\u95f4\u5185",
+          "color": "$duration"
+        },
+        {
+          "text": "\u9ad8\u4eae\u663e\u793a",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u6240\u6709\u7684\u9540\u91d1\u5b9d\u7bb1\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "duration",
+        "radius"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "duration",
+        "radius"
+      ]
+    },
+    "Hunter_Living": {
+      "description": [
+        {
+          "text": "\u6280\u80fd\u6548\u679c\u53d8\u4e3a\u5728",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u65f6\u95f4\u5185",
+          "color": "$duration"
+        },
+        {
+          "text": "\u9ad8\u4eae\u663e\u793a",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u6240\u6709\u7684\u6d3b\u5316\u5b9d\u7bb1\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "duration",
+        "radius"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "duration",
+        "radius"
+      ]
+    },
+    "Hunter_Ornate": {
+      "description": [
+        {
+          "text": "\u6280\u80fd\u6548\u679c\u53d8\u4e3a\u5728",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u65f6\u95f4\u5185",
+          "color": "$duration"
+        },
+        {
+          "text": "\u9ad8\u4eae\u663e\u793a",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u6240\u6709\u7684\u534e\u4e3d\u5b9d\u7bb1\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "duration",
+        "radius"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "duration",
+        "radius"
+      ]
+    },
+    "Hunter_Coins": {
+      "description": [
+        {
+          "text": "\u6280\u80fd\u6548\u679c\u53d8\u4e3a\u5728",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u65f6\u95f4\u5185",
+          "color": "$duration"
+        },
+        {
+          "text": "\u9ad8\u4eae\u663e\u793a",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u6240\u6709\u7684\u94b1\u5e01\u5806\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "duration",
+        "radius"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "duration",
+        "radius"
+      ]
+    },
+    "Shield_Bash": {
+      "description": [
+        {
+          "text": "\u5411\u524d\u65b9\u51b2\u523a\u5e76\u7528\u76fe\u724c\u649e\u51fb\u602a\u7269\uff0c\u5bf9\u524d\u65b9",
+          "color": "$text"
+        },
+        {
+          "text": "\u9525\u5f62\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u602a\u7269\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u653b\u51fb\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\u3002\u51fb\u4e2d\u602a\u7269\u540c\u65f6\u4f1a\u5c06\u5176",
+          "color": "$text"
+        },
+        {
+          "text": "\u51fb\u9000",
+          "color": "$knockback"
+        },
+        {
+          "text": "\uff0c\u5e76\u6709\u4e00\u5b9a\u6982\u7387\u5c06\u5176",
+          "color": "$text"
+        },
+        {
+          "text": "\u51fb\u6655",
+          "color": "$stun"
+        },
+        {
+          "text": "\uff0c\u51fb\u9000\u8ddd\u79bb\u4e0e\u51fb\u6655\u6982\u7387\u53d7",
+          "color": "$text"
+        },
+        {
+          "text": "\u683c\u6321\u6982\u7387",
+          "color": "$chance"
+        },
+        {
+          "text": "\u5f71\u54cd\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u6bcf\u51fb\u4e2d1\u53ea\u602a\u7269\uff0c\u51cf\u5c11",
+          "color": "$text"
+        },
+        {
+          "text": "1\u79d2\u51b7\u5374\u65f6\u95f4",
+          "color": "$cooldown"
+        },
+        {
+          "text": "\uff0c\u6700\u591a\u51cf\u5c11\u603b\u51b7\u5374\u65f6\u95f4\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "80%",
+          "color": "$chance"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "manaCost",
+        "cooldown",
+        "damage",
+        "adjustedRadius",
+        "knockback",
+        "stunChance"
+      ],
+      "next": [
+        "manaCost",
+        "cooldown",
+        "damage",
+        "adjustedRadius",
+        "knockback",
+        "stunChance"
+      ]
+    },
+    "Mana_Shield_Base": {
+      "description": [
+        {
+          "text": "\u83b7\u5f97\u4e00\u4e2a\u6301\u7eed",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u4fdd\u62a4\u5c4f\u969c",
+          "color": "$absorb"
+        },
+        {
+          "text": "\uff0c\u5438\u6536\u6240\u6709\u53d7\u5230\u7684\u4f24\u5bb3\uff0c\u76f4\u5230\u62a4\u76fe\u8017\u5c3d\u6216\u65f6\u95f4\u7ed3\u675f\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "manaCost",
+        "cooldown",
+        "healthPoints"
+      ],
+      "next": [
+        "manaCost",
+        "cooldown",
+        "healthPoints"
+      ]
+    },
+    "Mana_Barrier": {
+      "description": [
+        {
+          "text": "\u5728\u4f60\u5468\u56f4\u751f\u6210\u4e00\u4e2a\u795e\u5947\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u9b54\u529b\u7acb\u65b9\u4f53",
+          "color": "$absorb"
+        },
+        {
+          "text": "\uff0c\u6301\u7eed",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\u3002\u751f\u7269\u65e0\u6cd5\u901a\u8fc7\u8fd9\u4e9b",
+          "color": "$text"
+        },
+        {
+          "text": "\u65b9\u5757",
+          "color": "$absorb"
+        },
+        {
+          "text": "\uff0c\u4f46\u4f60\u53ef\u4ee5\uff01",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "duration",
+        "manaCost",
+        "cooldown",
+        "adjustedRadius"
+      ],
+      "next": [
+        "duration",
+        "manaCost",
+        "cooldown",
+        "adjustedRadius"
+      ]
+    },
+    "Retribution_Base": {
+      "description": [
+        {
+          "text": "\u63d0\u4f9b\u4e00\u4e2a\u9b54\u529b\u62a4\u76fe\uff0c\u80fd\u591f",
+          "color": "$text"
+        },
+        {
+          "text": "\u6d88\u8017\u9b54\u529b",
+          "color": "$manaCost"
+        },
+        {
+          "text": "\u6765",
+          "color": "$text"
+        },
+        {
+          "text": "\u5438\u6536\u53d7\u5230\u7684\u4f24\u5bb3",
+          "color": "$absorb"
+        },
+        {
+          "text": "\u7684\u4e00\u5b9a\u6bd4\u4f8b\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u5438\u6536\u4f24\u5bb3\u540e\uff0c\u4e0b\u6b21\u653b\u51fb\u4f1a\u57fa\u4e8e",
+          "color": "$text"
+        },
+        {
+          "text": "\u5438\u6536\u7684\u4f24\u5bb3\u7684\u4e00\u5b9a\u6bd4\u4f8b",
+          "color": "$damage"
+        },
+        {
+          "text": "\uff0c\u5bf9",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u6240\u6709\u602a\u7269\u9020\u6210\u989d\u5916\u4f24\u5bb3\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25d0 \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "thornsDamage",
+        "manaCost",
+        "cooldown"
+      ],
+      "next": [
+        "thornsDamage",
+        "manaCost",
+        "cooldown"
+      ]
+    },
+    "Mana_Shield_Retribution": {
+      "description": [
+        {
+          "text": "\u83b7\u5f97\u5f3a\u5927\u7684\u590d\u4ec7\u5149\u73af\u3002\u6fc0\u6d3b\u540e\uff0c\u53d7\u5230\u7684\u6240\u6709\u6765\u81ea\u751f\u7269\u7684\u4f24\u5bb3\u90fd\u4f1a\u4e3a\u4f60\u7d2f\u79ef",
+          "color": "$text"
+        },
+        {
+          "text": "\u590d\u4ec7\u5c42\u6570",
+          "color": "$qhighlight"
+        },
+        {
+          "text": "\uff0c\u5149\u73af",
+          "color": "$text"
+        },
+        {
+          "text": "\u7ed3\u675f",
+          "color": "$duration"
+        },
+        {
+          "text": "\u65f6\uff0c\u4f1a\u65bd\u653e\u4e00\u6b21\u5f3a\u529b\u7684\u7206\u70b8\uff0c\u6839\u636e\u7d2f\u79ef\u7684\u5c42\u6570\uff0c\u5bf9\u9644\u8fd1",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u7403\u5f62\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u6240\u6709\u602a\u7269\u9020\u6210",
+          "color": "$text"
+        },
+        {
+          "text": "\u8346\u68d8\u4f24\u5bb3",
+          "color": "$thornsDamage"
+        },
+        {
+          "text": "\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "thornsDamage",
+        "adjustedRadius",
+        "manaCost",
+        "cooldown"
+      ],
+      "next": [
+        "thornsDamage",
+        "adjustedRadius",
+        "manaCost",
+        "cooldown"
+      ]
+    },
+    "Mana_Shield_Implode": {
+      "description": [
+        {
+          "text": "\u6d88\u8017\u6240\u6709\u9b54\u529b\u503c\uff0c\u5e76\u57fa\u4e8e\u6d88\u8017\u9b54\u529b\u503c\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u6bd4\u4f8b",
+          "color": "$damage"
+        },
+        {
+          "text": "\uff0c\u5bf9",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u6240\u6709\u654c\u4eba\u9020\u6210\u4f24\u5bb3\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "manaDamage",
+        "adjustedRadius",
+        "cooldown"
+      ],
+      "next": [
+        "manaDamage",
+        "adjustedRadius",
+        "cooldown"
+      ]
+    },
+    "Mega_Jump_Base": {
+      "description": [
+        {
+          "text": "\u63d0\u4f9b\u5728\u7a7a\u4e2d\u8fdb\u884c",
+          "color": "$text"
+        },
+        {
+          "text": "\u8d85\u7ea7\u8df3",
+          "color": "$range"
+        },
+        {
+          "text": "\u7684\u80fd\u529b\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "rangeVertical"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "rangeVertical"
+      ]
+    },
+    "Mega_Jump_Break_Down": {
+      "description": [
+        {
+          "text": "\u5411\u4e0b\u6316\u6398",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8ddd\u79bb",
+          "color": "$radius"
+        },
+        {
+          "text": "\uff0c\u5e76\u7834\u574f\u9014\u4e2d\u7684\u6240\u6709\u65b9\u5757\u3002\n\n\u6b64\u6280\u80fd\u53ea\u4f1a\u5728\u5b9d\u5e93\u5185\u751f\u6548\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "rangeVertical",
+        "radius"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "rangeVertical",
+        "radius"
+      ]
+    },
+    "Mega_Jump_Break_Up": {
+      "description": [
+        {
+          "text": "\u5411\u4e0a\u8df3\u8d77\uff0c\u5e76\u7834\u574f\u9014\u4e2d\u7684\u6240\u6709\u65b9\u5757\u3002\n\n\u6b64\u6280\u80fd\u53ea\u4f1a\u5728\u5b9d\u5e93\u5185\u751f\u6548\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "rangeVertical"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "rangeVertical"
+      ]
+    },
+    "Nova_Base": {
+      "description": [
+        {
+          "text": "\u5bf9\u81ea\u8eab\u9644\u8fd1\u4e00\u5b9a",
+          "color": "$text"
+        },
+        {
+          "text": "\u8303\u56f4",
+          "color": "$radius"
+        },
+        {
+          "text": "\u5185\u7684\u76ee\u6807\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u3002\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u65b0\u661f\u7206\u53d1",
+          "color": "$name"
+        },
+        {
+          "text": "\u7684\u4f24\u5bb3\u4f1a\u968f\u76ee\u6807\u8ddd\u79bb\u7684\u589e\u52a0\u800c\u964d\u4f4e\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "adjustedRadius",
+        "ability_power"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "adjustedRadius",
+        "ability_power"
+      ]
+    },
+    "Nova_Dot": {
+      "description": [
+        {
+          "text": "\u6280\u80fd\u53d8\u4e3a\u901a\u8fc7",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e2d\u6bd2\u6548\u679c",
+          "color": "$poison"
+        },
+        {
+          "text": "\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u3002\u4f24\u5bb3\u4f1a\u5728",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4\u5185",
+          "color": "$duration"
+        },
+        {
+          "text": "\u9010\u6e10\u7ed3\u7b97\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "adjustedRadius",
+        "ability_power",
+        "adjustedDuration"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "adjustedRadius",
+        "ability_power",
+        "adjustedDuration"
+      ]
+    },
+    "Nova_Slow": {
+      "description": [
+        {
+          "text": "\u6280\u80fd\u53d8\u4e3a\u51bb\u7ed3",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u6240\u6709\u602a\u7269\u3002\u602a\u7269\u5c06\u6301\u7eed\u51bb\u7ed3",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\uff0c\u5e76\u83b7\u5f97",
+          "color": "$text"
+        },
+        {
+          "text": "\u201c\u4f4e\u6e29\u201d",
+          "color": "$slowness"
+        },
+        {
+          "text": "\uff0c\u9020\u6210\u6301\u7eed\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u971c\u51bb",
+          "color": "$chilled"
+        },
+        {
+          "text": "\u6548\u679c\u5e76\u6bcf3\u79d2\u9020\u6210\u4e00\u6b21\u4f24\u5bb3\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "adjustedRadius",
+        "adjustedDuration"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "adjustedRadius",
+        "adjustedDuration"
+      ]
+    },
+    "Rampage_Base": {
+      "description": [
+        {
+          "text": "\u8fdb\u5165\u6218\u6597\u72c2\u70ed\u72b6\u6001\uff0c\u63d0\u5347",
+          "color": "$text"
+        },
+        {
+          "text": "\u76f4\u63a5\u8fd1\u6218\u653b\u51fb",
+          "color": "$damage"
+        },
+        {
+          "text": "\u9020\u6210\u7684\u4f24\u5bb3\u3002\u201c\u76f4\u63a5\u8fd1\u6218\u653b\u51fb\u201d\u6307\u6ee1\u653b\u51fb\u51b7\u5374\u3001\u975e\u66b4\u51fb\u7684\u76f4\u63a5\u8fd1\u6218\u653b\u51fb\u547d\u4e2d\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25d0 \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "damage",
+        "manaCostPerSecond",
+        "cooldown"
+      ],
+      "next": [
+        "damage",
+        "manaCostPerSecond",
+        "cooldown"
+      ]
+    },
+    "Rampage_Chain": {
+      "description": [
+        {
+          "text": "\u8fdb\u5165\u8fde\u9501\u72c2\u70ed\u72b6\u6001\uff0c\u4f7f\u76f4\u63a5\u8fd1\u6218\u653b\u51fb\u83b7\u5f97",
+          "color": "$text"
+        },
+        {
+          "text": "\u8fde\u9501\u6548\u679c",
+          "color": "$chains"
+        },
+        {
+          "text": "\uff0c\u53ef\u4ee5\u547d\u4e2d\u989d\u5916\u7684\u76ee\u6807\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25d0 \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCostPerSecond",
+        "chains"
+      ],
+      "next": [
+        "cooldown",
+        "manaCostPerSecond",
+        "chains"
+      ]
+    },
+    "Rampage_Leech": {
+      "description": [
+        {
+          "text": "\u8fdb\u5165\u5438\u8840\u72c2\u70ed\u72b6\u6001\uff0c\u4f7f\u76f4\u63a5\u8fd1\u6218\u653b\u51fb\u83b7\u5f97",
+          "color": "$text"
+        },
+        {
+          "text": "\u5438\u8840\u6548\u679c",
+          "color": "$leech"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25d0 \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCostPerSecond",
+        "leech"
+      ],
+      "next": [
+        "cooldown",
+        "manaCostPerSecond",
+        "leech"
+      ]
+    },
+    "Earthquake_Landmine": {
+      "description": [
+        {
+          "text": "\u5728\u4f60\u7684\u4f4d\u7f6e\u751f\u6210\u4e00\u4e2a",
+          "color": "$text"
+        },
+        {
+          "text": "\u5730\u96f7",
+          "color": "$name"
+        },
+        {
+          "text": "\u3002\u5f53\u5730\u96f7\u88ab\u4efb\u610f\u751f\u7269\u8e29\u5230\u65f6\u4f1a\u7206\u70b8\uff0c\u57fa\u4e8e\u4f60\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u653b\u51fb\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\u5bf9",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u76ee\u6807\u9020\u6210\u4f24\u5bb3\uff0c\u7834\u574f\u65b9\u5757\u5e76",
+          "color": "$text"
+        },
+        {
+          "text": "\u51fb\u9000",
+          "color": "$knockback"
+        },
+        {
+          "text": "\u6240\u6709\u654c\u5bf9\u751f\u7269\u3002\n\n\u5730\u96f7\u7206\u70b8\u4e5f\u4f1a\u5f15\u7206\u8303\u56f4\u5185\u7684\u5176\u4ed6\u5730\u96f7\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "damage",
+        "adjustedRadius",
+        "knockback"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "damage",
+        "adjustedRadius",
+        "knockback"
+      ]
+    },
+    "Stonefall_Base": {
+      "description": [
+        {
+          "text": "",
+          "color": "$text"
+        },
+        {
+          "text": "\u6fc0\u6d3b\u671f\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\uff0c\u51cf\u5c11\u843d\u5730\u65f6\u53d7\u5230\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6454\u843d\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\uff0c\u5e76\u5728\u843d\u5730\u65f6",
+          "color": "$text"
+        },
+        {
+          "text": "\u51fb\u9000",
+          "color": "$radius"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185\u7684\u602a\u7269\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "damageReduction",
+        "adjustedRadius",
+        "knockback",
+        "adjustedDuration"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "damageReduction",
+        "adjustedRadius",
+        "knockback",
+        "adjustedDuration"
+      ]
+    },
+    "Stonefall_Cold": {
+      "description": [
+        {
+          "text": "",
+          "color": "$text"
+        },
+        {
+          "text": "\u6fc0\u6d3b\u671f\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\uff0c\u51cf\u5c11\u843d\u5730\u65f6\u53d7\u5230\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6454\u843d\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\uff0c\u5e76\u5728\u843d\u5730\u65f6",
+          "color": "$text"
+        },
+        {
+          "text": "\u971c\u51bb",
+          "color": "$chilled"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185\u7684\u602a\u7269\uff0c\u5e76\u4e3a\u5176\u521b\u9020",
+          "color": "$text"
+        },
+        {
+          "text": "\u51b0\u7262",
+          "color": "$maxGlacialPrison"
+        },
+        {
+          "text": "\u3002\n\u6548\u679c\u8303\u56f4\u53d7\u5760\u843d\u9ad8\u5ea6\u5f71\u54cd\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "damageReduction",
+        "maxGlacialPrison",
+        "adjustedRadius",
+        "freezeDuration",
+        "adjustedDuration",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "damageReduction",
+        "maxGlacialPrison",
+        "adjustedRadius",
+        "freezeDuration",
+        "adjustedDuration",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Stonefall_Snow": {
+      "description": [
+        {
+          "text": "",
+          "color": "$text"
+        },
+        {
+          "text": "\u6fc0\u6d3b\u671f\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\uff0c\u51cf\u5c11\u843d\u5730\u65f6\u53d7\u5230\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6454\u843d\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\uff0c\u5e76\u5728\u843d\u5730\u65f6\u5bf9\u9644\u8fd1\u7684\u602a\u7269\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u3002\n\u4f24\u5bb3\u8303\u56f4\u968f\u5760\u843d\u9ad8\u5ea6\u589e\u52a0",
+          "color": "$text"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "damageReduction",
+        "adjustedRadius",
+        "ability_power",
+        "adjustedDuration"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "damageReduction",
+        "adjustedRadius",
+        "ability_power",
+        "adjustedDuration"
+      ]
+    },
+    "Summon_Eternal_Base": {
+      "description": [
+        {
+          "text": "\u53ec\u5524\u4f60\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6c38\u751f\u8005",
+          "color": "$eternals"
+        },
+        {
+          "text": "\uff01\u6b64\u6280\u80fd\u9700\u8981\u4f60\u5728\u4f4e\u6e29\u7bb1\u91cc\u81f3\u5c11\u62e5\u6709\u4e00\u4e2a\u6d3b\u7740\u7684\u6c38\u751f\u8005\uff0c\u5426\u5219\u6b64\u6280\u80fd\u5c06\u6beb\u65e0\u4f5c\u7528\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "eternals",
+        "duration"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "eternals",
+        "duration"
+      ]
+    },
+    "Empower_Base": {
+      "description": [
+        {
+          "text": "\u83b7\u5f97",
+          "color": "$text"
+        },
+        {
+          "text": "\u79fb\u52a8\u901f\u5ea6",
+          "color": "$speed"
+        },
+        {
+          "text": "\u5149\u73af\u3002\u6fc0\u6d3b\u65f6\u4f1a\u5f71\u54cd",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u6240\u6709\u73a9\u5bb6\u3002\n\n\u25d0 \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "speed",
+        "adjustedRadius",
+        "cooldown",
+        "manaCostPerSecond"
+      ],
+      "next": [
+        "speed",
+        "adjustedRadius",
+        "cooldown",
+        "manaCostPerSecond"
+      ]
+    },
+    "Empower_Ice_Armor": {
+      "description": [
+        {
+          "text": "\u7528\u51b0\u971c\u7684\u5c4f\u969c\u5305\u88f9\u81ea\u5df1\uff0c\u6fc0\u6d3b\u540e",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\u5185",
+          "color": "$text"
+        },
+        {
+          "text": "\u971c\u51bb",
+          "color": "$chilled"
+        },
+        {
+          "text": "\u6240\u6709\u653b\u51fb\u4f60\u7684\u602a\u7269\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25d0 \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "chilled",
+        "adjustedDuration",
+        "manaCostPerSecond",
+        "cooldown"
+      ],
+      "next": [
+        "chilled",
+        "adjustedDuration",
+        "manaCostPerSecond",
+        "cooldown"
+      ]
+    },
+    "Empower_Slowness_Aura": {
+      "description": [
+        {
+          "text": "\u83b7\u5f97\u65e0\u5e8f\u5149\u73af\uff0c\u6fc0\u6d3b\u540e",
+          "color": "$text"
+        },
+        {
+          "text": "\u51cf\u901f",
+          "color": "$slowness"
+        },
+        {
+          "text": "",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u6240\u6709\u602a\u7269\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25d0 \u5207\u6362\u578b\u6280\u80fd",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "adjustedRadius",
+        "manaCostPerSecond",
+        "cooldown"
+      ],
+      "next": [
+        "adjustedRadius",
+        "manaCostPerSecond",
+        "cooldown"
+      ]
+    },
+    "Taunt_Base": {
+      "description": [
+        {
+          "text": "\u5632\u8bbd\u4f60\u5468\u56f4",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u602a\u7269\uff0c\u5438\u5f15\u653b\u51fb\u4ec7\u6068\uff0c\u5e76\u4e3a\u5176\u65bd\u52a0",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6613\u4f24",
+          "color": "$vulnerable"
+        },
+        {
+          "text": "\u6548\u679c\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u6bcf\u7ea7",
+          "color": "$text"
+        },
+        {
+          "text": "\u6613\u4f24",
+          "color": "$vulnerable"
+        },
+        {
+          "text": "\u4f7f\u602a\u7269\u53d7\u5230\u7684\u4f24\u5bb3\u589e\u52a0",
+          "color": "$text"
+        },
+        {
+          "text": "10%",
+          "color": "$vulnerable"
+        },
+        {
+          "text": "\u3002\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "adjustedRadius",
+        "adjustedDuration",
+        "vulnerable"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "adjustedRadius",
+        "adjustedDuration",
+        "vulnerable"
+      ]
+    },
+    "Taunt_Repel": {
+      "description": [
+        {
+          "text": "\u6050\u60e7\u4f60\u5468\u56f4",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u602a\u7269\u3002\u88ab\u6050\u60e7\u7684\u602a\u7269\u4f1a\u8fdc\u79bb\u5e76\u62d2\u7edd\u653b\u51fb\u4f60\uff0c\u6301\u7eed",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "adjustedRadius",
+        "adjustedDuration",
+        "distance"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "adjustedRadius",
+        "adjustedDuration",
+        "distance"
+      ]
+    },
+    "Taunt_Decoy": {
+      "description": [
+        {
+          "text": "\u53d1\u5c04\u4e00\u4e2a\u9b54\u6cd5\u8bf1\u9975\uff0c\u843d\u5730\u65f6\u751f\u6210\u4e00\u4e2a\u4f60\u7684\u5047\u4eba\uff0c\u6301\u7eed\u5632\u8bbd\u5468\u56f4",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u602a\u7269\uff0c\u6301\u7eed",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\u3002\u8bf1\u9975\u6d88\u5931\u65f6\u6280\u80fd\u624d\u4f1a\u5f00\u59cb\u51b7\u5374\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "adjustedRadius",
+        "adjustedDuration",
+        "throwPower"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "adjustedRadius",
+        "adjustedDuration",
+        "throwPower"
+      ]
+    },
+    "Taunt_Charm": {
+      "description": [
+        {
+          "text": "\u9b45\u60d1\u4f60\u5468\u56f4",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4",
+          "color": "$radius"
+        },
+        {
+          "text": "\u5185\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u968f\u673a\u602a\u7269",
+          "color": "$maxTargets"
+        },
+        {
+          "text": "\u4e3a\u4f60\u800c\u6218\u3002\u88ab\u9b45\u60d1\u7684\u602a\u7269\u4f1a\u57fa\u4e8e\u4f60\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u653b\u51fb\u4f24\u5bb3\u7684\u4e00\u5b9a\u6bd4\u4f8b",
+          "color": "$damage"
+        },
+        {
+          "text": "\u9020\u6210\u4f24\u5bb3\uff0c\u5e76\u4e14\u80fd\u89e6\u53d1\u4f60\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u547d\u4e2d\u6548\u679c",
+          "color": "$name"
+        },
+        {
+          "text": "\u3002\u88ab\u9b45\u60d1\u7684\u602a\u7269\u540c\u65f6\u4f1a\u83b7\u5f97",
+          "color": "$text"
+        },
+        {
+          "text": "\u79fb\u52a8\u901f\u5ea6\u63d0\u5347",
+          "color": "$speed"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "adjustedRadius",
+        "adjustedDuration",
+        "maxTargets",
+        "damage",
+        "speed"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "adjustedRadius",
+        "adjustedDuration",
+        "maxTargets",
+        "damage",
+        "speed"
+      ]
+    },
+    "Totem_Base": {
+      "description": [
+        {
+          "text": "\u5728\u9644\u8fd1\u521b\u9020\u4e00\u4e2a\u56fe\u817e\uff0c\u6bcf\u79d2\u4e3a",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$range"
+        },
+        {
+          "text": "\u7684\u6240\u6709\u73a9\u5bb6",
+          "color": "$text"
+        },
+        {
+          "text": "\u6062\u590d\u751f\u547d\u503c",
+          "color": "$heal"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "adjustedDuration",
+        "adjustedRadius",
+        "heal"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "adjustedDuration",
+        "adjustedRadius",
+        "heal"
+      ]
+    },
+    "Totem_Mana_Regen": {
+      "description": [
+        {
+          "text": "\u5728\u9644\u8fd1\u521b\u9020\u4e00\u4e2a\u56fe\u817e\uff0c\u6bcf\u79d2\u4e3a",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$range"
+        },
+        {
+          "text": "\u7684\u6240\u6709\u73a9\u5bb6\u6062\u590d",
+          "color": "$text"
+        },
+        {
+          "text": "\u9b54\u529b\u503c",
+          "color": "$manaCost"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "adjustedDuration",
+        "adjustedRadius",
+        "manaRegen"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "adjustedDuration",
+        "adjustedRadius",
+        "manaRegen"
+      ]
+    },
+    "Totem_Mob_Damage": {
+      "description": [
+        {
+          "text": "\u5728\u9644\u8fd1\u521b\u9020\u4e00\u4e2a\u56fe\u817e\uff0c\u6bcf\u9694",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$delay"
+        },
+        {
+          "text": "\u5bf9",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$range"
+        },
+        {
+          "text": "\u7684\u6240\u6709\u602a\u7269\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u3002\u6b64\u4f24\u5bb3\u4f1a\u9644\u52a0\u4f60\u62e5\u6709\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u547d\u4e2d\u6548\u679c",
+          "color": "$name"
+        },
+        {
+          "text": "\uff0c\u5e78\u8fd0\u4e00\u51fb\u9664\u5916",
+          "color": "$text"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "adjustedDuration",
+        "adjustedRadius",
+        "ability_power",
+        "delay"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "adjustedDuration",
+        "adjustedRadius",
+        "ability_power",
+        "delay"
+      ]
+    },
+    "Totem_Player_Damage": {
+      "description": [
+        {
+          "text": "\u5728\u9644\u8fd1\u521b\u9020\u4e00\u4e2a\u56fe\u817e\uff0c\u4e3a",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$range"
+        },
+        {
+          "text": "\u7684\u6240\u6709\u73a9\u5bb6\u63d0\u5347",
+          "color": "$text"
+        },
+        {
+          "text": "\u7269\u7406\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "adjustedDuration",
+        "adjustedRadius",
+        "damage"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "adjustedDuration",
+        "adjustedRadius",
+        "damage"
+      ]
+    },
+    "Vein_Miner_Base": {
+      "description": [
+        {
+          "text": "\u53ef\u4ee5\u540c\u65f6\u6316\u6398",
+          "color": "$text"
+        },
+        {
+          "text": "\u591a\u4e2a\u540c\u79cd\u65b9\u5757",
+          "color": "$blocks"
+        },
+        {
+          "text": "\uff01\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25cf \u957f\u6309\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "blocks"
+      ],
+      "next": [
+        "blocks"
+      ]
+    },
+    "Vein_Miner_Durability": {
+      "description": [
+        {
+          "text": "\u540c\u65f6\u6316\u6398",
+          "color": "$text"
+        },
+        {
+          "text": "\u591a\u4e2a\u540c\u79cd\u65b9\u5757",
+          "color": "$blocks"
+        },
+        {
+          "text": "\uff0c\u5e76\u5728\u672c\u6b21\u6316\u6398\u671f\u95f4\u63d0\u5347\u6316\u6398\u5de5\u5177\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u8010\u4e45\u7b49\u7ea7",
+          "color": "$unbreaking"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25cf \u957f\u6309\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "blocks",
+        "unbreaking"
+      ],
+      "next": [
+        "blocks",
+        "unbreaking"
+      ]
+    },
+    "Vein_Miner_Fortune": {
+      "description": [
+        {
+          "text": "\u540c\u65f6\u6316\u6398",
+          "color": "$text"
+        },
+        {
+          "text": "\u591a\u4e2a\u540c\u79cd\u65b9\u5757",
+          "color": "$blocks"
+        },
+        {
+          "text": "\uff0c\u5e76\u5728\u672c\u6b21\u6316\u6398\u671f\u95f4\u63d0\u5347\u6316\u6398\u5de5\u5177\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u65f6\u8fd0\u7b49\u7ea7",
+          "color": "$fortune"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25cf \u957f\u6309\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "blocks",
+        "fortune"
+      ],
+      "next": [
+        "blocks",
+        "fortune"
+      ]
+    },
+    "Vein_Miner_Void": {
+      "description": [
+        {
+          "text": "\u540c\u65f6\u6316\u6398",
+          "color": "$text"
+        },
+        {
+          "text": "\u591a\u4e2a\u540c\u79cd\u65b9\u5757",
+          "color": "$blocks"
+        },
+        {
+          "text": "\uff0c\u5982\u679c\u5728\u5b9d\u5e93\u4e2d\uff0c\u5219\u5c06\u65b9\u5757",
+          "color": "$text"
+        },
+        {
+          "text": "\u5168\u90e8\u9500\u6bc1",
+          "color": "$chance"
+        },
+        {
+          "text": "\uff0c\u5b9d\u5e93\u77ff\u77f3\u7b49\u5b9d\u5e93\u8d44\u6e90\u9664\u5916\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25cf \u957f\u6309\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "blocks"
+      ],
+      "next": [
+        "blocks"
+      ]
+    },
+    "Javelin_Base": {
+      "description": [
+        {
+          "text": "\u53ec\u5524\u4e00\u652f\u9b54\u6cd5\u6807\u67aa\u653b\u51fb\u8fdc\u5904\u7684\u654c\u4eba\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u653b\u51fb\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\uff0c\u5e76",
+          "color": "$text"
+        },
+        {
+          "text": "\u51fb\u9000",
+          "color": "$knockback"
+        },
+        {
+          "text": "\u547d\u4e2d\u7684\u602a\u7269\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "damage",
+        "knockback",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "damage",
+        "knockback",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Javelin_Piercing": {
+      "description": [
+        {
+          "text": "\u53ec\u5524\u4e00\u652f\u9b54\u6cd5\u6807\u67aa\u653b\u51fb\u8fdc\u5904\u7684\u654c\u4eba\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u653b\u51fb\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\uff0c\u5e76\u4e14\u53ef\u4ee5",
+          "color": "$text"
+        },
+        {
+          "text": "\u7a7f\u900f",
+          "color": "$piercing"
+        },
+        {
+          "text": "\u4e00\u5b9a\u6570\u91cf\u7684\u602a\u7269\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "damage",
+        "piercing",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "damage",
+        "piercing",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Javelin_Scatter": {
+      "description": [
+        {
+          "text": "\u53ec\u5524\u4e00\u652f\u9b54\u6cd5\u6807\u67aa\u653b\u51fb\u8fdc\u5904\u7684\u654c\u4eba\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u653b\u51fb\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\uff0c\u5e76\u5728\u547d\u4e2d\u540e",
+          "color": "$text"
+        },
+        {
+          "text": "\u5206\u88c2\u6210\u6570\u4e2a\u6807\u67aa",
+          "color": "$numberOfJavelins"
+        },
+        {
+          "text": "\uff0c\u5e76",
+          "color": "$text"
+        },
+        {
+          "text": "\u5f39\u5c04\u6570\u6b21",
+          "color": "$numberOfBounces"
+        },
+        {
+          "text": "\u3002\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "damage",
+        "numberOfJavelins",
+        "numberOfBounces",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "damage",
+        "numberOfJavelins",
+        "numberOfBounces",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Javelin_Sight": {
+      "description": [
+        {
+          "text": "\u53d1\u5c04\u4e00\u652f\u9b54\u6cd5",
+          "color": "$text"
+        },
+        {
+          "text": "\u6807\u67aa",
+          "color": "$qhighlight"
+        },
+        {
+          "text": "\uff0c\u547d\u4e2d\u540e\u626b\u63cf\u5e76\u663e\u793a",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u6240\u6709\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u5b9d\u7bb1",
+          "color": "$qhighlight"
+        },
+        {
+          "text": "\u548c",
+          "color": "$text"
+        },
+        {
+          "text": "\u602a\u7269",
+          "color": "$qhighlight"
+        },
+        {
+          "text": "\uff0c\u6301\u7eed",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4\u3002\n\n",
+          "color": "$duration"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "adjustedRadius",
+        "adjustedDuration",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "adjustedRadius",
+        "adjustedDuration",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Smite_Base": {
+      "description": [
+        {
+          "text": "\u6fc0\u6d3b\u65f6\uff0c",
+          "color": "$text"
+        },
+        {
+          "text": "\u60e9\u6212",
+          "color": "$name"
+        },
+        {
+          "text": "\u4f1a",
+          "color": "$text"
+        },
+        {
+          "text": "\u6bcf\u9694\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$damageInterval"
+        },
+        {
+          "text": "\u5288\u51fb",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u4e00\u540d\u654c\u4eba\uff0c\u9020\u6210\u968f\u673a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\uff0c\u5e76\u4e14\u89e6\u53d1\u4f60\u62e5\u6709\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u547d\u4e2d\u6548\u679c",
+          "color": "$name"
+        },
+        {
+          "text": "\uff0c\u5e78\u8fd0\u4e00\u51fb\u9664\u5916\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u25d0 \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "abilityRange",
+        "damageInterval",
+        "adjustedRadius",
+        "additionalManaPerBolt",
+        "manaCostPerSecond",
+        "cooldown"
+      ],
+      "next": [
+        "abilityRange",
+        "damageInterval",
+        "adjustedRadius",
+        "additionalManaPerBolt",
+        "manaCostPerSecond",
+        "cooldown"
+      ]
+    },
+    "Smite_Thunderstorm": {
+      "description": [
+        {
+          "text": "\u6fc0\u6d3b\u65f6\uff0c",
+          "color": "$text"
+        },
+        {
+          "text": "\u96f7\u66b4",
+          "color": "$name"
+        },
+        {
+          "text": "\u4f1a",
+          "color": "$text"
+        },
+        {
+          "text": "\u964d\u4e0b\u5982\u96e8\u7684\u843d\u96f7",
+          "color": "$damageInterval"
+        },
+        {
+          "text": "\uff0c\u5bf9",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u602a\u7269\u9020\u6210\u968f\u673a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u25d0 \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "abilityRange",
+        "damageInterval",
+        "adjustedRadius",
+        "manaCostPerSecond",
+        "cooldown"
+      ],
+      "next": [
+        "abilityRange",
+        "damageInterval",
+        "adjustedRadius",
+        "manaCostPerSecond",
+        "cooldown"
+      ]
+    },
+    "Smite_Archon": {
+      "description": [
+        {
+          "text": "\u6fc0\u6d3b\u65f6\uff0c",
+          "color": "$text"
+        },
+        {
+          "text": "\u6267\u653f\u5b98",
+          "color": "$name"
+        },
+        {
+          "text": "\u4f1a\u5c06\u4f60\u53d8\u4e3a\u706b\u82b1\uff0c\u5bf9\u78b0\u649e\u5230\u7684\u6240\u6709\u602a\u7269\u9020\u6210\u968f\u673a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u25d0 \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "abilityRange",
+        "additionalManaPerBolt",
+        "manaCostPerSecond",
+        "cooldown"
+      ],
+      "next": [
+        "abilityRange",
+        "additionalManaPerBolt",
+        "manaCostPerSecond",
+        "cooldown"
+      ]
+    },
+    "Shell_Base": {
+      "description": [
+        {
+          "text": "\u6fc0\u6d3b\u65f6\uff0c",
+          "color": "$text"
+        },
+        {
+          "text": "\u7532\u58f3",
+          "color": "$name"
+        },
+        {
+          "text": "\u4f1a\u786c\u5316\u4f60\u7684\u76ae\u80a4\uff0c\u5728\u53d7\u5230\u653b\u51fb\u65f6\u6709",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u6982\u7387",
+          "color": "$chance"
+        },
+        {
+          "text": "\u7729\u6655\u602a\u7269\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25d0 \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "stunChance",
+        "manaCostPerSecond",
+        "additionalManaPerHit",
+        "cooldown"
+      ],
+      "next": [
+        "stunChance",
+        "manaCostPerSecond",
+        "additionalManaPerHit",
+        "cooldown"
+      ]
+    },
+    "Shell_Porcupine": {
+      "description": [
+        {
+          "text": "\u6fc0\u6d3b\u65f6\uff0c",
+          "color": "$text"
+        },
+        {
+          "text": "\u7bad\u732a",
+          "color": "$name"
+        },
+        {
+          "text": "\u4f1a\u589e\u52a0\u4f60\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u8346\u68d8\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25d0 \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "additionalThornsDamage",
+        "manaCostPerSecond",
+        "cooldown"
+      ],
+      "next": [
+        "additionalThornsDamage",
+        "manaCostPerSecond",
+        "cooldown"
+      ]
+    },
+    "Shell_Quill": {
+      "description": [
+        {
+          "text": "\u6fc0\u6d3b\u65f6\uff0c",
+          "color": "$text"
+        },
+        {
+          "text": "\u7fce\u523a",
+          "color": "$name"
+        },
+        {
+          "text": "\u4f1a\u589e\u52a0\u4f60\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u8346\u68d8\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\uff0c\u5e76\u4f7f\u8346\u68d8\u4f24\u5bb3\u9644\u5e26",
+          "color": "$text"
+        },
+        {
+          "text": "\u8fde\u9501\u6548\u679c",
+          "color": "$chains"
+        },
+        {
+          "text": "\uff0c\u80fd\u653b\u51fb\u5230\u989d\u5916\u76ee\u6807\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u25d0 \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "additionalThornsDamage",
+        "quillCount",
+        "manaCostPerSecond",
+        "additionalManaPerHit",
+        "cooldown"
+      ],
+      "next": [
+        "additionalThornsDamage",
+        "quillCount",
+        "manaCostPerSecond",
+        "additionalManaPerHit",
+        "cooldown"
+      ]
+    },
+    "Fireball_Base": {
+      "description": [
+        {
+          "text": "\u53ec\u5524\u4e00\u4e2a\u9b54\u6cd5\u706b\u7403\u653b\u51fb\u8fdc\u5904\u7684\u654c\u4eba\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "ability_power",
+        "adjustedRadius",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "ability_power",
+        "adjustedRadius",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Fireball_Volley": {
+      "description": [
+        {
+          "text": "\u53ec\u5524\u4e00\u4e2a\u9b54\u6cd5\u5f39\u8df3\u706b\u7403\uff0c",
+          "color": "$text"
+        },
+        {
+          "text": "\u707c\u70e7",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u8def\u5f84\u4e0a\u7684\u654c\u4eba\uff0c\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u3002\n\u5728",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\u540e\u7206\u70b8\uff0c\u5bf9",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u654c\u4eba\u9020\u6210\u5168\u989d\u4f24\u5bb3\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "ability_power",
+        "adjustedRadius",
+        "duration",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "ability_power",
+        "adjustedRadius",
+        "duration",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Fireball_Fireshot": {
+      "description": [
+        {
+          "text": "\u53ec\u5524\u4e00\u4e2a\u5c0f\u578b\u9b54\u6cd5\u706b\u7403\u653b\u51fb\u8fdc\u5904\u7684\u654c\u4eba\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "",
+          "color": "$text"
+        },
+        {
+          "text": "",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\uff0c\u5e76\u89e6\u53d1\u4f60\u62e5\u6709\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u547d\u4e2d\u6548\u679c",
+          "color": "$name"
+        },
+        {
+          "text": "\uff0c\u5e78\u8fd0\u4e00\u51fb\u9664\u5916\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "ability_power",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "ability_power",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Storm_Arrow_Base": {
+      "description": [
+        {
+          "text": "\u53d1\u5c04\u4e00\u652f\u7bad\uff0c\u5728\u547d\u4e2d\u4f4d\u7f6e\u7684\u4e0a\u7a7a\u751f\u6210\u98ce\u66b4\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u98ce\u66b4\u4e91\u4f1a\u6301\u7eed",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\uff0c\u5e76\u4f1a\u9ad8\u9891",
+          "color": "$text"
+        },
+        {
+          "text": "\u5288\u51fb",
+          "color": "$duration"
+        },
+        {
+          "text": "\u602a\u7269\uff0c",
+          "color": "$text"
+        },
+        {
+          "text": "\u6bcf\u6b21\u5288\u51fb\u9020\u6210\u968f\u673a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "abilityRange",
+        "adjustedRadius",
+        "adjustedDuration",
+        "stormInterval",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "abilityRange",
+        "adjustedRadius",
+        "adjustedDuration",
+        "stormInterval",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Storm_Arrow_Blizzard": {
+      "description": [
+        {
+          "text": "\u53d1\u5c04\u4e00\u652f\u7bad\uff0c\u5728\u547d\u4e2d\u4f4d\u7f6e\u7684\u4e0a\u7a7a\u751f\u6210\u66b4\u96ea\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u6bcf\u4e2a\u843d\u4e0b\u7684\u51b0\u7247\u4f1a\u4f7f\u547d\u4e2d\u7684\u602a\u7269\u51bb\u7ed3",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\u3002\u4e5f\u6709\u4e00\u5b9a",
+          "color": "$text"
+        },
+        {
+          "text": "\u6982\u7387",
+          "color": "$chance"
+        },
+        {
+          "text": "\u4f7f\u547d\u4e2d\u7684\u602a\u7269\u51bb\u4f24",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "adjustedRadius",
+        "adjustedDuration",
+        "stormInterval",
+        "slowDuration",
+        "frostbiteChance",
+        "frostbiteDuration",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "adjustedRadius",
+        "adjustedDuration",
+        "stormInterval",
+        "slowDuration",
+        "frostbiteChance",
+        "frostbiteDuration",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Battle_Cry_Base": {
+      "description": [
+        {
+          "text": "\u5438\u53d6\u5468\u56f4\u602a\u7269\u7684\u7cbe\u534e\uff0c\u7d2f\u79ef",
+          "color": "$text"
+        },
+        {
+          "text": "\u6218\u543c\u5c42\u6570",
+          "color": "$maxStacks"
+        },
+        {
+          "text": "\u3002\u4e0b\u6b21\u8fd1\u6218\u653b\u51fb\u547d\u4e2d\u65f6\uff0c\u6d88\u8017",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u5c42\u6570",
+          "color": "$stacksUsedPerHit"
+        },
+        {
+          "text": "\uff0c\u9020\u6210",
+          "color": "$text"
+        },
+        {
+          "text": "\u989d\u5916\u7684\u653b\u51fb\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\u3002\n\u672a\u6d88\u8017\u7684\u5c42\u6570\u5c06\u5728",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\u540e\u5931\u6548\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "adjustedRadius",
+        "adjustedDuration",
+        "attackDamagePerStack",
+        "maxStacks",
+        "stacksUsedPerHit",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "adjustedRadius",
+        "adjustedDuration",
+        "attackDamagePerStack",
+        "maxStacks",
+        "stacksUsedPerHit",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Battle_Cry_Spectral_Strike": {
+      "description": [
+        {
+          "text": "\u5438\u53d6\u5468\u56f4\u602a\u7269\u7684\u7cbe\u534e\uff0c\u7d2f\u79ef",
+          "color": "$text"
+        },
+        {
+          "text": "\u6218\u543c\u5c42\u6570",
+          "color": "$maxStacks"
+        },
+        {
+          "text": "\u3002\u4e0b\u6b21\u8fd1\u6218\u653b\u51fb\u547d\u4e2d\u65f6\uff0c\u6d88\u8017",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u5c42\u6570",
+          "color": "$stacksUsedPerHit"
+        },
+        {
+          "text": "\uff0c\u989d\u5916\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$abilityPowerPerStack"
+        },
+        {
+          "text": "\u3002\n\u672a\u6d88\u8017\u7684\u5c42\u6570\u5c06\u5728",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\u540e\u5931\u6548\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "adjustedRadius",
+        "adjustedDuration",
+        "abilityPowerPerStack",
+        "maxStacks",
+        "stacksUsedPerHit",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "adjustedRadius",
+        "adjustedDuration",
+        "abilityPowerPerStack",
+        "maxStacks",
+        "stacksUsedPerHit",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Battle_Cry_Lucky_Strike": {
+      "description": [
+        {
+          "text": "\u5438\u53d6\u5468\u56f4\u602a\u7269\u7684\u7cbe\u534e\uff0c\u7d2f\u79ef",
+          "color": "$text"
+        },
+        {
+          "text": "\u6218\u543c\u5c42\u6570",
+          "color": "$maxStacks"
+        },
+        {
+          "text": "\u3002\u4e0b\u6b21\u8fd1\u6218\u653b\u51fb\u547d\u4e2d\u65f6\uff0c\u6d88\u8017",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u5c42\u6570",
+          "color": "$stacksUsedPerHit"
+        },
+        {
+          "text": "\uff0c\u83b7\u5f97",
+          "color": "$text"
+        },
+        {
+          "text": "\u989d\u5916\u7684\u5e78\u8fd0\u4e00\u51fb\u6982\u7387",
+          "color": "$luckyHit"
+        },
+        {
+          "text": "\u3002\n\u672a\u6d88\u8017\u7684\u5c42\u6570\u5c06\u5728",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\u540e\u5931\u6548\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "adjustedRadius",
+        "adjustedDuration",
+        "luckyHitPerStack",
+        "maxStacks",
+        "stacksUsedPerHit",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "adjustedRadius",
+        "adjustedDuration",
+        "luckyHitPerStack",
+        "maxStacks",
+        "stacksUsedPerHit",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Ice_Bolt_Base": {
+      "description": [
+        {
+          "text": "\u53ec\u5524\u4e00\u4e2a\u51b0\u9525\uff0c\u9020\u6210",
+          "color": "$text"
+        },
+        {
+          "text": "\u653b\u51fb\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\u5e76",
+          "color": "$text"
+        },
+        {
+          "text": "\u971c\u51bb",
+          "color": "$chilled"
+        },
+        {
+          "text": "\u76ee\u6807\uff0c\u6301\u7eed\u4e00\u6bb5\u65f6\u95f4\u3002\u547d\u4e2d\u5df2\u88ab",
+          "color": "$text"
+        },
+        {
+          "text": "\u971c\u51bb",
+          "color": "$chilled"
+        },
+        {
+          "text": "\u7684\u602a\u7269\u65f6\uff0c\u4f1a\u5411\u5341\u5b57\u65b9\u5411\u5206\u88c2\u51fa",
+          "color": "$text"
+        },
+        {
+          "text": "\u788e\u51b0\u7247",
+          "color": "$damage"
+        },
+        {
+          "text": "\uff0c\u9020\u6210\u8f83\u4f4e\u4f24\u5bb3\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "iceBoltDamage",
+        "throwPower",
+        "adjustedDuration",
+        "splinterChance",
+        "splinterDamage",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "iceBoltDamage",
+        "throwPower",
+        "adjustedDuration",
+        "splinterChance",
+        "splinterDamage",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Ice_Bolt_Blast": {
+      "description": [
+        {
+          "text": "\u53ec\u5524\u4e00\u4e2a\u5927\u578b\u51b0\u971c\u7206\u88c2\uff0c\u76f4\u63a5\u547d\u4e2d\u602a\u7269\u65f6\u4e3a\u5176\u65bd\u52a0",
+          "color": "$text"
+        },
+        {
+          "text": "\u51b0\u7262",
+          "color": "$maxGlacialPrison"
+        },
+        {
+          "text": "\uff0c\u5e76\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u653b\u51fb\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\u3002\u6b64\u5916\uff0c\u547d\u4e2d\u540e\u8fd8\u4f1a\u5bf9",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u602a\u7269\u65bd\u52a0",
+          "color": "$text"
+        },
+        {
+          "text": "\u971c\u51bb",
+          "color": "$chilled"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "iceBoltDamage",
+        "throwPower",
+        "adjustedRadius",
+        "adjustedDuration",
+        "glacialChance",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "iceBoltDamage",
+        "throwPower",
+        "adjustedRadius",
+        "adjustedDuration",
+        "glacialChance",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Arcane_Base": {
+      "description": [
+        {
+          "text": "\u5f15\u5bfc\u4e00\u675f\u9b54\u6cd5\u5149\u675f\u5feb\u901f\u878d\u5316\u654c\u4eba\uff0c\u6bcf0.5\u79d2\u5bf9",
+          "color": "$text"
+        },
+        {
+          "text": "\u5149\u675f\u5185",
+          "color": "$distance"
+        },
+        {
+          "text": "\u7684\u751f\u7269\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u3002\n\n\u5965\u672f\u5f15\u5bfc\u671f\u95f4",
+          "color": "$text"
+        },
+        {
+          "text": "\u6bcf\u79d2\u6d88\u8017\u4e00\u6b21\u9b54\u529b",
+          "color": "$manaCost"
+        },
+        {
+          "text": "\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u25cf \u957f\u6309\u578b\u6280\u80fd",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "ability_power",
+        "distance",
+        "manaCost"
+      ],
+      "next": [
+        "ability_power",
+        "distance",
+        "manaCost"
+      ]
+    },
+    "Arcane_Rail": {
+      "description": [
+        {
+          "text": "\u751f\u6210\u4e00\u6761\u9b54\u6cd5\u5965\u672f\u8f68\u9053\uff0c\u4ee5\u4e0d\u53ef\u601d\u8bae\u7684\u529b\u91cf\u653b\u51fb\u5355\u4e2a\u76ee\u6807\uff0c",
+          "color": "$text"
+        },
+        {
+          "text": "\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\uff0c\u5e76\u89e6\u53d1\u4f60\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u547d\u4e2d\u6548\u679c",
+          "color": "$name"
+        },
+        {
+          "text": "\uff0c\u4f8b\u5982",
+          "color": "$text"
+        },
+        {
+          "text": "\u6548\u679c\u4e91",
+          "color": "$name"
+        },
+        {
+          "text": "\u548c",
+          "color": "$text"
+        },
+        {
+          "text": "\u8fde\u9501\u653b\u51fb",
+          "color": "$chaining"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "abilityRange",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "abilityRange",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Earthquake_Base": {
+      "description": [
+        {
+          "text": "\u4ece\u6240\u5728\u4f4d\u7f6e\u5f15\u53d1\u5de8\u5927\u7684\u9707\u52a8\uff0c\u5bf9",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u602a\u7269\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u653b\u51fb\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\uff0c\u5e76\u5c06\u5176",
+          "color": "$text"
+        },
+        {
+          "text": "\u51fb\u9000",
+          "color": "$knockback"
+        },
+        {
+          "text": "\uff0c\u968f\u540e\u6bcf\u9694\u4e00\u6bb5\u65f6\u95f4\u4ea7\u751f\u4e00\u6b21",
+          "color": "$text"
+        },
+        {
+          "text": "\u4f59\u9707",
+          "color": "$damageInterval"
+        },
+        {
+          "text": "\u3002\u5730\u9707\u9020\u6210\u7684\u4f24\u5bb3\u968f\u8ddd\u79bb\u7684\u589e\u52a0\u800c\u964d\u4f4e\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "damage",
+        "shockCount",
+        "shockInterval",
+        "knockback",
+        "adjustedRadius",
+        "manaCost",
+        "cooldown"
+      ],
+      "next": [
+        "damage",
+        "shockCount",
+        "shockInterval",
+        "knockback",
+        "adjustedRadius",
+        "manaCost",
+        "cooldown"
+      ]
+    },
+    "Implode_Life_Tap": {
+      "description": [
+        {
+          "text": "\u5438\u53d6\u4f60",
+          "color": "$text"
+        },
+        {
+          "text": "\u5f53\u524d\u751f\u547d\u503c",
+          "color": "$health"
+        },
+        {
+          "text": "\u768480%\uff0c\u5e76\u57fa\u4e8e",
+          "color": "$text"
+        },
+        {
+          "text": "\u5438\u53d6\u7684\u751f\u547d\u503c",
+          "color": "$damage"
+        },
+        {
+          "text": "\u5bf9\u9644\u8fd1",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u6240\u6709\u751f\u7269\u9020\u6210\u4f24\u5bb3\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u6ce8\uff1a1\u9897\u5fc3\u4ee3\u88682\u70b9\u751f\u547d\u503c\u3002",
+          "color": "$darkgray"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "adjustedRadius",
+        "damagePerHealth",
+        "cooldown"
+      ],
+      "next": [
+        "adjustedRadius",
+        "damagePerHealth",
+        "cooldown"
+      ]
+    },
+    "Chain_Lightning_Base": {
+      "description": [
+        {
+          "text": "\u53ec\u5524\u4e00\u652f\u95ea\u7535\u7bad\uff0c\u547d\u4e2d\u65f6\u5f15\u53d1",
+          "color": "$text"
+        },
+        {
+          "text": "\u95ea\u7535\u5288\u51fb",
+          "color": "$name"
+        },
+        {
+          "text": "\uff0c\u57fa\u4e8e",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3\u7684\u4e00\u5b9a\u6bd4\u4f8b",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u9020\u6210",
+          "color": "$text"
+        },
+        {
+          "text": "\u95ea\u7535\u4f24\u5bb3",
+          "color": "$lightning"
+        },
+        {
+          "text": "\uff0c\u5e76\u5c06\u7535\u51fb\u4f20\u5bfc\u5230\u76ee\u6807",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$range"
+        },
+        {
+          "text": "\u7684\u5176\u4ed6\u751f\u7269\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "abilityRange",
+        "distance",
+        "chainRange",
+        "manaCost",
+        "cooldown"
+      ],
+      "next": [
+        "abilityRange",
+        "distance",
+        "chainRange",
+        "manaCost",
+        "cooldown"
+      ]
+    },
+    "Chain_Lightning_Orbs": {
+      "description": [
+        {
+          "text": "\u751f\u6210\u4e00\u4e2a\u6cbf\u76f4\u7ebf\u7f13\u6162\u79fb\u52a8\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u7403\u72b6\u95ea\u7535",
+          "color": "$name"
+        },
+        {
+          "text": "\uff0c\u7535\u51fb\u8def\u5f84\u4e0a\u7684\u6240\u6709\u602a\u7269\uff0c\u57fa\u4e8e",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3\u7684\u4e00\u5b9a\u6bd4\u4f8b",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u9020\u6210",
+          "color": "$text"
+        },
+        {
+          "text": "\u95ea\u7535\u4f24\u5bb3",
+          "color": "$lightning"
+        },
+        {
+          "text": "\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2726 \u65bd\u6cd5\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "abilityRange",
+        "adjustedRadius",
+        "adjustedDuration",
+        "manaCost",
+        "cooldown"
+      ],
+      "next": [
+        "abilityRange",
+        "adjustedRadius",
+        "adjustedDuration",
+        "manaCost",
+        "cooldown"
+      ]
+    },
+    "Grenade_Base": {
+      "description": [
+        {
+          "text": "\u63b7\u51fa\u4e00\u4e2a\u795e\u79d8\u800c\u5f3a\u5927\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6df7\u6c8c\u7acb\u65b9",
+          "color": "$qhighlight"
+        },
+        {
+          "text": "\uff0c\u5f39\u8df3\u968f\u673a\u6b21\u6570\u540e\u7206\u70b8\uff0c\u5bf9",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u654c\u4eba\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u653b\u51fb\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "damage",
+        "adjustedRadius",
+        "manaCost",
+        "cooldown"
+      ],
+      "next": [
+        "damage",
+        "adjustedRadius",
+        "manaCost",
+        "cooldown"
+      ]
+    },
+    "Toxic_Grenade": {
+      "description": [
+        {
+          "text": "\u63b7\u51fa\u4e00\u4e2a\u6ce8\u5165\u4e86",
+          "color": "$text"
+        },
+        {
+          "text": "\u5267\u6bd2",
+          "color": "$poison"
+        },
+        {
+          "text": "",
+          "color": "$text"
+        },
+        {
+          "text": "\u836f\u5242",
+          "color": "$poison"
+        },
+        {
+          "text": "\u7684\u836f\u74f6\uff0c\u649e\u51fb\u540e\u7206\u88c2\u5e76\u5f62\u6210\u4e00\u56e2",
+          "color": "$text"
+        },
+        {
+          "text": "\u5267\u6bd2\u4e91",
+          "color": "$poison"
+        },
+        {
+          "text": "\uff0c\u5bf9",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u654c\u4eba\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\uff0c\u6301\u7eed",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u6bb5\u65f6\u95f4",
+          "color": "$duration"
+        },
+        {
+          "text": "\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "ability_power",
+        "adjustedRadius",
+        "adjustedDuration",
+        "manaCost",
+        "cooldown"
+      ],
+      "next": [
+        "ability_power",
+        "adjustedRadius",
+        "adjustedDuration",
+        "manaCost",
+        "cooldown"
+      ]
+    },
+    "Shield_Bash_Earthshatter": {
+      "description": [
+        {
+          "text": "\u5411\u524d\u65b9\u51b2\u523a\u5e76\u7528\u76fe\u724c\u649e\u51fb\u5730\u9762\uff0c\u5bf9\u524d\u65b9",
+          "color": "$text"
+        },
+        {
+          "text": "\u534a\u5706\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u602a\u7269\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u653b\u51fb\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\u3002\u51fb\u4e2d\u602a\u7269\u540c\u65f6\u4f1a\u5c06\u5176",
+          "color": "$text"
+        },
+        {
+          "text": "\u51fb\u9000",
+          "color": "$knockback"
+        },
+        {
+          "text": "\uff0c\u5e76\u6709\u4e00\u5b9a\u6982\u7387\u5c06\u5176",
+          "color": "$text"
+        },
+        {
+          "text": "\u51fb\u6655",
+          "color": "$stun"
+        },
+        {
+          "text": "\uff0c\u51fb\u9000\u8ddd\u79bb\u4e0e\u51fb\u6655\u6982\u7387\u53d7",
+          "color": "$text"
+        },
+        {
+          "text": "\u683c\u6321\u6982\u7387",
+          "color": "$chance"
+        },
+        {
+          "text": "\u5f71\u54cd\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u6bcf\u51fb\u4e2d1\u53ea\u602a\u7269\uff0c\u51cf\u5c11",
+          "color": "$text"
+        },
+        {
+          "text": "1\u79d2\u51b7\u5374\u65f6\u95f4",
+          "color": "$cooldown"
+        },
+        {
+          "text": "\uff0c\u6700\u591a\u51cf\u5c11\u603b\u51b7\u5374\u65f6\u95f4\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "80%",
+          "color": "$chance"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "manaCost",
+        "cooldown",
+        "damage",
+        "adjustedRadius",
+        "knockback",
+        "stunChance"
+      ],
+      "next": [
+        "manaCost",
+        "cooldown",
+        "damage",
+        "adjustedRadius",
+        "knockback",
+        "stunChance"
+      ]
+    },
+    "Shield_Bash_Battering_Ram": {
+      "description": [
+        {
+          "text": "\u5411\u524d\u65b9\u51b2\u523a\u5e76\u7528\u76fe\u724c\u9524\u51fb\u602a\u7269\uff0c\u5bf9\u524d\u65b9\u9525\u5f62\u8303\u56f4\u5185\u7684\u602a\u7269\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u653b\u51fb\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\uff0c\u5c06\u5176\u51fb\u9000\uff0c\u5e76\u5bf9\u547d\u4e2d\u7684\u602a\u7269\u989d\u5916\u9020\u6210",
+          "color": "$text"
+        },
+        {
+          "text": "\u8346\u68d8\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\u3002\n\n\u6bcf\u51fb\u4e2d1\u53ea\u602a\u7269\uff0c\u51cf\u5c111\u79d2\u51b7\u5374\u65f6\u95f4\uff0c\u6700\u591a\u51cf\u5c11\u603b\u51b7\u5374\u65f6\u95f4\u768480%\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "manaCost",
+        "cooldown",
+        "damage",
+        "thornsDamageScalar",
+        "adjustedRadius",
+        "knockback"
+      ],
+      "next": [
+        "manaCost",
+        "cooldown",
+        "damage",
+        "thornsDamageScalar",
+        "adjustedRadius",
+        "knockback"
+      ]
+    },
+    "Earthquake_Singularity": {
+      "description": [
+        {
+          "text": "\u4ece\u6240\u5728\u4f4d\u7f6e\u5f15\u53d1\u5267\u70c8\u7684\u5d29\u584c\uff0c\u5bf9",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u602a\u7269\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u653b\u51fb\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\uff0c\u968f\u540e\u6bcf\u9694\u4e00\u6bb5\u65f6\u95f4\u4ea7\u751f\u4e00\u6b21",
+          "color": "$text"
+        },
+        {
+          "text": "\u4f59\u9707",
+          "color": "$damageInterval"
+        },
+        {
+          "text": "\u3002\u6bcf\u6b21\u9707\u52a8\u90fd\u4f1a\u5c06\u602a\u7269\u5411\u4e2d\u5fc3",
+          "color": "$text"
+        },
+        {
+          "text": "\u7275\u5f15",
+          "color": "$force"
+        },
+        {
+          "text": "\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "damage",
+        "pullStrength",
+        "shockCount",
+        "shockInterval",
+        "adjustedRadius",
+        "manaCost",
+        "cooldown"
+      ],
+      "next": [
+        "damage",
+        "pullStrength",
+        "shockCount",
+        "shockInterval",
+        "adjustedRadius",
+        "manaCost",
+        "cooldown"
+      ]
+    },
+    "Earthquake_Tremor": {
+      "description": [
+        {
+          "text": "\u4ece\u6240\u5728\u4f4d\u7f6e\u5f15\u53d1\u7834\u574f\u6027\u7684\u9707\u52a8\uff0c\u5bf9",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u602a\u7269\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u653b\u51fb\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\uff0c\u968f\u540e\u6bcf\u9694\u4e00\u6bb5\u65f6\u95f4\u4ea7\u751f\u4e00\u6b21",
+          "color": "$text"
+        },
+        {
+          "text": "\u4f59\u9707",
+          "color": "$damageInterval"
+        },
+        {
+          "text": "\u3002\u6bcf\u6b21\u9707\u52a8\u90fd\u6709\u4e00\u5b9a\u6982\u7387",
+          "color": "$text"
+        },
+        {
+          "text": "\u51fb\u6655",
+          "color": "$stun"
+        },
+        {
+          "text": "\u602a\u7269\uff0c\u4f46\u6ca1\u6709\u51fb\u9000\u6548\u679c\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "damage",
+        "stunChance",
+        "stunDuration",
+        "shockCount",
+        "shockInterval",
+        "adjustedRadius",
+        "manaCost",
+        "cooldown"
+      ],
+      "next": [
+        "damage",
+        "stunChance",
+        "stunDuration",
+        "shockCount",
+        "shockInterval",
+        "adjustedRadius",
+        "manaCost",
+        "cooldown"
+      ]
+    },
+    "Rampage_Bloodlust": {
+      "description": [
+        {
+          "text": "\u8fdb\u5165\u55dc\u8840\u72c2\u70ed\u72b6\u6001\uff0c",
+          "color": "$text"
+        },
+        {
+          "text": "\u76f4\u63a5\u8fd1\u6218\u653b\u51fb",
+          "color": "$damage"
+        },
+        {
+          "text": "\u4f1a\u9020\u6210\u989d\u5916\u4f24\u5bb3\uff0c\u4e14",
+          "color": "$text"
+        },
+        {
+          "text": "\u76f4\u63a5\u8fd1\u6218\u653b\u51fb\u51fb\u6740",
+          "color": "$damage"
+        },
+        {
+          "text": "\u4f1a\u6062\u590d\u9b54\u529b\u503c\uff0c\u5e76\u83b7\u5f97\u53ef\u53e0\u52a0\u7684\u79fb\u52a8\u901f\u5ea6\u63d0\u5347\u3002\n\n\u5fc5\u987b\u662f\u76f4\u63a5\u8fd1\u6218\u653b\u51fb\u51fb\u6740\u624d\u80fd\u89e6\u53d1\u55dc\u8840\u7684\u5956\u52b1\u673a\u5236\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u25cf \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "damage",
+        "manaRefund",
+        "speed",
+        "maxStacks",
+        "adjustedDuration",
+        "manaCostPerSecond",
+        "cooldown"
+      ],
+      "next": [
+        "damage",
+        "manaRefund",
+        "speed",
+        "maxStacks",
+        "adjustedDuration",
+        "manaCostPerSecond",
+        "cooldown"
+      ]
+    },
+    "Rampage_Berserker": {
+      "description": [
+        {
+          "text": "\u8fdb\u5165\u4e0d\u7a33\u5b9a\u72c2\u70ed\u72b6\u6001\uff0c",
+          "color": "$text"
+        },
+        {
+          "text": "\u76f4\u63a5\u8fd1\u6218\u653b\u51fb",
+          "color": "$damage"
+        },
+        {
+          "text": "\u4f1a\u9020\u6210\u5927\u91cf\u989d\u5916\u4f24\u5bb3\uff0c\u72c2\u70ed\u72b6\u6001\u6301\u7eed\u65f6\u95f4\u8d8a\u957f\uff0c\u9b54\u529b\u6d88\u8017\u8d8a\u9ad8\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u25cf \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "damage",
+        "manaCostPerSecond",
+        "manaRamp",
+        "cooldown"
+      ],
+      "next": [
+        "damage",
+        "manaCostPerSecond",
+        "manaRamp",
+        "cooldown"
+      ]
+    },
+    "Rampage_Instinct": {
+      "description": [
+        {
+          "text": "\u8fdb\u5165\u72e9\u730e\u4e13\u6ce8\u59ff\u6001\uff0c",
+          "color": "$text"
+        },
+        {
+          "text": "\u76f4\u63a5\u8fd1\u6218\u653b\u51fb",
+          "color": "$damage"
+        },
+        {
+          "text": "\u4f1a\u9020\u6210\u989d\u5916\u4f24\u5bb3\uff0c\u5e76\u63d0\u5347\u5e78\u8fd0\u4e00\u51fb\u6982\u7387\u3002\n\n\u5e78\u8fd0\u4e00\u51fb\u4ecd\u7136\u9700\u8981\u6709\u6548\u76f4\u63a5\u547d\u4e2d\u624d\u80fd\u89e6\u53d1\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u25cf \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "damage",
+        "luckyHitChance",
+        "manaCostPerSecond",
+        "cooldown"
+      ],
+      "next": [
+        "damage",
+        "luckyHitChance",
+        "manaCostPerSecond",
+        "cooldown"
+      ]
+    },
+    "Grenade_Sticky": {
+      "description": [
+        {
+          "text": "\u63b7\u51fa\u4e00\u4e2a",
+          "color": "$text"
+        },
+        {
+          "text": "\u9ecf\u6027\u7acb\u65b9",
+          "color": "$qhighlight"
+        },
+        {
+          "text": "\uff0c\u9ecf\u7740\u5728\u547d\u4e2d\u7684\u9996\u4e2a\u76ee\u6807\u4e0a\uff0c\u7206\u70b8\u540e\u5bf9",
+          "color": "$text"
+        },
+        {
+          "text": "\u4e00\u5b9a\u8303\u56f4\u5185",
+          "color": "$radius"
+        },
+        {
+          "text": "\u7684\u654c\u4eba\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u653b\u51fb\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "damage",
+        "adjustedRadius",
+        "manaCost",
+        "cooldown"
+      ],
+      "next": [
+        "damage",
+        "adjustedRadius",
+        "manaCost",
+        "cooldown"
+      ]
+    },
+    "Arcane_Prism": {
+      "description": [
+        {
+          "text": "\u53d1\u5c04\u4e00\u4e2a\u5965\u672f\u79cd\u5b50\uff0c\u5728\u602a\u7269\u8eab\u4e0a\u5b89\u653e\u4e00\u4e2a",
+          "color": "$text"
+        },
+        {
+          "text": "\u68f1\u955c",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u3002\u68f1\u955c\u4f1a\u4ea4\u66ff\u53d1\u5c04X\u578b\u548c\u5341\u5b57\u578b\u5149\u675f\uff0c\u5bf9\u56f0\u5728\u5149\u675f\u5185\u7684\u602a\u7269\u9020\u6210\u4e00\u5b9a\u6bd4\u4f8b\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u3002\u5149\u675f\u65e0\u6cd5\u7a7f\u900f\u672a\u5b89\u653e\u68f1\u955c\u7684\u602a\u7269\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "ability_power",
+        "adjustedRadius",
+        "adjustedDuration",
+        "damageInterval",
+        "maxTargets",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "ability_power",
+        "adjustedRadius",
+        "adjustedDuration",
+        "damageInterval",
+        "maxTargets",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Chain_Lightning_Charged_Bolts": {
+      "description": [
+        {
+          "text": "\u5411\u524d\u65b9\u53d1\u5c04\u6247\u5f62\u7684",
+          "color": "$text"
+        },
+        {
+          "text": "\u5145\u80fd\u5f29\u7bad",
+          "color": "$lightning"
+        },
+        {
+          "text": "\uff0c\u5f29\u7bad\u4f1a\u7f13\u6162\u5411\u524d\u98de\u884c\u5e76\u6269\u6563\u3002\u6bcf\u4e2a\u5f29\u7bad\u5728\u547d\u4e2d\u9996\u4e2a\u602a\u7269\u6216\u65b9\u5757\u540e\u505c\u4e0b\uff0c\u9020\u6210\u57fa\u4e8e",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u968f\u673a\u6bd4\u4f8b\u7684\u95ea\u7535\u4f24\u5bb3\u3002\u5355\u6b21\u6280\u80fd\u7684\u6240\u6709\u5f29\u7bad\u5bf9\u540c\u4e00\u76ee\u6807\u53ea\u9020\u6210\u4e00\u6b21\u4f24\u5bb3\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "abilityRange",
+        "boltCount",
+        "distance",
+        "throwPower",
+        "spreadDegrees",
+        "maxTargets",
+        "manaCost",
+        "cooldown"
+      ],
+      "next": [
+        "abilityRange",
+        "boltCount",
+        "distance",
+        "throwPower",
+        "spreadDegrees",
+        "maxTargets",
+        "manaCost",
+        "cooldown"
+      ]
+    },
+    "Shard_Blizzard": {
+      "description": [
+        {
+          "text": "\u53d1\u5c04\u4e00\u652f\u7bad\uff0c\u5728\u547d\u4e2d\u4f4d\u7f6e\u7684\u4e0a\u7a7a\u751f\u6210\u51b0\u6676\u66b4\u96ea\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u98ce\u66b4\u4f1a\u843d\u4e0b\u51b0\u6676\uff0c\u9020\u6210\u4e00\u5b9a",
+          "color": "$text"
+        },
+        {
+          "text": "\u4f24\u5bb3",
+          "color": "$damage"
+        },
+        {
+          "text": "\uff0c\u971c\u51bb\u602a\u7269\uff0c\u5e76\u89e6\u53d1",
+          "color": "$text"
+        },
+        {
+          "text": "\u51bb\u4f24",
+          "color": "$chance"
+        },
+        {
+          "text": "\u5929\u8d4b\u7684\u534f\u540c\u4f5c\u7528\u3002\u971c\u51bb\u6548\u679c\u7ed3\u675f\u540e\u8fd8\u4f1a\u65bd\u52a0\u4f4e\u6e29\u6548\u679c\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "shardDamage",
+        "shardAttackDamage",
+        "adjustedRadius",
+        "adjustedDuration",
+        "stormInterval",
+        "slowDuration",
+        "cooldown",
+        "manaCost"
+      ],
+      "next": [
+        "shardDamage",
+        "shardAttackDamage",
+        "adjustedRadius",
+        "adjustedDuration",
+        "stormInterval",
+        "slowDuration",
+        "cooldown",
+        "manaCost"
+      ]
+    },
+    "Smite_Blast_Wave": {
+      "description": [
+        {
+          "text": "\u6fc0\u6d3b\u65f6\uff0c",
+          "color": "$text"
+        },
+        {
+          "text": "\u51b2\u51fb\u6ce2",
+          "color": "$name"
+        },
+        {
+          "text": "\u4f1a\u6bcf\u9694\u4e00\u6bb5\u65f6\u95f4\u5728\u4f60\u5468\u56f4\u91ca\u653e\u95ea\u7535\u51b2\u51fb\u6ce2\uff0c\u51fb\u9000\u602a\u7269\u5e76\u9020\u6210\u57fa\u4e8e",
+          "color": "$text"
+        },
+        {
+          "text": "\u6cd5\u672f\u4f24\u5bb3",
+          "color": "$ability_power"
+        },
+        {
+          "text": "\u968f\u673a\u6bd4\u4f8b\u7684\u95ea\u7535\u4f24\u5bb3\u3002\u6b64\u4f24\u5bb3\u53d7\u95ea\u7535\u638c\u63a7\u548c\u95ea\u7535\u6280\u827a\u7684\u52a0\u6210\uff0c\u4f46\u7729\u6655\u6982\u7387\u964d\u4f4e\u3002\n\n",
+          "color": "$text"
+        },
+        {
+          "text": "\u25cf \u5207\u6362\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "damageInterval",
+        "adjustedRadius",
+        "abilityRange",
+        "knockback",
+        "stunChanceMultiplier",
+        "manaCostPerSecond",
+        "cooldown"
+      ],
+      "next": [
+        "damageInterval",
+        "adjustedRadius",
+        "abilityRange",
+        "knockback",
+        "stunChanceMultiplier",
+        "manaCostPerSecond",
+        "cooldown"
+      ]
+    },
+    "Necromancy_Base": {
+      "description": [
+        {
+          "text": "\u53d1\u5c04",
+          "color": "$text"
+        },
+        {
+          "text": "\u9b42\u7075\u5f29\u7bad",
+          "color": "$name"
+        },
+        {
+          "text": "\uff0c\u8bc5\u5492\u547d\u4e2d\u7684\u602a\u7269\u3002\u51fb\u6740\u88ab\u8bc5\u5492\u7684\u602a\u7269\u53ef\u4ee5\u6536\u96c6",
+          "color": "$text"
+        },
+        {
+          "text": "\u9b42\u7075",
+          "color": "$name"
+        },
+        {
+          "text": "\uff1b\u9b42\u7075\u8db3\u591f\u65f6\uff0c\u53ef\u4ee5\u53ec\u5524\u9ab7\u9ac5\u6218\u58eb\u4e3a\u4f60\u800c\u6218\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\u9ab7\u9ac5\u6218\u58eb\u9020\u6210\u6cd5\u672f\u4f24\u5bb3\uff0c\u4e14\u5176\u4f24\u5bb3\u6709\u4e00\u5b9a\u8303\u56f4\u7684\u6e85\u5c04\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "curseDuration",
+        "souls",
+        "summonCap",
+        "minionDamage",
+        "splashRadius",
+        "splashDamage"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "curseDuration",
+        "souls",
+        "summonCap",
+        "minionDamage",
+        "splashRadius",
+        "splashDamage"
+      ]
+    },
+    "Necromancy_Archer": {
+      "description": [
+        {
+          "text": "\u53d1\u5c04",
+          "color": "$text"
+        },
+        {
+          "text": "\u9b42\u7075\u5f29\u7bad",
+          "color": "$name"
+        },
+        {
+          "text": "\uff0c\u8bc5\u5492\u547d\u4e2d\u7684\u602a\u7269\u3002\u51fb\u6740\u88ab\u8bc5\u5492\u7684\u602a\u7269\u53ef\u4ee5\u6536\u96c6",
+          "color": "$text"
+        },
+        {
+          "text": "\u9b42\u7075",
+          "color": "$name"
+        },
+        {
+          "text": "\uff1b\u9b42\u7075\u8db3\u591f\u65f6\uff0c\u53ef\u4ee5\u53ec\u5524\u9ab7\u9ac5\u5f13\u7bad\u624b\u4e3a\u4f60\u653b\u51fb\u9644\u8fd1\u7684\u76ee\u6807\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\u9ab7\u9ac5\u5f13\u7bad\u624b\u9020\u6210\u6cd5\u672f\u4f24\u5bb3\uff0c\u4e14\u5176\u4f24\u5bb3\u6709\u4e00\u5b9a\u8303\u56f4\u7684\u6e85\u5c04\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "curseDuration",
+        "souls",
+        "summonCap",
+        "minionDamage",
+        "splashRadius",
+        "splashDamage"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "curseDuration",
+        "souls",
+        "summonCap",
+        "minionDamage",
+        "splashRadius",
+        "splashDamage"
+      ]
+    },
+    "Necromancy_Golem": {
+      "description": [
+        {
+          "text": "\u53d1\u5c04",
+          "color": "$text"
+        },
+        {
+          "text": "\u9b42\u7075\u5f29\u7bad",
+          "color": "$name"
+        },
+        {
+          "text": "\uff0c\u8bc5\u5492\u547d\u4e2d\u7684\u602a\u7269\u3002\u51fb\u6740\u88ab\u8bc5\u5492\u7684\u602a\u7269\u53ef\u4ee5\u6536\u96c6",
+          "color": "$text"
+        },
+        {
+          "text": "\u9b42\u7075",
+          "color": "$name"
+        },
+        {
+          "text": "\uff1b\u9b42\u7075\u8db3\u591f\u65f6\uff0c\u53ef\u4ee5\u53ec\u5524\u6216\u5f3a\u5316\u4f60\u7684\u5080\u5121\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\u6bcf\u53ea\u5080\u5121\u53ef\u591a\u6b21\u5f3a\u5316\uff0c\u6bcf\u6b21\u5f3a\u5316\u90fd\u4f1a\u53d8\u5927\uff0c\u4e14\u9020\u6210\u66f4\u9ad8\u7684\u6cd5\u672f\u4f24\u5bb3\u3002",
+          "color": "$text"
+        },
+        {
+          "text": "\n\n\u2734 \u65bd\u653e\u578b\u6280\u80fd ",
+          "color": "$castType"
+        }
+      ],
+      "current": [
+        "cooldown",
+        "manaCost",
+        "curseDuration",
+        "souls",
+        "summonCap",
+        "minionDamage",
+        "splashRadius",
+        "splashDamage"
+      ],
+      "next": [
+        "cooldown",
+        "manaCost",
+        "curseDuration",
+        "souls",
+        "summonCap",
+        "minionDamage",
+        "splashRadius",
+        "splashDamage"
+      ]
+    }
+  }
+}

@@ -1,0 +1,702 @@
+import mods.jei.category.Custom;
+import mods.jei.category.Custom;
+import mods.jei.JEI;
+import mods.jei.category.SimpleJeiCategory;
+import mods.jei.category.JeiCategory;
+import crafttweaker.api.text.TextComponent;
+import mods.jei.component.JeiDrawable;
+import crafttweaker.api.resource.ResourceLocation;
+import crafttweaker.api.item.IItemStack;
+
+// ** Made by DrIceTea **
+
+// 铭文台  recipes\inscription_recipes.json  66
+// 催化剂灌注台  recipes\catalyst_recipes.json  154
+// 拾荒者物品  scavenger.json  485
+// 宝藏钥匙  544
+// 物品信息  552
+// 水晶配方  vault_altar\vault_altar_ingredients.json  585
+
+
+// 铭文台
+
+var inscription = JeiCategory.create<Custom>("inscription_table", new TextComponent("铭文台"), <item:the_vault:inscription_table>, [<item:the_vault:inscription_table>]) as Custom;
+inscription.background = JeiDrawable.blank(180, 45) as JeiDrawable;
+
+inscription.addDrawable(4, 5, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+inscription.addDrawable(25, 5, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+inscription.addDrawable(46, 5, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+inscription.addDrawable(67, 5, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+inscription.addDrawable(88, 5, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+inscription.addDrawable(109, 5, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+inscription.addDrawable(130, 5, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+inscription.addDrawable(4, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+inscription.addDrawable(25, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+inscription.addDrawable(46, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+inscription.addDrawable(67, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+inscription.addDrawable(88, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+inscription.addDrawable(109, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+inscription.addDrawable(130, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+inscription.addDrawable(157, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+
+inscription.addDrawable(154, 7, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 21, 18, 14) as JeiDrawable);
+
+inscription.addSlot(0, 5, 6, true);
+inscription.addSlot(1, 26, 6, true);
+inscription.addSlot(2, 47, 6, true);
+inscription.addSlot(3, 68, 6, true);
+inscription.addSlot(4, 89, 6, true);
+inscription.addSlot(5, 110, 6, true);
+inscription.addSlot(6, 131, 6, true);
+inscription.addSlot(7, 5, 26, true);
+inscription.addSlot(8, 26, 26, true);
+inscription.addSlot(9, 47, 26, true);
+inscription.addSlot(10, 68, 26, true);
+inscription.addSlot(11, 158, 26, false);
+
+function runeItemR(pool as string, model as int) as IItemStack {
+  return <item:the_vault:inscription>.withTag({data: {entries: [{pool: "the_vault:vault/rooms/raw/" + pool + "", count: 1 as int, color: 3118792 as int}], model: model, size: 10 as int}});
+}
+function runeItemO(pool as string, model as int) as IItemStack {
+  return <item:the_vault:inscription>.withTag({data: {entries: [{pool: "the_vault:vault/rooms/omega/" + pool + "", count: 1 as int, color: 7012096 as int}], model: model, size: 10 as int}});
+}
+function runeItemC(pool as string, model as int) as IItemStack {
+  return <item:the_vault:inscription>.withTag({data: {entries: [{pool: "the_vault:vault/rooms/challenge/" + pool + "", count: 1 as int, color: 15769088 as int}], model: model, size: 10 as int}});
+}
+
+// chromatic_caves
+inscription.addRecipe([runeItemR("chromatic_caves", 16)], [<item:minecraft:iron_ingot> * 16, <item:the_vault:vault_gold> * 2, <item:the_vault:inscription_piece> * 4]);
+JEI.addIngredient(runeItemR("chromatic_caves", 16));
+// farm
+inscription.addRecipe([runeItemR("farm", 17)], [<item:minecraft:dirt> * 64, <item:the_vault:vault_gold> * 1, <item:the_vault:inscription_piece> * 4]);
+JEI.addIngredient(runeItemR("farm", 17));
+// emerald_caves
+inscription.addRecipe([runeItemR("emerald_caves", 18)], [<item:minecraft:diamond> * 8, <item:the_vault:vault_gold> * 1, <item:the_vault:inscription_piece> * 4]);
+JEI.addIngredient(runeItemR("emerald_caves", 18));
+
+// xmark
+inscription.addRecipe([runeItemC("x-mark", 15)], [<item:the_vault:ornate_chest_scroll> * 1, <item:the_vault:living_chest_scroll> * 1, <item:the_vault:gilded_chest_scroll> * 1, <item:the_vault:wooden_chest_scroll> * 1, <item:the_vault:gem_echo> * 4, <item:the_vault:vault_gold> * 16, <item:the_vault:inscription_piece> * 16]);
+JEI.addIngredient(runeItemC("x-mark", 15));
+// dragon
+inscription.addRecipe([runeItemC("dragon", 7)], [<item:the_vault:bounty_pearl> * 32, <item:the_vault:gem_echo> * 2, <item:the_vault:inscription_piece> * 16]);
+JEI.addIngredient(runeItemC("dragon", 7));
+// wildwest
+inscription.addRecipe([runeItemC("wildwest", 14)], [<item:the_vault:gilded_chest_scroll> * 2, <item:the_vault:vault_bronze> * 192, <item:the_vault:inscription_piece> * 8]);
+JEI.addIngredient(runeItemC("wildwest", 14));
+// crystal cave
+inscription.addRecipe([runeItemC("crystal_caves", 5)], [<item:the_vault:gem_larimar> * 64, <item:the_vault:vault_gold> * 8, <item:the_vault:inscription_piece> * 4]);
+JEI.addIngredient(runeItemC("crystal_caves", 5));
+// factory
+inscription.addRecipe([runeItemC("factory", 8)], [<item:minecraft:netherite_block> * 1, <item:the_vault:vault_gold> * 8, <item:the_vault:gem_echo> * 2, <item:the_vault:inscription_piece> * 16]);
+JEI.addIngredient(runeItemC("factory", 8));
+// village
+inscription.addRecipe([runeItemC("village", 13)], [<item:the_vault:living_chest_scroll> * 1, <item:the_vault:gilded_chest_scroll> * 1, <item:the_vault:ornate_chest_scroll> * 1, <item:the_vault:vault_gold> * 12, <item:the_vault:inscription_piece> * 16]);
+JEI.addIngredient(runeItemC("village", 13));
+// raid room
+inscription.addRecipe([runeItemC("raid/rooms", 19)], [<item:minecraft:emerald> * 256, <item:the_vault:gem_echo> * 4, <item:the_vault:vault_gold> * 12, <item:the_vault:inscription_piece> * 16]);
+JEI.addIngredient(runeItemC("raid/rooms", 19));
+// lab
+inscription.addRecipe([runeItemC("laboratory", 20)], [<item:the_vault:mystery_hostile_egg> * 2, <item:the_vault:gem_echo> * 4, <item:the_vault:vault_gold> * 16, <item:the_vault:inscription_piece> * 16]);
+JEI.addIngredient(runeItemC("laboratory", 20));
+// lab
+inscription.addRecipe([runeItemC("temple", 22)], [<item:the_vault:mystery_hostile_egg> * 2, <item:the_vault:gem_echo> * 4, <item:the_vault:vault_gold> * 16, <item:the_vault:inscription_piece> * 16]);
+JEI.addIngredient(runeItemC("temple", 22));
+// memory
+inscription.addRecipe([runeItemC("memory", 23)], [<item:the_vault:mystery_hostile_egg> * 2, <item:the_vault:gem_echo> * 4, <item:the_vault:vault_gold> * 16, <item:the_vault:inscription_piece> * 16]);
+JEI.addIngredient(runeItemC("memory", 23));
+
+// mushroom
+inscription.addRecipe([runeItemO("mush_room", 2)], [<item:the_vault:living_chest_scroll> * 5, <item:the_vault:vault_gold> * 16, <item:the_vault:inscription_piece> * 32, <item:the_vault:gem_echo> * 4]);
+JEI.addIngredient(runeItemO("mush_room", 2));
+// blacksmith
+inscription.addRecipe([runeItemO("blacksmith", 1)], [<item:the_vault:ornate_chest_scroll> * 5, <item:the_vault:vault_gold> * 16, <item:the_vault:inscription_piece> * 32, <item:the_vault:gem_echo> * 4]);
+JEI.addIngredient(runeItemO("blacksmith", 1));
+// library
+inscription.addRecipe([runeItemO("library", 3)], [<item:the_vault:gilded_chest_scroll> * 5, <item:the_vault:vault_gold> * 16, <item:the_vault:inscription_piece> * 32, <item:the_vault:gem_echo> * 4]);
+JEI.addIngredient(runeItemO("library", 3));
+// cove
+inscription.addRecipe([runeItemO("cove", 4)], [<item:the_vault:bounty_pearl> * 32, <item:the_vault:inscription_piece> * 32, <item:the_vault:gem_echo> * 8]);
+JEI.addIngredient(runeItemO("cove", 4));
+// painting
+inscription.addRecipe([runeItemO("painting", 10)], [<item:the_vault:gilded_chest_scroll> * 2, <item:the_vault:ornate_chest_scroll> * 2, <item:the_vault:living_chest_scroll> * 2, <item:the_vault:wooden_chest_scroll> * 2, <item:the_vault:bounty_pearl> * 8, <item:the_vault:vault_gold> * 8, <item:the_vault:inscription_piece> * 32, <item:the_vault:gem_echo> * 4]);
+JEI.addIngredient(runeItemO("painting", 10));
+// vendor
+inscription.addRecipe([runeItemO("vendor", 12)], [<item:the_vault:inscription_piece> * 32, <item:the_vault:gem_echo> * 8]);
+JEI.addIngredient(runeItemO("vendor", 12));
+
+// Add category
+JEI.addCategory(inscription);
+
+
+
+
+// 催化剂灌注台
+
+//JEI.hideCategory("the_vault:catalyst_infusion_table");
+
+var infusion = JeiCategory.create<Custom>("catalyst_infusion_table", new TextComponent("催化剂灌注台"), <item:the_vault:catalyst_infusion_table>, [<item:the_vault:catalyst_infusion_table>]) as Custom;
+infusion.background = JeiDrawable.blank(175, 65) as JeiDrawable;
+
+infusion.addDrawable(4, 5, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(25, 5, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(46, 5, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(4, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(25, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(46, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(67, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(88, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(109, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(130, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(151, 25, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(4, 45, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(25, 45, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(46, 45, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(67, 45, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(88, 45, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(109, 45, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(130, 45, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+infusion.addDrawable(151, 45, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+
+infusion.addDrawable(88, 7, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 21, 18, 14) as JeiDrawable);
+
+infusion.addSlot(0, 5, 6, true);
+infusion.addSlot(1, 26, 6, true);
+infusion.addSlot(2, 47, 6, true);
+
+infusion.addSlot(3, 5, 26, false);
+infusion.addSlot(4, 26, 26, false);
+infusion.addSlot(5, 47, 26, false);
+infusion.addSlot(6, 68, 26, false);
+infusion.addSlot(7, 89, 26, false);
+infusion.addSlot(8, 110, 26, false);
+infusion.addSlot(9, 131, 26, false);
+infusion.addSlot(10, 152, 26, false);
+infusion.addSlot(11, 5, 46, false);
+infusion.addSlot(12, 26, 46, false);
+
+function infusionCatalystItem(model as int, modifier as string) as IItemStack {
+  return <item:the_vault:vault_catalyst_infused>.withTag({model: model, size: 10 as int, modifiers: [modifier, "the_vault:challenge_stack"]});
+}
+
+// recipe
+infusion.addRecipe([infusionCatalystItem(1, "the_vault:wooden_cascade"),
+infusionCatalystItem(2, "the_vault:gilded_cascade"),
+infusionCatalystItem(4, "the_vault:ornate_cascade"),
+infusionCatalystItem(3, "the_vault:living_cascade"),
+infusionCatalystItem(6, "the_vault:extended"),
+infusionCatalystItem(7, "the_vault:xp_gain"),
+infusionCatalystItem(5, "the_vault:coin_cascade"),
+infusionCatalystItem(8, "the_vault:plentiful"),
+infusionCatalystItem(9, "the_vault:soul_boost"),
+infusionCatalystItem(15, "the_vault:more_mobs_cata")],
+[<item:the_vault:vault_catalyst_fragment> * 9, <item:the_vault:gem_benitoite> * 4, <item:the_vault:dreamstone> * 4]);
+
+JEI.addCategory(infusion);
+
+
+
+
+// Scavenger Items
+
+var scavenger = JeiCategory.create<Custom>("scavenger", new TextComponent("拾荒者物品"), <item:the_vault:scavenger_altar>, [<item:the_vault:scavenger_altar>]) as Custom;
+scavenger.background = JeiDrawable.blank(140, 25) as JeiDrawable;
+
+scavenger.addDrawable(4, 4, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+scavenger.addDrawable(52, 4, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+scavenger.addDrawable(73, 4, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+scavenger.addDrawable(94, 4, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+scavenger.addDrawable(115, 4, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+
+scavenger.addDrawable(25, 4, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 62, 93, 21, 15) as JeiDrawable);
+
+scavenger.addSlot(0, 5, 5, true);
+scavenger.addSlot(1, 53, 5, false);
+scavenger.addSlot(2, 74, 5, false);
+scavenger.addSlot(3, 95, 5, false);
+scavenger.addSlot(4, 116, 5, false);
+scavenger.addSlot(5, 137, 5, false);
+
+function scavengerItem(item as string, chance as float) as IItemStack {
+  return <item:${item}>.withTag({display: {Lore: ["[{\"text\":\"\",\"italic\":false,\"color\":\"gray\"}]", "[{\"text\":\"概率: " + chance + "%\",\"italic\":false,\"color\":\"gray\"}]"]}});
+}
+
+// recipe
+scavenger.addRecipe([scavengerItem("the_vault:scavenger_zombie_blood_vial", 13.33),
+scavengerItem("the_vault:scavenger_cracked_script", 6.67),
+scavengerItem("the_vault:scavenger_green_bangle", 3.33),
+scavengerItem("the_vault:scavenger_cracked_pearl", 1.67)], 
+[<item:the_vault:coin_pile>]);
+
+scavenger.addRecipe([scavengerItem("the_vault:scavenger_ripped_page", 26.67),
+scavengerItem("the_vault:scavenger_old_book", 13.33),
+scavengerItem("the_vault:scavenger_pottery_shard", 6.67),
+scavengerItem("the_vault:scavenger_spider_webbing_spool", 3.33)], 
+[<item:the_vault:wooden_chest>]);
+
+scavenger.addRecipe([scavengerItem("the_vault:scavenger_drowned_hide", 26.67),
+scavengerItem("the_vault:scavenger_zombie_arm", 13.33),
+scavengerItem("the_vault:scavenger_zombie_brain", 6.67),
+scavengerItem("the_vault:scavenger_creeper_eye", 3.33)], 
+[<item:the_vault:living_chest>]);
+
+scavenger.addRecipe([scavengerItem("the_vault:scavenger_empty_jar", 26.67),
+scavengerItem("the_vault:scavenger_sack", 13.33),
+scavengerItem("the_vault:scavenger_saddle_bag", 6.67),
+scavengerItem("the_vault:scavenger_wizard_wand", 3.33)], 
+[<item:the_vault:ornate_chest>]);
+
+scavenger.addRecipe([scavengerItem("the_vault:scavenger_red_scroll", 26.67),
+scavengerItem("the_vault:scavenger_spider_soul_charm", 13.33),
+scavengerItem("the_vault:scavenger_goblet", 6.67),
+scavengerItem("the_vault:scavenger_earrings", 3.33)], 
+[<item:the_vault:gilded_chest>]);
+
+scavenger.addRecipe([scavengerItem("the_vault:scavenger_skeleton_bone_shard", 16.0),
+scavengerItem("the_vault:scavenger_skeleton_wishbone", 8.0),
+scavengerItem("the_vault:scavenger_skeleton_ribcage", 4.0),
+scavengerItem("the_vault:scavenger_skeleton_skull", 2.0)], 
+[[<item:the_vault:ore_alexandrite>, <item:the_vault:ore_benitoite>, <item:the_vault:ore_larimar>, <item:the_vault:ore_black_opal>, <item:the_vault:ore_painite>, <item:the_vault:ore_iskallium>, <item:the_vault:ore_gorginite>, <item:the_vault:ore_sparkletine>, <item:the_vault:ore_ashium>, <item:the_vault:ore_bomignite>, <item:the_vault:ore_tubium>, <item:the_vault:ore_wutodie>, <item:the_vault:ore_upaline>, <item:the_vault:ore_petzanite>, <item:the_vault:ore_xenium>, <item:the_vault:ore_echo>]]);
+
+scavenger.addRecipe([scavengerItem("the_vault:scavenger_mob_green", 150.0)], 
+[<item:minecraft:zombie_head>.withTag({RepairCost: 0 as int, display: {Name: "{\"text\":\"集群怪物掉落\"}" as string, Lore: ["[{\"text\":\"宝库中击杀集群怪物掉落\",\"italic\":false,\"color\":\"gray\"}]","[{\"text\":\"详见怪物图鉴\",\"italic\":false,\"color\":\"gray\"}]"]}})]);
+scavenger.addRecipe([scavengerItem("the_vault:scavenger_mob_black", 60.0)], 
+[<item:minecraft:skeleton_skull>.withTag({RepairCost: 0 as int, display: {Name: "{\"text\":\"刺客怪物掉落\"}" as string, Lore: ["[{\"text\":\"宝库中击杀刺客怪物掉落\",\"italic\":false,\"color\":\"gray\"}]","[{\"text\":\"详见怪物图鉴\",\"italic\":false,\"color\":\"gray\"}]"]}})]);
+scavenger.addRecipe([scavengerItem("the_vault:scavenger_mob_purple", 9.0)], 
+[<item:minecraft:dragon_head>.withTag({RepairCost: 0 as int, display: {Name: "{\"text\":\"坦克怪物掉落\"}" as string, Lore: ["[{\"text\":\"宝库中击杀坦克怪物掉落\",\"italic\":false,\"color\":\"gray\"}]","[{\"text\":\"详见怪物图鉴\",\"italic\":false,\"color\":\"gray\"}]"]}})]);
+
+JEI.addCategory(scavenger);
+
+
+
+
+// Keys
+var treasureKey = JeiCategory.create<Custom>("treasure_key", new TextComponent("宝藏钥匙"), <item:the_vault:unidentified_treasure_key>, [<item:the_vault:unidentified_treasure_key>]) as Custom;
+treasureKey.background = JeiDrawable.blank(180, 30) as JeiDrawable;
+
+for i in 0 .. 9 {
+    treasureKey.addDrawable(1 + (i * 20), 5, JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+}
+
+for i in 0 .. 9 {
+    treasureKey.addSlot(i, 2 + (i * 20), 6, false);
+}
+
+// keys
+treasureKey.addRecipe([<item:the_vault:key_iskallium>, <item:the_vault:key_gorginite>, <item:the_vault:key_sparkletine>, <item:the_vault:key_ashium>, <item:the_vault:key_bomignite>, <item:the_vault:key_tubium>, <item:the_vault:key_upaline>, <item:the_vault:key_petzanite>, <item:the_vault:key_xenium>], []);
+JEI.addCategory(treasureKey);
+
+
+
+
+// Item Infos
+
+mods.jei.JEI.addDescription(<item:the_vault:old_notes>, ("记录了一些奇怪挑战的古老笔记。完成它的挑战或许能解锁某些奇特的幻形……"));
+mods.jei.JEI.addDescription(<item:the_vault:artifact_fragment>, ("将重复的文物丢进火中就能将它烧成文物碎片。4个文物碎片可以合成1个未鉴定的文物。"));
+
+
+
+// Crystal Recipes
+
+var crystal = JeiCategory.create<Custom>("vault_crystal_recipe", new TextComponent("宝库水晶配方"), <item:the_vault:vault_altar>, [<item:the_vault:vault_altar>]) as Custom;
+crystal.background = JeiDrawable.blank(175, 135) as JeiDrawable;
+
+for i in 0 .. 6 {
+    crystal.addDrawable(4, 5 + (i * 21), JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+    crystal.addDrawable(26, 5 + (i * 21), JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+    crystal.addDrawable(47, 5 + (i * 21), JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+    crystal.addDrawable(68, 5 + (i * 21), JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+    crystal.addDrawable(89, 5 + (i * 21), JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+    crystal.addDrawable(110, 5 + (i * 21), JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+    crystal.addDrawable(131, 5 + (i * 21), JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+    crystal.addDrawable(152, 5 + (i * 21), JeiDrawable.of(new ResourceLocation("create", "textures/gui/jei/widgets.png") as ResourceLocation, 0, 0, 18, 18) as JeiDrawable);
+}
+
+for i in 0 .. 6 {
+    for column in 0 .. 8 {
+        crystal.addSlot(8 * i + column, 6 + (column * 21), 6 + (i * 21), true);
+    }
+}
+
+function crystalItem(item as string, level as string, pool as string) as IItemStack {
+  return <item:${item}>.withTag({display: {Lore: ["[{\"text\":\"等级: \",\"italic\":false,\"color\":\"white\",\"bold\":true},{\"text\":\""+ level + "\",\"color\":\"white\",\"bold\":false},{\"text\":\"\",\"color\":\"dark_purple\",\"bold\":false}]" as string, "[{\"text\":\"随机池: \",\"italic\":false,\"color\":\"white\",\"bold\":true},{\"text\":\"" + pool +"\",\"color\":\"white\",\"bold\":false}]" as string]}});
+}
+
+// Resource
+crystal.addRecipe([], [
+  [crystalItem("minecraft:cobblestone", 0, "资源")],
+  [crystalItem("minecraft:diorite", 0, "资源")],
+  [crystalItem("minecraft:andesite", 0, "资源")],
+  [crystalItem("minecraft:granite", 0, "资源")],
+  [crystalItem("minecraft:dirt", 0, "资源")],
+  [crystalItem("minecraft:stone", 10, "资源")],
+  [crystalItem("minecraft:gravel", 10, "资源")],
+  [crystalItem("minecraft:sand", 10, "资源"), crystalItem("minecraft:red_sand", 10, "资源")],
+  [
+    crystalItem("minecraft:oak_log", 10, "资源"),
+    crystalItem("minecraft:spruce_log", 10, "资源"),
+    crystalItem("minecraft:birch_log", 10, "资源"),
+    crystalItem("minecraft:jungle_log", 10, "资源"),
+    crystalItem("minecraft:acacia_log", 10, "资源"),
+    crystalItem("minecraft:dark_oak_log", 10, "资源")
+  ],
+  [crystalItem("minecraft:moss_block", 10, "资源")],
+  [
+    crystalItem("minecraft:white_wool", 10, "资源"), crystalItem("minecraft:orange_wool", 10, "资源"),
+    crystalItem("minecraft:magenta_wool", 10, "资源"), crystalItem("minecraft:light_blue_wool", 10, "资源"),
+    crystalItem("minecraft:yellow_wool", 10, "资源"), crystalItem("minecraft:lime_wool", 10, "资源"),
+    crystalItem("minecraft:pink_wool", 10, "资源"), crystalItem("minecraft:gray_wool", 10, "资源"),
+    crystalItem("minecraft:light_gray_wool", 10, "资源"), crystalItem("minecraft:cyan_wool", 10, "资源"),
+    crystalItem("minecraft:purple_wool", 10, "资源"), crystalItem("minecraft:blue_wool", 10, "资源"),
+    crystalItem("minecraft:brown_wool", 10, "资源"), crystalItem("minecraft:green_wool", 10, "资源"),
+    crystalItem("minecraft:red_wool", 10, "资源"), crystalItem("minecraft:black_wool", 10, "资源")
+  ],
+  [
+    crystalItem("minecraft:glass", 10, "资源"),
+    crystalItem("minecraft:white_stained_glass", 10, "资源"),
+    crystalItem("minecraft:orange_stained_glass", 10, "资源"),
+    crystalItem("minecraft:magenta_stained_glass", 10, "资源"),
+    crystalItem("minecraft:light_blue_stained_glass", 10, "资源"),
+    crystalItem("minecraft:yellow_stained_glass", 10, "资源"),
+    crystalItem("minecraft:lime_stained_glass", 10, "资源"),
+    crystalItem("minecraft:pink_stained_glass", 10, "资源"),
+    crystalItem("minecraft:gray_stained_glass", 10, "资源"),
+    crystalItem("minecraft:light_gray_stained_glass", 10, "资源"),
+    crystalItem("minecraft:cyan_stained_glass", 10, "资源"),
+    crystalItem("minecraft:purple_stained_glass", 10, "资源"),
+    crystalItem("minecraft:blue_stained_glass", 10, "资源"),
+    crystalItem("minecraft:brown_stained_glass", 10, "资源"),
+    crystalItem("minecraft:green_stained_glass", 10, "资源"),
+    crystalItem("minecraft:red_stained_glass", 10, "资源"),
+    crystalItem("minecraft:black_stained_glass", 10, "资源")
+  ],
+  [crystalItem("minecraft:smooth_stone", 10, "资源")],
+  [crystalItem("minecraft:bricks", 10, "资源")],
+  [crystalItem("minecraft:netherrack", 10, "资源")],
+  [crystalItem("minecraft:soul_sand", 10, "资源")],
+  [crystalItem("minecraft:basalt", 10, "资源")],
+  [
+    crystalItem("minecraft:white_terracotta", 10, "资源"),
+    crystalItem("minecraft:orange_terracotta", 10, "资源"),
+    crystalItem("minecraft:magenta_terracotta", 10, "资源"),
+    crystalItem("minecraft:light_blue_terracotta", 10, "资源"),
+    crystalItem("minecraft:yellow_terracotta", 10, "资源"),
+    crystalItem("minecraft:lime_terracotta", 10, "资源"),
+    crystalItem("minecraft:pink_terracotta", 10, "资源"),
+    crystalItem("minecraft:gray_terracotta", 10, "资源"),
+    crystalItem("minecraft:light_gray_terracotta", 10, "资源"),
+    crystalItem("minecraft:cyan_terracotta", 10, "资源"),
+    crystalItem("minecraft:purple_terracotta", 10, "资源"),
+    crystalItem("minecraft:blue_terracotta", 10, "资源"),
+    crystalItem("minecraft:brown_terracotta", 10, "资源"),
+    crystalItem("minecraft:green_terracotta", 10, "资源"),
+    crystalItem("minecraft:red_terracotta", 10, "资源"),
+    crystalItem("minecraft:black_terracotta", 10, "资源"),
+    crystalItem("minecraft:terracotta", 10, "资源")
+  ],
+  [
+    crystalItem("minecraft:deepslate", 10, "资源"),
+    crystalItem("minecraft:cobbled_deepslate", 10, "资源")
+  ],
+  [crystalItem("minecraft:tuff", 10, "资源")],
+  [crystalItem("minecraft:mossy_cobblestone", 20, "资源")],
+  [crystalItem("minecraft:obsidian", 20, "资源")],
+  [crystalItem("minecraft:ice", 20, "资源")],
+  [
+    crystalItem("minecraft:white_concrete", 20, "资源"),
+    crystalItem("minecraft:orange_concrete", 20, "资源"),
+    crystalItem("minecraft:magenta_concrete", 20, "资源"),
+    crystalItem("minecraft:light_blue_concrete", 20, "资源"),
+    crystalItem("minecraft:yellow_concrete", 20, "资源"),
+    crystalItem("minecraft:lime_concrete", 20, "资源"),
+    crystalItem("minecraft:pink_concrete", 20, "资源"),
+    crystalItem("minecraft:gray_concrete", 20, "资源"),
+    crystalItem("minecraft:light_gray_concrete", 20, "资源"),
+    crystalItem("minecraft:cyan_concrete", 20, "资源"),
+    crystalItem("minecraft:purple_concrete", 20, "资源"),
+    crystalItem("minecraft:blue_concrete", 20, "资源"),
+    crystalItem("minecraft:brown_concrete", 20, "资源"),
+    crystalItem("minecraft:green_concrete", 20, "资源"),
+    crystalItem("minecraft:red_concrete", 20, "资源"),
+    crystalItem("minecraft:black_concrete", 20, "资源")
+  ],
+  [
+    crystalItem("minecraft:white_concrete_powder", 20, "资源"),
+    crystalItem("minecraft:orange_concrete_powder", 20, "资源"),
+    crystalItem("minecraft:magenta_concrete_powder", 20, "资源"),
+    crystalItem("minecraft:light_blue_concrete_powder", 20, "资源"),
+    crystalItem("minecraft:yellow_concrete_powder", 20, "资源"),
+    crystalItem("minecraft:lime_concrete_powder", 20, "资源"),
+    crystalItem("minecraft:pink_concrete_powder", 20, "资源"),
+    crystalItem("minecraft:gray_concrete_powder", 20, "资源"),
+    crystalItem("minecraft:light_gray_concrete_powder", 20, "资源"),
+    crystalItem("minecraft:cyan_concrete_powder", 20, "资源"),
+    crystalItem("minecraft:purple_concrete_powder", 20, "资源"),
+    crystalItem("minecraft:blue_concrete_powder", 20, "资源"),
+    crystalItem("minecraft:brown_concrete_powder", 20, "资源"),
+    crystalItem("minecraft:green_concrete_powder", 20, "资源"),
+    crystalItem("minecraft:red_concrete_powder", 20, "资源"),
+    crystalItem("minecraft:black_concrete_powder", 20, "资源")
+  ],
+  [crystalItem("minecraft:blackstone", 20, "资源")],
+  [crystalItem("minecraft:dripstone_block", 20, "资源")],
+  [crystalItem("minecraft:prismarine", 20, "资源")],
+  [
+    crystalItem("minecraft:oak_log", 50, "资源"),
+    crystalItem("minecraft:oak_wood", 50, "资源"),
+    crystalItem("minecraft:stripped_oak_log", 50, "资源"),
+    crystalItem("minecraft:stripped_oak_wood", 50, "资源")
+  ],
+  [
+    crystalItem("minecraft:spruce_log", 50, "资源"),
+    crystalItem("minecraft:spruce_wood", 50, "资源"),
+    crystalItem("minecraft:stripped_spruce_log", 50, "资源"),
+    crystalItem("minecraft:stripped_spruce_wood", 50, "资源")
+  ],
+  [
+    crystalItem("minecraft:birch_log", 50, "资源"),
+    crystalItem("minecraft:birch_wood", 50, "资源"),
+    crystalItem("minecraft:stripped_birch_log", 50, "资源"),
+    crystalItem("minecraft:stripped_birch_wood", 50, "资源")
+  ],
+  [
+    crystalItem("minecraft:jungle_log", 50, "资源"),
+    crystalItem("minecraft:jungle_wood", 50, "资源"),
+    crystalItem("minecraft:stripped_jungle_log", 50, "资源"),
+    crystalItem("minecraft:stripped_jungle_wood", 50, "资源")
+  ],
+  [
+    crystalItem("minecraft:acacia_log", 50, "资源"),
+    crystalItem("minecraft:acacia_wood", 50, "资源"),
+    crystalItem("minecraft:stripped_acacia_log", 50, "资源"),
+    crystalItem("minecraft:stripped_acacia_wood", 50, "资源")
+  ],
+  [
+    crystalItem("minecraft:dark_oak_log", 50, "资源"),
+    crystalItem("minecraft:dark_oak_wood", 50, "资源"),
+    crystalItem("minecraft:stripped_dark_oak_log", 50, "资源"),
+    crystalItem("minecraft:stripped_dark_oak_wood", 50, "资源")
+  ],
+  [crystalItem("minecraft:purpur_block", 50, "资源")],
+  [crystalItem("minecraft:mycelium", 50, "资源")],
+  [crystalItem("minecraft:end_stone", 50, "资源")],
+  [crystalItem("minecraft:magma_block", 50, "资源")],
+  [crystalItem("minecraft:nether_wart_block", 50, "资源")],
+  [crystalItem("minecraft:warped_wart_block", 50, "资源")],
+  [crystalItem("minecraft:shroomlight", 50, "资源")],
+  [crystalItem("minecraft:podzol", 50, "资源")],
+  [crystalItem("minecraft:blue_ice", 75, "资源")],
+  [crystalItem("minecraft:crimson_stem", 75, "资源")],
+  [crystalItem("minecraft:warped_stem", 75, "资源")],
+  [crystalItem("minecraft:crying_obsidian", 75, "资源")],
+  [crystalItem("minecraft:calcite", 75, "资源")],
+  [crystalItem("minecraft:rooted_dirt", 75, "资源")]]);
+
+
+// Mob
+crystal.addRecipe([], [
+  [crystalItem("minecraft:stick", 0, "生物")],
+  [crystalItem("minecraft:string", 10, "生物")],
+  [crystalItem("minecraft:rotten_flesh", 10, "生物")],
+  [crystalItem("minecraft:bone", 10, "生物")],
+  [crystalItem("minecraft:spider_eye", 10, "生物")],
+  [crystalItem("minecraft:arrow", 10, "生物")],
+  [crystalItem("minecraft:feather", 10, "生物")],
+  [crystalItem("minecraft:porkchop", 10, "生物")],
+  [crystalItem("minecraft:beef", 10, "生物")],
+  [crystalItem("minecraft:chicken", 10, "生物")],
+  [crystalItem("minecraft:rabbit", 10, "生物")],
+  [crystalItem("minecraft:slime_ball", 10, "生物")],
+  [crystalItem("minecraft:egg", 10, "生物")],
+  [crystalItem("minecraft:leather", 10, "生物")],
+  [crystalItem("minecraft:rabbit_hide", 10, "生物")],
+  [
+    crystalItem("minecraft:white_dye", 10, "生物"),
+    crystalItem("minecraft:orange_dye", 10, "生物"),
+    crystalItem("minecraft:magenta_dye", 10, "生物"),
+    crystalItem("minecraft:light_blue_dye", 10, "生物"),
+    crystalItem("minecraft:yellow_dye", 10, "生物"),
+    crystalItem("minecraft:lime_dye", 10, "生物"),
+    crystalItem("minecraft:pink_dye", 10, "生物"),
+    crystalItem("minecraft:gray_dye", 10, "生物"),
+    crystalItem("minecraft:light_gray_dye", 10, "生物"),
+    crystalItem("minecraft:cyan_dye", 10, "生物"),
+    crystalItem("minecraft:purple_dye", 10, "生物"),
+    crystalItem("minecraft:blue_dye", 10, "生物"),
+    crystalItem("minecraft:brown_dye", 10, "生物"),
+    crystalItem("minecraft:green_dye", 10, "生物"),
+    crystalItem("minecraft:red_dye", 10, "生物"),
+    crystalItem("minecraft:black_dye", 10, "生物")
+  ],
+  [crystalItem("minecraft:mutton", 10, "生物")],
+  [crystalItem("minecraft:salmon", 10, "生物")],
+  [crystalItem("minecraft:cod", 10, "生物")],
+  [crystalItem("minecraft:gunpowder", 10, "生物")],
+  [crystalItem("minecraft:honey_bottle", 20, "生物")],
+  [crystalItem("minecraft:blaze_rod", 20, "生物")],
+  [crystalItem("minecraft:ender_pearl", 20, "生物")],
+  [crystalItem("minecraft:rabbit_foot", 20, "生物")],
+  [crystalItem("minecraft:honeycomb", 20, "生物")],
+  [crystalItem("minecraft:ink_sac", 20, "生物")],
+  [crystalItem("minecraft:glow_ink_sac", 20, "生物")],
+  [crystalItem("minecraft:pufferfish", 20, "生物")],
+  [crystalItem("minecraft:ghast_tear", 50, "生物")],
+  [crystalItem("minecraft:magma_cream", 50, "生物")],
+  [crystalItem("minecraft:nautilus_shell", 50, "生物")],
+  [crystalItem("minecraft:turtle_egg", 50, "生物")],
+  [crystalItem("minecraft:wither_skeleton_skull", 50, "生物")],
+  [crystalItem("minecraft:phantom_membrane", 75, "生物")]]);
+
+// Farmable Items
+crystal.addRecipe([], [
+  [crystalItem("minecraft:wheat_seeds", 0, "种物")],
+  [
+    crystalItem("minecraft:oak_leaves", 0, "种物"),
+    crystalItem("minecraft:spruce_leaves", 0, "种物"),
+    crystalItem("minecraft:birch_leaves", 0, "种物"),
+    crystalItem("minecraft:jungle_leaves", 0, "种物"),
+    crystalItem("minecraft:acacia_leaves", 0, "种物"),
+    crystalItem("minecraft:dark_oak_leaves", 0, "种物"),
+    crystalItem("minecraft:azalea_leaves", 0, "种物"),
+    crystalItem("minecraft:flowering_azalea_leaves", 0, "种物"),
+    crystalItem("ecologics:coconut_leaves", 0, "种物"),
+    crystalItem("ecologics:walnut_leaves", 0, "种物"),
+    crystalItem("the_vault:velara_leaves", 0, "种物"),
+    crystalItem("twigs:bamboo_leaves", 0, "种物"),
+    crystalItem("quark:red_blossom_leaves", 0, "种物"),
+    crystalItem("quark:yellow_blossom_leaves", 0, "种物"),
+    crystalItem("quark:pink_blossom_leaves", 0, "种物"),
+    crystalItem("quark:orange_blossom_leaves", 0, "种物"),
+    crystalItem("quark:lavender_blossom_leaves", 0, "种物"),
+    crystalItem("quark:blue_blossom_leaves", 0, "种物"),
+    crystalItem("architects_palette:twisted_leaves", 0, "种物")
+  ],
+  [crystalItem("minecraft:sugar_cane", 10, "种物")],
+  [crystalItem("minecraft:carrot", 10, "种物")],
+  [crystalItem("minecraft:potato", 10, "种物")],
+  [crystalItem("minecraft:poisonous_potato", 10, "种物")],
+  [crystalItem("minecraft:wheat", 10, "种物")],
+  [crystalItem("minecraft:kelp", 10, "种物")],
+  [crystalItem("minecraft:cactus", 10, "种物")],
+  [crystalItem("minecraft:bamboo", 10, "种物")],
+  [crystalItem("minecraft:vine", 10, "种物")],
+  [crystalItem("minecraft:beetroot", 10, "种物")],
+  [crystalItem("minecraft:snowball", 10, "种物")],
+  [crystalItem("minecraft:pumpkin", 10, "种物")],
+  [crystalItem("minecraft:melon", 10, "种物")],
+  [crystalItem("minecraft:azalea", 10, "种物"), crystalItem("minecraft:flowering_azalea", 10, "种物")],
+  [crystalItem("minecraft:sea_pickle", 10, "种物")],
+  [
+    crystalItem("minecraft:dandelion", 10, "种物"),
+    crystalItem("minecraft:poppy", 10, "种物"),
+    crystalItem("minecraft:blue_orchid", 10, "种物"),
+    crystalItem("minecraft:allium", 10, "种物"),
+    crystalItem("minecraft:azure_bluet", 10, "种物"),
+    crystalItem("minecraft:oxeye_daisy", 10, "种物"),
+    crystalItem("minecraft:cornflower", 10, "种物"),
+    crystalItem("minecraft:lily_of_the_valley", 10, "种物")
+  ],
+  [crystalItem("minecraft:beetroot_seeds", 10, "种物")],
+  [crystalItem("minecraft:sweet_berries", 10, "种物")],
+  [crystalItem("minecraft:apple", 10, "种物")],
+  [crystalItem("minecraft:seagrass", 10, "种物")],
+  [crystalItem("minecraft:cocoa_beans", 10, "种物")],
+  [crystalItem("minecraft:brown_mushroom", 20, "种物")],
+  [crystalItem("minecraft:red_mushroom", 20, "种物")],
+  [crystalItem("minecraft:cocoa_beans", 20, "种物")],
+  [
+    crystalItem("minecraft:red_tulip", 20, "种物"),
+    crystalItem("minecraft:orange_tulip", 20, "种物"),
+    crystalItem("minecraft:white_tulip", 20, "种物"),
+    crystalItem("minecraft:pink_tulip", 20, "种物")
+  ],
+  [
+    crystalItem("minecraft:sunflower", 20, "种物"),
+    crystalItem("minecraft:rose_bush", 20, "种物"),
+    crystalItem("minecraft:peony", 20, "种物"),
+    crystalItem("minecraft:lilac", 20, "种物")
+  ],
+  [crystalItem("minecraft:glow_lichen", 20, "种物")],
+  [crystalItem("minecraft:clay_ball", 20, "种物")],
+  [crystalItem("minecraft:brick", 20, "种物")],
+  [crystalItem("minecraft:glow_berries", 20, "种物")],
+  [crystalItem("minecraft:nether_wart", 20, "种物")],
+  [crystalItem("minecraft:twisting_vines", 50, "种物")],
+  [crystalItem("minecraft:weeping_vines", 50, "种物")],
+  [crystalItem("minecraft:big_dripleaf", 50, "种物")],
+  [crystalItem("minecraft:crimson_fungus", 50, "种物")],
+  [crystalItem("minecraft:warped_fungus", 50, "种物")],
+  [crystalItem("minecraft:chorus_fruit", 50, "种物")],
+  [crystalItem("minecraft:lily_pad", 50, "种物")],
+  [crystalItem("minecraft:wither_rose", 75, "种物")]]);
+
+// Misc
+crystal.addRecipe([], [
+  [crystalItem("minecraft:iron_ingot", 0, "杂项")],
+  [crystalItem("minecraft:copper_ingot", 0, "杂项")],
+  [
+    crystalItem("minecraft:coal", 0, "杂项"),
+    crystalItem("minecraft:charcoal", 0, "杂项")
+  ],
+  [crystalItem("minecraft:pointed_dripstone", 10, "杂项")],
+  [crystalItem("minecraft:gold_ingot", 10, "杂项")],
+  [crystalItem("minecraft:redstone", 10, "杂项")],
+  [crystalItem("minecraft:emerald", 10, "杂项")],
+  [crystalItem("minecraft:lapis_lazuli", 10, "杂项")],
+  [crystalItem("minecraft:amethyst_shard", 10, "杂项")],
+  [crystalItem("minecraft:diamond", 10, "杂项")],
+  [crystalItem("minecraft:spore_blossom", 10, "杂项")],
+  [crystalItem("minecraft:glowstone_dust", 20, "杂项")],
+  [crystalItem("minecraft:quartz", 20, "杂项")],
+  [crystalItem("minecraft:name_tag", 20, "杂项")],
+  [crystalItem("minecraft:prismarine_shard", 50, "杂项")],
+  [crystalItem("minecraft:prismarine_crystals", 50, "杂项")],
+  [crystalItem("minecraft:chorus_flower", 50, "杂项")],
+  [
+    crystalItem("minecraft:dead_brain_coral", 50, "杂项"),
+    crystalItem("minecraft:dead_bubble_coral", 50, "杂项"),
+    crystalItem("minecraft:dead_fire_coral", 50, "杂项"),
+    crystalItem("minecraft:dead_horn_coral", 50, "杂项"),
+    crystalItem("minecraft:dead_tube_coral", 50, "杂项"),
+    crystalItem("minecraft:dead_tube_coral_fan", 50, "杂项"),
+    crystalItem("minecraft:dead_brain_coral_fan", 50, "杂项"),
+    crystalItem("minecraft:dead_bubble_coral_fan", 50, "杂项"),
+    crystalItem("minecraft:dead_fire_coral_fan", 50, "杂项"),
+    crystalItem("minecraft:dead_horn_coral_fan", 50, "杂项")
+  ],
+  [
+    crystalItem("minecraft:brain_coral", 50, "杂项"),
+    crystalItem("minecraft:bubble_coral", 50, "杂项"),
+    crystalItem("minecraft:fire_coral", 50, "杂项"),
+    crystalItem("minecraft:horn_coral", 50, "杂项"),
+    crystalItem("minecraft:tube_coral", 50, "杂项"),
+    crystalItem("minecraft:tube_coral_fan", 50, "杂项"),
+    crystalItem("minecraft:brain_coral_fan", 50, "杂项"),
+    crystalItem("minecraft:bubble_coral_fan", 50, "杂项"),
+    crystalItem("minecraft:fire_coral_fan", 50, "杂项"),
+    crystalItem("minecraft:horn_coral_fan", 50, "杂项")
+  ],
+  [crystalItem("minecraft:totem_of_undying", 50, "杂项")],
+  [crystalItem("minecraft:saddle", 50, "杂项")],
+  [crystalItem("minecraft:cobweb", 50, "杂项")],
+  [crystalItem("minecraft:sponge", 75, "杂项")],
+  [crystalItem("minecraft:nether_star", 75, "杂项")],
+  [crystalItem("minecraft:trident", 75, "杂项")],
+  [
+    crystalItem("minecraft:music_disc_13", 90, "杂项"),
+    crystalItem("minecraft:music_disc_cat", 90, "杂项"),
+    crystalItem("minecraft:music_disc_blocks", 90, "杂项"),
+    crystalItem("minecraft:music_disc_chirp", 90, "杂项"),
+    crystalItem("minecraft:music_disc_far", 90, "杂项"),
+    crystalItem("minecraft:music_disc_mall", 90, "杂项"),
+    crystalItem("minecraft:music_disc_mellohi", 90, "杂项"),
+    crystalItem("minecraft:music_disc_stal", 90, "杂项"),
+    crystalItem("minecraft:music_disc_strad", 90, "杂项"),
+    crystalItem("minecraft:music_disc_ward", 90, "杂项"),
+    crystalItem("minecraft:music_disc_11", 90, "杂项"),
+    crystalItem("minecraft:music_disc_wait", 90, "杂项"),
+    crystalItem("minecraft:music_disc_otherside", 90, "杂项"),
+    crystalItem("minecraft:music_disc_pigstep", 90, "杂项")
+  ]]);
+
+// Add category
+JEI.addCategory(crystal);

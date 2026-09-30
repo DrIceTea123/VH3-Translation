@@ -1,0 +1,1757 @@
+{
+  "deckResearchName": "Vault Decks",
+  "deckRecipes": [
+    {
+      "tab": "decks",
+      "id": "the_vault:starter",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"starter\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:gem_pog"
+        },
+        {
+          "AMOUNT": 32,
+          "ITEM": "minecraft:leather"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:gem_black_opal"
+        },
+        {
+          "AMOUNT": 4,
+          "ITEM": "the_vault:vault_gold"
+        }
+      ]
+    },
+    {
+      "tab": "decks",
+      "id": "the_vault:double",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"double\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:gem_pog"
+        },
+        {
+          "AMOUNT": 32,
+          "ITEM": "minecraft:leather"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:gem_black_opal"
+        },
+        {
+          "AMOUNT": 8,
+          "ITEM": "the_vault:vault_gold"
+        }
+      ]
+    },
+    {
+      "tab": "decks",
+      "id": "the_vault:large",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"large\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:gem_pog"
+        },
+        {
+          "AMOUNT": 32,
+          "ITEM": "minecraft:leather"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:gem_black_opal"
+        },
+        {
+          "AMOUNT": 8,
+          "ITEM": "the_vault:vault_gold"
+        }
+      ]
+    },
+
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "purchase_vendoor",
+        "renderer": {
+          "title": {
+            "text": "\u5728\u5546\u5e97\u5ba4\u4e2d\u82b1\u8d39\u91d1\u5e01"
+          },
+          "type": "named"
+        },
+        "children": [],
+        "operating": false,
+        "countCurrency": true,
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 500,
+            "type": "constant"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "shop_pedestal_purchase"
+      },
+      "id": "the_vault:merchant_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"merchant\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "complete_vault_extending_timer_10_minutes",
+        "renderer": {
+          "title": {
+            "text": "\u5b8c\u6210\u4e00\u4e2a\u521d\u59cb\u8ba1\u65f6\u5668\u81f3\u5c11\u5ef6\u957f\u4e8610.5\u5206\u949f\u7684\u5b9d\u5e93"
+          },
+          "type": "named"
+        },
+        "children": [],
+        "operating": false,
+        "completion": [
+          "COMPLETED"
+        ],
+        "modifiers": [
+          {
+            "id": "the_vault:extended",
+            "count": 7,
+            "predicate": "GREATER_OR_EQUAL_TO"
+          }
+        ],
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 1,
+            "type": "constant"
+          },
+          "type": "target"
+        },
+        "type": "finish_vault"
+      },
+      "id": "the_vault:extended_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"extended\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "loot_3000_gilded_chests",
+        "renderer": {
+          "title": {
+            "text": "\u641c\u522e\u9540\u91d1\u5b9d\u7bb1"
+          },
+          "type": "named"
+        },
+        "children": [],
+        "operating": false,
+        "filter": "the_vault:gilded_chest",
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 3000,
+            "type": "constant"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "loot_chest"
+      },
+      "id": "the_vault:gilded_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"gilded\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "loot_3000_ornate_chests",
+        "renderer": {
+          "title": {
+            "text": "\u641c\u522e\u534e\u4e3d\u5b9d\u7bb1"
+          },
+          "type": "named"
+        },
+        "children": [],
+        "operating": false,
+        "filter": "the_vault:ornate_chest",
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 3000,
+            "type": "constant"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "loot_chest"
+      },
+      "id": "the_vault:ornate_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"ornate\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "loot_3000_living_chests",
+        "renderer": {
+          "title": {
+            "text": "\u641c\u522e\u6d3b\u5316\u5b9d\u7bb1"
+          },
+          "type": "named"
+        },
+        "children": [],
+        "operating": false,
+        "filter": "the_vault:living_chest",
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 3000,
+            "type": "constant"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "loot_chest"
+      },
+      "id": "the_vault:living_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"living\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "repair_25_items_inside_a_vault",
+        "renderer": {
+          "title": {
+            "text": "\u5728\u5355\u6b21\u5b9d\u5e93\u4e2d\u4fee\u590d\u7269\u54c1"
+          },
+          "type": "named"
+        },
+        "children": [
+          {
+            "children": [],
+            "operating": false,
+            "filter": "the_vault:repair_core",
+            "counter": {
+              "variables": {},
+              "target": {
+                "count": 25,
+                "type": "constant"
+              },
+              "predicate": "GREATER_OR_EQUAL_TO",
+              "type": "target"
+            },
+            "type": "anvil"
+          }
+        ],
+        "mode": "ALL",
+        "type": "multi_vault"
+      },
+      "id": "the_vault:anvil_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"anvil\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "open_20_treasure_doors",
+        "renderer": {
+          "title": {
+            "text": "\u6253\u5f0020\u6b21\u5b9d\u85cf\u95e8"
+          },
+          "type": "named"
+        },
+        "children": [],
+        "operating": false,
+        "pre": "the_vault:treasure_door[open=false]",
+        "post": "the_vault:treasure_door[open=true]",
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 20,
+            "type": "constant"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "interact_block"
+      },
+      "id": "the_vault:treasure_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"treasure\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "complete_vault_killing_less_than_100_mobs",
+        "renderer": {
+          "title": {
+            "text": "\u51fb\u6740\u5c11\u4e8e100\u53ea\u602a\u7269\u5e76\u5b8c\u6210\u5b9d\u5e93"
+          },
+          "type": "named"
+        },
+        "children": [
+          {
+            "children": [
+              {
+                "children": [],
+                "operating": false,
+                "filter": "@the_vault:mobs",
+                "counter": {
+                  "variables": {},
+                  "target": {
+                    "count": 100,
+                    "type": "constant"
+                  },
+                  "predicate": "LESS_THAN",
+                  "type": "target"
+                },
+                "type": "kill_entity"
+              },
+              {
+                "children": [],
+                "operating": false,
+                "completion": [
+                  "COMPLETED"
+                ],
+                "counter": {
+                  "variables": {},
+                  "target": {
+                    "count": 1,
+                    "type": "constant"
+                  },
+                  "type": "target"
+                },
+                "type": "finish_vault"
+              }
+            ],
+            "type": "single_vault"
+          }
+        ],
+        "operating": false,
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 1,
+            "type": "constant"
+          },
+          "type": "target"
+        },
+        "type": "repeated"
+      },
+      "id": "the_vault:shadow_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"shadow\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "complete_25_bounties",
+        "renderer": {
+          "title": {
+            "text": "\u5b8c\u6210\u60ac\u8d4f"
+          },
+          "type": "named"
+        },
+        "children": [],
+        "operating": false,
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 50,
+            "type": "constant"
+          },
+          "type": "target"
+        },
+        "type": "complete_bounty"
+      },
+      "id": "the_vault:relic_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"relic\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "complete_25_rune_boss",
+        "renderer": {
+          "title": {
+            "text": "\u63d0\u4ea4\u81f3\u5c1125\u4e2a\u7b26\u6587\u5e76\u51fb\u8d25\u7b26\u6587\u9996\u9886"
+          },
+          "type": "named"
+        },
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 1,
+            "type": "constant"
+          },
+          "type": "target"
+        },
+        "type": "rune_boss_objective",
+        "requiredRunes": 25
+      },
+      "id": "the_vault:runic_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"runic\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "complete_15_xmark_rooms",
+        "renderer": {
+          "title": {
+            "text": "\u5b8c\u6210X\u6807\u8bb0\u623f\u95f4"
+          },
+          "type": "named"
+        },
+        "challengeId": "x-mark",
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 15,
+            "type": "constant"
+          },
+          "type": "target"
+        },
+        "type": "challenge_room_complete"
+      },
+      "id": "the_vault:bishop_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"bishop\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "discover_5_warehouse_rooms",
+        "renderer": {
+          "title": {
+            "text": "\u53d1\u73b0\u4ed3\u5e93\u623f\u95f4"
+          },
+          "type": "named"
+        },
+        "children": [],
+        "operating": false,
+        "filter": [
+          "the_vault:vault/rooms/omega/warehouse"
+        ],
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 5,
+            "type": "constant"
+          },
+          "type": "target"
+        },
+        "type": "find_vault_room"
+      },
+      "id": "the_vault:belt_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"belt\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "gamble_with_black_market_50_times",
+        "renderer": {
+          "title": {
+            "text": "\u4e0e\u9ed1\u5e02\u4ea4\u6613"
+          },
+          "type": "named"
+        },
+        "children": [],
+        "operating": false,
+        "requireRandom": true,
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 50,
+            "type": "constant"
+          },
+          "type": "target"
+        },
+        "type": "black_market_trade"
+      },
+      "id": "the_vault:mystery_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"mystery\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "reach_idona",
+        "renderer": {
+          "title": {
+            "text": "\u4f0a\u591a\u7eb3\u4eb2\u548c\u5ea6"
+          },
+          "type": "named"
+        },
+        "children": [],
+        "operating": false,
+        "god": "IDONA",
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 50,
+            "type": "constant"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "reach_reputation"
+      },
+      "id": "the_vault:idona_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"idona\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "reach_velara",
+        "renderer": {
+          "title": {
+            "text": "\u7ef4\u62c9\u62c9\u4eb2\u548c\u5ea6"
+          },
+          "type": "named"
+        },
+        "children": [],
+        "operating": false,
+        "god": "VELARA",
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 50,
+            "type": "constant"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "reach_reputation"
+      },
+      "id": "the_vault:velara_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"velara\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "reach_wendarr",
+        "renderer": {
+          "title": {
+            "text": "\u6587\u8fbe\u5c14\u4eb2\u548c\u5ea6"
+          },
+          "type": "named"
+        },
+        "children": [],
+        "operating": false,
+        "god": "WENDARR",
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 50,
+            "type": "constant"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "reach_reputation"
+      },
+      "id": "the_vault:wendarr_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"wendarr\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "reach_tenos",
+        "renderer": {
+          "title": {
+            "text": "\u7279\u8bfa\u65af\u4eb2\u548c\u5ea6"
+          },
+          "type": "named"
+        },
+        "children": [],
+        "operating": false,
+        "god": "TENOS",
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 50,
+            "type": "constant"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "reach_reputation"
+      },
+      "id": "the_vault:tenos_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"tenos\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "complete_50_cakes",
+        "renderer": {
+          "title": {
+            "text": "\u5403\u6389\u81f3\u5c1150\u4e2a\u86cb\u7cd5\u5e76\u5b8c\u6210\u5b9d\u5e93"
+          },
+          "type": "named"
+        },
+        "type": "single_vault",
+        "children": [
+          {
+            "id": "complete_cakes",
+            "counter": {
+              "target": {
+                "count": 50,
+                "type": "constant"
+              },
+              "type": "target"
+            },
+            "type": "cake_objective"
+          }
+        ]
+      },
+      "id": "the_vault:cake_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"cake\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "complete_15_raid_rooms",
+        "renderer": {
+          "title": {
+            "text": "\u5b8c\u6210\u88ad\u51fb\u623f\u95f4"
+          },
+          "type": "named"
+        },
+        "challengeId": "raid",
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 15,
+            "type": "constant"
+          },
+          "type": "target"
+        },
+        "type": "challenge_room_complete"
+      },
+      "id": "the_vault:pillager_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"pillager\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "kill_15_dungeon_bosses_one_vault",
+        "renderer": {
+          "title": {
+            "text": "\u5728\u4e00\u4e2a\u5b9d\u5e93\u4e2d\u51fb\u674015\u4e2a\u5730\u7262\u9996\u9886"
+          },
+          "type": "named"
+        },
+        "children": [
+          {
+            "children": [
+              {
+                "children": [],
+                "operating": false,
+                "filter": "@the_vault:mob_type/dungeon_boss",
+                "counter": {
+                  "variables": {},
+                  "target": {
+                    "count": 15,
+                    "type": "constant"
+                  },
+                  "type": "target"
+                },
+                "type": "kill_entity"
+              },
+              {
+                "children": [],
+                "operating": false,
+                "completion": ["COMPLETED"],
+                "counter": {
+                  "variables": {},
+                  "target": {
+                    "count": 1,
+                    "type": "constant"
+                  },
+                  "type": "target"
+                },
+                "type": "finish_vault"
+              }
+            ],
+            "mode": "OWNER",
+            "type": "single_vault"
+          }
+        ],
+        "operating": false,
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 1,
+            "type": "constant"
+          },
+          "type": "target"
+        },
+        "type": "repeated"
+      },
+      "id": "the_vault:arcane",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"arcane\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "complete_vault_killing_5000_mobs",
+        "renderer": {
+          "title": {
+            "text": "\u51fb\u6740\u81f3\u5c115,000\u53ea\u602a\u7269\u5e76\u5b8c\u6210\u5b9d\u5e93"
+          },
+          "type": "named"
+        },
+        "children": [
+          {
+            "children": [
+              {
+                "children": [],
+                "operating": false,
+                "filter": "@the_vault:mobs",
+                "counter": {
+                  "variables": {},
+                  "target": {
+                    "count": 5000,
+                    "type": "constant"
+                  },
+                  "predicate": "GREATER_OR_EQUAL_TO",
+                  "type": "target"
+                },
+                "type": "kill_entity"
+              },
+              {
+                "children": [],
+                "operating": false,
+                "completion": [
+                  "COMPLETED"
+                ],
+                "counter": {
+                  "variables": {},
+                  "target": {
+                    "count": 1,
+                    "type": "constant"
+                  },
+                  "type": "target"
+                },
+                "type": "finish_vault"
+              }
+            ],
+            "mode": "OWNER",
+            "type": "single_vault"
+          }
+        ],
+        "operating": false,
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 1,
+            "type": "constant"
+          },
+          "type": "target"
+        },
+        "type": "repeated"
+      },
+      "id": "the_vault:skull_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"skull\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "loot_gilded_chests",
+        "renderer": {
+          "title": {
+            "text": "\u51fb\u674015\u53ea\u7cbe\u82f1"
+          },
+          "type": "named"
+        },
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:elite",
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 15,
+            "type": "constant"
+          },
+          "type": "target"
+        },
+        "type": "kill_entity"
+      },
+      "id": "the_vault:mutant_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"mutant\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "complete_15_puzzle_rooms",
+        "renderer": {
+          "title": {
+            "text": "\u5b8c\u621015\u4e2a\u8bb0\u5fc6\u623f\u95f4"
+          },
+          "type": "named"
+        },
+        "challengeId": "memory-room",
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 15,
+            "type": "constant"
+          },
+          "type": "target"
+        },
+        "type": "challenge_room_complete"
+      },
+      "id": "the_vault:puzzle_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"puzzle\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "free_villager",
+        "renderer": {
+          "title": {
+            "text": "\u89e3\u6551\u6751\u6c11"
+          },
+          "type": "named"
+        },
+        "type": "mine_block",
+        "filter": "the_vault:barred_door[generated=true]",
+        "counter": {
+          "type": "target",
+          "target": {
+            "type": "constant",
+            "count": 10
+          }
+        }
+      },
+      "id": "the_vault:villager_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"villager\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "advanced",
+      "discoveryTask": {
+        "id": "unlock_champ",
+        "renderer": {
+          "title": {
+            "text": "\u51fb\u6740\u51a0\u519b"
+          },
+          "type": "named"
+        },
+        "children": [],
+        "operating": false,
+        "filter": "@the_vault:mob_type/champion",
+        "counter": {
+          "variables": {},
+          "target": {
+            "count": 100,
+            "type": "constant"
+          },
+          "predicate": "GREATER_OR_EQUAL_TO",
+          "type": "target"
+        },
+        "type": "kill_entity"
+      },
+      "id": "the_vault:champion_deck",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:card_deck",
+        "NBT": "{id:\"champion\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:omega_pog"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:extraordinary_black_opal"
+        },
+        {
+          "AMOUNT": 64,
+          "ITEM": "the_vault:magic_silk"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_platinum"
+        }
+      ]
+    },
+    {
+      "tab": "cores",
+      "id": "the_vault:crimson",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:deck_socket",
+        "NBT": "{Modifier:\"crimson\",ModifierRoll:\"lesser\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_gold"
+        },
+        {
+          "AMOUNT": 256,
+          "ITEM": "the_vault:silver_scrap"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:gem_black_opal"
+        },
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:gem_pog"
+        }
+      ]
+    },
+    {
+      "tab": "cores",
+      "id": "the_vault:azure",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:deck_socket",
+        "NBT": "{Modifier:\"azure\",ModifierRoll:\"lesser\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_gold"
+        },
+        {
+          "AMOUNT": 256,
+          "ITEM": "the_vault:silver_scrap"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:gem_black_opal"
+        },
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:gem_pog"
+        }
+      ]
+    },
+    {
+      "tab": "cores",
+      "id": "the_vault:viridian",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:deck_socket",
+        "NBT": "{Modifier:\"viridian\",ModifierRoll:\"lesser\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_gold"
+        },
+        {
+          "AMOUNT": 256,
+          "ITEM": "the_vault:silver_scrap"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:gem_black_opal"
+        },
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:gem_pog"
+        }
+      ]
+    },
+    {
+      "tab": "cores",
+      "id": "the_vault:golden",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:deck_socket",
+        "NBT": "{Modifier:\"golden\",ModifierRoll:\"lesser\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_gold"
+        },
+        {
+          "AMOUNT": 256,
+          "ITEM": "the_vault:silver_scrap"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:gem_black_opal"
+        },
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:gem_pog"
+        }
+      ]
+    },
+    {
+      "tab": "cores",
+      "id": "the_vault:equilibrium",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:deck_socket",
+        "NBT": "{Modifier:\"equilibrium\",ModifierRoll:\"lesser\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_gold"
+        },
+        {
+          "AMOUNT": 256,
+          "ITEM": "the_vault:silver_scrap"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:gem_black_opal"
+        },
+        {
+          "AMOUNT": 2,
+          "ITEM": "the_vault:gem_pog"
+        }
+      ]
+    },
+    {
+      "tab": "cores",
+      "id": "the_vault:harvest",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:deck_socket",
+        "NBT": "{Modifier:\"harvest\",ModifierRoll:\"lesser\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_gold"
+        },
+        {
+          "AMOUNT": 256,
+          "ITEM": "the_vault:silver_scrap"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:gem_black_opal"
+        },
+        {
+          "AMOUNT": 2,
+          "ITEM": "the_vault:gem_pog"
+        }
+      ]
+    },
+    {
+      "tab": "cores",
+      "id": "the_vault:fortune",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:deck_socket",
+        "NBT": "{Modifier:\"fortune\",ModifierRoll:\"lesser\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_gold"
+        },
+        {
+          "AMOUNT": 256,
+          "ITEM": "the_vault:silver_scrap"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:gem_black_opal"
+        },
+        {
+          "AMOUNT": 2,
+          "ITEM": "the_vault:gem_pog"
+        }
+      ]
+    },
+    {
+      "tab": "cores",
+      "id": "the_vault:empyreal",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:deck_socket",
+        "NBT": "{Modifier:\"empyreal\",ModifierRoll:\"lesser\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_gold"
+        },
+        {
+          "AMOUNT": 256,
+          "ITEM": "the_vault:silver_scrap"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:gem_black_opal"
+        },
+        {
+          "AMOUNT": 2,
+          "ITEM": "the_vault:gem_pog"
+        }
+      ]
+    },
+    {
+      "tab": "cores",
+      "id": "the_vault:bounty",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:deck_socket",
+        "NBT": "{Modifier:\"bounty\",ModifierRoll:\"lesser\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_gold"
+        },
+        {
+          "AMOUNT": 256,
+          "ITEM": "the_vault:silver_scrap"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:gem_black_opal"
+        },
+        {
+          "AMOUNT": 3,
+          "ITEM": "the_vault:gem_pog"
+        }
+      ]
+    },
+    {
+      "tab": "cores",
+      "id": "the_vault:shiny",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:deck_socket",
+        "NBT": "{Modifier:\"shiny\",ModifierRoll:\"lesser\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_gold"
+        },
+        {
+          "AMOUNT": 256,
+          "ITEM": "the_vault:silver_scrap"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:gem_black_opal"
+        },
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:echo_pog"
+        }
+      ]
+    },
+    {
+      "tab": "cores",
+      "id": "the_vault:steadfast",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:deck_socket",
+        "NBT": "{Modifier:\"steadfast\",ModifierRoll:\"lesser\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_gold"
+        },
+        {
+          "AMOUNT": 256,
+          "ITEM": "the_vault:silver_scrap"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:gem_black_opal"
+        },
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:echo_pog"
+        }
+      ]
+    },
+    {
+      "tab": "cores",
+      "id": "the_vault:pure",
+      "output": {
+        "AMOUNT": 1,
+        "ITEM": "the_vault:deck_socket",
+        "NBT": "{Modifier:\"pure\",ModifierRoll:\"lesser\"}"
+      },
+      "inputs": [
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:vault_gold"
+        },
+        {
+          "AMOUNT": 256,
+          "ITEM": "the_vault:silver_scrap"
+        },
+        {
+          "AMOUNT": 16,
+          "ITEM": "the_vault:gem_black_opal"
+        },
+        {
+          "AMOUNT": 1,
+          "ITEM": "the_vault:echo_pog"
+        }
+      ]
+    }
+  ],
+  "tabs": [
+    {
+      "id": "decks",
+      "name": "\u5361\u7ec4\u5305",
+      "icon": "the_vault:gui/screen/deck_tabs/decks",
+      "requireResearch": false
+    },
+    {
+      "id": "cores",
+      "name": "\u6838\u5fc3",
+      "icon": "the_vault:gui/screen/deck_tabs/cores",
+      "requireResearch": false
+    },
+    {
+      "id": "advanced",
+      "name": "\u9ad8\u7ea7\u5361\u7ec4\u5305",
+      "icon": "the_vault:gui/screen/deck_tabs/advanced",
+      "requireResearch": true
+    }
+  ]
+}

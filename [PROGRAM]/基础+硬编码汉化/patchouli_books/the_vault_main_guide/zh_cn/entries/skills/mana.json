@@ -1,0 +1,18 @@
+{
+  "sortnum": 1,
+  "name": "魔力值",
+  "icon": "botania:mana_bottle",
+  "category": "patchouli:skills_category",
+  "read_by_default": "true",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "在你界面左下角的$(l)蓝条$()表示你当前的$(l)魔力值$()。$(br2)魔力值用于玩家使用$(l)技能$()。$(br2)玩家的$(l)魔力值上限$()初始为$(l)100$()点。$(br2)$(l:vault_gear/variants)$(t:宝库装备)$(l)宝库装备$()的“魔力值”词缀可以提升魔力值上限。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "魔力值",
+      "text": "$(br)魔力值会随时间$(l)自动$()恢复，默认恢复速度（魔力再生为100%时）为1点/s。你可以在$(l)统计数据菜单$()中查看你的$(l)魔力值$()和$(l)魔力再生$()。$(br2)$(l:vault_gear/variants)$(t:宝库装备)$(l)宝库装备$()的“魔力再生”词缀可以提升魔力值恢复速度。"
+    }
+  ]
+}

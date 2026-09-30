@@ -1,0 +1,19 @@
+{
+  "sortnum": 5,
+  "name": "珠宝制作",
+  "icon": "the_vault:jewel_crafting_table",
+  "category": "patchouli:vault_tools_category",
+  "read_by_default": "true",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "可以使用$(l)珠宝制作台$()制作珠宝并用于强化宝库工具。$(br2)珠宝制作台只能制作破损品质的珠宝，但可以选择任意“狂热”词缀、工具能力词缀（斧的能力、锹的能力、镐的能力）以及“自动熔炼”、“粉碎”和“流体销毁”。拥有这些词缀的珠宝无法从珠宝袋中获得。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "the_vault:jewel_crafting_table",
+      "title": "珠宝制作台",
+      "text": "$(br)选择的词缀不同，制作的珠宝的大小$(l)不同$()。"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "古董",
+  "icon": "the_vault:antique{antique:\"the_vault:gem_king\"}",
+  "category": "patchouli:game_mechanics_category",
+  "read_by_default": "true",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "古董是来自宝库的古老物品。$(br2)每种古董的数量都$(l)不同$()，标注在其右下角，凑齐一套古董并右击使用可以获得所标注的$(l)对应奖励$()。$(br2)古董的搜寻方式多种多样，你可以自行探索。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "the_vault:antique_collector_book",
+      "title": "古董集邮册",
+      "text": "$(br)你可以用$(l)古董集邮册$()轻松收纳所有古董，还可以查看有哪些古董种类。类似碎片袋，集邮册也可以自动存储古董。$(br2)将古董放入集邮册后，就可以查看该古董的搜寻线索。"
+    }
+  ]
+}

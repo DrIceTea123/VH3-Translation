@@ -1,0 +1,138 @@
+{
+  "name": "宝库目标",
+  "icon": "the_vault:obelisk",
+  "category": "patchouli:the_vault_category",
+  "read_by_default": "true",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "本章节涵盖了宝库中所有可能出现的目标。$(br2)对宝库水晶使用$(l)印记$()会$(l)强制指定$()宝库的目标，没有添加印记的宝库水晶会随机选择$(l)其中一个$()目标。$(br2)在完成宝库目标后，会奖励一个对应目标的$(l)完成板条箱$()。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "狩猎",
+      "text": "$(br)$(l)狩猎$()技能可以用于寻找宝库目标。$(br2)寻找的目标也包括$(l)神之祭坛$()，更多信息请点击$(l:the_vault/vault_god_altars)这里$()。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "目标的概率",
+      "text": "$(li)$(l)0-9级$()$(br)100%圣水竞速$(br)$(li)$(l)10-19级$()$(br)50%点燃火盆$(br)50%圣水竞速$(br)$(li)$(l)20-49级$()$(br)33%点燃火盆$(br)33%圣水竞速$(br)33%拾荒者"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "目标的概率",
+      "text": "$(li)$(l)50级以上$()$(br)20%点燃火盆$(br)20%圣水竞速$(br)20%拾荒者$(br)20%Bingo$(br)20%符文狩猎"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_vault:monolith",
+      "title": "点燃火盆",
+      "text": "点燃所需数量的$(l)火盆$()，火盆在每个房间都会生成。$(br2)每点燃一个火盆，会为宝库添加其包含的宝库词缀。每个火盆包含一个增益和一个减益，会显示在其上方。$(br2)当点燃足够的火盆后，通过入口$(l)离开$()宝库以完成目标。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_vault:crystal_seal_scout",
+      "title": "点燃火盆",
+      "text": "当然，你也可以再贪一点。找到剩余的火盆，搜刮它们获得额外的战利品。大多数情况下战利品是一团灰烬，但也可能获得一些稀有物品。$(br2)注意，额外搜刮的火盆有1/8是免费的，剩余的火盆需要消耗剩余探索时间。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_vault:lodestone",
+      "title": "圣水竞速",
+      "text": "通过搜刮宝箱、挖掘矿石和击杀怪物等行为来填满$(l)圣水条$()。$(br2)每个行为所贡献的圣水值$(l)在每个宝库中都不同$()。$(l)紫色的圣水球$()会提示你某个行为提供了多少圣水值，但圣水球$(l)不$()需要拾取。$(br2)尽量完成圣水量多的行为，以便尽快填满圣水条吧！"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_vault:crystal_seal_sage",
+      "title": "圣水竞速",
+      "text": "圣水条显示在屏幕顶部。当圣水条填满时，你需要找到并右击一个$(l)天然磁石$()来完成宝库。$(br2)在$(l)合作$()圣水宝库中，需要先帮助每个玩家都填满圣水条才能点击磁石，并且天然磁石无法共用。$(br2)$(l)智者印记$()可以强制指定圣水竞速作为目标。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_vault:scavenger_altar",
+      "title": "拾荒者",
+      "text": "收集所有所需的物品并将物品提交至$(l)拾荒者祭坛$()。$(br2)屏幕顶部会显示所需的拾荒者物品，并提示哪里能获得这些物品。$(br2)拾荒者物品在离开宝库后会腐烂，无法在下一次宝库中使用。可以将它们放入$(l)宝库灵魂分解器$()以获得$(l)灵魂粉尘$()。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_vault:crystal_seal_hunter",
+      "title": "拾荒者",
+      "text": "当你找齐所需的拾荒者物品后，在拾荒者祭坛上提交它们以完成宝库。$(br2)在$(l)合作$()宝库中，每个玩家都会有属于$(l)自己$()的一套物品要收集。$(br2)$(l)猎人印记$()可以强制指定拾荒者作为目标。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_vault:rune_pillar",
+      "title": "符文狩猎",
+      "text": "从怪物或宝箱处收集$(l)符文$()，提交到符文台座以召唤$(l)符文首领$()，然后将其击杀。生成的符文首领会根据提交的符文获得不同的增益。$(br2)击杀首领后，玩家将被自动$(l)传送$()出宝库；获得的符文首领板条箱中必定会包含提交的符文所附带的战利品。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_vault:crystal_seal_executioner",
+      "title": "符文狩猎",
+      "text": "未提交的符文不会产生战利品，并且会在离开宝库时消失。$(br2)$(l)行刑者印记$()可以强制指定符文狩猎作为目标。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_vault:crystal_seal_prophet",
+      "title": "Bingo",
+      "text": "完成4x4的$(l)随机Bingo网格$()，将完成的任务$(l)连成线$()。每完成一条Bingo连线都会增加完成板条箱中的战利品数量。$(br2)屏幕顶部显示了当前的Bingo进度，默认按Tab可以查看完整Bingo网格，鼠标滚轮可以切换显示的行列。$(br2)$(l)先知印记$()可以强制指定Bingo作为目标。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_vault:crystal_seal_prophet",
+      "title": "Bingo",
+      "text": "任务有不同的完成条件和限制，若违反了任务限制，任务进度将$(l)重置$()。$(br2)完成任意Bingo连线后，即可通过与$(l)网格出口装置$()交互完成宝库。$(br2)90级之后，Bingo网格将扩充为$(l)5x5$()。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_vault:crystal_seal_prophet",
+      "title": "Bingo",
+      "text": "任务的描述词如下：$(br)$(li)$(l)快速$()：在限时内完成任务$(li)$(l)完美$()：完成任务期间不受到任何伤害$(li)$(l)和平$()：完成任务期间不造成伤害$(li)$(l)原始$()：完成任务期间不使用魔力$(li)$(l)连击$()：在限时内完成一系列任务"
+    },
+    {
+      "anchor": "cake",
+      "type": "patchouli:spotlight",
+      "item": "minecraft:cake",
+      "title": "蛋糕猎人",
+      "text": "找到并吃掉散落在每个房间里的蛋糕。$(br2)玩家距离蛋糕很近时，屏幕上会出现$(l)粉红色的雾$()。$(br2)每个房间会有1个蛋糕，房间的数量是$(l)无限的$()，并且一个蛋糕宝库只有一条路，因为房间布局是$(l)螺旋形$()的。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_vault:crake_pedestal",
+      "title": "蛋糕猎人",
+      "text": "每个房间都会生成一个$(l)蛋糕箱基座$()，玩家可以使用它完成宝库。也就是说玩家可以随时完成并离开蛋糕宝库。$(br2)在$(l)合作$()宝库中，每个玩家需要找到他们自己的蛋糕箱基座以完成宝库。$(br2)蛋糕板条箱中的物品数量与找到的蛋糕数有关。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_vault:crystal_seal_cake",
+      "title": "蛋糕猎人",
+      "text": "蛋糕猎人目标$(l)不会随机出现$()，$(l)只能$()使用$(l)糖浆宝库之石$()制作出的水晶进入。$(br2)每找到一个蛋糕，将$(l)添加1层专属词缀$()到宝库中，这将增加获得的奖励和战利品，但同时也会增加宝库的难度。"
+    },
+    {
+      "anchor": "raid_vault",
+      "type": "patchouli:spotlight",
+      "item": "the_vault:crystal_seal_raid",
+      "title": "袭击",
+      "text": "每位村庄英雄都不能错过$(l)袭击宝库$()。你可以挑战7-10波的宝库袭击，击败不断强化的灾厄村民小队，并获得更多战利品！$(br2)袭击目标不会随机出现。将$(l)袭击宝库之石$()制作成宝库水晶就能进入袭击宝库，袭击宝库之石可以从普通宝库中的$(l)袭击房间$()获得。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_vault:crystal_seal_raid_infinite",
+      "title": "袭击",
+      "text": "完成袭击也有概率获得$(l)无限袭击宝库之石$()，可以挑战无限波的宝库袭击。你可以战斗到时间耗尽，或在适当的时候选择放弃，收取足够多的战利品。$(br2)去挑战自己吧，宝藏猎人！"
+    },
+    {
+      "anchor": "herald",
+      "type": "patchouli:spotlight",
+      "item": "the_vault:crystal_seal_herald",
+      "title": "击败先驱者",
+      "text": "准备好迎接$(l)最终挑战$()了吗？$(br2)当收集完25种$(l)独一无二的文物$()之后，你可以使用文物之书台完成文物谜题，并获得特殊的$(l)先驱者宝库之石$()，可以用于打开最终挑战宝库的大门。先驱者宝库之石只能制作成$(l)100级的宝库水晶$()。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_vault:herald_controller",
+      "title": "击败先驱者",
+      "text": "先驱者宝库无法离开，并且死亡后不会丢失物品。宝库内无法放置或破坏方块（首领生成物和宝箱除外）。$(br2)到达竞技场并与$(l)先驱者控制器$()交互后，竞技场的大门关闭，请尽全力击败先驱者吧！$(br2)击杀先驱者并离开宝库以完成最终挑战，可以获得象征荣誉的奖杯！"
+    }
+  ]
+}

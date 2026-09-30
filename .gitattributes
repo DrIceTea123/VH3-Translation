@@ -1,0 +1,9 @@
+# Preserve original bytes and encodings (including the legacy installer script).
+* -text
+*.zip binary
+*.docx binary
+*.xlsx binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.ico binary
