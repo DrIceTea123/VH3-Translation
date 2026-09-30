@@ -17,7 +17,7 @@ class SoundNamesPatchTest {
     private final PatchSpec spec = module.spec();
     private final Path targetJar = Path.of(System.getProperty("vh3.test.targetJar"));
 
-    @Test void allMappingsMatchRealFormatterAndOnlyTargetMethodChanges() throws Exception {
+    @Test void allMappingsMatchRealFormatterAndOnlyTargetMethodChanges(@TempDir Path output) throws Exception {
         ClassNode before = TargetJar.read(targetJar, spec, true);
         ClassNode after = TargetJar.read(targetJar, spec, true);
         Map<String, String> methods = new HashMap<>();
@@ -30,7 +30,9 @@ class SoundNamesPatchTest {
         }
         Object original = probe(module.target(before), spec.className());
         Object patched = probe(module.target(after), spec.className());
-        JsonObject defaults = JsonFiles.read(Path.of(System.getProperty("vh3.test.soundDefaults"))).getAsJsonObject();
+        module.importMappings(Path.of(System.getProperty("vh3.test.legacyVpDirectory"), "sound_names.json"), targetJar, output);
+        JsonObject defaults = JsonFiles.read(output.resolve(spec.configPath())).getAsJsonObject();
+        com.dricetea.vh3patch.modules.SoundNamesModule.mappings = defaults;
         assertEquals(203, defaults.size());
         for (var entry : defaults.entrySet()) {
             assertEquals(SoundNamesModule.legacyDisplayName(entry.getKey()), invoke(original, entry.getKey()));

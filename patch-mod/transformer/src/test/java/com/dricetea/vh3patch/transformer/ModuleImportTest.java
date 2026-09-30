@@ -11,11 +11,29 @@ class ModuleImportTest {
     static Stream<PatchModule> modules() { return PatchModules.all().stream(); }
 
     @ParameterizedTest @MethodSource("modules")
-    void moduleImporterReproducesCurrentDefaults(PatchModule module, @TempDir Path output) throws Exception {
+    void importerWritesHistoricalCandidatesOutsideSource(PatchModule module, @TempDir Path output) throws Exception {
         String id = module.spec().moduleId();
         module.importMappings(Path.of(System.getProperty("vh3.test.legacyVpDirectory"), id + ".json"),
                 Path.of(System.getProperty("vh3.test.targetJar")), output);
-        assertEquals(JsonFiles.read(Path.of(System.getProperty("vh3.test.defaultDirectory"), id + ".json")),
-                JsonFiles.read(output.resolve("runtime/src/main/resources/" + module.spec().defaultConfigResource())));
+        var candidate = JsonFiles.read(output.resolve(module.spec().configPath())).getAsJsonObject();
+        // 导入器只负责历史数据；人工维护的正式配置可以自由增删改，不要求与历史完全相等。
+        assertEquals(id.equals("combat_stats") ? 235 : 203, candidate.size());
+        var report = JsonFiles.read(output.resolve("translations/"
+                + (id.equals("combat_stats") ? "mob-name-import.json" : "sound-name-import.json"))).getAsJsonObject();
+        assertEquals(candidate.size(), report.get("importedCount").getAsInt());
+        for (var pair : report.getAsJsonArray("originalPairs")) {
+            var item = pair.getAsJsonObject();
+            String original = item.get("key").getAsString();
+            if (id.equals("combat_stats")) {
+                String key = original.toLowerCase(java.util.Locale.ROOT).replace(' ', '_');
+                if (candidate.has(key)) assertEquals(item.get("value"), candidate.get(key));
+                else assertTrue(original.equals("Black Widow Spider") || original.equals("Mummy"));
+            } else {
+                String field = report.getAsJsonObject("fieldToOriginalDisplayName").entrySet().stream()
+                        .filter(entry -> entry.getValue().getAsString().equals(original)).findFirst().orElseThrow().getKey();
+                assertEquals(item.get("value"), candidate.get(field));
+            }
+        }
+        assertFalse(java.nio.file.Files.exists(output.resolve("runtime")));
     }
 }

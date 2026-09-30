@@ -79,8 +79,7 @@ class PreflightTest {
         manifest.getMainAttributes().put(Attributes.Name.MANIFEST_VERSION, "1.0");
         manifest.getMainAttributes().putValue("VH3-Patch-Runtime", version);
         try (var output = new JarOutputStream(Files.newOutputStream(game.resolve("mods/runtime.jar")), manifest)) {
-            for (String name : new String[]{production.helperClass() + ".class", "META-INF/mods.toml",
-                    production.defaultConfigResource()}) {
+            for (String name : new String[]{production.helperClass() + ".class", "META-INF/mods.toml"}) {
                 output.putNextEntry(new JarEntry(name));
                 output.write(new byte[]{0});
                 output.closeEntry();

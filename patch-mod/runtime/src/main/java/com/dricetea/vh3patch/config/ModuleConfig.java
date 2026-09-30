@@ -6,25 +6,19 @@ import com.google.gson.stream.JsonToken;
 import java.io.IOException;
 import java.io.StringReader;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-/** 每个模块独立持有配置快照；这里只负责读写，不决定“键”代表英文还是实体标识。 */
+/** 每个模块独立持有外部配置快照；只读取用户文件，不生成或内置译文。 */
 public final class ModuleConfig {
     private final String fileName;
-    private final String defaults;
-    private volatile Map<String, String> values;
+    private volatile Map<String, String> values = Map.of();
 
-    public ModuleConfig(String moduleId, String defaults) throws IOException {
+    public ModuleConfig(String moduleId) {
         if (!moduleId.matches("[a-z][a-z0-9_]*")) throw new IllegalArgumentException("Invalid module ID: " + moduleId);
         this.fileName = moduleId + ".json";
-        this.defaults = defaults;
-        // 第一次读取用户文件失败时，仍有随 JAR 附带的有效默认配置可用。
-        this.values = parse(defaults);
     }
 
     public String fileName() { return fileName; }
@@ -32,14 +26,8 @@ public final class ModuleConfig {
 
     /** 成功才整体替换快照；异常交给调用者记录，旧配置完全不变。 */
     public synchronized void reload(Path directory) throws IOException {
-        Files.createDirectories(directory);
         Path file = directory.resolve(fileName);
-        try {
-            // CREATE_NEW 保证首次生成不会覆盖用户已经编辑的文件。
-            Files.writeString(file, defaults, StandardCharsets.UTF_8, StandardOpenOption.CREATE_NEW);
-        } catch (FileAlreadyExistsException ignored) {
-            // 已有文件是用户的配置，始终以它为准。
-        }
+        // 文件必须由汉化包提供。缺失或损坏时抛错，且不会写回或补齐任何条目。
         Map<String, String> next = parse(Files.readString(file, StandardCharsets.UTF_8));
         values = next;
     }

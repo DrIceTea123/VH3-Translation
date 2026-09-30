@@ -73,7 +73,8 @@ public final class CombatStatsModule implements PatchModule {
             if (translated.has(key)) throw new IllegalStateException("Duplicate import key: " + key);
             translated.add(key, item.get("value"));
         }
-        JsonFiles.write(output.resolve("runtime/src/main/resources/" + spec.defaultConfigResource()), translated);
+        // 导入结果仅作候选文件；构建任务将 output 指向 build，不覆盖人工维护的工程配置。
+        JsonFiles.write(output.resolve(spec.configPath()), translated);
         JsonObject report = new JsonObject();
         report.addProperty("sourceSha256", MethodFingerprint.sha256(Files.readAllBytes(vpSource)));
         report.addProperty("sourceCount", allPairs.size());

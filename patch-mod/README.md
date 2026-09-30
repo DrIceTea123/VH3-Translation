@@ -11,7 +11,7 @@
 | Minecraft / Java | 1.18.2 / JDK 17 |
 | Forge | 40.3.11 |
 | 整合包 / 核心 mod | 3.21.7 / 1.18.2-3.21.6.6884 |
-| 补丁版本 | 1.0.2 |
+| 补丁版本 | 1.0.3 |
 | Gradle / ForgeGradle | 8.8 / 6.0.54 |
 | ModLauncher / ASM | 9.1.3 / 9.7.1 |
 
@@ -22,7 +22,7 @@
 | 目录 | 职责 |
 |---|---|
 | `transformer/` | ModLauncher 早期转换服务、版本检查、ASM 转换、离线检查及 VP 迁移工具 |
-| `runtime/` | 普通 Forge mod、独立功能模块、配置读取与重载、默认映射 |
+| `runtime/` | 普通 Forge mod、独立功能模块、外部配置读取与重载 |
 | `translations/` | 旧译名导入记录和未解决的 ID 对应关系 |
 | `gradle/wrapper/` | 来自 Forge 官方 MDK 的 Gradle Wrapper |
 
@@ -46,8 +46,8 @@
 
 构建产物在 `build/distribution/`：
 
-- `vh3_translation_patch-transformer-1.0.2.jar`
-- `vh3_translation_patch-1.0.2.jar`
+- `vh3_translation_patch-transformer-1.0.3.jar`
+- `vh3_translation_patch-1.0.3.jar`
 - `compat/config/vaultpatcher_asm/the_vault-asm_complex.json`
 - `compat/vp-migration-report.json`
 
@@ -75,7 +75,7 @@
 
 解析顺序：取输入 ID 的路径 → 本模块配置 → 已注册实体自身语言键 → 原方法返回值。配置命中时直接使用译文，因此也支持手动添加的 ID；未配置的未知 ID 不读取注册表默认实体。只有后备的实体译名跟随游戏当前语言，模块配置不区分语言、不会全局覆盖语言键。
 
-已从 237 个既有 VP 词条导入 235 个映射，其中 213 个来源 ID 由核心 mod 的实体语言文件核对，22 个对应原版实体。保留“战斗牛”和“战斗牛首领”的差异。默认配置为 `runtime/src/main/resources/module-defaults/combat_stats.json`，旧的专用语言文件已由此配置取代。
+已从 237 个既有 VP 词条导入 235 个映射，其中 213 个来源 ID 由核心 mod 的实体语言文件核对，22 个对应原版实体。保留“战斗牛”和“战斗牛首领”的差异。唯一的运行时配置源为 `../program/基础+硬编码汉化/config/vh3_translation_patch/combat_stats.json`；源码资源与 JAR 不保留配置副本。
 
 旧名称 `Black Widow Spider`（黑寡妇蜘蛛）、`Mummy`（木乃伊）尚无已确认的 ID；原词条与全部 237 条导入来源保存在 `translations/mob-name-import.json`，没有猜测注册名。如后续确认它们对应当前实体，再明确补入覆盖。
 
@@ -83,7 +83,7 @@
 
 `sound_names` 接管 `VaultSoundOptionsScreen.formatSoundName(String)` 的唯一返回点，保留原方法算法，把原始参数与原显示名交给 `SoundNamesModule.translate`。原始参数来自 `ModSounds` 的 Java 字段名，例如 `GRASSHOPPER_BRRR`、`RAFFLE_SFX`、`VAULT_AMBIENT_LOOP`；它不是声音资源 ID，也不是格式化后的英文名称。
 
-203 条已有译文全部与真实字段唯一匹配，默认配置为 `runtime/src/main/resources/module-defaults/sound_names.json`，首次启动生成 `config/vh3_translation_patch/sound_names.json`：
+初始迁移的 203 条译文全部与真实字段唯一匹配。唯一的运行时配置源为 `../program/基础+硬编码汉化/config/vh3_translation_patch/sound_names.json`，安装时一并复制到游戏的同名配置位置：
 
 ```json
 {
@@ -99,7 +99,7 @@
 
 ## 修改模块配置
 
-首次启动客户端自动生成游戏目录下的 `config/vh3_translation_patch/combat_stats.json`，已有文件不会被覆盖。文件使用 UTF-8 标准 JSON，例如：
+两个模块的条目都只需编辑外部 JSON，无需修改源码、重编译或更换 JAR。正式配置统一维护在 `../program/基础+硬编码汉化/config/vh3_translation_patch/`，安装时随汉化工程复制到游戏的 `config/vh3_translation_patch/`。运行中的游戏读取游戏目录里的文件，修改工程文件不会自动同步到已安装的实例。VTP 不生成、不补齐、不覆盖配置，也不在源码资源或导出的 JAR 中保留内置译文。文件使用 UTF-8 标准 JSON，例如结算模块：
 
 ```json
 {
@@ -110,11 +110,11 @@
 
 编辑后按 **F3+T** 重载资源即可重新读取，无需重新编译 JAR。配置不按语言拆分，切换游戏语言不会关闭这些映射。这个模块取冒号后的路径查表，例如 `the_vault:aggressive_cow` 与其他命名空间的同名路径都会使用 `aggressive_cow`；它不是全局 `entity.…` 语言资源。
 
-重载时若文件格式错误、键重复或值不是字符串，日志会标出具体文件和错误，并保留该模块上次有效的配置；首次读取出错则使用内置默认映射。其他模块仍可正常重载。修正文件后再次按 F3+T。解析完全成功才整体替换快照，不会出现半份配置生效的情况。
+重载时若文件格式错误、键重复或值不是字符串，日志会标出具体文件和错误，并保留该模块上次有效的配置；首次读取时缺失或损坏配置会抛错并阻止启动，错误消息包含需要修复的文件路径。其他模块仍可正常重载。修正文件后再次按 F3+T。解析完全成功才整体替换快照，不会出现半份配置生效的情况。
 
-删除一条映射会启用该条目的后备译名；`{}` 表示没有专用映射；空字符串是显式的空译文。删除整个文件后，下次重载会重新生成默认文件。JSON 不支持注释。
+删除一条映射会启用该条目的后备译名；`{}` 表示没有专用映射；空字符串是显式的空译文。删除整个文件后，F3+T 会报错并保留旧快照；下一次启动则会失败，必须先恢复文件。JSON 不支持注释。
 
-后续模块默认直接使用英文原文作为键，例如 `"Aggressive Cow": "战斗牛"`。结算怪物名使用原始 ID 路径，声音名称使用原始 Java 字段名；它们是按各自输入形式查表的模块。模块文件名由模块类中的 ID 决定，添加方法见 [模块开发说明](docs/modules.md)。
+后续模块默认直接使用英文原文作为键，例如 `"Aggressive Cow": "战斗牛"`。结算怪物名使用原始 ID 路径，声音名称使用原始 Java 字段名；它们是按各自输入形式查表的模块。模块文件名由模块类中的 ID 决定。给现有模块增加词条只改 JSON；增加新的接管方法或新的模块仍需编写源码，见 [模块开发说明](docs/modules.md)。原始输入、上游处理过程和字节码插入位置见 [文本获取分析](docs/text-capture.md)。
 
 ## VP 共存与首次联测
 
@@ -124,19 +124,19 @@
 
 后续在独立测试副本中联测时：
 
-1. 同时放入两个同版本 JAR。
+1. 同时放入两个同版本 JAR，并复制工程 `config/vh3_translation_patch/` 下的两个 JSON。升级旧安装前保留并合并已有的自定义配置。
 2. 使用当前工程已移除接管规则的 main/long/complex 三份配置及对应 config.json，或使用构建生成的兼容文件。备份测试副本中的旧配置后再合并更新。旧 ulti 布局应先按 `docs/maintenance/vp-asm-layout.md` 完成重组；若测试副本配置与当前工程不同，应先合并差异，不直接覆盖。
 3. 处理 VP 旧缓存。首次测试建议在测试副本的 `config/vaultpatcher_asm/config.json` 中设置 `debug_mode.use_cache=false`；工程和真实实例的配置不会由本构建脚本自动更改。
 4. 检查启动日志的 preflight 消息和目标类加载时的 applied 消息，验证结算页，以及编辑配置后 F3+T 重载、错误配置保留旧值的行为。
 5. 需要回退时，移除两个 JAR 并恢复旧 VP 配置，重新处理缓存。
 
-按用户决定，发现不匹配时抛出明确错误，不静默禁用补丁。启动检查覆盖核心 JAR、运行侧配套版本与资源、目标方法原形和旧 VP 配置冲突；实际转换时再次检查摘要和重复注入。其他转换器造成的后续冲突可能到目标类加载时才显现，仍需整合包联测。
+按用户决定，发现不匹配时抛出明确错误，不静默禁用补丁。启动检查覆盖核心 JAR、运行侧配套版本与 mod 元数据、目标方法原形和旧 VP 配置冲突；实际转换时再次检查摘要和重复注入。其他转换器造成的后续冲突可能到目标类加载时才显现，仍需整合包联测。
 
 本轮支持生产客户端 `forgeclient`。专用服务端不注册此显示补丁，mod 入口不引用客户端类。开发启动目标尚未接入；当前未提供 `runClient` / `runServer` 配置，也没有声明已完成服务端启动验证。
 
 ## 验证与下一步
 
-离线测试覆盖真实目标方法、调试信息归一化、非目标方法不变、错误哈希/签名/重复应用拒绝、实际方法执行、VP 规则迁移、配套 JAR 预检，以及模块映射、默认配置生成、编辑重载、错误保留旧值、严格 JSON 校验和模块隔离。真实游戏的 F3+T 事件、界面显示和加载顺序仍需联测。
+离线测试覆盖真实目标方法、调试信息归一化、非目标方法不变、错误哈希/签名/重复应用拒绝、实际方法执行、VP 规则迁移、配套 JAR 预检，以及模块映射、外部配置加载、任意新增条目、首次缺失/损坏拒绝启动、编辑重载、错误保留旧值、严格 JSON 校验和模块隔离。真实游戏的 F3+T 事件、界面显示和加载顺序仍需联测。
 
 检查报告和转换后 class 在 `transformer/build/verification/`。测试报告在各子项目 `build/reports/tests/test/`。
 

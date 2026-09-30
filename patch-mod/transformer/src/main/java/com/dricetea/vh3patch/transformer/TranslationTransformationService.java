@@ -48,8 +48,7 @@ public final class TranslationTransformationService implements ITransformationSe
                         String version = jar.getManifest() == null ? null
                                 : jar.getManifest().getMainAttributes().getValue("VH3-Patch-Runtime");
                         if (!spec.patchVersion().equals(version)
-                                || jar.getJarEntry("META-INF/mods.toml") == null
-                                || jar.getJarEntry(spec.defaultConfigResource()) == null) {
+                                || jar.getJarEntry("META-INF/mods.toml") == null) {
                             throw new IllegalStateException("Missing or mismatched runtime metadata/resources: " + path.getFileName());
                         }
                         companions.add(path);

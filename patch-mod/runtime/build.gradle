@@ -5,6 +5,12 @@ minecraft {
     mappings channel: 'official', version: minecraft_version
 }
 dependencies { minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}" }
+
+tasks.named('test') {
+    def configs = rootProject.file('../program/基础+硬编码汉化/config/vh3_translation_patch')
+    inputs.dir configs
+    systemProperty 'vh3.test.configDirectory', configs.absolutePath
+}
 tasks.named('processResources') {
     inputs.property 'mod_version', project.version
     filesMatching('META-INF/mods.toml') { expand mod_version: project.version }

@@ -28,7 +28,7 @@ public record PatchSpec(String patchVersion, String targetVersion, String jarHas
                 moduleId, helperClass, Set.copyOf(ownedLiterals));
     }
 
-    public String defaultConfigResource() { return "module-defaults/" + moduleId + ".json"; }
+    public String configPath() { return "config/vh3_translation_patch/" + moduleId + ".json"; }
 
     private static String required(Properties values, String key) {
         String value = values.getProperty(key);

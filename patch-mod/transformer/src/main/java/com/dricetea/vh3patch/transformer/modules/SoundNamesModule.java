@@ -89,7 +89,8 @@ public final class SoundNamesModule implements PatchModule {
             translated.add(field, pair.get("value").deepCopy());
             sourceNames.addProperty(field, english);
         }
-        JsonFiles.write(output.resolve("runtime/src/main/resources/" + spec.defaultConfigResource()), translated);
+        // 导入候选与正式配置分开；不得在源码资源或 JAR 中存储运行时译文。
+        JsonFiles.write(output.resolve(spec.configPath()), translated);
         JsonObject report = new JsonObject();
         report.addProperty("module", ID);
         report.addProperty("sourceSha256", MethodFingerprint.sha256(Files.readAllBytes(vpSource)));
