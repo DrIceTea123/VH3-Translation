@@ -1,0 +1,51 @@
+base.archivesName = 'vh3_translation_patch-transformer'
+
+dependencies {
+    compileOnly 'cpw.mods:modlauncher:9.1.3'
+    implementation 'org.ow2.asm:asm-tree:9.7.1'
+    implementation 'org.ow2.asm:asm-util:9.7.1'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    testImplementation 'cpw.mods:modlauncher:9.1.3'
+}
+def targetJar = providers.gradleProperty('vaultJar').map { rootProject.file(it) }
+        .getOrElse(rootProject.file('../../origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar'))
+def vpSource = rootProject.file('../program/基础+硬编码汉化/config/vaultpatcher_asm/the_vault-asm_ulti.json')
+
+tasks.named('processResources') {
+    inputs.property 'mod_version', project.version
+    filesMatching('vh3-patch.properties') { expand mod_version: project.version }
+}
+tasks.named('jar') {
+    manifest.attributes('Automatic-Module-Name': 'com.dricetea.vh3patch.transformer',
+            'Implementation-Version': project.version)
+}
+tasks.named('test') {
+    inputs.file targetJar
+    inputs.file vpSource
+    systemProperty 'vh3.test.targetJar', targetJar.absolutePath
+    systemProperty 'vh3.test.vpSource', vpSource.absolutePath
+}
+tasks.register('verifyTarget', JavaExec) {
+    dependsOn classes
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.dricetea.vh3patch.transformer.PatchTool'
+    args 'verify', targetJar.absolutePath, layout.buildDirectory.dir('verification').get().asFile.absolutePath
+}
+tasks.register('inspectTarget', JavaExec) {
+    dependsOn classes
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.dricetea.vh3patch.transformer.PatchTool'
+    args 'inspect', targetJar.absolutePath
+}
+tasks.register('importMobNames', JavaExec) {
+    dependsOn classes
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.dricetea.vh3patch.transformer.PatchTool'
+    args 'import-names', vpSource.absolutePath, targetJar.absolutePath, rootProject.projectDir.absolutePath
+}
+tasks.register('prepareVpConfig', JavaExec) {
+    dependsOn classes
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.dricetea.vh3patch.transformer.PatchTool'
+    args 'prepare-vp', vpSource.absolutePath, layout.buildDirectory.dir('compat').get().asFile.absolutePath
+}

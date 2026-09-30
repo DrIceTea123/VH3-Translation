@@ -1,0 +1,17 @@
+apply plugin: 'net.minecraftforge.gradle'
+base.archivesName = 'vh3_translation_patch'
+
+minecraft {
+    mappings channel: 'official', version: minecraft_version
+}
+dependencies { minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}" }
+tasks.named('processResources') {
+    inputs.property 'mod_version', project.version
+    filesMatching('META-INF/mods.toml') { expand mod_version: project.version }
+}
+tasks.named('jar') {
+    manifest.attributes('Automatic-Module-Name': 'com.dricetea.vh3patch.runtime',
+            'Implementation-Version': project.version,
+            'VH3-Patch-Runtime': project.version)
+    finalizedBy 'reobfJar'
+}

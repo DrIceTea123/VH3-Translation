@@ -21,12 +21,11 @@ logs/
 run/
 *.class
 *.jar
+!/patch-mod/gradle/wrapper/gradle-wrapper.jar
 *.exe
 *.dll
 /local-deps/
 
 # Release outputs and 7-Zip belong to the parent workspace
-/[[]PROGRAM]/[[]【发布文件】]/
-/[[]PROGRAM]/7z/
 
 # ZIP files are NOT globally ignored: OpenLoader packages are required inputs.

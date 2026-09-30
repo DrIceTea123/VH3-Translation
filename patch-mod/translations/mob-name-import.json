@@ -1,0 +1,965 @@
+{
+  "sourceSha256": "f60934ffeb81fd22849ec63b68bfd347a0e110c19b6bf097a5ac9c01aecf949e",
+  "sourceCount": 237,
+  "importedCount": 235,
+  "unresolved": [
+    {
+      "key": "Black Widow Spider",
+      "value": "黑寡妇蜘蛛"
+    },
+    {
+      "key": "Mummy",
+      "value": "木乃伊"
+    }
+  ],
+  "originalPairs": [
+    {
+      "key": "Aggressive Cow",
+      "value": "战斗牛"
+    },
+    {
+      "key": "Aggressive Goat",
+      "value": "战斗山羊"
+    },
+    {
+      "key": "Aggressive Cow Boss",
+      "value": "战斗牛首领"
+    },
+    {
+      "key": "Arbalist Guardian",
+      "value": "劲弩守卫"
+    },
+    {
+      "key": "Artifact Boss",
+      "value": "神圣先驱者"
+    },
+    {
+      "key": "Blood Horde T1",
+      "value": "岩灵（一阶）"
+    },
+    {
+      "key": "Blood Horde T2",
+      "value": "岩灵（二阶）"
+    },
+    {
+      "key": "Blood Horde T3",
+      "value": "岩灵（三阶）"
+    },
+    {
+      "key": "Blood Horde T4",
+      "value": "岩灵（四阶）"
+    },
+    {
+      "key": "Blood Horde T5",
+      "value": "岩灵（五阶）"
+    },
+    {
+      "key": "Blood Silverfish",
+      "value": "血蠹虫"
+    },
+    {
+      "key": "Blood Skeleton T0",
+      "value": "嗜血流盗（一阶）"
+    },
+    {
+      "key": "Blood Skeleton T1",
+      "value": "嗜血流盗（二阶）"
+    },
+    {
+      "key": "Blood Skeleton T2",
+      "value": "嗜血流盗（三阶）"
+    },
+    {
+      "key": "Blood Skeleton T3",
+      "value": "嗜血流盗（四阶）"
+    },
+    {
+      "key": "Blood Skeleton T4",
+      "value": "嗜血流盗（五阶）"
+    },
+    {
+      "key": "Blood Skeleton T5",
+      "value": "嗜血流盗（六阶）"
+    },
+    {
+      "key": "Blood Slime",
+      "value": "嗜血史莱姆"
+    },
+    {
+      "key": "Blood Tank",
+      "value": "岩石巨人"
+    },
+    {
+      "key": "Blue Blaze",
+      "value": "灵魂烈焰人"
+    },
+    {
+      "key": "Boogieman Boss",
+      "value": "首领布吉人"
+    },
+    {
+      "key": "Bruiser Guardian",
+      "value": "重拳守卫"
+    },
+    {
+      "key": "Butcher Arbalist Guardian",
+      "value": "屠夫劲弩守卫"
+    },
+    {
+      "key": "Butcher Bruiser Guardian",
+      "value": "屠夫重拳守卫"
+    },
+    {
+      "key": "Crab",
+      "value": "宝库蟹"
+    },
+    {
+      "key": "Craftenstein",
+      "value": "块兰肯斯坦"
+    },
+    {
+      "key": "Crystal Arbalist Guardian",
+      "value": "水晶劲弩守卫"
+    },
+    {
+      "key": "Crystal Bruiser Guardian",
+      "value": "水晶重拳守卫"
+    },
+    {
+      "key": "Deathcap",
+      "value": "死亡菌盖"
+    },
+    {
+      "key": "Deep Dark Horror",
+      "value": "深暗恐惧"
+    },
+    {
+      "key": "Deep Dark Piglin",
+      "value": "深暗猪灵"
+    },
+    {
+      "key": "Deep Dark Silverfish",
+      "value": "深暗蠹虫"
+    },
+    {
+      "key": "Deep Dark Skeleton",
+      "value": "深暗骷髅"
+    },
+    {
+      "key": "Deep Dark Witch",
+      "value": "深暗女巫"
+    },
+    {
+      "key": "Deep Dark Zombie",
+      "value": "深暗僵尸"
+    },
+    {
+      "key": "Dungeon Black Widow Spider",
+      "value": "地牢黑寡妇蜘蛛"
+    },
+    {
+      "key": "Dungeon Piglin",
+      "value": "地牢猪灵"
+    },
+    {
+      "key": "Dungeon Piglin Brute",
+      "value": "地牢猪灵蛮兵"
+    },
+    {
+      "key": "Dungeon Pillager",
+      "value": "地牢掠夺者"
+    },
+    {
+      "key": "Dungeon Skeleton",
+      "value": "地牢骷髅"
+    },
+    {
+      "key": "Dungeon Spider",
+      "value": "地牢蜘蛛"
+    },
+    {
+      "key": "Dungeon Vindicator",
+      "value": "地牢卫道士"
+    },
+    {
+      "key": "Dungeon Witch",
+      "value": "地牢女巫"
+    },
+    {
+      "key": "Elite Drowned",
+      "value": "精英溺尸"
+    },
+    {
+      "key": "Elite Enderman",
+      "value": "精英末影人"
+    },
+    {
+      "key": "Elite Husk",
+      "value": "精英尸壳"
+    },
+    {
+      "key": "Elite Skeleton",
+      "value": "精英骷髅"
+    },
+    {
+      "key": "Elite Spider",
+      "value": "精英蜘蛛"
+    },
+    {
+      "key": "Elite Stray",
+      "value": "精英流浪者"
+    },
+    {
+      "key": "Elite Witch",
+      "value": "精英女巫"
+    },
+    {
+      "key": "Elite Wither Skeleton",
+      "value": "精英凋灵骷髅"
+    },
+    {
+      "key": "Elite Zombie",
+      "value": "精英僵尸"
+    },
+    {
+      "key": "Endervex",
+      "value": "末影恼鬼"
+    },
+    {
+      "key": "Eyesore",
+      "value": "眼核"
+    },
+    {
+      "key": "Eyestalk",
+      "value": "眼柄"
+    },
+    {
+      "key": "Golem Boss",
+      "value": "首领傀儡"
+    },
+    {
+      "key": "Grinch",
+      "value": "格林奇"
+    },
+    {
+      "key": "Healer",
+      "value": "治疗师"
+    },
+    {
+      "key": "Jack",
+      "value": "杰克"
+    },
+    {
+      "key": "Jack Poison",
+      "value": "剧毒杰克"
+    },
+    {
+      "key": "Jack O Web",
+      "value": "万圣网蛛"
+    },
+    {
+      "key": "Black Widow Spider",
+      "value": "黑寡妇蜘蛛"
+    },
+    {
+      "key": "Levishroom",
+      "value": "活化菇"
+    },
+    {
+      "key": "Miner Zombie T0",
+      "value": "深腐矿工（一阶）"
+    },
+    {
+      "key": "Miner Zombie T1",
+      "value": "深腐矿工（二阶）"
+    },
+    {
+      "key": "Miner Zombie T2",
+      "value": "深腐矿工（三阶）"
+    },
+    {
+      "key": "Miner Zombie T3",
+      "value": "深腐矿工（四阶）"
+    },
+    {
+      "key": "Miner Zombie T4",
+      "value": "深腐矿工（五阶）"
+    },
+    {
+      "key": "Miner Zombie T5",
+      "value": "深腐矿工（六阶）"
+    },
+    {
+      "key": "Monster Eye",
+      "value": "怪物之眼"
+    },
+    {
+      "key": "Mummy",
+      "value": "木乃伊"
+    },
+    {
+      "key": "Mummy T0",
+      "value": "木乃伊（一阶）"
+    },
+    {
+      "key": "Mummy T1",
+      "value": "木乃伊（二阶）"
+    },
+    {
+      "key": "Mummy T2",
+      "value": "木乃伊（三阶）"
+    },
+    {
+      "key": "Mushroom T0",
+      "value": "真菌体（一阶）"
+    },
+    {
+      "key": "Mushroom T1",
+      "value": "真菌体（二阶）"
+    },
+    {
+      "key": "Mushroom T2",
+      "value": "真菌体（三阶）"
+    },
+    {
+      "key": "Mushroom T3",
+      "value": "真菌体（四阶）"
+    },
+    {
+      "key": "Mushroom T4",
+      "value": "真菌体（五阶）"
+    },
+    {
+      "key": "Mushroom T5",
+      "value": "真菌体（六阶）"
+    },
+    {
+      "key": "Overgrown Tank",
+      "value": "石监守者"
+    },
+    {
+      "key": "Overgrown Woodman T0",
+      "value": "丛生护林人（一阶）"
+    },
+    {
+      "key": "Overgrown Woodman T1",
+      "value": "丛生护林人（二阶）"
+    },
+    {
+      "key": "Overgrown Woodman T2",
+      "value": "丛生护林人（三阶）"
+    },
+    {
+      "key": "Overgrown Zombie T0",
+      "value": "丛生者（一阶）"
+    },
+    {
+      "key": "Overgrown Zombie T1",
+      "value": "丛生者（二阶）"
+    },
+    {
+      "key": "Overgrown Zombie T2",
+      "value": "丛生者（三阶）"
+    },
+    {
+      "key": "Overgrown Zombie T3",
+      "value": "丛生者（四阶）"
+    },
+    {
+      "key": "Overgrown Zombie T4",
+      "value": "丛生者（五阶）"
+    },
+    {
+      "key": "Overgrown Zombie T5",
+      "value": "丛生者（六阶）"
+    },
+    {
+      "key": "Pirate Arbalist Guardian",
+      "value": "海盗劲弩守卫"
+    },
+    {
+      "key": "Pirate Bruiser Guardian",
+      "value": "海盗重拳守卫"
+    },
+    {
+      "key": "Pirate Guardian Tank",
+      "value": "海盗守卫坦克"
+    },
+    {
+      "key": "Puzzle Arbalist Guardian",
+      "value": "谜题劲弩守卫"
+    },
+    {
+      "key": "Puzzle Bruiser Guardian",
+      "value": "谜题重拳守卫"
+    },
+    {
+      "key": "Robot",
+      "value": "机器人"
+    },
+    {
+      "key": "Santa",
+      "value": "圣诞老人"
+    },
+    {
+      "key": "Scarab",
+      "value": "圣甲虫"
+    },
+    {
+      "key": "Shiver",
+      "value": "寒栗者"
+    },
+    {
+      "key": "Skeleton Pirate T0",
+      "value": "海盗（一阶）"
+    },
+    {
+      "key": "Skeleton Pirate T1",
+      "value": "海盗（二阶）"
+    },
+    {
+      "key": "Skeleton Pirate T2",
+      "value": "海盗（三阶）"
+    },
+    {
+      "key": "Skeleton Pirate T3",
+      "value": "海盗（四阶）"
+    },
+    {
+      "key": "Skeleton Pirate T4",
+      "value": "海盗（五阶）"
+    },
+    {
+      "key": "Skeleton Pirate T5",
+      "value": "海盗（六阶）"
+    },
+    {
+      "key": "Smolcap",
+      "value": "小孢子"
+    },
+    {
+      "key": "Swamp Zombie",
+      "value": "沼泽僵尸"
+    },
+    {
+      "key": "T0 Cave Skeleton",
+      "value": "矿缚灵（一阶）"
+    },
+    {
+      "key": "T1 Cave Skeleton",
+      "value": "矿缚灵（二阶）"
+    },
+    {
+      "key": "T1 Creeper",
+      "value": "苦力怕（一阶）"
+    },
+    {
+      "key": "T1 Drowned",
+      "value": "溺尸（一阶）"
+    },
+    {
+      "key": "T1 Enderman",
+      "value": "末影人（一阶）"
+    },
+    {
+      "key": "T1 Husk",
+      "value": "尸壳（一阶）"
+    },
+    {
+      "key": "T1 Piglin",
+      "value": "猪灵（一阶）"
+    },
+    {
+      "key": "T1 Plastic Skeleton",
+      "value": "塑料骷髅（一阶）"
+    },
+    {
+      "key": "T1 Plastic Slime",
+      "value": "塑料史莱姆（一阶）"
+    },
+    {
+      "key": "T1 Plastic Zombie",
+      "value": "塑料僵尸（一阶）"
+    },
+    {
+      "key": "T1 Skeleton",
+      "value": "骷髅（一阶）"
+    },
+    {
+      "key": "T1 Stray",
+      "value": "流浪者（一阶）"
+    },
+    {
+      "key": "T1 Wither Skeleton",
+      "value": "凋灵骷髅（一阶）"
+    },
+    {
+      "key": "T1 Zombie",
+      "value": "僵尸（一阶）"
+    },
+    {
+      "key": "T2 Cave Skeleton",
+      "value": "矿缚灵（三阶）"
+    },
+    {
+      "key": "T2 Creeper",
+      "value": "苦力怕（二阶）"
+    },
+    {
+      "key": "T2 Drowned",
+      "value": "溺尸（二阶）"
+    },
+    {
+      "key": "T2 Enderman",
+      "value": "末影人（二阶）"
+    },
+    {
+      "key": "T2 Husk",
+      "value": "尸壳（二阶）"
+    },
+    {
+      "key": "T2 Piglin",
+      "value": "猪灵（二阶）"
+    },
+    {
+      "key": "T2 Plastic Skeleton",
+      "value": "塑料骷髅（二阶）"
+    },
+    {
+      "key": "T2 Plastic Slime",
+      "value": "塑料史莱姆（二阶）"
+    },
+    {
+      "key": "T2 Plastic Zombie",
+      "value": "塑料僵尸（二阶）"
+    },
+    {
+      "key": "T2 Skeleton",
+      "value": "骷髅（二阶）"
+    },
+    {
+      "key": "T2 Stray",
+      "value": "流浪者（二阶）"
+    },
+    {
+      "key": "T2 Wither Skeleton",
+      "value": "凋灵骷髅（二阶）"
+    },
+    {
+      "key": "T2 Zombie",
+      "value": "僵尸（二阶）"
+    },
+    {
+      "key": "T3 Cave Skeleton",
+      "value": "矿缚灵（四阶）"
+    },
+    {
+      "key": "T3 Creeper",
+      "value": "苦力怕（三阶）"
+    },
+    {
+      "key": "T3 Drowned",
+      "value": "溺尸（三阶）"
+    },
+    {
+      "key": "T3 Enderman",
+      "value": "末影人（三阶）"
+    },
+    {
+      "key": "T3 Husk",
+      "value": "尸壳（三阶）"
+    },
+    {
+      "key": "T3 Piglin",
+      "value": "猪灵（三阶）"
+    },
+    {
+      "key": "T3 Plastic Skeleton",
+      "value": "塑料骷髅（三阶）"
+    },
+    {
+      "key": "T3 Plastic Slime",
+      "value": "塑料史莱姆（三阶）"
+    },
+    {
+      "key": "T3 Plastic Zombie",
+      "value": "塑料僵尸（三阶）"
+    },
+    {
+      "key": "T3 Skeleton",
+      "value": "骷髅（三阶）"
+    },
+    {
+      "key": "T3 Stray",
+      "value": "流浪者（三阶）"
+    },
+    {
+      "key": "T3 Wither Skeleton",
+      "value": "凋灵骷髅（三阶）"
+    },
+    {
+      "key": "T3 Zombie",
+      "value": "僵尸（三阶）"
+    },
+    {
+      "key": "T4 Cave Skeleton",
+      "value": "矿缚灵（五阶）"
+    },
+    {
+      "key": "T4 Plastic Skeleton",
+      "value": "塑料骷髅（四阶）"
+    },
+    {
+      "key": "T4 Plastic Slime",
+      "value": "塑料史莱姆（四阶）"
+    },
+    {
+      "key": "T4 Plastic Zombie",
+      "value": "塑料僵尸（四阶）"
+    },
+    {
+      "key": "T5 Cave Skeleton",
+      "value": "矿缚灵（六阶）"
+    },
+    {
+      "key": "Treasure goblin",
+      "value": "宝藏哥布林"
+    },
+    {
+      "key": "Vault Blue Gummy Soldier",
+      "value": "蓝色果冻士兵"
+    },
+    {
+      "key": "Vault Dood",
+      "value": "宝库傀儡"
+    },
+    {
+      "key": "Vault Fighter",
+      "value": "宝库居民#1"
+    },
+    {
+      "key": "Vault Fighter 1",
+      "value": "宝库居民#2"
+    },
+    {
+      "key": "Vault Fighter 2",
+      "value": "宝库居民#3"
+    },
+    {
+      "key": "Vault Fighter 3",
+      "value": "宝库居民#4"
+    },
+    {
+      "key": "Vault Fighter 4",
+      "value": "宝库居民#5"
+    },
+    {
+      "key": "Vault Fighter 5",
+      "value": "宝库居民#6"
+    },
+    {
+      "key": "Vault Fighter 6",
+      "value": "宝库居民#7"
+    },
+    {
+      "key": "Vault Fighter 7",
+      "value": "宝库居民#8"
+    },
+    {
+      "key": "Vault Fighter 8",
+      "value": "宝库居民#9"
+    },
+    {
+      "key": "Vault Fighter 9",
+      "value": "宝库居民#10"
+    },
+    {
+      "key": "Vault Green Gummy Soldier",
+      "value": "绿色果冻士兵"
+    },
+    {
+      "key": "Vault Guardian",
+      "value": "宝库守卫"
+    },
+    {
+      "key": "Vault Horse",
+      "value": "宝库马"
+    },
+    {
+      "key": "Vault Red Gummy Soldier",
+      "value": "红色果冻士兵"
+    },
+    {
+      "key": "Vault Spider",
+      "value": "蜘蛛"
+    },
+    {
+      "key": "Vault Spider Baby",
+      "value": "小小蜘蛛"
+    },
+    {
+      "key": "Vault Wraith White",
+      "value": "宝库幽魂"
+    },
+    {
+      "key": "Vault Wraith Yellow",
+      "value": "黄色宝库幽魂"
+    },
+    {
+      "key": "Vault Yellow Gummy Soldier",
+      "value": "黄色果冻士兵"
+    },
+    {
+      "key": "Winter Wolf",
+      "value": "寒冬狼"
+    },
+    {
+      "key": "Winterwalker T0",
+      "value": "寒冬僵尸"
+    },
+    {
+      "key": "Winterwalker T1",
+      "value": "一阶寒冬僵尸"
+    },
+    {
+      "key": "Winterwalker T2",
+      "value": "二阶寒冬僵尸"
+    },
+    {
+      "key": "Winterwalker T3",
+      "value": "三阶寒冬僵尸"
+    },
+    {
+      "key": "Winterwalker T4",
+      "value": "四阶寒冬僵尸"
+    },
+    {
+      "key": "Winterwalker T5",
+      "value": "五阶寒冬僵尸"
+    },
+    {
+      "key": "Yeti",
+      "value": "雪怪"
+    },
+    {
+      "key": "Black Widow Boss",
+      "value": "首领黑寡妇"
+    },
+    {
+      "key": "Fighter",
+      "value": "战士"
+    },
+    {
+      "key": "Naga",
+      "value": "娜迦"
+    },
+    {
+      "key": "Raised Zombie",
+      "value": "复生僵尸"
+    },
+    {
+      "key": "Raised Zombie Chicken",
+      "value": "复生僵尸鸡"
+    },
+    {
+      "key": "Grimwick",
+      "value": "阴森鬼魂"
+    },
+    {
+      "key": "Chicken",
+      "value": "鸡"
+    },
+    {
+      "key": "Zombie",
+      "value": "僵尸"
+    },
+    {
+      "key": "Husk",
+      "value": "尸壳"
+    },
+    {
+      "key": "Drowned",
+      "value": "溺尸"
+    },
+    {
+      "key": "Skeleton",
+      "value": "骷髅"
+    },
+    {
+      "key": "Stray",
+      "value": "流浪者"
+    },
+    {
+      "key": "Creeper",
+      "value": "苦力怕"
+    },
+    {
+      "key": "Spider",
+      "value": "蜘蛛"
+    },
+    {
+      "key": "Piglin",
+      "value": "猪灵"
+    },
+    {
+      "key": "Wither Skeleton",
+      "value": "凋灵骷髅"
+    },
+    {
+      "key": "Enderman",
+      "value": "末影人"
+    },
+    {
+      "key": "Piglin Brute",
+      "value": "猪灵蛮兵"
+    },
+    {
+      "key": "Blaze",
+      "value": "烈焰人"
+    },
+    {
+      "key": "Polar Bear",
+      "value": "北极熊"
+    },
+    {
+      "key": "Rabbit",
+      "value": "兔子"
+    },
+    {
+      "key": "Slime",
+      "value": "史莱姆"
+    },
+    {
+      "key": "Magma Cube",
+      "value": "岩浆怪"
+    },
+    {
+      "key": "Vindicator",
+      "value": "卫道士"
+    },
+    {
+      "key": "Ravager",
+      "value": "劫掠兽"
+    },
+    {
+      "key": "Vex",
+      "value": "恼鬼"
+    },
+    {
+      "key": "Pillager",
+      "value": "掠夺者"
+    },
+    {
+      "key": "Evoker",
+      "value": "唤魔者"
+    },
+    {
+      "key": "Acid Pursuer",
+      "value": "强酸追捕者"
+    },
+    {
+      "key": "Acid Enforcer",
+      "value": "强酸执法者"
+    },
+    {
+      "key": "Acid Fiend",
+      "value": "强酸恶魔"
+    },
+    {
+      "key": "Acid Bolt",
+      "value": "强酸弩师"
+    },
+    {
+      "key": "Acid Hunter",
+      "value": "强酸猎手"
+    },
+    {
+      "key": "Acid Priest",
+      "value": "强酸牧师"
+    },
+    {
+      "key": "Acid Orb",
+      "value": "强酸球"
+    },
+    {
+      "key": "Death Guard",
+      "value": "死亡护卫"
+    },
+    {
+      "key": "Death Dancer",
+      "value": "死亡舞者"
+    },
+    {
+      "key": "Death Knight",
+      "value": "死亡骑士"
+    },
+    {
+      "key": "Death Inquisitor",
+      "value": "死亡审判官"
+    },
+    {
+      "key": "Billy",
+      "value": "比利"
+    },
+    {
+      "key": "Dragon Goblin",
+      "value": "龙窟哥布林"
+    },
+    {
+      "key": "Plastic Creeper",
+      "value": "库力啪"
+    },
+    {
+      "key": "Plastic Tank",
+      "value": "巴巴宝"
+    },
+    {
+      "key": "Releasing Companion",
+      "value": "某冠军"
+    },
+    {
+      "key": "Skeleton Gladiator",
+      "value": "骷髅角斗士"
+    },
+    {
+      "key": "T0 Plastic Horde",
+      "value": "零阶捣蛋鬼"
+    },
+    {
+      "key": "T1 Plastic Horde",
+      "value": "一阶捣蛋鬼"
+    },
+    {
+      "key": "T2 Plastic Horde",
+      "value": "二阶捣蛋鬼"
+    },
+    {
+      "key": "T3 Plastic Horde",
+      "value": "三阶捣蛋鬼"
+    },
+    {
+      "key": "T4 Plastic Horde",
+      "value": "四阶捣蛋鬼"
+    },
+    {
+      "key": "T5 Plastic Horde",
+      "value": "五阶捣蛋鬼"
+    },
+    {
+      "key": "Vessel Phantom",
+      "value": "容器幻影"
+    },
+    {
+      "key": "Void Rift",
+      "value": "虚空裂隙"
+    },
+    {
+      "key": "The Vessel",
+      "value": "“容器”"
+    },
+    {
+      "key": "Knight",
+      "value": "骑士"
+    }
+  ]
+}

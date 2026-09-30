@@ -45,7 +45,7 @@ VersionInfoDescription=宝藏猎人3rd_汉化安装包
 LicenseFile=LICENSE.txt
 InfoBeforeFile=Inno setup before.txt
 PrivilegesRequiredOverridesAllowed=dialog
-OutputDir=..\..\[【发布文件】]\宝藏猎人3rd-汉化打包-{#ModPackVersion}-VM汉化组-V{#MyAppVersion}
+OutputDir=..\..\[发布文件]\宝藏猎人3rd-汉化打包-{#ModPackVersion}-VM汉化组-V{#MyAppVersion}
 OutputBaseFilename=VM汉化组_宝藏猎人3rd汉化安装_{#ModPackVersion}_V{#MyAppVersion}
 SetupIconFile=pack.ico
 Compression=lzma
@@ -80,7 +80,7 @@ Source: "{tmp}\{#I18nDlName}"; DestDir: "{app}\mods\"; Flags: external ; Compone
 Source: "{tmp}\{#VmctDlName}"; DestDir: "{app}\mods\"; Flags: external ; Components: vmct;
 Source: "{tmp}\{#JechDlName}"; DestDir: "{app}\mods\"; Flags: external ; Components: jech;
 Source: "{tmp}\{#OculusDlName}"; DestDir: "{app}\mods\"; Flags: external ; Components: ocu;
-Source: "..\..\iss-7z\*"; DestDir: "{tmp}\7z"; Flags: ignoreversion ; Components: basic;
+Source: "..\..\必要文件\iss-plugin-7z\*"; DestDir: "{tmp}\7z"; Flags: ignoreversion ; Components: basic;
 
 [Run]
 Filename: "{cmd}"; Parameters: "/c start https://www.bilibili.com/read/cv25168950/"; Flags: shellexec postinstall unchecked ; Description: "前往汉化专栏点赞投币！"
