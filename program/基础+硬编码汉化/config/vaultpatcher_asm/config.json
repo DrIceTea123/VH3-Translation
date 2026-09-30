@@ -1,7 +1,8 @@
 {
     "mods": [
         "the_vault-asm_main",
-        "the_vault-asm_ulti",
+        "the_vault-asm_long",
+        "the_vault-asm_complex",
         "other_mods",
         "the_vault-dynamic",
         "the_vault-dynamic_2"

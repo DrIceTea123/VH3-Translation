@@ -1,0 +1,5107 @@
+[
+    {
+        "name": "宝藏猎人主要硬编码汉化-asm复杂部分",
+        "desc": "涉及ordinal、带local的长列表及其类与内容关联规则。版本V2.6.18",
+        "authors": "KlparetlR、VM汉化组、ByF、DrIceTea",
+        "mods": "the_vault",
+        "dynamic": false
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.accessibility.VaultAccessibilityScreen"
+        },
+        "pairs": [
+            {
+                "key": "OFF",
+                "value": "关"
+            },
+            {
+                "key": "Reset to Default",
+                "value": "重置为默认"
+            },
+            {
+                "key": "Vault Hunters Accessibility",
+                "value": "宝藏猎人辅助功能"
+            },
+            {
+                "key": "Visual",
+                "value": "视觉"
+            },
+            {
+                "key": "Vault",
+                "value": "宝库"
+            },
+            {
+                "key": "Damage",
+                "value": "伤害"
+            },
+            {
+                "key": "Healthbar",
+                "value": "生命条"
+            },
+            {
+                "key": "Hunter",
+                "value": "探知"
+            },
+            {
+                "key": "Colorblind Mode",
+                "value": "色盲模式"
+            },
+            {
+                "key": "Has 3 modes. Changes colors for gear depending on the mode. All modes add gear rarity types to scavenger items, gear and shop pedestals (i.e 'Common Vault Sword').",
+                "value": "有3种模式。根据模式更改装备的颜色。所有模式都会将装备稀有度描述添加到拾荒者物品、装备和购物基座中（例如“普通宝库剑”）。"
+            },
+            {
+                "key": "Gear Modifier Colours",
+                "value": "装备词缀颜色"
+            },
+            {
+                "key": "When disabled, all modifiers on gear will be colored white rather than their respective color, such as red for Attack Damage.",
+                "value": "禁用时，装备上的所有词缀将全部显示为白色，而不是原本的多种颜色，例如原本红色表示攻击伤害。"
+            },
+            {
+                "key": "Rarity Highlighter",
+                "value": "稀有度高亮"
+            },
+            {
+                "key": "Shifting",
+                "value": "按住Shift"
+            },
+            {
+                "key": "Always on",
+                "value": "始终显示"
+            },
+            {
+                "key": "Determines when to render the color background on gear items in your inventory. ",
+                "value": "设置在什么情况渲染物品栏中的装备物品的颜色背景。"
+            },
+            {
+                "key": "Rendering",
+                "value": "渲染"
+            },
+            {
+                "key": "Item Uses Overlay",
+                "value": "物品使用次数叠加层"
+            },
+            {
+                "key": "All items with a set amount of uses will now render this as their stack size. Applies to trinkets, charms, necklaces, and key rings.",
+                "value": "所有拥有使用次数限制的物品现在都会将其使用次数显示为堆叠数量。适用于饰品、护符、吊坠和钥匙串。"
+            },
+            {
+                "key": "Unboxing Details",
+                "value": "开箱详细数据"
+            },
+            {
+                "key": "When enabled, displays modifier info in Card and Jewel unboxing screens",
+                "value": "启用后，在卡牌和珠宝的开箱选择界面中显示物品的词缀信息。"
+            },
+            {
+                "key": "Totem Particles",
+                "value": "图腾粒子"
+            },
+            {
+                "key": "When enabled, particles coming out of Vault Totems will show.",
+                "value": "启用后，会显示宝库图腾散发出的粒子效果。"
+            },
+            {
+                "key": "Player Health Bar",
+                "value": "玩家生命条"
+            },
+            {
+                "key": "When enabled, replaces heart rendering with a health bar and numeric HP display. Useful for high HP builds.",
+                "value": "启用后，生命值显示由红心替换为生命条和数字显示。适用于生命值较高的构筑套组。"
+            },
+            {
+                "key": "Hide Off-hand",
+                "value": "隐藏副手"
+            },
+            {
+                "key": "When enabled, the item in your off hand will not render in-game.",
+                "value": "启用后，游戏中将不会渲染你副手的物品。"
+            },
+            {
+                "key": "Vault Potion Effects",
+                "value": "宝库药水效果"
+            },
+            {
+                "key": "When enabled, visual effects for vault potions will show, such as the poison overlay.",
+                "value": "启用后，将显示宝库药水效果的视觉效果，例如效果覆盖层。"
+            },
+            {
+                "key": "Treasure Door Names",
+                "value": "宝藏门名称"
+            },
+            {
+                "key": "When enabled, treasure doors will render their name on the front.",
+                "value": "启用后，宝藏门上会显示门的类型名称。"
+            },
+            {
+                "key": "Ability Scrolling",
+                "value": "技能滚动施放"
+            },
+            {
+                "key": "When enabled, allows you to scroll through abilities whilst holding 'Ability Cast Key'.",
+                "value": "启用后，可以在按住“技能施放键”的同时滚动切换技能。"
+            },
+            {
+                "key": "Elixir Orb Numbers",
+                "value": "圣水球数字"
+            },
+            {
+                "key": "When enabled, Elixir Orbs will show numeric values, which helps figuring out what progress the objective more.",
+                "value": "启用后，圣水球上会显示具体数值，辅助判断哪种行为获得的进度更多。"
+            },
+            {
+                "key": "Early Timer Warning",
+                "value": "计时器预警"
+            },
+            {
+                "key": "%dm %ds",
+                "value": "%d分%d秒"
+            },
+            {
+                "key": "%dm",
+                "value": "%d分"
+            },
+            {
+                "key": "%ds",
+                "value": "%d秒"
+            },
+            {
+                "key": "When the timer reaches the threshold, the panic sound (that usually plays at 20s left) will play for 3 seconds.",
+                "value": "当计时器达到设定值时，将播放警报声，持续3秒（默认在剩余20秒时播放）。"
+            },
+            {
+                "key": "Damage Type",
+                "value": "伤害类型"
+            },
+            {
+                "key": "Click to switch the type of damage you want to change the color of.",
+                "value": "点击切换要编辑颜色的伤害类型。"
+            },
+            {
+                "key": "Color",
+                "value": "颜色"
+            },
+            {
+                "key": "Floored Numbers",
+                "value": "数值取整"
+            },
+            {
+                "key": "Round damage numbers down.",
+                "value": "将伤害数字四舍五入。"
+            },
+            {
+                "key": "Visibility",
+                "value": "可见性"
+            },
+            {
+                "key": "When to show damage particles.",
+                "value": "在什么情况下显示伤害数字粒子效果。"
+            },
+            {
+                "key": "When to show mob healthbars.",
+                "value": "在什么情况下显示怪物的生命条。"
+            },
+            {
+                "key": "Healthbar Color",
+                "value": "生命条颜色"
+            },
+            {
+                "key": "Healthbar Height",
+                "value": "生命条高度"
+            },
+            {
+                "key": "SMALL",
+                "value": "小"
+            },
+            {
+                "key": "Mob Group Icon",
+                "value": "怪物族类图标"
+            },
+            {
+                "key": "Target Type",
+                "value": "目标类型"
+            },
+            {
+                "key": "Select a chest type to customize color",
+                "value": "选择一个兴趣点类型以自定义颜色"
+            },
+            {
+                "key": "Hunter Style",
+                "value": "探知样式"
+            },
+            {
+                "key": "Particles",
+                "value": "粒子"
+            },
+            {
+                "key": "Outlines",
+                "value": "轮廓线"
+            },
+            {
+                "key": "Whether to create square outlines around the chests, or generate particles.",
+                "value": "设置在宝箱位置显示方形轮廓线或粒子簇。"
+            },
+            {
+                "key": "Particle Density",
+                "value": "粒子密度"
+            },
+            {
+                "key": "Outline Mode",
+                "value": "轮廓线模式"
+            },
+            {
+                "key": "Outline Thickness",
+                "value": "轮廓线宽度"
+            }
+        ]
+    },
+    {
+        "_comment_0": "VaultAccessibilityScreen界面中的枚举类name()直接调用。从上到下依次为：",
+        "_comment_1": "iskallia.vault.skill.ability.effect.spi.HunterAbility$Target",
+        "_comment_2": "iskallia.vault.client.render.hunter.HunterParticleDensityOption",
+        "_comment_3": "iskallia.vault.client.render.hunter.HunterOutlineMode",
+        "_comment_4": "iskallia.vault.client.render.hunter.HunterOutlineThickness"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.accessibility.VaultAccessibilityScreen",
+            "local": "Mname"
+        },
+        "pairs": [
+            {
+                "key": "WOODEN",
+                "value": "木制宝箱"
+            },
+            {
+                "key": "GILDED",
+                "value": "镀金宝箱"
+            },
+            {
+                "key": "ORNATE",
+                "value": "华丽宝箱"
+            },
+            {
+                "key": "LIVING",
+                "value": "活化宝箱"
+            },
+            {
+                "key": "COINS",
+                "value": "钱币堆"
+            },
+            {
+                "key": "HARDENED",
+                "value": "硬质宝箱"
+            },
+            {
+                "key": "ENIGMA",
+                "value": "谜题宝箱"
+            },
+            {
+                "key": "FLESH",
+                "value": "肉食宝箱"
+            },
+            {
+                "key": "OBJECTIVES",
+                "value": "宝库目标"
+            },
+            {
+                "key": "GOD_ALTARS",
+                "value": "神之祭坛"
+            },
+            {
+                "key": "DUNGEONS",
+                "value": "地牢"
+            },
+            {
+                "key": "VENDOORS",
+                "value": "商门"
+            },
+            {
+                "key": "TREASURE_DOORS",
+                "value": "宝藏门"
+            },
+            {
+                "key": "PYLONS",
+                "value": "晶塔"
+            },
+            {
+                "key": "NORMAL",
+                "value": "普通"
+            },
+            {
+                "key": "HALF",
+                "value": "减半"
+            },
+            {
+                "key": "QUARTER",
+                "value": "四分之一"
+            },
+            {
+                "key": "DETAILED",
+                "value": "完整"
+            },
+            {
+                "key": "CUBE",
+                "value": "方块"
+            },
+            {
+                "key": "CUBE_SMALL",
+                "value": "小方块"
+            },
+            {
+                "key": "THIN",
+                "value": "较细"
+            },
+            {
+                "key": "THICK",
+                "value": "较粗"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.accessibility.VaultSoundOptionsScreen"
+        },
+        "pairs": [
+            {
+                "key": "Vault Sound Options",
+                "value": "宝库声音设置"
+            },
+            {
+                "key": "Previous",
+                "value": "上一页"
+            },
+            {
+                "key": "Next",
+                "value": "下一页"
+            },
+            {
+                "key": "Page ",
+                "value": "页数 "
+            },
+            {
+                "key": " of ",
+                "value": " / "
+            },
+            {
+                "key": "Done",
+                "value": "完成"
+            }
+        ]
+    },
+    {
+        "_comment": "声音名称 VaultSoundOptionsScreen的MformatSoundName 根据iskallia.vault.init.ModSounds更新"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.accessibility.VaultSoundOptionsScreen",
+            "method": "collectSoundEntries",
+            "local": "MformatSoundName"
+        },
+        "pairs": [
+            {
+                "key": "Grasshopper Brrr",
+                "value": "蚱蜢：咕咕"
+            },
+            {
+                "key": "Raffle SFX",
+                "value": "速通音效"
+            },
+            {
+                "key": "Vault Ambient Loop",
+                "value": "宝库环境循环"
+            },
+            {
+                "key": "Vault Ambient",
+                "value": "宝库环境"
+            },
+            {
+                "key": "Vault Boss Loop",
+                "value": "宝库首领循环"
+            },
+            {
+                "key": "Timer Kill SFX",
+                "value": "计时器击杀音效"
+            },
+            {
+                "key": "Timer Panic Tick SFX",
+                "value": "计时器危险时刻音效"
+            },
+            {
+                "key": "Confetti SFX",
+                "value": "五彩纸屑音效"
+            },
+            {
+                "key": "Identification SFX",
+                "value": "鉴定音效"
+            },
+            {
+                "key": "Mega Jump SFX",
+                "value": "超级跳音效"
+            },
+            {
+                "key": "Dash SFX",
+                "value": "冲刺音效"
+            },
+            {
+                "key": "Vault Exp SFX",
+                "value": "宝库经验音效"
+            },
+            {
+                "key": "Vault Level Up SFX",
+                "value": "宝库等级提升音效"
+            },
+            {
+                "key": "Skill Tree Learn SFX",
+                "value": "技能树学习音效"
+            },
+            {
+                "key": "Skill Tree Upgrade SFX",
+                "value": "技能树升级音效"
+            },
+            {
+                "key": "Vending Machine SFX",
+                "value": "售货机音效"
+            },
+            {
+                "key": "Arena Horns SFX",
+                "value": "竞技场号角音效"
+            },
+            {
+                "key": "Booster Pack Success SFX",
+                "value": "补充包成功音效"
+            },
+            {
+                "key": "Booster Pack Fail SFX",
+                "value": "补充包失败音效"
+            },
+            {
+                "key": "Gift Bomb SFX",
+                "value": "礼物炸弹音效"
+            },
+            {
+                "key": "Gift Bomb Gain SFX",
+                "value": "礼物炸弹获得音效"
+            },
+            {
+                "key": "Mega Gift Bomb Gain SFX",
+                "value": "超级礼物炸弹获得音效"
+            },
+            {
+                "key": "Boss Tp SFX",
+                "value": "首领传送音效"
+            },
+            {
+                "key": "Vault Gem Hit",
+                "value": "宝库宝石：击中"
+            },
+            {
+                "key": "Vault Gem Break",
+                "value": "宝库宝石：破坏"
+            },
+            {
+                "key": "Robot Hurt",
+                "value": "机器人：受伤"
+            },
+            {
+                "key": "Robot Death",
+                "value": "机器人：死亡"
+            },
+            {
+                "key": "Boogie Ambient",
+                "value": "布吉人：轻哼"
+            },
+            {
+                "key": "Boogie Hurt",
+                "value": "布吉人：受伤"
+            },
+            {
+                "key": "Boogie Death",
+                "value": "布吉人：死亡"
+            },
+            {
+                "key": "Vault Portal Open",
+                "value": "宝库传送门：打开"
+            },
+            {
+                "key": "Vault Portal Leave",
+                "value": "宝库传送门：离开"
+            },
+            {
+                "key": "Cleanse SFX",
+                "value": "净化音效"
+            },
+            {
+                "key": "Ghost Walk SFX",
+                "value": "灵魂步音效"
+            },
+            {
+                "key": "Invisibility SFX",
+                "value": "隐形音效"
+            },
+            {
+                "key": "Night Vision SFX",
+                "value": "夜视音效"
+            },
+            {
+                "key": "Rampage SFX",
+                "value": "狂暴音效"
+            },
+            {
+                "key": "Empower",
+                "value": "强化"
+            },
+            {
+                "key": "Empower Ice Armour",
+                "value": "强化-冰铠"
+            },
+            {
+                "key": "Shell",
+                "value": "甲壳"
+            },
+            {
+                "key": "Shell Porcupine",
+                "value": "甲壳-箭猪"
+            },
+            {
+                "key": "Shell Quill",
+                "value": "甲壳-翎刺"
+            },
+            {
+                "key": "Vampire Hissing SFX",
+                "value": "吸血鬼嘶嘶声音效"
+            },
+            {
+                "key": "Cauldron Bubbles SFX",
+                "value": "坩埚冒泡音效"
+            },
+            {
+                "key": "Execution SFX",
+                "value": "处决音效"
+            },
+            {
+                "key": "Goblin Bail",
+                "value": "哥布林：逃脱"
+            },
+            {
+                "key": "Goblin Death",
+                "value": "哥布林：死亡"
+            },
+            {
+                "key": "Goblin Hurt",
+                "value": "哥布林：受伤"
+            },
+            {
+                "key": "Goblin Idle",
+                "value": "哥布林：空闲"
+            },
+            {
+                "key": "Vault Dood Idle",
+                "value": "宝库傀儡：空闲"
+            },
+            {
+                "key": "Skeleton Pirate Idle",
+                "value": "骷髅海盗：空闲"
+            },
+            {
+                "key": "Winterwalker Idle",
+                "value": "寒霜行者：空闲"
+            },
+            {
+                "key": "Winterwalker Step",
+                "value": "寒霜行者：走动"
+            },
+            {
+                "key": "Winterwalker Hurt",
+                "value": "寒霜行者：受伤"
+            },
+            {
+                "key": "Winterwalker Death",
+                "value": "寒霜行者：死亡"
+            },
+            {
+                "key": "Overgrown Zombie Idle",
+                "value": "丛生僵尸：空闲"
+            },
+            {
+                "key": "Overgrown Zombie Step",
+                "value": "丛生僵尸：走动"
+            },
+            {
+                "key": "Overgrown Zombie Hurt",
+                "value": "丛生僵尸：受伤"
+            },
+            {
+                "key": "Overgrown Zombie Death",
+                "value": "丛生僵尸：死亡"
+            },
+            {
+                "key": "Shiver Idle",
+                "value": "寒栗者：空闲"
+            },
+            {
+                "key": "Shiver Hurt",
+                "value": "寒栗者：受伤"
+            },
+            {
+                "key": "Shiver Death",
+                "value": "寒栗者：死亡"
+            },
+            {
+                "key": "Bloodhorde Idle",
+                "value": "岩灵：空闲"
+            },
+            {
+                "key": "Bloodhorde Tank Idle",
+                "value": "岩石巨人：空闲"
+            },
+            {
+                "key": "Bloodhorde Tank Roar",
+                "value": "岩石巨人：咆哮"
+            },
+            {
+                "key": "Bloodhorde Step",
+                "value": "岩石巨人：走动"
+            },
+            {
+                "key": "Bloodhorde Hurt",
+                "value": "岩石巨人：受伤"
+            },
+            {
+                "key": "Bloodhorde Death",
+                "value": "岩石巨人：死亡"
+            },
+            {
+                "key": "Burp",
+                "value": "打嗝"
+            },
+            {
+                "key": "Puzzle Completion Major",
+                "value": "完成谜题：主要"
+            },
+            {
+                "key": "Puzzle Completion Minor",
+                "value": "完成谜题：次要"
+            },
+            {
+                "key": "Puzzle Completion Fail",
+                "value": "完成谜题：失败"
+            },
+            {
+                "key": "Vault Chest Epic Open",
+                "value": "宝库宝箱-史诗：打开"
+            },
+            {
+                "key": "Vault Chest Omega Open",
+                "value": "宝库宝箱-终焉：打开"
+            },
+            {
+                "key": "Vault Chest Rare Open",
+                "value": "宝库宝箱-稀有：打开"
+            },
+            {
+                "key": "Witchskall Idle",
+                "value": "女巫伊斯卡：空闲"
+            },
+            {
+                "key": "Favour Up",
+                "value": "获得恩惠"
+            },
+            {
+                "key": "Coin Pile Break",
+                "value": "钱币堆：破坏"
+            },
+            {
+                "key": "Coin Pile Place",
+                "value": "钱币堆：放置"
+            },
+            {
+                "key": "Coin Single Place",
+                "value": "单堆钱币：放置"
+            },
+            {
+                "key": "Crate Open",
+                "value": "板条箱：打开"
+            },
+            {
+                "key": "Magnet Table",
+                "value": "磁铁工作台"
+            },
+            {
+                "key": "Nova Speed",
+                "value": "新星爆发速度"
+            },
+            {
+                "key": "Heal",
+                "value": "治疗"
+            },
+            {
+                "key": "Mana Shield",
+                "value": "魔力护盾"
+            },
+            {
+                "key": "Mana Shield Hit",
+                "value": "魔力护盾：击中"
+            },
+            {
+                "key": "Taunt",
+                "value": "嘲讽"
+            },
+            {
+                "key": "Taunt Repel",
+                "value": "嘲讽-恐惧"
+            },
+            {
+                "key": "Taunt Charm",
+                "value": "嘲讽-魅惑"
+            },
+            {
+                "key": "Artisan Smithing",
+                "value": "工作站：锻造"
+            },
+            {
+                "key": "Hunter SFX",
+                "value": "狩猎音效"
+            },
+            {
+                "key": "Mob Trap",
+                "value": "怪物陷阱"
+            },
+            {
+                "key": "Disarm Trap",
+                "value": "解除陷阱"
+            },
+            {
+                "key": "Totem",
+                "value": "图腾"
+            },
+            {
+                "key": "Smite Bolt",
+                "value": "惩戒闪电"
+            },
+            {
+                "key": "Smite",
+                "value": "惩戒"
+            },
+            {
+                "key": "Mob Crit",
+                "value": "怪物暴击"
+            },
+            {
+                "key": "Ability Out Of Mana",
+                "value": "技能：无魔力"
+            },
+            {
+                "key": "Ability On Cooldown",
+                "value": "技能：冷却中"
+            },
+            {
+                "key": "Bonk Charge",
+                "value": "巨响充能"
+            },
+            {
+                "key": "Bonk",
+                "value": "巨响"
+            },
+            {
+                "key": "Jewel Cut",
+                "value": "珠宝：切割"
+            },
+            {
+                "key": "Jewel Cut Success",
+                "value": "珠宝：切割成功"
+            },
+            {
+                "key": "Artifact Complete",
+                "value": "文物：完成"
+            },
+            {
+                "key": "Gate Open",
+                "value": "大门：打开"
+            },
+            {
+                "key": "Gate Close",
+                "value": "大门：关闭"
+            },
+            {
+                "key": "Artifact Boss Ambient",
+                "value": "文物首领：轻哼"
+            },
+            {
+                "key": "Artifact Boss Hurt",
+                "value": "文物首领：受伤"
+            },
+            {
+                "key": "Artifact Boss Death",
+                "value": "文物首领：死亡"
+            },
+            {
+                "key": "Artifact Boss Attack",
+                "value": "文物首领：攻击"
+            },
+            {
+                "key": "Artifact Boss Magic Attack",
+                "value": "文物首领：魔法攻击"
+            },
+            {
+                "key": "Artifact Boss Magic Attack Hit",
+                "value": "文物首领：魔法攻击命中"
+            },
+            {
+                "key": "Spark Expunge",
+                "value": "火花消除"
+            },
+            {
+                "key": "Boss Fight 1",
+                "value": "首领战斗1"
+            },
+            {
+                "key": "Boss Fight 2",
+                "value": "首领战斗2"
+            },
+            {
+                "key": "Boss Fight 3",
+                "value": "首领战斗3"
+            },
+            {
+                "key": "Boss Fight 4",
+                "value": "首领战斗4"
+            },
+            {
+                "key": "Artifact Boss Catalyst Hit",
+                "value": "文物首领引发剂：命中"
+            },
+            {
+                "key": "Artifact Boss Catalyst Hit Wrong",
+                "value": "文物首领引发剂：命中错误"
+            },
+            {
+                "key": "Destroy Monolith",
+                "value": "摧毁独石柱"
+            },
+            {
+                "key": "Ice Bolt Arrow",
+                "value": "冰锥箭"
+            },
+            {
+                "key": "Ice Bolt Chunk",
+                "value": "冰锥块"
+            },
+            {
+                "key": "Booster Pack Open",
+                "value": "补充包：打开"
+            },
+            {
+                "key": "Raid Gate Open",
+                "value": "袭击大门：打开"
+            },
+            {
+                "key": "Raid Chain Lock",
+                "value": "袭击链条：锁定"
+            },
+            {
+                "key": "Raid Hatch Open",
+                "value": "袭击仓门：打开"
+            },
+            {
+                "key": "Raid Hatch Lock",
+                "value": "袭击仓门：锁定"
+            },
+            {
+                "key": "Raid Impact",
+                "value": "袭击冲击"
+            },
+            {
+                "key": "Crab Shell Smash",
+                "value": "蟹壳：碎裂"
+            },
+            {
+                "key": "Cannon Explosion",
+                "value": "加农炮：爆炸"
+            },
+            {
+                "key": "Coin Pouch Shake",
+                "value": "钱币袋：摇动"
+            },
+            {
+                "key": "Dungeon Door Open",
+                "value": "地牢门：打开"
+            },
+            {
+                "key": "Dungeon Barrel Break Normal",
+                "value": "地牢储物桶-普通：破坏"
+            },
+            {
+                "key": "Dungeon Barrel Break Extra",
+                "value": "地牢储物桶-额外：破坏"
+            },
+            {
+                "key": "Dungeon Barrel Break Even More",
+                "value": "地牢储物桶-更多：破坏"
+            },
+            {
+                "key": "Dweller Hurt",
+                "value": "居民：受伤"
+            },
+            {
+                "key": "Dweller Death",
+                "value": "居民：死亡"
+            },
+            {
+                "key": "Dweller Step",
+                "value": "居民：脚步声"
+            },
+            {
+                "key": "Fungi Death",
+                "value": "真菌体：死亡"
+            },
+            {
+                "key": "Fungi Hurt",
+                "value": "真菌体：受伤"
+            },
+            {
+                "key": "Levishroom Death",
+                "value": "活化菇：死亡"
+            },
+            {
+                "key": "Levishroom Hurt",
+                "value": "活化菇：受伤"
+            },
+            {
+                "key": "Levishroom Step",
+                "value": "活化菇：脚步声"
+            },
+            {
+                "key": "Stonewarden Death",
+                "value": "石监守者：死亡"
+            },
+            {
+                "key": "Stonewarden Hurt",
+                "value": "石监守者：受伤"
+            },
+            {
+                "key": "Lighting Bolt",
+                "value": "闪电劈击"
+            },
+            {
+                "key": "Life Tap",
+                "value": "生命分流"
+            },
+            {
+                "key": "Jack Damage",
+                "value": "杰克：受伤"
+            },
+            {
+                "key": "Jack Death",
+                "value": "杰克：死亡"
+            },
+            {
+                "key": "Jack Step",
+                "value": "杰克：脚步声"
+            },
+            {
+                "key": "Craftenstein Damage",
+                "value": "块兰肯斯坦：受伤"
+            },
+            {
+                "key": "Craftenstein Death",
+                "value": "块兰肯斯坦：死亡"
+            },
+            {
+                "key": "Craftenstein Step",
+                "value": "块兰肯斯坦：脚步声"
+            },
+            {
+                "key": "Craftenstein Ambient",
+                "value": "块兰肯斯坦：轻哼"
+            },
+            {
+                "key": "Gloom Bats Ambient",
+                "value": "阴郁蝙蝠：轻哼"
+            },
+            {
+                "key": "Ghost Death",
+                "value": "鬼魂：死亡"
+            },
+            {
+                "key": "Ghost Hurt",
+                "value": "鬼魂：受伤"
+            },
+            {
+                "key": "Ghost Scream",
+                "value": "鬼魂：尖叫"
+            },
+            {
+                "key": "Heartbeat",
+                "value": "心跳声"
+            },
+            {
+                "key": "Looking For You",
+                "value": "在找你哦"
+            },
+            {
+                "key": "Never Forget",
+                "value": "永不忘记"
+            },
+            {
+                "key": "Never Left",
+                "value": "永不离开"
+            },
+            {
+                "key": "The Void",
+                "value": "虚空"
+            },
+            {
+                "key": "Voices",
+                "value": "一些声音"
+            },
+            {
+                "key": "Dragon Goblin Hurt",
+                "value": "龙窟哥布林：受伤"
+            },
+            {
+                "key": "Dragon Goblin Hurt 1",
+                "value": "龙窟哥布林：受伤1"
+            },
+            {
+                "key": "Dragon Goblin Hurt 2",
+                "value": "龙窟哥布林：受伤2"
+            },
+            {
+                "key": "Dragon Goblin Hurt 3",
+                "value": "龙窟哥布林：受伤3"
+            },
+            {
+                "key": "Dragon Goblin Escape",
+                "value": "龙窟哥布林：逃跑"
+            },
+            {
+                "key": "Yeti Step",
+                "value": "雪怪：脚步声"
+            },
+            {
+                "key": "Yeti Death",
+                "value": "雪怪：死亡"
+            },
+            {
+                "key": "Yeti Hurt",
+                "value": "雪怪：受伤"
+            },
+            {
+                "key": "Grinch Death",
+                "value": "格林奇：死亡"
+            },
+            {
+                "key": "Grinch Death Scream",
+                "value": "格林奇：死亡尖叫"
+            },
+            {
+                "key": "Grinch Hehe Laugh",
+                "value": "格林奇：呵呵笑"
+            },
+            {
+                "key": "Grinch Laugh",
+                "value": "格林奇：大笑"
+            },
+            {
+                "key": "Grinch Moan",
+                "value": "格林奇：呻吟"
+            },
+            {
+                "key": "Gear Seal",
+                "value": "装备：密封"
+            },
+            {
+                "key": "Christmas Music",
+                "value": "圣诞节音乐"
+            },
+            {
+                "key": "Imbuement Positive",
+                "value": "灌注：成功"
+            },
+            {
+                "key": "Imbuement Negative",
+                "value": "灌注：失败"
+            },
+            {
+                "key": "Cardboard Box Open",
+                "value": "纸板箱：打开"
+            },
+            {
+                "key": "Cooldown Reset",
+                "value": "冷却重置"
+            },
+            {
+                "key": "Laser",
+                "value": "激光"
+            },
+            {
+                "key": "Globe Spin",
+                "value": "地球仪：旋转"
+            },
+            {
+                "key": "Omega Present",
+                "value": "终焉礼物"
+            },
+            {
+                "key": "Omega Present Empty",
+                "value": "空的终焉礼物"
+            },
+            {
+                "key": "Companion Egg Spawn",
+                "value": "伙伴之蛋：生成"
+            },
+            {
+                "key": "Bye Bye",
+                "value": "再见"
+            },
+            {
+                "key": "Shield Bash",
+                "value": "盾牌重击"
+            },
+            {
+                "key": "Jar Tap",
+                "value": "罐子：敲敲"
+            },
+            {
+                "key": "Greed Trader Idle",
+                "value": "贪婪商人：轻哼"
+            },
+            {
+                "key": "Greed Coins Shake",
+                "value": "贪婪币：摇动"
+            },
+            {
+                "key": "Greed Trader Purchase",
+                "value": "贪婪商人：购买"
+            },
+            {
+                "key": "Plastic Bolt Shoot",
+                "value": "塑料闪电：发射"
+            },
+            {
+                "key": "Plastic Bolt Hit",
+                "value": "塑料闪电：击中"
+            },
+            {
+                "key": "Plastic Tank Hurt",
+                "value": "塑料坦克：受伤"
+            },
+            {
+                "key": "Plastic Tank Death",
+                "value": "塑料坦克：死亡"
+            },
+            {
+                "key": "Plastic Tank Idle",
+                "value": "塑料坦克：轻哼"
+            },
+            {
+                "key": "Plastic Horde Hurt",
+                "value": "塑料集群：受伤"
+            },
+            {
+                "key": "Plastic Horde Death",
+                "value": "塑料集群：死亡"
+            },
+            {
+                "key": "Wild West Start",
+                "value": "荒野西部：开始"
+            },
+            {
+                "key": "Wild West Shoot",
+                "value": "荒野西部：射击"
+            }
+        ]
+    },
+    {
+        "_comment": "参见反编译项iskallia.vault.util.TextUtil"
+    },
+    {
+        "target_classes": [
+            {
+                "name": "iskallia.vault.client.gui.screen.bestiary.element.GroupListElement",
+                "method": "<init>",
+                "local": "VgroupName",
+                "ordinal": 34
+            },
+            {
+                "name": "iskallia.vault.client.gui.screen.bestiary.element.EntityGroupElement",
+                "method": "<init>",
+                "local": "VgroupName"
+            }
+        ],
+        "pairs": [
+            {
+                "key": "集群怪物",
+                "value": "Horde"
+            },
+            {
+                "key": "刺客怪物",
+                "value": "Assassin"
+            },
+            {
+                "key": "坦克怪物",
+                "value": "Tank"
+            },
+            {
+                "key": "地牢怪物",
+                "value": "Dungeon"
+            },
+            {
+                "key": "宝库居民",
+                "value": "Dweller"
+            },
+            {
+                "key": "守卫",
+                "value": "Guardians"
+            },
+            {
+                "key": "灾厄村民",
+                "value": "Illagers"
+            },
+            {
+                "key": "冠军",
+                "value": "Champion"
+            },
+            {
+                "key": "地牢首领",
+                "value": "Dungeon Boss"
+            },
+            {
+                "key": "下属怪物",
+                "value": "Minions"
+            },
+            {
+                "key": "精英",
+                "value": "Elite"
+            },
+            {
+                "key": "首领",
+                "value": "Bosses"
+            },
+            {
+                "key": "“容器”",
+                "value": "Vessel"
+            },
+            {
+                "key": "贪婪刺客",
+                "value": "Greed Assassin"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.event.GreedAssassinSpawnHandler"
+        },
+        "pairs": [
+            {
+                "key": "Greed Reputation",
+                "value": "贪婪声望点"
+            },
+            {
+                "key": "A ",
+                "value": "一个"
+            },
+            {
+                "key": "Greed Assassin",
+                "value": "贪婪刺客"
+            },
+            {
+                "key": " is hunting you...",
+                "value": "正在狩猎你……"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.util.GroupUtils",
+            "method": "getEntityName"
+        },
+        "key": "Dweller",
+        "value": "宝库居民"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.util.TextUtil",
+            "method": "formatLocationPathAsProperNoun",
+            "local": "Mtrim"
+        },
+        "pairs": [
+            {
+                "key": "Horde",
+                "value": "集群怪物"
+            },
+            {
+                "key": "Assassin",
+                "value": "刺客怪物"
+            },
+            {
+                "key": "Tank",
+                "value": "坦克怪物"
+            },
+            {
+                "key": "Dungeon",
+                "value": "地牢怪物"
+            },
+            {
+                "key": "Guardians",
+                "value": "守卫"
+            },
+            {
+                "key": "Illagers",
+                "value": "灾厄村民"
+            },
+            {
+                "key": "Champion",
+                "value": "冠军"
+            },
+            {
+                "key": "Dungeon Boss",
+                "value": "地牢首领"
+            },
+            {
+                "key": "Minions",
+                "value": "下属怪物"
+            },
+            {
+                "key": "Elite",
+                "value": "精英"
+            },
+            {
+                "key": "Bosses",
+                "value": "首领"
+            },
+            {
+                "key": "Vessel",
+                "value": "“容器”"
+            },
+            {
+                "key": "Greed Assassin",
+                "value": "贪婪刺客"
+            },
+            {
+                "key": "Item Discovery",
+                "value": "发现物品"
+            },
+            {
+                "key": "Mining",
+                "value": "挖矿"
+            },
+            {
+                "key": "Kill Entity",
+                "value": "击杀生物"
+            },
+            {
+                "key": "Item Submission",
+                "value": "提交物品"
+            },
+            {
+                "key": "Completion",
+                "value": "完成"
+            },
+            {
+                "key": "Overworld",
+                "value": "主世界"
+            },
+            {
+                "key": "The Nether",
+                "value": "下界"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.block.DeckCraftingScreen"
+        },
+        "pairs": [
+            {
+                "key": "Requires ",
+                "value": "需要"
+            },
+            {
+                "key": " Research",
+                "value": "研究"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.block.DeckCraftingScreen",
+            "local": "MgetDeckResearchName",
+            "ordinal": 16
+        },
+        "key": "Vault Decks",
+        "value": "宝库卡组包"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.block.VaultForgeScreen"
+        },
+        "pairs": [
+            {
+                "key": "Level: ",
+                "value": "等级："
+            },
+            {
+                "key": "Add Proficiency",
+                "value": "提升熟练度"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.block.VaultForgeScreen$ProficiencySegment"
+        },
+        "pairs": [
+            {
+                "key": "Proficiency: ",
+                "value": "熟练度："
+            },
+            {
+                "key": "Durability: ",
+                "value": "耐久度："
+            },
+            {
+                "key": "Crafting Potential: ",
+                "value": "锻造潜能："
+            },
+            {
+                "key": "Rarity Pool: ",
+                "value": "稀有度池："
+            },
+            {
+                "key": "Maximum Repair Slots: ",
+                "value": "修复槽数上限："
+            },
+            {
+                "key": "Soulbound Chance: ",
+                "value": "灵魂绑定概率："
+            },
+            {
+                "key": "Greater Modifier Chance: ",
+                "value": "高阶词缀概率："
+            }
+        ]
+    },
+    {
+        "target_classes": [
+            {
+                "name": "iskallia.vault.client.gui.screen.block.VaultForgeScreen$ProficiencySegment",
+                "method": "getTooltipComponents",
+                "local": "MgetPool",
+                "ordinal": 158
+            }
+        ],
+        "pairs": [
+            {
+                "key": "Scrappy",
+                "value": "破烂"
+            },
+            {
+                "key": "Common",
+                "value": "普通"
+            },
+            {
+                "key": "Rare",
+                "value": "稀有"
+            },
+            {
+                "key": "Epic",
+                "value": "史诗"
+            },
+            {
+                "key": "Omega",
+                "value": "终焉"
+            },
+            {
+                "key": "Unique",
+                "value": "独特"
+            },
+            {
+                "key": "Scrappy+",
+                "value": "破烂+"
+            },
+            {
+                "key": "Common+",
+                "value": "普通+"
+            },
+            {
+                "key": "Rare+",
+                "value": "稀有+"
+            },
+            {
+                "key": "Epic+",
+                "value": "史诗+"
+            },
+            {
+                "key": "Royale",
+                "value": "皇家"
+            },
+            {
+                "key": "Royale_Poor",
+                "value": "皇家_劣质"
+            },
+            {
+                "key": "Chaos",
+                "value": "混沌"
+            },
+            {
+                "key": "Chaotic",
+                "value": "混沌"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.bounty.element.task.AbstractTaskElement"
+        },
+        "pairs": [
+            {
+                "key": "Status: ",
+                "value": "状态："
+            },
+            {
+                "key": "Description:",
+                "value": "描述:"
+            },
+            {
+                "key": "Progress:",
+                "value": "进度:"
+            },
+            {
+                "key": "Rewards: (",
+                "value": "奖励: ("
+            },
+            {
+                "key": " Vault XP",
+                "value": " 宝库经验"
+            },
+            {
+                "key": "Vault Gear level is locked to your Vault Level at the time of Bounty generation.",
+                "value": "宝库装备的等级锁定为产生奖励时的宝库等级。"
+            },
+            {
+                "key": " - The Vault",
+                "value": " - 宝库世界"
+            },
+            {
+                "key": " - Any Dimension",
+                "value": " - 任意维度"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.bounty.element.task.AbstractTaskElement",
+            "method": "<init>",
+            "local": "VrewardPool",
+            "ordinal": 337
+        },
+        "pairs": [
+            {
+                "key": "legendary",
+                "value": "传奇"
+            },
+            {
+                "key": "common",
+                "value": "普通"
+            },
+            {
+                "key": "rare",
+                "value": "稀有"
+            },
+            {
+                "key": "epic",
+                "value": "史诗"
+            },
+            {
+                "key": "omega",
+                "value": "终焉"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.player.legacy.tab.split.dialog.ResearchDialog"
+        },
+        "pairs": [
+            {
+                "key": "Sharing new researches with:",
+                "value": "与以下玩家共享新的研究："
+            },
+            {
+                "key": "Researched",
+                "value": "已研究"
+            },
+            {
+                "key": "Research (",
+                "value": "研究 ("
+            },
+            {
+                "key": "Not Researched",
+                "value": "尚未研究"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.player.legacy.widget.ResearchWidget"
+        },
+        "pairs": [
+            {
+                "key": "Requires",
+                "value": "需要解锁"
+            },
+            {
+                "key": " any of",
+                "value": "以下任意一个"
+            },
+            {
+                "key": "Cannot be unlocked alongside:",
+                "value": "不能与以下项目同时解锁："
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.item.KnowledgeBrewItem"
+        },
+        "pairs": [
+            {
+                "key": "Owner: ",
+                "value": "所有者："
+            },
+            {
+                "key": "Research Tree: ",
+                "value": "研究树："
+            },
+            {
+                "key": "None",
+                "value": "无"
+            }
+        ]
+    },
+    {
+        "_comment": "研究标题 显示在Research选项卡的ResearchName 随researches更新"
+    },
+    {
+        "target_classes": [
+            {
+                "name": "iskallia.vault.client.gui.screen.player.legacy.tab.split.dialog.ResearchDialog",
+                "method": "renderHeading",
+                "local": "GresearchName",
+                "ordinal": 109
+            },
+            {
+                "name": "iskallia.vault.client.gui.screen.player.legacy.widget.ResearchWidget",
+                "method": "renderHover",
+                "local": "GresearchName",
+                "ordinal": 24
+            },
+            {
+                "name": "iskallia.vault.client.gui.screen.player.legacy.widget.ResearchWidget",
+                "method": "lambda$renderHover$1",
+                "local": "MgetName"
+            },
+            {
+                "name": "iskallia.vault.research.StageManager",
+                "local": "MrestrictedBy"
+            },
+            {
+                "name": "iskallia.vault.item.KnowledgeBrewItem",
+                "method": "lambda$appendHoverText$3",
+                "local": "Vresearch"
+            }
+        ],
+        "pairs": [
+            {
+                "key": "Backpacks",
+                "value": "小背包"
+            },
+            {
+                "key": "Big Backpacks",
+                "value": "大背包"
+            },
+            {
+                "key": "Create",
+                "value": "机械动力"
+            },
+            {
+                "key": "Colossal Chests",
+                "value": "巨型箱子"
+            },
+            {
+                "key": "Simple Storage Network",
+                "value": "简易存储网络"
+            },
+            {
+                "key": "Waystones",
+                "value": "指路石"
+            },
+            {
+                "key": "Torch Master",
+                "value": "火把大师"
+            },
+            {
+                "key": "Trashcans",
+                "value": "垃圾桶"
+            },
+            {
+                "key": "Building Gadgets",
+                "value": "建筑小帮手"
+            },
+            {
+                "key": "Mining Gadgets",
+                "value": "采矿小工具"
+            },
+            {
+                "key": "Laser Bridges",
+                "value": "激光桥"
+            },
+            {
+                "key": "Entangled",
+                "value": "量子纠缠"
+            },
+            {
+                "key": "Industrial Foregoing",
+                "value": "工业先锋"
+            },
+            {
+                "key": "Pneumaticraft",
+                "value": "气动工艺"
+            },
+            {
+                "key": "Laser IO",
+                "value": "激光IO"
+            },
+            {
+                "key": "Sophisticated Storage",
+                "value": "精妙存储"
+            },
+            {
+                "key": "Waystones",
+                "value": "传送石碑"
+            },
+            {
+                "key": "Torch Master",
+                "value": "火把大师"
+            },
+            {
+                "key": "Trashcans",
+                "value": "垃圾桶"
+            },
+            {
+                "key": "Building Gadgets",
+                "value": "建筑小帮手"
+            },
+            {
+                "key": "Mining Gadgets",
+                "value": "采矿小工具"
+            },
+            {
+                "key": "Refined Storage",
+                "value": "精致存储"
+            },
+            {
+                "key": "Applied Energistics",
+                "value": "应用能源"
+            },
+            {
+                "key": "Iron Furnaces",
+                "value": "更多熔炉"
+            },
+            {
+                "key": "Elevators",
+                "value": "电梯"
+            },
+            {
+                "key": "Modular Routers",
+                "value": "模块化路由器"
+            },
+            {
+                "key": "Chunk Loading",
+                "value": "区块加载器"
+            },
+            {
+                "key": "Mob Spawners",
+                "value": "刷怪笼"
+            },
+            {
+                "key": "Botania",
+                "value": "植物魔法"
+            },
+            {
+                "key": "Mekanism",
+                "value": "通用机械"
+            },
+            {
+                "key": "Easy Villagers",
+                "value": "简易村民"
+            },
+            {
+                "key": "Easy Piglins",
+                "value": "简易猪灵"
+            },
+            {
+                "key": "Dark Utilities",
+                "value": "暗黑实用工具"
+            },
+            {
+                "key": "Create",
+                "value": "机械动力"
+            },
+            {
+                "key": "SNAD",
+                "value": "子沙"
+            },
+            {
+                "key": "Botany Pots",
+                "value": "植物盆栽"
+            },
+            {
+                "key": "Flux Networks",
+                "value": "通量网络"
+            },
+            {
+                "key": "Thermal Expansion",
+                "value": "热力膨胀"
+            },
+            {
+                "key": "Mekanism Generators",
+                "value": "通用机械发电机"
+            },
+            {
+                "key": "Iron Generators",
+                "value": "铁发电机"
+            },
+            {
+                "key": "Automatic Genius",
+                "value": "自动化天才"
+            },
+            {
+                "key": "Mekanism QIO",
+                "value": "通用机械QIO"
+            },
+            {
+                "key": "Vault Compass",
+                "value": "宝库指南针"
+            },
+            {
+                "key": "Map Markers",
+                "value": "地图标记"
+            },
+            {
+                "key": "Augment Station",
+                "value": "主题组件工作站"
+            },
+            {
+                "key": "Vault Map",
+                "value": "宝库地图"
+            },
+            {
+                "key": "Altar Automation",
+                "value": "祭坛自动化"
+            },
+            {
+                "key": "Thermal Dynamos",
+                "value": "热力发电机"
+            },
+            {
+                "key": "Potions",
+                "value": "魔法药剂"
+            },
+            {
+                "key": "Mixtures",
+                "value": "混合药剂"
+            },
+            {
+                "key": "Brews",
+                "value": "精酿药剂"
+            },
+            {
+                "key": "Digital Miner",
+                "value": "数字型采矿机"
+            },
+            {
+                "key": "Phytogenic Insulator",
+                "value": "有机灌注器"
+            },
+            {
+                "key": "Soul Harvester",
+                "value": "灵魂收割器"
+            },
+            {
+                "key": "Sophisticated Interface",
+                "value": "精妙接口"
+            },
+            {
+                "key": "Barrels",
+                "value": "精妙木桶"
+            },
+            {
+                "key": "Industrial Mob Farm",
+                "value": "工业怪物农场"
+            },
+            {
+                "key": "Botania Flux Field",
+                "value": "植物魔法魔力转换器"
+            },
+            {
+                "key": "Vault Filters",
+                "value": "宝库过滤器"
+            },
+            {
+                "key": "Vault Decks",
+                "value": "宝库卡组包"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.quest.QuestOverviewElementScreen"
+        },
+        "pairs": [
+            {
+                "key": "Quest Overview",
+                "value": "任务概览"
+            },
+            {
+                "key": "Complete",
+                "value": "完成"
+            },
+            {
+                "key": "Locked",
+                "value": "已锁定"
+            },
+            {
+                "key": "Completed",
+                "value": "已完成"
+            },
+            {
+                "key": "Incomplete",
+                "value": "未完成"
+            }
+        ]
+    },
+    {
+        "_comment": "任务名称 显示在任务界面的QuestName 根据quests和sky_quests更新"
+    },
+    {
+        "target_classes": [
+            {
+                "name": "iskallia.vault.client.gui.screen.quest.QuestButtonElement",
+                "method": "lambda$new$0",
+                "local": "MgetName"
+            },
+            {
+                "name": "iskallia.vault.client.gui.screen.quest.QuestOverviewElementScreen",
+                "method": "updateQuestHeader",
+                "local": "MgetName"
+            },
+            {
+                "name": "iskallia.vault.network.message.ClientboundToastMessage",
+                "method": "toast",
+                "local": "Vtitle"
+            }
+        ],
+        "pairs": [
+            {
+                "key": "Vault Hunters Introduction",
+                "value": "宝藏猎人介绍"
+            },
+            {
+                "key": "Chromatic Iron",
+                "value": "异色铁"
+            },
+            {
+                "key": "Vault Stone",
+                "value": "宝库石"
+            },
+            {
+                "key": "The Vault Altar",
+                "value": "宝库祭坛"
+            },
+            {
+                "key": "Vault Crystals",
+                "value": "宝库水晶"
+            },
+            {
+                "key": "Skills and Talents",
+                "value": "技能和天赋"
+            },
+            {
+                "key": "Better Enchanting",
+                "value": "更好的附魔"
+            },
+            {
+                "key": "Vault Potions",
+                "value": "宝库药剂"
+            },
+            {
+                "key": "Vault Hunting",
+                "value": "宝库狩猎"
+            },
+            {
+                "key": "Looting!",
+                "value": "收集战利品！"
+            },
+            {
+                "key": "Bounty Hunting",
+                "value": "悬赏狩猎"
+            },
+            {
+                "key": "Bounties and Rewards",
+                "value": "悬赏和奖励"
+            },
+            {
+                "key": "Tool Station",
+                "value": "工具装配台"
+            },
+            {
+                "key": "Vault Tools",
+                "value": "宝库工具"
+            },
+            {
+                "key": "Jewels on Tools",
+                "value": "工具上的珠宝"
+            },
+            {
+                "key": "Expertises",
+                "value": "专精"
+            },
+            {
+                "key": "Forging Gear",
+                "value": "锻造装备"
+            },
+            {
+                "key": "Magnets",
+                "value": "磁铁"
+            },
+            {
+                "key": "Artisan Station Modifying",
+                "value": "工作站装备修饰"
+            },
+            {
+                "key": "Rerolling Gear Modifiers",
+                "value": "重铸装备词缀"
+            },
+            {
+                "key": "Scrapping Vault Gear",
+                "value": "拆解宝库装备"
+            },
+            {
+                "key": "Alchemy Table",
+                "value": "炼药桌"
+            },
+            {
+                "key": "Additional Experience",
+                "value": "额外的经验"
+            },
+            {
+                "key": "Vault Objectives",
+                "value": "宝库目标"
+            },
+            {
+                "key": "Regretting Decisions",
+                "value": "为决定后悔"
+            },
+            {
+                "key": "Black Market Goods",
+                "value": "黑市货物"
+            },
+            {
+                "key": "The Soul Diffuser",
+                "value": "灵魂分解器"
+            },
+            {
+                "key": "Identification Stand",
+                "value": "鉴定台"
+            },
+            {
+                "key": "Using Knowledge",
+                "value": "使用知识"
+            },
+            {
+                "key": "Level 20 Changes",
+                "value": "20级的变化"
+            },
+            {
+                "key": "Modifying Vault Crystals",
+                "value": "修饰宝库水晶"
+            },
+            {
+                "key": "Catalysts",
+                "value": "催化剂"
+            },
+            {
+                "key": "Inscriptions",
+                "value": "铭文"
+            },
+            {
+                "key": "Artifacts",
+                "value": "文物"
+            },
+            {
+                "key": "Revival",
+                "value": "重生"
+            },
+            {
+                "key": "Trinkets",
+                "value": "饰品"
+            },
+            {
+                "key": "Vault Rocks",
+                "value": "宝库之石"
+            },
+            {
+                "key": "Dungeons",
+                "value": "地牢"
+            },
+            {
+                "key": "Plunderer's Vault Rock",
+                "value": "盗贼宝库之石"
+            },
+            {
+                "key": "Vendoors",
+                "value": "商门"
+            },
+            {
+                "key": "Modifier Workbench",
+                "value": "词缀工作台"
+            },
+            {
+                "key": "Storing Gear",
+                "value": "储存装备"
+            },
+            {
+                "key": "Multiple Builds",
+                "value": "多种技能搭配"
+            },
+            {
+                "key": "Transmogrification",
+                "value": "幻化"
+            },
+            {
+                "key": "Catalysts",
+                "value": "催化剂"
+            },
+            {
+                "key": "Level 40!",
+                "value": "40级！"
+            },
+            {
+                "key": "The Gods",
+                "value": "宝库之神"
+            },
+            {
+                "key": "God Altars & Reputation",
+                "value": "神之祭坛与声望点"
+            },
+            {
+                "key": "Forgetting Expertises",
+                "value": "遗忘专精"
+            },
+            {
+                "key": "Treasure Keys",
+                "value": "宝藏钥匙"
+            },
+            {
+                "key": "Treasure Rooms",
+                "value": "宝藏室"
+            },
+            {
+                "key": "More to come!",
+                "value": "更多内容敬请期待！"
+            },
+            {
+                "key": "Sky Vaulting",
+                "value": "空岛宝库"
+            },
+            {
+                "key": "Better Health Potions",
+                "value": "更好的生命药剂"
+            },
+            {
+                "key": "Warden's Vault Rock",
+                "value": "监守者宝库之石"
+            },
+            {
+                "key": "Challenger's Vault Rock",
+                "value": "挑战者宝库之石"
+            },
+            {
+                "key": "Ascension Forge",
+                "value": "升华锻炉"
+            },
+            {
+                "key": "Choosing your own objective",
+                "value": "选择自己的目标"
+            },
+            {
+                "key": "Craft a Elixir seal",
+                "value": "制作圣水印记"
+            },
+            {
+                "key": "Craft a Brazier seal",
+                "value": "制作火盆印记"
+            },
+            {
+                "key": "Craft a Scavenger seal",
+                "value": "制作拾荒者印记"
+            },
+            {
+                "key": "Craft a Bingo seal",
+                "value": "制作Bingo印记"
+            },
+            {
+                "key": "Craft a Hunt the Runes seal",
+                "value": "制作符文狩猎印记"
+            },
+            {
+                "key": "Card System",
+                "value": "卡牌系统"
+            },
+            {
+                "key": "Card Types",
+                "value": "卡牌类型"
+            },
+            {
+                "key": "Decks",
+                "value": "卡组包"
+            },
+            {
+                "key": "Deck Cores",
+                "value": "卡组包核心"
+            },
+            {
+                "key": "Cards!",
+                "value": "卡牌！"
+            },
+            {
+                "key": "Upgrading Cards",
+                "value": "升级卡牌"
+            },
+            {
+                "key": "Crafting Jewels",
+                "value": "制作珠宝"
+            },
+            {
+                "key": "Trinket Forge",
+                "value": "饰品锻炉"
+            },
+            {
+                "key": "Unique Gear",
+                "value": "独特装备"
+            },
+            {
+                "key": "Pylons & Temporal Relics",
+                "value": "晶塔与时空遗物"
+            },
+            {
+                "key": "Animal Pens",
+                "value": "动物棚"
+            },
+            {
+                "key": "Coin Pouch",
+                "value": "钱币袋"
+            },
+            {
+                "key": "Royale Vaults",
+                "value": "皇家宝库"
+            },
+            {
+                "key": "Antiques",
+                "value": "古董"
+            },
+            {
+                "key": "Companions!",
+                "value": "伙伴！"
+            },
+            {
+                "key": "Reaching Max Level",
+                "value": "达到等级上限"
+            },
+            {
+                "key": "The Herald",
+                "value": "先驱者"
+            },
+            {
+                "key": "Sealing Gear",
+                "value": "密封装备"
+            },
+            {
+                "key": "Imbuement Altars",
+                "value": "灌注祭坛"
+            },
+            {
+                "key": "Greed",
+                "value": "贪婪"
+            },
+            {
+                "key": "Greed Cauldron",
+                "value": "贪婪之锅"
+            },
+            {
+                "key": "Archetypes",
+                "value": "原型"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.rules.VaultRulesScreen"
+        },
+        "pairs": [
+            {
+                "key": "Vault Rules",
+                "value": "宝库规则"
+            },
+            {
+                "key": "General",
+                "value": "通用"
+            },
+            {
+                "key": "Crystal",
+                "value": "水晶"
+            },
+            {
+                "key": "Co-op",
+                "value": "合作"
+            },
+            {
+                "key": "Spectator",
+                "value": "旁观"
+            },
+            {
+                "key": "Misc",
+                "value": "杂项"
+            },
+            {
+                "key": "Vault Timer",
+                "value": "宝库计时器"
+            },
+            {
+                "key": "No Limit",
+                "value": "无限制"
+            },
+            {
+                "key": " min",
+                "value": "分钟"
+            },
+            {
+                "key": "Amount of time all users receive in their vaults. Setting this to 0 will give everyone infinite time.",
+                "value": "设置所有宝库的默认计时器时间。设置为0代表无限时间。"
+            },
+            {
+                "key": "Level Lock",
+                "value": "宝库等级锁"
+            },
+            {
+                "key": "Maximum vault level any user can reach.",
+                "value": "玩家可达到的宝库等级上限。"
+            },
+            {
+                "key": "Vault Mode",
+                "value": "宝库模式"
+            },
+            {
+                "key": "Vault Rewards",
+                "value": "宝库奖励"
+            },
+            {
+                "key": "Loot Amount",
+                "value": "战利品数量"
+            },
+            {
+                "key": "Loot multiplier for vault chests.",
+                "value": "宝库宝箱的战利品倍率。"
+            },
+            {
+                "key": "Loot Multiplier: ",
+                "value": "战利品倍率："
+            },
+            {
+                "key": "XP Amount",
+                "value": "宝库经验量"
+            },
+            {
+                "key": "XP multiplier for all vaults.",
+                "value": "所有宝库的经验值倍率。"
+            },
+            {
+                "key": "Crystal Cost",
+                "value": "水晶花费"
+            },
+            {
+                "key": "Determines how much materials are required to craft Vault Crystals",
+                "value": "决定制作宝库水晶需要花费的材料量"
+            },
+            {
+                "key": "Recipe Scaling",
+                "value": "配方动态难度"
+            },
+            {
+                "key": "Determines how quickly the crystal recipe scales",
+                "value": "控制水晶配方难度提升的速度"
+            },
+            {
+                "key": "SLOW: 0.5x scaling",
+                "value": "缓慢：0.5x提升速度"
+            },
+            {
+                "key": "NORMAL: 1.0x scaling",
+                "value": "普通：1.0x提升速度"
+            },
+            {
+                "key": "FAST: 2.0x scaling",
+                "value": "迅速：2.0x提升速度"
+            },
+            {
+                "key": "EXTREME: 5.0x scaling",
+                "value": "巨量：5.0x提升速度"
+            },
+            {
+                "key": "Vaults Require Party",
+                "value": "宝库小队限制"
+            },
+            {
+                "key": "When enabled, players can only join vaults of those they share a party with.",
+                "value": "启用后，玩家只能加入同小队成员的宝库。"
+            },
+            {
+                "key": "XP Sharing",
+                "value": "经验共享"
+            },
+            {
+                "key": "Map Sharing",
+                "value": "地图共享"
+            },
+            {
+                "key": "When enabled, rooms discovered by party members will show up on your vault map too.",
+                "value": "启用后，其他小队成员的宝库房间也会显示在你的宝库地图上。"
+            },
+            {
+                "key": "Research Penalty",
+                "value": "研究惩罚"
+            },
+            {
+                "key": "When enabled, the research cost is increased by 50% for every team member you have.",
+                "value": "启用后，每位研究团队成员使研究花费提升50%。"
+            },
+            {
+                "key": "Boost Penalty",
+                "value": "探索收益衰减"
+            },
+            {
+                "key": "When enabled, players running lower level vaults will not gain experience.",
+                "value": "启用后，探索更低等级的宝库时将不会获得经验。"
+            },
+            {
+                "key": "increases the cost of researches or not",
+                "value": "增加研究所需的花费"
+            },
+            {
+                "key": "Level Sync",
+                "value": "等级同步"
+            },
+            {
+                "key": "Level Sync Enabled",
+                "value": "启用等级同步"
+            },
+            {
+                "key": "When enabled, players can form level sync teams to share a single vault level and exp pool.",
+                "value": "启用后，玩家可以组建等级同步小组，共享宝库等级和经验值。"
+            },
+            {
+                "key": "Level Sync Penalty",
+                "value": "等级同步惩罚"
+            },
+            {
+                "key": "Extra experience required to the next level per additional team member. 50% means 2 players need 1.5x exp, 3 players need 2x exp.",
+                "value": "每增加一名小组成员，升级所需的经验值都会增加。50%代表2名玩家需要1.5倍经验值，3名玩家需要2倍经验值。"
+            },
+            {
+                "key": "Spectator Mode",
+                "value": "宝库旁观模式"
+            },
+            {
+                "key": "Spectate Party Only",
+                "value": "仅小队旁观"
+            },
+            {
+                "key": "When enabled, users can only spectate party members.",
+                "value": "启用后，玩家只能旁观小队成员的宝库探索。"
+            },
+            {
+                "key": "Knowledge Brew",
+                "value": "知识精酿"
+            },
+            {
+                "key": "When enabled, Knowledge Brews can be used. Research of the player who crafted it is granted to the user that drinks it.",
+                "value": "启用后，玩家可以使用知识精酿，使用者会获得制作者已解锁的研究。"
+            },
+            {
+                "key": "Mentor Brew",
+                "value": "导师精酿"
+            },
+            {
+                "key": "When enabled, Mentor Brews can be used. When a level 100 user makes a brew and gives it to their level 0 friend, that friend will become level 100.",
+                "value": "启用后，玩家可以使用导师精酿，使用者的宝库等级将提升至制作者制作精酿时的宝库等级。"
+            },
+            {
+                "key": "Spirit Locker Debt",
+                "value": "灵魂储物核债务"
+            },
+            {
+                "key": "When enabled, users can retrieve their spirit by going into debt.",
+                "value": "启用后，玩家可以选择通过陷入负债状态救回灵魂"
+            },
+            {
+                "key": "Vault Doll AI",
+                "value": "宝库玩偶AI"
+            },
+            {
+                "key": "When enabled, Vault Dolls will have an AI, causing them to actively run away and avoid players. When this option is disabled, the dolls also become immune to damage.",
+                "value": "启用后，宝库玩偶将具有AI，可以主动逃跑并避开玩家。禁用后，玩偶会免疫所有伤害。"
+            },
+            {
+                "key": "Allow Waypoints",
+                "value": "允许路径点"
+            },
+            {
+                "key": "When enabled, users can set waypoints in vaults.",
+                "value": "启用后，玩家可以在宝库内设置路径点。"
+            },
+            {
+                "key": "Preload Templates",
+                "value": "预加载模板"
+            },
+            {
+                "key": "ONLY TURN THIS ON IF YOU KNOW WHAT YOU'RE DOING! When enabled, all vault templates will be pre-loaded when the world or server is loaded. This uses more RAM, but gets rid of the lag spike upon entering the first vault since restart.",
+                "value": "当你知道自己在做什么时再开启！启用后，加载世界或服务器时，将预加载所有宝库模板。这可以消除延迟峰值，但会增加内存占用。"
+            },
+            {
+                "key": "When dying, items will be kept in the player's spirit",
+                "value": "死亡时，物品会保留在玩家灵魂内。"
+            },
+            {
+                "key": "When dying, a spirit will spawn, but it only restores the inventory from vault entry.",
+                "value": "死亡时会生成玩家灵魂，仅保留进入宝库时物品栏内的所有物品。物品会保留在玩家灵魂内。"
+            },
+            {
+                "key": "When dying, all items will be kept, and no progress will be lost. Companions lose no hearts.",
+                "value": "死亡时，所有物品都会保留，不会丢失任何游戏进度。伙伴不会失去红心。"
+            },
+            {
+                "key": "When dying, all items will be voided and no spirit will spawn",
+                "value": "死亡时，所有物品都会被销毁，不会生成灵魂"
+            },
+            {
+                "key": "When crafting a crystal, it will guarantee to be Royale.",
+                "value": "制作水晶时，默认将变为皇家水晶。"
+            },
+            {
+                "key": "Crystals are free",
+                "value": "水晶免费"
+            },
+            {
+                "key": "Multiplier: ",
+                "value": "倍率："
+            },
+            {
+                "key": "Party members do not share XP",
+                "value": "小队成员不会共享经验"
+            },
+            {
+                "key": "Highest XP earned is distributed to all members",
+                "value": "根据小队获得的最高经验值为所有成员分配"
+            },
+            {
+                "key": "Lowest XP earned is distributed to all members",
+                "value": "根据小队获得的最低经验值为所有成员分配"
+            },
+            {
+                "key": "Average XP earned is distributed to all members",
+                "value": "根据小队获得的平均经验值为所有成员分配"
+            },
+            {
+                "key": "Spectator mode disabled",
+                "value": "禁用宝库旁观模式"
+            },
+            {
+                "key": "Spectate specific players",
+                "value": "旁观特定玩家"
+            },
+            {
+                "key": "Free roaming spectator",
+                "value": "自由视角旁观"
+            }
+        ]
+    },
+    {
+        "_comment": "VaultRulesScreen界面的所有枚举类实例文本"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.rules.VaultRulesScreen",
+            "local": "MtoUpperCase"
+        },
+        "pairs": [
+            {
+                "key": "NORMAL",
+                "value": "普通"
+            },
+            {
+                "key": "CASUAL",
+                "value": "休闲"
+            },
+            {
+                "key": "HARDCORE",
+                "value": "硬核"
+            },
+            {
+                "key": "ROYALE",
+                "value": "皇家"
+            },
+            {
+                "key": "SCARCE",
+                "value": "稀少"
+            },
+            {
+                "key": "PLENTY",
+                "value": "丰富"
+            },
+            {
+                "key": "EXTREME",
+                "value": "巨量"
+            },
+            {
+                "key": "POOR",
+                "value": "极少"
+            },
+            {
+                "key": "HALF",
+                "value": "减半"
+            },
+            {
+                "key": "DOUBLE",
+                "value": "双倍"
+            },
+            {
+                "key": "TRIPLE",
+                "value": "三倍"
+            },
+            {
+                "key": "FREE",
+                "value": "免费"
+            },
+            {
+                "key": "GRINDY",
+                "value": "繁琐"
+            },
+            {
+                "key": "SLOW",
+                "value": "缓慢"
+            },
+            {
+                "key": "FAST",
+                "value": "迅速"
+            },
+            {
+                "key": "DISABLED",
+                "value": "禁用"
+            },
+            {
+                "key": "HIGHEST",
+                "value": "最高"
+            },
+            {
+                "key": "LOWEST",
+                "value": "最低"
+            },
+            {
+                "key": "AVERAGE",
+                "value": "平均"
+            },
+            {
+                "key": "OFF",
+                "value": "关"
+            },
+            {
+                "key": "PLAYER",
+                "value": "玩家"
+            },
+            {
+                "key": "FREEROAM",
+                "value": "自由视角"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.summary.element.CombatStatsContainerElement"
+        },
+        "pairs": [
+            {
+                "key": "Mobs Unalived",
+                "value": "击杀怪物"
+            },
+            {
+                "key": "Total number of mobs you defeated",
+                "value": "你击败的怪物总数"
+            },
+            {
+                "key": "No mobs killed in this group",
+                "value": "此族类中没有被击杀的怪物"
+            },
+            {
+                "key": "Champions:",
+                "value": "冠军: "
+            },
+            {
+                "key": "Damage Dealt",
+                "value": "造成的伤害"
+            },
+            {
+                "key": "Total damage you dealt to mobs",
+                "value": "你对怪物造成的总伤害"
+            },
+            {
+                "key": "Damage Received",
+                "value": "受到的伤害"
+            },
+            {
+                "key": "Total damage you took from mobs",
+                "value": "你受到的来自怪物的总伤害"
+            },
+            {
+                "key": "Unknown",
+                "value": "未知"
+            }
+        ]
+    },
+    {
+        "_comment": "宝库结算界面显示的怪物名称 随语言文件的新怪物更新"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.summary.element.CombatStatsContainerElement",
+            "method": "formatMobName",
+            "local": "Rtrim"
+        },
+        "pairs": [
+            {
+                "key": "Aggressive Cow",
+                "value": "战斗牛"
+            },
+            {
+                "key": "Aggressive Goat",
+                "value": "战斗山羊"
+            },
+            {
+                "key": "Aggressive Cow Boss",
+                "value": "战斗牛首领"
+            },
+            {
+                "key": "Arbalist Guardian",
+                "value": "劲弩守卫"
+            },
+            {
+                "key": "Artifact Boss",
+                "value": "神圣先驱者"
+            },
+            {
+                "key": "Blood Horde T1",
+                "value": "岩灵（一阶）"
+            },
+            {
+                "key": "Blood Horde T2",
+                "value": "岩灵（二阶）"
+            },
+            {
+                "key": "Blood Horde T3",
+                "value": "岩灵（三阶）"
+            },
+            {
+                "key": "Blood Horde T4",
+                "value": "岩灵（四阶）"
+            },
+            {
+                "key": "Blood Horde T5",
+                "value": "岩灵（五阶）"
+            },
+            {
+                "key": "Blood Silverfish",
+                "value": "血蠹虫"
+            },
+            {
+                "key": "Blood Skeleton T0",
+                "value": "嗜血流盗（一阶）"
+            },
+            {
+                "key": "Blood Skeleton T1",
+                "value": "嗜血流盗（二阶）"
+            },
+            {
+                "key": "Blood Skeleton T2",
+                "value": "嗜血流盗（三阶）"
+            },
+            {
+                "key": "Blood Skeleton T3",
+                "value": "嗜血流盗（四阶）"
+            },
+            {
+                "key": "Blood Skeleton T4",
+                "value": "嗜血流盗（五阶）"
+            },
+            {
+                "key": "Blood Skeleton T5",
+                "value": "嗜血流盗（六阶）"
+            },
+            {
+                "key": "Blood Slime",
+                "value": "嗜血史莱姆"
+            },
+            {
+                "key": "Blood Tank",
+                "value": "岩石巨人"
+            },
+            {
+                "key": "Blue Blaze",
+                "value": "灵魂烈焰人"
+            },
+            {
+                "key": "Boogieman Boss",
+                "value": "首领布吉人"
+            },
+            {
+                "key": "Bruiser Guardian",
+                "value": "重拳守卫"
+            },
+            {
+                "key": "Butcher Arbalist Guardian",
+                "value": "屠夫劲弩守卫"
+            },
+            {
+                "key": "Butcher Bruiser Guardian",
+                "value": "屠夫重拳守卫"
+            },
+            {
+                "key": "Crab",
+                "value": "宝库蟹"
+            },
+            {
+                "key": "Craftenstein",
+                "value": "块兰肯斯坦"
+            },
+            {
+                "key": "Crystal Arbalist Guardian",
+                "value": "水晶劲弩守卫"
+            },
+            {
+                "key": "Crystal Bruiser Guardian",
+                "value": "水晶重拳守卫"
+            },
+            {
+                "key": "Deathcap",
+                "value": "死亡菌盖"
+            },
+            {
+                "key": "Deep Dark Horror",
+                "value": "深暗恐惧"
+            },
+            {
+                "key": "Deep Dark Piglin",
+                "value": "深暗猪灵"
+            },
+            {
+                "key": "Deep Dark Silverfish",
+                "value": "深暗蠹虫"
+            },
+            {
+                "key": "Deep Dark Skeleton",
+                "value": "深暗骷髅"
+            },
+            {
+                "key": "Deep Dark Witch",
+                "value": "深暗女巫"
+            },
+            {
+                "key": "Deep Dark Zombie",
+                "value": "深暗僵尸"
+            },
+            {
+                "key": "Dungeon Black Widow Spider",
+                "value": "地牢黑寡妇蜘蛛"
+            },
+            {
+                "key": "Dungeon Piglin",
+                "value": "地牢猪灵"
+            },
+            {
+                "key": "Dungeon Piglin Brute",
+                "value": "地牢猪灵蛮兵"
+            },
+            {
+                "key": "Dungeon Pillager",
+                "value": "地牢掠夺者"
+            },
+            {
+                "key": "Dungeon Skeleton",
+                "value": "地牢骷髅"
+            },
+            {
+                "key": "Dungeon Spider",
+                "value": "地牢蜘蛛"
+            },
+            {
+                "key": "Dungeon Vindicator",
+                "value": "地牢卫道士"
+            },
+            {
+                "key": "Dungeon Witch",
+                "value": "地牢女巫"
+            },
+            {
+                "key": "Elite Drowned",
+                "value": "精英溺尸"
+            },
+            {
+                "key": "Elite Enderman",
+                "value": "精英末影人"
+            },
+            {
+                "key": "Elite Husk",
+                "value": "精英尸壳"
+            },
+            {
+                "key": "Elite Skeleton",
+                "value": "精英骷髅"
+            },
+            {
+                "key": "Elite Spider",
+                "value": "精英蜘蛛"
+            },
+            {
+                "key": "Elite Stray",
+                "value": "精英流浪者"
+            },
+            {
+                "key": "Elite Witch",
+                "value": "精英女巫"
+            },
+            {
+                "key": "Elite Wither Skeleton",
+                "value": "精英凋灵骷髅"
+            },
+            {
+                "key": "Elite Zombie",
+                "value": "精英僵尸"
+            },
+            {
+                "key": "Endervex",
+                "value": "末影恼鬼"
+            },
+            {
+                "key": "Eyesore",
+                "value": "眼核"
+            },
+            {
+                "key": "Eyestalk",
+                "value": "眼柄"
+            },
+            {
+                "key": "Golem Boss",
+                "value": "首领傀儡"
+            },
+            {
+                "key": "Grinch",
+                "value": "格林奇"
+            },
+            {
+                "key": "Healer",
+                "value": "治疗师"
+            },
+            {
+                "key": "Jack",
+                "value": "杰克"
+            },
+            {
+                "key": "Jack Poison",
+                "value": "剧毒杰克"
+            },
+            {
+                "key": "Jack O Web",
+                "value": "万圣网蛛"
+            },
+            {
+                "key": "Black Widow Spider",
+                "value": "黑寡妇蜘蛛"
+            },
+            {
+                "key": "Levishroom",
+                "value": "活化菇"
+            },
+            {
+                "key": "Miner Zombie T0",
+                "value": "深腐矿工（一阶）"
+            },
+            {
+                "key": "Miner Zombie T1",
+                "value": "深腐矿工（二阶）"
+            },
+            {
+                "key": "Miner Zombie T2",
+                "value": "深腐矿工（三阶）"
+            },
+            {
+                "key": "Miner Zombie T3",
+                "value": "深腐矿工（四阶）"
+            },
+            {
+                "key": "Miner Zombie T4",
+                "value": "深腐矿工（五阶）"
+            },
+            {
+                "key": "Miner Zombie T5",
+                "value": "深腐矿工（六阶）"
+            },
+            {
+                "key": "Monster Eye",
+                "value": "怪物之眼"
+            },
+            {
+                "key": "Mummy",
+                "value": "木乃伊"
+            },
+            {
+                "key": "Mummy T0",
+                "value": "木乃伊（一阶）"
+            },
+            {
+                "key": "Mummy T1",
+                "value": "木乃伊（二阶）"
+            },
+            {
+                "key": "Mummy T2",
+                "value": "木乃伊（三阶）"
+            },
+            {
+                "key": "Mushroom T0",
+                "value": "真菌体（一阶）"
+            },
+            {
+                "key": "Mushroom T1",
+                "value": "真菌体（二阶）"
+            },
+            {
+                "key": "Mushroom T2",
+                "value": "真菌体（三阶）"
+            },
+            {
+                "key": "Mushroom T3",
+                "value": "真菌体（四阶）"
+            },
+            {
+                "key": "Mushroom T4",
+                "value": "真菌体（五阶）"
+            },
+            {
+                "key": "Mushroom T5",
+                "value": "真菌体（六阶）"
+            },
+            {
+                "key": "Overgrown Tank",
+                "value": "石监守者"
+            },
+            {
+                "key": "Overgrown Woodman T0",
+                "value": "丛生护林人（一阶）"
+            },
+            {
+                "key": "Overgrown Woodman T1",
+                "value": "丛生护林人（二阶）"
+            },
+            {
+                "key": "Overgrown Woodman T2",
+                "value": "丛生护林人（三阶）"
+            },
+            {
+                "key": "Overgrown Zombie T0",
+                "value": "丛生者（一阶）"
+            },
+            {
+                "key": "Overgrown Zombie T1",
+                "value": "丛生者（二阶）"
+            },
+            {
+                "key": "Overgrown Zombie T2",
+                "value": "丛生者（三阶）"
+            },
+            {
+                "key": "Overgrown Zombie T3",
+                "value": "丛生者（四阶）"
+            },
+            {
+                "key": "Overgrown Zombie T4",
+                "value": "丛生者（五阶）"
+            },
+            {
+                "key": "Overgrown Zombie T5",
+                "value": "丛生者（六阶）"
+            },
+            {
+                "key": "Pirate Arbalist Guardian",
+                "value": "海盗劲弩守卫"
+            },
+            {
+                "key": "Pirate Bruiser Guardian",
+                "value": "海盗重拳守卫"
+            },
+            {
+                "key": "Pirate Guardian Tank",
+                "value": "海盗守卫坦克"
+            },
+            {
+                "key": "Puzzle Arbalist Guardian",
+                "value": "谜题劲弩守卫"
+            },
+            {
+                "key": "Puzzle Bruiser Guardian",
+                "value": "谜题重拳守卫"
+            },
+            {
+                "key": "Robot",
+                "value": "机器人"
+            },
+            {
+                "key": "Santa",
+                "value": "圣诞老人"
+            },
+            {
+                "key": "Scarab",
+                "value": "圣甲虫"
+            },
+            {
+                "key": "Shiver",
+                "value": "寒栗者"
+            },
+            {
+                "key": "Skeleton Pirate T0",
+                "value": "海盗（一阶）"
+            },
+            {
+                "key": "Skeleton Pirate T1",
+                "value": "海盗（二阶）"
+            },
+            {
+                "key": "Skeleton Pirate T2",
+                "value": "海盗（三阶）"
+            },
+            {
+                "key": "Skeleton Pirate T3",
+                "value": "海盗（四阶）"
+            },
+            {
+                "key": "Skeleton Pirate T4",
+                "value": "海盗（五阶）"
+            },
+            {
+                "key": "Skeleton Pirate T5",
+                "value": "海盗（六阶）"
+            },
+            {
+                "key": "Smolcap",
+                "value": "小孢子"
+            },
+            {
+                "key": "Swamp Zombie",
+                "value": "沼泽僵尸"
+            },
+            {
+                "key": "T0 Cave Skeleton",
+                "value": "矿缚灵（一阶）"
+            },
+            {
+                "key": "T1 Cave Skeleton",
+                "value": "矿缚灵（二阶）"
+            },
+            {
+                "key": "T1 Creeper",
+                "value": "苦力怕（一阶）"
+            },
+            {
+                "key": "T1 Drowned",
+                "value": "溺尸（一阶）"
+            },
+            {
+                "key": "T1 Enderman",
+                "value": "末影人（一阶）"
+            },
+            {
+                "key": "T1 Husk",
+                "value": "尸壳（一阶）"
+            },
+            {
+                "key": "T1 Piglin",
+                "value": "猪灵（一阶）"
+            },
+            {
+                "key": "T1 Plastic Skeleton",
+                "value": "塑料骷髅（一阶）"
+            },
+            {
+                "key": "T1 Plastic Slime",
+                "value": "塑料史莱姆（一阶）"
+            },
+            {
+                "key": "T1 Plastic Zombie",
+                "value": "塑料僵尸（一阶）"
+            },
+            {
+                "key": "T1 Skeleton",
+                "value": "骷髅（一阶）"
+            },
+            {
+                "key": "T1 Stray",
+                "value": "流浪者（一阶）"
+            },
+            {
+                "key": "T1 Wither Skeleton",
+                "value": "凋灵骷髅（一阶）"
+            },
+            {
+                "key": "T1 Zombie",
+                "value": "僵尸（一阶）"
+            },
+            {
+                "key": "T2 Cave Skeleton",
+                "value": "矿缚灵（三阶）"
+            },
+            {
+                "key": "T2 Creeper",
+                "value": "苦力怕（二阶）"
+            },
+            {
+                "key": "T2 Drowned",
+                "value": "溺尸（二阶）"
+            },
+            {
+                "key": "T2 Enderman",
+                "value": "末影人（二阶）"
+            },
+            {
+                "key": "T2 Husk",
+                "value": "尸壳（二阶）"
+            },
+            {
+                "key": "T2 Piglin",
+                "value": "猪灵（二阶）"
+            },
+            {
+                "key": "T2 Plastic Skeleton",
+                "value": "塑料骷髅（二阶）"
+            },
+            {
+                "key": "T2 Plastic Slime",
+                "value": "塑料史莱姆（二阶）"
+            },
+            {
+                "key": "T2 Plastic Zombie",
+                "value": "塑料僵尸（二阶）"
+            },
+            {
+                "key": "T2 Skeleton",
+                "value": "骷髅（二阶）"
+            },
+            {
+                "key": "T2 Stray",
+                "value": "流浪者（二阶）"
+            },
+            {
+                "key": "T2 Wither Skeleton",
+                "value": "凋灵骷髅（二阶）"
+            },
+            {
+                "key": "T2 Zombie",
+                "value": "僵尸（二阶）"
+            },
+            {
+                "key": "T3 Cave Skeleton",
+                "value": "矿缚灵（四阶）"
+            },
+            {
+                "key": "T3 Creeper",
+                "value": "苦力怕（三阶）"
+            },
+            {
+                "key": "T3 Drowned",
+                "value": "溺尸（三阶）"
+            },
+            {
+                "key": "T3 Enderman",
+                "value": "末影人（三阶）"
+            },
+            {
+                "key": "T3 Husk",
+                "value": "尸壳（三阶）"
+            },
+            {
+                "key": "T3 Piglin",
+                "value": "猪灵（三阶）"
+            },
+            {
+                "key": "T3 Plastic Skeleton",
+                "value": "塑料骷髅（三阶）"
+            },
+            {
+                "key": "T3 Plastic Slime",
+                "value": "塑料史莱姆（三阶）"
+            },
+            {
+                "key": "T3 Plastic Zombie",
+                "value": "塑料僵尸（三阶）"
+            },
+            {
+                "key": "T3 Skeleton",
+                "value": "骷髅（三阶）"
+            },
+            {
+                "key": "T3 Stray",
+                "value": "流浪者（三阶）"
+            },
+            {
+                "key": "T3 Wither Skeleton",
+                "value": "凋灵骷髅（三阶）"
+            },
+            {
+                "key": "T3 Zombie",
+                "value": "僵尸（三阶）"
+            },
+            {
+                "key": "T4 Cave Skeleton",
+                "value": "矿缚灵（五阶）"
+            },
+            {
+                "key": "T4 Plastic Skeleton",
+                "value": "塑料骷髅（四阶）"
+            },
+            {
+                "key": "T4 Plastic Slime",
+                "value": "塑料史莱姆（四阶）"
+            },
+            {
+                "key": "T4 Plastic Zombie",
+                "value": "塑料僵尸（四阶）"
+            },
+            {
+                "key": "T5 Cave Skeleton",
+                "value": "矿缚灵（六阶）"
+            },
+            {
+                "key": "Treasure goblin",
+                "value": "宝藏哥布林"
+            },
+            {
+                "key": "Vault Blue Gummy Soldier",
+                "value": "蓝色果冻士兵"
+            },
+            {
+                "key": "Vault Dood",
+                "value": "宝库傀儡"
+            },
+            {
+                "key": "Vault Fighter",
+                "value": "宝库居民#1"
+            },
+            {
+                "key": "Vault Fighter 1",
+                "value": "宝库居民#2"
+            },
+            {
+                "key": "Vault Fighter 2",
+                "value": "宝库居民#3"
+            },
+            {
+                "key": "Vault Fighter 3",
+                "value": "宝库居民#4"
+            },
+            {
+                "key": "Vault Fighter 4",
+                "value": "宝库居民#5"
+            },
+            {
+                "key": "Vault Fighter 5",
+                "value": "宝库居民#6"
+            },
+            {
+                "key": "Vault Fighter 6",
+                "value": "宝库居民#7"
+            },
+            {
+                "key": "Vault Fighter 7",
+                "value": "宝库居民#8"
+            },
+            {
+                "key": "Vault Fighter 8",
+                "value": "宝库居民#9"
+            },
+            {
+                "key": "Vault Fighter 9",
+                "value": "宝库居民#10"
+            },
+            {
+                "key": "Vault Green Gummy Soldier",
+                "value": "绿色果冻士兵"
+            },
+            {
+                "key": "Vault Guardian",
+                "value": "宝库守卫"
+            },
+            {
+                "key": "Vault Horse",
+                "value": "宝库马"
+            },
+            {
+                "key": "Vault Red Gummy Soldier",
+                "value": "红色果冻士兵"
+            },
+            {
+                "key": "Vault Spider",
+                "value": "蜘蛛"
+            },
+            {
+                "key": "Vault Spider Baby",
+                "value": "小小蜘蛛"
+            },
+            {
+                "key": "Vault Wraith White",
+                "value": "宝库幽魂"
+            },
+            {
+                "key": "Vault Wraith Yellow",
+                "value": "黄色宝库幽魂"
+            },
+            {
+                "key": "Vault Yellow Gummy Soldier",
+                "value": "黄色果冻士兵"
+            },
+            {
+                "key": "Winter Wolf",
+                "value": "寒冬狼"
+            },
+            {
+                "key": "Winterwalker T0",
+                "value": "寒冬僵尸"
+            },
+            {
+                "key": "Winterwalker T1",
+                "value": "一阶寒冬僵尸"
+            },
+            {
+                "key": "Winterwalker T2",
+                "value": "二阶寒冬僵尸"
+            },
+            {
+                "key": "Winterwalker T3",
+                "value": "三阶寒冬僵尸"
+            },
+            {
+                "key": "Winterwalker T4",
+                "value": "四阶寒冬僵尸"
+            },
+            {
+                "key": "Winterwalker T5",
+                "value": "五阶寒冬僵尸"
+            },
+            {
+                "key": "Yeti",
+                "value": "雪怪"
+            },
+            {
+                "key": "Black Widow Boss",
+                "value": "首领黑寡妇"
+            },
+            {
+                "key": "Fighter",
+                "value": "战士"
+            },
+            {
+                "key": "Naga",
+                "value": "娜迦"
+            },
+            {
+                "key": "Raised Zombie",
+                "value": "复生僵尸"
+            },
+            {
+                "key": "Raised Zombie Chicken",
+                "value": "复生僵尸鸡"
+            },
+            {
+                "key": "Grimwick",
+                "value": "阴森鬼魂"
+            },
+            {
+                "key": "Chicken",
+                "value": "鸡"
+            },
+            {
+                "key": "Zombie",
+                "value": "僵尸"
+            },
+            {
+                "key": "Husk",
+                "value": "尸壳"
+            },
+            {
+                "key": "Drowned",
+                "value": "溺尸"
+            },
+            {
+                "key": "Skeleton",
+                "value": "骷髅"
+            },
+            {
+                "key": "Stray",
+                "value": "流浪者"
+            },
+            {
+                "key": "Creeper",
+                "value": "苦力怕"
+            },
+            {
+                "key": "Spider",
+                "value": "蜘蛛"
+            },
+            {
+                "key": "Piglin",
+                "value": "猪灵"
+            },
+            {
+                "key": "Wither Skeleton",
+                "value": "凋灵骷髅"
+            },
+            {
+                "key": "Enderman",
+                "value": "末影人"
+            },
+            {
+                "key": "Piglin Brute",
+                "value": "猪灵蛮兵"
+            },
+            {
+                "key": "Blaze",
+                "value": "烈焰人"
+            },
+            {
+                "key": "Polar Bear",
+                "value": "北极熊"
+            },
+            {
+                "key": "Rabbit",
+                "value": "兔子"
+            },
+            {
+                "key": "Slime",
+                "value": "史莱姆"
+            },
+            {
+                "key": "Magma Cube",
+                "value": "岩浆怪"
+            },
+            {
+                "key": "Vindicator",
+                "value": "卫道士"
+            },
+            {
+                "key": "Ravager",
+                "value": "劫掠兽"
+            },
+            {
+                "key": "Vex",
+                "value": "恼鬼"
+            },
+            {
+                "key": "Pillager",
+                "value": "掠夺者"
+            },
+            {
+                "key": "Evoker",
+                "value": "唤魔者"
+            },
+            {
+                "key": "Acid Pursuer",
+                "value": "强酸追捕者"
+            },
+            {
+                "key": "Acid Enforcer",
+                "value": "强酸执法者"
+            },
+            {
+                "key": "Acid Fiend",
+                "value": "强酸恶魔"
+            },
+            {
+                "key": "Acid Bolt",
+                "value": "强酸弩师"
+            },
+            {
+                "key": "Acid Hunter",
+                "value": "强酸猎手"
+            },
+            {
+                "key": "Acid Priest",
+                "value": "强酸牧师"
+            },
+            {
+                "key": "Acid Orb",
+                "value": "强酸球"
+            },
+            {
+                "key": "Death Guard",
+                "value": "死亡护卫"
+            },
+            {
+                "key": "Death Dancer",
+                "value": "死亡舞者"
+            },
+            {
+                "key": "Death Knight",
+                "value": "死亡骑士"
+            },
+            {
+                "key": "Death Inquisitor",
+                "value": "死亡审判官"
+            },
+            {
+                "key": "Billy",
+                "value": "比利"
+            },
+            {
+                "key": "Dragon Goblin",
+                "value": "龙窟哥布林"
+            },
+            {
+                "key": "Plastic Creeper",
+                "value": "库力啪"
+            },
+            {
+                "key": "Plastic Tank",
+                "value": "巴巴宝"
+            },
+            {
+                "key": "Releasing Companion",
+                "value": "某冠军"
+            },
+            {
+                "key": "Skeleton Gladiator",
+                "value": "骷髅角斗士"
+            },
+            {
+                "key": "T0 Plastic Horde",
+                "value": "零阶捣蛋鬼"
+            },
+            {
+                "key": "T1 Plastic Horde",
+                "value": "一阶捣蛋鬼"
+            },
+            {
+                "key": "T2 Plastic Horde",
+                "value": "二阶捣蛋鬼"
+            },
+            {
+                "key": "T3 Plastic Horde",
+                "value": "三阶捣蛋鬼"
+            },
+            {
+                "key": "T4 Plastic Horde",
+                "value": "四阶捣蛋鬼"
+            },
+            {
+                "key": "T5 Plastic Horde",
+                "value": "五阶捣蛋鬼"
+            },
+            {
+                "key": "Vessel Phantom",
+                "value": "容器幻影"
+            },
+            {
+                "key": "Void Rift",
+                "value": "虚空裂隙"
+            },
+            {
+                "key": "The Vessel",
+                "value": "“容器”"
+            },
+            {
+                "key": "Knight",
+                "value": "骑士"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.summary.element.CrystalStatsContainerElement"
+        },
+        "pairs": [
+            {
+                "key": "Vault Level",
+                "value": "宝库等级"
+            },
+            {
+                "key": "Unknown",
+                "value": "未知"
+            },
+            {
+                "key": "Theme",
+                "value": "主题"
+            },
+            {
+                "key": "Unable to find a theme for this vault.",
+                "value": "无法找到此宝库的主题。"
+            },
+            {
+                "key": "Series",
+                "value": "系列"
+            },
+            {
+                "key": "Light the Braziers",
+                "value": "点燃火盆"
+            },
+            {
+                "key": "None",
+                "value": "无"
+            },
+            {
+                "key": "Objective",
+                "value": "目标"
+            },
+            {
+                "key": "The objective of this vault",
+                "value": "此宝库的宝库目标"
+            },
+            {
+                "key": "Modifiers",
+                "value": "宝库词缀"
+            },
+            {
+                "key": "No Modifiers",
+                "value": "无宝库词缀"
+            },
+            {
+                "key": "This crystal has no modifiers applied",
+                "value": "此水晶没有添加宝库词缀"
+            },
+            {
+                "key": "Treasure Rooms Opened",
+                "value": "开启宝藏室"
+            },
+            {
+                "key": "Total number of treasure rooms opened",
+                "value": "开启的宝藏室的总数"
+            },
+            {
+                "key": "Vendoors Opened",
+                "value": "开启商店室"
+            },
+            {
+                "key": "Gold Spent",
+                "value": "花费金币"
+            },
+            {
+                "key": "Total amount of vault gold spent in the vault",
+                "value": "宝库中花费的宝库金币的总数"
+            },
+            {
+                "key": "Dungeons Opened",
+                "value": "开启地牢"
+            },
+            {
+                "key": "Difficulty: ",
+                "value": "难度："
+            },
+            {
+                "key": "Archives Found",
+                "value": "发现档案台"
+            },
+            {
+                "key": "Total number of modifier archives found in dungeons",
+                "value": "在地牢中发现的档案台的总数"
+            },
+            {
+                "key": "Pylons Used",
+                "value": "使用晶塔"
+            },
+            {
+                "key": "Number of pylons used in the vault",
+                "value": "宝库中使用的晶塔的总数"
+            },
+            {
+                "key": "Pylons Broken",
+                "value": "破坏晶塔"
+            },
+            {
+                "key": "Number of pylons broken in the vault",
+                "value": "宝库中破坏的晶塔的总数"
+            },
+            {
+                "key": "Rooms Discovered",
+                "value": "探索房间"
+            },
+            {
+                "key": "Total number of rooms discovered",
+                "value": "探索的宝库房间的总数"
+            },
+            {
+                "key": "Number of ",
+                "value": "探索的"
+            },
+            {
+                "key": " rooms discovered",
+                "value": "房间的总数"
+            },
+            {
+                "key": "God Tasks Completed",
+                "value": "完成祭坛任务"
+            },
+            {
+                "key": "Total number of god tasks completed",
+                "value": "完成的宝库之神的祭坛任务的总数"
+            },
+            {
+                "key": "God Tasks Failed",
+                "value": "祭坛任务失败"
+            },
+            {
+                "key": "Total number of god tasks failed",
+                "value": "失败的宝库之神的祭坛任务的总数"
+            },
+            {
+                "key": "Reputation Gained",
+                "value": "获得声望点"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.summary.element.CrystalStatsContainerElement",
+            "method": "<init>",
+            "local": "Vobjective",
+            "ordinal": 222
+        },
+        "pairs": [
+            {
+                "key": "Elixir",
+                "value": "圣水"
+            },
+            {
+                "key": "Scavenger",
+                "value": "拾荒者"
+            },
+            {
+                "key": "Paradox",
+                "value": "悖论"
+            },
+            {
+                "key": "Cake",
+                "value": "蛋糕"
+            },
+            {
+                "key": "Hunt_the_guardians",
+                "value": "猎杀守卫"
+            },
+            {
+                "key": "Rune_boss",
+                "value": "符文首领"
+            },
+            {
+                "key": "Ascension",
+                "value": "升华"
+            },
+            {
+                "key": "Architect",
+                "value": "建筑师"
+            },
+            {
+                "key": "Herald",
+                "value": "先驱者"
+            },
+            {
+                "key": "Raid",
+                "value": "袭击"
+            },
+            {
+                "key": "Royale",
+                "value": "皇家"
+            },
+            {
+                "key": "Pvp Race",
+                "value": "PVP竞赛"
+            },
+            {
+                "key": "Greed",
+                "value": "贪婪"
+            },
+            {
+                "key": "Scavenger_bingo",
+                "value": "收藏家"
+            },
+            {
+                "key": "Time_trial",
+                "value": "时间试炼"
+            },
+            {
+                "key": "Rebirth",
+                "value": "贪婪试炼"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.map.VaultMapRenderHelper"
+        },
+        "pairs": [
+            {
+                "key": "Start Room",
+                "value": "起始房间"
+            },
+            {
+                "key": "Ore Room",
+                "value": "矿石房间"
+            },
+            {
+                "key": "Common Room",
+                "value": "普通房间"
+            },
+            {
+                "key": "Raw Room",
+                "value": "原始房间"
+            },
+            {
+                "key": "Boss Room",
+                "value": "首领房间"
+            },
+            {
+                "key": "Common Room (",
+                "value": "普通房间 ("
+            },
+            {
+                "key": "Raw Room (",
+                "value": "原始房间 ("
+            }
+        ]
+    },
+    {
+        "_comment": "宝库结算界面的地图房间名 随gen/templates更新"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.map.VaultMapRenderHelper",
+            "local": "McapitalizeWords"
+        },
+        "pairs": [
+            {
+                "key": "Crystal Caves Room",
+                "value": "水晶洞穴房间"
+            },
+            {
+                "key": "Dragon Room",
+                "value": "龙窟房间"
+            },
+            {
+                "key": "Factory Room",
+                "value": "工厂房间"
+            },
+            {
+                "key": "Village Room",
+                "value": "村庄房间"
+            },
+            {
+                "key": "Wildwest Room",
+                "value": "荒野西部房间"
+            },
+            {
+                "key": "X-mark Room",
+                "value": "X标记房间"
+            },
+            {
+                "key": "X-mark Trap Room",
+                "value": "X标记陷阱房间"
+            },
+            {
+                "key": "X-mark Treasure Room",
+                "value": "X标记宝藏房间"
+            },
+            {
+                "key": "Raid Room",
+                "value": "袭击房间"
+            },
+            {
+                "key": "Laboratory Room",
+                "value": "实验室房间"
+            },
+            {
+                "key": "Challenge Digsite Room",
+                "value": "挖掘之地挑战房间"
+            },
+            {
+                "key": "Villagefort Room",
+                "value": "村庄要塞房间"
+            },
+            {
+                "key": "Cube",
+                "value": "魔方"
+            },
+            {
+                "key": "Omega Digsite",
+                "value": "终焉挖掘之地"
+            },
+            {
+                "key": "Blacksmith",
+                "value": "锻造城堡"
+            },
+            {
+                "key": "Cove",
+                "value": "港湾"
+            },
+            {
+                "key": "Library",
+                "value": "图书馆"
+            },
+            {
+                "key": "Mine",
+                "value": "矿井"
+            },
+            {
+                "key": "Mush Room",
+                "value": "蘑菇房间"
+            },
+            {
+                "key": "Painting",
+                "value": "彩绘"
+            },
+            {
+                "key": "Vendor",
+                "value": "集市"
+            },
+            {
+                "key": "Pixel",
+                "value": "像素"
+            },
+            {
+                "key": "Temple",
+                "value": "神殿"
+            },
+            {
+                "key": "Memory Room",
+                "value": "记忆房间"
+            },
+            {
+                "key": "Horderush Room",
+                "value": "集群竞速房间"
+            },
+            {
+                "key": "Companion Rush Room",
+                "value": "伙伴竞速房间"
+            },
+            {
+                "key": "Protect Villager Room",
+                "value": "保护村民房间"
+            },
+            {
+                "key": "Warehouse",
+                "value": "仓库"
+            },
+            {
+                "key": "Cozy",
+                "value": "温室"
+            },
+            {
+                "key": "Trove",
+                "value": "秘宝"
+            },
+            {
+                "key": "Bee1",
+                "value": "蜜蜂1"
+            },
+            {
+                "key": "Bee2",
+                "value": "蜜蜂2"
+            },
+            {
+                "key": "Bee3",
+                "value": "蜜蜂3"
+            },
+            {
+                "key": "Bee4",
+                "value": "蜜蜂4"
+            },
+            {
+                "key": "Cliffs1",
+                "value": "山崖1"
+            },
+            {
+                "key": "Cliffs2",
+                "value": "山崖2"
+            },
+            {
+                "key": "Cliffs3",
+                "value": "山崖3"
+            },
+            {
+                "key": "Cliffs4",
+                "value": "山崖4"
+            },
+            {
+                "key": "Glowstone_lakes1",
+                "value": "荧石湖泊1"
+            },
+            {
+                "key": "Glowstone_lakes2",
+                "value": "荧石湖泊2"
+            },
+            {
+                "key": "Glowstone_lakes3",
+                "value": "荧石湖泊3"
+            },
+            {
+                "key": "Glowstone_lakes4",
+                "value": "荧石湖泊4"
+            },
+            {
+                "key": "Lakes1",
+                "value": "湖泊1"
+            },
+            {
+                "key": "Lakes2",
+                "value": "湖泊2"
+            },
+            {
+                "key": "Lakes3",
+                "value": "湖泊3"
+            },
+            {
+                "key": "Lakes4",
+                "value": "湖泊4"
+            },
+            {
+                "key": "Mushroom_forest1",
+                "value": "蘑菇森林1"
+            },
+            {
+                "key": "Mushroom_forest2",
+                "value": "蘑菇森林2"
+            },
+            {
+                "key": "Mushroom_forest3",
+                "value": "蘑菇森林3"
+            },
+            {
+                "key": "Mushroom_forest4",
+                "value": "蘑菇森林4"
+            },
+            {
+                "key": "Mustard1",
+                "value": "芥末1"
+            },
+            {
+                "key": "Mustard2",
+                "value": "芥末2"
+            },
+            {
+                "key": "Mustard3",
+                "value": "芥末3"
+            },
+            {
+                "key": "Mustard4",
+                "value": "芥末4"
+            },
+            {
+                "key": "Pirate1",
+                "value": "海盗1"
+            },
+            {
+                "key": "Pirate2",
+                "value": "海盗2"
+            },
+            {
+                "key": "Pirate3",
+                "value": "海盗3"
+            },
+            {
+                "key": "Pirate4",
+                "value": "海盗4"
+            },
+            {
+                "key": "Rainbow_forest1",
+                "value": "彩虹森林1"
+            },
+            {
+                "key": "Rainbow_forest2",
+                "value": "彩虹森林2"
+            },
+            {
+                "key": "Rainbow_forest3",
+                "value": "彩虹森林3"
+            },
+            {
+                "key": "Rainbow_forest4",
+                "value": "彩虹森林4"
+            },
+            {
+                "key": "Ore1",
+                "value": "矿石1"
+            },
+            {
+                "key": "Ore2",
+                "value": "矿石2"
+            },
+            {
+                "key": "Ore3",
+                "value": "矿石3"
+            },
+            {
+                "key": "Ore4",
+                "value": "矿石4"
+            },
+            {
+                "key": "Farm1",
+                "value": "农场1"
+            },
+            {
+                "key": "Quarry1",
+                "value": "采石场1"
+            },
+            {
+                "key": "Nether1",
+                "value": "下界1"
+            },
+            {
+                "key": "Chromatic Cave1",
+                "value": "异色铁洞穴1"
+            },
+            {
+                "key": "Diamond Cave1",
+                "value": "钻石洞穴1"
+            },
+            {
+                "key": "Emerald Cave1",
+                "value": "绿宝石洞穴1"
+            },
+            {
+                "key": "End1",
+                "value": "末地1"
+            },
+            {
+                "key": "Raid1",
+                "value": "袭击1"
+            },
+            {
+                "key": "Douwsky Graveyard",
+                "value": "Douwsky墓园"
+            },
+            {
+                "key": "Douwsky Mushy",
+                "value": "Douwsky菌园"
+            },
+            {
+                "key": "S3graveyard",
+                "value": "S3墓园"
+            },
+            {
+                "key": "Boss",
+                "value": "首领"
+            },
+            {
+                "key": "Boss Room",
+                "value": "首领房间"
+            },
+            {
+                "key": "Boss1",
+                "value": "首领1"
+            },
+            {
+                "key": "Boss2",
+                "value": "首领2"
+            },
+            {
+                "key": "Rebirth Arena",
+                "value": "复生竞技场"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.core.card.Card"
+        },
+        "pairs": [
+            {
+                "key": "Tier: ",
+                "value": "等级："
+            },
+            {
+                "key": "Color: ",
+                "value": "颜色："
+            },
+            {
+                "key": ", ",
+                "value": "、"
+            },
+            {
+                "key": "Type: ",
+                "value": "类型："
+            },
+            {
+                "key": "Groups: ",
+                "value": "套组："
+            }
+        ]
+    },
+    {
+        "target_classes": [
+            {
+                "name": "iskallia.vault.core.card.Card",
+                "method": "addText",
+                "local": "Mget",
+                "ordinal": 176
+            },
+            {
+                "name": "iskallia.vault.core.card.CardCondition",
+                "method": "lambda$addText$6",
+                "local": "Vs"
+            },
+            {
+                "name": "iskallia.vault.core.card.CardScaler",
+                "method": "lambda$addText$6",
+                "local": "Vs"
+            }
+        ],
+        "pairs": [
+            {
+                "key": "Arcane",
+                "value": "奥术"
+            },
+            {
+                "key": "Temporal",
+                "value": "时空"
+            },
+            {
+                "key": "Resource",
+                "value": "资源"
+            },
+            {
+                "key": "Evolution",
+                "value": "进阶"
+            },
+            {
+                "key": "Stat",
+                "value": "数值"
+            },
+            {
+                "key": "Wild",
+                "value": "狂野"
+            },
+            {
+                "key": "Greed",
+                "value": "贪婪"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.core.card.CardCondition"
+        },
+        "pairs": [
+            {
+                "key": " or ",
+                "value": "或"
+            },
+            {
+                "key": "Tier ",
+                "value": "等级 "
+            },
+            {
+                "key": "If there is exactly ",
+                "value": "需要有"
+            },
+            {
+                "key": "If there are exactly ",
+                "value": "需要有"
+            },
+            {
+                "key": "If there are between ",
+                "value": "需要有"
+            },
+            {
+                "key": "and ",
+                "value": "到"
+            },
+            {
+                "key": "If there is at least ",
+                "value": "需要至少有"
+            },
+            {
+                "key": "If there are at least ",
+                "value": "需要至少有"
+            },
+            {
+                "key": "If there is at most ",
+                "value": "需要有最多"
+            },
+            {
+                "key": "If there are at most ",
+                "value": "需要有最多"
+            },
+            {
+                "key": " ",
+                "value": "张"
+            },
+            {
+                "key": ", ",
+                "value": "、"
+            },
+            {
+                "key": "Card",
+                "value": "卡牌"
+            },
+            {
+                "key": " Card",
+                "value": "卡牌"
+            },
+            {
+                "key": "Cards",
+                "value": "卡牌"
+            },
+            {
+                "key": " Cards",
+                "value": "卡牌"
+            },
+            {
+                "key": " (Currently ",
+                "value": " (当前"
+            },
+            {
+                "key": "exactly ",
+                "value": "有"
+            },
+            {
+                "key": "between ",
+                "value": "有"
+            },
+            {
+                "key": " and ",
+                "value": "到"
+            },
+            {
+                "key": "at least ",
+                "value": "至少有"
+            },
+            {
+                "key": "at most ",
+                "value": "有最多"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.core.card.CardScaler",
+            "method": "addText"
+        },
+        "pairs": [
+            {
+                "key": " or ",
+                "value": "或"
+            },
+            {
+                "key": "Tier ",
+                "value": "等级 "
+            },
+            {
+                "key": ", ",
+                "value": "、"
+            },
+            {
+                "key": " > For Each ",
+                "value": " > 每张"
+            },
+            {
+                "key": "Card",
+                "value": "卡牌获得1层"
+            },
+            {
+                "key": " Card",
+                "value": "卡牌获得1层"
+            }
+        ]
+    },
+    {
+        "target_classes": [
+            {
+                "name": "iskallia.vault.core.vault.influence.Influences"
+            },
+            {
+                "name": "iskallia.vault.task.GodAltarTask"
+            }
+        ],
+        "pairs": [
+            {
+                "key": " added ",
+                "value": "添加了"
+            },
+            {
+                "key": "Our domain's ground will carve a path.",
+                "value": "我们的领域将开辟出一条道路。"
+            },
+            {
+                "key": "Tread upon our domain with care and it will respond in kind.",
+                "value": "小心踏入我们的领域，它会做出相应的回应。"
+            },
+            {
+                "key": "May your desire blossom into a wildfire.",
+                "value": "愿你的愿望化作燎原之火。"
+            },
+            {
+                "key": "Creation bends to our will.",
+                "value": "万物顺从于我们的意志。"
+            },
+            {
+                "key": "The soil whispers secrets of those who've walked before.",
+                "value": "泥土低语着前人的秘密。"
+            },
+            {
+                "key": "Beneath the surface, our whispers guide fate.",
+                "value": "在表层之下，我们的低语指引着命运。"
+            },
+            {
+                "key": "Our heartbeats sync with the world's tremors.",
+                "value": "我们的心跳与世界的震颤同步。"
+            },
+            {
+                "key": "Our reach extends beyond the visible horizon.",
+                "value": "我们的触及范围延伸到地平线之外。"
+            },
+            {
+                "key": "May foresight guide your step.",
+                "value": "愿远见指引你的脚步。"
+            },
+            {
+                "key": "Careful planning and strategy may lead you.",
+                "value": "周密的计划和战略可让你受益匪浅。"
+            },
+            {
+                "key": "A set choice; followed through and flawlessly executed.",
+                "value": "做出决定，贯彻到底，完美执行。"
+            },
+            {
+                "key": "Chance's hand may favour your goals.",
+                "value": "机遇之手可将你推向目标。"
+            },
+            {
+                "key": "In the dance of fate and strategy, precision reigns.",
+                "value": "在命运与战略的共舞中，精确是最重要的。"
+            },
+            {
+                "key": "To foresee is to command the threads of destiny.",
+                "value": "远见就是掌握命运的脉搏。"
+            },
+            {
+                "key": "Tread lightly on the line between choice and predestination.",
+                "value": "在选择和宿命之间，你要小心谨慎。"
+            },
+            {
+                "key": "To conquer fate, first understand its riddles.",
+                "value": "要征服命运，首先要理解命运之谜。"
+            },
+            {
+                "key": "Seize the opportunity.",
+                "value": "抓住你的机遇。"
+            },
+            {
+                "key": "A single instant, stretched to infinity.",
+                "value": "一瞬间，绵延至无尽。"
+            },
+            {
+                "key": "Your future glows golden with possibility.",
+                "value": "你的未来充满无限可能，熠熠生辉。"
+            },
+            {
+                "key": "Hasten and value every passing moment.",
+                "value": "抓紧时间，珍惜每分每秒。"
+            },
+            {
+                "key": "With every heartbeat, an epoch is born.",
+                "value": "每一次心跳，都是一个时代的诞生。"
+            },
+            {
+                "key": "The sands of time are fleeting; grasp them.",
+                "value": "时间之沙稍纵即逝，请把握住。"
+            },
+            {
+                "key": "The dance of time is swift; miss not its rhythm.",
+                "value": "时间的舞步很快，不要错过它的节奏。"
+            },
+            {
+                "key": "The pendulum of time swings but once for each moment.",
+                "value": "时间的钟摆每时每刻只摆动一次。"
+            },
+            {
+                "key": "Enforce your path through obstacles.",
+                "value": "确保你的道路畅通无阻。"
+            },
+            {
+                "key": "Our vigor may aid your conquest.",
+                "value": "我们的力量可助你征服。"
+            },
+            {
+                "key": "Cherish this mote of my might.",
+                "value": "珍惜我的力量之光。"
+            },
+            {
+                "key": "A tempest incarnate.",
+                "value": "我即是风暴的化身。"
+            },
+            {
+                "key": "Rise, like the waves, unyielding and fierce.",
+                "value": "崛起，如波涛汹涌，不屈不挠，勇往直前。"
+            },
+            {
+                "key": "Forge ahead with the fury of storms.",
+                "value": "在暴风雨的狂暴中奋勇前进。"
+            },
+            {
+                "key": "With relentless force, mold your path.",
+                "value": "用无情的力量塑造你的道路。"
+            },
+            {
+                "key": "Harness my wrath to awaken the dormant.",
+                "value": "利用我的愤怒，唤醒沉睡的灵魂。"
+            },
+            {
+                "key": "The harmony of the natural world eludes you.",
+                "value": "自然世界的和谐你难以理解。"
+            },
+            {
+                "key": "The beauty of nature thrives on resilience, but your actions have brought only discord.",
+                "value": "自然之美源于顽强的生命力，但你的行为却只带来不和之音。"
+            },
+            {
+                "key": "Your failures wither the very essence of life.",
+                "value": "你的失败让生命的本质凋零。"
+            },
+            {
+                "key": "The song of nature laments your inadequacy.",
+                "value": "自然的歌声哀叹着你的不足。"
+            },
+            {
+                "key": "You tarnish the purity of nature with your missteps.",
+                "value": "你的失误玷污了自然的纯洁。"
+            },
+            {
+                "key": "Even the wisest can stumble on their path to enlightenment.",
+                "value": "即使是最聪明的人，也会在悟道的道路上磕磕绊绊。"
+            },
+            {
+                "key": "Seek knowledge, learn from your failures, and you shall find your way.",
+                "value": "寻求知识，从失败中吸取教训，你就会找到自己的方向。"
+            },
+            {
+                "key": "Failure is but a stepping stone on the road to enlightenment.",
+                "value": "失败只是通往启迪之路的一块垫脚石。"
+            },
+            {
+                "key": "Even the most brilliant minds face setbacks.",
+                "value": "再聪明的人也会遇到挫折。"
+            },
+            {
+                "key": "In the pursuit of wisdom, missteps are bound to occur.",
+                "value": "在追求智慧的过程中，难免会出现失误。"
+            },
+            {
+                "key": "A moment lost is a chance wasted.",
+                "value": "失之毫厘，谬以千里。"
+            },
+            {
+                "key": "The sands of time never cease their relentless march.",
+                "value": "时间的流沙从未停止过无情的脚步。"
+            },
+            {
+                "key": "In the grand tapestry of existence, your actions are but threads.",
+                "value": "在存在的宏大织锦中，你的行为只是小小线头。"
+            },
+            {
+                "key": "Time's embrace can be both cruel and kind.",
+                "value": "时间的怀抱既残酷又仁慈。"
+            },
+            {
+                "key": "As the clock ticks, so do your choices shape your destiny.",
+                "value": "随时间流逝，你的选择也将决定你的命运。"
+            },
+            {
+                "key": "Perhaps you should consider a different path.",
+                "value": "也许你应该考虑换一条路。"
+            },
+            {
+                "key": "Weakness is a burden that few can afford.",
+                "value": "软弱是一种负担，很少有人能承受得起。"
+            },
+            {
+                "key": "Your feeble attempt have left much to be desired.",
+                "value": "你微弱的尝试还有很多不足。"
+            },
+            {
+                "key": "A hunter must be swift to adapt, or they are doomed to fail.",
+                "value": "猎人必须迅速适应，否则注定失败。"
+            },
+            {
+                "key": "No smiles will be cast upon those who crumble in the face of adversity.",
+                "value": "逆境中溃败之人不会得到微笑。"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.task.renderer.context.GodAltarRendererContext",
+            "method": "renderTimerBar"
+        },
+        "pairs": [
+            {
+                "key": "'s Challenge  |  ",
+                "value": "的挑战  |  "
+            },
+            {
+                "key": "'s Challenge",
+                "value": "的挑战"
+            }
+        ]
+    },
+    {
+        "target_classes": [
+            {
+                "name": "iskallia.vault.task.renderer.context.GodAltarRendererContext",
+                "method": "renderTimerBar",
+                "local": "MgetName"
+            },
+            {
+                "name": "iskallia.vault.task.GodAltarTask",
+                "method": "doCompletionEffects",
+                "local": "MgetName"
+            }
+        ],
+        "pairs": [
+            {
+                "key": "Velara",
+                "value": "维拉拉"
+            },
+            {
+                "key": "Tenos",
+                "value": "特诺斯"
+            },
+            {
+                "key": "Wendarr",
+                "value": "文达尔"
+            },
+            {
+                "key": "Idona",
+                "value": "伊多纳"
+            }
+        ]
+    },
+    {
+        "_comment": "CompanionItemClient用于伙伴物品的类型名称显示"
+    },
+    {
+        "target_classes": [
+            {
+                "name": "iskallia.vault.entity.entity.pet.PetModelType"
+            },
+            {
+                "name": "iskallia.vault.item.CompanionItemClient",
+                "local": "MconvertToTitleCase"
+            }
+        ],
+        "pairs": [
+            {
+                "key": "Eternal",
+                "value": "永生者"
+            },
+            {
+                "key": "Minion",
+                "value": "仆从"
+            },
+            {
+                "key": "Antlion",
+                "value": "蚁狮"
+            },
+            {
+                "key": "Giant",
+                "value": "巨人"
+            },
+            {
+                "key": "Venus",
+                "value": "维纳斯"
+            },
+            {
+                "key": "Skeleton Husky",
+                "value": "骷髅哈士奇"
+            },
+            {
+                "key": "Unicorn",
+                "value": "独角兽"
+            },
+            {
+                "key": "Dino",
+                "value": "恐龙"
+            },
+            {
+                "key": "Reindeer",
+                "value": "驯鹿"
+            },
+            {
+                "key": "Camel",
+                "value": "骆驼"
+            },
+            {
+                "key": "Peacock",
+                "value": "孔雀"
+            },
+            {
+                "key": "Elephant",
+                "value": "象"
+            },
+            {
+                "key": "Muddy Elephant",
+                "value": "泥象"
+            },
+            {
+                "key": "Moose",
+                "value": "驼鹿"
+            },
+            {
+                "key": "Pug",
+                "value": "哈巴狗"
+            },
+            {
+                "key": "Wrinkles",
+                "value": "哈巴狗"
+            },
+            {
+                "key": "Jade",
+                "value": "翡翠"
+            },
+            {
+                "key": "Lion",
+                "value": "狮子"
+            },
+            {
+                "key": "Raccoon",
+                "value": "浣熊"
+            },
+            {
+                "key": "Tiny Raccoon",
+                "value": "小浣熊"
+            },
+            {
+                "key": "Shiba",
+                "value": "柴犬"
+            },
+            {
+                "key": "Baby Creeper",
+                "value": "苦力怕宝宝"
+            },
+            {
+                "key": "Gold Baby Creeper",
+                "value": "黄金苦力怕宝宝"
+            },
+            {
+                "key": "POG Baby Creeper",
+                "value": "POG苦力怕宝宝"
+            },
+            {
+                "key": "Taffy",
+                "value": "塔菲"
+            },
+            {
+                "key": "Black Cat",
+                "value": "黑猫"
+            },
+            {
+                "key": "White Cat",
+                "value": "白猫"
+            },
+            {
+                "key": "Cinder Cat",
+                "value": "煤球猫"
+            },
+            {
+                "key": "Panda",
+                "value": "熊猫"
+            },
+            {
+                "key": "Red Panda",
+                "value": "小熊猫"
+            },
+            {
+                "key": "Polar Bear",
+                "value": "北极熊"
+            },
+            {
+                "key": "Rat",
+                "value": "老鼠"
+            },
+            {
+                "key": "Grizzly Bear",
+                "value": "棕熊"
+            },
+            {
+                "key": "Papillon",
+                "value": "帕皮隆"
+            },
+            {
+                "key": "Penguin",
+                "value": "企鹅"
+            },
+            {
+                "key": "Dylan's Penguin",
+                "value": "迪伦的企鹅"
+            },
+            {
+                "key": "Dylan",
+                "value": "迪伦"
+            },
+            {
+                "key": "Pink Dylan",
+                "value": "粉红迪伦"
+            },
+            {
+                "key": "Gold Dylan",
+                "value": "黄金迪伦"
+            },
+            {
+                "key": "Carrot",
+                "value": "胡萝卜"
+            },
+            {
+                "key": "Bumbo Cactoni",
+                "value": "怪脸仙人掌"
+            },
+            {
+                "key": "Golden Bumbo Cactoni",
+                "value": "黄金怪脸仙人掌"
+            },
+            {
+                "key": "Bumbo Pumpkini",
+                "value": "怪脸南瓜"
+            },
+            {
+                "key": "Santa Dylan",
+                "value": "圣诞老人迪伦"
+            },
+            {
+                "key": "Gingerbread Man",
+                "value": "姜饼人"
+            },
+            {
+                "key": "Bumbo Frostoni",
+                "value": "怪脸冰人"
+            },
+            {
+                "key": "Blueberry Turtle",
+                "value": "蓝莓海龟"
+            },
+            {
+                "key": "Teddy",
+                "value": "泰迪"
+            },
+            {
+                "key": "Teddy Bear",
+                "value": "泰迪熊"
+            },
+            {
+                "key": "Tommy",
+                "value": "汤米"
+            },
+            {
+                "key": "Greg",
+                "value": "格雷格"
+            },
+            {
+                "key": "Mini Butcher",
+                "value": "迷你屠夫"
+            },
+            {
+                "key": "Mini Elite Witherskelly",
+                "value": "迷你精英凋灵骷髅"
+            },
+            {
+                "key": "Mini Elite Witherskeleton",
+                "value": "迷你精英凋灵骷髅"
+            },
+            {
+                "key": "Mini Goblin",
+                "value": "迷你哥布林"
+            },
+            {
+                "key": "Goat",
+                "value": "山羊"
+            },
+            {
+                "key": "White Seal",
+                "value": "白海豹"
+            },
+            {
+                "key": "Spotted Seal",
+                "value": "斑点海豹"
+            },
+            {
+                "key": "Pig",
+                "value": "猪"
+            },
+            {
+                "key": "Bobby",
+                "value": "波比"
+            },
+            {
+                "key": "Pig Crown",
+                "value": "小丑猪"
+            },
+            {
+                "key": "Technoblade",
+                "value": "小丑猪"
+            },
+            {
+                "key": "Red Dragon",
+                "value": "红龙"
+            },
+            {
+                "key": "Lunar Dragon",
+                "value": "月龙"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.item.CompanionItemClient"
+        },
+        "pairs": [
+            {
+                "key": "Series: ",
+                "value": "系列："
+            },
+            {
+                "key": "Skin: ",
+                "value": "皮肤："
+            },
+            {
+                "key": "Temporal Modifier",
+                "value": "时空词缀"
+            },
+            {
+                "key": "Relics",
+                "value": "遗物"
+            }
+        ]
+    }
+]

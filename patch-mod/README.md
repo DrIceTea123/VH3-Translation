@@ -48,7 +48,7 @@
 
 - `vh3_translation_patch-transformer-0.1.0.jar`
 - `vh3_translation_patch-0.1.0.jar`
-- `compat/config/vaultpatcher_asm/the_vault-asm_ulti.json`
+- `compat/config/vaultpatcher_asm/the_vault-asm_complex.json`
 - `compat/vp-migration-report.json`
 
 `build` 包括测试、目标 JAR 哈希与方法摘要检查、转换后字节码分析和发布映射处理；不会启动游戏、安装文件或提交 Git。
@@ -80,7 +80,7 @@
 后续在独立测试副本中联测时：
 
 1. 同时放入两个同版本 JAR。
-2. 备份测试副本的 `the_vault-asm_ulti.json`，对照迁移报告，再使用生成的兼容文件。若测试副本配置与当前工程不同，应先合并差异，不直接覆盖。
+2. 先使用当前工程的 main/long/complex 三份配置及对应 config.json；备份测试副本的 `the_vault-asm_complex.json`，对照迁移报告，再使用生成的兼容文件。旧 ulti 布局应先按 `docs/maintenance/vp-asm-layout.md` 完成重组；若测试副本配置与当前工程不同，应先合并差异，不直接覆盖。
 3. 处理 VP 旧缓存。首次测试建议在测试副本的 `config/vaultpatcher_asm/config.json` 中设置 `debug_mode.use_cache=false`；工程和真实实例的配置不会由本构建脚本自动更改。
 4. 检查启动日志的 preflight 消息和目标类加载时的 applied 消息，验证结算页、语言切换与资源重载。
 5. 需要回退时，移除两个 JAR 并恢复旧 VP 配置，重新处理缓存。

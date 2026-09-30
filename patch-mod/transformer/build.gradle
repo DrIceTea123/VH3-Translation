@@ -9,7 +9,7 @@ dependencies {
 }
 def targetJar = providers.gradleProperty('vaultJar').map { rootProject.file(it) }
         .getOrElse(rootProject.file('../../origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar'))
-def vpSource = rootProject.file('../program/基础+硬编码汉化/config/vaultpatcher_asm/the_vault-asm_ulti.json')
+def vpSource = rootProject.file('../program/基础+硬编码汉化/config/vaultpatcher_asm/the_vault-asm_complex.json')
 
 tasks.named('processResources') {
     inputs.property 'mod_version', project.version
