@@ -1,34 +1,27 @@
 # Vault Hunters 3rd Edition 翻译工程
 
-此目录是本地 Git 仓库。Minecraft 1.18.2、Forge 40.3.11；整合包 3.21.7，核心 mod `the_vault-1.18.2-3.21.6.6884.jar`。版本信息已经只读核实，未进行游戏运行验证。
+当前工程包含 VP 翻译、资源包、安装素材和独立补丁 VTP。运行基线与验证状态统一见 [项目状态](project-memory/STATE.md)；尚未完成整合包游戏联测。
 
-## 目录
+## 从哪里开始
 
-| 位置 | 用途 |
+| 任务 | 入口 |
 |---|---|
-| `program/` | 当前翻译配置、Patchouli 内容、OpenLoader 资源包、安装脚本与配套素材 |
-| `patch-mod/` | 独立补丁 mod 原型；构建、双 JAR 布局和验证边界见其 README |
-| `docs/maintenance/` | 文本问题、测试笔记、上游沟通草稿；内容沿用原文件，不代表已解决或已发送 |
-| `docs/release/` | 当前版本汉化说明书源文件 |
-| `docs/workspace-entry/` | 仓库外工作区入口的版本管理副本 |
-| `project-memory/` | 规则、已接受方案、状态快照与独立对话增量 |
+| 修改既有翻译、制作汉化包 | `program/`；打包方式见下文 |
+| 编辑 VTP 怪物名、声音名 | [补丁使用与构建](patch-mod/README.md) |
+| 新增补丁模块、修改 ASM | [模块开发](patch-mod/docs/modules.md) |
+| 理解原始文本与注入位置 | [文本获取分析](patch-mod/docs/text-capture.md) |
+| 维护 VP main / long / complex | [VP 分类规则](docs/maintenance/vp-asm-layout.md) |
+| 查询历史文本问题 | [待核实问题](docs/maintenance/text-issues.md)、[上游沟通草稿](docs/maintenance/upstream-draft.md) |
+| 项目规则、决策与待办 | [共享记忆](project-memory/README.md)；协作从 [AGENTS.md](AGENTS.md) 开始 |
+| 同步父目录入口 | [工作区入口模板](docs/workspace-entry/README.md) |
 
-历史公告、参考表格、版本对照表、`必要文件/` 参考素材、`origin-*`、`Translated-旧版/`、checker 工具和其他参考文件继续留在父目录，不属于本仓库。
+`docs/release/` 保留玩家汉化说明书 DOCX；`program/` 下的许可证、安装前提示、覆盖版说明是独立发布入口，不能按重复维护文档删除。
 
-## 编辑和打包
+## 编辑与打包
 
-编辑从本仓库的 `program/` 开始。PowerShell 访问含方括号路径时使用 `-LiteralPath`。现有文件保持原始字节、换行和编码；`package.iss` 使用旧编码，不要未经确认将其整体转换为 UTF-8。
+- 当前安装输入在 `program/`。其中 `基础+硬编码汉化/config/vh3_translation_patch/` 是 VTP 运行配置的唯一维护位置，`mods/` 放配套 JAR。
+- 使用 Inno Setup 打开 `program/package.iss`；保持原编码。脚本从父工作区 `必要文件/iss-plugin-7z/` 读取工具，输出到 `[发布文件]/`。尚未重新编译安装包。
+- OpenLoader 的两个 ZIP 和工程 mods 中导出的两个 VTP 配套 JAR 是必需安装输入，受 Git 管理。其他第三方 JAR、7-Zip、构建缓存和发布成品不入库。克隆仓库不会自动获得父目录依赖。
+- 发布前按 [待办](project-memory/TODO.md) 完成整合包联测，并同步玩家说明；现有安装提示和说明书不能当作 VTP 已验收的证据。
 
-用 Inno Setup 打开 `program/package.iss`。用户调整后的脚本从工作区 `../必要文件/iss-plugin-7z/` 读取 7-Zip，发布到 `../[发布文件]/`。这些位置已按当前脚本核对；本轮保留用户的脚本修改，未重新编译安装包。
-
-OpenLoader 下的两份 ZIP 是安装输入，纳入 Git；不能将所有 ZIP 一并忽略。7-Zip 和上游 mod JAR 等第三方工具与依赖不入库。单独克隆本仓库不会自动获得父目录中的依赖或参考输入。
-
-## Git 操作
-
-在本目录运行 `git status`、`git diff`、`git log --oneline`；在工作区父目录可运行 `git -C "[vh3-translation]" status`。
-
-本次建立本地 `main` 分支和初始提交，不配置远程仓库。仅在用户明确要求时执行 Git 提交；推送或发布的目标尚未指定。
-
-## 项目记忆
-
-从 `AGENTS.md` 和 `project-memory/README.md` 读取。早期快照描述的是迁移前布局，必须同时读取未归并 notes；Git 迁移记录提供新的路径与状态。新的规则、结论和 TODO 变化写入本仓库 `project-memory/notes/`。
+原始输入、旧译文、历史公告、参考表格、checker、工具和成品留在父工作区。日常从本仓库运行 `git status`、`git diff`；仅在用户明确要求时提交 Git。

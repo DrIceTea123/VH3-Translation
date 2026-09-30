@@ -1,45 +1,49 @@
-# 添加与维护模块
+# 模块开发与架构
 
-一个模块对应一个明确的接管内容。当前有结算怪物名称 `combat_stats` 和声音设置名称 `sound_names`；尚未接管经验提示等其他内容。
+使用、配置和构建命令见 [README](../README.md)；两个现有方法的输入与注入位置见 [文本获取](text-capture.md)。本文只维护代码职责和新增模块步骤。
 
-## 当前代码入口
+## 加载层与职责
 
-以下路径均相对于 `patch-mod/`；Java 文件以 `com.dricetea.vh3patch` 为包名前缀。
+modid 为 `vh3_translation_patch`，显示名 VH3 Translation Patch；包名前缀 `com.dricetea.vh3patch`。Forge 40.3.11 会把早期转换服务 JAR 排除在普通 mod 扫描外，因此使用两个配套 JAR。
 
-| 文件 / 类 | 职责 |
+| 层 / 入口 | 职责 |
 |---|---|
-| `runtime/.../modules/CombatStatsModule.java` | 结算怪物名的运行逻辑，`ID = "combat_stats"` 决定配置名；原始 ID 取路径后查表 |
-| `runtime/.../modules/SoundNamesModule.java` | 声音名称运行逻辑，精确使用 ModSounds 字段名查表 |
-| `runtime/.../module/TranslationModule.java` | 通用模块基类，默认以英文输入原样查表，持有自己的配置 |
-| `runtime/.../config/ModuleConfig.java` | 严格读取外部 JSON、成功后整体替换快照 |
-| `runtime/.../client/ClientModules.java` | 客户端模块列表和 F3+T 重载监听 |
-| `../program/基础+硬编码汉化/config/vh3_translation_patch/*.json` | 运行时映射的唯一维护位置，独立于源码与 JAR |
-| `transformer/.../transformer/modules/CombatStatsModule.java` | 对应的 ASM 模块，声明目标清单、运行侧类名，独立维护结算名称导入和 VP 接管判定 |
-| `transformer/.../transformer/modules/SoundNamesModule.java` | 声音补丁、原始字段名导入、调用方 VP 规则接管判定 |
-| `transformer/.../transformer/PatchModules.java` | 早期模块列表，启动检查与离线工具共用 |
-| `transformer/.../transformer/StringReturnPatch.java` | 适用于实例 `(String)String` 方法的通用返回值钩子 |
-| `transformer/src/main/resources/patches/combat_stats.properties` | 该模块绑定的上游版本、JAR 哈希、方法摘要与返回点数量 |
+| transformer 的 `PatchModule`、`PatchModules` | 模块契约/注册表，按目标类组织变换 |
+| transformer 的 `modules/*Module` | 目标清单、运行侧类名、专属 VP 判定与历史导入 |
+| `StringReturnPatch`、`MethodFingerprint`、`TargetJar` | 返回钩子、规范化摘要、原 JAR 检查 |
+| `TranslationTransformationService` | 启动预检、客户端转换器注册与应用 |
+| `PatchTool`、`JsonFiles`、`VpCompatibility` | 离线命令分派、JSON 读写、VP 遍历/迁移 |
+| runtime 的 `modules/*Module` | 模块 ID、输入处理、配置查表与回退 |
+| `TranslationModule`、`ModuleConfig` | 外部配置契约、严格解析和有效快照 |
+| `ClientModules` | 客户端注册与 F3+T；首次失败向 Forge 传播，重载失败保留旧值 |
 
-两个 JAR 属于不同加载层，所以一个功能各有一个同名模块类，分别放在 `com.dricetea.vh3patch.modules` 和 `com.dricetea.vh3patch.transformer.modules`。不要把两个 JAR 的类放入同一个 Java 包，也不要在早期层直接 import 游戏侧类。
+同一功能在两侧各有一个模块类：运行侧在 `com.dricetea.vh3patch.modules`，早期侧在 `com.dricetea.vh3patch.transformer.modules`。两侧不共享 Java 包；早期侧通过类名字符串生成调用，不加载 Minecraft / the_vault 类型。通用设施共享，具体功能不堆入公共命令。
 
-模块专属功能应留在模块：运行侧负责输入处理、查表与回退；早期侧负责目标声明、VP 接管判断和旧映射导入。公共 JSON 读写、资源重载、ASM 验证继续共享。`PatchTool` 只按模块 ID 分派，不保存结算或声音的专属逻辑。
+## 新增模块
 
-## 新模块步骤
+1. 运行侧新增 `TranslationModule` 子类，定义唯一 ID（小写字母、数字、下划线），构造时 `super(ID)`；提供静态 `translate(String input, String fallback)`。
+2. 默认以输入英文原样查表。特殊输入才覆盖 `mappingKey`，并先确认格式；不要全局统一转换成实体键。命中返回译文，未命中使用明确的回退策略。
+3. 在 `program/基础+硬编码汉化/config/vh3_translation_patch/<ID>.json` 增加配置；注册到 `ClientModules.MODULES`。文件名由 ID 决定，不创建内置默认配置，不分语言；空模块用 `{}`。
+4. 早期侧实现 `PatchModule`，创建 `transformer/src/main/resources/patches/<ID>.properties`，注册到 `PatchModules`。清单记录补丁/核心版本、JAR 哈希、类/方法/描述符、规范化摘要及返回数；声明运行侧入口和 `ownsVpRule`。
+5. 实例 `(String)String` 方法可复用 `StringReturnPatch`；当前两个模块保留原方法，在每个 ARETURN 前调用 helper。不同签名、静态方法或控制流修改需要独立策略；当前清单只描述单方法，不强套现有钩子。
+6. 审查真实 JAR、非目标方法和业务 ID 不变、映射与未命中、重载及失败行为。注册表拒绝重复 ID/目标；同类多个目标按注册顺序处理。方法变更必须重新审查，不能只更新摘要消除错误。
+7. 从正式 VP 配置移除接管规则，原位置留内容及 VTP 模块说明。旧规则保存到 `translations/vp/` 用于导入/冲突测试；不同文件或多组迁移应显式扩展策略，不能误删其他文案。
+8. 按项目版本规则构建、验证并导出；完整游戏验收仍需单独执行。
 
-1. 在运行侧 `modules` 包增加一个 `TranslationModule` 子类，声明唯一的 `ID`（小写字母、数字和下划线），构造时传给 `super(ID)`。增加静态 `translate(String input, String fallback)` 入口：先调用该实例的 `configuredTranslation(input)`，未命中则返回原结果或执行该模块明确的后备逻辑。
-2. 默认不要重写 `mappingKey`，此时以英文原文为键，大小写和空格都精确匹配。只有输入本身为标识或需要特别处理时，才像结算模块那样重写。不要在公共层把所有文本转成实体键。
-3. 在 `../program/基础+硬编码汉化/config/vh3_translation_patch/<ID>.json` 增加外部配置，内容为字符串到字符串的平面对象。空模块可先使用 `{}`，但不能缺少文件。加入 `ClientModules.MODULES`；框架从游戏的同名目录读取并监听重载。首次缺失或解析失败阻止启动；F3+T 失败保留旧值。不得把配置加入源码资源或 JAR。
-4. 在早期层 `transformer.modules` 包增加对应模块类，实现 `PatchModule`。加载自己的 `patches/<ID>.properties`，以字符串声明运行侧类名，并加入 `PatchModules` 的列表。运行侧与早期层使用同一 ID，实现 `ownsVpRule` 声明旧 VP 冲突范围。需要数据导入时，实现 `importMappings`；公共命令 `import-module <模块ID> <旧VP文件> <目标JAR> <候选输出目录>` 调用相应模块。
-5. 对实例 `(String)String` 方法可以复用 `StringReturnPatch`；不同参数、静态方法、返回类型或替换策略应自行实现模块的 `target/apply`，不能强套这个钩子。清单目前描述单个目标方法，扩展到多方法模块需要相应扩展契约。
-6. 用真实上游 JAR 审查并记录签名、哈希、方法摘要、预期返回数量，添加覆盖正常行为和失败情况的测试。公共注册表会拒绝重复 ID 和重复目标，同一个类的不同模块按注册顺序一起处理。
-7. 核实 VP 的接管范围，在原位置留下说明内容和 VTP 接管情况的 `_comment`。旧规则另存于 `translations/vp/` 用于导入及冲突回归测试。当前发布迁移命令支持无接管规则或恰好一组规则，遇到重复组会报错；若新模块分散在不同文件或有不同迁移语义，应扩展迁移输入/策略。
+修改方法时不能只复制 instructions：标签、异常表、局部变量、栈帧、合成方法和访问权限均需检查。通用钩子先改副本，摘要/返回数/ASM 校验全部通过才替换；当前保留原栈帧，只提高必要的最大栈深度。不要按易变的绝对指令序号定位，也不要在生产字节码中写死开发映射名称。
 
-配置只在模块入口内使用，不注入原版全局语言系统。框架不做语言筛选，也不会让其他模块继承某个模块的译文。`importMobNames` 和 `importSoundNames` 两个 Gradle 任务分别调用模块导入器，输入为 `translations/vp/<模块ID>.json`，只输出到 `transformer/build/imports/config/vh3_translation_patch/` 和同级的 `translations/` 报告目录。它们不会写入源码资源，也不会自动覆盖正式外部配置。导入器及 `translations/` 下的旧 VP 来源/报告只用于维护和回归测试，不是运行时配置，也不被打包。导入代码位于模块类中，不要把新模块的专属逻辑添加到公共命令。
+## 旧 VP 导入与溯源
 
-## 更新与联测
+`translations/vp/combat_stats.json`、`sound_names.json` 仍被回归测试和导入任务读取，属于有效维护输入，不能当成失效运行配置删除。
 
-向现有模块增加、修改或删除词条时，只编辑正式外部 JSON，并同步到需要测试/安装的游戏配置目录；无需修改源码、增加固定白名单或重新打包。测试只校验正式配置的 JSON 结构，不要求它等于历史导入结果，也不限制条目数量。添加配置无法使原界面没有收集的实体/声音凭空出现；增加接管范围仍需写模块代码。
+`:transformer:importMobNames` / `:transformer:importSoundNames` 调用模块自己的 `importMappings`；通用命令为 `import-module <模块ID> <旧VP文件> <目标JAR> <候选输出目录>`。Gradle 输出到 `transformer/build/imports/`：候选配置在 `config/vh3_translation_patch/`，报告在 `translations/`；不覆盖正式配置，不写回源码。
 
-使用 `build.ps1` 执行测试、真实字节码校验和发布映射；配套安装两个同次构建的 JAR。版本/摘要/VP 冲突仍会阻止启动。首次配置读取错误同样阻止启动；只有成功启动后的资源重载失败才保留有效快照并报错。
+现有 `translations/mob-name-import.json`、`sound-name-import.json` 是历史来源报告，不参与游戏加载，也不进入 JAR。结算原 237 条导入 235 条，Black Widow Spider 与 Mummy 尚未确认 ID；声音 203 条全部与真实字段唯一对应。正式配置可以独立增删改，测试只校验其结构，不强制等于历史数据。
 
-客户端验证应覆盖：首次缺失/损坏文件拒绝启动、正确安装外部配置、添加全新键后 F3+T、损坏配置、修复后再次 F3+T、结算中的牛与首领，以及未配置名称的回退。声音设置列表会缓存名称，按用户决定，F3+T 之后重新打开声音设置才更新显示；还应验证中文名称搜索及音量操作未受影响。离线测试不能代替完整整合包中的加载层和界面验证。
+VP 发布迁移支持无接管规则或恰好一组；重复组报错。声音旧规则在调用方 `collectSoundEntries/local=MformatSoundName`，冲突判定同时覆盖调用方与格式化方法，保留同类其他界面翻译。
+
+## 后续方向与限制
+
+显示边界是唯一默认修改位置：不改业务 ID、存档/网络字段和 XP 计算。未知实体先检查注册表存在，避免默认实体误命中。客户端 I18n 不得进入服务端路径；复杂文本或新参数布局另行设计。
+
+后续候选为经验提示三个 formatter 与预览、地图房间、研究/任务显示入口、动态规则。通用 VP 转换、多版本差异报告、彻底移除 VP 都未完成，具体任务见 [TODO](../../project-memory/TODO.md)。ASM 的选择不构成性能优于 Mixin 的结论；特殊位置是否使用 Mixin 仍待确认。

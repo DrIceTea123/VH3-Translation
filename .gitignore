@@ -22,6 +22,9 @@ run/
 *.class
 *.jar
 !/patch-mod/gradle/wrapper/gradle-wrapper.jar
+# Paired VTP JARs are required installation inputs; track exported versions only.
+!/program/基础+硬编码汉化/mods/vh3_translation_patch-1.[0-9]*.[0-9]*.jar
+!/program/基础+硬编码汉化/mods/vh3_translation_patch-transformer-1.[0-9]*.[0-9]*.jar
 *.exe
 *.dll
 /local-deps/

@@ -1,46 +1,34 @@
-# 项目状态快照
+# 当前状态
 
-日期：2026-09-30。来源：初始方案对话及本地文件检查。后续变化需同时读取 notes/。
+归并日期：2026-10-01。已归并来源见 [README](README.md)；更新时仍须核对实际文件。
 
-## 项目与输入
+## 基线与布局
 
-- 名称：VH3翻译；整合包：Vault Hunters 3rd Edition；主要翻译核心 mod：the_vault。
-- 项目根目录：`C:\OriginCenter\MC翻译\Vault Hunters 3rd Edition`。
-- 主工程：`[PROGRAM]`；`origin-*` 文件夹存原始输入；`Translated-旧版` 为历史翻译。
-- 已完成 VP 配置：`[PROGRAM]\基础+硬编码汉化\config\vaultpatcher_asm`。
-- 原始核心 JAR：`origin-3.21.7\the_vault-1.18.2-3.21.6.6884.jar`；没有源码。
-- 原始 JAR 字节数：59,859,216；class 条目数：7,903。
-- SHA-256：`E4B1E896558D69403D5A36CAF9049611642E459F295C964CE24A6BE06D67EE38`。
-- JAR Manifest 版本：`1.18.2-3.21.6.6884`；整合包目录版本 `3.21.7` 与核心 mod 版本不同，不要混淆。
-- mods.toml：Minecraft 1.18.2，Forge 最低范围 `[40,)`；实际整合包 Forge 精确版本尚未核实。
-- `[PROGRAM]\bzlr.iss` 确认安装包指定 VP `1.4.4+3`。当前配置 class_patch=false、use_cache=true。
-- 此项目未检测为 Git 仓库；本次未初始化 Git。
+| 项目 | 当前值 |
+|---|---|
+| 主工程 / 补丁 | `program/` / `patch-mod/` |
+| Minecraft / Forge / Java | 1.18.2 / 40.3.11 / JDK 17 |
+| 整合包 / the_vault | 3.21.7 / 1.18.2-3.21.6.6884 |
+| VTP | 1.0.3，两个配套 JAR；权威版本见 `patch-mod/gradle.properties` |
+| VP | 安装脚本指定 1.4.4+3 |
+| Gradle / ForgeGradle | 8.8 / 6.0.54 |
+| Git | 子仓库已建立；提交只能由用户明确要求 |
 
-## 已有翻译规模（不是实际指令命中数）
+原始核心 JAR 在父工作区 `origin-3.21.7/`，59,859,216 字节、7,903 个 class；无 Java 源码。SHA-256 为 `e4b1e896558d69403d5a36caf9049611642e459f295c964ce24a6be06d67ee38`。补丁清单另存精确目标摘要。整合包版本与核心版本不同。
 
-| 配置 | 规则组 | 键值对 |
-|---|---:|---:|
-| the_vault-asm_main.json | 659 | 4,156 |
-| the_vault-asm_ulti.json | 5 | 667 |
-| 两份 the_vault-dynamic 配置合计 | 11 | 67 |
-| other_mods.json | 35 | 86 |
+## 已实现
 
-主要 ASM 配置涉及 682 个不同目标类。超长部分为研究 60、任务 85、声音 203、怪物 237、房间 82。主文件约束中存在 method/local/ordinal；动态文件含 ordinal 和重复匹配故障的补救注释，迁移不能只改字段名。
+- VTP 以早期 ASM 转换器 + Forge 运行侧 mod 接管两个方法，保留上游算法，在返回前查表。核心哈希、方法摘要、返回点数量、配套版本和 VP 冲突均有检查；不匹配阻止启动。
+- `combat_stats`：结算怪物名，按实体 ID 路径查表，235 条；未配置时尝试实体语言译名，再回退原结果。
+- `sound_names`：声音设置名称，按 ModSounds 原始字段名查表，203 条；未配置时使用原结果。
+- 配置仅在 `program/基础+硬编码汉化/config/vh3_translation_patch/`，源码与 JAR 无内置映射。首次缺失/损坏阻止启动；F3+T 错误保留旧值，声音设置需重开。
+- 被接管的两组 VP 规则已在原位置换为 VTP 注释。历史规则仍供导入与冲突测试使用。现行 VP 分类及统计见 [分类文档](../docs/maintenance/vp-asm-layout.md)。
+- 版本递增、完整构建、双 JAR 导出到工程 mods、仅清理本补丁旧版本均已实现。
 
-## 已核对的字节码事实
+## 验证边界
 
-通过 JDK 17 的 javap -p -c 读取原始 JAR，未启动游戏，未执行目标 mod：
+最近一次功能构建为 VTP 1.0.3：48 项离线测试、真实核心哈希/方法摘要/字节码校验通过；两个工程 JAR 与 distribution 哈希一致，未打包映射或测试类。本次整理只调整文档和失效文件，未更改 mod 代码、版本或安装输入。
 
-- `iskallia.vault.client.data.ClientVaultXpTracker`：有独立的 `formatChestName(VaultRarity, VaultChestType, boolean)`、`formatOreName(ResourceLocation)`、`formatMobName(ResourceLocation)`。宝箱名将稀有度、类型及 Chest/Barrel 拼接；矿石和怪物名基于路径改写为英文。`createPreviewNotifications()` 另有固定英文预览。
-- `iskallia.vault.client.gui.screen.summary.element.CombatStatsContainerElement.formatMobName(String)`：调用方传入实体 ResourceLocation.toString()；原方法去命名空间，将下划线、大小写转换成英文。
-- `iskallia.vault.client.gui.screen.accessibility.VaultSoundOptionsScreen.formatSoundName(String)`：参数来自 ModSounds 的反射字段名；collectSoundEntries() 当时也持有 SoundEvent，可考虑在这里使用声音 ID。
-- `iskallia.vault.client.map.VaultMapRenderHelper.getTooltipText(ResourceLocation, boolean)`：保留房间路径及上下文；适合在大小写转换前按类别生成显示文本。
-- `iskallia.vault.research.type.Research.getName()`：直接返回内部 name 字段；不能未经调用分析全局中文化。
-- 原始 en_us.json：aggressive_cow 与 aggressive_cow_boss 均为 Cow；现有汉化分别是战斗牛、战斗牛首领。复用实体语言键时必须保留此类专用覆盖。
-- 目标 JAR 中 Minecraft 方法出现 m_…_ 命名，开发/发布映射需处理。
+**未完成游戏联测**：真实加载层、VP/其他转换器顺序与缓存、界面显示、F3+T、声音搜索/音量、客户端与专用服务端行为尚未验收。当前仅注册生产客户端 `forgeclient`；服务端不注册显示补丁，未提供开发启动配置。
 
-## 当前完成与未完成
-
-- 完成：读取工程；比较三条路线；核对上述目标；用户接受渐进独立补丁方案；建立项目文档和共享记忆入口。
-- 未完成：独立补丁 mod 代码、构建工具、开发环境、规则迁移、字节码补丁验证、整合包及专用服务端测试。
-- 当前下一步：先确定 Forge 精确版本与独立补丁工程位置，按本轮用户任务推进；不要因为存在 TODO 自动开始开发。
+其余实现与验证任务见 [TODO](TODO.md)。不能把可构建或离线通过写成已在整合包运行成功。
