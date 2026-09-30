@@ -61,7 +61,7 @@ public final class TranslationTransformationService implements ITransformationSe
         if (companions.size() != 1) throw new IllegalStateException("Expected one matching runtime JAR; found " + companions.size());
         // 此处检查原 JAR；类真正加载时仍会再验一次，发现其他转换器的冲突就中止。
         module.apply(TargetJar.read(targets.get(0), spec, true));
-        VpCompatibility.assertCompatible(gameDir.resolve("config/vaultpatcher_asm"), spec);
+        VpCompatibility.assertCompatible(gameDir.resolve("config/vaultpatcher_asm"), module);
     }
 
     @Override public List<ITransformer> transformers() {

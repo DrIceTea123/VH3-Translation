@@ -10,22 +10,7 @@ import java.nio.file.Path;
 public final class VpCompatibility {
     private VpCompatibility() {}
 
-    public static boolean ownsMethod(JsonObject rule, PatchSpec spec) {
-        if (!rule.has("target_class") || !rule.get("target_class").isJsonObject()) return false;
-        JsonObject target = rule.getAsJsonObject("target_class");
-        if (!target.has("name") || !target.get("name").getAsString().replace('.', '/').equals(spec.className())) return false;
-        if (target.has("method")) return spec.methodName().equals(target.get("method").getAsString());
-        // 仅当整类规则修改了该模块声明的相关常量时，才判定它与方法补丁冲突。
-        if (rule.has("pairs") && rule.get("pairs").isJsonArray()) {
-            for (JsonElement pair : rule.getAsJsonArray("pairs")) {
-                if (pair.isJsonObject() && pair.getAsJsonObject().has("key")
-                        && spec.ownedLiterals().contains(pair.getAsJsonObject().get("key").getAsString())) return true;
-            }
-        }
-        return false;
-    }
-
-    public static void assertCompatible(Path directory, PatchSpec spec) throws IOException {
+    public static void assertCompatible(Path directory, PatchModule module) throws IOException {
         if (!Files.exists(directory)) return;
         try (var files = Files.walk(directory)) {
             for (Path path : files.filter(Files::isRegularFile).filter(p -> p.toString().endsWith(".json")).toList()) {
@@ -35,29 +20,29 @@ public final class VpCompatibility {
                 } catch (JsonParseException e) {
                     throw new IllegalStateException("Cannot validate VP configuration: " + path.getFileName(), e);
                 }
-                if (hasConflict(root, spec)) {
-                    throw new IllegalStateException("VP still owns " + spec.moduleId() + "/" + spec.methodName() + " in " + path.getFileName()
+                if (hasConflict(root, module)) {
+                    throw new IllegalStateException("VP still owns " + module.spec().moduleId() + "/" + module.spec().methodName() + " in " + path.getFileName()
                             + ". Generate and install the reviewed compatibility configuration, then clear VP cache.");
                 }
             }
         }
     }
 
-    private static boolean hasConflict(JsonElement element, PatchSpec spec) {
+    private static boolean hasConflict(JsonElement element, PatchModule module) {
         if (element.isJsonArray()) {
-            for (JsonElement child : element.getAsJsonArray()) if (hasConflict(child, spec)) return true;
+            for (JsonElement child : element.getAsJsonArray()) if (hasConflict(child, module)) return true;
         } else if (element.isJsonObject()) {
-            if (ownsMethod(element.getAsJsonObject(), spec)) return true;
-            for (var entry : element.getAsJsonObject().entrySet()) if (hasConflict(entry.getValue(), spec)) return true;
+            if (module.ownsVpRule(element.getAsJsonObject())) return true;
+            for (var entry : element.getAsJsonObject().entrySet()) if (hasConflict(entry.getValue(), module)) return true;
         }
         return false;
     }
 
-    public static JsonArray withoutOwnedMethod(JsonArray original, PatchSpec spec) {
+    public static JsonArray withoutOwnedMethod(JsonArray original, PatchModule module) {
         JsonArray result = new JsonArray();
         int removed = 0;
         for (JsonElement element : original) {
-            if (element.isJsonObject() && ownsMethod(element.getAsJsonObject(), spec)) removed++;
+            if (element.isJsonObject() && module.ownsVpRule(element.getAsJsonObject())) removed++;
             else result.add(element.deepCopy());
         }
         if (removed != 1) throw new IllegalStateException("Expected exactly one VP ownership group; got " + removed);
@@ -65,10 +50,10 @@ public final class VpCompatibility {
     }
 
     /** 发布输入可能已经移除接管规则；无冲突时原样复制，有一组时迁移，重复组仍报错。 */
-    public static JsonArray prepareConfiguration(JsonArray original, PatchSpec spec) {
+    public static JsonArray prepareConfiguration(JsonArray original, PatchModule module) {
         for (JsonElement element : original) {
-            if (element.isJsonObject() && ownsMethod(element.getAsJsonObject(), spec)) {
-                return withoutOwnedMethod(original, spec);
+            if (element.isJsonObject() && module.ownsVpRule(element.getAsJsonObject())) {
+                return withoutOwnedMethod(original, module);
             }
         }
         return original.deepCopy();

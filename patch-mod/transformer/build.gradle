@@ -25,9 +25,14 @@ tasks.named('test') {
     inputs.file targetJar
     inputs.dir vpSource.parentFile
     inputs.file vpLegacySource
+    inputs.dir rootProject.file('translations/vp')
+    inputs.dir rootProject.file('runtime/src/main/resources/module-defaults')
     systemProperty 'vh3.test.targetJar', targetJar.absolutePath
     systemProperty 'vh3.test.vpSource', vpLegacySource.absolutePath
     systemProperty 'vh3.test.programVpDirectory', vpSource.parentFile.absolutePath
+    systemProperty 'vh3.test.legacyVpDirectory', rootProject.file('translations/vp').absolutePath
+    systemProperty 'vh3.test.defaultDirectory', rootProject.file('runtime/src/main/resources/module-defaults').absolutePath
+    systemProperty 'vh3.test.soundDefaults', rootProject.file('runtime/src/main/resources/module-defaults/sound_names.json').absolutePath
 }
 tasks.register('verifyTarget', JavaExec) {
     dependsOn classes
@@ -45,7 +50,15 @@ tasks.register('importMobNames', JavaExec) {
     dependsOn classes
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'com.dricetea.vh3patch.transformer.PatchTool'
-    args 'import-names', vpLegacySource.absolutePath, targetJar.absolutePath, rootProject.projectDir.absolutePath
+    args 'import-module', 'combat_stats', vpLegacySource.absolutePath, targetJar.absolutePath, rootProject.projectDir.absolutePath
+}
+
+tasks.register('importSoundNames', JavaExec) {
+    dependsOn classes
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.dricetea.vh3patch.transformer.PatchTool'
+    args 'import-module', 'sound_names', rootProject.file('translations/vp/sound_names.json').absolutePath,
+            targetJar.absolutePath, rootProject.projectDir.absolutePath
 }
 tasks.register('prepareVpConfig', JavaExec) {
     dependsOn classes

@@ -2,7 +2,7 @@
 
 针对 Vault Hunters 3rd Edition 的独立方法级翻译补丁原型。modid 为 `vh3_translation_patch`，Java 包名前缀为 `com.dricetea.vh3patch`。
 
-当前只接管结算界面的 `CombatStatsContainerElement.formatMobName(String)`。已有 VP 继续承担其他翻译。工程可构建并已通过离线测试；尚未在完整整合包内启动或验证加载顺序，不应当作已验收的发布版本。
+当前接管结算怪物名称 `CombatStatsContainerElement.formatMobName(String)` 和声音设置名称 `VaultSoundOptionsScreen.formatSoundName(String)`，分别由 `combat_stats`、`sound_names` 模块负责。已有 VP 继续承担其他翻译。工程可构建并已通过离线测试；尚未在完整整合包内启动或验证加载顺序，不应当作已验收的发布版本。
 
 ## 固定基线
 
@@ -11,11 +11,11 @@
 | Minecraft / Java | 1.18.2 / JDK 17 |
 | Forge | 40.3.11 |
 | 整合包 / 核心 mod | 3.21.7 / 1.18.2-3.21.6.6884 |
-| 补丁版本 | 1.0.1 |
+| 补丁版本 | 1.0.2 |
 | Gradle / ForgeGradle | 8.8 / 6.0.54 |
 | ModLauncher / ASM | 9.1.3 / 9.7.1 |
 
-完整核心 JAR SHA-256 和目标方法摘要按模块存于 `transformer/src/main/resources/patches/combat_stats.properties`。构建默认只读引用工作区的 `origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar`，不打包或改写该 JAR。
+完整核心 JAR SHA-256 和目标方法摘要按模块存于 `transformer/src/main/resources/patches/<模块名>.properties`。构建默认只读引用工作区的 `origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar`，不打包或改写该 JAR。
 
 ## 工程结构
 
@@ -46,8 +46,8 @@
 
 构建产物在 `build/distribution/`：
 
-- `vh3_translation_patch-transformer-1.0.1.jar`
-- `vh3_translation_patch-1.0.1.jar`
+- `vh3_translation_patch-transformer-1.0.2.jar`
+- `vh3_translation_patch-1.0.2.jar`
 - `compat/config/vaultpatcher_asm/the_vault-asm_complex.json`
 - `compat/vp-migration-report.json`
 
@@ -55,9 +55,9 @@
 
 完整 `build` 通过后会执行 `exportToProgram`，将两个同版本 JAR 复制到 `../program/基础+硬编码汉化/mods/`，逐字节验证复制结果，并仅删除此目录中本补丁的旧版 JAR。其他模组文件不受影响。JAR 继续按仓库现有规则忽略，不自动纳入 Git。
 
-版本号在 `gradle.properties` 的 `mod_version` 中维护，采用 `1.x.x`，本次从 `1.0.1` 开始。普通修改为 `1.0.1 → 1.0.2 → 1.0.3`；依赖的 the_vault 核心版本更新时小版本号和修订号均加一，例如 `1.0.3 → 1.1.4`，**修订号始终不重置**。编译重试或对同一份内容重复打包不重复递增。`check`、`test` 和 `distribution` 本身不复制到工程，完整 `build` 或单独 `exportToProgram` 才会执行验证后的复制。
+版本号在 `gradle.properties` 的 `mod_version` 中维护，采用 `1.x.x`，起始版本为 `1.0.1`。普通修改为 `1.0.1 → 1.0.2 → 1.0.3`；依赖的 the_vault 核心版本更新时小版本号和修订号均加一，例如 `1.0.3 → 1.1.4`，**修订号始终不重置**。编译重试或对同一份内容重复打包不重复递增。`check`、`test` 和 `distribution` 本身不复制到工程，完整 `build` 或单独 `exportToProgram` 才会执行验证后的复制。
 
-普通修改完成后执行 `.\build.ps1 -BumpPatch`，将修订号加一并构建、导出。核心版本适配需先审查并更新目标清单和依赖，再执行 `.\build.ps1 -BumpCore`，同时将小版本号和修订号加一。脚本不自动猜测上游版本变化。同一轮失败重试用 `.\build.ps1`，不要再次带递增参数；首次 `1.0.1` 已写入配置，直接构建即可。
+普通修改完成后执行 `.\build.ps1 -BumpPatch`，将修订号加一并构建、导出。核心版本适配需先审查并更新目标清单和依赖，再执行 `.\build.ps1 -BumpCore`，同时将小版本号和修订号加一。脚本不自动猜测上游版本变化。同一轮失败重试用 `.\build.ps1`，不要再次带递增参数；重建当前已编号版本时直接构建即可。
 
 可单独运行：
 
@@ -69,7 +69,7 @@
 
 目标 JAR 不在默认位置时，可添加 `-PvaultJar=<文件位置>`。该参数仅改变输入位置，不解除版本或摘要校验。`inspectTarget` 只报告候选摘要；不要未经审查就把新摘要写入清单。
 
-## 补丁行为
+## 结算怪物名称
 
 保留原方法的全部算法，在两个返回位置插入运行侧 `CombatStatsModule.translate(完整ID, 原结果)`。只改变返回的显示文字，不触碰统计、经验、业务 ID 或存档。保持原栈帧，仅在必要时提高最大栈深度。
 
@@ -78,6 +78,24 @@
 已从 237 个既有 VP 词条导入 235 个映射，其中 213 个来源 ID 由核心 mod 的实体语言文件核对，22 个对应原版实体。保留“战斗牛”和“战斗牛首领”的差异。默认配置为 `runtime/src/main/resources/module-defaults/combat_stats.json`，旧的专用语言文件已由此配置取代。
 
 旧名称 `Black Widow Spider`（黑寡妇蜘蛛）、`Mummy`（木乃伊）尚无已确认的 ID；原词条与全部 237 条导入来源保存在 `translations/mob-name-import.json`，没有猜测注册名。如后续确认它们对应当前实体，再明确补入覆盖。
+
+## 声音设置名称
+
+`sound_names` 接管 `VaultSoundOptionsScreen.formatSoundName(String)` 的唯一返回点，保留原方法算法，把原始参数与原显示名交给 `SoundNamesModule.translate`。原始参数来自 `ModSounds` 的 Java 字段名，例如 `GRASSHOPPER_BRRR`、`RAFFLE_SFX`、`VAULT_AMBIENT_LOOP`；它不是声音资源 ID，也不是格式化后的英文名称。
+
+203 条已有译文全部与真实字段唯一匹配，默认配置为 `runtime/src/main/resources/module-defaults/sound_names.json`，首次启动生成 `config/vh3_translation_patch/sound_names.json`：
+
+```json
+{
+  "GRASSHOPPER_BRRR": "蚱蜢：咕咕",
+  "RAFFLE_SFX": "速通音效",
+  "VAULT_AMBIENT_LOOP": "宝库环境循环"
+}
+```
+
+查找保留大小写和下划线，未配置时使用原方法结果。只改名称，不修改声音 ID、音量、播放或持久化逻辑。原界面依照显示名搜索和排序，因此沿用中文显示名搜索和排序。
+
+**修改后按 F3+T，再关闭并重新打开声音设置。** 名称列表在界面构造时缓存，本轮不额外接管已打开界面的即时刷新。导入依据及原英文词条见 `translations/sound-name-import.json`。
 
 ## 修改模块配置
 
@@ -96,11 +114,11 @@
 
 删除一条映射会启用该条目的后备译名；`{}` 表示没有专用映射；空字符串是显式的空译文。删除整个文件后，下次重载会重新生成默认文件。JSON 不支持注释。
 
-后续模块默认直接使用英文原文作为键，例如 `"Aggressive Cow": "战斗牛"`。结算怪物名是按原始 ID 路径查表的特例。模块文件名由模块类中的 ID 决定，添加方法见 [模块开发说明](docs/modules.md)。
+后续模块默认直接使用英文原文作为键，例如 `"Aggressive Cow": "战斗牛"`。结算怪物名使用原始 ID 路径，声音名称使用原始 Java 字段名；它们是按各自输入形式查表的模块。模块文件名由模块类中的 ID 决定，添加方法见 [模块开发说明](docs/modules.md)。
 
 ## VP 共存与首次联测
 
-`program/` 中原有的 `formatMobName` 规则已经替换为 `_comment`，原位置说明结算怪物名称由 VTP 的 `combat_stats` 模块接管。其他规则保留。旧规则的 237 对词条另存于 `translations/vp/combat_stats.json`，仅供导入和冲突回归测试，不发布到 VP 配置目录。
+`program/` 中原有的 `formatMobName` 规则已经替换为 `_comment`，原位置说明结算怪物名称由 VTP 的 `combat_stats` 模块接管。其他规则保留。旧规则的 237 对词条另存于 `translations/vp/combat_stats.json`。声音名称的 203 对旧规则也已替换为原位置的 VTP 接管注释，原规则另存于 `translations/vp/sound_names.json`；同类 6 条普通界面文案仍由 VP 处理。这些旧规则仅供导入和冲突回归测试，不发布到 VP 配置目录。
 
 兼容配置生成工具现在支持已迁移输入：没有接管规则时原样复制（含接管注释），有一组时移除，存在重复组仍报错。构建不再反复改写 `program/`；当前迁移报告的 `removedGroups` 为 0 是正常情况。
 
@@ -122,6 +140,6 @@
 
 检查报告和转换后 class 在 `transformer/build/verification/`。测试报告在各子项目 `build/reports/tests/test/`。
 
-下一步仍是完整整合包联测，确认服务层与游戏层加载、VP/其他转换器顺序以及缓存行为；通过后再继续经验提示和声音名称。后续任务不会仅因列在此处自动执行。
+下一步仍是完整整合包联测，确认服务层与游戏层加载、VP/其他转换器顺序以及缓存行为；后续再按用户要求推进经验提示等模块。后续任务不会仅因列在此处自动执行。
 
 参考：[Forge 1.18 开发文档](https://docs.minecraftforge.net/en/1.18.x/gettingstarted/)、[Forge 40.3.11 官方 MDK](https://maven.minecraftforge.net/net/minecraftforge/forge/1.18.2-40.3.11/forge-1.18.2-40.3.11-mdk.zip)、[ModLauncher 9.1.3 源码包](https://maven.minecraftforge.net/cpw/mods/modlauncher/9.1.3/modlauncher-9.1.3-sources.jar)。
