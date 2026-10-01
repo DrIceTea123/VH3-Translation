@@ -16,7 +16,7 @@ class ModuleConfigTest {
 
     @Test void shippedExternalFilesPassStrictParserWithoutFixedEntryLists() throws Exception {
         Path external = Path.of(System.getProperty("vh3.test.configDirectory"));
-        for (String id : new String[]{"combat_stats", "sound_names", "research_names"}) {
+        for (String id : new String[]{"combat_stats", "sound_names", "research_names", "vault_xp"}) {
             // 仅验证结构；新增、改译或删除条目无需同步修改源码和测试断言。
             assertDoesNotThrow(() -> new ModuleConfig(id).reload(external));
         }

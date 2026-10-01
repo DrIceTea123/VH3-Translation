@@ -7,9 +7,9 @@
 | 任务 | 入口 |
 |---|---|
 | 修改既有翻译、制作汉化包 | `program/`；打包方式见下文 |
-| 编辑 VTP 怪物名、声音名、研究名 | [补丁使用与构建](patch-mod/README.md) |
+| 编辑 VTP 怪物名、声音名、研究名、经验提示 | [补丁使用与构建](patch-mod/README.md) |
 | 新增补丁模块、修改 ASM | [模块开发](patch-mod/docs/modules.md) |
-| 理解原始文本与注入位置 | [文本获取分析](patch-mod/docs/text-capture.md)、[研究名覆盖](patch-mod/docs/research-names.md) |
+| 理解原始文本与注入位置 | [文本获取分析](patch-mod/docs/text-capture.md)、[研究名覆盖](patch-mod/docs/research-names.md)、[经验提示](patch-mod/docs/vault-xp.md)、[箱子类型迁移评估](patch-mod/docs/chest-types-assessment.md) |
 | 维护 VP main / long / complex | [VP 分类规则](docs/maintenance/vp-asm-layout.md) |
 | 项目规则、决策与待办 | [共享记忆](project-memory/README.md)；协作从 [AGENTS.md](AGENTS.md) 开始 |
 | 同步父目录入口 | [工作区入口模板](docs/workspace-entry/README.md) |

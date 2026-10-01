@@ -5,7 +5,7 @@ import java.util.*;
 
 /** 早期模块注册表：同类只生成一个转换器，模块可拥有多个方法及不同适用端。 */
 public final class PatchModules {
-    private static final List<PatchModule> ALL = validate(List.of(new CombatStatsModule(), new SoundNamesModule(), new ResearchNamesModule()));
+    private static final List<PatchModule> ALL = validate(List.of(new CombatStatsModule(), new SoundNamesModule(), new ResearchNamesModule(), new VaultXpModule()));
     private PatchModules() {}
     public static List<PatchModule> all() { return ALL; }
     public static List<PatchModule> active(boolean client) {

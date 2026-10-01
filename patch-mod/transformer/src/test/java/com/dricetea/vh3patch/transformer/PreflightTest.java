@@ -7,6 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import com.dricetea.vh3patch.transformer.modules.SoundNamesModule;
 import com.dricetea.vh3patch.transformer.modules.ResearchNamesModule;
+import com.dricetea.vh3patch.transformer.modules.VaultXpModule;
 import java.util.List;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.io.TempDir;
@@ -53,7 +54,10 @@ class PreflightTest {
         companion(game, module.spec(), module.spec().patchVersion());
         Path config = game.resolve("config/vaultpatcher_asm/rules.json");
         Files.createDirectories(config.getParent());
-        Files.copy(Path.of(System.getProperty("vh3.test.legacyVpDirectory"), module.spec().moduleId() + ".json"), config);
+        if (module instanceof VaultXpModule) {
+            Files.writeString(config, "[{\"target_class\":{\"name\":\"" + VaultXpModule.TARGET
+                    + "\",\"method\":\"formatMobName\"},\"key\":\"Cow\",\"value\":\"Conflict\"}]");
+        } else Files.copy(Path.of(System.getProperty("vh3.test.legacyVpDirectory"), module.spec().moduleId() + ".json"), config);
         assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, fixture));
     }
 
@@ -88,6 +92,7 @@ class PreflightTest {
                 p.className(), p.methodName(), p.descriptor(), p.fingerprint(), p.returnCount(),
                 p.moduleId(), p.helperClass(), p.ownedLiterals(), p.side())).toList();
         if (module instanceof ResearchNamesModule) return new ResearchNamesModule(fixtures);
+        if (module instanceof VaultXpModule) return new VaultXpModule(fixtures);
         return module instanceof CombatStatsModule ? new CombatStatsModule(fixtures.get(0)) : new SoundNamesModule(fixtures.get(0));
     }
 

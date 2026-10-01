@@ -18,7 +18,7 @@ class ResearchNamesPatchTest {
     @Test void preClassStagePrecedesRetainedVpClassTranslationsOnBothSides() {
         for (boolean client : new boolean[]{true, false}) {
             var transformers = TranslationTransformationService.transformersFor(client);
-            assertEquals(client ? 10 : 2, transformers.size());
+            assertEquals(client ? 11 : 2, transformers.size());
             for (var transformer : transformers) for (Object item : transformer.targets()) {
                 var target = (cpw.mods.modlauncher.api.ITransformer.Target) item;
                 assertEquals("PRE_CLASS", target.getTargetType().name());

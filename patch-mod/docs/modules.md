@@ -1,6 +1,6 @@
 # 模块开发与架构
 
-使用、配置和构建命令见 [README](../README.md)；结算与声音的输入与注入位置见 [文本获取](text-capture.md)。研究模块见 [研究名覆盖](research-names.md)。本文只维护代码职责和新增模块步骤。
+使用、配置和构建命令见 [README](../README.md)；结算与声音的输入与注入位置见 [文本获取](text-capture.md)。研究模块见 [研究名覆盖](research-names.md)，经验模块见 [经验提示](vault-xp.md)。本文只维护代码职责和新增模块步骤。
 
 ## 加载层与职责
 
@@ -49,4 +49,6 @@ VP 发布迁移支持无接管规则；旧模块各有一组，研究模块接�
 
 显示边界是唯一默认修改位置：不改业务 ID、存档/网络字段和 XP 计算。未知实体先检查注册表存在，避免默认实体误命中。客户端 I18n 不得进入服务端路径；复杂文本或新参数布局另行设计。
 
-后续候选为经验提示三个 formatter 与预览、地图房间、任务显示入口、动态规则。通用 VP 转换、多版本差异报告、彻底移除 VP 都未完成，具体任务见 [TODO](../../project-memory/TODO.md)。ASM 的选择不构成性能优于 Mixin 的结论；特殊位置是否使用 Mixin 仍待确认。
+经验提示已实现三个 formatter、固定标签及预览；`StringValuePatch.applyReturns` 支持任意参数布局的 String 显示返回值，宝箱钩子另传稳定枚举参数以兼容既有 VP。`VerifiedMethodPatch` 可显式声明额外栈空间，默认仍为 1。
+
+后续候选为地图房间、任务显示入口、动态规则；[箱子类型迁移评估](chest-types-assessment.md) 仅为方案，尚未实现。通用 VP 转换、多版本差异报告、彻底移除 VP 都未完成，具体任务见 [TODO](../../project-memory/TODO.md)。ASM 的选择不构成性能优于 Mixin 的结论；特殊位置是否使用 Mixin 仍待确认。

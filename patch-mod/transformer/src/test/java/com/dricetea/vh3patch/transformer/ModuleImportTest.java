@@ -8,7 +8,8 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ModuleImportTest {
-    static Stream<PatchModule> modules() { return PatchModules.all().stream().filter(m -> !m.spec().moduleId().equals("research_names")); }
+    // 这里只测试单组历史导入；research_names 有专属测试，vault_xp 没有旧 VP 规则。
+    static Stream<PatchModule> modules() { return Stream.of(PatchModules.find("combat_stats"), PatchModules.find("sound_names")); }
 
     @ParameterizedTest @MethodSource("modules")
     void importerWritesHistoricalCandidatesOutsideSource(PatchModule module, @TempDir Path output) throws Exception {

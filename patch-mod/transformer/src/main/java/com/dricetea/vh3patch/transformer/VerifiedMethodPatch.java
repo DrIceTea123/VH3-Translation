@@ -18,6 +18,11 @@ public final class VerifiedMethodPatch {
     }
 
     public static void apply(ClassNode node, PatchSpec spec, ToIntFunction<MethodNode> edit) {
+        apply(node, spec, 1, edit);
+    }
+
+    public static void apply(ClassNode node, PatchSpec spec, int extraStack, ToIntFunction<MethodNode> edit) {
+        if (extraStack < 0) throw new IllegalArgumentException("Negative extra stack");
         MethodNode original = target(node, spec);
         for (AbstractInsnNode instruction : original.instructions) {
             if (instruction instanceof MethodInsnNode call && call.owner.equals(spec.helperClass())) {
@@ -37,8 +42,8 @@ public final class VerifiedMethodPatch {
         int count = edit.applyAsInt(patched);
         if (count != spec.hookCount()) throw new IllegalStateException("Unexpected hook count for "
                 + spec.methodName() + ": " + count + ", expected " + spec.hookCount());
-        // 共享钩子最多额外压入一个引用；原帧的每个分支边界栈结构不变。
-        patched.maxStack = original.maxStack + 1;
+        // 调用者声明钩子所需的额外栈空间；原帧的每个分支边界栈结构不变。
+        patched.maxStack = original.maxStack + extraStack;
         try {
             new Analyzer<>(new BasicVerifier()).analyze(node.name, patched);
         } catch (AnalyzerException e) {

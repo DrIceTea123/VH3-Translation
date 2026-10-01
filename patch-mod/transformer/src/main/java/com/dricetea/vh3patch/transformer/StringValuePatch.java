@@ -8,6 +8,22 @@ import java.util.function.Predicate;
 public final class StringValuePatch {
     private StringValuePatch() {}
 
+    /** 任意参数布局的 String 返回方法；仅用完整显示结果作键，不读取或改写业务参数。 */
+    public static void applyReturns(ClassNode node, PatchSpec spec) {
+        if (!org.objectweb.asm.Type.getReturnType(spec.descriptor()).equals(org.objectweb.asm.Type.getType(String.class)))
+            throw new IllegalArgumentException("Expected a String return type");
+        VerifiedMethodPatch.apply(node, spec, method -> {
+            int count = 0;
+            for (AbstractInsnNode instruction : method.instructions.toArray()) {
+                if (instruction.getOpcode() != Opcodes.ARETURN) continue;
+                method.instructions.insertBefore(instruction, new MethodInsnNode(Opcodes.INVOKESTATIC,
+                        spec.helperClass(), "translate", "(Ljava/lang/String;)Ljava/lang/String;", false));
+                count++;
+            }
+            return count;
+        });
+    }
+
     public static AbstractInsnNode nextCode(AbstractInsnNode instruction) {
         do { instruction = instruction.getNext(); } while (instruction != null && instruction.getOpcode() < 0);
         return instruction;
