@@ -8,6 +8,750 @@
     },
     {
         "target_class": {
+            "name": "iskallia.vault.client.gui.screen.accessibility.VaultAccessibilityScreen"
+        },
+        "pairs": [
+            {
+                "key": "OFF",
+                "value": "关"
+            },
+            {
+                "key": "Reset to Default",
+                "value": "重置为默认"
+            },
+            {
+                "key": "Vault Hunters Accessibility",
+                "value": "宝藏猎人辅助功能"
+            },
+            {
+                "key": "Visual",
+                "value": "视觉"
+            },
+            {
+                "key": "Vault",
+                "value": "宝库"
+            },
+            {
+                "key": "Damage",
+                "value": "伤害"
+            },
+            {
+                "key": "Healthbar",
+                "value": "生命条"
+            },
+            {
+                "key": "Hunter",
+                "value": "探知"
+            },
+            {
+                "key": "Colorblind Mode",
+                "value": "色盲模式"
+            },
+            {
+                "key": "Has 3 modes. Changes colors for gear depending on the mode. All modes add gear rarity types to scavenger items, gear and shop pedestals (i.e 'Common Vault Sword').",
+                "value": "有3种模式。根据模式更改装备的颜色。所有模式都会将装备稀有度描述添加到拾荒者物品、装备和购物基座中（例如“普通宝库剑”）。"
+            },
+            {
+                "key": "Gear Modifier Colours",
+                "value": "装备词缀颜色"
+            },
+            {
+                "key": "When disabled, all modifiers on gear will be colored white rather than their respective color, such as red for Attack Damage.",
+                "value": "禁用时，装备上的所有词缀将全部显示为白色，而不是原本的多种颜色，例如原本红色表示攻击伤害。"
+            },
+            {
+                "key": "Rarity Highlighter",
+                "value": "稀有度高亮"
+            },
+            {
+                "key": "Shifting",
+                "value": "按住Shift"
+            },
+            {
+                "key": "Always on",
+                "value": "始终显示"
+            },
+            {
+                "key": "Determines when to render the color background on gear items in your inventory. ",
+                "value": "设置在什么情况渲染物品栏中的装备物品的颜色背景。"
+            },
+            {
+                "key": "Rendering",
+                "value": "渲染"
+            },
+            {
+                "key": "Item Uses Overlay",
+                "value": "物品使用次数叠加层"
+            },
+            {
+                "key": "All items with a set amount of uses will now render this as their stack size. Applies to trinkets, charms, necklaces, and key rings.",
+                "value": "所有拥有使用次数限制的物品现在都会将其使用次数显示为堆叠数量。适用于饰品、护符、吊坠和钥匙串。"
+            },
+            {
+                "key": "Unboxing Details",
+                "value": "开箱详细数据"
+            },
+            {
+                "key": "When enabled, displays modifier info in Card and Jewel unboxing screens",
+                "value": "启用后，在卡牌和珠宝的开箱选择界面中显示物品的词缀信息。"
+            },
+            {
+                "key": "Totem Particles",
+                "value": "图腾粒子"
+            },
+            {
+                "key": "When enabled, particles coming out of Vault Totems will show.",
+                "value": "启用后，会显示宝库图腾散发出的粒子效果。"
+            },
+            {
+                "key": "Player Health Bar",
+                "value": "玩家生命条"
+            },
+            {
+                "key": "When enabled, replaces heart rendering with a health bar and numeric HP display. Useful for high HP builds.",
+                "value": "启用后，生命值显示由红心替换为生命条和数字显示。适用于生命值较高的构筑套组。"
+            },
+            {
+                "key": "Hide Off-hand",
+                "value": "隐藏副手"
+            },
+            {
+                "key": "When enabled, the item in your off hand will not render in-game.",
+                "value": "启用后，游戏中将不会渲染你副手的物品。"
+            },
+            {
+                "key": "Vault Potion Effects",
+                "value": "宝库药水效果"
+            },
+            {
+                "key": "When enabled, visual effects for vault potions will show, such as the poison overlay.",
+                "value": "启用后，将显示宝库药水效果的视觉效果，例如效果覆盖层。"
+            },
+            {
+                "key": "Treasure Door Names",
+                "value": "宝藏门名称"
+            },
+            {
+                "key": "When enabled, treasure doors will render their name on the front.",
+                "value": "启用后，宝藏门上会显示门的类型名称。"
+            },
+            {
+                "key": "Ability Scrolling",
+                "value": "技能滚动施放"
+            },
+            {
+                "key": "When enabled, allows you to scroll through abilities whilst holding 'Ability Cast Key'.",
+                "value": "启用后，可以在按住“技能施放键”的同时滚动切换技能。"
+            },
+            {
+                "key": "Elixir Orb Numbers",
+                "value": "圣水球数字"
+            },
+            {
+                "key": "When enabled, Elixir Orbs will show numeric values, which helps figuring out what progress the objective more.",
+                "value": "启用后，圣水球上会显示具体数值，辅助判断哪种行为获得的进度更多。"
+            },
+            {
+                "key": "Early Timer Warning",
+                "value": "计时器预警"
+            },
+            {
+                "key": "%dm %ds",
+                "value": "%d分%d秒"
+            },
+            {
+                "key": "%dm",
+                "value": "%d分"
+            },
+            {
+                "key": "%ds",
+                "value": "%d秒"
+            },
+            {
+                "key": "When the timer reaches the threshold, the panic sound (that usually plays at 20s left) will play for 3 seconds.",
+                "value": "当计时器达到设定值时，将播放警报声，持续3秒（默认在剩余20秒时播放）。"
+            },
+            {
+                "key": "Damage Type",
+                "value": "伤害类型"
+            },
+            {
+                "key": "Click to switch the type of damage you want to change the color of.",
+                "value": "点击切换要编辑颜色的伤害类型。"
+            },
+            {
+                "key": "Color",
+                "value": "颜色"
+            },
+            {
+                "key": "Floored Numbers",
+                "value": "数值取整"
+            },
+            {
+                "key": "Round damage numbers down.",
+                "value": "将伤害数字四舍五入。"
+            },
+            {
+                "key": "Visibility",
+                "value": "可见性"
+            },
+            {
+                "key": "When to show damage particles.",
+                "value": "在什么情况下显示伤害数字粒子效果。"
+            },
+            {
+                "key": "When to show mob healthbars.",
+                "value": "在什么情况下显示怪物的生命条。"
+            },
+            {
+                "key": "Healthbar Color",
+                "value": "生命条颜色"
+            },
+            {
+                "key": "Healthbar Height",
+                "value": "生命条高度"
+            },
+            {
+                "key": "SMALL",
+                "value": "小"
+            },
+            {
+                "key": "Mob Group Icon",
+                "value": "怪物族类图标"
+            },
+            {
+                "key": "Target Type",
+                "value": "目标类型"
+            },
+            {
+                "key": "Select a chest type to customize color",
+                "value": "选择一个兴趣点类型以自定义颜色"
+            },
+            {
+                "key": "Hunter Style",
+                "value": "探知样式"
+            },
+            {
+                "key": "Particles",
+                "value": "粒子"
+            },
+            {
+                "key": "Outlines",
+                "value": "轮廓线"
+            },
+            {
+                "key": "Whether to create square outlines around the chests, or generate particles.",
+                "value": "设置在宝箱位置显示方形轮廓线或粒子簇。"
+            },
+            {
+                "key": "Particle Density",
+                "value": "粒子密度"
+            },
+            {
+                "key": "Outline Mode",
+                "value": "轮廓线模式"
+            },
+            {
+                "key": "Outline Thickness",
+                "value": "轮廓线宽度"
+            }
+        ]
+    },
+    {
+        "_comment_0": "VaultAccessibilityScreen界面中的枚举类name()直接调用。从上到下依次为：",
+        "_comment_1": "iskallia.vault.skill.ability.effect.spi.HunterAbility$Target",
+        "_comment_2": "iskallia.vault.client.render.hunter.HunterParticleDensityOption",
+        "_comment_3": "iskallia.vault.client.render.hunter.HunterOutlineMode",
+        "_comment_4": "iskallia.vault.client.render.hunter.HunterOutlineThickness"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.accessibility.VaultAccessibilityScreen",
+            "local": "Mname"
+        },
+        "pairs": [
+            {
+                "key": "WOODEN",
+                "value": "木制宝箱"
+            },
+            {
+                "key": "GILDED",
+                "value": "镀金宝箱"
+            },
+            {
+                "key": "ORNATE",
+                "value": "华丽宝箱"
+            },
+            {
+                "key": "LIVING",
+                "value": "活化宝箱"
+            },
+            {
+                "key": "COINS",
+                "value": "钱币堆"
+            },
+            {
+                "key": "HARDENED",
+                "value": "硬质宝箱"
+            },
+            {
+                "key": "ENIGMA",
+                "value": "谜题宝箱"
+            },
+            {
+                "key": "FLESH",
+                "value": "肉食宝箱"
+            },
+            {
+                "key": "OBJECTIVES",
+                "value": "宝库目标"
+            },
+            {
+                "key": "GOD_ALTARS",
+                "value": "神之祭坛"
+            },
+            {
+                "key": "DUNGEONS",
+                "value": "地牢"
+            },
+            {
+                "key": "VENDOORS",
+                "value": "商门"
+            },
+            {
+                "key": "TREASURE_DOORS",
+                "value": "宝藏门"
+            },
+            {
+                "key": "PYLONS",
+                "value": "晶塔"
+            },
+            {
+                "key": "NORMAL",
+                "value": "普通"
+            },
+            {
+                "key": "HALF",
+                "value": "减半"
+            },
+            {
+                "key": "QUARTER",
+                "value": "四分之一"
+            },
+            {
+                "key": "DETAILED",
+                "value": "完整"
+            },
+            {
+                "key": "CUBE",
+                "value": "方块"
+            },
+            {
+                "key": "CUBE_SMALL",
+                "value": "小方块"
+            },
+            {
+                "key": "THIN",
+                "value": "较细"
+            },
+            {
+                "key": "THICK",
+                "value": "较粗"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.rules.VaultRulesScreen"
+        },
+        "pairs": [
+            {
+                "key": "Vault Rules",
+                "value": "宝库规则"
+            },
+            {
+                "key": "General",
+                "value": "通用"
+            },
+            {
+                "key": "Crystal",
+                "value": "水晶"
+            },
+            {
+                "key": "Co-op",
+                "value": "合作"
+            },
+            {
+                "key": "Spectator",
+                "value": "旁观"
+            },
+            {
+                "key": "Misc",
+                "value": "杂项"
+            },
+            {
+                "key": "Vault Timer",
+                "value": "宝库计时器"
+            },
+            {
+                "key": "No Limit",
+                "value": "无限制"
+            },
+            {
+                "key": " min",
+                "value": "分钟"
+            },
+            {
+                "key": "Amount of time all users receive in their vaults. Setting this to 0 will give everyone infinite time.",
+                "value": "设置所有宝库的默认计时器时间。设置为0代表无限时间。"
+            },
+            {
+                "key": "Level Lock",
+                "value": "宝库等级锁"
+            },
+            {
+                "key": "Maximum vault level any user can reach.",
+                "value": "玩家可达到的宝库等级上限。"
+            },
+            {
+                "key": "Vault Mode",
+                "value": "宝库模式"
+            },
+            {
+                "key": "Vault Rewards",
+                "value": "宝库奖励"
+            },
+            {
+                "key": "Loot Amount",
+                "value": "战利品数量"
+            },
+            {
+                "key": "Loot multiplier for vault chests.",
+                "value": "宝库宝箱的战利品倍率。"
+            },
+            {
+                "key": "Loot Multiplier: ",
+                "value": "战利品倍率："
+            },
+            {
+                "key": "XP Amount",
+                "value": "宝库经验量"
+            },
+            {
+                "key": "XP multiplier for all vaults.",
+                "value": "所有宝库的经验值倍率。"
+            },
+            {
+                "key": "Crystal Cost",
+                "value": "水晶花费"
+            },
+            {
+                "key": "Determines how much materials are required to craft Vault Crystals",
+                "value": "决定制作宝库水晶需要花费的材料量"
+            },
+            {
+                "key": "Recipe Scaling",
+                "value": "配方动态难度"
+            },
+            {
+                "key": "Determines how quickly the crystal recipe scales",
+                "value": "控制水晶配方难度提升的速度"
+            },
+            {
+                "key": "SLOW: 0.5x scaling",
+                "value": "缓慢：0.5x提升速度"
+            },
+            {
+                "key": "NORMAL: 1.0x scaling",
+                "value": "普通：1.0x提升速度"
+            },
+            {
+                "key": "FAST: 2.0x scaling",
+                "value": "迅速：2.0x提升速度"
+            },
+            {
+                "key": "EXTREME: 5.0x scaling",
+                "value": "巨量：5.0x提升速度"
+            },
+            {
+                "key": "Vaults Require Party",
+                "value": "宝库小队限制"
+            },
+            {
+                "key": "When enabled, players can only join vaults of those they share a party with.",
+                "value": "启用后，玩家只能加入同小队成员的宝库。"
+            },
+            {
+                "key": "XP Sharing",
+                "value": "经验共享"
+            },
+            {
+                "key": "Map Sharing",
+                "value": "地图共享"
+            },
+            {
+                "key": "When enabled, rooms discovered by party members will show up on your vault map too.",
+                "value": "启用后，其他小队成员的宝库房间也会显示在你的宝库地图上。"
+            },
+            {
+                "key": "Research Penalty",
+                "value": "研究惩罚"
+            },
+            {
+                "key": "When enabled, the research cost is increased by 50% for every team member you have.",
+                "value": "启用后，每位研究团队成员使研究花费提升50%。"
+            },
+            {
+                "key": "Boost Penalty",
+                "value": "探索收益衰减"
+            },
+            {
+                "key": "When enabled, players running lower level vaults will not gain experience.",
+                "value": "启用后，探索更低等级的宝库时将不会获得经验。"
+            },
+            {
+                "key": "increases the cost of researches or not",
+                "value": "增加研究所需的花费"
+            },
+            {
+                "key": "Level Sync",
+                "value": "等级同步"
+            },
+            {
+                "key": "Level Sync Enabled",
+                "value": "启用等级同步"
+            },
+            {
+                "key": "When enabled, players can form level sync teams to share a single vault level and exp pool.",
+                "value": "启用后，玩家可以组建等级同步小组，共享宝库等级和经验值。"
+            },
+            {
+                "key": "Level Sync Penalty",
+                "value": "等级同步惩罚"
+            },
+            {
+                "key": "Extra experience required to the next level per additional team member. 50% means 2 players need 1.5x exp, 3 players need 2x exp.",
+                "value": "每增加一名小组成员，升级所需的经验值都会增加。50%代表2名玩家需要1.5倍经验值，3名玩家需要2倍经验值。"
+            },
+            {
+                "key": "Spectator Mode",
+                "value": "宝库旁观模式"
+            },
+            {
+                "key": "Spectate Party Only",
+                "value": "仅小队旁观"
+            },
+            {
+                "key": "When enabled, users can only spectate party members.",
+                "value": "启用后，玩家只能旁观小队成员的宝库探索。"
+            },
+            {
+                "key": "Knowledge Brew",
+                "value": "知识精酿"
+            },
+            {
+                "key": "When enabled, Knowledge Brews can be used. Research of the player who crafted it is granted to the user that drinks it.",
+                "value": "启用后，玩家可以使用知识精酿，使用者会获得制作者已解锁的研究。"
+            },
+            {
+                "key": "Mentor Brew",
+                "value": "导师精酿"
+            },
+            {
+                "key": "When enabled, Mentor Brews can be used. When a level 100 user makes a brew and gives it to their level 0 friend, that friend will become level 100.",
+                "value": "启用后，玩家可以使用导师精酿，使用者的宝库等级将提升至制作者制作精酿时的宝库等级。"
+            },
+            {
+                "key": "Spirit Locker Debt",
+                "value": "灵魂储物核债务"
+            },
+            {
+                "key": "When enabled, users can retrieve their spirit by going into debt.",
+                "value": "启用后，玩家可以选择通过陷入负债状态救回灵魂"
+            },
+            {
+                "key": "Vault Doll AI",
+                "value": "宝库玩偶AI"
+            },
+            {
+                "key": "When enabled, Vault Dolls will have an AI, causing them to actively run away and avoid players. When this option is disabled, the dolls also become immune to damage.",
+                "value": "启用后，宝库玩偶将具有AI，可以主动逃跑并避开玩家。禁用后，玩偶会免疫所有伤害。"
+            },
+            {
+                "key": "Allow Waypoints",
+                "value": "允许路径点"
+            },
+            {
+                "key": "When enabled, users can set waypoints in vaults.",
+                "value": "启用后，玩家可以在宝库内设置路径点。"
+            },
+            {
+                "key": "Preload Templates",
+                "value": "预加载模板"
+            },
+            {
+                "key": "ONLY TURN THIS ON IF YOU KNOW WHAT YOU'RE DOING! When enabled, all vault templates will be pre-loaded when the world or server is loaded. This uses more RAM, but gets rid of the lag spike upon entering the first vault since restart.",
+                "value": "当你知道自己在做什么时再开启！启用后，加载世界或服务器时，将预加载所有宝库模板。这可以消除延迟峰值，但会增加内存占用。"
+            },
+            {
+                "key": "When dying, items will be kept in the player's spirit",
+                "value": "死亡时，物品会保留在玩家灵魂内。"
+            },
+            {
+                "key": "When dying, a spirit will spawn, but it only restores the inventory from vault entry.",
+                "value": "死亡时会生成玩家灵魂，仅保留进入宝库时物品栏内的所有物品。物品会保留在玩家灵魂内。"
+            },
+            {
+                "key": "When dying, all items will be kept, and no progress will be lost. Companions lose no hearts.",
+                "value": "死亡时，所有物品都会保留，不会丢失任何游戏进度。伙伴不会失去红心。"
+            },
+            {
+                "key": "When dying, all items will be voided and no spirit will spawn",
+                "value": "死亡时，所有物品都会被销毁，不会生成灵魂"
+            },
+            {
+                "key": "When crafting a crystal, it will guarantee to be Royale.",
+                "value": "制作水晶时，默认将变为皇家水晶。"
+            },
+            {
+                "key": "Crystals are free",
+                "value": "水晶免费"
+            },
+            {
+                "key": "Multiplier: ",
+                "value": "倍率："
+            },
+            {
+                "key": "Party members do not share XP",
+                "value": "小队成员不会共享经验"
+            },
+            {
+                "key": "Highest XP earned is distributed to all members",
+                "value": "根据小队获得的最高经验值为所有成员分配"
+            },
+            {
+                "key": "Lowest XP earned is distributed to all members",
+                "value": "根据小队获得的最低经验值为所有成员分配"
+            },
+            {
+                "key": "Average XP earned is distributed to all members",
+                "value": "根据小队获得的平均经验值为所有成员分配"
+            },
+            {
+                "key": "Spectator mode disabled",
+                "value": "禁用宝库旁观模式"
+            },
+            {
+                "key": "Spectate specific players",
+                "value": "旁观特定玩家"
+            },
+            {
+                "key": "Free roaming spectator",
+                "value": "自由视角旁观"
+            }
+        ]
+    },
+    {
+        "_comment": "VaultRulesScreen界面的所有枚举类实例文本"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.rules.VaultRulesScreen",
+            "local": "MtoUpperCase"
+        },
+        "pairs": [
+            {
+                "key": "NORMAL",
+                "value": "普通"
+            },
+            {
+                "key": "CASUAL",
+                "value": "休闲"
+            },
+            {
+                "key": "HARDCORE",
+                "value": "硬核"
+            },
+            {
+                "key": "ROYALE",
+                "value": "皇家"
+            },
+            {
+                "key": "SCARCE",
+                "value": "稀少"
+            },
+            {
+                "key": "PLENTY",
+                "value": "丰富"
+            },
+            {
+                "key": "EXTREME",
+                "value": "巨量"
+            },
+            {
+                "key": "POOR",
+                "value": "极少"
+            },
+            {
+                "key": "HALF",
+                "value": "减半"
+            },
+            {
+                "key": "DOUBLE",
+                "value": "双倍"
+            },
+            {
+                "key": "TRIPLE",
+                "value": "三倍"
+            },
+            {
+                "key": "FREE",
+                "value": "免费"
+            },
+            {
+                "key": "GRINDY",
+                "value": "繁琐"
+            },
+            {
+                "key": "SLOW",
+                "value": "缓慢"
+            },
+            {
+                "key": "FAST",
+                "value": "迅速"
+            },
+            {
+                "key": "DISABLED",
+                "value": "禁用"
+            },
+            {
+                "key": "HIGHEST",
+                "value": "最高"
+            },
+            {
+                "key": "LOWEST",
+                "value": "最低"
+            },
+            {
+                "key": "AVERAGE",
+                "value": "平均"
+            },
+            {
+                "key": "OFF",
+                "value": "关"
+            },
+            {
+                "key": "PLAYER",
+                "value": "玩家"
+            },
+            {
+                "key": "FREEROAM",
+                "value": "自由视角"
+            }
+        ]
+    },
+    {
+        "target_class": {
             "name": "iskallia.vault.command.vault.VaultCommand"
         },
         "pairs": [
@@ -290,6 +1034,502 @@
             {
                 "key": " at ",
                 "value": "，位于"
+            }
+        ]
+    },
+    {
+        "target_classes": [
+            {
+                "name": "iskallia.vault.core.vault.influence.Influences"
+            },
+            {
+                "name": "iskallia.vault.task.GodAltarTask"
+            }
+        ],
+        "pairs": [
+            {
+                "key": " added ",
+                "value": "添加了"
+            },
+            {
+                "key": "Our domain's ground will carve a path.",
+                "value": "我们的领域将开辟出一条道路。"
+            },
+            {
+                "key": "Tread upon our domain with care and it will respond in kind.",
+                "value": "小心踏入我们的领域，它会做出相应的回应。"
+            },
+            {
+                "key": "May your desire blossom into a wildfire.",
+                "value": "愿你的愿望化作燎原之火。"
+            },
+            {
+                "key": "Creation bends to our will.",
+                "value": "万物顺从于我们的意志。"
+            },
+            {
+                "key": "The soil whispers secrets of those who've walked before.",
+                "value": "泥土低语着前人的秘密。"
+            },
+            {
+                "key": "Beneath the surface, our whispers guide fate.",
+                "value": "在表层之下，我们的低语指引着命运。"
+            },
+            {
+                "key": "Our heartbeats sync with the world's tremors.",
+                "value": "我们的心跳与世界的震颤同步。"
+            },
+            {
+                "key": "Our reach extends beyond the visible horizon.",
+                "value": "我们的触及范围延伸到地平线之外。"
+            },
+            {
+                "key": "May foresight guide your step.",
+                "value": "愿远见指引你的脚步。"
+            },
+            {
+                "key": "Careful planning and strategy may lead you.",
+                "value": "周密的计划和战略可让你受益匪浅。"
+            },
+            {
+                "key": "A set choice; followed through and flawlessly executed.",
+                "value": "做出决定，贯彻到底，完美执行。"
+            },
+            {
+                "key": "Chance's hand may favour your goals.",
+                "value": "机遇之手可将你推向目标。"
+            },
+            {
+                "key": "In the dance of fate and strategy, precision reigns.",
+                "value": "在命运与战略的共舞中，精确是最重要的。"
+            },
+            {
+                "key": "To foresee is to command the threads of destiny.",
+                "value": "远见就是掌握命运的脉搏。"
+            },
+            {
+                "key": "Tread lightly on the line between choice and predestination.",
+                "value": "在选择和宿命之间，你要小心谨慎。"
+            },
+            {
+                "key": "To conquer fate, first understand its riddles.",
+                "value": "要征服命运，首先要理解命运之谜。"
+            },
+            {
+                "key": "Seize the opportunity.",
+                "value": "抓住你的机遇。"
+            },
+            {
+                "key": "A single instant, stretched to infinity.",
+                "value": "一瞬间，绵延至无尽。"
+            },
+            {
+                "key": "Your future glows golden with possibility.",
+                "value": "你的未来充满无限可能，熠熠生辉。"
+            },
+            {
+                "key": "Hasten and value every passing moment.",
+                "value": "抓紧时间，珍惜每分每秒。"
+            },
+            {
+                "key": "With every heartbeat, an epoch is born.",
+                "value": "每一次心跳，都是一个时代的诞生。"
+            },
+            {
+                "key": "The sands of time are fleeting; grasp them.",
+                "value": "时间之沙稍纵即逝，请把握住。"
+            },
+            {
+                "key": "The dance of time is swift; miss not its rhythm.",
+                "value": "时间的舞步很快，不要错过它的节奏。"
+            },
+            {
+                "key": "The pendulum of time swings but once for each moment.",
+                "value": "时间的钟摆每时每刻只摆动一次。"
+            },
+            {
+                "key": "Enforce your path through obstacles.",
+                "value": "确保你的道路畅通无阻。"
+            },
+            {
+                "key": "Our vigor may aid your conquest.",
+                "value": "我们的力量可助你征服。"
+            },
+            {
+                "key": "Cherish this mote of my might.",
+                "value": "珍惜我的力量之光。"
+            },
+            {
+                "key": "A tempest incarnate.",
+                "value": "我即是风暴的化身。"
+            },
+            {
+                "key": "Rise, like the waves, unyielding and fierce.",
+                "value": "崛起，如波涛汹涌，不屈不挠，勇往直前。"
+            },
+            {
+                "key": "Forge ahead with the fury of storms.",
+                "value": "在暴风雨的狂暴中奋勇前进。"
+            },
+            {
+                "key": "With relentless force, mold your path.",
+                "value": "用无情的力量塑造你的道路。"
+            },
+            {
+                "key": "Harness my wrath to awaken the dormant.",
+                "value": "利用我的愤怒，唤醒沉睡的灵魂。"
+            },
+            {
+                "key": "The harmony of the natural world eludes you.",
+                "value": "自然世界的和谐你难以理解。"
+            },
+            {
+                "key": "The beauty of nature thrives on resilience, but your actions have brought only discord.",
+                "value": "自然之美源于顽强的生命力，但你的行为却只带来不和之音。"
+            },
+            {
+                "key": "Your failures wither the very essence of life.",
+                "value": "你的失败让生命的本质凋零。"
+            },
+            {
+                "key": "The song of nature laments your inadequacy.",
+                "value": "自然的歌声哀叹着你的不足。"
+            },
+            {
+                "key": "You tarnish the purity of nature with your missteps.",
+                "value": "你的失误玷污了自然的纯洁。"
+            },
+            {
+                "key": "Even the wisest can stumble on their path to enlightenment.",
+                "value": "即使是最聪明的人，也会在悟道的道路上磕磕绊绊。"
+            },
+            {
+                "key": "Seek knowledge, learn from your failures, and you shall find your way.",
+                "value": "寻求知识，从失败中吸取教训，你就会找到自己的方向。"
+            },
+            {
+                "key": "Failure is but a stepping stone on the road to enlightenment.",
+                "value": "失败只是通往启迪之路的一块垫脚石。"
+            },
+            {
+                "key": "Even the most brilliant minds face setbacks.",
+                "value": "再聪明的人也会遇到挫折。"
+            },
+            {
+                "key": "In the pursuit of wisdom, missteps are bound to occur.",
+                "value": "在追求智慧的过程中，难免会出现失误。"
+            },
+            {
+                "key": "A moment lost is a chance wasted.",
+                "value": "失之毫厘，谬以千里。"
+            },
+            {
+                "key": "The sands of time never cease their relentless march.",
+                "value": "时间的流沙从未停止过无情的脚步。"
+            },
+            {
+                "key": "In the grand tapestry of existence, your actions are but threads.",
+                "value": "在存在的宏大织锦中，你的行为只是小小线头。"
+            },
+            {
+                "key": "Time's embrace can be both cruel and kind.",
+                "value": "时间的怀抱既残酷又仁慈。"
+            },
+            {
+                "key": "As the clock ticks, so do your choices shape your destiny.",
+                "value": "随时间流逝，你的选择也将决定你的命运。"
+            },
+            {
+                "key": "Perhaps you should consider a different path.",
+                "value": "也许你应该考虑换一条路。"
+            },
+            {
+                "key": "Weakness is a burden that few can afford.",
+                "value": "软弱是一种负担，很少有人能承受得起。"
+            },
+            {
+                "key": "Your feeble attempt have left much to be desired.",
+                "value": "你微弱的尝试还有很多不足。"
+            },
+            {
+                "key": "A hunter must be swift to adapt, or they are doomed to fail.",
+                "value": "猎人必须迅速适应，否则注定失败。"
+            },
+            {
+                "key": "No smiles will be cast upon those who crumble in the face of adversity.",
+                "value": "逆境中溃败之人不会得到微笑。"
+            }
+        ]
+    },
+    {
+        "_comment": "CompanionItemClient用于伙伴物品的类型名称显示"
+    },
+    {
+        "target_classes": [
+            {
+                "name": "iskallia.vault.entity.entity.pet.PetModelType"
+            },
+            {
+                "name": "iskallia.vault.item.CompanionItemClient",
+                "local": "MconvertToTitleCase"
+            }
+        ],
+        "pairs": [
+            {
+                "key": "Eternal",
+                "value": "永生者"
+            },
+            {
+                "key": "Minion",
+                "value": "仆从"
+            },
+            {
+                "key": "Antlion",
+                "value": "蚁狮"
+            },
+            {
+                "key": "Giant",
+                "value": "巨人"
+            },
+            {
+                "key": "Venus",
+                "value": "维纳斯"
+            },
+            {
+                "key": "Skeleton Husky",
+                "value": "骷髅哈士奇"
+            },
+            {
+                "key": "Unicorn",
+                "value": "独角兽"
+            },
+            {
+                "key": "Dino",
+                "value": "恐龙"
+            },
+            {
+                "key": "Reindeer",
+                "value": "驯鹿"
+            },
+            {
+                "key": "Camel",
+                "value": "骆驼"
+            },
+            {
+                "key": "Peacock",
+                "value": "孔雀"
+            },
+            {
+                "key": "Elephant",
+                "value": "象"
+            },
+            {
+                "key": "Muddy Elephant",
+                "value": "泥象"
+            },
+            {
+                "key": "Moose",
+                "value": "驼鹿"
+            },
+            {
+                "key": "Pug",
+                "value": "哈巴狗"
+            },
+            {
+                "key": "Wrinkles",
+                "value": "哈巴狗"
+            },
+            {
+                "key": "Jade",
+                "value": "翡翠"
+            },
+            {
+                "key": "Lion",
+                "value": "狮子"
+            },
+            {
+                "key": "Raccoon",
+                "value": "浣熊"
+            },
+            {
+                "key": "Tiny Raccoon",
+                "value": "小浣熊"
+            },
+            {
+                "key": "Shiba",
+                "value": "柴犬"
+            },
+            {
+                "key": "Baby Creeper",
+                "value": "苦力怕宝宝"
+            },
+            {
+                "key": "Gold Baby Creeper",
+                "value": "黄金苦力怕宝宝"
+            },
+            {
+                "key": "POG Baby Creeper",
+                "value": "POG苦力怕宝宝"
+            },
+            {
+                "key": "Taffy",
+                "value": "塔菲"
+            },
+            {
+                "key": "Black Cat",
+                "value": "黑猫"
+            },
+            {
+                "key": "White Cat",
+                "value": "白猫"
+            },
+            {
+                "key": "Cinder Cat",
+                "value": "煤球猫"
+            },
+            {
+                "key": "Panda",
+                "value": "熊猫"
+            },
+            {
+                "key": "Red Panda",
+                "value": "小熊猫"
+            },
+            {
+                "key": "Polar Bear",
+                "value": "北极熊"
+            },
+            {
+                "key": "Rat",
+                "value": "老鼠"
+            },
+            {
+                "key": "Grizzly Bear",
+                "value": "棕熊"
+            },
+            {
+                "key": "Papillon",
+                "value": "帕皮隆"
+            },
+            {
+                "key": "Penguin",
+                "value": "企鹅"
+            },
+            {
+                "key": "Dylan's Penguin",
+                "value": "迪伦的企鹅"
+            },
+            {
+                "key": "Dylan",
+                "value": "迪伦"
+            },
+            {
+                "key": "Pink Dylan",
+                "value": "粉红迪伦"
+            },
+            {
+                "key": "Gold Dylan",
+                "value": "黄金迪伦"
+            },
+            {
+                "key": "Carrot",
+                "value": "胡萝卜"
+            },
+            {
+                "key": "Bumbo Cactoni",
+                "value": "怪脸仙人掌"
+            },
+            {
+                "key": "Golden Bumbo Cactoni",
+                "value": "黄金怪脸仙人掌"
+            },
+            {
+                "key": "Bumbo Pumpkini",
+                "value": "怪脸南瓜"
+            },
+            {
+                "key": "Santa Dylan",
+                "value": "圣诞老人迪伦"
+            },
+            {
+                "key": "Gingerbread Man",
+                "value": "姜饼人"
+            },
+            {
+                "key": "Bumbo Frostoni",
+                "value": "怪脸冰人"
+            },
+            {
+                "key": "Blueberry Turtle",
+                "value": "蓝莓海龟"
+            },
+            {
+                "key": "Teddy",
+                "value": "泰迪"
+            },
+            {
+                "key": "Teddy Bear",
+                "value": "泰迪熊"
+            },
+            {
+                "key": "Tommy",
+                "value": "汤米"
+            },
+            {
+                "key": "Greg",
+                "value": "格雷格"
+            },
+            {
+                "key": "Mini Butcher",
+                "value": "迷你屠夫"
+            },
+            {
+                "key": "Mini Elite Witherskelly",
+                "value": "迷你精英凋灵骷髅"
+            },
+            {
+                "key": "Mini Elite Witherskeleton",
+                "value": "迷你精英凋灵骷髅"
+            },
+            {
+                "key": "Mini Goblin",
+                "value": "迷你哥布林"
+            },
+            {
+                "key": "Goat",
+                "value": "山羊"
+            },
+            {
+                "key": "White Seal",
+                "value": "白海豹"
+            },
+            {
+                "key": "Spotted Seal",
+                "value": "斑点海豹"
+            },
+            {
+                "key": "Pig",
+                "value": "猪"
+            },
+            {
+                "key": "Bobby",
+                "value": "波比"
+            },
+            {
+                "key": "Pig Crown",
+                "value": "小丑猪"
+            },
+            {
+                "key": "Technoblade",
+                "value": "小丑猪"
+            },
+            {
+                "key": "Red Dragon",
+                "value": "红龙"
+            },
+            {
+                "key": "Lunar Dragon",
+                "value": "月龙"
             }
         ]
     },

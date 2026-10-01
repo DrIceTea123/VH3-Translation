@@ -1796,6 +1796,37 @@
     },
     {
         "target_class": {
+            "name": "iskallia.vault.client.gui.screen.accessibility.VaultSoundOptionsScreen"
+        },
+        "pairs": [
+            {
+                "key": "Vault Sound Options",
+                "value": "宝库声音设置"
+            },
+            {
+                "key": "Previous",
+                "value": "上一页"
+            },
+            {
+                "key": "Next",
+                "value": "下一页"
+            },
+            {
+                "key": "Page ",
+                "value": "页数 "
+            },
+            {
+                "key": " of ",
+                "value": " / "
+            },
+            {
+                "key": "Done",
+                "value": "完成"
+            }
+        ]
+    },
+    {
+        "target_class": {
             "name": "iskallia.vault.client.gui.screen.block.base.ForgeRecipeContainerScreen"
         },
         "pairs": [
@@ -2635,6 +2666,56 @@
             {
                 "key": " EXP Levels",
                 "value": " 经验等级"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.block.VaultForgeScreen"
+        },
+        "pairs": [
+            {
+                "key": "Level: ",
+                "value": "等级："
+            },
+            {
+                "key": "Add Proficiency",
+                "value": "提升熟练度"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.block.VaultForgeScreen$ProficiencySegment"
+        },
+        "pairs": [
+            {
+                "key": "Proficiency: ",
+                "value": "熟练度："
+            },
+            {
+                "key": "Durability: ",
+                "value": "耐久度："
+            },
+            {
+                "key": "Crafting Potential: ",
+                "value": "锻造潜能："
+            },
+            {
+                "key": "Rarity Pool: ",
+                "value": "稀有度池："
+            },
+            {
+                "key": "Maximum Repair Slots: ",
+                "value": "修复槽数上限："
+            },
+            {
+                "key": "Soulbound Chance: ",
+                "value": "灵魂绑定概率："
+            },
+            {
+                "key": "Greater Modifier Chance: ",
+                "value": "高阶词缀概率："
             }
         ]
     },
@@ -3534,6 +3615,29 @@
     },
     {
         "target_class": {
+            "name": "iskallia.vault.client.gui.screen.player.legacy.tab.split.dialog.ResearchDialog"
+        },
+        "pairs": [
+            {
+                "key": "Sharing new researches with:",
+                "value": "与以下玩家共享新的研究："
+            },
+            {
+                "key": "Researched",
+                "value": "已研究"
+            },
+            {
+                "key": "Research (",
+                "value": "研究 ("
+            },
+            {
+                "key": "Not Researched",
+                "value": "尚未研究"
+            }
+        ]
+    },
+    {
+        "target_class": {
             "name": "iskallia.vault.client.gui.screen.player.legacy.tab.split.dialog.SkillDialog"
         },
         "pairs": [
@@ -3661,6 +3765,25 @@
             {
                 "key": "Requires level: ",
                 "value": "需要宝库等级："
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.player.legacy.widget.ResearchWidget"
+        },
+        "pairs": [
+            {
+                "key": "Requires",
+                "value": "需要解锁"
+            },
+            {
+                "key": " any of",
+                "value": "以下任意一个"
+            },
+            {
+                "key": "Cannot be unlocked alongside:",
+                "value": "不能与以下项目同时解锁："
             }
         ]
     },
@@ -3970,6 +4093,76 @@
             {
                 "key": " Skill Point",
                 "value": "技能点"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.quest.QuestOverviewElementScreen"
+        },
+        "pairs": [
+            {
+                "key": "Quest Overview",
+                "value": "任务概览"
+            },
+            {
+                "key": "Complete",
+                "value": "完成"
+            },
+            {
+                "key": "Locked",
+                "value": "已锁定"
+            },
+            {
+                "key": "Completed",
+                "value": "已完成"
+            },
+            {
+                "key": "Incomplete",
+                "value": "未完成"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.summary.element.CombatStatsContainerElement"
+        },
+        "pairs": [
+            {
+                "key": "Mobs Unalived",
+                "value": "击杀怪物"
+            },
+            {
+                "key": "Total number of mobs you defeated",
+                "value": "你击败的怪物总数"
+            },
+            {
+                "key": "No mobs killed in this group",
+                "value": "此族类中没有被击杀的怪物"
+            },
+            {
+                "key": "Champions:",
+                "value": "冠军: "
+            },
+            {
+                "key": "Damage Dealt",
+                "value": "造成的伤害"
+            },
+            {
+                "key": "Total damage you dealt to mobs",
+                "value": "你对怪物造成的总伤害"
+            },
+            {
+                "key": "Damage Received",
+                "value": "受到的伤害"
+            },
+            {
+                "key": "Total damage you took from mobs",
+                "value": "你受到的来自怪物的总伤害"
+            },
+            {
+                "key": "Unknown",
+                "value": "未知"
             }
         ]
     },
@@ -10330,6 +10523,29 @@
     },
     {
         "target_class": {
+            "name": "iskallia.vault.event.GreedAssassinSpawnHandler"
+        },
+        "pairs": [
+            {
+                "key": "Greed Reputation",
+                "value": "贪婪声望点"
+            },
+            {
+                "key": "A ",
+                "value": "一个"
+            },
+            {
+                "key": "Greed Assassin",
+                "value": "贪婪刺客"
+            },
+            {
+                "key": " is hunting you...",
+                "value": "正在狩猎你……"
+            }
+        ]
+    },
+    {
+        "target_class": {
             "name": "iskallia.vault.event.InputEvents"
         },
         "pairs": [
@@ -13451,6 +13667,29 @@
     },
     {
         "target_class": {
+            "name": "iskallia.vault.item.CompanionItemClient"
+        },
+        "pairs": [
+            {
+                "key": "Series: ",
+                "value": "系列："
+            },
+            {
+                "key": "Skin: ",
+                "value": "皮肤："
+            },
+            {
+                "key": "Temporal Modifier",
+                "value": "时空词缀"
+            },
+            {
+                "key": "Relics",
+                "value": "遗物"
+            }
+        ]
+    },
+    {
+        "target_class": {
             "name": "iskallia.vault.item.CompanionParticleTrailItem"
         },
         "pairs": [
@@ -13720,6 +13959,25 @@
         },
         "key": "Level: ",
         "value": "等级："
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.item.KnowledgeBrewItem"
+        },
+        "pairs": [
+            {
+                "key": "Owner: ",
+                "value": "所有者："
+            },
+            {
+                "key": "Research Tree: ",
+                "value": "研究树："
+            },
+            {
+                "key": "None",
+                "value": "无"
+            }
+        ]
     },
     {
         "target_class": {
@@ -14604,6 +14862,54 @@
             {
                 "key": "You have no (alive) eternals to summon.",
                 "value": "你没有可召唤的（存活的）永生者。"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.task.renderer.context.GodAltarRendererContext",
+            "method": "renderTimerBar"
+        },
+        "pairs": [
+            {
+                "key": "'s Challenge  |  ",
+                "value": "的挑战  |  "
+            },
+            {
+                "key": "'s Challenge",
+                "value": "的挑战"
+            }
+        ]
+    },
+    {
+        "target_classes": [
+            {
+                "name": "iskallia.vault.task.renderer.context.GodAltarRendererContext",
+                "method": "renderTimerBar",
+                "local": "MgetName"
+            },
+            {
+                "name": "iskallia.vault.task.GodAltarTask",
+                "method": "doCompletionEffects",
+                "local": "MgetName"
+            }
+        ],
+        "pairs": [
+            {
+                "key": "Velara",
+                "value": "维拉拉"
+            },
+            {
+                "key": "Tenos",
+                "value": "特诺斯"
+            },
+            {
+                "key": "Wendarr",
+                "value": "文达尔"
+            },
+            {
+                "key": "Idona",
+                "value": "伊多纳"
             }
         ]
     },
