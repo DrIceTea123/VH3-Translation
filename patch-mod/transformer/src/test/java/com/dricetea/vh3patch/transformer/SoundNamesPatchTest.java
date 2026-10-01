@@ -64,6 +64,8 @@ class SoundNamesPatchTest {
         assertDoesNotThrow(() -> VpCompatibility.assertCompatible(currentDir, module));
         JsonArray current = JsonFiles.read(currentDir.resolve("the_vault-asm_complex.json")).getAsJsonArray();
         boolean keptUi = false;
+        // 普通界面规则可由维护者移至 main；分类位置不属于声音模块的功能约束。
+        current.addAll(JsonFiles.read(currentDir.resolve("the_vault-asm_main.json")).getAsJsonArray());
         for (JsonElement item : current) {
             JsonObject rule = item.getAsJsonObject();
             if (rule.has("target_class") && rule.get("target_class").isJsonObject()

@@ -2,6 +2,7 @@ package com.dricetea.vh3patch.client;
 
 import com.dricetea.vh3patch.TranslationPatchMod;
 import com.dricetea.vh3patch.module.TranslationModule;
+import com.dricetea.vh3patch.module.CommonModules;
 import com.dricetea.vh3patch.modules.CombatStatsModule;
 import com.dricetea.vh3patch.modules.SoundNamesModule;
 import net.minecraft.server.packs.resources.ResourceManagerReloadListener;
@@ -30,7 +31,8 @@ public final class ClientModules {
     }
 
     private static void reloadAll(Path directory) {
-        for (TranslationModule module : MODULES) {
+        // 客户端 F3+T 同时更新通用模块；专用服务端无资源重载事件，修改后重启生效。
+        for (TranslationModule module : java.util.stream.Stream.concat(MODULES.stream(), CommonModules.all().stream()).toList()) {
             try {
                 module.reload(directory);
             } catch (Exception e) {

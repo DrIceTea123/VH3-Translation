@@ -25,7 +25,7 @@ public abstract class TranslationModule {
 
     public final void reload(Path configDirectory) throws IOException { config.reload(configDirectory); }
 
-    /** 启动阶段没有可回退的译文；异常必须向 Forge 传播，阻止缺失配置的客户端继续启动。 */
+    /** 启动阶段没有可回退的译文；异常必须向 Forge 传播，阻止缺失配置时继续启动。 */
     public final void initialize(Path configDirectory) {
         try {
             reload(configDirectory);

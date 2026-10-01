@@ -13,6 +13,7 @@ import java.util.jar.JarFile;
 public final class TranslationTransformationService implements ITransformationService {
     private final List<PatchModule> modules = PatchModules.all();
     private boolean client;
+    private boolean enabled;
 
     @Override public String name() { return "vh3_translation_patch"; }
     @Override public void onLoad(IEnvironment environment, Set<String> services) {}
@@ -20,24 +21,31 @@ public final class TranslationTransformationService implements ITransformationSe
     @Override public void initialize(IEnvironment environment) {
         System.clearProperty(PatchSpec.READY_PROPERTY);
         String launch = environment.getProperty(IEnvironment.Keys.LAUNCHTARGET.get()).orElse("");
-        // 仅支持生产客户端；专用服务端和数据生成不注册这些显示补丁。
-        if (launch.equals("forgeserver") || launch.equals("forgedatagen")) return;
-        if (!launch.equals("forgeclient")) throw new IllegalStateException("VH3 patch does not support launch target: " + launch);
-        client = true;
+        // 服务端只注册 BOTH 目标；客户端也含集成服务器，需要同时注册两类目标。
+        if (!launch.equals("forgeclient") && !launch.equals("forgeserver"))
+            throw new IllegalStateException("VH3 patch does not support launch target: " + launch);
+        client = launch.equals("forgeclient");
+        enabled = true;
         Path gameDir = environment.getProperty(IEnvironment.Keys.GAMEDIR.get())
                 .orElseThrow(() -> new IllegalStateException("Missing game directory"));
         try {
-            for (PatchModule module : modules) preflight(gameDir, module);
+            for (PatchModule module : PatchModules.active(client)) preflight(gameDir, module, client);
             System.setProperty(PatchSpec.READY_PROPERTY, modules.get(0).spec().patchVersion());
             System.getLogger(name()).log(System.Logger.Level.INFO,
-                    "Preflight passed; registered modules: " + modules.stream().map(m -> m.spec().moduleId()).toList());
+                    "Preflight passed; registered modules: " + PatchModules.active(client).stream().map(m -> m.spec().moduleId()).toList());
         } catch (Exception e) {
             throw new IllegalStateException("VH3 Translation Patch preflight FAILED: " + e.getMessage(), e);
         }
     }
 
     static void preflight(Path gameDir, PatchModule module) throws Exception {
-        PatchSpec spec = module.spec();
+        preflight(gameDir, module, true);
+    }
+
+    static void preflight(Path gameDir, PatchModule module, boolean client) throws Exception {
+        List<PatchSpec> active = module.specs(client);
+        if (active.isEmpty()) return;
+        PatchSpec spec = active.get(0);
         List<Path> targets = new ArrayList<>();
         List<Path> companions = new ArrayList<>();
         try (var files = Files.list(gameDir.resolve("mods"))) {
@@ -59,27 +67,35 @@ public final class TranslationTransformationService implements ITransformationSe
         if (targets.size() != 1) throw new IllegalStateException("Expected one the_vault JAR; found " + targets.size());
         if (companions.size() != 1) throw new IllegalStateException("Expected one matching runtime JAR; found " + companions.size());
         // 此处检查原 JAR；类真正加载时仍会再验一次，发现其他转换器的冲突就中止。
-        module.apply(TargetJar.read(targets.get(0), spec, true));
+        for (String name : active.stream().map(PatchSpec::className).distinct().toList()) {
+            PatchSpec classSpec = active.stream().filter(s -> s.className().equals(name)).findFirst().orElseThrow();
+            module.apply(TargetJar.read(targets.get(0), classSpec, true), client);
+        }
         VpCompatibility.assertCompatible(gameDir.resolve("config/vaultpatcher_asm"), module);
     }
 
     @Override public List<ITransformer> transformers() {
-        if (!client) return List.of();
+        if (!enabled) return List.of();
+        return transformersFor(client);
+    }
+
+    static List<ITransformer> transformersFor(boolean client) {
         List<ITransformer> result = new ArrayList<>();
-        PatchModules.byClass().forEach((className, group) -> result.add(new Transformer(className, group)));
+        PatchModules.byClass(client).forEach((className, group) -> result.add(new Transformer(className, group, client)));
         return result;
     }
 
-    private record Transformer(String className, List<PatchModule> modules) implements ITransformer<ClassNode> {
+    private record Transformer(String className, List<PatchModule> modules, boolean client) implements ITransformer<ClassNode> {
         @Override public ClassNode transform(ClassNode input, ITransformerVotingContext context) {
             for (PatchModule module : modules) {
-                module.apply(input);
+                module.apply(input, client);
                 System.getLogger("vh3_translation_patch").log(System.Logger.Level.INFO,
                         "Applied module: " + module.spec().moduleId());
             }
             return input;
         }
         @Override public TransformerVoteResult castVote(ITransformerVotingContext context) { return TransformerVoteResult.YES; }
-        @Override public Set<Target> targets() { return Set.of(Target.targetClass(className.replace('/', '.'))); }
+        // VP 的普通翻译使用 CLASS；先在 PRE_CLASS 校验原方法，避免把保留的 VP 提示语当作冲突。
+        @Override public Set<Target> targets() { return Set.of(Target.targetPreClass(className.replace('/', '.'))); }
     }
 }

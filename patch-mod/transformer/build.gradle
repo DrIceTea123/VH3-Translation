@@ -15,7 +15,10 @@ def vpLegacySource = rootProject.file('translations/vp/combat_stats.json')
 
 tasks.named('processResources') {
     inputs.property 'mod_version', project.version
-    filesMatching('patches/*.properties') { expand mod_version: project.version }
+    // lambda 方法名与内部类名含 $，只替换版本占位符，不能交给 Groovy 模板展开。
+    filesMatching('patches/*.properties') {
+        filter { line -> line.replace('${mod_version}', project.version.toString()) }
+    }
 }
 tasks.named('jar') {
     manifest.attributes('Automatic-Module-Name': 'com.dricetea.vh3patch.transformer',
@@ -55,6 +58,14 @@ tasks.register('importSoundNames', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'com.dricetea.vh3patch.transformer.PatchTool'
     args 'import-module', 'sound_names', rootProject.file('translations/vp/sound_names.json').absolutePath,
+            targetJar.absolutePath, layout.buildDirectory.dir('imports').get().asFile.absolutePath
+}
+
+tasks.register('importResearchNames', JavaExec) {
+    dependsOn classes
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.dricetea.vh3patch.transformer.PatchTool'
+    args 'import-module', 'research_names', rootProject.file('translations/vp/research_names.json').absolutePath,
             targetJar.absolutePath, layout.buildDirectory.dir('imports').get().asFile.absolutePath
 }
 tasks.register('prepareVpConfig', JavaExec) {

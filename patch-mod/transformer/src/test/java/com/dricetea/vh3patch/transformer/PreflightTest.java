@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import com.dricetea.vh3patch.transformer.modules.SoundNamesModule;
+import com.dricetea.vh3patch.transformer.modules.ResearchNamesModule;
+import java.util.List;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.io.TempDir;
 import org.objectweb.asm.ClassWriter;
@@ -55,23 +57,38 @@ class PreflightTest {
         assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, fixture));
     }
 
-    private PatchModule targetFixture(Path game, PatchModule module) throws Exception {
-        PatchSpec production = module.spec();
+    @Test void dedicatedServerNeedsOnlyCommonTargets(@TempDir Path game) throws Exception {
+        var module = new ResearchNamesModule();
+        PatchModule fixture = targetFixture(game, module, false);
+        companion(game, module.spec(), module.spec().patchVersion());
+        assertDoesNotThrow(() -> TranslationTransformationService.preflight(game, fixture, false));
+        assertThrows(Exception.class, () -> TranslationTransformationService.preflight(game, fixture, true));
+        assertEquals(List.of("research_names"), PatchModules.active(false).stream().map(m -> m.spec().moduleId()).toList());
+        assertEquals(2, PatchModules.byClass(false).size());
+        assertTrue(PatchModules.byClass(false).keySet().stream().noneMatch(n -> n.contains("/client/")));
+    }
+
+    private PatchModule targetFixture(Path game, PatchModule module) throws Exception { return targetFixture(game, module, true); }
+    private PatchModule targetFixture(Path game, PatchModule module, boolean client) throws Exception {
         Files.createDirectories(game.resolve("mods"));
-        var node = TargetJar.read(Path.of(System.getProperty("vh3.test.targetJar")), production, true);
-        ClassWriter writer = new ClassWriter(0);
-        node.accept(writer);
         Path jar = game.resolve("mods/target.jar");
         try (var output = new JarOutputStream(Files.newOutputStream(jar))) {
-            output.putNextEntry(new JarEntry(production.className() + ".class"));
-            output.write(writer.toByteArray());
-            output.closeEntry();
+            for (String name : module.specs(client).stream().map(PatchSpec::className).distinct().toList()) {
+                var production = module.specs().stream().filter(s -> s.className().equals(name)).findFirst().orElseThrow();
+                var node = TargetJar.read(Path.of(System.getProperty("vh3.test.targetJar")), production, true);
+                ClassWriter writer = new ClassWriter(0);
+                node.accept(writer);
+                output.putNextEntry(new JarEntry(name + ".class"));
+                output.write(writer.toByteArray());
+                output.closeEntry();
+            }
         }
-        PatchSpec fixture = new PatchSpec(production.patchVersion(), production.targetVersion(),
-                MethodFingerprint.sha256(Files.readAllBytes(jar)), production.className(), production.methodName(),
-                production.descriptor(), production.fingerprint(), production.returnCount(),
-                production.moduleId(), production.helperClass(), production.ownedLiterals());
-        return module instanceof CombatStatsModule ? new CombatStatsModule(fixture) : new SoundNamesModule(fixture);
+        String hash = MethodFingerprint.sha256(Files.readAllBytes(jar));
+        var fixtures = module.specs().stream().map(p -> new PatchSpec(p.patchVersion(), p.targetVersion(), hash,
+                p.className(), p.methodName(), p.descriptor(), p.fingerprint(), p.returnCount(),
+                p.moduleId(), p.helperClass(), p.ownedLiterals(), p.side())).toList();
+        if (module instanceof ResearchNamesModule) return new ResearchNamesModule(fixtures);
+        return module instanceof CombatStatsModule ? new CombatStatsModule(fixtures.get(0)) : new SoundNamesModule(fixtures.get(0));
     }
 
     private void companion(Path game, PatchSpec production, String version) throws Exception {

@@ -49,13 +49,15 @@ public final class VpCompatibility {
         return result;
     }
 
-    /** 发布输入可能已经移除接管规则；无冲突时原样复制，有一组时迁移，重复组仍报错。 */
+    /** 无冲突时复制；多组迁移的重复/混合范围判定由模块负责。 */
     public static JsonArray prepareConfiguration(JsonArray original, PatchModule module) {
+        var owned = new java.util.ArrayList<JsonObject>();
+        JsonArray result = new JsonArray();
         for (JsonElement element : original) {
-            if (element.isJsonObject() && module.ownsVpRule(element.getAsJsonObject())) {
-                return withoutOwnedMethod(original, module);
-            }
+            if (element.isJsonObject() && module.ownsVpRule(element.getAsJsonObject())) owned.add(element.getAsJsonObject());
+            else result.add(element.deepCopy());
         }
-        return original.deepCopy();
+        module.validateVpMigration(owned);
+        return result;
     }
 }

@@ -1,42 +1,41 @@
 package com.dricetea.vh3patch.transformer;
 
-import com.dricetea.vh3patch.transformer.modules.CombatStatsModule;
-import com.dricetea.vh3patch.transformer.modules.SoundNamesModule;
+import com.dricetea.vh3patch.transformer.modules.*;
+import java.util.*;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
-/** 早期模块注册表；新增模块后，启动校验和离线工具均使用同一份列表。 */
+/** 早期模块注册表：同类只生成一个转换器，模块可拥有多个方法及不同适用端。 */
 public final class PatchModules {
-    private static final List<PatchModule> ALL = validate(List.of(new CombatStatsModule(), new SoundNamesModule()));
+    private static final List<PatchModule> ALL = validate(List.of(new CombatStatsModule(), new SoundNamesModule(), new ResearchNamesModule()));
     private PatchModules() {}
-
     public static List<PatchModule> all() { return ALL; }
-
+    public static List<PatchModule> active(boolean client) {
+        return ALL.stream().filter(m -> !m.specs(client).isEmpty()).toList();
+    }
     public static PatchModule find(String id) {
-        return ALL.stream().filter(module -> module.spec().moduleId().equals(id)).findFirst()
+        return ALL.stream().filter(m -> m.spec().moduleId().equals(id)).findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("Unknown module: " + id));
     }
-
-    // 同类的多个方法按注册顺序一起变换，避免多个转换器互相覆盖输出。
-    public static Map<String, List<PatchModule>> byClass() {
-        return ALL.stream().collect(Collectors.groupingBy(module -> module.spec().className(),
-                java.util.LinkedHashMap::new, Collectors.toList()));
+    public static Map<String, List<PatchModule>> byClass() { return byClass(true); }
+    public static Map<String, List<PatchModule>> byClass(boolean client) {
+        Map<String, List<PatchModule>> result = new LinkedHashMap<>();
+        for (PatchModule module : active(client)) {
+            for (String name : module.specs(client).stream().map(PatchSpec::className).distinct().toList())
+                result.computeIfAbsent(name, ignored -> new ArrayList<>()).add(module);
+        }
+        return result;
     }
-
     private static List<PatchModule> validate(List<PatchModule> modules) {
-        if (modules.isEmpty()) throw new IllegalStateException("No patch modules registered");
         var ids = new HashSet<String>();
         var targets = new HashSet<String>();
+        PatchSpec baseline = modules.get(0).spec();
         for (PatchModule module : modules) {
-            PatchSpec spec = module.spec();
-            if (!ids.add(spec.moduleId()) || !targets.add(spec.className() + "." + spec.methodName() + spec.descriptor())) {
-                throw new IllegalStateException("Duplicate module ID or target: " + spec.moduleId());
-            }
-            if (!spec.patchVersion().equals(modules.get(0).spec().patchVersion())) {
-                throw new IllegalStateException("Inconsistent module versions");
+            if (!ids.add(module.spec().moduleId())) throw new IllegalStateException("Duplicate module ID");
+            for (PatchSpec spec : module.specs()) {
+                if (!targets.add(spec.className() + "." + spec.methodName() + spec.descriptor()))
+                    throw new IllegalStateException("Duplicate target: " + spec);
+                if (!spec.moduleId().equals(module.spec().moduleId()) || !spec.helperClass().equals(module.spec().helperClass())
+                        || !spec.patchVersion().equals(baseline.patchVersion()) || !spec.targetVersion().equals(baseline.targetVersion())
+                        || !spec.jarHash().equals(baseline.jarHash())) throw new IllegalStateException("Inconsistent module manifests");
             }
         }
         return List.copyOf(modules);

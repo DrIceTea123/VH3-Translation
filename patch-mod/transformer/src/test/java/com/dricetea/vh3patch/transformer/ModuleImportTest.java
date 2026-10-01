@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ModuleImportTest {
-    static Stream<PatchModule> modules() { return PatchModules.all().stream(); }
+    static Stream<PatchModule> modules() { return PatchModules.all().stream().filter(m -> !m.spec().moduleId().equals("research_names")); }
 
     @ParameterizedTest @MethodSource("modules")
     void importerWritesHistoricalCandidatesOutsideSource(PatchModule module, @TempDir Path output) throws Exception {

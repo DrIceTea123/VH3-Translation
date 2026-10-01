@@ -27,19 +27,23 @@ public final class PatchTool {
         switch (args[0]) {
             case "inspect" -> {
                 for (PatchModule module : PatchModules.all()) {
-                    ClassNode node = TargetJar.read(input, module.spec(), true);
-                    System.out.println(module.spec().moduleId() + ".method.sha256=" + MethodFingerprint.of(module.target(node)));
+                    for (PatchSpec spec : module.specs()) {
+                        ClassNode node = TargetJar.read(input, spec, true);
+                        System.out.println(spec.moduleId() + "." + spec.methodName() + ".sha256="
+                                + MethodFingerprint.of(VerifiedMethodPatch.target(node, spec)));
+                    }
                 }
             }
             case "verify" -> {
                 Path output = Path.of(args[2]);
                 JsonArray reports = new JsonArray();
-                for (var group : PatchModules.byClass().values()) {
-                    ClassNode node = TargetJar.read(input, group.get(0).spec(), true);
+                for (var entry : PatchModules.byClass().entrySet()) {
+                    var group = entry.getValue();
+                    PatchSpec first = group.get(0).specs().stream().filter(s -> s.className().equals(entry.getKey())).findFirst().orElseThrow();
+                    ClassNode node = TargetJar.read(input, first, true);
                     for (PatchModule module : group) {
-                        PatchSpec spec = module.spec();
-                        TargetJar.read(input, spec, true);
                         module.apply(node);
+                        for (PatchSpec spec : module.specs().stream().filter(s -> s.className().equals(node.name)).toList()) {
                         JsonObject report = new JsonObject();
                         report.addProperty("module", spec.moduleId());
                         report.addProperty("targetVersion", spec.targetVersion());
@@ -47,10 +51,12 @@ public final class PatchTool {
                         report.addProperty("method", spec.className() + "." + spec.methodName() + spec.descriptor());
                         report.addProperty("fingerprintAlgorithm", "asm-method-v1");
                         report.addProperty("methodSha256", spec.fingerprint());
-                        report.addProperty("returnHooks", spec.returnCount());
+                        report.addProperty("translationHooks", spec.hookCount());
+                        report.addProperty("side", spec.side().name());
                         report.addProperty("bytecodeAnalysis", "passed");
                         report.addProperty("gameTested", false);
                         reports.add(report);
+                        }
                     }
                     ClassWriter writer = new ClassWriter(0);
                     node.accept(writer);

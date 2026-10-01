@@ -7,15 +7,14 @@
 | 任务 | 入口 |
 |---|---|
 | 修改既有翻译、制作汉化包 | `program/`；打包方式见下文 |
-| 编辑 VTP 怪物名、声音名 | [补丁使用与构建](patch-mod/README.md) |
+| 编辑 VTP 怪物名、声音名、研究名 | [补丁使用与构建](patch-mod/README.md) |
 | 新增补丁模块、修改 ASM | [模块开发](patch-mod/docs/modules.md) |
-| 理解原始文本与注入位置 | [文本获取分析](patch-mod/docs/text-capture.md) |
+| 理解原始文本与注入位置 | [文本获取分析](patch-mod/docs/text-capture.md)、[研究名覆盖](patch-mod/docs/research-names.md) |
 | 维护 VP main / long / complex | [VP 分类规则](docs/maintenance/vp-asm-layout.md) |
-| 查询历史文本问题 | [待核实问题](docs/maintenance/text-issues.md)、[上游沟通草稿](docs/maintenance/upstream-draft.md) |
 | 项目规则、决策与待办 | [共享记忆](project-memory/README.md)；协作从 [AGENTS.md](AGENTS.md) 开始 |
 | 同步父目录入口 | [工作区入口模板](docs/workspace-entry/README.md) |
 
-`docs/release/` 保留玩家汉化说明书 DOCX；`program/` 下的许可证、安装前提示、覆盖版说明是独立发布入口，不能按重复维护文档删除。
+玩家汉化说明书 DOCX 位于 `program/`；该目录下的许可证、安装前提示、覆盖版说明是独立发布入口，不能按重复维护文档删除。
 
 ## 编辑与打包
 

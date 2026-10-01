@@ -43,9 +43,8 @@ class VpCompatibilityTest {
         JsonArray current = JsonFiles.read(directory.resolve("the_vault-asm_complex.json")).getAsJsonArray();
         assertEquals(current, VpCompatibility.prepareConfiguration(current, module));
         assertTrue(java.util.stream.StreamSupport.stream(current.spliterator(), false).anyMatch(item -> item.isJsonObject()
-                && item.getAsJsonObject().has("_comment")
-                && item.getAsJsonObject().get("_comment").getAsString().contains("VTP")
-                && item.getAsJsonObject().get("_comment").getAsString().contains("combat_stats")));
+                && item.getAsJsonObject().entrySet().stream().anyMatch(e -> e.getKey().startsWith("_comment")
+                && e.getValue().getAsString().contains("VTP") && e.getValue().getAsString().contains("combat_stats"))));
     }
 
     @Test void publishedPreparationRemovesSingleConflictButRejectsDuplicates() throws Exception {
