@@ -1,6 +1,6 @@
 package com.dricetea.vh3patch.transformer;
 
-import com.dricetea.vh3patch.transformer.modules.CombatStatsModule;
+import com.dricetea.vh3patch.transformer.modules.MobNamesModule;
 
 import com.google.gson.JsonArray;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,7 @@ import java.nio.file.Path;
 import static org.junit.jupiter.api.Assertions.*;
 
 class VpCompatibilityTest {
-    private final CombatStatsModule module = new CombatStatsModule();
+    private final MobNamesModule module = new MobNamesModule();
     private final Path vpSource = Path.of(System.getProperty("vh3.test.vpSource"));
 
     @Test void originalConflictFailsAndCompatibilityPreservesOtherRules(@TempDir Path temp) throws Exception {
@@ -44,7 +44,7 @@ class VpCompatibilityTest {
         assertEquals(current, VpCompatibility.prepareConfiguration(current, module));
         assertTrue(java.util.stream.StreamSupport.stream(current.spliterator(), false).anyMatch(item -> item.isJsonObject()
                 && item.getAsJsonObject().entrySet().stream().anyMatch(e -> e.getKey().startsWith("_comment")
-                && e.getValue().getAsString().contains("VTP") && e.getValue().getAsString().contains("combat_stats"))));
+                && e.getValue().getAsString().contains("VTP") && e.getValue().getAsString().contains("mob_names"))));
     }
 
     @Test void publishedPreparationRemovesSingleConflictButRejectsDuplicates() throws Exception {

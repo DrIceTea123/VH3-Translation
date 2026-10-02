@@ -1,0 +1,33 @@
+{
+	"wood_type.buildscape.mangrove": "红树木",
+	"leaves_type.buildscape.mangrove": "红树",
+	"leaves_type.buildscape.decorated_oak": "挂饰橡树",
+	"leaves_type.buildscape.decorated_spruce": "挂饰云杉",
+    "leaves_type.buildscape.decorated_birch": "挂饰白桦",
+    "leaves_type.buildscape.decorated_jungle": "挂饰丛林",
+    "leaves_type.buildscape.decorated_acacia": "挂饰金合欢",
+    "leaves_type.buildscape.decorated_dark_oak": "挂饰深色橡树",
+    "leaves_type.buildscape.decorated_mangrove": "挂饰红树",
+    "leaves_type.buildscape.decorated_azalea": "挂饰杜鹃",
+    "leaves_type.buildscape.decorated_flowering_azalea": "挂饰盛开的杜鹃",
+    "leaves_type.buildscape.snowy_oak": "覆雪橡树",
+    "leaves_type.buildscape.snowy_spruce": "覆雪云杉",
+    "leaves_type.buildscape.snowy_birch": "覆雪白桦",
+    "leaves_type.buildscape.snowy_jungle": "覆雪丛林",
+    "leaves_type.buildscape.snowy_acacia": "覆雪金合欢",
+    "leaves_type.buildscape.snowy_dark_oak": "覆雪深色橡树",
+    "leaves_type.buildscape.snowy_mangrove": "覆雪红树",
+    "leaves_type.buildscape.snowy_azalea": "覆雪杜鹃",
+    "leaves_type.buildscape.snowy_flowering_azalea": "覆雪盛开的杜鹃",
+
+	"wood_type.the_vault.chromatic": "异色木",
+	"wood_type.the_vault.driftwood": "浮木",
+	"wood_type.the_vault.wooden": "制箱木",
+	"wood_type.the_vault.overgrown_wooden": "覆草制箱木",
+	"wood_type.the_vault.velara": "维拉拉木",
+	"wood_type.the_vault.tenos": "特诺斯木",
+	"wood_type.the_vault.burnt": "焦灰木",
+	"wood_type.auxiliaryblocks.gloomy": "阴郁木",
+	
+	"leaves_type.the_vault.velara": "维拉拉树"
+}

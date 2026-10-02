@@ -20,8 +20,8 @@ class SoundNamesModuleTest {
 
     @Test void addingEntryUsesOnlyExternalConfigAndInvalidReloadKeepsIt(@TempDir Path directory) throws Exception {
         SoundNamesModule sound = SoundNamesModule.INSTANCE;
-        CombatStatsModule combat = CombatStatsModule.INSTANCE;
-        Files.writeString(directory.resolve("combat_stats.json"), "{\"aggressive_cow\":\"战斗牛\"}");
+        MobNamesModule combat = MobNamesModule.INSTANCE;
+        Files.writeString(directory.resolve("mob_names.json"), "{\"aggressive_cow\":\"战斗牛\"}");
         Path file = directory.resolve("sound_names.json");
         Files.writeString(file, "{}");
         combat.initialize(directory);

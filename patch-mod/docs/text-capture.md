@@ -4,7 +4,9 @@
 
 配置格式、编辑和安装方式见 [补丁 README](../README.md)。以下只说明两个模块如何取得原始文本。
 
-## 结算怪物名称：combat_stats
+## 怪物名称：mob_names（结算入口）
+
+1.0.6 同一模块也接管经验提示的 ResourceLocation formatter，见 [经验入口分工](vault-xp.md)；下文分析结算入口。
 
 目标类：`iskallia.vault.client.gui.screen.summary.element.CombatStatsContainerElement`。
 
@@ -45,12 +47,12 @@ private String formatMobName(String id) {
 VTP 保留上述方法，在 **两个 ARETURN 之前**分别调用：
 
 ```java
-CombatStatsModule.translate(id, originalResult)
+MobNamesModule.translate(id, originalResult)
 ```
 
 `id` 从局部变量槽位 1 读取。这两个目标方法都没有改写槽位 1，因此即使已执行完原格式化算法，仍可取到原始参数。原结果作为第二参数保留，供未命中时回退。
 
-运行侧 `CombatStatsModule.mappingKey` 自行寻找**第一个冒号**，取它后面的全部内容；没有冒号则使用完整输入。不会从英文显示名反推 ID，不会生成语言键，也不会把 ID 转大写或去掉下划线。
+运行侧 `MobNamesModule.mappingKey` 自行寻找**第一个冒号**，取它后面的全部内容；没有冒号则使用完整输入。不会从英文显示名反推 ID，不会生成语言键，也不会把 ID 转大写或去掉下划线。
 
 | 传入参数 | 配置键 | 配置命中结果示例 |
 |---|---|---|

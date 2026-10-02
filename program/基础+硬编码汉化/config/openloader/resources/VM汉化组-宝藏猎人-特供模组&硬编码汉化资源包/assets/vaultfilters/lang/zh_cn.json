@@ -1,0 +1,373 @@
+{
+  "create.item_attributes.item_name": "拥有物品ID“%1$s”",
+  "create.item_attributes.item_name.inverted": "不拥有物品ID“%1$s”",
+
+  "create.item_attributes.item_type": "是“%1$s”类型物品",
+  "create.item_attributes.item_type.inverted": "不是“%1$s”类型物品",
+
+  "create.item_attributes.has_soul": "拥有灵魂价值",
+  "create.item_attributes.has_soul.inverted": "不拥有灵魂价值",
+
+  "create.item_attributes.exact_soul": "拥有“%1$s”点灵魂价值",
+  "create.item_attributes.exact_soul.inverted": "不拥有“%1$s”点灵魂价值",
+
+  "create.item_attributes.atleast_soul": "拥有至少“%1$s”点灵魂价值",
+  "create.item_attributes.atleast_soul.inverted": "拥有少于“%1$s”点灵魂价值",
+
+  "create.item_attributes.gear_rarity": "是“%1$s”装备",
+  "create.item_attributes.gear_rarity.inverted": "不是“%1$s”装备",
+
+  "create.item_attributes.charm_rarity": "是“%1$s”护符",
+  "create.item_attributes.charm_rarity.inverted": "不是“%1$s”护符",
+
+  "create.item_attributes.jewel_rarity": "是“%1$s”珠宝",
+  "create.item_attributes.jewel_rarity.inverted": "不是“%1$s”珠宝",
+
+  "create.item_attributes.gear_transmog": "使用“%1$s”幻形",
+  "create.item_attributes.gear_transmog.inverted": "不使用“%1$s”幻形",
+
+  "create.item_attributes.gear_unique_key": "是“%1$s”独特物品",
+  "create.item_attributes.gear_unique_key.inverted": "不是“%1$s”独特物品",
+
+  "create.item_attributes.gear_unique": "是独特物品",
+  "create.item_attributes.gear_unique.inverted": "不是独特物品",
+
+  "create.item_attributes.soulbound_base": "有灵魂绑定作为基础属性",
+  "create.item_attributes.soulbound_base.inverted": "没有灵魂绑定作为基础属性",
+
+  "create.item_attributes.tool_material": "是“%1$s”宝库工具",
+  "create.item_attributes.tool_material.inverted": "不是“%1$s”宝库工具",
+
+  "create.item_attributes.repair": "拥有至少“%1$s”个未使用的修复槽",
+  "create.item_attributes.repair.inverted": "拥有少于“%1$s”个未使用的修复槽",
+
+  "create.item_attributes.max_potential": "拥有至少“%1$s”点锻造潜能上限",
+  "create.item_attributes.max_potential.inverted": "拥有少于“%1$s”点锻造潜能上限",
+
+  "create.item_attributes.current_potential": "拥有至少“%1$s”点锻造潜能",
+  "create.item_attributes.current_potential.inverted": "拥有小于“%1$s”点锻造潜能",
+
+  "create.item_attributes.level": "等级至少为“%1$s”",
+  "create.item_attributes.level.inverted": "等级低于“%1$s”",
+
+  "create.item_attributes.jewel_size": "是最大拥有“%1$s”点大小的珠宝",
+  "create.item_attributes.jewel_size.inverted": "不是最大拥有“%1$s”点大小的珠宝",
+
+  "create.item_attributes.size": "是最大拥有“%1$s”点大小的珠宝",
+  "create.item_attributes.size.inverted": "不是最大拥有“%1$s”点大小的珠宝",
+
+
+  "create.item_attributes.implicit": "拥有“%1$s”主属性",
+  "create.item_attributes.implicit.inverted": "不拥有“%1$s”主属性",
+
+
+  "create.item_attributes.prefix": "拥有“%1$s”前缀",
+  "create.item_attributes.prefix.inverted": "不拥有“%1$s”前缀",
+
+  "create.item_attributes.affix_single": "拥有“%1$s”词缀",
+  "create.item_attributes.affix_single.inverted": "不拥有“%1$s”词缀",
+
+  "create.item_attributes.affix_plural": "拥有至少“%2$s”个“%1$s”词缀",
+  "create.item_attributes.affix_plural.inverted": "不拥有至少“%2$s”个“%1$s”词缀",
+
+  "create.item_attributes.legendary_affix_single": "拥有一个传奇级“%1$s”词缀",
+  "create.item_attributes.legendary_affix_single.inverted": "不拥有一个传奇级“%1$s”词缀",
+
+  "create.item_attributes.legendary_affix_plural": "拥有至少“%2$s”个传奇级“%1$s”词缀",
+  "create.item_attributes.legendary_affix_plural.inverted": "不拥有至少“%2$s”个传奇级“%1$s”词缀",
+
+  "create.item_attributes.suffix": "拥有“%1$s”后缀",
+  "create.item_attributes.suffix.inverted": "不拥有“%1$s”后缀",
+
+  "create.item_attributes.has_legendary_single": "拥有传奇级词缀",
+  "create.item_attributes.has_legendary_single.inverted": "不拥有传奇级词缀",
+
+  "create.item_attributes.has_legendary_plural": "拥有至少“%1$s”个传奇级词缀",
+  "create.item_attributes.has_legendary_plural.inverted": "不拥有至少“%1$s”个传奇级词缀",
+
+  "create.item_attributes.has_crafted": "拥有制作级词缀",
+  "create.item_attributes.has_crafted.inverted": "不拥有制作级词缀",
+
+  "create.item_attributes.has_corrupted": "拥有腐毁词缀",
+  "create.item_attributes.has_corrupted.inverted": "不拥有腐毁词缀",
+
+  "create.item_attributes.has_frozen": "拥有已冻结的词缀",
+  "create.item_attributes.has_frozen.inverted": "不拥有已冻结的词缀",
+
+  "create.item_attributes.has_greater": "拥有高阶词缀",
+  "create.item_attributes.has_greater.inverted": "不拥有高阶词缀",
+
+  "create.item_attributes.is_unidentified": "是未鉴定的",
+  "create.item_attributes.is_unidentified.inverted": "不是未鉴定的",
+
+  "create.item_attributes.rotten_scav": "是腐烂的拾荒者物品",
+  "create.item_attributes.rotten_scav.inverted": "不是腐烂的拾荒者物品",
+
+  "create.item_attributes.is_crafted": "是制作的装备",
+  "create.item_attributes.is_crafted.inverted": "不是制作的装备",
+
+  "create.item_attributes.is_corrupted": "是腐毁的装备",
+  "create.item_attributes.is_corrupted.inverted": "不是腐毁的装备",
+
+  "create.item_attributes.legendary_prefix": "拥有传奇级“%1$s”前缀",
+  "create.item_attributes.legendary_prefix.inverted": "不拥有传奇级“%1$s”前缀",
+
+  "create.item_attributes.corrupted_prefix": "拥有腐毁的“%1$s”前缀",
+  "create.item_attributes.corrupted_prefix.inverted": "不拥有腐毁的“%1$s”前缀",
+
+  "create.item_attributes.corrupted_suffix": "拥有腐毁的“%1$s”后缀",
+  "create.item_attributes.corrupted_suffix.inverted": "不拥有腐毁的“%1$s”后缀",
+
+  "create.item_attributes.corrupted_affix": "拥有腐毁的“%1$s”词缀",
+  "create.item_attributes.corrupted_affix.inverted": "不拥有腐毁的“%1$s”词缀",
+
+  "create.item_attributes.greater_affix": "拥有高阶“%1$s”词缀",
+  "create.item_attributes.greater_affix.inverted": "不拥有高阶“%1$s”词缀",
+
+  "create.item_attributes.corrupted_implicit": "拥有腐毁的“%1$s”主属性",
+  "create.item_attributes.corrupted_implicit.inverted": "不拥有腐毁的“%1$s”主属性",
+
+
+  "create.item_attributes.legendary_suffix": "拥有传奇级“%1$s”后缀",
+  "create.item_attributes.legendary_suffix.inverted": "不拥有传奇级“%1$s”后缀",
+
+
+  "create.item_attributes.inscription_room": "能增加一个“%1$s”房间",
+  "create.item_attributes.inscription_room.inverted": "不能增加一个“%1$s”房间",
+
+  "create.item_attributes.inscription_type": "能增加一个“%1$s”类型房间",
+  "create.item_attributes.inscription_type.inverted": "不能增加一个“%1$s”类型房间",
+
+  "create.item_attributes.inscription_time": "能增加至少“%1$s”秒",
+  "create.item_attributes.inscription_time.inverted": "能增加少于“%1$s”秒",
+
+  "create.item_attributes.inscription_size": "是最大拥有“%1$s”点大小的铭文",
+  "create.item_attributes.inscription_size.inverted": "不是最大拥有“%1$s”点大小的铭文",
+
+  "create.item_attributes.inscription_completion": "能增加至少“%1$s”完成度",
+  "create.item_attributes.inscription_completion.inverted": "能增加少于“%1$s”完成度",
+
+  "create.item_attributes.inscription_instability": "能增加最多“%1$s”不稳定度",
+  "create.item_attributes.inscription_instability.inverted": "能增加多于“%1$s”不稳定度",
+
+  "create.item_attributes.cut_count": "已进行“%1$s”次免费切割",
+  "create.item_attributes.cut_count.inverted": "还未进行“%1$s”次免费切割",
+
+  "create.item_attributes.charm_uses": "是拥有至少“%1$s”次使用次数的护符",
+  "create.item_attributes.charm_uses.inverted": "不是拥有至少“%1$s”次使用次数的护符",
+
+  "create.item_attributes.implicit_number": "拥有至少增加“%1$s”的主属性",
+  "create.item_attributes.implicit_number.inverted": "不拥有至少增加“%1$s”的主属性",
+
+  "create.item_attributes.prefix_number": "拥有至少增加“%1$s”的前缀",
+  "create.item_attributes.prefix_number.inverted": "不拥有至少增加“%1$s”的前缀",
+
+  "create.item_attributes.affix_number": "拥有至少增加“%1$s”的词缀",
+  "create.item_attributes.affix_number.inverted": "不拥有至少增加“%1$s”的词缀",
+
+  "create.item_attributes.suffix_number": "拥有至少增加“%1$s”的后缀",
+  "create.item_attributes.suffix_number.inverted": "不拥有至少增加“%1$s”的后缀",
+
+
+  "create.item_attributes.modifier_group_single": "拥有属于“%1$s”组的词缀",
+  "create.item_attributes.modifier_group_single.inverted": "不拥有属于“%1$s”组的词缀",
+
+  "create.item_attributes.modifier_group_plural": "拥有至少“%2$s”个属于“%1$s”组的词缀",
+  "create.item_attributes.modifier_group_plural.inverted": "不拥有至少“%2$s”个属于“%1$s”组的词缀",
+
+  "create.item_attributes.base_ability_affix": "拥有增加“%1$s”特化技能的词缀",
+  "create.item_attributes.base_ability_affix.inverted": "不拥有增加“%1$s”特化技能的词缀",
+
+  "create.item_attributes.base_ability_card": "是增加“%1$s”特化技能的卡牌",
+  "create.item_attributes.base_ability_card.inverted": "不是增加“%1$s”特化技能的卡牌",
+
+  "create.item_attributes.max_legendary": "拥有最高数值的传奇级",
+  "create.item_attributes.max_legendary.inverted": "拥有最高数值的传奇级",
+
+  "create.item_attributes.charm_affinity": "增加至少“%1$s”点亲和度",
+  "create.item_attributes.charm_affinity.inverted": "增加少于“%1$s”点亲和度",
+
+  "create.item_attributes.trinket_uses": "是拥有至少“%1$s”次使用次数的饰品",
+  "create.item_attributes.trinket_uses.inverted": "不是拥有至少“%1$s”次使用次数的饰品",
+
+  "create.item_attributes.trinket_color": "是“%1$s”颜色的饰品",
+  "create.item_attributes.trinket_color.inverted": "不是“%1$s”颜色的饰品",
+
+  "create.item_attributes.charm_god": "能增加“%1$s”的亲和度",
+  "create.item_attributes.charm_god.inverted": "不能增加“%1$s”的亲和度",
+
+  "create.item_attributes.trinket_name": "是“%1$s”饰品",
+  "create.item_attributes.trinket_name.inverted": "不是“%1$s”饰品",
+
+  "create.item_attributes.catalyst_size": "是拥有最多“%1$s”点大小的催化剂",
+  "create.item_attributes.catalyst_size.inverted": "不是拥有最多“%1$s”点大小的催化剂",
+
+  "create.item_attributes.catalyst_modifier": "是拥有“%1$s”宝库词缀的催化剂",
+  "create.item_attributes.catalyst_modifier.inverted": "不是拥有“%1$s”宝库词缀的催化剂",
+
+  "create.item_attributes.card_tier": "是至少“%1$s”级的卡牌",
+  "create.item_attributes.card_tier.inverted": "是少于“%1$s”级的卡牌",
+
+  "create.item_attributes.card_has_condition": "是拥有激活条件的卡牌",
+  "create.item_attributes.card_has_condition.inverted": "不是拥有激活条件的卡牌",
+
+  "create.item_attributes.card_scales": "是可变值的卡牌",
+  "create.item_attributes.card_scales.inverted": "不是可变值的卡牌",
+
+  "create.item_attributes.card_pack_opened": "是已开启的补充包",
+  "create.item_attributes.card_pack_opened.inverted": "不是已开启的补充包",
+
+  "create.item_attributes.jewel_pouch_opened": "是已开启的珠宝袋",
+  "create.item_attributes.jewel_pouch_opened.inverted": "不是已开启的珠宝袋",
+
+  "create.item_attributes.jewel_pouch_choose": "在MR执行模块中从开启的珠宝袋中选择一颗珠宝",
+  "create.item_attributes.jewel_pouch_choose.inverted": "不是在MR执行模块中从开启的珠宝袋中选择一颗珠宝",
+
+  "create.item_attributes.card_scale_type": "是基于“%1$s”卡牌变值的卡牌",
+  "create.item_attributes.card_scale_type.inverted": "不是是基于“%1$s”卡牌变值的卡牌",
+
+  "create.item_attributes.card_condition_group": "是基于“%1$s”卡牌激活的卡牌",
+  "create.item_attributes.card_condition_group.inverted": "不是基于“%1$s”卡牌激活的卡牌",
+
+  "create.item_attributes.bag_upgrade": "是拥有“%1$s”的背包",
+  "create.item_attributes.bag_upgrade.inverted": "不是拥有“%1$s”的背包",
+
+  "create.item_attributes.bag_uuid": "是UUID为“%1$s”的背包",
+  "create.item_attributes.bag_uuid.inverted": "不是UUID为“%1$s”的背包",
+
+  "create.item_attributes.artifact_id": "是ID为“%1$s”的文物",
+  "create.item_attributes.artifact_id.inverted": "不是ID为“%1$s”的文物",
+
+  "create.item_attributes.card_condition_comp": "是拥有“%1$s”激活条件的卡牌",
+  "create.item_attributes.card_condition_comp.inverted": "不是拥有“%1$s”激活条件的卡牌",
+
+  "create.item_attributes.card_pack_type": "是“%1$s”补充包",
+  "create.item_attributes.card_pack_type.inverted": "不是“%1$s”补充包",
+
+  "create.item_attributes.card_pack_choose": "在MR执行模块中从开启的补充包中选择一个卡牌",
+  "create.item_attributes.card_pack_choose.inverted": "不是在MR执行模块中从开启的补充包中选择一个卡牌",
+
+  "create.item_attributes.card_condition_num": "是拥有允许“%1$s”个匹配卡牌条件的卡牌",
+  "create.item_attributes.card_condition_num.inverted": "不是拥有允许“%1$s”个匹配卡牌条件的卡牌",
+
+  "create.item_attributes.card_modifier": "是拥有“%1$s”词缀的卡牌",
+  "create.item_attributes.card_modifier.inverted": "不是拥有“%1$s”词缀的卡牌",
+
+  "create.item_attributes.card_modifier_number": "是拥有至少“%1$s”个基础属性的卡牌",
+  "create.item_attributes.card_modifier_number.inverted": "不是拥有至少“%1$s”个基础属性的卡牌",
+
+  "create.item_attributes.card_task": "是基于“%1$s”增加奖励的资源卡",
+  "create.item_attributes.card_task.inverted": "不是基于“%1$s”增加奖励的资源卡",
+
+  "create.item_attributes.card_task_number": "是每个奖励需要至少“%1$s”次行为的资源卡",
+  "create.item_attributes.card_task_number.inverted": "不是每个奖励需要至少“%1$s”次行为的资源卡",
+
+  "create.item_attributes.card_color": "是“%1$s”颜色的卡牌",
+  "create.item_attributes.card_color.inverted": "不是“%1$s”颜色的卡牌",
+
+  "create.item_attributes.card_type": "是“%1$s”类型的卡牌",
+  "create.item_attributes.card_type.inverted": "不是“%1$s”类型的卡牌",
+
+  "create.item_attributes.card_upgradable": "是可升级的卡牌",
+  "create.item_attributes.card_upgradable.inverted": "不是可升级的卡牌",
+
+  "create.item_attributes.catalyst_category": "是拥有“%1$s”类型词缀的催化剂",
+  "create.item_attributes.catalyst_category.inverted": "不是拥有“%1$s”类型词缀的催化剂",
+
+  "create.item_attributes.bag_empty": "是空的背包",
+  "create.item_attributes.bag_empty.inverted": "不是空的背包",
+
+  "create.item_attributes.boss_rune_modifier": "是拥有词缀“%1$s”的符文",
+  "create.item_attributes.boss_rune_modifier.inverted": "不是拥有词缀“%1$s”的符文",
+  
+  "create.item_attributes.boss_rune_gives_item": "是提供“%1$s”的符文",
+  "create.item_attributes.boss_rune_gives_item.inverted": "不是提供“%1$s”的符文",
+
+  "create.item_attributes.boss_rune_gear_rarity": "是提供“%1$s”装备的符文",
+  "create.item_attributes.boss_rune_gear_rarity.inverted": "不是提供“%1$s”装备的符文",
+  
+  "create.item_attributes.boss_rune_booster_pack_type": "是提供“%1$s”补充包的符文",
+  "create.item_attributes.boss_rune_booster_pack_type.inverted": "不是提供“%1$s”补充包的符文",
+  
+  "create.item_attributes.boss_rune_inscription_type": "是提供“%1$s”类型铭文的符文",
+  "create.item_attributes.boss_rune_inscription_type.inverted": "不是提供“%1$s”类型铭文的符文",
+
+  "create.item_attributes.inner_card_pack": "是拥有匹配“%1$s”的卡牌的补充包",
+  "create.item_attributes.inner_card_pack.inverted": "不是拥有匹配“%1$s”的卡牌的补充包",
+
+  "create.item_attributes.inner_jewel_pouch": "是拥有匹配“%1$s”的珠宝的珠宝袋",
+  "create.item_attributes.inner_jewel_pouch.inverted": "不是拥有匹配“%1$s”的珠宝的珠宝袋",
+
+  "create.item_attributes.inner_boss_rune": "是拥有匹配“%1$s”的奖励的符文",
+  "create.item_attributes.inner_boss_rune.inverted": "不是拥有匹配“%1$s”的奖励的符文",
+
+  "create.item_attributes.has_living": "是拥有活化的装备",
+  "create.item_attributes.has_living.inverted": "不是拥有活化的装备",
+
+  "create.item_attributes.card_deck_has_modifier": "是拥有词缀的卡组包",
+  "create.item_attributes.card_deck_has_modifier.inverted": "不是拥有词缀的卡组包",
+
+  "create.item_attributes.card_deck_type": "是“%1$s”",
+  "create.item_attributes.card_deck_type.inverted": "不是“%1$s”",
+
+  "create.item_attributes.deck_core_type": "是“%1$s”",
+  "create.item_attributes.deck_core_type.inverted": "不是“%1$s”",
+
+  "create.item_attributes.deck_core_value": "是至少有“%1$s”值的卡组包核心",
+  "create.item_attributes.deck_core_value.inverted": "不是至少有“%1$s”值的卡组包核心",
+
+  "create.item_attributes.companion_cooldown": "是正在冷却的伙伴",
+  "create.item_attributes.companion_cooldown.inverted": "不是正在冷却的伙伴",
+
+  "create.item_attributes.companion_hearts": "是拥有至少“%1$s”心的伙伴",
+  "create.item_attributes.companion_hearts.inverted": "不是拥有至少“%1$s”心的伙伴",
+
+  "create.item_attributes.companion_retired": "是已退休的伙伴",
+  "create.item_attributes.companion_retired.inverted": "不是已退休的伙伴",
+
+  "create.item_attributes.companion_level": "是等级至少为“%1$s”的伙伴",
+  "create.item_attributes.companion_level.inverted": "不是等级至少为“%1$s”的伙伴",
+
+  "create.item_attributes.companion_max_hearts": "是拥有至少“%1$s”个心数上限的伙伴",
+  "create.item_attributes.companion_max_hearts.inverted": "不是拥有至少“%1$s”个心数上限的伙伴",
+
+  "create.item_attributes.companion_series": "是属于“%1$s”系列的伙伴",
+  "create.item_attributes.companion_series.inverted": "不是属于“%1$s”系列的伙伴",
+
+  "create.item_attributes.companion_egg_series": "是属于“%1$s”系列的伙伴之蛋",
+  "create.item_attributes.companion_egg_series.inverted": "不是属于“%1$s”系列的伙伴之蛋",
+
+  "create.item_attributes.companion_skin_name": "是拥有“%1$s”皮肤的伙伴",
+  "create.item_attributes.companion_skin_name.inverted": "不是拥有“%1$s”皮肤的伙伴",
+
+  "create.item_attributes.companion_temporal": "是拥有“%1$s”时空词缀的伙伴",
+  "create.item_attributes.companion_temporal.inverted": "不是拥有“%1$s”时空词缀的伙伴",
+
+  "create.item_attributes.companion_relic_modifiers": "是拥有“%1$s”词缀的伙伴遗物",
+  "create.item_attributes.companion_relic_modifiers.inverted": "不是拥有“%1$s”词缀的伙伴遗物",
+
+  "create.item_attributes.companion_relic_count": "是拥有至少“%1$s”个词缀的伙伴遗物",
+  "create.item_attributes.companion_relic_count.inverted": "不是拥有至少“%1$s”个词缀的伙伴遗物",
+
+  "create.item_attributes.companion_trail_type": "拥有“%1$s”尾迹类型",
+  "create.item_attributes.companion_trail_type.inverted": "不拥有“%1$s”尾迹类型",
+
+  "create.item_attributes.temporal_relic_modifier": "是拥有“%1$s”词缀的时空遗物",
+  "create.item_attributes.temporal_relic_modifier.inverted": "不是拥有“%1$s”词缀的时空遗物",
+
+  "create.item_attributes.faceted_focus_type": "是拥有“%1$s”词缀的多面透镜",
+  "create.item_attributes.faceted_focus_type.inverted": "不是拥有“%1$s”词缀的多面透镜",
+
+  "item.create.filter.tooltip.summary": "通过_物品_集合或_其他过滤器_（属性和列表过滤器）集合来_匹配物品_。可用在某些模组的_过滤槽_中（默认为机械动力、RS、MR、AE2和背包）",
+  "item.create.filter.tooltip.condition1": "右键点击时",
+  "item.create.filter.tooltip.behaviour1": "打开_配置界面_。",
+
+  "item.create.attribute_filter.tooltip.summary": "通过_属性_集合或_条件_集合来_匹配物品_，包含_宝藏猎人_相关的属性，用于为装备、珠宝与更多物品排序。可用在某些模组的_过滤槽_中（默认为机械动力、RS、MR、AE2和背包）。可以在_列表过滤器_中放置多个此物品。",
+  "item.create.attribute_filter.tooltip.condition1": "右键点击时",
+  "item.create.attribute_filter.tooltip.behaviour1": "打开_配置界面_。",
+
+  "item.vaultfilters.jewel_pouch_augment": "珠宝袋开启器升级",
+  "modularrouters.itemText.usage.item.jewel_pouch_augment": "用在执行模块中。\n执行珠宝袋将选择第一个与过滤器匹配的珠宝（如果有的话）。",
+  "item.vaultfilters.card_pack_augment": "补充包开启器升级",
+  "modularrouters.itemText.usage.item.card_pack_augment": "用在执行模块中。\n执行补充包将选择第一个与过滤器匹配的卡牌（如果有的话）。"
+}

@@ -1,6 +1,6 @@
 # VH3 Translation Patch（VTP）
 
-独立的显示翻译补丁，目前接管结算怪物名称、声音设置名称、研究名称和经验提示，其余翻译继续由 VP 处理。当前版本 **1.0.5**，目标 MC 1.18.2 / Forge 40.3.11 / the_vault 1.18.2-3.21.6.6884。72 项离线测试已通过，完整整合包尚未联测。
+独立的显示翻译补丁，目前接管怪物名称、宝箱/桶名称、声音设置名称和研究名称，其余翻译继续由 VP 处理。当前版本 **1.0.6**，目标 MC 1.18.2 / Forge 40.3.11 / the_vault 1.18.2-3.21.6.6884。74 项离线测试已通过，完整整合包尚未联测。
 
 ## 编辑翻译与安装
 
@@ -8,30 +8,32 @@
 
 | 模块文件 | 键 | 示例 |
 |---|---|---|
-| combat_stats.json | 实体 ID 冒号后的路径 | `"aggressive_cow": "战斗牛"` |
+| mob_names.json | 实体 ID 冒号后的路径 | `"aggressive_cow": "战斗牛"` |
 | sound_names.json | ModSounds 原始 Java 字段名，区分大小写 | `"RAFFLE_SFX": "速通音效"` |
 | research_names.json | 原始英文研究标识，区分大小写 | `"Waystones": "传送石碑"` |
-| vault_xp.json | 完整英文显示名，区分大小写 | `"Common Wooden Chest": "普通木制宝箱"` |
+| chest_names.json | 英文类型/稀有度/基础名，支持完整名称覆盖 | `"Wooden Chest": "木制宝箱"` |
+
+1.0.6 升级：`combat_stats.json` 已改名为 `mob_names.json`，`vault_xp.json` 已拆除。矿石与固定标签移入 VP `asm_main`，旧自定义项的迁移见 [经验提示归属](docs/vault-xp.md)。
 
 给这四个模块增删改条目只改 JSON，无需改源码、重编译或替换 JAR。配置为 UTF-8 平面字符串对象，不允许注释、重复键、非字符串值及尾随内容；`{}` 表示不覆盖，空字符串表示显式空译文。
 
 安装时同时携带：
 
-- `mods/vh3_translation_patch-1.0.5.jar` 与 `mods/vh3_translation_patch-transformer-1.0.5.jar`。
-- `config/vh3_translation_patch/` 下的四个 JSON（专用服务端只读取 research_names.json）。
+- `mods/vh3_translation_patch-1.0.6.jar` 与 `mods/vh3_translation_patch-transformer-1.0.6.jar`。
+- `config/vh3_translation_patch/` 下的四个 JSON（专用服务端读取 research_names.json 和 chest_names.json）。
 - 当前汉化工程的 VP 配置；已接管规则应为原位置的 VTP 注释，不能装回旧规则。分类见 [VP 维护说明](../docs/maintenance/vp-asm-layout.md)。
 
 游戏读取已安装目录的配置，修改工程文件不会自动同步。编辑游戏配置后按 **F3+T**；声音设置需关闭重开，结算页可重开以重建显示项。经验提示的新通知和新建预览使用新译文，已显示的旧通知不追溯修改。首次缺失或损坏文件阻止启动；重载失败保留该模块上次有效快照。不会自动创建、补齐或覆盖文件。
 
-配置只影响所属模块，不覆盖全局语言键。未命中时，结算模块尝试已注册实体的当前语言译名，再回退原结果；声音、研究与经验模块直接回退原结果。原始参数、截取方式、上游算法和注入点见 [文本获取分析](docs/text-capture.md) 与 [经验提示](docs/vault-xp.md)。新增方法或模块需写代码，见 [模块开发](docs/modules.md)。
+配置只影响所属模块，不覆盖全局语言键。未命中时，怪物模块尝试已注册实体的当前语言译名，再回退原结果；声音、研究模块直接回退原结果；宝箱模块完整名称优先，缺项尝试稀有度与基础名组合，否则回退原结果。原始参数、截取方式、上游算法和注入点见 [文本获取分析](docs/text-capture.md) 与 [经验提示](docs/vault-xp.md)。新增方法或模块需写代码，见 [模块开发](docs/modules.md)。
 
 ## 客户端与服务端
 
-两端使用同一对 JAR，按目标方法声明的适用端注册。结算、声音和经验模块只作用于客户端显示；研究模块覆盖客户端的研究标题、依赖/互斥提示、限制提示、知识精酿、卡组工作台及配方提示，并在服务端生成解锁广播、研究替换通知时翻译名称。具体方法与原始文本见 [研究名覆盖](docs/research-names.md)。
+两端使用同一对 JAR，按目标方法声明的适用端注册。怪物、声音模块只作用于客户端；宝箱模块覆盖 getter、服务端/客户端容器标题及客户端结算、经验提示、预览和辅助功能箱型，见 [宝箱模块](docs/chest-names.md)；研究模块覆盖客户端的研究标题、依赖/互斥提示、限制提示、知识精酿、卡组工作台及配方提示，并在服务端生成解锁广播、研究替换通知时翻译名称。具体方法与原始文本见 [研究名覆盖](docs/research-names.md)。
 
-专用服务端必须安装双 JAR、外部 research_names.json 及兼容的 VP 配置，首次配置失败同样阻止启动。服务端不读取结算/声音/经验配置，也不加载客户端 I18n；服务端配置修改后重启生效。客户端继续支持 F3+T，缓存的界面可重开；已发出的消息不会追溯重译。
+专用服务端必须安装双 JAR、外部 research_names.json、chest_names.json 及兼容的 VP 配置，首次配置失败同样阻止启动。服务端不读取怪物/声音配置，也不加载客户端 I18n；服务端配置修改后重启生效。客户端继续支持 F3+T，缓存的界面可重开；已发出的消息不会追溯重译。
 
-服务端生成的通知由服务端配置决定，客户端本地配置不能改变已经收到的文本。仅客户端安装 VTP 时，只覆盖本地显示；单人游戏的集成服务器使用同一进程的研究模块和配置。研究名称用原文精确查表，不改解锁判定、存档或业务网络标识。
+服务端生成的通知和宝箱标题由服务端配置决定，客户端本地配置不能改变已经收到的文本。仅客户端安装 VTP 时，只覆盖本地显示；单人游戏的集成服务器使用同一进程的通用模块和配置。研究名称用原文精确查表，不改解锁判定、存档或业务网络标识。
 
 ## 构建与导出
 
@@ -53,7 +55,7 @@
 
 构建不覆盖正式外部配置，不启动游戏、不修改游戏实例、不提交 Git。`check` 或 `distribution` 本身不导出到工程，`build` / `exportToProgram` 才导出。兼容输入已迁移时报告 `removedGroups=0` 正常。
 
-默认只读父工作区 `origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar`；其他位置用 `-PvaultJar=<路径>`，不会绕过摘要检查。首次构建需下载依赖；已具备缓存但 ForgeGradle 联网检查失败时，可单次执行：
+离线 VP 回归测试另需父工作区 `必要文件/vaultpatcher-all-1.4.4+1.jar`，仅作为测试依赖，不进入成品。默认核心输入为 `origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar`；其他位置用 `-PvaultJar=<路径>`，不会绕过摘要检查。首次构建需下载依赖；已具备缓存但 ForgeGradle 联网检查失败时，可单次执行：
 
 ```powershell
 .\build.ps1 -GradleArgs 'build','--offline','-Dnet.minecraftforge.gradle.check.certs=false','--console=plain'

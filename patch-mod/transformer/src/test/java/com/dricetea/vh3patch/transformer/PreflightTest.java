@@ -1,13 +1,13 @@
 package com.dricetea.vh3patch.transformer;
 
-import com.dricetea.vh3patch.transformer.modules.CombatStatsModule;
+import com.dricetea.vh3patch.transformer.modules.MobNamesModule;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import com.dricetea.vh3patch.transformer.modules.SoundNamesModule;
 import com.dricetea.vh3patch.transformer.modules.ResearchNamesModule;
-import com.dricetea.vh3patch.transformer.modules.VaultXpModule;
+import com.dricetea.vh3patch.transformer.modules.ChestNamesModule;
 import java.util.List;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.io.TempDir;
@@ -54,10 +54,7 @@ class PreflightTest {
         companion(game, module.spec(), module.spec().patchVersion());
         Path config = game.resolve("config/vaultpatcher_asm/rules.json");
         Files.createDirectories(config.getParent());
-        if (module instanceof VaultXpModule) {
-            Files.writeString(config, "[{\"target_class\":{\"name\":\"" + VaultXpModule.TARGET
-                    + "\",\"method\":\"formatMobName\"},\"key\":\"Cow\",\"value\":\"Conflict\"}]");
-        } else Files.copy(Path.of(System.getProperty("vh3.test.legacyVpDirectory"), module.spec().moduleId() + ".json"), config);
+        Files.copy(Path.of(System.getProperty("vh3.test.legacyVpDirectory"), module.spec().moduleId() + ".json"), config);
         assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, fixture));
     }
 
@@ -67,8 +64,8 @@ class PreflightTest {
         companion(game, module.spec(), module.spec().patchVersion());
         assertDoesNotThrow(() -> TranslationTransformationService.preflight(game, fixture, false));
         assertThrows(Exception.class, () -> TranslationTransformationService.preflight(game, fixture, true));
-        assertEquals(List.of("research_names"), PatchModules.active(false).stream().map(m -> m.spec().moduleId()).toList());
-        assertEquals(2, PatchModules.byClass(false).size());
+        assertEquals(List.of("research_names", "chest_names"), PatchModules.active(false).stream().map(m -> m.spec().moduleId()).toList());
+        assertEquals(4, PatchModules.byClass(false).size());
         assertTrue(PatchModules.byClass(false).keySet().stream().noneMatch(n -> n.contains("/client/")));
     }
 
@@ -92,8 +89,8 @@ class PreflightTest {
                 p.className(), p.methodName(), p.descriptor(), p.fingerprint(), p.returnCount(),
                 p.moduleId(), p.helperClass(), p.ownedLiterals(), p.side())).toList();
         if (module instanceof ResearchNamesModule) return new ResearchNamesModule(fixtures);
-        if (module instanceof VaultXpModule) return new VaultXpModule(fixtures);
-        return module instanceof CombatStatsModule ? new CombatStatsModule(fixtures.get(0)) : new SoundNamesModule(fixtures.get(0));
+        if (module instanceof ChestNamesModule) return new ChestNamesModule(fixtures);
+        return module instanceof MobNamesModule ? new MobNamesModule(fixtures) : new SoundNamesModule(fixtures.get(0));
     }
 
     private void companion(Path game, PatchSpec production, String version) throws Exception {

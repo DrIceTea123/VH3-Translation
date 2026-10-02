@@ -240,165 +240,7 @@
         "value": "独特保险柜"
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.block.entity.VaultChestTileEntity",
-            "method": "m_5446_",
-            "local": "Mcapitalize"
-        },
-        "pairs": [
-            {
-                "key": "Omega",
-                "value": "终焉"
-            },
-            {
-                "key": "Epic",
-                "value": "史诗"
-            },
-            {
-                "key": "Rare",
-                "value": "稀有"
-            },
-            {
-                "key": "Common",
-                "value": "普通"
-            }
-        ]
-    },
-    {
-        "target_class": {
-            "name": "iskallia.vault.block.entity.VaultChestTileEntity",
-            "method": "m_5446_"
-        },
-        "pairs": [
-            {
-                "key": "Treasure Chest",
-                "value": "至尊宝箱"
-            },
-            {
-                "key": " Altar Chest",
-                "value": "祭坛宝箱"
-            },
-            {
-                "key": " Ornate Strongbox",
-                "value": "强化华丽宝箱"
-            },
-            {
-                "key": " Living Strongbox",
-                "value": "强化活化宝箱"
-            },
-            {
-                "key": " Gilded Strongbox",
-                "value": "强化镀金宝箱"
-            },
-            {
-                "key": " Wooden Chest",
-                "value": "木制宝箱"
-            },
-            {
-                "key": " Ornate Chest",
-                "value": "华丽宝箱"
-            },
-            {
-                "key": " Living Chest",
-                "value": "活化宝箱"
-            },
-            {
-                "key": " Gilded Chest",
-                "value": "镀金宝箱"
-            },
-            {
-                "key": " Hardened Chest",
-                "value": "硬质宝箱"
-            },
-            {
-                "key": " Flesh Chest",
-                "value": "肉食宝箱"
-            },
-            {
-                "key": " Enigma Chest",
-                "value": "谜题宝箱"
-            },
-            {
-                "key": " Wooden Barrel",
-                "value": "木制储物桶"
-            },
-            {
-                "key": " Gilded Barrel",
-                "value": "镀金储物桶"
-            },
-            {
-                "key": " Living Barrel",
-                "value": "活化储物桶"
-            },
-            {
-                "key": " Ornate Barrel",
-                "value": "华丽储物桶"
-            },
-            {
-                "key": "Ornate Strongbox",
-                "value": "强化华丽宝箱"
-            },
-            {
-                "key": "Living Strongbox",
-                "value": "强化活化宝箱"
-            },
-            {
-                "key": "Gilded Strongbox",
-                "value": "强化镀金宝箱"
-            },
-            {
-                "key": "Wooden Barrel",
-                "value": "木制储物桶"
-            },
-            {
-                "key": "Ornate Barrel",
-                "value": "华丽储物桶"
-            },
-            {
-                "key": "Living Barrel",
-                "value": "活化储物桶"
-            },
-            {
-                "key": "Gilded Barrel",
-                "value": "镀金储物桶"
-            },
-            {
-                "key": "Hardened Chest",
-                "value": "硬质宝箱"
-            },
-            {
-                "key": "Flesh Chest",
-                "value": "肉食宝箱"
-            },
-            {
-                "key": "Enigma Chest",
-                "value": "谜题宝箱"
-            },
-            {
-                "key": "Altar Chest",
-                "value": "祭坛宝箱"
-            },
-            {
-                "key": "Wooden Chest",
-                "value": "木制宝箱"
-            },
-            {
-                "key": "Ornate Chest",
-                "value": "华丽宝箱"
-            },
-            {
-                "key": "Living Chest",
-                "value": "活化宝箱"
-            },
-            {
-                "key": "Gilded Chest",
-                "value": "镀金宝箱"
-            },
-            {
-                "key": "Wooden Chest",
-                "value": "木制宝箱"
-            }
-        ]
+        "_comment": "VTP chest_names 接管本组宝箱/储物桶名称与宝箱稀有度；其余规则保留。"
     },
     {
         "target_class": {
@@ -1036,6 +878,125 @@
         },
         "key": "Spirit Extractor",
         "value": "灵魂提取器"
+    },
+    {
+        "_comment": "ClientVaultXpTracker：矿石名称为运行时生成文本，MformatOreName 仅替换 handleDeltas 中该方法的调用结果，不改 ResourceLocation、矿石 ID 或经验逻辑。"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.data.ClientVaultXpTracker",
+            "method": "handleDeltas",
+            "local": "MformatOreName"
+        },
+        "pairs": [
+            {
+                "key": "Chromatic Iron Ore",
+                "value": "异色铁矿石"
+            },
+            {
+                "key": "Ore Alexandrite",
+                "value": "紫翠玉矿石"
+            },
+            {
+                "key": "Ore Ashium",
+                "value": "艾斯尤姆矿石"
+            },
+            {
+                "key": "Ore Benitoite",
+                "value": "蓝锥矿石"
+            },
+            {
+                "key": "Ore Black Opal",
+                "value": "黑欧泊矿石"
+            },
+            {
+                "key": "Ore Bomignite",
+                "value": "巴米尼特矿石"
+            },
+            {
+                "key": "Ore Echo",
+                "value": "共鸣矿石"
+            },
+            {
+                "key": "Ore Funsoide",
+                "value": "Ore Funsoide"
+            },
+            {
+                "key": "Ore Gorginite",
+                "value": "古尔金尼特矿石"
+            },
+            {
+                "key": "Ore Iskallium",
+                "value": "伊斯卡利姆矿石"
+            },
+            {
+                "key": "Ore Larimar",
+                "value": "海纹矿石"
+            },
+            {
+                "key": "Ore Painite",
+                "value": "红硅硼铝钙矿石"
+            },
+            {
+                "key": "Ore Petzanite",
+                "value": "佩特赞矿石"
+            },
+            {
+                "key": "Ore Puffium",
+                "value": "帕菲埃姆矿石"
+            },
+            {
+                "key": "Ore Sparkletine",
+                "value": "斯巴克莱特矿石"
+            },
+            {
+                "key": "Ore Tubium",
+                "value": "图比埃姆矿石"
+            },
+            {
+                "key": "Ore Upaline",
+                "value": "尤普琳恩矿石"
+            },
+            {
+                "key": "Ore Vault Rock",
+                "value": "宝库之石矿石"
+            },
+            {
+                "key": "Ore Wutodie",
+                "value": "乌托迪矿石（旧版）"
+            },
+            {
+                "key": "Ore Xenium",
+                "value": "赛恩矿石"
+            }
+        ]
+    },
+    {
+        "_comment": "ClientVaultXpTracker：仅替换 handleDeltas 的四个固定显示标签；怪物名由 VTP mob_names 接管，宝箱/桶和预览由 chest_names 接管。Bonus 暂留英文。"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.data.ClientVaultXpTracker",
+            "method": "handleDeltas"
+        },
+        "pairs": [
+            {
+                "key": "Treasure Door",
+                "value": "宝藏门"
+            },
+            {
+                "key": "Coin Pile",
+                "value": "钱币堆"
+            },
+            {
+                "key": "Treasure Sand",
+                "value": "宝藏沙"
+            },
+            {
+                "key": "Bonus",
+                "value": "奖励"
+            }
+        ]
     },
     {
         "target_class": {
@@ -4174,26 +4135,13 @@
         "value": "玩家"
     },
     {
+        "_comment": "VTP chest_names 接管本组宝箱/储物桶名称与宝箱稀有度；其余规则保留。"
+    },
+    {
         "target_class": {
             "name": "iskallia.vault.client.gui.screen.summary.element.LootStatsContainerElement"
         },
         "pairs": [
-            {
-                "key": "Common: ",
-                "value": "普通："
-            },
-            {
-                "key": "Rare: ",
-                "value": "稀有："
-            },
-            {
-                "key": "Epic: ",
-                "value": "史诗："
-            },
-            {
-                "key": "Omega: ",
-                "value": "终焉："
-            },
             {
                 "key": "Trapped: ",
                 "value": "陷阱："
@@ -4205,10 +4153,6 @@
             {
                 "key": "Total Chests Looted",
                 "value": "搜刮宝箱总数"
-            },
-            {
-                "key": " Barrel",
-                "value": "储物桶"
             },
             {
                 "key": "Coin Piles",
@@ -4340,6 +4284,9 @@
         ]
     },
     {
+        "_comment": "VTP chest_names 接管本组宝箱/储物桶名称与宝箱稀有度；其余规则保留。"
+    },
+    {
         "target_class": {
             "name": "iskallia.vault.client.gui.screen.summary.element.VaultChestIconElement"
         },
@@ -4351,22 +4298,6 @@
             {
                 "key": "Total XP",
                 "value": "总经验值"
-            },
-            {
-                "key": "Omega",
-                "value": "终焉"
-            },
-            {
-                "key": "Epic",
-                "value": "史诗"
-            },
-            {
-                "key": "Rare",
-                "value": "稀有"
-            },
-            {
-                "key": "Common",
-                "value": "普通"
             },
             {
                 "key": "Trapped",
@@ -10012,47 +9943,7 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.core.vault.stat.VaultChestType"
-        },
-        "pairs": [
-            {
-                "key": "Wooden",
-                "value": "木制"
-            },
-            {
-                "key": "Gilded",
-                "value": "镀金"
-            },
-            {
-                "key": "Living",
-                "value": "活化"
-            },
-            {
-                "key": "Ornate",
-                "value": "华丽"
-            },
-            {
-                "key": "Treasure",
-                "value": "至尊"
-            },
-            {
-                "key": "Altar",
-                "value": "祭坛"
-            },
-            {
-                "key": "Hardened",
-                "value": "硬质"
-            },
-            {
-                "key": "Enigma",
-                "value": "谜题"
-            },
-            {
-                "key": "Flesh",
-                "value": "肉食"
-            }
-        ]
+        "_comment": "VTP chest_names 接管本组宝箱/储物桶名称与宝箱稀有度；其余规则保留。"
     },
     {
         "target_class": {

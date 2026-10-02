@@ -1,6 +1,6 @@
 package com.dricetea.vh3patch.transformer;
 
-import com.dricetea.vh3patch.transformer.modules.CombatStatsModule;
+import com.dricetea.vh3patch.transformer.modules.MobNamesModule;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
@@ -16,7 +16,7 @@ import java.util.Map;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MobNamePatchTest {
-    private final PatchSpec spec = new CombatStatsModule().spec();
+    private final PatchSpec spec = new MobNamesModule().spec();
     private final Path targetJar = Path.of(System.getProperty("vh3.test.targetJar"));
 
     private ClassNode original() throws Exception { return TargetJar.read(targetJar, spec, true); }
@@ -25,7 +25,7 @@ class MobNamePatchTest {
         ClassNode node = original();
         Map<String, String> before = new HashMap<>();
         node.methods.forEach(m -> before.put(m.name + m.desc, MethodFingerprint.of(m)));
-        new CombatStatsModule(spec).apply(node);
+        new MobNamesModule(spec).apply(node);
         for (MethodNode method : node.methods) {
             if (!method.name.equals(spec.methodName()) || !method.desc.equals(spec.descriptor())) {
                 assertEquals(before.get(method.name + method.desc), MethodFingerprint.of(method));
@@ -37,7 +37,7 @@ class MobNamePatchTest {
     }
 
     @Test void fingerprintIgnoresDebugMetadata() throws Exception {
-        MethodNode method = new CombatStatsModule(spec).target(original());
+        MethodNode method = new MobNamesModule(spec).target(original());
         String before = MethodFingerprint.of(method);
         LabelNode label = new LabelNode();
         method.instructions.insert(label);
@@ -49,25 +49,25 @@ class MobNamePatchTest {
 
     @Test void changedMethodIsRejectedWithoutPartialMutation() throws Exception {
         ClassNode node = original();
-        MethodNode method = new CombatStatsModule(spec).target(node);
+        MethodNode method = new MobNamesModule(spec).target(node);
         for (AbstractInsnNode instruction : method.instructions) {
             if (instruction instanceof LdcInsnNode literal && "_".equals(literal.cst)) { literal.cst = "-"; break; }
         }
         String before = MethodFingerprint.of(method);
-        assertThrows(IllegalStateException.class, () -> new CombatStatsModule(spec).apply(node));
-        assertEquals(before, MethodFingerprint.of(new CombatStatsModule(spec).target(node)));
+        assertThrows(IllegalStateException.class, () -> new MobNamesModule(spec).apply(node));
+        assertEquals(before, MethodFingerprint.of(new MobNamesModule(spec).target(node)));
     }
 
     @Test void missingSignatureIsRejected() throws Exception {
         ClassNode node = original();
-        node.methods.remove(new CombatStatsModule(spec).target(node));
-        assertThrows(IllegalStateException.class, () -> new CombatStatsModule(spec).apply(node));
+        node.methods.remove(new MobNamesModule(spec).target(node));
+        assertThrows(IllegalStateException.class, () -> new MobNamesModule(spec).apply(node));
     }
 
     @Test void duplicateApplicationIsRejected() throws Exception {
         ClassNode node = original();
-        new CombatStatsModule(spec).apply(node);
-        assertThrows(IllegalStateException.class, () -> new CombatStatsModule(spec).apply(node));
+        new MobNamesModule(spec).apply(node);
+        assertThrows(IllegalStateException.class, () -> new MobNamesModule(spec).apply(node));
     }
 
     @Test void wrongJarIsRejected(@TempDir Path temp) throws Exception {
@@ -79,9 +79,9 @@ class MobNamePatchTest {
     @Test void realOriginalMethodExecutesWithHooksAndExactFallback() throws Exception {
         ClassNode baseline = original();
         ClassNode patched = original();
-        new CombatStatsModule(spec).apply(patched);
-        Object before = probe(new CombatStatsModule(spec).target(baseline), spec.className());
-        Object after = probe(new CombatStatsModule(spec).target(patched), spec.className());
+        new MobNamesModule(spec).apply(patched);
+        Object before = probe(new MobNamesModule(spec).target(baseline), spec.className());
+        Object after = probe(new MobNamesModule(spec).target(patched), spec.className());
         assertEquals("战斗牛", invoke(after, "the_vault:aggressive_cow"));
         assertEquals("战斗牛首领", invoke(after, "the_vault:aggressive_cow_boss"));
         for (String id : new String[]{"unknown:some_beast", "minecraft:zombie", "plain", "", "a:__weird__name", "a:b:c"}) {

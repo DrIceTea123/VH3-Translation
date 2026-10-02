@@ -6,12 +6,14 @@ dependencies {
     implementation 'org.ow2.asm:asm-util:9.7.1'
     implementation 'com.google.code.gson:gson:2.8.9'
     testImplementation 'cpw.mods:modlauncher:9.1.3'
+    // 仅离线回归调用 VP 的真实节点处理器；不打包或改写该原始输入。
+    testImplementation files(rootProject.file('../../必要文件/vaultpatcher-all-1.4.4+1.jar'))
 }
 def targetJar = providers.gradleProperty('vaultJar').map { rootProject.file(it) }
         .getOrElse(rootProject.file('../../origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar'))
 def vpSource = rootProject.file('../program/基础+硬编码汉化/config/vaultpatcher_asm/the_vault-asm_complex.json')
 // 工程已移除接管规则；旧规则仅用于导入及冲突回归测试，不再随汉化配置发布。
-def vpLegacySource = rootProject.file('translations/vp/combat_stats.json')
+def vpLegacySource = rootProject.file('translations/vp/mob_names.json')
 
 tasks.named('processResources') {
     inputs.property 'mod_version', project.version
@@ -50,7 +52,7 @@ tasks.register('importMobNames', JavaExec) {
     dependsOn classes
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'com.dricetea.vh3patch.transformer.PatchTool'
-    args 'import-module', 'combat_stats', vpLegacySource.absolutePath, targetJar.absolutePath, layout.buildDirectory.dir('imports').get().asFile.absolutePath
+    args 'import-module', 'mob_names', vpLegacySource.absolutePath, targetJar.absolutePath, layout.buildDirectory.dir('imports').get().asFile.absolutePath
 }
 
 tasks.register('importSoundNames', JavaExec) {
@@ -66,6 +68,14 @@ tasks.register('importResearchNames', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'com.dricetea.vh3patch.transformer.PatchTool'
     args 'import-module', 'research_names', rootProject.file('translations/vp/research_names.json').absolutePath,
+            targetJar.absolutePath, layout.buildDirectory.dir('imports').get().asFile.absolutePath
+}
+
+tasks.register('importChestNames', JavaExec) {
+    dependsOn classes
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.dricetea.vh3patch.transformer.PatchTool'
+    args 'import-module', 'chest_names', rootProject.file('translations/vp/chest_names.json').absolutePath,
             targetJar.absolutePath, layout.buildDirectory.dir('imports').get().asFile.absolutePath
 }
 tasks.register('prepareVpConfig', JavaExec) {

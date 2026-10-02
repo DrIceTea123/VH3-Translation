@@ -710,7 +710,7 @@
     },
     {
         "_comment_1": "宝库结算界面显示的怪物名称 随语言文件的新怪物更新",
-        "_comment_2": "宝库结算界面的怪物名称（CombatStatsContainerElement.formatMobName）：根据实体 ID 显示怪物中文名，包括战斗牛与首领等。此部分已由 VTP（VH3 Translation Patch）的 combat_stats 模块接管，译文配置为 config/vh3_translation_patch/combat_stats.json。"
+        "_comment_2": "宝库结算界面的怪物名称（CombatStatsContainerElement.formatMobName，与经验提示共用 mob_names）：根据实体 ID 显示怪物中文名，包括战斗牛与首领等。此部分已由 VTP（VH3 Translation Patch）的 mob_names 模块接管，译文配置为 config/vh3_translation_patch/mob_names.json。"
     },
     {
         "target_class": {

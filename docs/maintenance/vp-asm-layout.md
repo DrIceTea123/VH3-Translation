@@ -15,23 +15,25 @@
 
 ## 当前统计
 
-截至 2026-10-01，四组名称规则已经被 VTP 接管；下表按当前工程布局实数统计：
+截至 2026-10-03，怪物、声音、研究和宝箱名称规则已经被 VTP 接管；下表按当前工程布局实数统计：
 
 | 文件 | 规则组 | 译文对 | ordinal 组 | local 组 |
 |---|---:|---:|---:|---:|
-| asm_main | 624 | 2862 | 0 | 37 |
-| asm_long | 20 | 1132 | 0 | 3 |
+| asm_main | 623 | 2832 | 0 | 37 |
+| asm_long | 20 | 1125 | 0 | 3 |
 | asm_complex | 16 | 328 | 5 | 8 |
-| 合计 | 660 | 4322 | 5 | 48 |
+| 合计 | 659 | 4285 | 5 | 48 |
 
 统计包含 pairs 数组和顶层单条 key/value，注释不算规则。动态配置与 other_mods 不计入此表。
 
 ## VTP 接管边界
 
-- 结算 formatMobName 原 237 对规则 → combat_stats（已确认 ID 的 235 条）。
+- 结算 formatMobName 原 237 对规则 → mob_names（历史导入 235 条，现与经验提示共用 246 条）。
 - 声音 collectSoundEntries 中 formatSoundName 返回值原 203 对规则 → sound_names；同类 6 条普通界面文案仍归 VP。
 - 研究列表 60 对与卡组研究名单条 → research_names（54 个唯一英文键），覆盖客户端显示及服务端研究通知；其他提示语仍归 VP。
-- 四处原位置均留有内容和 VTP 接管注释。旧规则在 `patch-mod/translations/vp/`，供导入/冲突测试，不再装回运行配置。
+- 宝箱类型、实体标题、结算稀有度/桶、图标稀有度及辅助功能箱型，6 组 61 对 → chest_names（33 条基础映射与 20 条完整桶组合覆盖）。混合组只移走相关 pairs。
+- Tracker 矿石 20 对及固定标签 4 对新增于 asm_main，按 client.data 包名排序；矿石采用 handleDeltas 的 local=MformatOreName 调用结果规则。
+- 各原位置均留有内容和 VTP 接管注释。旧规则在 `patch-mod/translations/vp/`，供导入/冲突测试，不再装回运行配置。
 - 新接管必须同时更新冲突判定、配置和原位注释；版本/方法/旧 VP 冲突会阻止启动。
 
 旧 main+ulti 一次性迁移已完成，当前输入不能再次使用旧脚本，因此删除 `tools/vp/reorganize-asm.mjs`。如需复查首次迁移的索引、哈希和脚本，可在整理前提交 `cd2c506` 中读取该脚本及本文历史版本；不应直接对现行配置执行。

@@ -1,0 +1,292 @@
+[
+    {
+        "target_class": {
+            "name": "iskallia.vault.block.entity.VaultChestTileEntity",
+            "method": "m_5446_",
+            "local": "Mcapitalize"
+        },
+        "pairs": [
+            {
+                "key": "Omega",
+                "value": "终焉"
+            },
+            {
+                "key": "Epic",
+                "value": "史诗"
+            },
+            {
+                "key": "Rare",
+                "value": "稀有"
+            },
+            {
+                "key": "Common",
+                "value": "普通"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.block.entity.VaultChestTileEntity",
+            "method": "m_5446_"
+        },
+        "pairs": [
+            {
+                "key": "Treasure Chest",
+                "value": "至尊宝箱"
+            },
+            {
+                "key": " Altar Chest",
+                "value": "祭坛宝箱"
+            },
+            {
+                "key": " Ornate Strongbox",
+                "value": "强化华丽宝箱"
+            },
+            {
+                "key": " Living Strongbox",
+                "value": "强化活化宝箱"
+            },
+            {
+                "key": " Gilded Strongbox",
+                "value": "强化镀金宝箱"
+            },
+            {
+                "key": " Wooden Chest",
+                "value": "木制宝箱"
+            },
+            {
+                "key": " Ornate Chest",
+                "value": "华丽宝箱"
+            },
+            {
+                "key": " Living Chest",
+                "value": "活化宝箱"
+            },
+            {
+                "key": " Gilded Chest",
+                "value": "镀金宝箱"
+            },
+            {
+                "key": " Hardened Chest",
+                "value": "硬质宝箱"
+            },
+            {
+                "key": " Flesh Chest",
+                "value": "肉食宝箱"
+            },
+            {
+                "key": " Enigma Chest",
+                "value": "谜题宝箱"
+            },
+            {
+                "key": " Wooden Barrel",
+                "value": "木制储物桶"
+            },
+            {
+                "key": " Gilded Barrel",
+                "value": "镀金储物桶"
+            },
+            {
+                "key": " Living Barrel",
+                "value": "活化储物桶"
+            },
+            {
+                "key": " Ornate Barrel",
+                "value": "华丽储物桶"
+            },
+            {
+                "key": "Ornate Strongbox",
+                "value": "强化华丽宝箱"
+            },
+            {
+                "key": "Living Strongbox",
+                "value": "强化活化宝箱"
+            },
+            {
+                "key": "Gilded Strongbox",
+                "value": "强化镀金宝箱"
+            },
+            {
+                "key": "Wooden Barrel",
+                "value": "木制储物桶"
+            },
+            {
+                "key": "Ornate Barrel",
+                "value": "华丽储物桶"
+            },
+            {
+                "key": "Living Barrel",
+                "value": "活化储物桶"
+            },
+            {
+                "key": "Gilded Barrel",
+                "value": "镀金储物桶"
+            },
+            {
+                "key": "Hardened Chest",
+                "value": "硬质宝箱"
+            },
+            {
+                "key": "Flesh Chest",
+                "value": "肉食宝箱"
+            },
+            {
+                "key": "Enigma Chest",
+                "value": "谜题宝箱"
+            },
+            {
+                "key": "Altar Chest",
+                "value": "祭坛宝箱"
+            },
+            {
+                "key": "Wooden Chest",
+                "value": "木制宝箱"
+            },
+            {
+                "key": "Ornate Chest",
+                "value": "华丽宝箱"
+            },
+            {
+                "key": "Living Chest",
+                "value": "活化宝箱"
+            },
+            {
+                "key": "Gilded Chest",
+                "value": "镀金宝箱"
+            },
+            {
+                "key": "Wooden Chest",
+                "value": "木制宝箱"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.summary.element.LootStatsContainerElement"
+        },
+        "pairs": [
+            {
+                "key": "Common: ",
+                "value": "普通："
+            },
+            {
+                "key": "Rare: ",
+                "value": "稀有："
+            },
+            {
+                "key": "Epic: ",
+                "value": "史诗："
+            },
+            {
+                "key": "Omega: ",
+                "value": "终焉："
+            },
+            {
+                "key": " Barrel",
+                "value": "储物桶"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.summary.element.VaultChestIconElement"
+        },
+        "pairs": [
+            {
+                "key": "Omega",
+                "value": "终焉"
+            },
+            {
+                "key": "Epic",
+                "value": "史诗"
+            },
+            {
+                "key": "Rare",
+                "value": "稀有"
+            },
+            {
+                "key": "Common",
+                "value": "普通"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.core.vault.stat.VaultChestType"
+        },
+        "pairs": [
+            {
+                "key": "Wooden",
+                "value": "木制"
+            },
+            {
+                "key": "Gilded",
+                "value": "镀金"
+            },
+            {
+                "key": "Living",
+                "value": "活化"
+            },
+            {
+                "key": "Ornate",
+                "value": "华丽"
+            },
+            {
+                "key": "Treasure",
+                "value": "至尊"
+            },
+            {
+                "key": "Altar",
+                "value": "祭坛"
+            },
+            {
+                "key": "Hardened",
+                "value": "硬质"
+            },
+            {
+                "key": "Enigma",
+                "value": "谜题"
+            },
+            {
+                "key": "Flesh",
+                "value": "肉食"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.accessibility.VaultAccessibilityScreen",
+            "local": "Mname"
+        },
+        "pairs": [
+            {
+                "key": "WOODEN",
+                "value": "木制宝箱"
+            },
+            {
+                "key": "GILDED",
+                "value": "镀金宝箱"
+            },
+            {
+                "key": "ORNATE",
+                "value": "华丽宝箱"
+            },
+            {
+                "key": "LIVING",
+                "value": "活化宝箱"
+            },
+            {
+                "key": "HARDENED",
+                "value": "硬质宝箱"
+            },
+            {
+                "key": "ENIGMA",
+                "value": "谜题宝箱"
+            },
+            {
+                "key": "FLESH",
+                "value": "肉食宝箱"
+            }
+        ]
+    }
+]

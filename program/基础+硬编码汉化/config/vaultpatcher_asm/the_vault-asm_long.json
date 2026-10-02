@@ -265,42 +265,17 @@
         "_comment_4": "iskallia.vault.client.render.hunter.HunterOutlineThickness"
     },
     {
+        "_comment": "VTP chest_names 接管本组宝箱/储物桶名称与宝箱稀有度；其余规则保留。"
+    },
+    {
         "target_class": {
             "name": "iskallia.vault.client.gui.screen.accessibility.VaultAccessibilityScreen",
             "local": "Mname"
         },
         "pairs": [
             {
-                "key": "WOODEN",
-                "value": "木制宝箱"
-            },
-            {
-                "key": "GILDED",
-                "value": "镀金宝箱"
-            },
-            {
-                "key": "ORNATE",
-                "value": "华丽宝箱"
-            },
-            {
-                "key": "LIVING",
-                "value": "活化宝箱"
-            },
-            {
                 "key": "COINS",
                 "value": "钱币堆"
-            },
-            {
-                "key": "HARDENED",
-                "value": "硬质宝箱"
-            },
-            {
-                "key": "ENIGMA",
-                "value": "谜题宝箱"
-            },
-            {
-                "key": "FLESH",
-                "value": "肉食宝箱"
             },
             {
                 "key": "OBJECTIVES",
@@ -671,6 +646,10 @@
             {
                 "key": "HARDCORE",
                 "value": "硬核"
+            },
+            {
+                "key": "SURVIVAL",
+                "value": "生存"
             },
             {
                 "key": "ROYALE",
