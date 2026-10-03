@@ -6,4 +6,4 @@
 
 旧规则保存在 translations/vp/overworld_names.json，ID/显示键清单在 translations/overworld-name-inputs.json。更新运行 `python tools/source-audit.py overworld_names`，核对新增/删除/变化后人工更新输入清单与配置；不自动重写译文。模块仅客户端、F3+T 重载、缺项原文回退。
 
-版本 1.0.10；1 个目标方法/1 个钩子。工程编译测试延后到七项全部完成，尚未游戏验收。
+版本 1.0.10；1 个目标方法/1 个钩子。统一构建与离线验证已通过；VP 的 Loading/Unknown/Not Found 状态提示继续保留。详见 [成果报告](takeover-report.md)，尚未游戏验收。

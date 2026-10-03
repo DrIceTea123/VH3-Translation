@@ -20,6 +20,8 @@
       "path": "origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar",
       "classes": [
         "iskallia/vault/client/gui/screen/summary/element/CrystalStatsContainerElement",
+        "iskallia/vault/config/ThemeEntityRegistry",
+        "iskallia/vault/core/data/key/ThemeKey",
         "iskallia/vault/core/vault/player/ClassicListenersLogic",
         "iskallia/vault/item/AugmentItem",
         "iskallia/vault/item/crystal/theme/ValueCrystalTheme"
@@ -44,6 +46,11 @@
       "path": "origin-3.21.7/config/the_vault/gen/templates.json",
       "fields": [
         "id"
+      ],
+      "prefixes": [
+        "the_vault:vault/rooms/",
+        "the_vault:vault/dungeon_rooms/",
+        "the_vault:vault/starts/"
       ]
     },
     {
@@ -65,6 +72,9 @@
       "path": "origin-3.21.7/config/the_vault/gen/templates.json",
       "fields": [
         "id"
+      ],
+      "prefixes": [
+        "the_vault:overworld/"
       ]
     },
     {

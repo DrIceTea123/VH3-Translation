@@ -10,4 +10,4 @@
 
 文本来源及更新：`translations/source-inputs.json` 定义输入，`translations/sources/` 保存文本/类摘要基线；运行 `python tools/source-audit.py crystal_stats theme_names` 重新读取并报告新增、删除及变化。审核新版 JAR 的调用路径和配置后才能用 `--record` 更新基线，不因摘要变化自动放行；工具不覆盖译文。旧 VP 原始组留在 `translations/vp/crystal_stats.json`。
 
-本阶段依用户要求未运行工程编译/测试，统一验证在七项完成后进行。未做游戏验收。
+七部分完成后已通过统一构建和离线验证，详见 [成果报告](takeover-report.md)。未做游戏验收。

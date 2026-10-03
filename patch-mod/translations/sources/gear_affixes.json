@@ -31,6 +31,266 @@
       "iskallia/vault/gear/reader/special/LuckyThornsModifierReader": "dfd8b0f485bf16b188b655a5c6f870e998c00b821e643294932117f1b7556a65",
       "iskallia/vault/gear/reader/special/RelentlessStrikeModifierReader": "2c012cadf66c37800d3eba32f7c24dcbad5e5562fc663a0cc48b16d313824593",
       "iskallia/vault/gear/reader/special/ThirdAttackModifierReader": "63ffc5e1824720241f11d2d9b18aba0c389adbf5ee208b50050922fadc13a952"
+    },
+    "texts": {
+      "iskallia/vault/gear/attribute/ability/AbilityAreaOfEffectFlatAttribute$Reader": [
+        "",
+        " Blocks ",
+        " Blocks of Area of Effect of ",
+        " of ",
+        "Area Of Effect",
+        "areaOfEffect"
+      ],
+      "iskallia/vault/gear/attribute/ability/AbilityAreaOfEffectPercentAttribute$Reader": [
+        "",
+        "\u0001%",
+        " less ",
+        " less Area Of Effect of ",
+        " more ",
+        " more Area Of Effect of ",
+        " of ",
+        "Area Of Effect",
+        "areaOfEffect"
+      ],
+      "iskallia/vault/gear/attribute/ability/AbilityCooldownFlatAttribute$Reader": [
+        "",
+        " of ",
+        " to ",
+        "Cooldown",
+        "cooldown",
+        "s",
+        "s to Cooldown of "
+      ],
+      "iskallia/vault/gear/attribute/ability/AbilityCooldownPercentAttribute$Reader": [
+        "",
+        "\u0001%",
+        " by ",
+        " less Cooldown of ",
+        " more Cooldown of ",
+        " of ",
+        "Cooldown",
+        "Lowers the ",
+        "cooldown"
+      ],
+      "iskallia/vault/gear/attribute/ability/AbilityLevelAttribute$2": [
+        "",
+        " abilities",
+        " to level of ",
+        " to level of all ",
+        " to level of all Abilities",
+        "all Abilities",
+        "all_abilities"
+      ],
+      "iskallia/vault/gear/attribute/ability/AbilityManaCostFlatAttribute$Reader": [
+        "",
+        " of ",
+        " to ",
+        " to Mana Cost of ",
+        "Mana Cost",
+        "manaCost"
+      ],
+      "iskallia/vault/gear/attribute/ability/AbilityManaCostPercentAttribute$Reader": [
+        "",
+        "\u0001%",
+        " less ",
+        " less Mana Cost of ",
+        " more ",
+        " more Mana Cost of ",
+        " of ",
+        "Mana Cost",
+        "manaCost"
+      ],
+      "iskallia/vault/gear/attribute/ability/special/EntropyPoisonModification": [
+        "",
+        "Entropic Bind also applies Poison ",
+        "entropic_bind_poison"
+      ],
+      "iskallia/vault/gear/attribute/ability/special/FrostNovaVulnerabilityModification": [
+        "",
+        " Vulnerability",
+        "Frost Nova also applies Level ",
+        "frost_nova_vulnerability"
+      ],
+      "iskallia/vault/gear/attribute/custom/HitHeartsAttribute$Generator": [
+        "",
+        "\u0001%",
+        " chance to drop a heart fragment, increasing your health by ",
+        ", ",
+        "-",
+        "Killing a mob has a "
+      ],
+      "iskallia/vault/gear/attribute/custom/HitHeartsAttribute$Reader": [
+        "",
+        "\u0001%",
+        "\u0001% - \u0001%",
+        " Heart Fragments",
+        " chance to drop a heart fragment, increasing your health by ",
+        "Killing a mob has a ",
+        "uniqueHighlight"
+      ],
+      "iskallia/vault/gear/attribute/custom/RelentlessStrikeAttribute$Generator": [
+        "",
+        "\u0001%",
+        " times and lasts for ",
+        ", ",
+        ", this effect can stack up to ",
+        "-",
+        "8 seconds",
+        "Attacking a mob increases your attack damage by "
+      ],
+      "iskallia/vault/gear/attribute/custom/RelentlessStrikeAttribute$Reader": [
+        "",
+        "\u0001%",
+        " times and lasts for ",
+        ", this effect can stack up to ",
+        "8 seconds",
+        "Attacking a mob increases your attack damage by ",
+        "uniqueHighlight"
+      ],
+      "iskallia/vault/gear/attribute/custom/ability/AbilityTriggerOnDamageAttribute$Generator": [
+        "",
+        "\u0001%",
+        " ",
+        " chance to cast a level ",
+        ", ",
+        "-",
+        "Every hit you take has a "
+      ],
+      "iskallia/vault/gear/attribute/custom/ability/AbilityTriggerOnDamageAttribute$Reader": [
+        "",
+        "\u0001%",
+        " \u0001",
+        " chance to cast a level ",
+        "Every hit you take has a ",
+        "uniqueHighlight"
+      ],
+      "iskallia/vault/gear/attribute/custom/ability/ArcaneNovaOnHitAttribute$Generator": [
+        "",
+        "\u0001%",
+        " hits unleash an Arcane nova dealing ",
+        " of your Ability Power",
+        ", ",
+        "-",
+        "Every "
+      ],
+      "iskallia/vault/gear/attribute/custom/ability/ArcaneNovaOnHitAttribute$Reader": [
+        "",
+        "\u0001%",
+        " block radius",
+        " hits unleash an Arcane nova dealing ",
+        " of your Ability Power in a ",
+        "Arcane Nova",
+        "Every ",
+        "uniqueHighlight"
+      ],
+      "iskallia/vault/gear/attribute/custom/ability/BroodmotherWebAttribute$Generator": [
+        "",
+        "\u0001%",
+        ", ",
+        "-",
+        "Blocks release web nova: "
+      ],
+      "iskallia/vault/gear/attribute/custom/ability/BroodmotherWebAttribute$Reader": [
+        "",
+        "\u0001%",
+        " Attack Damage and slowing mobs hit",
+        " chance to release a web nova dealing ",
+        "Broodmother's Web",
+        "Successful blocks have a ",
+        "uniqueHighlight"
+      ],
+      "iskallia/vault/gear/attribute/custom/loot/AbilityCastOnLootAttribute$Generator": [
+        "",
+        "\u0001%",
+        " ",
+        " chance to cast a level ",
+        " has a ",
+        ", ",
+        "-",
+        "Looting "
+      ],
+      "iskallia/vault/gear/attribute/custom/loot/AbilityCastOnLootAttribute$Reader": [
+        "",
+        "\u0001%",
+        " \u0001",
+        " chance to cast a level ",
+        " has a ",
+        "Looting ",
+        "uniqueHighlight"
+      ],
+      "iskallia/vault/gear/attribute/custom/loot/ManaPerLootAttribute$Generator": [
+        "",
+        "\u0001%",
+        " Mana per ",
+        " looted",
+        ", ",
+        "-"
+      ],
+      "iskallia/vault/gear/attribute/custom/loot/ManaPerLootAttribute$Reader": [
+        "",
+        "\u0001%",
+        " Mana per ",
+        " chance to generate ",
+        " looted"
+      ],
+      "iskallia/vault/gear/reader/IncreasedPercentageReader": [
+        "\u0001%",
+        " ",
+        "0.##",
+        "Increased",
+        "Reduced"
+      ],
+      "iskallia/vault/gear/reader/SweepingDamageReader": [
+        "\u0001%",
+        " of Attack Damage dealt as Sweeping Hit",
+        "Sweeping Hit Damage"
+      ],
+      "iskallia/vault/gear/reader/special/CastleBastionModifierReader": [
+        "",
+        "\u0001%",
+        " knocks direct attackers away",
+        " stack per second",
+        " stacks. Each stack reduces final damage taken by ",
+        " up to ",
+        ". Moving removes at most ",
+        ". Taking damage with ",
+        ". Taking damage with Bastion knocks direct attackers away. Moving removes at most 1 stack per second",
+        "0",
+        "1",
+        "5",
+        "Bastion",
+        "Standing still builds ",
+        "Standing still builds Bastion up to 5 stacks. Each stack reduces final damage taken by ",
+        "knockback",
+        "uniqueHighlight"
+      ],
+      "iskallia/vault/gear/reader/special/LuckyThornsModifierReader": [
+        "",
+        "Lucky Hits",
+        "Thorns ",
+        "can now trigger ",
+        "luckyHit",
+        "uniqueHighlight"
+      ],
+      "iskallia/vault/gear/reader/special/RelentlessStrikeModifierReader": [
+        "",
+        "\u0001%",
+        " times and lasts for ",
+        ", this effect can stack up to ",
+        "0",
+        "8 seconds",
+        "9",
+        "Attacking a mob increases your attack damage by ",
+        "uniqueHighlight"
+      ],
+      "iskallia/vault/gear/reader/special/ThirdAttackModifierReader": [
+        "",
+        "\u0001%",
+        " increased physical damage",
+        "0",
+        "Every third attack deals ",
+        "uniqueHighlight"
+      ]
     }
   },
   "[vh3-translation]/patch-mod/translations/vp/gear_affixes.json": {

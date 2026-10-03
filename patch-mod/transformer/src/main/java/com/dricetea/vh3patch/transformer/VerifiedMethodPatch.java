@@ -39,6 +39,9 @@ public final class VerifiedMethodPatch {
         MethodNode patched = new MethodNode(Opcodes.ASM9, original.access, original.name, original.desc,
                 original.signature, original.exceptions.toArray(String[]::new));
         original.accept(patched);
+        // ASM accept 会复用 invokedynamic 的参数数组；修改副本前隔离可变容器，保证失败原子性。
+        for (AbstractInsnNode instruction : patched.instructions)
+            if (instruction instanceof InvokeDynamicInsnNode dynamic) dynamic.bsmArgs = dynamic.bsmArgs.clone();
         int count = edit.applyAsInt(patched);
         if (count != spec.hookCount()) throw new IllegalStateException("Unexpected hook count for "
                 + spec.methodName() + ": " + count + ", expected " + spec.hookCount());

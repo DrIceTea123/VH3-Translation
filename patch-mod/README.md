@@ -1,6 +1,6 @@
 # VH3 Translation Patch（VTP）
 
-独立的显示翻译补丁，目前接管怪物名称、宝箱/桶名称、声音设置名称、研究名称和卡牌显示，其余硬编码翻译继续由 VP 处理。当前版本 **1.0.7**，目标 MC 1.18.2 / Forge 40.3.11 / the_vault 1.18.2-3.21.6.6884。93 项离线测试与固定核心字节码校验已通过，完整整合包尚未联测。
+独立的显示翻译补丁，目前有 14 个模块，接管怪物、宝箱、声音、研究、卡牌，以及水晶统计、主题、房间、主世界铭文预览、图鉴族类、装备稀有度、任务名和特殊词缀显示，其余硬编码翻译继续由 VP 处理。当前版本 **1.0.14**，目标 MC 1.18.2 / Forge 40.3.11 / the_vault 1.18.2-3.21.6.6884。191 项 Java 离线测试、3 项来源读取测试及固定核心 105 个方法的字节码校验已通过，完整整合包尚未联测。
 
 ## 编辑翻译与安装
 
@@ -13,17 +13,26 @@
 | research_names.json | 原始英文研究标识，区分大小写 | `"Waystones": "传送石碑"` |
 | chest_names.json | 英文类型/稀有度/基础名，支持完整名称覆盖 | `"Wooden Chest": "木制宝箱"` |
 | card_text.json | 英文显示文本及带 `{0}` 参数的完整句式 | `"Type: ": "类型："` |
+| crystal_stats.json | 统计标签和完整句式 | [水晶统计](docs/crystal-stats.md) |
+| theme_names.json | 原始英文主题名称 | [主题显示](docs/crystal-stats.md) |
+| room_names.json | 格式化后的房间名称和详细句式 | [地图房间](docs/room-names.md) |
+| overworld_names.json | 主世界铭文格式化名称 | [铭文预览](docs/overworld-names.md) |
+| bestiary_groups.json | 英文族类显示名称 | [查找与显示分离](docs/bestiary-groups.md) |
+| gear_rarity.json | 装备等级和稀有度池名称 | [装备稀有度](docs/gear-rarity.md) |
+| quest_names.json | 原始英文 Quest 标题 | [任务名](docs/quest-names.md) |
+| gear_affixes.json | 完整词缀句式，保留 `{0}` 等参数 | [特殊词缀](docs/gear-affixes.md) |
+| talent_affixes.json | 天赋等级句式，与技能等级分开 | [特殊词缀](docs/gear-affixes.md) |
 
 1.0.6 升级：`combat_stats.json` 已改名为 `mob_names.json`，`vault_xp.json` 已拆除。矿石与固定标签移入 VP `asm_main`，旧自定义项的迁移见 [经验提示归属](docs/vault-xp.md)。
 
 1.0.7 新增 [卡牌模块](docs/card-text.md)：名称、条件、效果和物品提示从 VP main/complex/dynamic_2 迁入；界面和命令固定文案继续留 VP。
 
-给这五个模块增删改条目只改 JSON，无需改源码、重编译或替换 JAR。配置为 UTF-8 平面字符串对象，不允许注释、重复键、非字符串值及尾随内容；`{}` 表示不覆盖，空字符串表示显式空译文。
+给这些模块增删改条目只改 JSON，无需改源码、重编译或替换 JAR。配置为 UTF-8 平面字符串对象，不允许注释、重复键、非字符串值及尾随内容；`{}` 表示不覆盖，空字符串表示显式空译文。
 
 安装时同时携带：
 
-- `mods/vh3_translation_patch-1.0.7.jar` 与 `mods/vh3_translation_patch-transformer-1.0.7.jar`。
-- `config/vh3_translation_patch/` 下的五个 JSON（专用服务端读取 research_names.json、chest_names.json 和 card_text.json）。
+- `mods/vh3_translation_patch-1.0.14.jar` 与 `mods/vh3_translation_patch-transformer-1.0.14.jar`。
+- `config/vh3_translation_patch/` 下的 14 个 JSON（专用服务端需要下文列出的 8 个通用配置）。
 - 当前汉化工程的 VP 配置；已接管规则已移除并在原位置保留 VTP 注释，不能装回旧规则。分类见 [VP 维护说明](../docs/maintenance/vp-asm-layout.md)。
 
 游戏读取已安装目录的配置，修改工程文件不会自动同步。编辑游戏配置后按 **F3+T**；声音设置需关闭重开，结算页可重开以重建显示项。经验提示的新通知和新建预览使用新译文，已显示的旧通知不追溯修改。首次缺失或损坏文件阻止启动；重载失败保留该模块上次有效快照。不会自动创建、补齐或覆盖文件。
@@ -34,9 +43,11 @@
 
 两端使用同一对 JAR，按目标方法声明的适用端注册。怪物、声音模块只作用于客户端；宝箱模块覆盖 getter、服务端/客户端容器标题及客户端结算、经验提示、预览和辅助功能箱型，见 [宝箱模块](docs/chest-names.md)；研究模块覆盖客户端的研究标题、依赖/互斥提示、限制提示、知识精酿、卡组工作台及配方提示，并在服务端生成解锁广播、研究替换通知时翻译名称。具体方法与原始文本见 [研究名覆盖](docs/research-names.md)。卡牌模块覆盖 21 个显示方法，含 4 个两端方法；布局、条件和词缀 tooltip 的其他方法只在客户端注入，详见 [卡牌显示](docs/card-text.md)。
 
-专用服务端必须安装双 JAR、外部 research_names.json、chest_names.json、card_text.json 及兼容的 VP 配置，首次配置失败同样阻止启动。服务端不读取怪物/声音配置，也不加载客户端 I18n；服务端配置修改后重启生效。客户端继续支持 F3+T，缓存的界面可重开；已发出的消息不会追溯重译。
+专用服务端必须安装双 JAR、外部 research_names.json、chest_names.json、card_text.json、theme_names.json、gear_rarity.json、quest_names.json、gear_affixes.json、talent_affixes.json 及兼容的 VP 配置，首次配置失败同样阻止启动。服务端不读取怪物、声音、水晶统计、地图房间、主世界铭文预览和图鉴族类配置，也不加载客户端 I18n；服务端配置修改后重启生效。客户端继续支持 F3+T，缓存的界面可重开；已发出的消息不会追溯重译。
 
 服务端生成的通知和宝箱标题由服务端配置决定，客户端本地配置不能改变已经收到的文本。仅客户端安装 VTP 时，只覆盖本地显示；单人游戏的集成服务器使用同一进程的通用模块和配置。研究名称用原文精确查表，不改解锁判定、存档或业务网络标识。
+
+本轮七部分的完成范围、英文占位、离线验证和游戏验收边界见 [1.0.14 成果报告](docs/takeover-report.md)。
 
 ## 构建与导出
 
@@ -70,6 +81,10 @@
 
 ## 联测与回退
 
-在独立测试副本中安装双 JAR、五个外部配置及当前 VP 配置，保留并合并原有自定义译文。核实 VP 缓存；首次联测可在测试副本设置 `debug_mode.use_cache=false`。检查 preflight / applied 日志、结算牛与首领差异、声音搜索/排序/音量、经验通知与预览、F3+T、首次错误拒绝启动及重载错误保留旧值。
+在独立测试副本中安装双 JAR、14 个外部配置及当前 VP 配置，保留并合并原有自定义译文。核实 VP 缓存；首次联测可在测试副本设置 `debug_mode.use_cache=false`。检查 preflight / applied 日志、结算牛与首领差异、声音搜索/排序/音量、经验通知与预览、F3+T、首次错误拒绝启动及重载错误保留旧值。
 
 回退时移除两个 JAR、恢复旧 VP 规则并处理缓存。核心/方法/配套/VP 冲突会阻止启动；其他转换器造成的冲突可能在目标类加载时才出现。支持生产客户端 `forgeclient` 与专用服务端 `forgeserver`，尚未接入开发/数据生成启动目标。剩余验收统一见 [TODO](../project-memory/TODO.md)。
+
+## 文本来源复核
+
+本轮新增的 9 个模块在 `translations/source-inputs.json` 登记原始配置、核心类及旧 VP 片段。运行 `python tools/source-audit.py`（或附模块 ID）重新读取并列出新增、删除和变化；JAR 同时比较类摘要及字符串常量，不加载模组。只有审阅新版数据和调用链后才用 `--record` 记录新基线。工具不更新译表、不自动放行核心指纹。旧五个模块继续使用各自既有导入/来源文档。

@@ -10,4 +10,4 @@ EntityGroupElement 继续用原文 groupName 查找，标题从 getEntityName �
 
 此模块仅客户端。F3+T 重载词表，重开图鉴重建标签。来源为真实 GroupUtils、TextUtil、两处图鉴类与 translations/vp/bestiary_groups.json；执行 `python tools/source-audit.py bestiary_groups` 重新比对来源。核心变化须重新核对 ENTITY_GROUPS 的键类型及 formatter；不能仅更新摘要。
 
-VTP 1.0.11，按任务指令暂未运行工程编译和测试，统一验证时需特别执行 LambdaMetafactory 链路与中文同名回归；尚未游戏验收。
+1.0.11 实施，1.0.14 统一验证通过；测试执行了变换后 LambdaMetafactory 链路、独立 ID 查找键及失败原子性。中文同名不参与查找。详见 [成果报告](takeover-report.md)；尚未游戏验收。

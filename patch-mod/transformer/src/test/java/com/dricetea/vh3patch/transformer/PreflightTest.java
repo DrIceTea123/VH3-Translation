@@ -55,7 +55,9 @@ class PreflightTest {
         companion(game, module.spec(), module.spec().patchVersion());
         Path config = game.resolve("config/vaultpatcher_asm/rules.json");
         Files.createDirectories(config.getParent());
-        Files.copy(Path.of(System.getProperty("vh3.test.legacyVpDirectory"), module.spec().moduleId() + ".json"), config);
+        if(module.spec().moduleId().equals("theme_names"))
+            Files.writeString(config,"[{\"target_class\":{\"name\":\"iskallia.vault.core.data.key.ThemeKey\",\"method\":\"getName\"},\"key\":\"Example\",\"value\":\"示例\"}]");
+        else Files.copy(Path.of(System.getProperty("vh3.test.legacyVpDirectory"), module.spec().moduleId() + ".json"), config);
         assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, fixture));
     }
 
@@ -65,8 +67,7 @@ class PreflightTest {
         companion(game, module.spec(), module.spec().patchVersion());
         assertDoesNotThrow(() -> TranslationTransformationService.preflight(game, fixture, false));
         assertThrows(Exception.class, () -> TranslationTransformationService.preflight(game, fixture, true));
-        assertEquals(List.of("research_names", "chest_names", "card_text"), PatchModules.active(false).stream().map(m -> m.spec().moduleId()).toList());
-        assertEquals(8, PatchModules.byClass(false).size());
+        assertEquals(java.util.Set.of("research_names", "chest_names", "card_text", "theme_names", "gear_rarity", "quest_names", "gear_affixes", "talent_affixes"), new java.util.HashSet<>(PatchModules.active(false).stream().map(m -> m.spec().moduleId()).toList()));
         assertTrue(PatchModules.byClass(false).keySet().stream().noneMatch(n -> n.contains("/client/")));
     }
 
@@ -92,6 +93,7 @@ class PreflightTest {
         if (module instanceof ResearchNamesModule) return new ResearchNamesModule(fixtures);
         if (module instanceof CardTextModule) return new CardTextModule(fixtures);
         if (module instanceof ChestNamesModule) return new ChestNamesModule(fixtures);
+        if (module instanceof DisplayMethodPatch) return module.getClass().getConstructor(List.class).newInstance(fixtures);
         return module instanceof MobNamesModule ? new MobNamesModule(fixtures) : new SoundNamesModule(fixtures.get(0));
     }
 

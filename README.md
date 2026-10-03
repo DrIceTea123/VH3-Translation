@@ -1,13 +1,13 @@
 # Vault Hunters 3rd Edition 翻译工程
 
-当前工程包含 VP 翻译、资源包、安装素材和独立补丁 VTP。运行基线与验证状态统一见 [项目状态](project-memory/STATE.md)；尚未完成整合包游戏联测。
+当前工程包含 VP 翻译、资源包、安装素材和独立补丁 VTP。当前 VTP 1.0.14 接管成果见 [成果报告](patch-mod/docs/takeover-report.md)；历史快照与未归并增量见 [项目记忆](project-memory/README.md)；尚未完成整合包游戏联测。
 
 ## 从哪里开始
 
 | 任务 | 入口 |
 |---|---|
 | 修改既有翻译、制作汉化包 | `program/`；打包方式见下文 |
-| 编辑 VTP 怪物名、宝箱名、声音名、研究名 | [补丁使用与构建](patch-mod/README.md) |
+| 编辑 VTP 显示译表（14 个模块） | [补丁使用与构建](patch-mod/README.md) |
 | 新增补丁模块、修改 ASM | [模块开发](patch-mod/docs/modules.md) |
 | 理解原始文本与注入位置 | [文本获取分析](patch-mod/docs/text-capture.md)、[研究名覆盖](patch-mod/docs/research-names.md)、[经验提示](patch-mod/docs/vault-xp.md)、[宝箱名称模块](patch-mod/docs/chest-names.md) |
 | 维护 VP main / long / complex | [VP 分类规则](docs/maintenance/vp-asm-layout.md) |

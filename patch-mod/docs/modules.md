@@ -53,4 +53,6 @@ card_text 的历史片段另外保存在 `translations/vp/card_text.json`，仅�
 
 经验提示已拆分到 mob_names、chest_names 与 VP；`StringValuePatch.applyReturns` 支持任意参数布局的 String 显示返回值，宝箱钩子另传稳定枚举参数以避开已翻译的 getter 输出。`VerifiedMethodPatch` 可显式声明额外栈空间，默认仍为 1。
 
-后续候选为地图房间、任务显示入口、动态规则；[箱子类型迁移评估](chest-types-assessment.md) 的 getter 已纳入 chest_names，未新建并存的 chest_types 模块。通用 VP 转换、多版本差异报告、彻底移除 VP 都未完成，具体任务见 [TODO](../../project-memory/TODO.md)。ASM 的选择不构成性能优于 Mixin 的结论；特殊位置是否使用 Mixin 仍待确认。
+地图房间、Quest、主题、图鉴和特殊词缀已接管，见 [本轮报告](takeover-report.md)；[箱子类型迁移评估](chest-types-assessment.md) 的 getter 已纳入 chest_names，未新建并存的 chest_types 模块。通用 VP 转换、多版本差异报告、彻底移除 VP 都未完成，具体任务见 [TODO](../../project-memory/TODO.md)。ASM 的选择不构成性能优于 Mixin 的结论；特殊位置是否使用 Mixin 仍待确认。
+
+本轮显示模块共用 `DisplayMethodPatch` 与 `TemplateModule`。`VerifiedMethodPatch` 深复制 invokedynamic 参数数组，保证修改 Lambda 引导参数时失败不影响原方法；图鉴用真实变换方法和最小依赖桩执行引导回归。铭文名称的 VP 所有权检查明确保留加载状态文案。

@@ -5,6 +5,32 @@
       "iskallia/vault/client/gui/screen/bestiary/element/GroupListElement": "f01248a4fc7861e6a079a0989148371f3e42ed97e1f8fb111460cc3efdf7754f",
       "iskallia/vault/util/GroupUtils": "15cb51a1533067537d5b8c8cda70fca7886080df19f14a2b130883343b47374f",
       "iskallia/vault/util/TextUtil": "1ddc64064a28b7b48b960a608e40f709bd262c178cf39196e697354928e51b73"
+    },
+    "texts": {
+      "iskallia/vault/client/gui/screen/bestiary/element/GroupListElement": [],
+      "iskallia/vault/util/GroupUtils": [
+        "",
+        "Dweller",
+        "Entities",
+        "Loading Block Groups Completed in {}ms",
+        "Loading Block Groups Started",
+        "Loading Entity Groups Completed in {}ms",
+        "Loading Entity Groups Started",
+        "dweller",
+        "fighter",
+        "id"
+      ],
+      "iskallia/vault/util/TextUtil": [
+        "",
+        "\u0001\u0001 ",
+        "\n",
+        "#",
+        "$",
+        "<(#[0-9a-fA-F]{6}|\\$[a-zA-Z_]+|[a-zA-Z_]+)>",
+        "Invalid hex color tag {}",
+        "_",
+        "§x"
+      ]
     }
   },
   "[vh3-translation]/patch-mod/translations/vp/bestiary_groups.json": {

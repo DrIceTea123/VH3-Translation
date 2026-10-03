@@ -6,6 +6,30 @@
       "iskallia/vault/client/gui/screen/quest/QuestOverviewElementScreen": "af188b1dd5e695a198e331b7a75f229648cd3e1aaa37a36c1a1575a45c40ab94",
       "iskallia/vault/network/message/ClientboundToastMessage": "9f6f48b678e3f6105629c775f871ff37b5a2e7fb4f95ef472b89a8ab286d7143",
       "iskallia/vault/quest/QuestState": "061fc8e6fc302f9cb4854c493d3344e24118cc6ca1eaee75a04cffe5ff77e2ce"
+    },
+    "texts": {
+      "iskallia/vault/client/gui/screen/quest/QuestButtonElement": [
+        "gui/quests/check",
+        "gui/quests/exclamation_point"
+      ],
+      "iskallia/vault/client/gui/screen/quest/QuestOverviewElementScreen": [
+        "",
+        "Complete",
+        "Completed",
+        "Incomplete",
+        "Locked",
+        "Quest Overview"
+      ],
+      "iskallia/vault/network/message/ClientboundToastMessage": [
+        "title;message;icon"
+      ],
+      "iskallia/vault/quest/QuestState": [
+        "Completed",
+        "InProgress",
+        "ReadyToComplete",
+        "You have completed a quest!",
+        "isSkyVaultWorld"
+      ]
     }
   },
   "origin-3.21.7/config/the_vault/quest/quests.json": {

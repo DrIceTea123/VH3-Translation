@@ -3,6 +3,15 @@
     "sha256": "e4b1e896558d69403d5a36caf9049611642e459f295c964ce24a6be06d67ee38",
     "entries": {
       "iskallia/vault/gear/attribute/talent/TalentLevelAttribute$2": "b60017f7d26e51f49e107004de182aae61bd4755207b04047871f2ba982cf295"
+    },
+    "texts": {
+      "iskallia/vault/gear/attribute/talent/TalentLevelAttribute$2": [
+        "",
+        " to level of ",
+        " to level of all Talents",
+        "all Talents",
+        "all_talents"
+      ]
     }
   },
   "[vh3-translation]/patch-mod/translations/vp/talent_affixes.json": {

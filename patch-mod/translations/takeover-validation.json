@@ -1,0 +1,34 @@
+{
+  "version": "1.0.14",
+  "date": "2026-10-03",
+  "target": "the_vault-1.18.2-3.21.6.6884",
+  "targetSha256": "e4b1e896558d69403d5a36caf9049611642e459f295c964ce24a6be06d67ee38",
+  "javaTests": {
+    "runtime": {
+      "tests": 59,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "transformer": {
+      "tests": 132,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "sourceReaderTests": 3,
+  "verifiedMethods": 105,
+  "translationHooks": 237,
+  "gameTested": false,
+  "jars": {
+    "vh3_translation_patch-1.0.14.jar": {
+      "bytes": 34493,
+      "sha256": "a9b38d51b3258116177b461608626ab0b3d30da70e08d917749a7450d9b2343c"
+    },
+    "vh3_translation_patch-transformer-1.0.14.jar": {
+      "bytes": 99704,
+      "sha256": "7651d343611e21fa82cb1e8e854721e9495f5269dfa26e3a4c66f8bdc6e3bf77"
+    }
+  }
+}

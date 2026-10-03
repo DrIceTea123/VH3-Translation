@@ -10,8 +10,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ResearchNamesModuleTest {
     @Test void commonStartupRequiresAllCommonModulesAndNewEntriesNeedNoCode(@TempDir Path dir) throws Exception {
-        assertEquals(List.of("research_names", "chest_names", "card_text"), CommonModules.all().stream().map(m -> m.id()).toList());
+        assertEquals(java.util.Set.of("research_names", "chest_names", "card_text", "theme_names", "gear_rarity", "quest_names", "gear_affixes", "talent_affixes"), new java.util.HashSet<>(CommonModules.all().stream().map(m -> m.id()).toList()));
         assertThrows(IllegalStateException.class, () -> CommonModules.initialize(dir));
+        for(var module:CommonModules.all()) Files.writeString(dir.resolve(module.configFileName()), "{}");
         Files.writeString(dir.resolve("research_names.json"), "{\"New Custom Research\":\"新研究\"}");
         Files.writeString(dir.resolve("chest_names.json"), "{}");
         Files.writeString(dir.resolve("card_text.json"), "{}");
