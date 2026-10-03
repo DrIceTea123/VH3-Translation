@@ -1,0 +1,144 @@
+[
+  {
+    "target_classes": [
+      {
+        "name": "iskallia.vault.client.gui.screen.bestiary.element.GroupListElement",
+        "method": "<init>",
+        "local": "VgroupName",
+        "ordinal": 34
+      },
+      {
+        "name": "iskallia.vault.client.gui.screen.bestiary.element.EntityGroupElement",
+        "method": "<init>",
+        "local": "VgroupName"
+      }
+    ],
+    "pairs": [
+      {
+        "key": "集群怪物",
+        "value": "Horde"
+      },
+      {
+        "key": "刺客怪物",
+        "value": "Assassin"
+      },
+      {
+        "key": "坦克怪物",
+        "value": "Tank"
+      },
+      {
+        "key": "地牢怪物",
+        "value": "Dungeon"
+      },
+      {
+        "key": "宝库居民",
+        "value": "Dweller"
+      },
+      {
+        "key": "守卫",
+        "value": "Guardians"
+      },
+      {
+        "key": "灾厄村民",
+        "value": "Illagers"
+      },
+      {
+        "key": "冠军",
+        "value": "Champion"
+      },
+      {
+        "key": "地牢首领",
+        "value": "Dungeon Boss"
+      },
+      {
+        "key": "下属怪物",
+        "value": "Minions"
+      },
+      {
+        "key": "精英",
+        "value": "Elite"
+      },
+      {
+        "key": "首领",
+        "value": "Bosses"
+      },
+      {
+        "key": "“容器”",
+        "value": "Vessel"
+      },
+      {
+        "key": "贪婪刺客",
+        "value": "Greed Assassin"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.util.GroupUtils",
+      "method": "getEntityName"
+    },
+    "key": "Dweller",
+    "value": "宝库居民"
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.util.TextUtil",
+      "method": "formatLocationPathAsProperNoun",
+      "local": "Mtrim"
+    },
+    "pairs": [
+      {
+        "key": "Horde",
+        "value": "集群怪物"
+      },
+      {
+        "key": "Assassin",
+        "value": "刺客怪物"
+      },
+      {
+        "key": "Tank",
+        "value": "坦克怪物"
+      },
+      {
+        "key": "Dungeon",
+        "value": "地牢怪物"
+      },
+      {
+        "key": "Guardians",
+        "value": "守卫"
+      },
+      {
+        "key": "Illagers",
+        "value": "灾厄村民"
+      },
+      {
+        "key": "Champion",
+        "value": "冠军"
+      },
+      {
+        "key": "Dungeon Boss",
+        "value": "地牢首领"
+      },
+      {
+        "key": "Minions",
+        "value": "下属怪物"
+      },
+      {
+        "key": "Elite",
+        "value": "精英"
+      },
+      {
+        "key": "Bosses",
+        "value": "首领"
+      },
+      {
+        "key": "Vessel",
+        "value": "“容器”"
+      },
+      {
+        "key": "Greed Assassin",
+        "value": "贪婪刺客"
+      }
+    ]
+  }
+]

@@ -74,5 +74,22 @@
         "value"
       ]
     }
+  ],
+  "bestiary_groups": [
+    {
+      "path": "origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar",
+      "classes": [
+        "iskallia/vault/client/gui/screen/bestiary/element/GroupListElement",
+        "iskallia/vault/util/GroupUtils",
+        "iskallia/vault/util/TextUtil"
+      ]
+    },
+    {
+      "path": "[vh3-translation]/patch-mod/translations/vp/bestiary_groups.json",
+      "fields": [
+        "key",
+        "value"
+      ]
+    }
   ]
 }
