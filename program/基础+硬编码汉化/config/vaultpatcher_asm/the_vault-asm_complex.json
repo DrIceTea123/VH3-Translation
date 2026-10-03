@@ -76,72 +76,7 @@
         "_comment": "宝库卡组包的研究名称已由 VTP research_names 模块接管；译文维护于 config/vh3_translation_patch/research_names.json。"
     },
     {
-        "target_classes": [
-            {
-                "name": "iskallia.vault.client.gui.screen.block.VaultForgeScreen$ProficiencySegment",
-                "method": "getTooltipComponents",
-                "local": "MgetPool",
-                "ordinal": 158
-            }
-        ],
-        "pairs": [
-            {
-                "key": "Scrappy",
-                "value": "破烂"
-            },
-            {
-                "key": "Common",
-                "value": "普通"
-            },
-            {
-                "key": "Rare",
-                "value": "稀有"
-            },
-            {
-                "key": "Epic",
-                "value": "史诗"
-            },
-            {
-                "key": "Omega",
-                "value": "终焉"
-            },
-            {
-                "key": "Unique",
-                "value": "独特"
-            },
-            {
-                "key": "Scrappy+",
-                "value": "破烂+"
-            },
-            {
-                "key": "Common+",
-                "value": "普通+"
-            },
-            {
-                "key": "Rare+",
-                "value": "稀有+"
-            },
-            {
-                "key": "Epic+",
-                "value": "史诗+"
-            },
-            {
-                "key": "Royale",
-                "value": "皇家"
-            },
-            {
-                "key": "Royale_Poor",
-                "value": "皇家_劣质"
-            },
-            {
-                "key": "Chaos",
-                "value": "混沌"
-            },
-            {
-                "key": "Chaotic",
-                "value": "混沌"
-            }
-        ]
+        "_comment": "宝库装备/护符稀有度与池名称显示已由 VTP gear_rarity 接管，不改颜色计算或业务池标识。"
     },
     {
         "target_class": {

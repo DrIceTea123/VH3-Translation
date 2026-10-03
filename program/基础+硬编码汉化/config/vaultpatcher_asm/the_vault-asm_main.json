@@ -2265,32 +2265,9 @@
             {
                 "key": "All",
                 "value": "全部"
-            },
-            {
-                "key": "Scrappy",
-                "value": "破烂"
-            },
-            {
-                "key": "Common",
-                "value": "普通"
-            },
-            {
-                "key": "Rare",
-                "value": "稀有"
-            },
-            {
-                "key": "Epic",
-                "value": "史诗"
-            },
-            {
-                "key": "Omega",
-                "value": "终焉"
-            },
-            {
-                "key": "Special",
-                "value": "特殊"
             }
-        ]
+        ],
+        "_comment": "装备稀有度显示由 VTP gear_rarity 接管；保留其他筛选项。"
     },
     {
         "target_class": {
@@ -10973,45 +10950,7 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.gear.VaultGearRarity",
-            "method": "getDisplayName",
-            "local": "Mcapitalize"
-        },
-        "pairs": [
-            {
-                "key": "Scrappy",
-                "value": "破烂"
-            },
-            {
-                "key": "Common",
-                "value": "普通"
-            },
-            {
-                "key": "Rare",
-                "value": "稀有"
-            },
-            {
-                "key": "Epic",
-                "value": "史诗"
-            },
-            {
-                "key": "Omega",
-                "value": "终焉"
-            },
-            {
-                "key": "Unique",
-                "value": "独特"
-            },
-            {
-                "key": "Special",
-                "value": "特殊"
-            },
-            {
-                "key": "Chaotic",
-                "value": "混沌"
-            }
-        ]
+        "_comment": "宝库装备/护符稀有度与池名称显示已由 VTP gear_rarity 接管，不改颜色计算或业务池标识。"
     },
     {
         "target_class": {
@@ -12527,86 +12466,7 @@
         ]
     },
     {
-        "target_classes": [
-            {
-                "name": "iskallia.vault.item.gear.VaultCharmItem",
-                "local": "MgetName"
-            },
-            {
-                "name": "iskallia.vault.block.render.ShopPedestalBlockTileRenderer",
-                "local": "MgetName"
-            }
-        ],
-        "pairs": [
-            {
-                "key": "Tenos",
-                "value": "特诺斯"
-            },
-            {
-                "key": "Idona",
-                "value": "伊多纳"
-            },
-            {
-                "key": "Velara",
-                "value": "维拉拉"
-            },
-            {
-                "key": "Wendarr",
-                "value": "文达尔"
-            },
-            {
-                "key": "Scrappy",
-                "value": "破烂"
-            },
-            {
-                "key": "Common",
-                "value": "普通"
-            },
-            {
-                "key": "Rare",
-                "value": "稀有"
-            },
-            {
-                "key": "Epic",
-                "value": "史诗"
-            },
-            {
-                "key": "Omega",
-                "value": "终焉"
-            },
-            {
-                "key": "Unique",
-                "value": "独特"
-            },
-            {
-                "key": "Scrappy+",
-                "value": "破烂+"
-            },
-            {
-                "key": "Common+",
-                "value": "普通+"
-            },
-            {
-                "key": "Rare+",
-                "value": "稀有+"
-            },
-            {
-                "key": "Epic+",
-                "value": "史诗+"
-            },
-            {
-                "key": "Royale",
-                "value": "皇家"
-            },
-            {
-                "key": "Royale_Poor",
-                "value": "皇家_劣质"
-            },
-            {
-                "key": "Chaotic",
-                "value": "混沌"
-            }
-        ]
+        "_comment": "宝库装备/护符稀有度与池名称显示已由 VTP gear_rarity 接管，不改颜色计算或业务池标识。"
     },
     {
         "target_class": {

@@ -91,5 +91,33 @@
         "value"
       ]
     }
+  ],
+  "gear_rarity": [
+    {
+      "path": "origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar",
+      "classes": [
+        "iskallia/vault/block/render/ShopPedestalBlockTileRenderer",
+        "iskallia/vault/client/gui/screen/block/TransmogTableScreen$Filter",
+        "iskallia/vault/client/gui/screen/block/VaultForgeScreen$ProficiencySegment",
+        "iskallia/vault/gear/VaultGearRarity",
+        "iskallia/vault/gear/tooltip/VaultGearTooltipItem",
+        "iskallia/vault/item/gear/VaultCharmItem"
+      ]
+    },
+    {
+      "path": "[vh3-translation]/patch-mod/translations/vp/gear_rarity.json",
+      "fields": [
+        "key",
+        "value"
+      ]
+    },
+    {
+      "path": "origin-3.21.7/config/the_vault/gear/gear_roll_type.json",
+      "fields": [
+        "name",
+        "value",
+        "defaultRoll"
+      ]
+    }
   ]
 }

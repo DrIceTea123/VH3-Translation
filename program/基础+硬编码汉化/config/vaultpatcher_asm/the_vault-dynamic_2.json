@@ -78,72 +78,7 @@
         "_comment_0": "目前因未知问题导致使用asm替换会崩溃，临时使用动态替换实现"
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.gear.tooltip.VaultGearTooltipItem",
-            "method": "lambda$addTooltipRarity$12"
-        },
-        "pairs": [
-            {
-                "key": "Scrappy",
-                "value": "破烂"
-            },
-            {
-                "key": "Common",
-                "value": "普通"
-            },
-            {
-                "key": "Rare",
-                "value": "稀有"
-            },
-            {
-                "key": "Epic",
-                "value": "史诗"
-            },
-            {
-                "key": "Omega",
-                "value": "终焉"
-            },
-            {
-                "key": "Unique",
-                "value": "独特"
-            },
-            {
-                "key": "Scrappy+",
-                "value": "破烂+"
-            },
-            {
-                "key": "Common+",
-                "value": "普通+"
-            },
-            {
-                "key": "Rare+",
-                "value": "稀有+"
-            },
-            {
-                "key": "Epic+",
-                "value": "史诗+"
-            },
-            {
-                "key": "Royale",
-                "value": "皇家"
-            },
-            {
-                "key": "Royale Poor",
-                "value": "皇家劣质"
-            },
-            {
-                "key": "Chaos",
-                "value": "混沌"
-            },
-            {
-                "key": "Chaotic",
-                "value": "混沌"
-            },
-            {
-                "key": "Greed",
-                "value": "贪婪"
-            }
-        ]
+        "_comment": "宝库装备/护符稀有度与池名称显示已由 VTP gear_rarity 接管，不改颜色计算或业务池标识。"
     },
     {
         "_comment_0": "这是一个VP的bug导致的临时动态替换方案：VP在同一类中使用不同的多个local时，local全部失效",
