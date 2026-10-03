@@ -119,5 +119,37 @@
         "defaultRoll"
       ]
     }
+  ],
+  "quest_names": [
+    {
+      "path": "origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar",
+      "classes": [
+        "iskallia/vault/client/gui/screen/quest/QuestButtonElement",
+        "iskallia/vault/client/gui/screen/quest/QuestOverviewElementScreen",
+        "iskallia/vault/network/message/ClientboundToastMessage",
+        "iskallia/vault/quest/QuestState"
+      ]
+    },
+    {
+      "path": "origin-3.21.7/config/the_vault/quest/quests.json",
+      "fields": [
+        "id",
+        "name"
+      ]
+    },
+    {
+      "path": "origin-3.21.7/config/the_vault/quest/sky_quests.json",
+      "fields": [
+        "id",
+        "name"
+      ]
+    },
+    {
+      "path": "[vh3-translation]/patch-mod/translations/vp/quest_names.json",
+      "fields": [
+        "key",
+        "value"
+      ]
+    }
   ]
 }

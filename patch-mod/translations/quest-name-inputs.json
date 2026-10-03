@@ -1,0 +1,802 @@
+[
+  {
+    "source": "quests.json",
+    "id": "welcome_quest",
+    "name": "Vault Hunters Introduction"
+  },
+  {
+    "source": "quests.json",
+    "id": "find_chromatic_iron",
+    "name": "Chromatic Iron"
+  },
+  {
+    "source": "quests.json",
+    "id": "mine_vault_stone",
+    "name": "Vault Stone"
+  },
+  {
+    "source": "quests.json",
+    "id": "craft_vault_altar",
+    "name": "The Vault Altar"
+  },
+  {
+    "source": "quests.json",
+    "id": "complete_vault_crystal",
+    "name": "Vault Crystals"
+  },
+  {
+    "source": "quests.json",
+    "id": "learning_skills",
+    "name": "Skills and Talents"
+  },
+  {
+    "source": "quests.json",
+    "id": "archetypes",
+    "name": "Archetypes"
+  },
+  {
+    "source": "quests.json",
+    "id": "vault_enchanter",
+    "name": "Better Enchanting"
+  },
+  {
+    "source": "quests.json",
+    "id": "vault_potions",
+    "name": "Vault Potions"
+  },
+  {
+    "source": "quests.json",
+    "id": "enter_vault",
+    "name": "Vault Hunting"
+  },
+  {
+    "source": "quests.json",
+    "id": "shard_pouch",
+    "name": "Looting!"
+  },
+  {
+    "source": "quests.json",
+    "id": "coin_pouch",
+    "name": "Coin Pouch"
+  },
+  {
+    "source": "quests.json",
+    "id": "complete_bounty",
+    "name": "Bounty Hunting"
+  },
+  {
+    "source": "quests.json",
+    "id": "complete_bounty2",
+    "name": "Bounties and Rewards"
+  },
+  {
+    "source": "quests.json",
+    "id": "animal_pens",
+    "name": "Animal Pens"
+  },
+  {
+    "source": "quests.json",
+    "id": "tool_station",
+    "name": "Tool Station"
+  },
+  {
+    "source": "quests.json",
+    "id": "craft_tool",
+    "name": "Vault Tools"
+  },
+  {
+    "source": "quests.json",
+    "id": "apply_jewel",
+    "name": "Jewels on Tools"
+  },
+  {
+    "source": "quests.json",
+    "id": "jewel_crafting",
+    "name": "Crafting Jewels"
+  },
+  {
+    "source": "quests.json",
+    "id": "level_five",
+    "name": "Expertises"
+  },
+  {
+    "source": "quests.json",
+    "id": "vault_forge",
+    "name": "Forging Gear"
+  },
+  {
+    "source": "quests.json",
+    "id": "gear_forge",
+    "name": "Magnets"
+  },
+  {
+    "source": "quests.json",
+    "id": "artisan_table",
+    "name": "Artisan Station Modifying"
+  },
+  {
+    "source": "quests.json",
+    "id": "wild_focus",
+    "name": "Rerolling Gear Modifiers"
+  },
+  {
+    "source": "quests.json",
+    "id": "craft_recycler",
+    "name": "Scrapping Vault Gear"
+  },
+  {
+    "source": "quests.json",
+    "id": "alchemystation",
+    "name": "Alchemy Table"
+  },
+  {
+    "source": "quests.json",
+    "id": "level_ten",
+    "name": "Vault Objectives"
+  },
+  {
+    "source": "quests.json",
+    "id": "seals",
+    "name": "Choosing your own objective"
+  },
+  {
+    "source": "quests.json",
+    "id": "craft_sage_seal",
+    "name": "Craft a Elixir seal"
+  },
+  {
+    "source": "quests.json",
+    "id": "craft_brazier_seal",
+    "name": "Craft a Brazier seal"
+  },
+  {
+    "source": "quests.json",
+    "id": "craft_hunter_seal",
+    "name": "Craft a Scavenger seal"
+  },
+  {
+    "source": "quests.json",
+    "id": "craft_Prophet_seal",
+    "name": "Craft a Bingo seal"
+  },
+  {
+    "source": "quests.json",
+    "id": "craft_guardian_seal",
+    "name": "Craft a Hunt the Runes seal"
+  },
+  {
+    "source": "quests.json",
+    "id": "regret",
+    "name": "Regretting Decisions"
+  },
+  {
+    "source": "quests.json",
+    "id": "craft_black_market",
+    "name": "Black Market Goods"
+  },
+  {
+    "source": "quests.json",
+    "id": "soul_diffuser",
+    "name": "The Soul Diffuser"
+  },
+  {
+    "source": "quests.json",
+    "id": "identification_stand",
+    "name": "Identification Stand"
+  },
+  {
+    "source": "quests.json",
+    "id": "craft_knowledge_star",
+    "name": "Using Knowledge"
+  },
+  {
+    "source": "quests.json",
+    "id": "reach_level_20",
+    "name": "Level 20 Changes"
+  },
+  {
+    "source": "quests.json",
+    "id": "burgers",
+    "name": "Additional Experience"
+  },
+  {
+    "source": "quests.json",
+    "id": "crystal_workbench",
+    "name": "Modifying Vault Crystals"
+  },
+  {
+    "source": "quests.json",
+    "id": "apply_catalyst",
+    "name": "Catalysts"
+  },
+  {
+    "source": "quests.json",
+    "id": "inscription_table",
+    "name": "Inscriptions"
+  },
+  {
+    "source": "quests.json",
+    "id": "temporal_shards",
+    "name": "Pylons & Temporal Relics"
+  },
+  {
+    "source": "quests.json",
+    "id": "artifact",
+    "name": "Artifacts"
+  },
+  {
+    "source": "quests.json",
+    "id": "spirit_extractor",
+    "name": "Revival"
+  },
+  {
+    "source": "quests.json",
+    "id": "trinkets",
+    "name": "Trinkets"
+  },
+  {
+    "source": "quests.json",
+    "id": "trinket_forge",
+    "name": "Trinket Forge"
+  },
+  {
+    "source": "quests.json",
+    "id": "vaultrocks",
+    "name": "Vault Rocks"
+  },
+  {
+    "source": "quests.json",
+    "id": "warden",
+    "name": "Warden's Vault Rock"
+  },
+  {
+    "source": "quests.json",
+    "id": "plunderer",
+    "name": "Plunderer's Vault Rock"
+  },
+  {
+    "source": "quests.json",
+    "id": "vendoors",
+    "name": "Vendoors"
+  },
+  {
+    "source": "quests.json",
+    "id": "dungeons",
+    "name": "Dungeons"
+  },
+  {
+    "source": "quests.json",
+    "id": "storing_gear",
+    "name": "Storing Gear"
+  },
+  {
+    "source": "quests.json",
+    "id": "skill_altar",
+    "name": "Multiple Builds"
+  },
+  {
+    "source": "quests.json",
+    "id": "transmog",
+    "name": "Transmogrification"
+  },
+  {
+    "source": "quests.json",
+    "id": "unique_codex",
+    "name": "Unique Gear"
+  },
+  {
+    "source": "quests.json",
+    "id": "reach_level_40",
+    "name": "Level 40!"
+  },
+  {
+    "source": "quests.json",
+    "id": "charms",
+    "name": "The Gods"
+  },
+  {
+    "source": "quests.json",
+    "id": "god_altars",
+    "name": "God Altars & Reputation"
+  },
+  {
+    "source": "quests.json",
+    "id": "reach_level_50",
+    "name": "Forgetting Expertises"
+  },
+  {
+    "source": "quests.json",
+    "id": "card_system",
+    "name": "Card System"
+  },
+  {
+    "source": "quests.json",
+    "id": "obtain_card",
+    "name": "Card Types"
+  },
+  {
+    "source": "quests.json",
+    "id": "decks",
+    "name": "Decks"
+  },
+  {
+    "source": "quests.json",
+    "id": "cores",
+    "name": "Deck Cores"
+  },
+  {
+    "source": "quests.json",
+    "id": "obtain_juicer",
+    "name": "Upgrading Cards"
+  },
+  {
+    "source": "quests.json",
+    "id": "blank_key",
+    "name": "Treasure Keys"
+  },
+  {
+    "source": "quests.json",
+    "id": "gear_sealer",
+    "name": "Sealing Gear"
+  },
+  {
+    "source": "quests.json",
+    "id": "treasure",
+    "name": "Treasure Rooms"
+  },
+  {
+    "source": "quests.json",
+    "id": "royale",
+    "name": "Royale Vaults"
+  },
+  {
+    "source": "quests.json",
+    "id": "antiques",
+    "name": "Antiques"
+  },
+  {
+    "source": "quests.json",
+    "id": "companions",
+    "name": "Companions!"
+  },
+  {
+    "source": "quests.json",
+    "id": "soul_flame",
+    "name": "Challenger's Vault Rock"
+  },
+  {
+    "source": "quests.json",
+    "id": "ascension_forge",
+    "name": "Ascension Forge"
+  },
+  {
+    "source": "quests.json",
+    "id": "imbuement_altar",
+    "name": "Imbuement Altars"
+  },
+  {
+    "source": "quests.json",
+    "id": "reach_level_100",
+    "name": "Reaching Max Level"
+  },
+  {
+    "source": "quests.json",
+    "id": "herald",
+    "name": "The Herald"
+  },
+  {
+    "source": "quests.json",
+    "id": "greed",
+    "name": "Greed"
+  },
+  {
+    "source": "quests.json",
+    "id": "greed_cauldron",
+    "name": "Greed Cauldron"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "welcome_quest",
+    "name": "Vault Hunters Introduction"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "learning_skills",
+    "name": "Skills and Talents"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "archetypes",
+    "name": "Archetypes"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "raw_crystal",
+    "name": "Sky Vaulting"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "raw_vault",
+    "name": "Vault Hunting"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "find_chromatic_iron",
+    "name": "Chromatic Iron"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "mine_vault_stone",
+    "name": "Vault Stone"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "craft_vault_altar",
+    "name": "The Vault Altar"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "complete_vault_crystal",
+    "name": "Vault Crystals"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "vault_enchanter",
+    "name": "Better Enchanting"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "vault_potions",
+    "name": "Better Health Potions"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "enter_vault",
+    "name": "Vault Hunting"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "shard_pouch",
+    "name": "Looting!"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "coin_pouch",
+    "name": "Coin Pouch"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "complete_bounty",
+    "name": "Bounty Hunting"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "complete_bounty2",
+    "name": "Bounties and Rewards"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "animal_pens",
+    "name": "Animal Pens"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "tool_station",
+    "name": "Tool Station"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "craft_tool",
+    "name": "Vault Tools"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "apply_jewel",
+    "name": "Jewels on Tools"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "jewel_crafting",
+    "name": "Crafting Jewels"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "level_five",
+    "name": "Expertises"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "vault_forge",
+    "name": "Forging Gear"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "gear_forge",
+    "name": "Magnets"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "artisan_table",
+    "name": "Artisan Station Modifying"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "wild_focus",
+    "name": "Rerolling Gear Modifiers"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "craft_recycler",
+    "name": "Scrapping Vault Gear"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "alchemystation",
+    "name": "Alchemy Table"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "level_ten",
+    "name": "Vault Objectives"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "seals",
+    "name": "Choosing your own objective"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "craft_sage_seal",
+    "name": "Craft a Elixir seal"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "craft_brazier_seal",
+    "name": "Craft a Brazier seal"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "craft_hunter_seal",
+    "name": "Craft a Scavenger seal"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "craft_Prophet_seal",
+    "name": "Craft a Bingo seal"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "craft_guardian_seal",
+    "name": "Craft a Hunt the Runes seal"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "regret",
+    "name": "Regretting Decisions"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "craft_black_market",
+    "name": "Black Market Goods"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "soul_diffuser",
+    "name": "The Soul Diffuser"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "identification_stand",
+    "name": "Identification Stand"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "craft_knowledge_star",
+    "name": "Using Knowledge"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "reach_level_20",
+    "name": "Level 20 Changes"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "burgers",
+    "name": "Additional Experience"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "crystal_workbench",
+    "name": "Modifying Vault Crystals"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "apply_catalyst",
+    "name": "Catalysts"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "inscription_table",
+    "name": "Inscriptions"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "temporal_shards",
+    "name": "Pylons & Temporal Relics"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "artifact",
+    "name": "Artifacts"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "spirit_extractor",
+    "name": "Revival"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "trinkets",
+    "name": "Trinkets"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "trinket_forge",
+    "name": "Trinket Forge"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "vaultrocks",
+    "name": "Vault Rocks"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "warden",
+    "name": "Warden's Vault Rock"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "plunderer",
+    "name": "Plunderer's Vault Rock"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "vendoors",
+    "name": "Vendoors"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "dungeons",
+    "name": "Dungeons"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "storing_gear",
+    "name": "Storing Gear"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "skill_altar",
+    "name": "Multiple Builds"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "transmog",
+    "name": "Transmogrification"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "unique_codex",
+    "name": "Unique Gear"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "reach_level_40",
+    "name": "Level 40!"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "charms",
+    "name": "The Gods"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "god_altars",
+    "name": "God Altars & Reputation"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "reach_level_50",
+    "name": "Forgetting Expertises"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "card_system",
+    "name": "Card System"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "obtain_card",
+    "name": "Card Types"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "decks",
+    "name": "Decks"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "cores",
+    "name": "Deck Cores"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "obtain_juicer",
+    "name": "Upgrading Cards"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "blank_key",
+    "name": "Treasure Keys"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "gear_sealer",
+    "name": "Sealing Gear"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "treasure",
+    "name": "Treasure Rooms"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "royale",
+    "name": "Royale Vaults"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "antiques",
+    "name": "Antiques"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "companions",
+    "name": "Companions!"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "soul_flame",
+    "name": "Challenger's Vault Rock"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "ascension_forge",
+    "name": "Ascension Forge"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "imbuement_altar",
+    "name": "Imbuement Altars"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "reach_level_100",
+    "name": "Reaching Max Level"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "herald",
+    "name": "The Herald"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "greed",
+    "name": "Greed"
+  },
+  {
+    "source": "sky_quests.json",
+    "id": "greed_cauldron",
+    "name": "Greed Cauldron"
+  }
+]

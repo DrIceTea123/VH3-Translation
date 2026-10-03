@@ -5,7 +5,7 @@ import java.util.*;
 
 /** 早期模块注册表：同类只生成一个转换器，模块可拥有多个方法及不同适用端。 */
 public final class PatchModules {
-    private static final List<PatchModule> ALL = validate(List.of(new MobNamesModule(), new SoundNamesModule(), new ResearchNamesModule(), new ChestNamesModule(), new CardTextModule(), new GearRarityModule(), new BestiaryGroupsModule(), new OverworldNamesModule(), new RoomNamesModule(), new ThemeNamesModule(), new CrystalStatsModule()));
+    private static final List<PatchModule> ALL = validate(List.of(new MobNamesModule(), new SoundNamesModule(), new ResearchNamesModule(), new ChestNamesModule(), new CardTextModule(), new QuestNamesModule(), new GearRarityModule(), new BestiaryGroupsModule(), new OverworldNamesModule(), new RoomNamesModule(), new ThemeNamesModule(), new CrystalStatsModule()));
     private PatchModules() {}
     public static List<PatchModule> all() { return ALL; }
     public static List<PatchModule> active(boolean client) {
