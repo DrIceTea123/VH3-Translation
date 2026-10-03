@@ -1,0 +1,36 @@
+{
+  "crystal_stats": [
+    {
+      "path": "origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar",
+      "classes": [
+        "iskallia/vault/client/gui/screen/summary/element/CrystalStatsContainerElement",
+        "iskallia/vault/client/gui/screen/summary/element/CrystalStatsContainerElement$1"
+      ]
+    },
+    {
+      "path": "[vh3-translation]/patch-mod/translations/vp/crystal_stats.json",
+      "fields": [
+        "key",
+        "value"
+      ]
+    }
+  ],
+  "theme_names": [
+    {
+      "path": "origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar",
+      "classes": [
+        "iskallia/vault/client/gui/screen/summary/element/CrystalStatsContainerElement",
+        "iskallia/vault/core/vault/player/ClassicListenersLogic",
+        "iskallia/vault/item/AugmentItem",
+        "iskallia/vault/item/crystal/theme/ValueCrystalTheme"
+      ]
+    },
+    {
+      "path": "origin-3.21.7/config/the_vault/gen/themes.json",
+      "fields": [
+        "id",
+        "name"
+      ]
+    }
+  ]
+}
