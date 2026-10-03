@@ -1,10 +1,78 @@
 [
     {
         "name": "宝藏猎人主要硬编码汉化-动态替换部分",
-        "desc": "无法asm替换的硬编码。版本V2.6.4",
+        "desc": "无法asm替换的硬编码。版本V2.6.15",
         "authors": "KlparetlR、VM汉化组、ByF、DrIceTea",
         "mods": "the_vault",
         "dynamic": true
+    },
+    {
+        "_comment_0": "使用asm替换会崩溃，临时使用动态替换实现",
+        "_comment_1": "可能的原因：直接使用枚举转化为显示文本"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.item.ItemLegendaryTreasure",
+            "method": "m_7373_"
+        },
+        "pairs": [
+            {
+                "key": "COMMON",
+                "value": "@普通"
+            },
+            {
+                "key": "RARE",
+                "value": "@稀有"
+            },
+            {
+                "key": "EPIC",
+                "value": "@史诗"
+            },
+            {
+                "key": "OMEGA",
+                "value": "@终焉"
+            }
+        ]
+    },
+    {
+        "_comment_0": "目前使用asm替换会崩溃/不生效，临时使用动态替换实现"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.gear.tooltip.VaultGearTooltipItem",
+            "method": "addTooltipEmptyAffixes"
+        },
+        "pairs": [
+            {
+                "key": "■ empty prefix",
+                "value": "■ 空前缀"
+            },
+            {
+                "key": "■ empty suffix",
+                "value": "■ 空后缀"
+            }
+        ]
+    },
+    {
+        "_comment_0": "这是一个VP的bug导致的临时动态替换方案：VP在同一类中使用不同的多个local时，local全部失效",
+        "_comment_1": "此条目位置：",
+        "_comment_2": "name = iskallia.vault.item.CompanionItemClient",
+        "_comment_3": "local = Mcapitalize"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.item.CompanionItemClient"
+        },
+        "pairs": [
+            {
+                "key": "Legend",
+                "value": "@传奇"
+            },
+            {
+                "key": "Pet",
+                "value": "@宠物"
+            }
+        ]
     },
     {
         "_comment_0": "此处为保存在宝库内生成结构中的彩蛋物品的名称、描述等文本",

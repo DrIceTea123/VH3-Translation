@@ -1822,6 +1822,24 @@
         ]
     },
     {
+        "_comment": "宝库卡组包的研究名称已由 VTP research_names 模块接管；译文维护于 config/vh3_translation_patch/research_names.json。"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.block.DeckCraftingScreen"
+        },
+        "pairs": [
+            {
+                "key": "Requires ",
+                "value": "需要"
+            },
+            {
+                "key": " Research",
+                "value": "研究"
+            }
+        ]
+    },
+    {
         "target_class": {
             "name": "iskallia.vault.client.gui.screen.block.DragonPathNodeScreen"
         },
@@ -2541,6 +2559,75 @@
         },
         "key": "Wardrobe",
         "value": "衣橱"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.bounty.element.task.AbstractTaskElement"
+        },
+        "pairs": [
+            {
+                "key": "Status: ",
+                "value": "状态："
+            },
+            {
+                "key": "Description:",
+                "value": "描述:"
+            },
+            {
+                "key": "Progress:",
+                "value": "进度:"
+            },
+            {
+                "key": "Rewards: (",
+                "value": "奖励: ("
+            },
+            {
+                "key": " Vault XP",
+                "value": " 宝库经验"
+            },
+            {
+                "key": "Vault Gear level is locked to your Vault Level at the time of Bounty generation.",
+                "value": "宝库装备的等级锁定为产生奖励时的宝库等级。"
+            },
+            {
+                "key": " - The Vault",
+                "value": " - 宝库世界"
+            },
+            {
+                "key": " - Any Dimension",
+                "value": " - 任意维度"
+            }
+        ]
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.client.gui.screen.bounty.element.task.AbstractTaskElement",
+            "method": "<init>",
+            "local": "VrewardPool",
+            "ordinal": 337
+        },
+        "pairs": [
+            {
+                "key": "legendary",
+                "value": "传奇"
+            },
+            {
+                "key": "common",
+                "value": "普通"
+            },
+            {
+                "key": "rare",
+                "value": "稀有"
+            },
+            {
+                "key": "epic",
+                "value": "史诗"
+            },
+            {
+                "key": "omega",
+                "value": "终焉"
+            }
+        ]
     },
     {
         "target_class": {
@@ -14297,6 +14384,47 @@
             {
                 "key": "Durability Very Low",
                 "value": "耐久极低"
+            }
+        ]
+    },
+    {
+        "_comment_1": "图鉴族类由 VTP bestiary_groups 分离原文查找与中文显示；不再将中文译回英文。",
+        "_comment_2": "族类译名已迁至 VTP bestiary_groups；保留悬赏种类与维度译名。"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.util.TextUtil",
+            "method": "formatLocationPathAsProperNoun",
+            "local": "Mtrim"
+        },
+        "pairs": [
+            {
+                "key": "Item Discovery",
+                "value": "发现物品"
+            },
+            {
+                "key": "Mining",
+                "value": "挖矿"
+            },
+            {
+                "key": "Kill Entity",
+                "value": "击杀生物"
+            },
+            {
+                "key": "Item Submission",
+                "value": "提交物品"
+            },
+            {
+                "key": "Completion",
+                "value": "完成"
+            },
+            {
+                "key": "Overworld",
+                "value": "主世界"
+            },
+            {
+                "key": "The Nether",
+                "value": "下界"
             }
         ]
     },

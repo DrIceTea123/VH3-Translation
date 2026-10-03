@@ -1,11 +1,9 @@
 {
     "mods": [
         "the_vault-asm_main",
-        "the_vault-asm_long",
-        "the_vault-asm_complex",
+        "the_vault-asm_ulti",
         "other_mods",
-        "the_vault-dynamic",
-        "the_vault-dynamic_2"
+        "the_vault-dynamic"
     ],
     "class_patch": false,
     "debug_mode": {
