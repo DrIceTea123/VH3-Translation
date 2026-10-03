@@ -1,0 +1,17 @@
+{
+  "origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar": {
+    "sha256": "e4b1e896558d69403d5a36caf9049611642e459f295c964ce24a6be06d67ee38",
+    "entries": {
+      "iskallia/vault/gear/attribute/talent/TalentLevelAttribute$2": "b60017f7d26e51f49e107004de182aae61bd4755207b04047871f2ba982cf295"
+    }
+  },
+  "[vh3-translation]/patch-mod/translations/vp/talent_affixes.json": {
+    "sha256": "698aa35c1e79a851bd78022cc8b998c18a74c675377a5d5be23a33b761f2f13e",
+    "entries": {
+      "$[0].pairs[0].key": " to level of ",
+      "$[0].pairs[0].value": " 天赋等级-",
+      "$[0].pairs[1].key": "all Talents",
+      "$[0].pairs[1].value": "所有天赋"
+    }
+  }
+}

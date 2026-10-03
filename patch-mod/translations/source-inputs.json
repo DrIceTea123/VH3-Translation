@@ -151,5 +151,63 @@
         "value"
       ]
     }
+  ],
+  "gear_affixes": [
+    {
+      "path": "origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar",
+      "classes": [
+        "iskallia/vault/gear/attribute/ability/AbilityAreaOfEffectFlatAttribute$Reader",
+        "iskallia/vault/gear/attribute/ability/AbilityAreaOfEffectPercentAttribute$Reader",
+        "iskallia/vault/gear/attribute/ability/AbilityCooldownFlatAttribute$Reader",
+        "iskallia/vault/gear/attribute/ability/AbilityCooldownPercentAttribute$Reader",
+        "iskallia/vault/gear/attribute/ability/AbilityLevelAttribute$2",
+        "iskallia/vault/gear/attribute/ability/AbilityManaCostFlatAttribute$Reader",
+        "iskallia/vault/gear/attribute/ability/AbilityManaCostPercentAttribute$Reader",
+        "iskallia/vault/gear/attribute/ability/special/EntropyPoisonModification",
+        "iskallia/vault/gear/attribute/ability/special/FrostNovaVulnerabilityModification",
+        "iskallia/vault/gear/attribute/custom/HitHeartsAttribute$Generator",
+        "iskallia/vault/gear/attribute/custom/HitHeartsAttribute$Reader",
+        "iskallia/vault/gear/attribute/custom/RelentlessStrikeAttribute$Generator",
+        "iskallia/vault/gear/attribute/custom/RelentlessStrikeAttribute$Reader",
+        "iskallia/vault/gear/attribute/custom/ability/AbilityTriggerOnDamageAttribute$Generator",
+        "iskallia/vault/gear/attribute/custom/ability/AbilityTriggerOnDamageAttribute$Reader",
+        "iskallia/vault/gear/attribute/custom/ability/ArcaneNovaOnHitAttribute$Generator",
+        "iskallia/vault/gear/attribute/custom/ability/ArcaneNovaOnHitAttribute$Reader",
+        "iskallia/vault/gear/attribute/custom/ability/BroodmotherWebAttribute$Generator",
+        "iskallia/vault/gear/attribute/custom/ability/BroodmotherWebAttribute$Reader",
+        "iskallia/vault/gear/attribute/custom/loot/AbilityCastOnLootAttribute$Generator",
+        "iskallia/vault/gear/attribute/custom/loot/AbilityCastOnLootAttribute$Reader",
+        "iskallia/vault/gear/attribute/custom/loot/ManaPerLootAttribute$Generator",
+        "iskallia/vault/gear/attribute/custom/loot/ManaPerLootAttribute$Reader",
+        "iskallia/vault/gear/reader/IncreasedPercentageReader",
+        "iskallia/vault/gear/reader/SweepingDamageReader",
+        "iskallia/vault/gear/reader/special/CastleBastionModifierReader",
+        "iskallia/vault/gear/reader/special/LuckyThornsModifierReader",
+        "iskallia/vault/gear/reader/special/RelentlessStrikeModifierReader",
+        "iskallia/vault/gear/reader/special/ThirdAttackModifierReader"
+      ]
+    },
+    {
+      "path": "[vh3-translation]/patch-mod/translations/vp/gear_affixes.json",
+      "fields": [
+        "key",
+        "value"
+      ]
+    }
+  ],
+  "talent_affixes": [
+    {
+      "path": "origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar",
+      "classes": [
+        "iskallia/vault/gear/attribute/talent/TalentLevelAttribute$2"
+      ]
+    },
+    {
+      "path": "[vh3-translation]/patch-mod/translations/vp/talent_affixes.json",
+      "fields": [
+        "key",
+        "value"
+      ]
+    }
   ]
 }

@@ -1,0 +1,537 @@
+[
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.ability.special.EntropyPoisonModification"
+    },
+    "key": "Entropic Bind also applies Poison ",
+    "value": "无序束缚附带中毒"
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.ability.special.FrostNovaVulnerabilityModification"
+    },
+    "pairs": [
+      {
+        "key": "Frost Nova also applies Level ",
+        "value": "霜冻新星附带"
+      },
+      {
+        "key": " Vulnerability",
+        "value": "级易伤"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.ability.AbilityAreaOfEffectFlatAttribute$Reader"
+    },
+    "pairs": [
+      {
+        "key": "Area Of Effect",
+        "value": "效果范围"
+      },
+      {
+        "key": " Blocks ",
+        "value": " 格"
+      },
+      {
+        "key": " of ",
+        "value": "-"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.ability.AbilityAreaOfEffectPercentAttribute$Reader"
+    },
+    "pairs": [
+      {
+        "key": "Area Of Effect",
+        "value": "效果范围"
+      },
+      {
+        "key": " more ",
+        "value": " 提升"
+      },
+      {
+        "key": " less ",
+        "value": " 降低"
+      },
+      {
+        "key": " of ",
+        "value": "-"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.ability.AbilityCooldownFlatAttribute$Reader"
+    },
+    "pairs": [
+      {
+        "key": "s",
+        "value": "秒"
+      },
+      {
+        "key": " to ",
+        "value": ""
+      },
+      {
+        "key": "Cooldown",
+        "value": "冷却时间"
+      },
+      {
+        "key": " of ",
+        "value": "-"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.ability.AbilityCooldownPercentAttribute$Reader",
+      "method": ""
+    },
+    "pairs": [
+      {
+        "key": "Lowers the ",
+        "value": "降低"
+      },
+      {
+        "key": "Cooldown",
+        "value": "冷却时间"
+      },
+      {
+        "key": " of ",
+        "value": "-"
+      },
+      {
+        "key": " by ",
+        "value": "-"
+      },
+      {
+        "key": " more Cooldown of ",
+        "value": "增加冷却时间-"
+      },
+      {
+        "key": " less Cooldown of ",
+        "value": "减少冷却时间-"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.ability.AbilityLevelAttribute$2"
+    },
+    "pairs": [
+      {
+        "key": " to level of ",
+        "value": " 技能等级-"
+      },
+      {
+        "key": "all Abilities",
+        "value": "所有技能"
+      },
+      {
+        "key": " to level of all ",
+        "value": " 技能等级-所有"
+      },
+      {
+        "key": " abilities",
+        "value": "技能"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.ability.AbilityManaCostFlatAttribute$Reader"
+    },
+    "pairs": [
+      {
+        "key": " to ",
+        "value": " "
+      },
+      {
+        "key": "Mana Cost",
+        "value": "魔力消耗"
+      },
+      {
+        "key": " of ",
+        "value": "-"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.ability.AbilityManaCostPercentAttribute$Reader"
+    },
+    "pairs": [
+      {
+        "key": " more ",
+        "value": " 增加"
+      },
+      {
+        "key": " less ",
+        "value": " 降低"
+      },
+      {
+        "key": "Mana Cost",
+        "value": "魔力消耗"
+      },
+      {
+        "key": " of ",
+        "value": "-"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.custom.ability.ArcaneNovaOnHitAttribute$Generator"
+    },
+    "pairs": [
+      {
+        "key": "Every ",
+        "value": "每"
+      },
+      {
+        "key": " hits unleash an Arcane nova dealing ",
+        "value": "次攻击释放一次奥术新星，造成"
+      },
+      {
+        "key": " of your Ability Power",
+        "value": "的法术伤害"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.custom.ability.ArcaneNovaOnHitAttribute$Reader"
+    },
+    "pairs": [
+      {
+        "key": "Arcane Nova",
+        "value": "奥术新星"
+      },
+      {
+        "key": "Every ",
+        "value": "每"
+      },
+      {
+        "key": " hits unleash an Arcane nova dealing ",
+        "value": "次攻击释放一次奥术新星，造成"
+      },
+      {
+        "key": " of your Ability Power in a ",
+        "value": "的法术伤害，范围"
+      },
+      {
+        "key": " block radius",
+        "value": "格"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.custom.ability.BroodmotherWebAttribute$Generator"
+    },
+    "pairs": [
+      {
+        "key": "Blocks release web nova: ",
+        "value": "格挡释放蛛网爆发："
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.custom.ability.BroodmotherWebAttribute$Reader"
+    },
+    "pairs": [
+      {
+        "key": "Broodmother's Web",
+        "value": "育母蛛网"
+      },
+      {
+        "key": "Successful blocks have a ",
+        "value": "成功格挡有"
+      },
+      {
+        "key": " chance to release a web nova dealing ",
+        "value": "概率释放蛛网爆发，造成"
+      },
+      {
+        "key": " Attack Damage and slowing mobs hit",
+        "value": "攻击伤害并减速命中的敌人"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.custom.loot.AbilityCastOnLootAttribute$Generator"
+    },
+    "pairs": [
+      {
+        "key": "Looting ",
+        "value": "搜刮"
+      },
+      {
+        "key": " has a ",
+        "value": "有"
+      },
+      {
+        "key": " chance to cast a level ",
+        "value": "概率释放"
+      },
+      {
+        "key": " ",
+        "value": "级"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.custom.loot.AbilityCastOnLootAttribute$Reader"
+    },
+    "pairs": [
+      {
+        "key": "Looting ",
+        "value": "搜刮"
+      },
+      {
+        "key": " has a ",
+        "value": "有"
+      },
+      {
+        "key": " chance to cast a level ",
+        "value": "概率释放"
+      },
+      {
+        "key": " ",
+        "value": "级"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.custom.loot.ManaPerLootAttribute$Generator"
+    },
+    "pairs": [
+      {
+        "key": " Mana per ",
+        "value": " 点魔力-搜刮"
+      },
+      {
+        "key": " looted",
+        "value": "触发"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.custom.loot.ManaPerLootAttribute$Reader"
+    },
+    "pairs": [
+      {
+        "key": " chance to generate ",
+        "value": " 概率恢复"
+      },
+      {
+        "key": " Mana per ",
+        "value": "点魔力-搜刮"
+      },
+      {
+        "key": " looted",
+        "value": "触发"
+      }
+    ]
+  },
+  {
+    "target_classes": [
+      {
+        "name": "iskallia.vault.gear.attribute.custom.HitHeartsAttribute"
+      },
+      {
+        "name": "iskallia.vault.gear.attribute.custom.HitHeartsAttribute$Reader"
+      }
+    ],
+    "pairs": [
+      {
+        "key": " Heart Fragments",
+        "value": " 红心碎片"
+      },
+      {
+        "key": "Killing a mob has a ",
+        "value": "击杀怪物有"
+      },
+      {
+        "key": " chance to drop a heart fragment, increasing your health by ",
+        "value": "概率掉落红心碎片，恢复生命值"
+      }
+    ]
+  },
+  {
+    "target_classes": [
+      {
+        "name": "iskallia.vault.gear.attribute.custom.ability.AbilityTriggerOnDamageAttribute"
+      },
+      {
+        "name": "iskallia.vault.gear.attribute.custom.ability.AbilityTriggerOnDamageAttribute$Reader"
+      }
+    ],
+    "pairs": [
+      {
+        "key": "Every hit you take has a ",
+        "value": "每次受到攻击时有"
+      },
+      {
+        "key": " chance to cast a level ",
+        "value": "概率施放"
+      },
+      {
+        "key": " ",
+        "value": "级"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.reader.IncreasedPercentageReader",
+      "method": "getDisplay"
+    },
+    "pairs": [
+      {
+        "key": "Increased",
+        "value": "提升:"
+      },
+      {
+        "key": "Reduced",
+        "value": "降低:"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.reader.SweepingDamageReader"
+    },
+    "pairs": [
+      {
+        "key": "Sweeping Hit Damage",
+        "value": "横扫攻击伤害"
+      },
+      {
+        "key": " of Attack Damage dealt as Sweeping Hit",
+        "value": " 横扫攻击伤害"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.reader.special.CastleBastionModifierReader"
+    },
+    "pairs": [
+      {
+        "key": "Standing still builds ",
+        "value": "站定时叠加"
+      },
+      {
+        "key": "Bastion",
+        "value": "壁垒"
+      },
+      {
+        "key": " up to ",
+        "value": "，最大"
+      },
+      {
+        "key": " stacks. Each stack reduces final damage taken by ",
+        "value": "层。每层使受到的最终伤害降低"
+      },
+      {
+        "key": ". Taking damage with ",
+        "value": "。若持有"
+      },
+      {
+        "key": " knocks direct attackers away",
+        "value": "受伤会击退攻击者"
+      },
+      {
+        "key": ". Moving removes at most ",
+        "value": "。移动时每秒移除"
+      },
+      {
+        "key": " stack per second",
+        "value": "层"
+      },
+      {
+        "key": "Standing still builds Bastion up to 5 stacks. Each stack reduces final damage taken by ",
+        "value": "站定时叠加壁垒，最大5层。每层使受到的最终伤害降低"
+      },
+      {
+        "key": ". Taking damage with Bastion knocks direct attackers away. Moving removes at most 1 stack per second",
+        "value": "。若持有壁垒受伤会击退攻击者。移动时每秒移除1层"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.reader.special.LuckyThornsModifierReader"
+    },
+    "pairs": [
+      {
+        "key": "Thorns ",
+        "value": "荆棘"
+      },
+      {
+        "key": "can now trigger ",
+        "value": "现在可以触发"
+      },
+      {
+        "key": "Lucky Hits",
+        "value": "幸运一击"
+      }
+    ]
+  },
+  {
+    "target_classes": [
+      {
+        "name": "iskallia.vault.gear.attribute.custom.RelentlessStrikeAttribute$Generator"
+      },
+      {
+        "name": "iskallia.vault.gear.attribute.custom.RelentlessStrikeAttribute$Reader"
+      },
+      {
+        "name": "iskallia.vault.gear.reader.special.RelentlessStrikeModifierReader"
+      }
+    ],
+    "pairs": [
+      {
+        "key": "Attacking a mob increases your attack damage by ",
+        "value": "攻击命中使攻击伤害提升"
+      },
+      {
+        "key": ", this effect can stack up to ",
+        "value": "，最多堆叠"
+      },
+      {
+        "key": " times and lasts for ",
+        "value": "层，持续"
+      },
+      {
+        "key": "8 seconds",
+        "value": "8秒"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.reader.special.ThirdAttackModifierReader"
+    },
+    "pairs": [
+      {
+        "key": "Every third attack deals ",
+        "value": "每三次攻击会造成"
+      },
+      {
+        "key": " increased physical damage",
+        "value": "的额外物理伤害"
+      }
+    ]
+  }
+]

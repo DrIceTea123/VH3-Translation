@@ -1,0 +1,17 @@
+[
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.talent.TalentLevelAttribute$2"
+    },
+    "pairs": [
+      {
+        "key": " to level of ",
+        "value": " 天赋等级-"
+      },
+      {
+        "key": "all Talents",
+        "value": "所有天赋"
+      }
+    ]
+  }
+]
