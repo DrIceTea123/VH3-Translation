@@ -13,22 +13,30 @@ import java.util.Map;
 
 /** 每个模块独立持有外部配置快照；只读取用户文件，不生成或内置译文。 */
 public final class ModuleConfig {
+    @FunctionalInterface public interface Validator { void validate(Map<String, String> values) throws IOException; }
     private final String fileName;
+    private final Validator validator;
     private volatile Map<String, String> values = Map.of();
 
     public ModuleConfig(String moduleId) {
+        this(moduleId, values -> {});
+    }
+    public ModuleConfig(String moduleId, Validator validator) {
         if (!moduleId.matches("[a-z][a-z0-9_]*")) throw new IllegalArgumentException("Invalid module ID: " + moduleId);
         this.fileName = moduleId + ".json";
+        this.validator = validator;
     }
 
     public String fileName() { return fileName; }
     public String get(String key) { return key == null ? null : values.get(key); }
+    public Map<String, String> snapshot() { return values; }
 
     /** 成功才整体替换快照；异常交给调用者记录，旧配置完全不变。 */
     public synchronized void reload(Path directory) throws IOException {
         Path file = directory.resolve(fileName);
         // 文件必须由汉化包提供。缺失或损坏时抛错，且不会写回或补齐任何条目。
         Map<String, String> next = parse(Files.readString(file, StandardCharsets.UTF_8));
+        validator.validate(next);
         values = next;
     }
 

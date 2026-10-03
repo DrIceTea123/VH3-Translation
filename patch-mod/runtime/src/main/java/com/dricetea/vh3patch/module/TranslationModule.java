@@ -12,13 +12,15 @@ public abstract class TranslationModule {
 
     protected TranslationModule(String id) {
         this.id = id;
-        config = new ModuleConfig(id);
+        config = new ModuleConfig(id, this::validateConfiguration);
     }
 
     public final String id() { return id; }
     public final String configFileName() { return config.fileName(); }
 
     protected String mappingKey(String input) { return input; }
+    protected void validateConfiguration(java.util.Map<String, String> values) throws IOException {}
+    protected final java.util.Map<String, String> configurationSnapshot() { return config.snapshot(); }
 
     /** 未配置返回 null，具体模块可继续使用游戏语言系统或原始返回值。 */
     public final String configuredTranslation(String input) { return config.get(mappingKey(input)); }

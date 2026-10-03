@@ -1,6 +1,6 @@
 # 模块开发与架构
 
-使用、配置和构建命令见 [README](../README.md)；结算与声音的输入与注入位置见 [文本获取](text-capture.md)。研究模块见 [研究名覆盖](research-names.md)，宝箱模块见 [宝箱名称](chest-names.md)，经验入口分工见 [经验提示](vault-xp.md)。本文只维护代码职责和新增模块步骤。
+使用、配置和构建命令见 [README](../README.md)；结算与声音的输入与注入位置见 [文本获取](text-capture.md)。研究模块见 [研究名覆盖](research-names.md)，宝箱模块见 [宝箱名称](chest-names.md)，经验入口分工见 [经验提示](vault-xp.md)，卡牌组件与句式见 [卡牌显示](card-text.md)。本文只维护代码职责和新增模块步骤。
 
 ## 加载层与职责
 
@@ -14,7 +14,7 @@ modid 为 `vh3_translation_patch`，显示名 VH3 Translation Patch；包名前�
 | `TranslationTransformationService` | 启动预检、按端注册 PRE_CLASS 转换器与应用 |
 | `PatchTool`、`JsonFiles`、`VpCompatibility` | 离线命令分派、JSON 读写、VP 遍历/迁移 |
 | runtime 的 `modules/*Module` | 模块 ID、输入处理、配置查表与回退 |
-| `TranslationModule`、`ModuleConfig` | 外部配置契约、严格解析和有效快照 |
+| `TranslationModule`、`ModuleConfig` | 外部配置契约、严格解析、模块语义校验和有效快照 |
 | `CommonModules` | 两端通用模块首次加载，不引用客户端类型 |
 | `ClientModules` | 客户端注册与 F3+T；首次失败向 Forge 传播，重载失败保留旧值 |
 
@@ -44,6 +44,8 @@ VTP 在 ModLauncher 9.1.3 的 PRE_CLASS 阶段校验与注入，先于 VP 的 CL
 现有 `translations/mob-name-import.json`、`sound-name-import.json` 是历史来源报告，不参与游戏加载，也不进入 JAR。结算原 237 条导入 235 条，历史报告当时将 Black Widow Spider 与 Mummy 列为未确认；1.0.6 根据基线真实 ID 已另行加入 mummy 等 11 条译文；声音 203 条全部与真实字段唯一对应。正式配置可以独立增删改，测试只校验其结构，不强制等于历史数据。
 
 宝箱历史片段包含混合组，通用迁移拒绝自动整组删除，必须逐对审核；宝箱导入只生成候选译文。VP 发布迁移支持无接管规则；旧模块各有一组，研究模块接管研究列表和卡组名称两组，重复组或混入无关目标时报错。研究历史 61 对合并为 54 个唯一键，Waystones 按用户选择采用旧文件中后一译名“传送石碑”。声音旧规则在调用方 `collectSoundEntries/local=MformatSoundName`，冲突判定同时覆盖调用方与格式化方法，保留同类其他界面翻译。
+
+card_text 的历史片段另外保存在 `translations/vp/card_text.json`，仅供溯源和冲突回归。它使用完整句式替换旧零散片段，拒绝自动整组迁移，不提供片段直接导入。`ModuleConfig.Validator` 在新快照发布前执行模块语义校验；卡牌句式参数不合法时保留旧快照。
 
 ## 后续方向与限制
 

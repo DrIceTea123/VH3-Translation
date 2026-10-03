@@ -35,48 +35,7 @@
         ]
     },
     {
-        "_comment_0": "这是一个VP的bug导致的临时动态替换方案：VP在同一类中使用不同的多个local时，local全部失效",
-        "_comment_1": "此条目位置：",
-        "_comment_2": "name = iskallia.vault.core.card.Card",
-        "_comment_3": "method = addText",
-        "_comment_4": "local = Mget",
-        "_comment_5": "ordinal = 251"
-    },
-    {
-        "target_class": {
-            "name": "iskallia.vault.core.card.Card",
-            "method": "addText"
-        },
-        "pairs": [
-            {
-                "key": "Foil",
-                "value": "陪衬"
-            },
-            {
-                "key": "Offensive",
-                "value": "进攻"
-            },
-            {
-                "key": "Defensive",
-                "value": "防御"
-            },
-            {
-                "key": "Utility",
-                "value": "实用"
-            },
-            {
-                "key": "Magical",
-                "value": "魔法"
-            },
-            {
-                "key": "Essence",
-                "value": "精华"
-            },
-            {
-                "key": "Scaling",
-                "value": "强化"
-            }
-        ]
+        "_comment": "卡牌名称、条件、效果与物品提示已由 VTP card_text 接管；界面和命令固定文案仍由 VP 处理。"
     },
     {
         "_comment_0": "这是一个VP的bug导致的临时动态替换方案：VP在同一类中使用不同的多个local时，local全部失效",
@@ -214,11 +173,26 @@
         ]
     },
     {
-        "_comment_0": "目前因未知问题导致使用asm替换会崩溃，临时使用动态替换实现",
-        "_comment_1": "此条目位置：",
-        "_comment_2": "name = iskallia.vault.gear.tooltip.VaultGearTooltipItem",
-        "_comment_3": "method = lambda$addTooltipRarity$12",
-        "_comment_4": "local = MgetName"
+        "_comment_0": "目前使用asm替换会崩溃/不生效，临时使用动态替换实现"
+    },
+    {
+        "target_class": {
+            "name": "iskallia.vault.gear.tooltip.VaultGearTooltipItem",
+            "method": "addTooltipEmptyAffixes"
+        },
+        "pairs": [
+            {
+                "key": "■ empty prefix",
+                "value": "■ 空前缀"
+            },
+            {
+                "key": "■ empty suffix",
+                "value": "■ 空后缀"
+            }
+        ]
+    },
+    {
+        "_comment_0": "目前因未知问题导致使用asm替换会崩溃，临时使用动态替换实现"
     },
     {
         "target_class": {

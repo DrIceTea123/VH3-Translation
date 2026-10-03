@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import com.dricetea.vh3patch.transformer.modules.SoundNamesModule;
 import com.dricetea.vh3patch.transformer.modules.ResearchNamesModule;
 import com.dricetea.vh3patch.transformer.modules.ChestNamesModule;
+import com.dricetea.vh3patch.transformer.modules.CardTextModule;
 import java.util.List;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.io.TempDir;
@@ -64,8 +65,8 @@ class PreflightTest {
         companion(game, module.spec(), module.spec().patchVersion());
         assertDoesNotThrow(() -> TranslationTransformationService.preflight(game, fixture, false));
         assertThrows(Exception.class, () -> TranslationTransformationService.preflight(game, fixture, true));
-        assertEquals(List.of("research_names", "chest_names"), PatchModules.active(false).stream().map(m -> m.spec().moduleId()).toList());
-        assertEquals(4, PatchModules.byClass(false).size());
+        assertEquals(List.of("research_names", "chest_names", "card_text"), PatchModules.active(false).stream().map(m -> m.spec().moduleId()).toList());
+        assertEquals(8, PatchModules.byClass(false).size());
         assertTrue(PatchModules.byClass(false).keySet().stream().noneMatch(n -> n.contains("/client/")));
     }
 
@@ -89,6 +90,7 @@ class PreflightTest {
                 p.className(), p.methodName(), p.descriptor(), p.fingerprint(), p.returnCount(),
                 p.moduleId(), p.helperClass(), p.ownedLiterals(), p.side())).toList();
         if (module instanceof ResearchNamesModule) return new ResearchNamesModule(fixtures);
+        if (module instanceof CardTextModule) return new CardTextModule(fixtures);
         if (module instanceof ChestNamesModule) return new ChestNamesModule(fixtures);
         return module instanceof MobNamesModule ? new MobNamesModule(fixtures) : new SoundNamesModule(fixtures.get(0));
     }

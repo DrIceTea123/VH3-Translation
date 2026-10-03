@@ -760,19 +760,7 @@
         "value": "独特板条箱"
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.block.CardBinderBlock"
-        },
-        "pairs": [
-            {
-                "key": "Stored Cards: ",
-                "value": "已存储的卡牌："
-            },
-            {
-                "key": "Stored Cards: 256+",
-                "value": "已存储的卡牌：256+"
-            }
-        ]
+        "_comment": "CardBinderBlock 起的卡牌显示规则已由 VTP card_text 接管；名称、条件、效果和物品提示维护于 config/vh3_translation_patch/card_text.json，业务标识不翻译。"
     },
     {
         "target_class": {
@@ -919,7 +907,7 @@
             },
             {
                 "key": "Ore Funsoide",
-                "value": "Ore Funsoide"
+                "value": "方索伊德矿石"
             },
             {
                 "key": "Ore Gorginite",
@@ -963,7 +951,7 @@
             },
             {
                 "key": "Ore Wutodie",
-                "value": "乌托迪矿石（旧版）"
+                "value": "乌托迪矿石"
             },
             {
                 "key": "Ore Xenium",
@@ -972,7 +960,7 @@
         ]
     },
     {
-        "_comment": "ClientVaultXpTracker：仅替换 handleDeltas 的四个固定显示标签；怪物名由 VTP mob_names 接管，宝箱/桶和预览由 chest_names 接管。Bonus 暂留英文。"
+        "_comment": "ClientVaultXpTracker：仅替换 handleDeltas 的四个固定显示标签；怪物名由 VTP mob_names 接管，宝箱/桶和预览由 chest_names 接管。"
     },
     {
         "target_class": {
@@ -8841,344 +8829,7 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.core.card.modifier.card.GreedCardModifier"
-        },
-        "pairs": [
-            {
-                "key": " to ",
-                "value": " 效果-"
-            },
-            {
-                "key": " ",
-                "value": ""
-            },
-            {
-                "key": "Cards",
-                "value": "卡牌-位于此卡"
-            },
-            {
-                "key": " Cards",
-                "value": "卡牌-位于此卡"
-            }
-        ]
-    },
-    {
-        "target_class": {
-            "name": "iskallia.vault.core.card.modifier.deck.BountyDeckModifier"
-        },
-        "pairs": [
-            {
-                "key": " Crate ",
-                "value": " 板条箱"
-            },
-            {
-                "key": "Tier",
-                "value": "等级"
-            },
-            {
-                "key": " Completing a vault with at least ",
-                "value": "-需要完成宝库时携带至少"
-            },
-            {
-                "key": " Resource ",
-                "value": "张资源"
-            },
-            {
-                "key": "Card",
-                "value": "卡"
-            },
-            {
-                "key": " (Crate Tier: ",
-                "value": " (板条箱等级："
-            },
-            {
-                "key": " | Resource Cards Required: ",
-                "value": " | 资源卡需求量："
-            }
-        ]
-    },
-    {
-        "target_class": {
-            "name": "iskallia.vault.core.card.modifier.deck.GlobalDeckModifier"
-        },
-        "pairs": [
-            {
-                "key": " efficiency to ",
-                "value": " 效果增强-"
-            },
-            {
-                "key": "all cards",
-                "value": "所有卡牌"
-            },
-            {
-                "key": ", ",
-                "value": "、"
-            },
-            {
-                "key": ", and ",
-                "value": "、"
-            },
-            {
-                "key": " cards",
-                "value": "卡牌"
-            }
-        ]
-    },
-    {
-        "target_classes": [
-            {
-                "name": "iskallia.vault.core.card.modifier.deck.GlobalDeckModifier$1",
-                "local": "Vstring"
-            },
-            {
-                "name": "iskallia.vault.core.card.modifier.deck.SlotDeckModifier$1",
-                "local": "Vstring"
-            }
-        ],
-        "pairs": [
-            {
-                "key": "GREEN",
-                "value": "绿色"
-            },
-            {
-                "key": "BLUE",
-                "value": "蓝色"
-            },
-            {
-                "key": "YELLOW",
-                "value": "黄色"
-            },
-            {
-                "key": "RED",
-                "value": "红色"
-            },
-            {
-                "key": "Arcane",
-                "value": "奥术"
-            },
-            {
-                "key": "Temporal",
-                "value": "时空"
-            },
-            {
-                "key": "Resource",
-                "value": "资源"
-            },
-            {
-                "key": "Evolution",
-                "value": "进阶"
-            },
-            {
-                "key": "Stat",
-                "value": "数值"
-            },
-            {
-                "key": "Wild",
-                "value": "狂野"
-            },
-            {
-                "key": "Greed",
-                "value": "贪婪"
-            },
-            {
-                "key": "Foil",
-                "value": "陪衬"
-            },
-            {
-                "key": "Offensive",
-                "value": "进攻"
-            },
-            {
-                "key": "Defensive",
-                "value": "防御"
-            },
-            {
-                "key": "Utility",
-                "value": "实用"
-            },
-            {
-                "key": "Magical",
-                "value": "魔法"
-            },
-            {
-                "key": "Essence",
-                "value": "精华"
-            },
-            {
-                "key": "Scaling",
-                "value": "强化"
-            }
-        ]
-    },
-    {
-        "target_class": {
-            "name": "iskallia.vault.core.card.modifier.deck.SlotDeckModifier"
-        },
-        "pairs": [
-            {
-                "key": " efficiency for ",
-                "value": " 效果增强-最多"
-            },
-            {
-                "key": "all cards",
-                "value": "所有卡牌"
-            },
-            {
-                "key": " ",
-                "value": "张"
-            },
-            {
-                "key": ", ",
-                "value": "、"
-            },
-            {
-                "key": ", and ",
-                "value": "、"
-            },
-            {
-                "key": " cards",
-                "value": "卡牌"
-            },
-            {
-                "key": " card",
-                "value": "卡牌"
-            },
-            {
-                "key": " (Slots: ",
-                "value": " (槽位："
-            },
-            {
-                "key": " | Value: ",
-                "value": " | 值："
-            }
-        ]
-    },
-    {
-        "target_class": {
-            "name": "iskallia.vault.core.card.modifier.deck.NonFoilEfficiencyDeckModifier"
-        },
-        "key": " Efficiency to all Stat and Evolution cards per non-foil card in the deck",
-        "value": " 效果增强-所有数值卡和进阶卡-卡组包中每个非陪衬卡提供1层"
-    },
-    {
-        "target_class": {
-            "name": "iskallia.vault.core.card.modifier.deck.ResourceDoubleDeckModifier"
-        },
-        "key": " chance for Resource cards to double rewards",
-        "value": " 概率资源卡获得双倍奖励"
-    },
-    {
-        "target_class": {
-            "name": "iskallia.vault.core.card.modifier.deck.ResourceRequirementDeckModifier"
-        },
-        "key": " Resource card requirements",
-        "value": " 资源卡条件需求"
-    },
-    {
-        "target_class": {
-            "name": "iskallia.vault.core.card.modifier.deck.StatEfficiencyDeckModifier"
-        },
-        "key": " Stat card efficiency per unique deck color",
-        "value": " 数值卡效果增强-每种卡组颜色提供1层"
-    },
-    {
-        "target_class": {
-            "name": "iskallia.vault.core.card.CardDeck"
-        },
-        "pairs": [
-            {
-                "key": "Sockets: ",
-                "value": "插槽："
-            },
-            {
-                "key": "Modifiers:",
-                "value": "词缀："
-            }
-        ]
-    },
-    {
-        "target_class": {
-            "name": "iskallia.vault.core.card.CardEntry"
-        },
-        "pairs": [
-            {
-                "key": ", ",
-                "value": "、"
-            },
-            {
-                "key": " (Currently ",
-                "value": " (当前"
-            }
-        ]
-    },
-    {
-        "target_class": {
-            "name": "iskallia.vault.core.card.CardEntry$Color",
-            "method": "getColoredText",
-            "local": "Vname"
-        },
-        "pairs": [
-            {
-                "key": "Green",
-                "value": "绿色"
-            },
-            {
-                "key": "Blue",
-                "value": "蓝色"
-            },
-            {
-                "key": "Yellow",
-                "value": "黄色"
-            },
-            {
-                "key": "Red",
-                "value": "红色"
-            }
-        ]
-    },
-    {
-        "target_class": {
-            "name": "iskallia.vault.core.card.CardNeighborType"
-        },
-        "pairs": [
-            {
-                "key": "Row",
-                "value": "同横行"
-            },
-            {
-                "key": "Column",
-                "value": "同纵列"
-            },
-            {
-                "key": "Diagonal",
-                "value": "同斜线"
-            },
-            {
-                "key": "Adjacent",
-                "value": "相邻"
-            },
-            {
-                "key": "Surrounding",
-                "value": "环绕"
-            },
-            {
-                "key": "Above",
-                "value": "上方"
-            },
-            {
-                "key": "Below",
-                "value": "下方"
-            },
-            {
-                "key": "Left",
-                "value": "左侧"
-            },
-            {
-                "key": "Right",
-                "value": "右侧"
-            }
-        ]
+        "_comment": "GreedCardModifier 起的卡牌显示规则已由 VTP card_text 接管；名称、条件、效果和物品提示维护于 config/vh3_translation_patch/card_text.json，业务标识不翻译。"
     },
     {
         "target_class": {
@@ -9729,7 +9380,7 @@
             },
             {
                 "key": "PHASE SHIFT",
-                "value": "阶段转换中"
+                "value": "即将转阶段"
             }
         ]
     },
@@ -10187,10 +9838,6 @@
             {
                 "key": "Protect Villager",
                 "value": "保护村民"
-            },
-            {
-                "key": "Warehouse",
-                "value": "仓库"
             },
             {
                 "key": "Warehouse",
@@ -13419,35 +13066,7 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.item.CardDeckItem"
-        },
-        "pairs": [
-            {
-                "key": "You need to be level ",
-                "value": "你的等级需要达到"
-            },
-            {
-                "key": "Layout:",
-                "value": "布局："
-            },
-            {
-                "key": " = Empty Slot",
-                "value": " = 空卡牌格"
-            },
-            {
-                "key": " = No Slot",
-                "value": " = 无卡牌格"
-            },
-            {
-                "key": " = Arcane",
-                "value": " = 奥术卡牌格"
-            },
-            {
-                "key": "Sockets: ",
-                "value": "插槽："
-            }
-        ]
+        "_comment": "CardDeckItem 起的卡牌显示规则已由 VTP card_text 接管；名称、条件、效果和物品提示维护于 config/vh3_translation_patch/card_text.json，业务标识不翻译。"
     },
     {
         "target_class": {

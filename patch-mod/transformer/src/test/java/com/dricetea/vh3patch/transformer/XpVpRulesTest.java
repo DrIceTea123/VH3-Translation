@@ -59,10 +59,13 @@ class XpVpRulesTest {
                         assertEquals("__vp_replace",hook.name); assertEquals("(Ljava/lang/Object;)Ljava/lang/String;",hook.desc); hooks++;
                     }
                 }
-                assertEquals(20,info.getPairs().getMap().size());
-                assertEquals("蓝锥矿石",MatchUtils.matchPairs(info.getPairs(),"Ore Benitoite",false));
-                assertEquals("异色铁矿石",MatchUtils.matchPairs(info.getPairs(),"Chromatic Iron Ore",false));
-                assertEquals("Ore Funsoide",MatchUtils.matchPairs(info.getPairs(),"Ore Funsoide",false));
+                assertEquals(rule.getAsJsonArray("pairs").size(),info.getPairs().getMap().size());
+                // 验证 VP 真实匹配行为，不把当前译文或历史英文占位冻结成测试要求。
+                for (JsonElement p : rule.getAsJsonArray("pairs")) {
+                    JsonObject pair = p.getAsJsonObject();
+                    assertEquals(pair.get("value").getAsString(),
+                            MatchUtils.matchPairs(info.getPairs(),pair.get("key").getAsString(),false));
+                }
                 assertEquals("Unknown Ore",MatchUtils.matchPairs(info.getPairs(),"Unknown Ore",false));
             } else {
                 for (AbstractInsnNode i : delta.instructions.toArray()) if (i instanceof LdcInsnNode ldc && info.getPairs().getMap().containsKey(ldc.cst)) {

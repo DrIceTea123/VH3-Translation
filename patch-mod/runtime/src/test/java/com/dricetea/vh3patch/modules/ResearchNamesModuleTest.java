@@ -9,11 +9,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ResearchNamesModuleTest {
-    @Test void commonStartupRequiresBothCommonModulesAndNewEntriesNeedNoCode(@TempDir Path dir) throws Exception {
-        assertEquals(List.of("research_names", "chest_names"), CommonModules.all().stream().map(m -> m.id()).toList());
+    @Test void commonStartupRequiresAllCommonModulesAndNewEntriesNeedNoCode(@TempDir Path dir) throws Exception {
+        assertEquals(List.of("research_names", "chest_names", "card_text"), CommonModules.all().stream().map(m -> m.id()).toList());
         assertThrows(IllegalStateException.class, () -> CommonModules.initialize(dir));
         Files.writeString(dir.resolve("research_names.json"), "{\"New Custom Research\":\"新研究\"}");
         Files.writeString(dir.resolve("chest_names.json"), "{}");
+        Files.writeString(dir.resolve("card_text.json"), "{}");
         CommonModules.initialize(dir);
         assertEquals("新研究", ResearchNamesModule.translate("New Custom Research"));
         assertEquals("new custom research", ResearchNamesModule.translate("new custom research"));

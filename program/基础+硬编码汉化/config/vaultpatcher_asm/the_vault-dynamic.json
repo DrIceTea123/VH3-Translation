@@ -7,20 +7,8 @@
         "dynamic": true
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.gear.tooltip.VaultGearTooltipItem",
-            "method": "addTooltipEmptyAffixes"
-        },
-        "pairs": [
-            {
-                "key": "■ empty prefix",
-                "value": "■ 空前缀"
-            },
-            {
-                "key": "■ empty suffix",
-                "value": "■ 空后缀"
-            }
-        ]
+        "_comment_0": "此处为保存在宝库内生成结构中的彩蛋物品的名称、描述等文本",
+        "_comment_1": "由于保存在结构nbt文件中，且大多为原版物品或其他mod物品，难以asm替换"
     },
     {
         "target_class": {},
