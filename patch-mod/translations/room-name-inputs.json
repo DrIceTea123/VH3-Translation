@@ -1,0 +1,879 @@
+[
+  {
+    "id": "the_vault:vault/starts/start_royale",
+    "display": [
+      "Start Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/bee1",
+    "display": [
+      "Common Room",
+      "Bee1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/bee2",
+    "display": [
+      "Common Room",
+      "Bee2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/bee3",
+    "display": [
+      "Common Room",
+      "Bee3"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/bee4",
+    "display": [
+      "Common Room",
+      "Bee4"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/cliffs1",
+    "display": [
+      "Common Room",
+      "Cliffs1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/cliffs2",
+    "display": [
+      "Common Room",
+      "Cliffs2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/cliffs3",
+    "display": [
+      "Common Room",
+      "Cliffs3"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/cliffs4",
+    "display": [
+      "Common Room",
+      "Cliffs4"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/glowstone_lakes1",
+    "display": [
+      "Common Room",
+      "Glowstone_lakes1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/glowstone_lakes2",
+    "display": [
+      "Common Room",
+      "Glowstone_lakes2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/glowstone_lakes3",
+    "display": [
+      "Common Room",
+      "Glowstone_lakes3"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/glowstone_lakes4",
+    "display": [
+      "Common Room",
+      "Glowstone_lakes4"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/lakes1",
+    "display": [
+      "Common Room",
+      "Lakes1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/lakes2",
+    "display": [
+      "Common Room",
+      "Lakes2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/lakes3",
+    "display": [
+      "Common Room",
+      "Lakes3"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/lakes4",
+    "display": [
+      "Common Room",
+      "Lakes4"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/mushroom_forest1",
+    "display": [
+      "Common Room",
+      "Mushroom_forest1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/mushroom_forest2",
+    "display": [
+      "Common Room",
+      "Mushroom_forest2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/mushroom_forest3",
+    "display": [
+      "Common Room",
+      "Mushroom_forest3"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/mushroom_forest4",
+    "display": [
+      "Common Room",
+      "Mushroom_forest4"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/mustard1",
+    "display": [
+      "Common Room",
+      "Mustard1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/mustard2",
+    "display": [
+      "Common Room",
+      "Mustard2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/mustard3",
+    "display": [
+      "Common Room",
+      "Mustard3"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/mustard4",
+    "display": [
+      "Common Room",
+      "Mustard4"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/pirate1",
+    "display": [
+      "Common Room",
+      "Pirate1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/pirate2",
+    "display": [
+      "Common Room",
+      "Pirate2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/pirate3",
+    "display": [
+      "Common Room",
+      "Pirate3"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/pirate4",
+    "display": [
+      "Common Room",
+      "Pirate4"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/rainbow_forest1",
+    "display": [
+      "Common Room",
+      "Rainbow_forest1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/rainbow_forest2",
+    "display": [
+      "Common Room",
+      "Rainbow_forest2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/rainbow_forest3",
+    "display": [
+      "Common Room",
+      "Rainbow_forest3"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/rainbow_forest4",
+    "display": [
+      "Common Room",
+      "Rainbow_forest4"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/crystal_caves1",
+    "display": [
+      "Crystal Caves Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/crystal_caves2",
+    "display": [
+      "Crystal Caves Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/crystal_caves3",
+    "display": [
+      "Crystal Caves Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/crystal_caves4",
+    "display": [
+      "Crystal Caves Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/crystal_caves5",
+    "display": [
+      "Crystal Caves Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/village1",
+    "display": [
+      "Village Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/village2",
+    "display": [
+      "Village Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/village3",
+    "display": [
+      "Village Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/village4",
+    "display": [
+      "Village Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/villagefort",
+    "display": [
+      "Villagefort Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/wildwest1",
+    "display": [
+      "Wildwest Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/wildwest2",
+    "display": [
+      "Wildwest Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/factory1",
+    "display": [
+      "Factory Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/challenge_digsite1",
+    "display": [
+      "Challenge Digsite Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/vendor1",
+    "display": [
+      "Vendor"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/vendor2",
+    "display": [
+      "Vendor"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/vendor3",
+    "display": [
+      "Vendor"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/omega_digsite1",
+    "display": [
+      "Omega Digsite"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/omega_digsite2",
+    "display": [
+      "Omega Digsite"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/painting1",
+    "display": [
+      "Painting"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/mine1",
+    "display": [
+      "Mine"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/mine2",
+    "display": [
+      "Mine"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/blacksmith1",
+    "display": [
+      "Blacksmith"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/blacksmith2",
+    "display": [
+      "Blacksmith"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/warehouse",
+    "display": [
+      "Warehouse"
+    ]
+  },
+  {
+    "id": "the_vault:vault/starts/start1",
+    "display": [
+      "Start Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/starts/personal_vault_start1",
+    "display": [
+      "Start Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/starts/herald",
+    "display": [
+      "Herald"
+    ]
+  },
+  {
+    "id": "the_vault:vault/starts/rebirth_arena",
+    "display": [
+      "Rebirth Arena"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/douwsky_graveyard",
+    "display": [
+      "Douwsky Graveyard Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/douwsky_mushy",
+    "display": [
+      "Douwsky Mushy Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/dragon1",
+    "display": [
+      "Dragon Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/dragon2",
+    "display": [
+      "Dragon Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/x-mark_trap1",
+    "display": [
+      "X-mark Trap Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/x-mark_treasure1",
+    "display": [
+      "X-mark Treasure Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/x-mark1",
+    "display": [
+      "X-mark Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/blacksmith1",
+    "display": [
+      "Blacksmith"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/raw/farm1",
+    "display": [
+      "Raw Room",
+      "Farm1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/raw/quarry1",
+    "display": [
+      "Raw Room",
+      "Quarry1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/mush_room1",
+    "display": [
+      "Mush Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/mush_room2",
+    "display": [
+      "Mush Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/mush_room2",
+    "display": [
+      "Mush Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/raw/nether1",
+    "display": [
+      "Raw Room",
+      "Nether1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/raw/chromatic_cave1",
+    "display": [
+      "Raw Room",
+      "Chromatic_cave1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/ore1",
+    "display": [
+      "Ore Room",
+      "Ore1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/ore2",
+    "display": [
+      "Ore Room",
+      "Ore2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/ore3",
+    "display": [
+      "Ore Room",
+      "Ore3"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/common/ore4",
+    "display": [
+      "Ore Room",
+      "Ore4"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/cozy1",
+    "display": [
+      "Cozy"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/library1",
+    "display": [
+      "Library"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/library2",
+    "display": [
+      "Library"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/raw/diamond_cave1",
+    "display": [
+      "Raw Room",
+      "Diamond_cave1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/raw/emerald_cave1",
+    "display": [
+      "Raw Room",
+      "Emerald_cave1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/raw/end1",
+    "display": [
+      "Raw Room",
+      "End1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/s3graveyard1",
+    "display": [
+      "S3graveyard Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/cove1",
+    "display": [
+      "Cove"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/cove2",
+    "display": [
+      "Cove"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/pixel1",
+    "display": [
+      "Pixel"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/temple1",
+    "display": [
+      "Temple Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/omega/trove",
+    "display": [
+      "Trove"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/pillager_large",
+    "display": [
+      "Pillager Large"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/pillager_medium",
+    "display": [
+      "Pillager Medium"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/pillager_small",
+    "display": [
+      "Pillager Small"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/spider_large",
+    "display": [
+      "Spider Large"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/spider_large_2",
+    "display": [
+      "Spider Large 2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/spider_large_3",
+    "display": [
+      "Spider Large 3"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/spider_medium",
+    "display": [
+      "Spider Medium"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/spider_small",
+    "display": [
+      "Spider Small"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/skeleton_large",
+    "display": [
+      "Skeleton Large"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/skeleton_medium",
+    "display": [
+      "Skeleton Medium"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/skeleton_small",
+    "display": [
+      "Skeleton Small"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/piglin_large",
+    "display": [
+      "Piglin Large"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/piglin_medium",
+    "display": [
+      "Piglin Medium"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/piglin_small",
+    "display": [
+      "Piglin Small"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/zombie_large",
+    "display": [
+      "Zombie Large"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/zombie_medium",
+    "display": [
+      "Zombie Medium"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/zombie_small",
+    "display": [
+      "Zombie Small"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/witch_large",
+    "display": [
+      "Witch Large"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/witch_medium",
+    "display": [
+      "Witch Medium"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/witch_small",
+    "display": [
+      "Witch Small"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/pillager_large_2",
+    "display": [
+      "Pillager Large 2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/pillager_large_3",
+    "display": [
+      "Pillager Large 3"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/pillager_medium_2",
+    "display": [
+      "Pillager Medium 2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/piglin_large_2",
+    "display": [
+      "Piglin Large 2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/piglin_large_3",
+    "display": [
+      "Piglin Large 3"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/piglin_medium_2",
+    "display": [
+      "Piglin Medium 2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/zombie_medium_2",
+    "display": [
+      "Zombie Medium 2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/zombie_large_2",
+    "display": [
+      "Zombie Large 2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/zombie_large_3",
+    "display": [
+      "Zombie Large 3"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/skeleton_medium_2",
+    "display": [
+      "Skeleton Medium 2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/skeleton_large_2",
+    "display": [
+      "Skeleton Large 2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/skeleton_large_3",
+    "display": [
+      "Skeleton Large 3"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/spider_medium_2",
+    "display": [
+      "Spider Medium 2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/special/boss1",
+    "display": [
+      "Boss Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/special/boss2",
+    "display": [
+      "Boss Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/raid1",
+    "display": [
+      "Raid Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/starts/raid1",
+    "display": [
+      "Raid1"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/laboratory1",
+    "display": [
+      "Laboratory Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/laboratory2",
+    "display": [
+      "Laboratory Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/laboratory3",
+    "display": [
+      "Laboratory Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/laboratory4",
+    "display": [
+      "Laboratory Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/spider_large2",
+    "display": [
+      "Spider Large2"
+    ]
+  },
+  {
+    "id": "the_vault:vault/dungeon_rooms/spider_large3",
+    "display": [
+      "Spider Large3"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/memory1",
+    "display": [
+      "Memory Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/horderush1",
+    "display": [
+      "Horderush Room"
+    ]
+  },
+  {
+    "id": "the_vault:vault/rooms/challenge/protect_villager1",
+    "display": [
+      "Protect Villager Room"
+    ]
+  }
+]

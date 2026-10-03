@@ -2,6 +2,7 @@ package com.dricetea.vh3patch.client;
 
 import com.dricetea.vh3patch.TranslationPatchMod;
 import com.dricetea.vh3patch.module.TranslationModule;
+import com.dricetea.vh3patch.modules.RoomNamesModule;
 import com.dricetea.vh3patch.modules.CrystalStatsModule;
 import com.dricetea.vh3patch.module.CommonModules;
 import com.dricetea.vh3patch.modules.MobNamesModule;
@@ -21,7 +22,7 @@ import java.util.List;
 @Mod.EventBusSubscriber(modid = TranslationPatchMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public final class ClientModules {
     // 添加运行侧模块时只扩充此表；外部配置读取、重载与报错由公共层统一处理。
-    private static final List<TranslationModule> MODULES = List.of(CrystalStatsModule.INSTANCE, MobNamesModule.INSTANCE, SoundNamesModule.INSTANCE);
+    private static final List<TranslationModule> MODULES = List.of(RoomNamesModule.INSTANCE, CrystalStatsModule.INSTANCE, MobNamesModule.INSTANCE, SoundNamesModule.INSTANCE);
     private ClientModules() {}
 
     @SubscribeEvent

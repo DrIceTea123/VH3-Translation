@@ -1,0 +1,373 @@
+[
+  {
+    "target_class": {
+      "name": "iskallia.vault.client.map.VaultMapRenderHelper"
+    },
+    "pairs": [
+      {
+        "key": "Start Room",
+        "value": "起始房间"
+      },
+      {
+        "key": "Ore Room",
+        "value": "矿石房间"
+      },
+      {
+        "key": "Common Room",
+        "value": "普通房间"
+      },
+      {
+        "key": "Raw Room",
+        "value": "原始房间"
+      },
+      {
+        "key": "Boss Room",
+        "value": "首领房间"
+      },
+      {
+        "key": "Common Room (",
+        "value": "普通房间 ("
+      },
+      {
+        "key": "Raw Room (",
+        "value": "原始房间 ("
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.client.map.VaultMapRenderHelper",
+      "local": "McapitalizeWords"
+    },
+    "pairs": [
+      {
+        "key": "Crystal Caves Room",
+        "value": "水晶洞穴房间"
+      },
+      {
+        "key": "Dragon Room",
+        "value": "龙窟房间"
+      },
+      {
+        "key": "Factory Room",
+        "value": "工厂房间"
+      },
+      {
+        "key": "Village Room",
+        "value": "村庄房间"
+      },
+      {
+        "key": "Wildwest Room",
+        "value": "荒野西部房间"
+      },
+      {
+        "key": "X-mark Room",
+        "value": "X标记房间"
+      },
+      {
+        "key": "X-mark Trap Room",
+        "value": "X标记陷阱房间"
+      },
+      {
+        "key": "X-mark Treasure Room",
+        "value": "X标记宝藏房间"
+      },
+      {
+        "key": "Raid Room",
+        "value": "袭击房间"
+      },
+      {
+        "key": "Laboratory Room",
+        "value": "实验室房间"
+      },
+      {
+        "key": "Challenge Digsite Room",
+        "value": "挖掘之地挑战房间"
+      },
+      {
+        "key": "Villagefort Room",
+        "value": "村庄要塞房间"
+      },
+      {
+        "key": "Cube",
+        "value": "魔方"
+      },
+      {
+        "key": "Omega Digsite",
+        "value": "终焉挖掘之地"
+      },
+      {
+        "key": "Blacksmith",
+        "value": "锻造城堡"
+      },
+      {
+        "key": "Cove",
+        "value": "港湾"
+      },
+      {
+        "key": "Library",
+        "value": "图书馆"
+      },
+      {
+        "key": "Mine",
+        "value": "矿井"
+      },
+      {
+        "key": "Mush Room",
+        "value": "蘑菇房间"
+      },
+      {
+        "key": "Painting",
+        "value": "彩绘"
+      },
+      {
+        "key": "Vendor",
+        "value": "集市"
+      },
+      {
+        "key": "Pixel",
+        "value": "像素"
+      },
+      {
+        "key": "Temple",
+        "value": "神殿"
+      },
+      {
+        "key": "Memory Room",
+        "value": "记忆房间"
+      },
+      {
+        "key": "Horderush Room",
+        "value": "集群竞速房间"
+      },
+      {
+        "key": "Companion Rush Room",
+        "value": "伙伴竞速房间"
+      },
+      {
+        "key": "Protect Villager Room",
+        "value": "保护村民房间"
+      },
+      {
+        "key": "Warehouse",
+        "value": "仓库"
+      },
+      {
+        "key": "Cozy",
+        "value": "温室"
+      },
+      {
+        "key": "Trove",
+        "value": "秘宝"
+      },
+      {
+        "key": "Bee1",
+        "value": "蜜蜂1"
+      },
+      {
+        "key": "Bee2",
+        "value": "蜜蜂2"
+      },
+      {
+        "key": "Bee3",
+        "value": "蜜蜂3"
+      },
+      {
+        "key": "Bee4",
+        "value": "蜜蜂4"
+      },
+      {
+        "key": "Cliffs1",
+        "value": "山崖1"
+      },
+      {
+        "key": "Cliffs2",
+        "value": "山崖2"
+      },
+      {
+        "key": "Cliffs3",
+        "value": "山崖3"
+      },
+      {
+        "key": "Cliffs4",
+        "value": "山崖4"
+      },
+      {
+        "key": "Glowstone_lakes1",
+        "value": "荧石湖泊1"
+      },
+      {
+        "key": "Glowstone_lakes2",
+        "value": "荧石湖泊2"
+      },
+      {
+        "key": "Glowstone_lakes3",
+        "value": "荧石湖泊3"
+      },
+      {
+        "key": "Glowstone_lakes4",
+        "value": "荧石湖泊4"
+      },
+      {
+        "key": "Lakes1",
+        "value": "湖泊1"
+      },
+      {
+        "key": "Lakes2",
+        "value": "湖泊2"
+      },
+      {
+        "key": "Lakes3",
+        "value": "湖泊3"
+      },
+      {
+        "key": "Lakes4",
+        "value": "湖泊4"
+      },
+      {
+        "key": "Mushroom_forest1",
+        "value": "蘑菇森林1"
+      },
+      {
+        "key": "Mushroom_forest2",
+        "value": "蘑菇森林2"
+      },
+      {
+        "key": "Mushroom_forest3",
+        "value": "蘑菇森林3"
+      },
+      {
+        "key": "Mushroom_forest4",
+        "value": "蘑菇森林4"
+      },
+      {
+        "key": "Mustard1",
+        "value": "芥末1"
+      },
+      {
+        "key": "Mustard2",
+        "value": "芥末2"
+      },
+      {
+        "key": "Mustard3",
+        "value": "芥末3"
+      },
+      {
+        "key": "Mustard4",
+        "value": "芥末4"
+      },
+      {
+        "key": "Pirate1",
+        "value": "海盗1"
+      },
+      {
+        "key": "Pirate2",
+        "value": "海盗2"
+      },
+      {
+        "key": "Pirate3",
+        "value": "海盗3"
+      },
+      {
+        "key": "Pirate4",
+        "value": "海盗4"
+      },
+      {
+        "key": "Rainbow_forest1",
+        "value": "彩虹森林1"
+      },
+      {
+        "key": "Rainbow_forest2",
+        "value": "彩虹森林2"
+      },
+      {
+        "key": "Rainbow_forest3",
+        "value": "彩虹森林3"
+      },
+      {
+        "key": "Rainbow_forest4",
+        "value": "彩虹森林4"
+      },
+      {
+        "key": "Ore1",
+        "value": "矿石1"
+      },
+      {
+        "key": "Ore2",
+        "value": "矿石2"
+      },
+      {
+        "key": "Ore3",
+        "value": "矿石3"
+      },
+      {
+        "key": "Ore4",
+        "value": "矿石4"
+      },
+      {
+        "key": "Farm1",
+        "value": "农场1"
+      },
+      {
+        "key": "Quarry1",
+        "value": "采石场1"
+      },
+      {
+        "key": "Nether1",
+        "value": "下界1"
+      },
+      {
+        "key": "Chromatic Cave1",
+        "value": "异色铁洞穴1"
+      },
+      {
+        "key": "Diamond Cave1",
+        "value": "钻石洞穴1"
+      },
+      {
+        "key": "Emerald Cave1",
+        "value": "绿宝石洞穴1"
+      },
+      {
+        "key": "End1",
+        "value": "末地1"
+      },
+      {
+        "key": "Raid1",
+        "value": "袭击1"
+      },
+      {
+        "key": "Douwsky Graveyard",
+        "value": "Douwsky墓园"
+      },
+      {
+        "key": "Douwsky Mushy",
+        "value": "Douwsky菌园"
+      },
+      {
+        "key": "S3graveyard",
+        "value": "S3墓园"
+      },
+      {
+        "key": "Boss",
+        "value": "首领"
+      },
+      {
+        "key": "Boss Room",
+        "value": "首领房间"
+      },
+      {
+        "key": "Boss1",
+        "value": "首领1"
+      },
+      {
+        "key": "Boss2",
+        "value": "首领2"
+      },
+      {
+        "key": "Rebirth Arena",
+        "value": "复生竞技场"
+      }
+    ]
+  }
+]

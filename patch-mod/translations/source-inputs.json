@@ -32,5 +32,26 @@
         "name"
       ]
     }
+  ],
+  "room_names": [
+    {
+      "path": "origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar",
+      "classes": [
+        "iskallia/vault/client/map/VaultMapRenderHelper"
+      ]
+    },
+    {
+      "path": "origin-3.21.7/config/the_vault/gen/templates.json",
+      "fields": [
+        "id"
+      ]
+    },
+    {
+      "path": "[vh3-translation]/patch-mod/translations/vp/room_names.json",
+      "fields": [
+        "key",
+        "value"
+      ]
+    }
   ]
 }
