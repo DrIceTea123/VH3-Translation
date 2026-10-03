@@ -2425,5 +2425,6 @@
     "item.the_vault.vault_pearl": "宝库珍珠",
     "the_vault.difficulty.lock.title": "锁定宝库难度",
     "entity.the_vault.black_widow_spider": "黑寡妇蜘蛛",
-    "key.the_vault.toggle.chainminer": "威名之力：采掘的连锁"
+    "key.the_vault.toggle.chainminer": "威名之力：采掘的连锁",
+    "key.the_vault.quickselect.necromancy": "选择并使用技能：死灵术"
 }

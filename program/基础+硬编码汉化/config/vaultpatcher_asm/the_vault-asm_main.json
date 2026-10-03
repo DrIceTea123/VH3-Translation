@@ -3659,6 +3659,33 @@
     },
     {
         "target_class": {
+            "name": "iskallia.vault.client.gui.screen.player.legacy.tab.split.pan.TalentPanRegion"
+        },
+        "pairs": [
+            {
+                "key": "Core",
+                "value": "核心"
+            },
+            {
+                "key": "Advanced",
+                "value": "高级"
+            },
+            {
+                "key": "Specialisation",
+                "value": "特化"
+            },
+            {
+                "key": "Greater",
+                "value": "升阶"
+            },
+            {
+                "key": "Finale",
+                "value": "终章"
+            }
+        ]
+    },
+    {
+        "target_class": {
             "name": "iskallia.vault.client.gui.screen.player.legacy.tab.split.spi.AbstractPanRegion"
         },
         "key": "Center",
@@ -3785,6 +3812,10 @@
                 "value": "下一等级："
             },
             {
+                "key": " skill point",
+                "value": " 技能点"
+            },
+            {
                 "key": "s",
                 "value": ""
             },
@@ -3883,6 +3914,10 @@
             {
                 "key": "Greed",
                 "value": "贪婪"
+            },
+            {
+                "key": "Greed Tier: ",
+                "value": "贪婪等级："
             },
             {
                 "key": " Unspent Greed Points",

@@ -7,6 +7,10 @@
         "dynamic": true
     },
     {
+        "_comment_0": "使用asm替换会崩溃，临时使用动态替换实现",
+        "_comment_1": "可能的原因：直接使用枚举转化为显示文本"
+    },
+    {
         "target_class": {
             "name": "iskallia.vault.item.ItemLegendaryTreasure",
             "method": "m_7373_"
@@ -31,7 +35,12 @@
         ]
     },
     {
-        "_comment": "ordinal bug set 2: local = Mget, ordinal = 251"
+        "_comment_0": "这是一个VP的bug导致的临时动态替换方案：VP在同一类中使用不同的多个local时，local全部失效",
+        "_comment_1": "此条目位置：",
+        "_comment_2": "name = iskallia.vault.core.card.Card",
+        "_comment_3": "method = addText",
+        "_comment_4": "local = Mget",
+        "_comment_5": "ordinal = 251"
     },
     {
         "target_class": {
@@ -70,25 +79,12 @@
         ]
     },
     {
-        "_comment": "duplicated bug set: method = lambda$initializeElements$4, local = MtoUpperCase"
-    },
-    {
-        "target_class": {
-            "name": "iskallia.vault.client.gui.screen.accessibility.HunterOptionsSubmenu"
-        },
-        "pairs": [
-            {
-                "key": "NORMAL",
-                "value": "普通"
-            },
-            {
-                "key": "REDUCED",
-                "value": "少量"
-            }
-        ]
-    },
-    {
-        "_comment": "duplicated bug set: class = CrystalStatsContainerElement, method = <init>, local = MgetKey, ordinal = 894,900"
+        "_comment_0": "这是一个VP的bug导致的临时动态替换方案：VP在同一类中使用不同的多个local时，local全部失效",
+        "_comment_1": "此条目位置：",
+        "_comment_2": "name = iskallia.vault.client.gui.screen.summary.element.CrystalStatsContainerElement",
+        "_comment_3": "method = <init>",
+        "_comment_4": "local = MgetKey",
+        "_comment_5": "ordinal = 894或900"
     },
     {
         "target_class": {
@@ -160,7 +156,11 @@
         ]
     },
     {
-        "_comment": "duplicated bug set: class = CrystalStatsContainerElement, method = lambda$new$5, local = Vdifficulty / Vvar10003"
+        "_comment_0": "这是一个VP的bug导致的临时动态替换方案：VP在同一类中使用不同的多个local时，local全部失效",
+        "_comment_1": "此条目位置：",
+        "_comment_2": "name = iskallia.vault.client.gui.screen.summary.element.CrystalStatsContainerElement",
+        "_comment_3": "method = lambda$new$5",
+        "_comment_4": "local = Vdifficulty / Vvar10003"
     },
     {
         "target_class": {
@@ -214,7 +214,11 @@
         ]
     },
     {
-        "_comment": "vp bug set: method = lambda$addTooltipRarity$12, local = MgetName"
+        "_comment_0": "目前因未知问题导致使用asm替换会崩溃，临时使用动态替换实现",
+        "_comment_1": "此条目位置：",
+        "_comment_2": "name = iskallia.vault.gear.tooltip.VaultGearTooltipItem",
+        "_comment_3": "method = lambda$addTooltipRarity$12",
+        "_comment_4": "local = MgetName"
     },
     {
         "target_class": {
@@ -285,7 +289,10 @@
         ]
     },
     {
-        "_comment": "duplicated bug set: local = Mcapitalize"
+        "_comment_0": "这是一个VP的bug导致的临时动态替换方案：VP在同一类中使用不同的多个local时，local全部失效",
+        "_comment_1": "此条目位置：",
+        "_comment_2": "name = iskallia.vault.item.CompanionItemClient",
+        "_comment_3": "local = Mcapitalize"
     },
     {
         "target_class": {
