@@ -18,3 +18,12 @@
 目标签名、摘要、返回数和端位于 transformer 的 patches 清单；原核心类、旧规则及散列列在 translations/source-inputs.json 与 sources/。运行 tools/source-audit.py gear_affixes talent_affixes 重新比较来源；源码更新时先审阅差异，不直接刷新指纹。
 
 统一离线验证与游戏验收状态以 takeover-report.md 为准。
+
+## 1.0.17 漏项修复
+
+新增两处显示入口，gear_affixes 现覆盖 31 个方法：
+
+- `EffectTrialAttribute$Reader.getDisplay` 的移动尾迹完整组件（含空返回），沿用“移动尾迹-效果-时长”的现有译法，保留词缀前缀、效果名称、时长及颜色。Generator 仅显示数值区间，不产生该句式，保持不变；VP 旧片段仅留在 serializeTextElements。
+- `ModGearAttributes.lambda$static$6(Integer)` 的凤凰复活说明，在最终字符串返回时翻译。原文由 invokedynamic 拼接，旧 VP 字面片段覆盖不足。新增外部完整模板保留 `+`、次数、`<$uniqueHighlight>` 和 `<reset>`，之后仍由原 IntegerValueModifierReader 解析颜色。该 formatter 同时供 serializeTextElements 的人类可读文本导出使用，因此这段导出文字也使用译文；不修改导出结构、凤凰属性 ID、触发逻辑或次数计算。
+
+VP ulti 中只移出复活句式的两段旧翻译，其他 ModGearAttributes 翻译保留；main 的尾迹规则限定序列化方法。历史原文追加到 translations/vp/gear_affixes.json。现有用户词缀译文未覆盖，仅新增三项模板（复活、无前缀尾迹、有前缀尾迹）。对应来源与方法指纹已审阅更新。

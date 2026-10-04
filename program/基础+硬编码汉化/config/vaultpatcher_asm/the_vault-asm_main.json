@@ -3576,6 +3576,10 @@
             {
                 "key": "Finale",
                 "value": "终章"
+            },
+            {
+                "key": " needed",
+                "value": "点解锁"
             }
         ]
     },
@@ -4673,7 +4677,7 @@
                 "name": "iskallia.vault.client.gui.screen.CompanionHomeScreen$1"
             },
             {
-                "name": "iskallia.vault.client.gui.screen.CompanionTerrariumScreen$1"
+                "name": "iskallia.vault.client.gui.screen.CompanionTerrariumScreen$2"
             }
         ],
         "pairs": [
@@ -10332,7 +10336,8 @@
     },
     {
         "target_class": {
-            "name": "iskallia.vault.gear.attribute.custom.effect.EffectTrialAttribute$Reader"
+            "name": "iskallia.vault.gear.attribute.custom.effect.EffectTrialAttribute$Reader",
+            "method": "serializeTextElements"
         },
         "pairs": [
             {
@@ -10343,7 +10348,8 @@
                 "key": " for ",
                 "value": "-"
             }
-        ]
+        ],
+        "_comment": "完整移动尾迹显示由 VTP gear_affixes 接管；此处仅保留序列化文本。"
     },
     {
         "_comment": "完整词缀句式由 VTP gear_affixes 接管；数值与业务 ID 不变。"

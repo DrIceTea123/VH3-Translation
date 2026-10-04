@@ -24,7 +24,8 @@
         "iskallia/vault/core/data/key/ThemeKey",
         "iskallia/vault/core/vault/player/ClassicListenersLogic",
         "iskallia/vault/item/AugmentItem",
-        "iskallia/vault/item/crystal/theme/ValueCrystalTheme"
+        "iskallia/vault/item/crystal/theme/ValueCrystalTheme",
+        "iskallia/vault/client/gui/screen/void_stone/VoidCrucibleScreen$ThemeSelect"
       ]
     },
     {
@@ -194,7 +195,9 @@
         "iskallia/vault/gear/reader/special/CastleBastionModifierReader",
         "iskallia/vault/gear/reader/special/LuckyThornsModifierReader",
         "iskallia/vault/gear/reader/special/RelentlessStrikeModifierReader",
-        "iskallia/vault/gear/reader/special/ThirdAttackModifierReader"
+        "iskallia/vault/gear/reader/special/ThirdAttackModifierReader",
+        "iskallia/vault/gear/attribute/custom/effect/EffectTrialAttribute$Reader",
+        "iskallia/vault/init/ModGearAttributes"
       ]
     },
     {

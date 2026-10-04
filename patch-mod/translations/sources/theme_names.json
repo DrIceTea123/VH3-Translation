@@ -7,7 +7,8 @@
       "iskallia/vault/core/data/key/ThemeKey": "843d975901c80a3265dbe8975b2d3cb59f2e2852755dd161bb798de905bc030a",
       "iskallia/vault/core/vault/player/ClassicListenersLogic": "f5f10a103653f18b648fe3c50364cc890125f73b532aad9f986500ea6ff1919d",
       "iskallia/vault/item/AugmentItem": "b100fdfb435431308a38438d9d4e4ac3ab9363f7d9bd564550e55c6aff8ddfb6",
-      "iskallia/vault/item/crystal/theme/ValueCrystalTheme": "bd1b43b33da05d40daeb1836358f432497e8d704502d63a72567ce8275fb746e"
+      "iskallia/vault/item/crystal/theme/ValueCrystalTheme": "bd1b43b33da05d40daeb1836358f432497e8d704502d63a72567ce8275fb746e",
+      "iskallia/vault/client/gui/screen/void_stone/VoidCrucibleScreen$ThemeSelect": "7f7b3211cb5746aeea80b740e762f8e451ce961b486e6a747be9b790e9d1a572"
     },
     "texts": {
       "iskallia/vault/client/gui/screen/summary/element/CrystalStatsContainerElement": [
@@ -141,6 +142,11 @@
         "Theme: ",
         "Unknown",
         "id"
+      ],
+      "iskallia/vault/client/gui/screen/void_stone/VoidCrucibleScreen$ThemeSelect": [
+        "Back",
+        "Blacklist is full!",
+        "Unknown Theme"
       ]
     }
   },

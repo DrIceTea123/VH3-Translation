@@ -3874,6 +3874,9 @@
         ]
     },
     {
+        "_comment": "部分复杂词缀由 VTP gear_affixes 接管。"
+    },
+    {
         "target_class": {
             "name": "iskallia.vault.init.ModGearAttributes"
         },
@@ -4297,14 +4300,6 @@
             {
                 "key": "Double Damage Chance",
                 "value": "双倍伤害概率"
-            },
-            {
-                "key": "+Revives you instantly, and heals you fully if you die inside a vault. This effect can occur <$uniqueHighlight>",
-                "value": "+在宝库中死亡时立即复活，并恢复全部生命值。每次宝库可以触发<$uniqueHighlight>"
-            },
-            {
-                "key": "<reset> times per vault.",
-                "value": "<reset>次。"
             },
             {
                 "key": "Warp Projectile Speed",

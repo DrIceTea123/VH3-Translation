@@ -533,5 +533,36 @@
         "value": "的额外物理伤害"
       }
     ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.gear.attribute.custom.effect.EffectTrialAttribute$Reader"
+    },
+    "pairs": [
+      {
+        "key": "Leaves a trail of ",
+        "value": "移动尾迹-"
+      },
+      {
+        "key": " for ",
+        "value": "-"
+      }
+    ]
+  },
+  {
+    "target_class": {
+      "name": "iskallia.vault.init.ModGearAttributes",
+      "method": "lambda$static$6"
+    },
+    "pairs": [
+      {
+        "key": "+Revives you instantly, and heals you fully if you die inside a vault. This effect can occur <$uniqueHighlight>",
+        "value": "+在宝库中死亡时立即复活，并恢复全部生命值。每次宝库可以触发<$uniqueHighlight>"
+      },
+      {
+        "key": "<reset> times per vault.",
+        "value": "<reset>次。"
+      }
+    ]
   }
 ]

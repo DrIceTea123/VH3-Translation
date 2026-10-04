@@ -1,6 +1,6 @@
 # Vault Hunters 3rd Edition 翻译工程
 
-当前工程包含 VP 翻译、资源包、安装素材和独立补丁 VTP。当前 VTP 1.0.16 使用与修复说明见 [补丁 README](patch-mod/README.md)；1.0.14 接管成果见 [成果报告](patch-mod/docs/takeover-report.md)；历史快照与未归并增量见 [项目记忆](project-memory/README.md)；尚未完成整合包游戏联测。
+当前工程包含 VP 翻译、资源包、安装素材和独立补丁 VTP。当前 VTP 1.0.17 使用与修复说明见 [补丁 README](patch-mod/README.md)；1.0.14 接管成果见 [成果报告](patch-mod/docs/takeover-report.md)；历史快照与未归并增量见 [项目记忆](project-memory/README.md)；尚未完成整合包游戏联测。
 
 ## 从哪里开始
 
