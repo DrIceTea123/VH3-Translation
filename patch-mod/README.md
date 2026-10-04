@@ -1,6 +1,6 @@
 # VH3 Translation Patch（VTP）
 
-独立的显示翻译补丁，目前有 14 个模块，接管怪物、宝箱、声音、研究、卡牌，以及水晶统计、主题、房间、主世界铭文预览、图鉴族类、装备稀有度、任务名和特殊词缀显示，其余硬编码翻译继续由 VP 处理。当前版本 **1.0.14**，目标 MC 1.18.2 / Forge 40.3.11 / the_vault 1.18.2-3.21.6.6884。191 项 Java 离线测试、3 项来源读取测试及固定核心 105 个方法的字节码校验已通过，完整整合包尚未联测。
+独立的显示翻译补丁，目前有 14 个模块，接管怪物、宝箱、声音、研究、卡牌，以及水晶统计、主题、房间、主世界铭文预览、图鉴族类、装备稀有度、任务名和特殊词缀显示，其余硬编码翻译继续由 VP 处理。当前版本 **1.0.16**，目标 MC 1.18.2 / Forge 40.3.11 / the_vault 1.18.2-3.21.6.6884。211 项 Java 离线测试、单 JAR 加载层探针及固定核心 105 个方法的字节码校验已通过（3 项来源读取测试沿用前轮结果），完整整合包尚未联测。
 
 ## 编辑翻译与安装
 
@@ -29,9 +29,11 @@
 
 给这些模块增删改条目只改 JSON，无需改源码、重编译或替换 JAR。配置为 UTF-8 平面字符串对象，不允许注释、重复键、非字符串值及尾随内容；`{}` 表示不覆盖，空字符串表示显式空译文。
 
+1.0.16 改为单 JAR。升级前删除旧版 `vh3_translation_patch-<版本>.jar` 和 `vh3_translation_patch-transformer-<版本>.jar`，只保留新文件。运行模块自动提取到游戏目录 `.vh3_translation_patch/runtime/<版本>-<SHA-256>/runtime.jar`，无需手动安装缓存文件。
+
 安装时同时携带：
 
-- `mods/vh3_translation_patch-1.0.14.jar` 与 `mods/vh3_translation_patch-transformer-1.0.14.jar`。
+- `mods/vh3_translation_patch-1.0.16.jar`，只安装这一个 VTP 文件。
 - `config/vh3_translation_patch/` 下的 14 个 JSON（专用服务端需要下文列出的 8 个通用配置）。
 - 当前汉化工程的 VP 配置；已接管规则已移除并在原位置保留 VTP 注释，不能装回旧规则。分类见 [VP 维护说明](../docs/maintenance/vp-asm-layout.md)。
 
@@ -41,9 +43,9 @@
 
 ## 客户端与服务端
 
-两端使用同一对 JAR，按目标方法声明的适用端注册。怪物、声音模块只作用于客户端；宝箱模块覆盖 getter、服务端/客户端容器标题及客户端结算、经验提示、预览和辅助功能箱型，见 [宝箱模块](docs/chest-names.md)；研究模块覆盖客户端的研究标题、依赖/互斥提示、限制提示、知识精酿、卡组工作台及配方提示，并在服务端生成解锁广播、研究替换通知时翻译名称。具体方法与原始文本见 [研究名覆盖](docs/research-names.md)。卡牌模块覆盖 21 个显示方法，含 4 个两端方法；布局、条件和词缀 tooltip 的其他方法只在客户端注入，详见 [卡牌显示](docs/card-text.md)。
+两端使用同一个 JAR，按目标方法声明的适用端注册。怪物、声音模块只作用于客户端；宝箱模块覆盖 getter、服务端/客户端容器标题及客户端结算、经验提示、预览和辅助功能箱型，见 [宝箱模块](docs/chest-names.md)；研究模块覆盖客户端的研究标题、依赖/互斥提示、限制提示、知识精酿、卡组工作台及配方提示，并在服务端生成解锁广播、研究替换通知时翻译名称。具体方法与原始文本见 [研究名覆盖](docs/research-names.md)。卡牌模块覆盖 21 个显示方法，含 4 个两端方法；布局、条件和词缀 tooltip 的其他方法只在客户端注入，详见 [卡牌显示](docs/card-text.md)。
 
-专用服务端必须安装双 JAR、外部 research_names.json、chest_names.json、card_text.json、theme_names.json、gear_rarity.json、quest_names.json、gear_affixes.json、talent_affixes.json 及兼容的 VP 配置，首次配置失败同样阻止启动。服务端不读取怪物、声音、水晶统计、地图房间、主世界铭文预览和图鉴族类配置，也不加载客户端 I18n；服务端配置修改后重启生效。客户端继续支持 F3+T，缓存的界面可重开；已发出的消息不会追溯重译。
+专用服务端必须安装单 JAR、外部 research_names.json、chest_names.json、card_text.json、theme_names.json、gear_rarity.json、quest_names.json、gear_affixes.json、talent_affixes.json 及兼容的 VP 配置，首次配置失败同样阻止启动。服务端不读取怪物、声音、水晶统计、地图房间、主世界铭文预览和图鉴族类配置，也不加载客户端 I18n；服务端配置修改后重启生效。客户端继续支持 F3+T，缓存的界面可重开；已发出的消息不会追溯重译。
 
 服务端生成的通知和宝箱标题由服务端配置决定，客户端本地配置不能改变已经收到的文本。仅客户端安装 VTP 时，只覆盖本地显示；单人游戏的集成服务器使用同一进程的通用模块和配置。研究名称用原文精确查表，不改解锁判定、存档或业务网络标识。
 
@@ -63,8 +65,8 @@
 
 完整 `build` 包含测试、真实核心哈希/方法摘要/字节码校验和导出：
 
-- `build/distribution/`：两个 JAR 与 `compat/` VP 兼容副本/迁移报告。
-- `../program/基础+硬编码汉化/mods/`：自动复制同版本双 JAR，逐字节验证后仅清理本补丁旧 JAR。
+- `build/distribution/`：一个安装 JAR 与 `compat/` VP 兼容副本/迁移报告。
+- `../program/基础+硬编码汉化/mods/`：自动复制单 JAR，逐字节验证后仅清理本补丁旧 JAR。
 - `transformer/build/verification/`：变换 class 和校验报告；子工程 `build/reports/tests/test/`：测试报告。
 
 构建不覆盖正式外部配置，不启动游戏、不修改游戏实例、不提交 Git。`check` 或 `distribution` 本身不导出到工程，`build` / `exportToProgram` 才导出。兼容输入已迁移时报告 `removedGroups=0` 正常。
@@ -79,12 +81,16 @@
 
 只验证可传 `-GradleArgs 'check','--console=plain'`；核对目标用 `:transformer:inspectTarget` / `:transformer:verifyTarget`。旧 VP 导入只生成候选文件，见模块开发说明。
 
+1.0.15 修复 VP 冲突预检范围：只检查 `config/vaultpatcher_asm/config.json` 的 `mods`（别名 `m`）启用的文件，未启用的旧文件和备份不参与检查。详情见 [VP 兼容预检](docs/vp-compatibility.md)。
+
 ## 联测与回退
 
-在独立测试副本中安装双 JAR、14 个外部配置及当前 VP 配置，保留并合并原有自定义译文。核实 VP 缓存；首次联测可在测试副本设置 `debug_mode.use_cache=false`。检查 preflight / applied 日志、结算牛与首领差异、声音搜索/排序/音量、经验通知与预览、F3+T、首次错误拒绝启动及重载错误保留旧值。
+在独立测试副本中安装单 JAR、14 个外部配置及当前 VP 配置，保留并合并原有自定义译文。核实 VP 缓存；首次联测可在测试副本设置 `debug_mode.use_cache=false`。检查 preflight / applied 日志、结算牛与首领差异、声音搜索/排序/音量、经验通知与预览、F3+T、首次错误拒绝启动及重载错误保留旧值。
 
-回退时移除两个 JAR、恢复旧 VP 规则并处理缓存。核心/方法/配套/VP 冲突会阻止启动；其他转换器造成的冲突可能在目标类加载时才出现。支持生产客户端 `forgeclient` 与专用服务端 `forgeserver`，尚未接入开发/数据生成启动目标。剩余验收统一见 [TODO](../project-memory/TODO.md)。
+回退到 1.0.15 时移除 1.0.16 单 JAR，恢复同版本的旧双 JAR；若退回接管前的版本，还需恢复对应 VP 规则并处理缓存。核心/方法/配套/VP 冲突会阻止启动；其他转换器造成的冲突可能在目标类加载时才出现。支持生产客户端 `forgeclient` 与专用服务端 `forgeserver`，尚未接入开发/数据生成启动目标。剩余验收统一见 [TODO](../project-memory/TODO.md)。
 
 ## 文本来源复核
 
 本轮新增的 9 个模块在 `translations/source-inputs.json` 登记原始配置、核心类及旧 VP 片段。运行 `python tools/source-audit.py`（或附模块 ID）重新读取并列出新增、删除和变化；JAR 同时比较类摘要及字符串常量，不加载模组。只有审阅新版数据和调用链后才用 `--record` 记录新基线。工具不更新译表、不自动放行核心指纹。旧五个模块继续使用各自既有导入/来源文档。
+
+单 JAR 分发的可行性与加载限制见 [合并评估](docs/jar-merge-assessment.md)。1.0.16 已实施，结构、迁移、缓存与验证边界见 [单 JAR 交付说明](docs/single-jar.md)。

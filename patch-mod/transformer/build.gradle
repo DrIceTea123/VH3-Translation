@@ -1,7 +1,11 @@
-base.archivesName = 'vh3_translation_patch-transformer'
+base.archivesName = 'vh3_translation_patch'
 
 dependencies {
     compileOnly 'cpw.mods:modlauncher:9.1.3'
+    compileOnly('net.minecraftforge:fmlloader:1.18.2-40.3.11') { transitive = false }
+    compileOnly('net.minecraftforge:forgespi:4.0.15-4.x') { transitive = false }
+    testImplementation('net.minecraftforge:fmlloader:1.18.2-40.3.11') { transitive = false }
+    testImplementation('net.minecraftforge:forgespi:4.0.15-4.x') { transitive = false }
     implementation 'org.ow2.asm:asm-tree:9.7.1'
     implementation 'org.ow2.asm:asm-util:9.7.1'
     implementation 'com.google.code.gson:gson:2.8.9'
@@ -11,11 +15,31 @@ dependencies {
 }
 def targetJar = providers.gradleProperty('vaultJar').map { rootProject.file(it) }
         .getOrElse(rootProject.file('../../origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar'))
-def vpSource = rootProject.file('../program/基础+硬编码汉化/config/vaultpatcher_asm/the_vault-asm_complex.json')
+def vpSource = rootProject.file('../program/基础+硬编码汉化/config/vaultpatcher_asm/the_vault-asm_main.json')
 // 工程已移除接管规则；旧规则仅用于导入及冲突回归测试，不再随汉化配置发布。
 def vpLegacySource = rootProject.file('translations/vp/mob_names.json')
 
+// 运行侧必须完成 reobf 后再嵌入，不能把开发命名空间的 JAR 交给生产 Forge。
+def embeddedDirectory = layout.buildDirectory.dir('generated/embedded-runtime')
+def runtimeJar = project(':runtime').tasks.named('jar', Jar).flatMap { it.archiveFile }
+tasks.register('prepareEmbeddedRuntime') {
+    dependsOn ':runtime:reobfJar'
+    inputs.file runtimeJar
+    inputs.property 'mod_version', project.version
+    outputs.dir embeddedDirectory
+    doLast {
+        def bytes = runtimeJar.get().asFile.bytes
+        def hash = java.security.MessageDigest.getInstance('SHA-256').digest(bytes).encodeHex().toString()
+        def output = embeddedDirectory.get().dir('META-INF/vh3_translation_patch').asFile
+        output.mkdirs()
+        new File(output, 'runtime.jar').bytes = bytes
+        new File(output, 'runtime.properties').setText("version=${project.version}\nsha256=${hash}\n", 'UTF-8')
+    }
+}
+sourceSets.main.resources.srcDir embeddedDirectory
+
 tasks.named('processResources') {
+    dependsOn 'prepareEmbeddedRuntime'
     inputs.property 'mod_version', project.version
     // lambda 方法名与内部类名含 $，只替换版本占位符，不能交给 Groovy 模板展开。
     filesMatching('patches/*.properties') {

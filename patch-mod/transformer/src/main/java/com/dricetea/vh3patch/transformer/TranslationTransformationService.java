@@ -29,7 +29,8 @@ public final class TranslationTransformationService implements ITransformationSe
         Path gameDir = environment.getProperty(IEnvironment.Keys.GAMEDIR.get())
                 .orElseThrow(() -> new IllegalStateException("Missing game directory"));
         try {
-            for (PatchModule module : PatchModules.active(client)) preflight(gameDir, module, client);
+            Path runtime = EmbeddedRuntime.resolve(gameDir);
+            for (PatchModule module : PatchModules.active(client)) preflight(gameDir, module, client, runtime);
             System.setProperty(PatchSpec.READY_PROPERTY, modules.get(0).spec().patchVersion());
             System.getLogger(name()).log(System.Logger.Level.INFO,
                     "Preflight passed; registered modules: " + PatchModules.active(client).stream().map(m -> m.spec().moduleId()).toList());
@@ -38,34 +39,27 @@ public final class TranslationTransformationService implements ITransformationSe
         }
     }
 
-    static void preflight(Path gameDir, PatchModule module) throws Exception {
-        preflight(gameDir, module, true);
-    }
-
-    static void preflight(Path gameDir, PatchModule module, boolean client) throws Exception {
+    static void preflight(Path gameDir, PatchModule module, boolean client, Path runtime) throws Exception {
         List<PatchSpec> active = module.specs(client);
         if (active.isEmpty()) return;
         PatchSpec spec = active.get(0);
         List<Path> targets = new ArrayList<>();
-        List<Path> companions = new ArrayList<>();
+        EmbeddedRuntime.validate(runtime, spec.patchVersion());
+        try (JarFile jar = new JarFile(runtime.toFile())) {
+            for (PatchSpec target : active) {
+                if (jar.getJarEntry(target.helperClass() + ".class") == null)
+                    throw new IllegalStateException("Missing VTP runtime helper: " + target.helperClass());
+            }
+        }
         try (var files = Files.list(gameDir.resolve("mods"))) {
             for (Path path : files.filter(Files::isRegularFile).filter(p -> p.toString().endsWith(".jar")).toList()) {
                 try (JarFile jar = new JarFile(path.toFile())) {
                     if (jar.getJarEntry(spec.className() + ".class") != null) targets.add(path);
-                    if (jar.getJarEntry(spec.helperClass() + ".class") != null) {
-                        String version = jar.getManifest() == null ? null
-                                : jar.getManifest().getMainAttributes().getValue("VH3-Patch-Runtime");
-                        if (!spec.patchVersion().equals(version)
-                                || jar.getJarEntry("META-INF/mods.toml") == null) {
-                            throw new IllegalStateException("Missing or mismatched runtime metadata/resources: " + path.getFileName());
-                        }
-                        companions.add(path);
-                    }
+
                 }
             }
         }
         if (targets.size() != 1) throw new IllegalStateException("Expected one the_vault JAR; found " + targets.size());
-        if (companions.size() != 1) throw new IllegalStateException("Expected one matching runtime JAR; found " + companions.size());
         // 此处检查原 JAR；类真正加载时仍会再验一次，发现其他转换器的冲突就中止。
         for (String name : active.stream().map(PatchSpec::className).distinct().toList()) {
             PatchSpec classSpec = active.stream().filter(s -> s.className().equals(name)).findFirst().orElseThrow();

@@ -13,8 +13,8 @@ public final class TranslationPatchMod {
         // 两端均检查转换器，并仅初始化通用模块；客户端专属模块由客户端事件初始化。
             String version = ModLoadingContext.get().getActiveContainer().getModInfo().getVersion().toString();
             if (!version.equals(System.getProperty("vh3_translation_patch.transformer.ready"))) {
-                throw new IllegalStateException("VH3 Translation Patch requires the matching transformer JAR. "
-                        + "Install both files from the same build and check earlier preflight errors.");
+                throw new IllegalStateException("VH3 Translation Patch requires its bundled transformation service to complete preflight. "
+                        + "Reinstall the single VTP JAR, remove old standalone VTP JARs and check earlier preflight errors.");
             }
         CommonModules.initialize(FMLPaths.CONFIGDIR.get().resolve(MOD_ID));
     }

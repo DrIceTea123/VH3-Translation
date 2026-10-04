@@ -1,0 +1,44 @@
+{
+  "runtimeVersion": "1.0.15",
+  "forge": "40.3.11",
+  "modLauncher": "9.1.3",
+  "exitCode": 0,
+  "stdout": "pair: early=[transformer.jar], normal=[runtime.jar]\nflat: early=[flat.jar], normal=[]\nruntime-outer: early=[], normal=[runtime-outer.jar]\ntransformer-outer: early=[transformer-outer.jar], normal=[]\nexplicit-locator: recognized MOD, modId=vh3_translation_patch, runtime helper present=true\n",
+  "stderr": "",
+  "dependencies": {
+    "fmlloader-1.18.2-40.3.11.jar": "0a472843bbb81ec973f84c3f68a440f9341a6b9ed2a1a0efb7846928c4137fa5",
+    "forgespi-4.0.15-4.x.jar": "afbea13adeb1def87a358ad529acb157506b34c3ec62d02033d584ea6a28bf14",
+    "modlauncher-9.1.3.jar": "433c038b505eb37a963e810b105b96b4d073fced389c68cbe332614a6b502c76",
+    "securejarhandler-1.0.8.jar": "69249634131934d346ba788fd099649b2b9277b002fcb612e86e43e18091f075",
+    "accesstransformers-8.0.4.jar": "3225e2a513f658df686fe8b2ae5b4808525851a2c238ce65e38847cc4ffc6441",
+    "jopt-simple-5.0.4.jar": "df26cc58f235f477db07f753ba5a3ab243ebe5789d9f89ecf68dd62ea9a66c28",
+    "log4j-api-2.17.1.jar": "b0d8a4c8ab4fb8b1888d0095822703b0e6d4793c419550203da9e69196161de4",
+    "log4j-core-2.17.1.jar": "c967f223487980b9364e94a7c7f9a8a01fd3ee7c19bdbf0b0f9f8cb8511f3d41",
+    "guava-31.0.1-jre.jar": "d5be94d65e87bd219fb3193ad1517baa55a3b88fc91d21cf735826ab5af087b9",
+    "gson-2.8.9.jar": "d3999291855de495c94c743761b8ab5176cfeabe281a5ab0d8e8d45326fd703e",
+    "asm-9.7.1.jar": "8cadd43ac5eb6d09de05faecca38b917a040bb9139c7edeb4cc81c740b713281",
+    "asm-tree-9.7.1.jar": "9929881f59eb6b840e86d54570c77b59ce721d104e6dfd7a40978991c2d3b41f",
+    "core-3.6.4.jar": "1bc71c67b54ba9c8e5030b3ddaef7dee16ae43fee6850368f76b0cffef819700",
+    "toml-3.6.4.jar": "3cb3d0ef3352e204cda68215fbe41afdc7f56425ef4fd8e84006964a656117d4",
+    "maven-artifact-3.8.5.jar": "91172bc294d6eab02fc9f45f4ea01fd0e418962d128cf489abea7b6957d988ee",
+    "commons-lang3-3.12.0.jar": "d919d904486c037f8d193412da0c92e22a9fa24230b9d67a57855c5c31c7e94e"
+  },
+  "gameLaunched": false,
+  "sourceArchives": {
+    "fmlloader-1.18.2-40.3.11-sources.jar": "694315968c4815ce0bdd592629c3be68fb8590e195bfddc0446375f0b6e823b2",
+    "modlauncher-9.1.3-sources.jar": "ef5ac85b7e47effd293551b7257e120902f2bf3513e47133ff7247c5bc1b5d33",
+    "forgespi-4.0.15-4.x-sources.jar": "1b4b26f7bd69c00b9e667aa895da42d8e846080a43ec71ca15e2ca3aa711eab8"
+  },
+  "assessmentDate": "2026-10-04",
+  "limits": [
+    "Direct scanner calls, not a full ModLauncher launch",
+    "Locator directly instantiated, SERVICE layer registration untested",
+    "FML version metadata supplied by fixture",
+    "No jarjar metadata in nested scan fixtures",
+    "No Minecraft classes loaded, no @Mod construction, no client/server game test"
+  ],
+  "installedJars": {
+    "vh3_translation_patch-1.0.15.jar": "9b8f82e0266328bdad11f25ecd4e1804b0da55205818c7f4b88fb73f2401383c",
+    "vh3_translation_patch-transformer-1.0.15.jar": "9ab79b6e66e76c2cdaebae3178eef4b5d24ce222ac0ef943ece72aaee45e9e64"
+  }
+}

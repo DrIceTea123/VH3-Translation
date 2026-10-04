@@ -12,6 +12,12 @@ import java.nio.file.Path;
 import static org.junit.jupiter.api.Assertions.*;
 
 class VpCompatibilityTest {
+    static JsonArray enabledRules(Path directory) throws Exception {
+        JsonArray result = new JsonArray();
+        for (Path file : VpCompatibility.enabledModuleFiles(directory))
+            if (Files.exists(file)) result.addAll(JsonFiles.read(file).getAsJsonArray());
+        return result;
+    }
     private final MobNamesModule module = new MobNamesModule();
     private final Path vpSource = Path.of(System.getProperty("vh3.test.vpSource"));
 
@@ -26,6 +32,7 @@ class VpCompatibilityTest {
             }
         }
         Path config = temp.resolve("rules.json");
+        Files.writeString(temp.resolve("config.json"),"{\"mods\":[\"rules\"]}");
         Files.writeString(config, original.toString());
         assertThrows(IllegalStateException.class, () -> VpCompatibility.assertCompatible(temp, module));
         Files.writeString(config, compatible.toString());
@@ -40,7 +47,7 @@ class VpCompatibilityTest {
     @Test void currentProgramIsCompatibleAndKeepsTakeoverComment() throws Exception {
         Path directory = Path.of(System.getProperty("vh3.test.programVpDirectory"));
         assertDoesNotThrow(() -> VpCompatibility.assertCompatible(directory, module));
-        JsonArray current = JsonFiles.read(directory.resolve("the_vault-asm_complex.json")).getAsJsonArray();
+        JsonArray current = enabledRules(directory);
         assertEquals(current, VpCompatibility.prepareConfiguration(current, module));
         assertTrue(java.util.stream.StreamSupport.stream(current.spliterator(), false).anyMatch(item -> item.isJsonObject()
                 && item.getAsJsonObject().entrySet().stream().anyMatch(e -> e.getKey().startsWith("_comment")

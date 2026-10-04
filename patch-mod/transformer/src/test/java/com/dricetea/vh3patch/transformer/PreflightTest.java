@@ -26,28 +26,28 @@ import static org.junit.jupiter.api.Assertions.*;
 class PreflightTest {
     static Stream<PatchModule> modules() { return PatchModules.all().stream(); }
 
-    @ParameterizedTest @MethodSource("modules") void matchingPairAndTargetPass(PatchModule module, @TempDir Path game) throws Exception {
+    @ParameterizedTest @MethodSource("modules") void matchingEmbeddedRuntimeAndTargetPass(PatchModule module, @TempDir Path game) throws Exception {
         PatchModule fixture = targetFixture(game, module);
         companion(game, module.spec(), module.spec().patchVersion());
-        assertDoesNotThrow(() -> TranslationTransformationService.preflight(game, fixture));
+        assertDoesNotThrow(() -> TranslationTransformationService.preflight(game, fixture, true, game.resolve("runtime.jar")));
     }
 
-    @ParameterizedTest @MethodSource("modules") void missingCompanionBlocksStartup(PatchModule module, @TempDir Path game) throws Exception {
+    @ParameterizedTest @MethodSource("modules") void missingEmbeddedRuntimeBlocksStartup(PatchModule module, @TempDir Path game) throws Exception {
         PatchModule fixture = targetFixture(game, module);
-        assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, fixture));
+        assertThrows(java.io.IOException.class, () -> TranslationTransformationService.preflight(game, fixture, true, game.resolve("runtime.jar")));
     }
 
-    @ParameterizedTest @MethodSource("modules") void mismatchedCompanionBlocksStartup(PatchModule module, @TempDir Path game) throws Exception {
+    @ParameterizedTest @MethodSource("modules") void mismatchedEmbeddedRuntimeBlocksStartup(PatchModule module, @TempDir Path game) throws Exception {
         PatchModule fixture = targetFixture(game, module);
         companion(game, module.spec(), "wrong-version");
-        assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, fixture));
+        assertThrows(java.io.IOException.class, () -> TranslationTransformationService.preflight(game, fixture, true, game.resolve("runtime.jar")));
     }
 
     @ParameterizedTest @MethodSource("modules") void duplicateTargetBlocksStartup(PatchModule module, @TempDir Path game) throws Exception {
         PatchModule fixture = targetFixture(game, module);
         companion(game, module.spec(), module.spec().patchVersion());
         Files.copy(game.resolve("mods/target.jar"), game.resolve("mods/duplicate.jar"));
-        assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, fixture));
+        assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, fixture, true, game.resolve("runtime.jar")));
     }
 
     @ParameterizedTest @MethodSource("modules") void vpConflictBlocksStartup(PatchModule module, @TempDir Path game) throws Exception {
@@ -55,18 +55,19 @@ class PreflightTest {
         companion(game, module.spec(), module.spec().patchVersion());
         Path config = game.resolve("config/vaultpatcher_asm/rules.json");
         Files.createDirectories(config.getParent());
+        Files.writeString(config.getParent().resolve("config.json"),"{\"mods\":[\"rules\"]}");
         if(module.spec().moduleId().equals("theme_names"))
             Files.writeString(config,"[{\"target_class\":{\"name\":\"iskallia.vault.core.data.key.ThemeKey\",\"method\":\"getName\"},\"key\":\"Example\",\"value\":\"示例\"}]");
         else Files.copy(Path.of(System.getProperty("vh3.test.legacyVpDirectory"), module.spec().moduleId() + ".json"), config);
-        assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, fixture));
+        assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, fixture, true, game.resolve("runtime.jar")));
     }
 
     @Test void dedicatedServerNeedsOnlyCommonTargets(@TempDir Path game) throws Exception {
         var module = new ResearchNamesModule();
         PatchModule fixture = targetFixture(game, module, false);
         companion(game, module.spec(), module.spec().patchVersion());
-        assertDoesNotThrow(() -> TranslationTransformationService.preflight(game, fixture, false));
-        assertThrows(Exception.class, () -> TranslationTransformationService.preflight(game, fixture, true));
+        assertDoesNotThrow(() -> TranslationTransformationService.preflight(game, fixture, false, game.resolve("runtime.jar")));
+        assertThrows(IllegalStateException.class, () -> TranslationTransformationService.preflight(game, fixture, true, game.resolve("runtime.jar")));
         assertEquals(java.util.Set.of("research_names", "chest_names", "card_text", "theme_names", "gear_rarity", "quest_names", "gear_affixes", "talent_affixes"), new java.util.HashSet<>(PatchModules.active(false).stream().map(m -> m.spec().moduleId()).toList()));
         assertTrue(PatchModules.byClass(false).keySet().stream().noneMatch(n -> n.contains("/client/")));
     }
@@ -101,8 +102,8 @@ class PreflightTest {
         Manifest manifest = new Manifest();
         manifest.getMainAttributes().put(Attributes.Name.MANIFEST_VERSION, "1.0");
         manifest.getMainAttributes().putValue("VH3-Patch-Runtime", version);
-        try (var output = new JarOutputStream(Files.newOutputStream(game.resolve("mods/runtime.jar")), manifest)) {
-            for (String name : new String[]{production.helperClass() + ".class", "META-INF/mods.toml"}) {
+        try (var output = new JarOutputStream(Files.newOutputStream(game.resolve("runtime.jar")), manifest)) {
+            for (String name : Stream.concat(PatchModules.all().stream().filter(m -> m.spec().moduleId().equals(production.moduleId())).flatMap(m -> m.specs().stream()).map(p -> p.helperClass() + ".class"), Stream.of("META-INF/mods.toml")).distinct().toList()) {
                 output.putNextEntry(new JarEntry(name));
                 output.write(new byte[]{0});
                 output.closeEntry();

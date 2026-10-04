@@ -15,6 +15,27 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 
 class DisplayTakeoverTest {
+    @TempDir Path fixture;
+    private void sampleAffixes() throws Exception {
+        // 语序算法使用独立夹具；正式词表允许用户修改，另测其语义合法性。
+        Files.writeString(fixture.resolve("gear_affixes.json"), """
+            {
+              "Lowers the Cooldown of {0} by {1}": "{0}冷却时间降低{1}",
+              "{0} to level of {1}": "{0} {1}技能等级",
+              "{0} to level of all Abilities": "{0} 所有技能等级",
+              "{0} to level of all {1} abilities": "{0} 所有{1}技能等级",
+              "{0} chance to generate {1} Mana per {2} looted": "搜刮{2}时有{0}概率恢复{1}点魔力",
+              "{0}, {1} Mana per {2} looted": "搜刮{2}时有{0}概率恢复{1}点魔力",
+              "{0} Increased {1}": "{0} {1}提升",
+              "{0} Reduced {1}": "{0} {1}降低",
+              "Looting {0} has a {1} chance to cast a level {2} {3}": "搜刮{0}时有{1}概率施放{2}级{3}",
+              "Every hit you take has a {0} chance to cast a level {1} {2}": "每次受到攻击时有{0}概率施放{1}级{2}",
+              "{0} Blocks  of Area Of Effect of {1}": "{1}效果范围{0}格",
+              "Fireball": "火球", "Ornate Chest": "华丽宝箱", "Attack Damage": "攻击伤害"
+            }
+            """);
+        GearAffixesModule.INSTANCE.reload(fixture);
+    }
     static Stream<TemplateModule> modules() {return Stream.of(CrystalStatsModule.INSTANCE,ThemeNamesModule.INSTANCE,RoomNamesModule.INSTANCE,OverworldNamesModule.INSTANCE,BestiaryGroupsModule.INSTANCE,GearRarityModule.INSTANCE,QuestNamesModule.INSTANCE,GearAffixesModule.INSTANCE,TalentAffixesModule.INSTANCE);}
     private Path shipped() {return Path.of(System.getProperty("vh3.test.configDirectory"));}
     @ParameterizedTest @MethodSource("modules") void shippedConfigurationsAreValidAndUnknownDisplaysStayIntact(TemplateModule module) throws Exception {
@@ -34,16 +55,18 @@ class DisplayTakeoverTest {
         +1 to level of all 火球 abilities|+1 所有火球技能等级
         """)
     void releaseSentenceExamples(String input,String output) throws Exception {
-        GearAffixesModule.INSTANCE.reload(shipped());assertEquals(output,GearAffixesModule.translate(input));
+        sampleAffixes();assertEquals(output,GearAffixesModule.translate(input));
     }
     @Test void sameEnglishLevelSentenceKeepsTalentAndAbilitySemanticsSeparate() throws Exception {
-        GearAffixesModule.INSTANCE.reload(shipped());TalentAffixesModule.INSTANCE.reload(shipped());
+        sampleAffixes();
+        Files.writeString(fixture.resolve("talent_affixes.json"),"{\"{0} to level of {1}\":\"{0} {1}天赋等级\"}");
+        TalentAffixesModule.INSTANCE.reload(fixture);
         assertEquals("+1 专注天赋等级",TalentAffixesModule.translate("+1 to level of 专注"));
         assertEquals("+1 专注技能等级",GearAffixesModule.translate("+1 to level of 专注"));
         assertNull(GearAffixesModule.translateDisplay(null));
     }
     @Test void movedNumbersKeepColorsAndInputTreeIsNotMutated() throws Exception {
-        GearAffixesModule.INSTANCE.reload(shipped());Style chance=Style.EMPTY.withColor(ChatFormatting.GOLD).withBold(true);
+        sampleAffixes();Style chance=Style.EMPTY.withColor(ChatFormatting.GOLD).withBold(true);
         Style mana=Style.EMPTY.withColor(ChatFormatting.AQUA);Style name=Style.EMPTY.withColor(ChatFormatting.GREEN);
         MutableComponent input=new TextComponent("10%").setStyle(chance).append(new TextComponent(" chance to generate ").withStyle(ChatFormatting.GRAY))
             .append(new TextComponent("8").setStyle(mana)).append(new TextComponent(" Mana per ").withStyle(ChatFormatting.GRAY))

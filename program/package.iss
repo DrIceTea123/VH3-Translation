@@ -82,6 +82,11 @@ Source: "{tmp}\{#JechDlName}"; DestDir: "{app}\mods\"; Flags: external ; Compone
 Source: "{tmp}\{#OculusDlName}"; DestDir: "{app}\mods\"; Flags: external ; Components: ocu;
 Source: "..\..\必要文件\iss-plugin-7z\*"; DestDir: "{tmp}\7z"; Flags: ignoreversion ; Components: basic;
 
+[InstallDelete]
+; Remove only previous VTP installation JARs before installing the single bundle.
+Type: files; Name: "{app}\mods\vh3_translation_patch-1.*.jar"; Components: basic
+Type: files; Name: "{app}\mods\vh3_translation_patch-transformer-1.*.jar"; Components: basic
+
 [Run]
 Filename: "{cmd}"; Parameters: "/c start https://www.bilibili.com/read/cv25168950/"; Flags: shellexec postinstall unchecked ; Description: "前往汉化专栏点赞投币！"
 

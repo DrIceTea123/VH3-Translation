@@ -27,26 +27,55 @@ tasks.register('distribution', Sync) {
     dependsOn ':transformer:jar', ':runtime:reobfJar', ':transformer:verifyTarget', ':transformer:prepareVpConfig'
     into layout.buildDirectory.dir('distribution')
     from(project(':transformer').tasks.named('jar'))
-    from(project(':runtime').tasks.named('jar'))
     from(project(':transformer').layout.buildDirectory.dir('compat')) { into 'compat' }
 }
-tasks.named('check') { dependsOn ':transformer:check', ':runtime:check', ':transformer:verifyTarget' }
+tasks.register('verifyBundle') {
+    dependsOn ':transformer:jar', ':runtime:reobfJar'
+    doLast {
+        def bundle = project(':transformer').tasks.named('jar').get().archiveFile.get().asFile
+        def runtime = project(':runtime').tasks.named('jar').get().archiveFile.get().asFile
+        new java.util.jar.JarFile(bundle).withCloseable { jar ->
+            def nested = jar.getJarEntry('META-INF/vh3_translation_patch/runtime.jar')
+            def metadata = new Properties()
+            jar.getInputStream(jar.getJarEntry('META-INF/vh3_translation_patch/runtime.properties')).withCloseable { metadata.load(it) }
+            def bytes = jar.getInputStream(nested).withCloseable { it.readAllBytes() }
+            def sha = java.security.MessageDigest.getInstance('SHA-256').digest(bytes).encodeHex().toString()
+            if (!java.util.Arrays.equals(bytes, runtime.bytes) || metadata.sha256 != sha || metadata.version != project.version.toString()
+                    || jar.manifest.mainAttributes.getValue('Implementation-Version') != project.version.toString()) {
+                throw new GradleException('Bundled runtime must match the reobfuscated runtime, version and SHA-256')
+            }
+            ['cpw.mods.modlauncher.api.ITransformationService', 'net.minecraftforge.forgespi.locating.IModLocator'].each { service ->
+                if (jar.getJarEntry('META-INF/services/' + service) == null) throw new GradleException("Missing service: ${service}")
+            }
+            if (jar.getJarEntry('META-INF/mods.toml') != null || jar.getJarEntry('com/dricetea/vh3patch/TranslationPatchMod.class') != null)
+                throw new GradleException('Runtime classes and mods.toml must remain inside the embedded runtime')
+        }
+        [bundle, runtime].each { file ->
+            new java.util.jar.JarFile(file).withCloseable { jar ->
+                if (jar.entries().toList().any { it.name.endsWith('.json') || it.name.startsWith('translations/') || it.name.endsWith('Test.class') })
+                    throw new GradleException("Unexpected translation or test resources: ${file.name}")
+            }
+        }
+        logger.lifecycle('Single JAR layout, version, SHA-256 and reobfuscated runtime verified.')
+    }
+}
+
+tasks.named('check') { dependsOn ':transformer:check', ':runtime:check', ':transformer:verifyTarget', 'verifyBundle' }
 tasks.register('exportToProgram') {
     group = 'distribution'
-    description = 'Verify and export the latest paired patch JARs to the translation program.'
+    description = 'Verify and export the single bundled patch JAR to the translation program.'
     dependsOn 'check', 'distribution'
     doLast {
         if (!(project.version.toString() ==~ /1\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)/)) {
             throw new GradleException('Export requires a 1.x.x mod_version in gradle.properties')
         }
-        def names = ["vh3_translation_patch-${project.version}.jar".toString(),
-                     "vh3_translation_patch-transformer-${project.version}.jar".toString()]
+        def names = ["vh3_translation_patch-${project.version}.jar".toString()]
         def source = layout.buildDirectory.dir('distribution').get().asFile.toPath()
         def destination = rootProject.file('../program/基础+硬编码汉化/mods').toPath().toAbsolutePath().normalize()
-        // 只处理本项目的两个 JAR；不能对整个 mods 使用 Sync，否则会删掉其他模组。
+        // 只处理本项目的单个安装 JAR；不能对整个 mods 使用 Sync，否则会删掉其他模组。
         names.each { name ->
             if (!java.nio.file.Files.isRegularFile(source.resolve(name))) {
-                throw new GradleException("Missing paired artifact: ${name}")
+                throw new GradleException("Missing bundled artifact: ${name}")
             }
         }
         java.nio.file.Files.createDirectories(destination)
@@ -57,7 +86,7 @@ tasks.register('exportToProgram') {
                 throw new GradleException("Export verification failed: ${name}")
             }
         }
-        // 新配套文件均已复制并验证后，只清理此目录内本补丁旧版本，避免重复加载。
+        // 新安装文件已复制并验证后，只清理此目录内本补丁旧版本，避免重复加载。
         destination.toFile().listFiles()?.findAll { entry ->
             entry.isFile() && (entry.name ==~ /vh3_translation_patch(-transformer)?-[0-9]+\.[0-9]+\.[0-9]+\.jar/) &&
                     !names.contains(entry.name)

@@ -4,13 +4,14 @@
 
 ## 加载层与职责
 
-modid 为 `vh3_translation_patch`，显示名 VH3 Translation Patch；包名前缀 `com.dricetea.vh3patch`。Forge 40.3.11 会把早期转换服务 JAR 排除在普通 mod 扫描外，因此使用两个配套 JAR。
+modid 为 `vh3_translation_patch`，显示名 VH3 Translation Patch；包名前缀 `com.dricetea.vh3patch`。Forge 40.3.11 会把早期转换服务 JAR 排除在普通 mod 扫描外，因此从 1.0.16 起使用外层转换器＋内嵌运行模块＋专用定位器，分发单个 JAR，仍保留 SERVICE/GAME 分层。见 [单 JAR 实现](single-jar.md)。
 
 | 层 / 入口 | 职责 |
 |---|---|
 | transformer 的 `PatchModule`、`PatchModules` | 模块契约/注册表，按目标类组织变换 |
 | transformer 的 `modules/*Module` | 目标清单、运行侧类名、专属 VP 判定与历史导入 |
 | `VerifiedMethodPatch`、`StringReturnPatch`、`StringValuePatch` | 共享方法校验/原子替换，返回值钩子及显示值钩子 |
+| `EmbeddedRuntime`、`EmbeddedRuntimeLocator` | 校验单 JAR 安装布局、提取带哈希缓存并向 Forge 提供运行模块 |
 | `TranslationTransformationService` | 启动预检、按端注册 PRE_CLASS 转换器与应用 |
 | `PatchTool`、`JsonFiles`、`VpCompatibility` | 离线命令分派、JSON 读写、VP 遍历/迁移 |
 | runtime 的 `modules/*Module` | 模块 ID、输入处理、配置查表与回退 |

@@ -1,31 +1,61 @@
 package com.dricetea.vh3patch.transformer;
 
 import com.google.gson.*;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonToken;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.*;
 
 public final class VpCompatibility {
     private VpCompatibility() {}
 
     public static void assertCompatible(Path directory, PatchModule module) throws IOException {
-        if (!Files.exists(directory)) return;
-        try (var files = Files.walk(directory)) {
-            for (Path path : files.filter(Files::isRegularFile).filter(p -> p.toString().endsWith(".json")).toList()) {
-                JsonElement root;
-                try (var reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
-                    root = JsonParser.parseReader(reader);
-                } catch (JsonParseException e) {
-                    throw new IllegalStateException("Cannot validate VP configuration: " + path.getFileName(), e);
-                }
-                if (hasConflict(root, module)) {
-                    throw new IllegalStateException("VP still owns " + module.spec().moduleId() + "/" + module.spec().methodName() + " in " + path.getFileName()
-                            + ". Generate and install the reviewed compatibility configuration, then clear VP cache.");
-                }
+        for (Path path : enabledModuleFiles(directory)) {
+            // VP 会为缺失模块创建空模板；预检无需创建文件，也不能转而扫描其他文件。
+            if (Files.notExists(path)) continue;
+            JsonElement root;
+            try (var reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
+                root = JsonParser.parseReader(reader);
+            } catch (JsonParseException e) {
+                throw new IllegalStateException("Cannot validate VP configuration: " + path.getFileName(), e);
+            }
+            if (hasConflict(root, module)) {
+                throw new IllegalStateException("VP still owns " + module.spec().moduleId() + "/" + module.spec().methodName() + " in " + path.getFileName()
+                        + ". Generate and install the reviewed compatibility configuration, then clear VP cache.");
             }
         }
+    }
+
+    /** 对齐 VP 1.4.4 的 readConfig / _init：mods（别名 m）最后出现者生效，逐项追加 .json。 */
+    static List<Path> enabledModuleFiles(Path directory) throws IOException {
+        Path config=directory.resolve("config.json");
+        // VP 首次生成配置时 mods 默认为空；无配置不代表加载目录里的全部 JSON。
+        if (Files.notExists(config)) return List.of();
+        List<String> names=new ArrayList<>();
+        try (JsonReader reader=new JsonReader(Files.newBufferedReader(config,StandardCharsets.UTF_8))) {
+            reader.beginObject();
+            while (reader.hasNext()) {
+                String key=reader.nextName();
+                if (!key.equals("mods") && !key.equals("m")) { reader.skipValue();continue; }
+                names.clear();reader.beginArray();
+                while (reader.hasNext()) {
+                    if (reader.peek()!=JsonToken.STRING) throw new IOException("VP mods must contain module names as strings");
+                    names.add(reader.nextString());
+                }
+                reader.endArray();
+            }
+            reader.endObject();
+            if (reader.peek()!=JsonToken.END_DOCUMENT) throw new IOException("Trailing content in VP config.json");
+        } catch (IOException | IllegalStateException e) {
+            throw new IOException("Cannot read VP enabled modules from " + config,e);
+        }
+        Set<Path> files=new LinkedHashSet<>();
+        for (String name:names) files.add(directory.resolve(name+".json"));
+        return List.copyOf(files);
     }
 
     private static boolean hasConflict(JsonElement element, PatchModule module) {
