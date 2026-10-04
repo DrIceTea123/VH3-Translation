@@ -4,15 +4,18 @@
         "desc": "无法asm替换的硬编码。版本V2.6.15",
         "authors": "KlparetlR、VM汉化组、ByF、DrIceTea",
         "mods": "the_vault",
-        "dynamic": true
+        "dynamic": true,
+        "i18n": false
     },
     {
         "_comment_0": "使用asm替换会崩溃，临时使用动态替换实现",
         "_comment_1": "可能的原因：直接使用枚举转化为显示文本"
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.item.ItemLegendaryTreasure",
+        "target_class": [
+            "iskallia.vault.item.ItemLegendaryTreasure"
+        ],
+        "info": {
             "method": "m_7373_"
         },
         "pairs": [
@@ -38,8 +41,10 @@
         "_comment_0": "目前使用asm替换会崩溃/不生效，临时使用动态替换实现"
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.gear.tooltip.VaultGearTooltipItem",
+        "target_class": [
+            "iskallia.vault.gear.tooltip.VaultGearTooltipItem"
+        ],
+        "info": {
             "method": "addTooltipEmptyAffixes"
         },
         "pairs": [
@@ -60,9 +65,9 @@
         "_comment_3": "local = Mcapitalize"
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.item.CompanionItemClient"
-        },
+        "target_class": [
+            "iskallia.vault.item.CompanionItemClient"
+        ],
         "pairs": [
             {
                 "key": "Legend",
@@ -79,7 +84,7 @@
         "_comment_1": "由于保存在结构nbt文件中，且大多为原版物品或其他mod物品，难以asm替换"
     },
     {
-        "target_class": {},
+        "target_class": [],
         "pairs": [
             {
                 "key": "You're enchanting uwu",
@@ -106,7 +111,7 @@
                 "value": "岩石"
             },
             {
-                "key": "\'\'I got a rock\'\'",
+                "key": "''I got a rock''",
                 "value": "“拾石物者为俊杰”"
             },
             {

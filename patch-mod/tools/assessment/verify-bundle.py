@@ -31,6 +31,7 @@ shutil.copyfile(bundle,installed)
 core=patch.parent.parent/'origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar'
 shutil.copyfile(core,game/'mods'/core.name)
 shutil.copytree(patch.parent/'program/基础+硬编码汉化/config/vaultpatcher_asm',game/'config/vaultpatcher_asm',dirs_exist_ok=True)
+shutil.copytree(patch.parent/'program/基础+硬编码汉化/vaultpatcher/modules',game/'vaultpatcher/modules',dirs_exist_ok=True)
 with ZipFile(bundle) as jar:
  assert 'META-INF/mods.toml' not in jar.namelist()
  assert 'com/dricetea/vh3patch/TranslationPatchMod.class' not in jar.namelist()

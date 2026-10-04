@@ -32,6 +32,7 @@ public abstract class DisplayMethodPatch implements PatchModule {
         if (before) method.instructions.insertBefore(site, call); else method.instructions.insert(site, call);
     }
     protected static List<JsonObject> vpTargets(JsonObject rule) {
+        rule = VpCompatibility.normalizeRule(rule);
         List<JsonObject> result = new ArrayList<>();
         if (rule.has("target_class") && rule.get("target_class").isJsonObject()) result.add(rule.getAsJsonObject("target_class"));
         if (rule.has("target_classes")) for (JsonElement t : rule.getAsJsonArray("target_classes")) if (t.isJsonObject()) result.add(t.getAsJsonObject());

@@ -4,12 +4,13 @@
         "desc": "至少50对译文且关联组不涉及local/ordinal的长列表。版本V2.6.18",
         "authors": "KlparetlR、VM汉化组、ByF、DrIceTea",
         "mods": "the_vault",
-        "dynamic": false
+        "dynamic": false,
+        "i18n": false
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.client.gui.screen.accessibility.VaultAccessibilityScreen"
-        },
+        "target_class": [
+            "iskallia.vault.client.gui.screen.accessibility.VaultAccessibilityScreen"
+        ],
         "pairs": [
             {
                 "key": "OFF",
@@ -268,8 +269,10 @@
         "_comment": "VTP chest_names 接管本组宝箱/储物桶名称与宝箱稀有度；其余规则保留。"
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.client.gui.screen.accessibility.VaultAccessibilityScreen",
+        "target_class": [
+            "iskallia.vault.client.gui.screen.accessibility.VaultAccessibilityScreen"
+        ],
+        "info": {
             "local": "Mname"
         },
         "pairs": [
@@ -336,9 +339,9 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.client.gui.screen.rules.VaultRulesScreen"
-        },
+        "target_class": [
+            "iskallia.vault.client.gui.screen.rules.VaultRulesScreen"
+        ],
         "pairs": [
             {
                 "key": "Vault Rules",
@@ -630,8 +633,10 @@
         "_comment": "VaultRulesScreen界面的所有枚举类实例文本"
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.client.gui.screen.rules.VaultRulesScreen",
+        "target_class": [
+            "iskallia.vault.client.gui.screen.rules.VaultRulesScreen"
+        ],
+        "info": {
             "local": "MtoUpperCase"
         },
         "pairs": [
@@ -730,9 +735,9 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.command.vault.VaultCommand"
-        },
+        "target_class": [
+            "iskallia.vault.command.vault.VaultCommand"
+        ],
         "pairs": [
             {
                 "key": "Modifier not found",
@@ -1017,13 +1022,227 @@
         ]
     },
     {
-        "target_classes": [
+        "target_class": [
+            "iskallia.vault.core.vault.influence.Influences"
+        ],
+        "pairs": [
             {
-                "name": "iskallia.vault.core.vault.influence.Influences"
+                "key": " added ",
+                "value": "添加了"
             },
             {
-                "name": "iskallia.vault.task.GodAltarTask"
+                "key": "Our domain's ground will carve a path.",
+                "value": "我们的领域将开辟出一条道路。"
+            },
+            {
+                "key": "Tread upon our domain with care and it will respond in kind.",
+                "value": "小心踏入我们的领域，它会做出相应的回应。"
+            },
+            {
+                "key": "May your desire blossom into a wildfire.",
+                "value": "愿你的愿望化作燎原之火。"
+            },
+            {
+                "key": "Creation bends to our will.",
+                "value": "万物顺从于我们的意志。"
+            },
+            {
+                "key": "The soil whispers secrets of those who've walked before.",
+                "value": "泥土低语着前人的秘密。"
+            },
+            {
+                "key": "Beneath the surface, our whispers guide fate.",
+                "value": "在表层之下，我们的低语指引着命运。"
+            },
+            {
+                "key": "Our heartbeats sync with the world's tremors.",
+                "value": "我们的心跳与世界的震颤同步。"
+            },
+            {
+                "key": "Our reach extends beyond the visible horizon.",
+                "value": "我们的触及范围延伸到地平线之外。"
+            },
+            {
+                "key": "May foresight guide your step.",
+                "value": "愿远见指引你的脚步。"
+            },
+            {
+                "key": "Careful planning and strategy may lead you.",
+                "value": "周密的计划和战略可让你受益匪浅。"
+            },
+            {
+                "key": "A set choice; followed through and flawlessly executed.",
+                "value": "做出决定，贯彻到底，完美执行。"
+            },
+            {
+                "key": "Chance's hand may favour your goals.",
+                "value": "机遇之手可将你推向目标。"
+            },
+            {
+                "key": "In the dance of fate and strategy, precision reigns.",
+                "value": "在命运与战略的共舞中，精确是最重要的。"
+            },
+            {
+                "key": "To foresee is to command the threads of destiny.",
+                "value": "远见就是掌握命运的脉搏。"
+            },
+            {
+                "key": "Tread lightly on the line between choice and predestination.",
+                "value": "在选择和宿命之间，你要小心谨慎。"
+            },
+            {
+                "key": "To conquer fate, first understand its riddles.",
+                "value": "要征服命运，首先要理解命运之谜。"
+            },
+            {
+                "key": "Seize the opportunity.",
+                "value": "抓住你的机遇。"
+            },
+            {
+                "key": "A single instant, stretched to infinity.",
+                "value": "一瞬间，绵延至无尽。"
+            },
+            {
+                "key": "Your future glows golden with possibility.",
+                "value": "你的未来充满无限可能，熠熠生辉。"
+            },
+            {
+                "key": "Hasten and value every passing moment.",
+                "value": "抓紧时间，珍惜每分每秒。"
+            },
+            {
+                "key": "With every heartbeat, an epoch is born.",
+                "value": "每一次心跳，都是一个时代的诞生。"
+            },
+            {
+                "key": "The sands of time are fleeting; grasp them.",
+                "value": "时间之沙稍纵即逝，请把握住。"
+            },
+            {
+                "key": "The dance of time is swift; miss not its rhythm.",
+                "value": "时间的舞步很快，不要错过它的节奏。"
+            },
+            {
+                "key": "The pendulum of time swings but once for each moment.",
+                "value": "时间的钟摆每时每刻只摆动一次。"
+            },
+            {
+                "key": "Enforce your path through obstacles.",
+                "value": "确保你的道路畅通无阻。"
+            },
+            {
+                "key": "Our vigor may aid your conquest.",
+                "value": "我们的力量可助你征服。"
+            },
+            {
+                "key": "Cherish this mote of my might.",
+                "value": "珍惜我的力量之光。"
+            },
+            {
+                "key": "A tempest incarnate.",
+                "value": "我即是风暴的化身。"
+            },
+            {
+                "key": "Rise, like the waves, unyielding and fierce.",
+                "value": "崛起，如波涛汹涌，不屈不挠，勇往直前。"
+            },
+            {
+                "key": "Forge ahead with the fury of storms.",
+                "value": "在暴风雨的狂暴中奋勇前进。"
+            },
+            {
+                "key": "With relentless force, mold your path.",
+                "value": "用无情的力量塑造你的道路。"
+            },
+            {
+                "key": "Harness my wrath to awaken the dormant.",
+                "value": "利用我的愤怒，唤醒沉睡的灵魂。"
+            },
+            {
+                "key": "The harmony of the natural world eludes you.",
+                "value": "自然世界的和谐你难以理解。"
+            },
+            {
+                "key": "The beauty of nature thrives on resilience, but your actions have brought only discord.",
+                "value": "自然之美源于顽强的生命力，但你的行为却只带来不和之音。"
+            },
+            {
+                "key": "Your failures wither the very essence of life.",
+                "value": "你的失败让生命的本质凋零。"
+            },
+            {
+                "key": "The song of nature laments your inadequacy.",
+                "value": "自然的歌声哀叹着你的不足。"
+            },
+            {
+                "key": "You tarnish the purity of nature with your missteps.",
+                "value": "你的失误玷污了自然的纯洁。"
+            },
+            {
+                "key": "Even the wisest can stumble on their path to enlightenment.",
+                "value": "即使是最聪明的人，也会在悟道的道路上磕磕绊绊。"
+            },
+            {
+                "key": "Seek knowledge, learn from your failures, and you shall find your way.",
+                "value": "寻求知识，从失败中吸取教训，你就会找到自己的方向。"
+            },
+            {
+                "key": "Failure is but a stepping stone on the road to enlightenment.",
+                "value": "失败只是通往启迪之路的一块垫脚石。"
+            },
+            {
+                "key": "Even the most brilliant minds face setbacks.",
+                "value": "再聪明的人也会遇到挫折。"
+            },
+            {
+                "key": "In the pursuit of wisdom, missteps are bound to occur.",
+                "value": "在追求智慧的过程中，难免会出现失误。"
+            },
+            {
+                "key": "A moment lost is a chance wasted.",
+                "value": "失之毫厘，谬以千里。"
+            },
+            {
+                "key": "The sands of time never cease their relentless march.",
+                "value": "时间的流沙从未停止过无情的脚步。"
+            },
+            {
+                "key": "In the grand tapestry of existence, your actions are but threads.",
+                "value": "在存在的宏大织锦中，你的行为只是小小线头。"
+            },
+            {
+                "key": "Time's embrace can be both cruel and kind.",
+                "value": "时间的怀抱既残酷又仁慈。"
+            },
+            {
+                "key": "As the clock ticks, so do your choices shape your destiny.",
+                "value": "随时间流逝，你的选择也将决定你的命运。"
+            },
+            {
+                "key": "Perhaps you should consider a different path.",
+                "value": "也许你应该考虑换一条路。"
+            },
+            {
+                "key": "Weakness is a burden that few can afford.",
+                "value": "软弱是一种负担，很少有人能承受得起。"
+            },
+            {
+                "key": "Your feeble attempt have left much to be desired.",
+                "value": "你微弱的尝试还有很多不足。"
+            },
+            {
+                "key": "A hunter must be swift to adapt, or they are doomed to fail.",
+                "value": "猎人必须迅速适应，否则注定失败。"
+            },
+            {
+                "key": "No smiles will be cast upon those who crumble in the face of adversity.",
+                "value": "逆境中溃败之人不会得到微笑。"
             }
+        ]
+    },
+    {
+        "target_class": [
+            "iskallia.vault.task.GodAltarTask"
         ],
         "pairs": [
             {
@@ -1244,14 +1463,8 @@
         "_comment": "CompanionItemClient用于伙伴物品的类型名称显示"
     },
     {
-        "target_classes": [
-            {
-                "name": "iskallia.vault.entity.entity.pet.PetModelType"
-            },
-            {
-                "name": "iskallia.vault.item.CompanionItemClient",
-                "local": "MconvertToTitleCase"
-            }
+        "target_class": [
+            "iskallia.vault.entity.entity.pet.PetModelType"
         ],
         "pairs": [
             {
@@ -1513,9 +1726,275 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.init.ModDynamicModels$Armor"
+        "target_class": [
+            "iskallia.vault.item.CompanionItemClient"
+        ],
+        "info": {
+            "local": "MconvertToTitleCase"
         },
+        "pairs": [
+            {
+                "key": "Eternal",
+                "value": "永生者"
+            },
+            {
+                "key": "Minion",
+                "value": "仆从"
+            },
+            {
+                "key": "Antlion",
+                "value": "蚁狮"
+            },
+            {
+                "key": "Giant",
+                "value": "巨人"
+            },
+            {
+                "key": "Venus",
+                "value": "维纳斯"
+            },
+            {
+                "key": "Skeleton Husky",
+                "value": "骷髅哈士奇"
+            },
+            {
+                "key": "Unicorn",
+                "value": "独角兽"
+            },
+            {
+                "key": "Dino",
+                "value": "恐龙"
+            },
+            {
+                "key": "Reindeer",
+                "value": "驯鹿"
+            },
+            {
+                "key": "Camel",
+                "value": "骆驼"
+            },
+            {
+                "key": "Peacock",
+                "value": "孔雀"
+            },
+            {
+                "key": "Elephant",
+                "value": "象"
+            },
+            {
+                "key": "Muddy Elephant",
+                "value": "泥象"
+            },
+            {
+                "key": "Moose",
+                "value": "驼鹿"
+            },
+            {
+                "key": "Pug",
+                "value": "哈巴狗"
+            },
+            {
+                "key": "Wrinkles",
+                "value": "哈巴狗"
+            },
+            {
+                "key": "Jade",
+                "value": "翡翠"
+            },
+            {
+                "key": "Lion",
+                "value": "狮子"
+            },
+            {
+                "key": "Raccoon",
+                "value": "浣熊"
+            },
+            {
+                "key": "Tiny Raccoon",
+                "value": "小浣熊"
+            },
+            {
+                "key": "Shiba",
+                "value": "柴犬"
+            },
+            {
+                "key": "Baby Creeper",
+                "value": "苦力怕宝宝"
+            },
+            {
+                "key": "Gold Baby Creeper",
+                "value": "黄金苦力怕宝宝"
+            },
+            {
+                "key": "POG Baby Creeper",
+                "value": "POG苦力怕宝宝"
+            },
+            {
+                "key": "Taffy",
+                "value": "塔菲"
+            },
+            {
+                "key": "Black Cat",
+                "value": "黑猫"
+            },
+            {
+                "key": "White Cat",
+                "value": "白猫"
+            },
+            {
+                "key": "Cinder Cat",
+                "value": "煤球猫"
+            },
+            {
+                "key": "Panda",
+                "value": "熊猫"
+            },
+            {
+                "key": "Red Panda",
+                "value": "小熊猫"
+            },
+            {
+                "key": "Polar Bear",
+                "value": "北极熊"
+            },
+            {
+                "key": "Rat",
+                "value": "老鼠"
+            },
+            {
+                "key": "Grizzly Bear",
+                "value": "棕熊"
+            },
+            {
+                "key": "Papillon",
+                "value": "帕皮隆"
+            },
+            {
+                "key": "Penguin",
+                "value": "企鹅"
+            },
+            {
+                "key": "Dylan's Penguin",
+                "value": "迪伦的企鹅"
+            },
+            {
+                "key": "Dylan",
+                "value": "迪伦"
+            },
+            {
+                "key": "Pink Dylan",
+                "value": "粉红迪伦"
+            },
+            {
+                "key": "Gold Dylan",
+                "value": "黄金迪伦"
+            },
+            {
+                "key": "Carrot",
+                "value": "胡萝卜"
+            },
+            {
+                "key": "Bumbo Cactoni",
+                "value": "怪脸仙人掌"
+            },
+            {
+                "key": "Golden Bumbo Cactoni",
+                "value": "黄金怪脸仙人掌"
+            },
+            {
+                "key": "Bumbo Pumpkini",
+                "value": "怪脸南瓜"
+            },
+            {
+                "key": "Santa Dylan",
+                "value": "圣诞老人迪伦"
+            },
+            {
+                "key": "Gingerbread Man",
+                "value": "姜饼人"
+            },
+            {
+                "key": "Bumbo Frostoni",
+                "value": "怪脸冰人"
+            },
+            {
+                "key": "Blueberry Turtle",
+                "value": "蓝莓海龟"
+            },
+            {
+                "key": "Teddy",
+                "value": "泰迪"
+            },
+            {
+                "key": "Teddy Bear",
+                "value": "泰迪熊"
+            },
+            {
+                "key": "Tommy",
+                "value": "汤米"
+            },
+            {
+                "key": "Greg",
+                "value": "格雷格"
+            },
+            {
+                "key": "Mini Butcher",
+                "value": "迷你屠夫"
+            },
+            {
+                "key": "Mini Elite Witherskelly",
+                "value": "迷你精英凋灵骷髅"
+            },
+            {
+                "key": "Mini Elite Witherskeleton",
+                "value": "迷你精英凋灵骷髅"
+            },
+            {
+                "key": "Mini Goblin",
+                "value": "迷你哥布林"
+            },
+            {
+                "key": "Goat",
+                "value": "山羊"
+            },
+            {
+                "key": "White Seal",
+                "value": "白海豹"
+            },
+            {
+                "key": "Spotted Seal",
+                "value": "斑点海豹"
+            },
+            {
+                "key": "Pig",
+                "value": "猪"
+            },
+            {
+                "key": "Bobby",
+                "value": "波比"
+            },
+            {
+                "key": "Pig Crown",
+                "value": "小丑猪"
+            },
+            {
+                "key": "Technoblade",
+                "value": "小丑猪"
+            },
+            {
+                "key": "Red Dragon",
+                "value": "红龙"
+            },
+            {
+                "key": "Lunar Dragon",
+                "value": "月龙"
+            }
+        ]
+    },
+    {
+        "target_class": [
+            "iskallia.vault.init.ModDynamicModels$Armor"
+        ],
         "pairs": [
             {
                 "key": "Angel",
@@ -2280,9 +2759,9 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.init.ModDynamicModels$Swords"
-        },
+        "target_class": [
+            "iskallia.vault.init.ModDynamicModels$Swords"
+        ],
         "pairs": [
             {
                 "key": "Neon Blade",
@@ -2587,9 +3066,9 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.init.ModDynamicModels$Axes"
-        },
+        "target_class": [
+            "iskallia.vault.init.ModDynamicModels$Axes"
+        ],
         "pairs": [
             {
                 "key": "Glacian Broadaxe",
@@ -2798,9 +3277,9 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.init.ModDynamicModels$Idols"
-        },
+        "target_class": [
+            "iskallia.vault.init.ModDynamicModels$Idols"
+        ],
         "pairs": [
             {
                 "key": "Wendarr's Idol",
@@ -2821,9 +3300,9 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.init.ModDynamicModels$Shields"
-        },
+        "target_class": [
+            "iskallia.vault.init.ModDynamicModels$Shields"
+        ],
         "pairs": [
             {
                 "key": "Good ol' Vanilla Shield",
@@ -3136,9 +3615,9 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.init.ModDynamicModels$Relics"
-        },
+        "target_class": [
+            "iskallia.vault.init.ModDynamicModels$Relics"
+        ],
         "pairs": [
             {
                 "key": "Dragon Breath",
@@ -3335,9 +3814,9 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.init.ModDynamicModels$Magnets"
-        },
+        "target_class": [
+            "iskallia.vault.init.ModDynamicModels$Magnets"
+        ],
         "pairs": [
             {
                 "key": "The OG",
@@ -3434,9 +3913,9 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.init.ModDynamicModels$VoidStones"
-        },
+        "target_class": [
+            "iskallia.vault.init.ModDynamicModels$VoidStones"
+        ],
         "pairs": [
             {
                 "key": "Void Stone",
@@ -3481,9 +3960,9 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.init.ModDynamicModels$Wands"
-        },
+        "target_class": [
+            "iskallia.vault.init.ModDynamicModels$Wands"
+        ],
         "pairs": [
             {
                 "key": "Wooden Wand",
@@ -3652,9 +4131,9 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.init.ModDynamicModels$Focus"
-        },
+        "target_class": [
+            "iskallia.vault.init.ModDynamicModels$Focus"
+        ],
         "pairs": [
             {
                 "key": "Tattered Tome",
@@ -3803,9 +4282,9 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.init.ModDynamicModels$VaultGodCharms"
-        },
+        "target_class": [
+            "iskallia.vault.init.ModDynamicModels$VaultGodCharms"
+        ],
         "pairs": [
             {
                 "key": "Idona's Charm (Common)",
@@ -3877,9 +4356,9 @@
         "_comment": "部分复杂词缀由 VTP gear_affixes 接管。"
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.init.ModGearAttributes"
-        },
+        "target_class": [
+            "iskallia.vault.init.ModGearAttributes"
+        ],
         "pairs": [
             {
                 "key": "Armor",
@@ -4320,9 +4799,9 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vault.skill.ability.component.AbilityLabelFactory$1"
-        },
+        "target_class": [
+            "iskallia.vault.skill.ability.component.AbilityLabelFactory$1"
+        ],
         "pairs": [
             {
                 "key": "\n Cooldown: ",

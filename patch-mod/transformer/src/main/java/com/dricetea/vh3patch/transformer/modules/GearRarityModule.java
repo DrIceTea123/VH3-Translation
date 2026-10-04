@@ -23,6 +23,7 @@ public final class GearRarityModule extends DisplayMethodPatch {
         return count;
     }
     @Override public boolean ownsVpRule(JsonObject rule) {
+        rule = VpCompatibility.normalizeRule(rule);
         for(JsonObject t:vpTargets(rule)) {
             if(!t.has("name"))continue;
             String name=t.get("name").getAsString().replace('.','/');

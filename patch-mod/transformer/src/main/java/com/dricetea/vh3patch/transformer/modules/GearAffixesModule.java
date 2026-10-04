@@ -20,6 +20,7 @@ public final class GearAffixesModule extends DisplayMethodPatch {
         return count;
     }
     @Override public boolean ownsVpRule(JsonObject rule) {
+        rule = VpCompatibility.normalizeRule(rule);
         for (JsonObject target : vpTargets(rule)) {
             if (!target.has("name")) continue;
             if (!target.get("name").getAsString().replace('.','/').equals(REGISTRY)) {

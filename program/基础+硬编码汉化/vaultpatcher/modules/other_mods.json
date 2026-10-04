@@ -4,11 +4,14 @@
         "desc": "其他模组的部分硬编码汉化。版本V2.6.13",
         "authors": "KlparetlR、VM汉化组、ByF、DrIceTea",
         "mods": "others",
-        "dynamic": false
+        "dynamic": false,
+        "i18n": false
     },
     {
-        "target_class": {
-            "name": "iskallia.auxiliaryblocks.block.item.CategorizedBlockItem",
+        "target_class": [
+            "iskallia.auxiliaryblocks.block.item.CategorizedBlockItem"
+        ],
+        "info": {
             "method": "m_7373_"
         },
         "pairs": [
@@ -47,93 +50,141 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.auxiliaryblocks.category.block.AsphaltBlockCategory"
-        },
-        "key": "Asphalt",
-        "value": "沥青"
+        "target_class": [
+            "iskallia.auxiliaryblocks.category.block.AsphaltBlockCategory"
+        ],
+        "pairs": [
+            {
+                "key": "Asphalt",
+                "value": "沥青"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.auxiliaryblocks.category.block.AuroraBlockCategory"
-        },
-        "key": "Aurora",
-        "value": "极光"
+        "target_class": [
+            "iskallia.auxiliaryblocks.category.block.AuroraBlockCategory"
+        ],
+        "pairs": [
+            {
+                "key": "Aurora",
+                "value": "极光"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.auxiliaryblocks.category.block.CrystalBlockCategory"
-        },
-        "key": "Crystal",
-        "value": "水晶"
+        "target_class": [
+            "iskallia.auxiliaryblocks.category.block.CrystalBlockCategory"
+        ],
+        "pairs": [
+            {
+                "key": "Crystal",
+                "value": "水晶"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.auxiliaryblocks.category.block.GelatinBlockCategory"
-        },
-        "key": "Gelatin",
-        "value": "凝胶"
+        "target_class": [
+            "iskallia.auxiliaryblocks.category.block.GelatinBlockCategory"
+        ],
+        "pairs": [
+            {
+                "key": "Gelatin",
+                "value": "凝胶"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.auxiliaryblocks.category.block.GloomBlockCategory"
-        },
-        "key": "Gloom",
-        "value": "阴郁"
+        "target_class": [
+            "iskallia.auxiliaryblocks.category.block.GloomBlockCategory"
+        ],
+        "pairs": [
+            {
+                "key": "Gloom",
+                "value": "阴郁"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.auxiliaryblocks.category.block.IndustrialBlockCategory"
-        },
-        "key": "Industrial",
-        "value": "工业"
+        "target_class": [
+            "iskallia.auxiliaryblocks.category.block.IndustrialBlockCategory"
+        ],
+        "pairs": [
+            {
+                "key": "Industrial",
+                "value": "工业"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.auxiliaryblocks.category.block.LabBlockCategory"
-        },
-        "key": "Laboratory",
-        "value": "实验室"
+        "target_class": [
+            "iskallia.auxiliaryblocks.category.block.LabBlockCategory"
+        ],
+        "pairs": [
+            {
+                "key": "Laboratory",
+                "value": "实验室"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.auxiliaryblocks.category.block.MetalsBlockCategory"
-        },
-        "key": "Metals",
-        "value": "金属"
+        "target_class": [
+            "iskallia.auxiliaryblocks.category.block.MetalsBlockCategory"
+        ],
+        "pairs": [
+            {
+                "key": "Metals",
+                "value": "金属"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.auxiliaryblocks.category.block.NaturalBlockCategory"
-        },
-        "key": "Natural",
-        "value": "自然"
+        "target_class": [
+            "iskallia.auxiliaryblocks.category.block.NaturalBlockCategory"
+        ],
+        "pairs": [
+            {
+                "key": "Natural",
+                "value": "自然"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.auxiliaryblocks.category.block.PastelBlockCategory"
-        },
-        "key": "Pastel",
-        "value": "蜡笔"
+        "target_class": [
+            "iskallia.auxiliaryblocks.category.block.PastelBlockCategory"
+        ],
+        "pairs": [
+            {
+                "key": "Pastel",
+                "value": "蜡笔"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.auxiliaryblocks.category.block.PlasticBlockCategory"
-        },
-        "key": "Plastic",
-        "value": "塑料"
+        "target_class": [
+            "iskallia.auxiliaryblocks.category.block.PlasticBlockCategory"
+        ],
+        "pairs": [
+            {
+                "key": "Plastic",
+                "value": "塑料"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.auxiliaryblocks.category.block.SheetMetalBlockCategory"
-        },
-        "key": "Sheet Metal",
-        "value": "金属板"
+        "target_class": [
+            "iskallia.auxiliaryblocks.category.block.SheetMetalBlockCategory"
+        ],
+        "pairs": [
+            {
+                "key": "Sheet Metal",
+                "value": "金属板"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.auxiliaryblocks.init.ModBlocks"
-        },
+        "target_class": [
+            "iskallia.auxiliaryblocks.init.ModBlocks"
+        ],
         "pairs": [
             {
                 "key": "Iskall's Favorite Block",
@@ -210,9 +261,9 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vaultintegrations.block.item.AltarConduitBlockItem"
-        },
+        "target_class": [
+            "iskallia.vaultintegrations.block.item.AltarConduitBlockItem"
+        ],
         "pairs": [
             {
                 "key": "You do not have access to this controller.",
@@ -225,37 +276,57 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vaultintegrations.block.AltarConduitBlock"
-        },
-        "key": "Unable to place the Altar Conduit. You already have one placed in the world at ",
-        "value": "无法放置祭坛导管。你已经在世界中放置了一个，位于"
+        "target_class": [
+            "iskallia.vaultintegrations.block.AltarConduitBlock"
+        ],
+        "pairs": [
+            {
+                "key": "Unable to place the Altar Conduit. You already have one placed in the world at ",
+                "value": "无法放置祭坛导管。你已经在世界中放置了一个，位于"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.vaultintegrations.client.gui.screen.AltarConduitScreen"
-        },
-        "key": "Blacklisted Items:",
-        "value": "黑名单物品："
+        "target_class": [
+            "iskallia.vaultintegrations.client.gui.screen.AltarConduitScreen"
+        ],
+        "pairs": [
+            {
+                "key": "Blacklisted Items:",
+                "value": "黑名单物品："
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "com.mrbysco.chunkymcchunkface.blocks.ChunkLoaderBlock"
-        },
-        "key": "Chunk Loader",
-        "value": "区块加载器"
+        "target_class": [
+            "com.mrbysco.chunkymcchunkface.blocks.ChunkLoaderBlock"
+        ],
+        "pairs": [
+            {
+                "key": "Chunk Loader",
+                "value": "区块加载器"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.ispawner.item.nbt.SpawnData",
+        "target_class": [
+            "iskallia.ispawner.item.nbt.SpawnData"
+        ],
+        "info": {
             "method": "appendTooltip"
         },
-        "key": "Spawner Charges: ",
-        "value": "刷怪笼物品："
+        "pairs": [
+            {
+                "key": "Spawner Charges: ",
+                "value": "刷怪笼物品："
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.ispawner.item.SpawnerControllerItem",
+        "target_class": [
+            "iskallia.ispawner.item.SpawnerControllerItem"
+        ],
+        "info": {
             "method": ""
         },
         "pairs": [
@@ -274,16 +345,24 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.ispawner.screen.SurvivalSpawnerScreen",
+        "target_class": [
+            "iskallia.ispawner.screen.SurvivalSpawnerScreen"
+        ],
+        "info": {
             "method": ""
         },
-        "key": "Charges: ",
-        "value": "生成数："
+        "pairs": [
+            {
+                "key": "Charges: ",
+                "value": "生成数："
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "iskallia.ispawner.world.spawner.SpawnerController$Mode",
+        "target_class": [
+            "iskallia.ispawner.world.spawner.SpawnerController$Mode"
+        ],
+        "info": {
             "method": ""
         },
         "pairs": [
@@ -302,8 +381,10 @@
         ]
     },
     {
-        "target_class": {
-            "name": "iskallia.ispawner.world.spawner.SpawnerSettings$Mode",
+        "target_class": [
+            "iskallia.ispawner.world.spawner.SpawnerSettings$Mode"
+        ],
+        "info": {
             "method": ""
         },
         "pairs": [
@@ -322,24 +403,38 @@
         ]
     },
     {
-        "target_class": {
-            "name": "ironfurnaces.items.ItemFurnace",
+        "target_class": [
+            "ironfurnaces.items.ItemFurnace"
+        ],
+        "info": {
             "method": "m_7373_"
         },
-        "key": "Cooktime: ",
-        "value": "熔炼时间："
+        "pairs": [
+            {
+                "key": "Cooktime: ",
+                "value": "熔炼时间："
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "ironfurnaces.items.ItemMillionFurnace",
+        "target_class": [
+            "ironfurnaces.items.ItemMillionFurnace"
+        ],
+        "info": {
             "method": "m_7373_"
         },
-        "key": "Cooktime: ",
-        "value": "熔炼时间："
+        "pairs": [
+            {
+                "key": "Cooktime: ",
+                "value": "熔炼时间："
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "ironfurnaces.items.ItemFurnaceCopy",
+        "target_class": [
+            "ironfurnaces.items.ItemFurnaceCopy"
+        ],
+        "info": {
             "method": ""
         },
         "pairs": [
@@ -398,8 +493,10 @@
         ]
     },
     {
-        "target_class": {
-            "name": "ironfurnaces.items.ItemLinker",
+        "target_class": [
+            "ironfurnaces.items.ItemLinker"
+        ],
+        "info": {
             "method": ""
         },
         "pairs": [
@@ -414,40 +511,66 @@
         ]
     },
     {
-        "target_class": {
-            "name": "ironfurnaces.blocks.furnaces.BlockIronFurnaceBase",
+        "target_class": [
+            "ironfurnaces.blocks.furnaces.BlockIronFurnaceBase"
+        ],
+        "info": {
             "method": ""
         },
-        "key": "Settings copied",
-        "value": "熔炉设置已复制"
+        "pairs": [
+            {
+                "key": "Settings copied",
+                "value": "熔炉设置已复制"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "net.p3pp3rf1y.sophisticatedcore.client.gui.StorageScreenBase",
+        "target_class": [
+            "net.p3pp3rf1y.sophisticatedcore.client.gui.StorageScreenBase"
+        ],
+        "info": {
             "method": "lambda$addSortButtons$5"
         },
-        "key": "Sorted",
-        "value": "已整理"
+        "pairs": [
+            {
+                "key": "Sorted",
+                "value": "已整理"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "com.codetaylor.mc.enercell.command.ReloadConfigsCommand",
+        "target_class": [
+            "com.codetaylor.mc.enercell.command.ReloadConfigsCommand"
+        ],
+        "info": {
             "method": ""
         },
-        "key": "Configs reloaded!",
-        "value": "配置文件已重载！"
+        "pairs": [
+            {
+                "key": "Configs reloaded!",
+                "value": "配置文件已重载！"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "com.codetaylor.mc.enercell.item.EnercellBlockItem",
+        "target_class": [
+            "com.codetaylor.mc.enercell.item.EnercellBlockItem"
+        ],
+        "info": {
             "method": "m_7373_"
         },
-        "key": "Energy: %s / %s",
-        "value": "能量：%s / %s"
+        "pairs": [
+            {
+                "key": "Energy: %s / %s",
+                "value": "能量：%s / %s"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "com.codetaylor.mc.enercell.client.gui.screen.EnercellScreen",
+        "target_class": [
+            "com.codetaylor.mc.enercell.client.gui.screen.EnercellScreen"
+        ],
+        "info": {
             "method": "renderEnergyTooltip"
         },
         "pairs": [
@@ -478,23 +601,35 @@
         ]
     },
     {
-        "target_class": {
-            "name": "net.mehvahdjukaar.cagerium.common.CageriumBlockTile",
+        "target_class": [
+            "net.mehvahdjukaar.cagerium.common.CageriumBlockTile"
+        ],
+        "info": {
             "method": "onInteract"
         },
-        "key": "Does not fit in here",
-        "value": "与此设备不适配"
+        "pairs": [
+            {
+                "key": "Does not fit in here",
+                "value": "与此设备不适配"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "io.iridium.vaultarhud.VaultarHUDOverlay"
-        },
-        "key": "Recipe",
-        "value": "配方"
+        "target_class": [
+            "io.iridium.vaultarhud.VaultarHUDOverlay"
+        ],
+        "pairs": [
+            {
+                "key": "Recipe",
+                "value": "配方"
+            }
+        ]
     },
     {
-        "target_class": {
-            "name": "com.supermartijn642.core.TextComponents",
+        "target_class": [
+            "com.supermartijn642.core.TextComponents"
+        ],
+        "info": {
             "method": "string",
             "local": "Vtext"
         },

@@ -32,28 +32,27 @@ class XpVpRulesTest {
         var mob = new MobNamesModule(); var chest = new ChestNamesModule();
         ClassNode node = TargetJar.read(Path.of(System.getProperty("vh3.test.targetJar")), mob.specs().get(1), true);
         mob.apply(node); chest.apply(node);
-        var rules = JsonFiles.read(Path.of(System.getProperty("vh3.test.programVpDirectory"), "the_vault-asm_main.json")).getAsJsonArray();
+        var rules = JsonFiles.read(VpCompatibility.moduleDirectory(Path.of(System.getProperty("vh3.test.programVpDirectory"))).resolve("the_vault-asm_main.json")).getAsJsonArray();
         MethodNode delta = node.methods.stream().filter(m -> m.name.equals("handleDeltas")).findFirst().orElseThrow();
         int hooks=0, labels=0, groups=0;
         for (JsonElement e : rules) {
-            JsonObject rule=e.getAsJsonObject();
+            JsonObject rule=VpCompatibility.normalizeRule(e.getAsJsonObject());
             if (!rule.has("target_class") || !rule.getAsJsonObject("target_class").get("name").getAsString().equals(ChestNamesModule.XP.replace('/','.'))) continue;
             groups++;
             JsonObject target=rule.getAsJsonObject("target_class");
             assertEquals("handleDeltas", target.get("method").getAsString());
             assertFalse(mob.ownsVpRule(rule)); assertFalse(chest.ownsVpRule(rule));
-            TranslationInfo info=new TranslationInfo();
-            info.getTargetClassInfo().setName(target.get("name").getAsString());
+            TranslationInfo info=new TranslationInfo(target.get("name").getAsString());
             info.getTargetClassInfo().setMethod(target.get("method").getAsString());
             for (JsonElement p : rule.getAsJsonArray("pairs")) {
-                info.setKey(p.getAsJsonObject().get("key").getAsString()); info.setValue(p.getAsJsonObject().get("value").getAsString());
+                info.getPairs().setKey(p.getAsJsonObject().get("key").getAsString()); info.getPairs().setValue(p.getAsJsonObject().get("value").getAsString());
             }
             var params=new NodeHandlerParameters(false,false,node,delta,new HashMap<>(),info);
             if (target.has("local")) {
                 assertEquals("MformatOreName",target.get("local").getAsString());
                 info.getTargetClassInfo().setLocal(target.get("local").getAsString());
                 for (AbstractInsnNode i : delta.instructions.toArray()) if (i instanceof MethodInsnNode call) {
-                    new MethodNodeHandler(call,params) { @Override public void debugInfo(int ordinal,String action,String old,String value) {} }.modifyNode();
+                    new MethodNodeHandler(call,params) { @Override public void debugInfo(int ordinal,String action,String old,String value,String detail) {} }.modifyNode();
                     if (call.name.equals("formatOreName")) {
                         MethodInsnNode hook=assertInstanceOf(MethodInsnNode.class, call.getNext());
                         assertEquals("__vp_replace",hook.name); assertEquals("(Ljava/lang/Object;)Ljava/lang/String;",hook.desc); hooks++;
@@ -69,7 +68,7 @@ class XpVpRulesTest {
                 assertEquals("Unknown Ore",MatchUtils.matchPairs(info.getPairs(),"Unknown Ore",false));
             } else {
                 for (AbstractInsnNode i : delta.instructions.toArray()) if (i instanceof LdcInsnNode ldc && info.getPairs().getMap().containsKey(ldc.cst)) {
-                    new LdcNodeHandler(ldc,params) { @Override public void debugInfo(int ordinal,String action,String old,String value) {} }.modifyNode(); labels++;
+                    new LdcNodeHandler(ldc,params) { @Override public void debugInfo(int ordinal,String action,String old,String value,String detail) {} }.modifyNode(); labels++;
                 }
             }
         }

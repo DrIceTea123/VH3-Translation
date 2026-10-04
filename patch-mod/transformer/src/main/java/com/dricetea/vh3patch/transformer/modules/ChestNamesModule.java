@@ -83,6 +83,7 @@ public final class ChestNamesModule implements PatchModule {
         });
     }
     @Override public boolean ownsVpRule(JsonObject rule) {
+        rule = VpCompatibility.normalizeRule(rule);
         if (rule.has("target_class") && rule.get("target_class").isJsonObject() && ownsTarget(rule.getAsJsonObject("target_class"), rule)) return true;
         if (rule.has("target_classes") && rule.get("target_classes").isJsonArray())
             for (JsonElement t : rule.getAsJsonArray("target_classes")) if (t.isJsonObject() && ownsTarget(t.getAsJsonObject(), rule)) return true;

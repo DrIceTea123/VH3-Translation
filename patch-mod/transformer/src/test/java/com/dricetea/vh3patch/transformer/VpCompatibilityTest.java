@@ -32,7 +32,7 @@ class VpCompatibilityTest {
             }
         }
         Path config = temp.resolve("rules.json");
-        Files.writeString(temp.resolve("config.json"),"{\"mods\":[\"rules\"]}");
+        Files.writeString(temp.resolve("config.json"),"{\"modules\":[\"rules\"]}");
         Files.writeString(config, original.toString());
         assertThrows(IllegalStateException.class, () -> VpCompatibility.assertCompatible(temp, module));
         Files.writeString(config, compatible.toString());

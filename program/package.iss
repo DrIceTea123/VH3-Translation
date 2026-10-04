@@ -10,8 +10,8 @@
 #define ModFileName "3.21.6.6884"
 
 #define OriPackUrl "https://mediafilez.forgecdn.net/files/8527/845/Vault%20Hunters%20Third%20Edition-3.21.7.zip"
-#define VpDlUrl 'https://mediafilez.forgecdn.net/files/6482/746/vaultpatcher-all-1.4.4%2B3.jar'
-#define VpDlName 'vaultpatcher-all-1.4.4+3.jar'
+#define VpDlUrl 'https://cdn.modrinth.com/data/NLV0Mnpu/versions/oATpDq2Q/vaultpatcher-all-1.5.3-fix.jar'
+#define VpDlName 'vaultpatcher-all-1.5.3-fix.jar'
 #define I18nDlUrl 'https://mediafilez.forgecdn.net/files/7173/159/I18nUpdateMod-3.7.0-all.jar'
 #define I18nDlName 'I18nUpdateMod-3.7.0-all.jar'
 #define VmctDlUrl 'https://mediafilez.forgecdn.net/files/6891/488/VMTranslationUpdate-forge-4.0.0%2Bmc1.18.2.jar'
@@ -168,7 +168,7 @@ begin
           end;
         end;     
       if IsComponentSelected('vp') then
-        a := a and RobustDownload('{#VpDlUrl}', '{#VpDlName}', '');
+        a := a and RobustDownload('{#VpDlUrl}', '{#VpDlName}', 'd79668dd66f3edeffa347917ba10ff7930c9d09788aa86528d4af6514fc6af52');
       if IsComponentSelected('i18n') then
         a := a and RobustDownload('{#I18nDlUrl}', '{#I18nDlName}', '');
       if IsComponentSelected('vmct') then
@@ -215,10 +215,14 @@ begin
     Result := '';
     Exit;
   end;
-  DelTree(ExpandConstant('{app}\vaultpatcher'), True, True, True);
+  DelTree(ExpandConstant('{app}\vaultpatcher\cache'), True, True, True);
   DeleteFile(ExpandConstant('{app}\mods\I18nUpdateMod-3.6.0-all.jar'));
   DeleteFile(ExpandConstant('{app}\mods\VMTranslationUpdate-forge-3.1.0+mc1.18.2.jar'));
   DeleteFile(ExpandConstant('{app}\mods\vaultpatcher-all-1.4.2+2.jar'));
+  DeleteFile(ExpandConstant('{app}\mods\vaultpatcher-all-1.4.4+1.jar'));
+  DeleteFile(ExpandConstant('{app}\mods\vaultpatcher-all-1.4.4+3.jar'));
+  DeleteFile(ExpandConstant('{app}\mods\vaultpatcher-all-1.5.0-hotfix.jar'));
+  DeleteFile(ExpandConstant('{app}\mods\vaultpatcher-all-1.5.3.jar'));
   DeleteFile(ExpandConstant('{app}\mods\vaultpatcher-all-1.5.0.jar'));
   DeleteFile(ExpandConstant('{app}\mods\vaultpatcher-all-1.5.2.jar'));
   DeleteFile(ExpandConstant('{app}\mods\vaultpatcher-all-1.5.3-hotfix.jar'));

@@ -58,7 +58,7 @@ class SoundNamesPatchTest {
         JsonArray legacy = JsonFiles.read(Path.of(System.getProperty("vh3.test.legacyVpDirectory"), "sound_names.json")).getAsJsonArray();
         assertTrue(module.ownsVpRule(legacy.get(0).getAsJsonObject()));
         JsonFiles.write(temp.resolve("sound.json"), legacy);
-        Files.writeString(temp.resolve("config.json"),"{\"mods\":[\"sound\"]}");
+        Files.writeString(temp.resolve("config.json"),"{\"modules\":[\"sound\"]}");
         assertThrows(IllegalStateException.class, () -> VpCompatibility.assertCompatible(temp, module));
         assertEquals(0, VpCompatibility.prepareConfiguration(legacy, module).size());
         Path currentDir = Path.of(System.getProperty("vh3.test.programVpDirectory"));
@@ -67,7 +67,7 @@ class SoundNamesPatchTest {
         boolean keptUi = false;
         // 普通界面规则可由维护者移至 main；分类位置不属于声音模块的功能约束。
         for (JsonElement item : current) {
-            JsonObject rule = item.getAsJsonObject();
+            JsonObject rule = VpCompatibility.normalizeRule(item.getAsJsonObject());
             if (rule.has("target_class") && rule.get("target_class").isJsonObject()
                     && rule.getAsJsonObject("target_class").has("name")
                     && rule.getAsJsonObject("target_class").get("name").getAsString().replace('.', '/').equals(spec.className())) {

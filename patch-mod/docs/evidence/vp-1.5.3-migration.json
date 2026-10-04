@@ -1,0 +1,26 @@
+{
+    "the_vault-asm_main": {
+        "source_sha256": "72d5f922692014729c53d93ee58b64f65e3a0b4dbfff3cedf22fc1a3a80204b0",
+        "effective_groups": 654,
+        "effective_pairs": 2819,
+        "semantics_sha256": "eb34567237c1b56c484cb351609f6a7d3ba4d599fbed2120440bcc5e7f894859"
+    },
+    "the_vault-asm_ulti": {
+        "source_sha256": "de0e1366a57dee4548382862b6a03219d53848fdeafb59149a5f3400b5b86258",
+        "effective_groups": 22,
+        "effective_pairs": 1241,
+        "semantics_sha256": "447e5e438914d0c0127a1be9a76f662a06e60642c7a9391bd0ceefac403229c7"
+    },
+    "other_mods": {
+        "source_sha256": "2a8e62602aa494f385e450a02ea662a155a26c31f8af22cffc43c68b171206a6",
+        "effective_groups": 35,
+        "effective_pairs": 86,
+        "semantics_sha256": "f8db14e48e73e2b8fe2d85ef4a25daf5bc1e77c1b45b2f3bae8781768433642a"
+    },
+    "the_vault-dynamic": {
+        "source_sha256": "061ad944b34046cfec0bfcac5f83e823778d3da4bd8b3ed445f48b3c2ac025cf",
+        "effective_groups": 4,
+        "effective_pairs": 20,
+        "semantics_sha256": "a878dfa9eb9140c20e51c5c3f013101a4230b579081275d784e6a6de4178bc5c"
+    }
+}

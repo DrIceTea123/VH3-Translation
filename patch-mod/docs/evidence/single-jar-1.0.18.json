@@ -1,0 +1,9 @@
+{
+  "version": "1.0.18",
+  "bundleSha256": "687a70f98c19c1ce517a5c0f768f262aa611df13cacee3284dea9927251aa55d",
+  "runtimeSha256": "a73e3f116569ce1a615871dc63e7426c069494b9d0aebf039aeea3269acb6af7",
+  "exitCode": 0,
+  "stdout": "forgeclient: preflight and transformer registration passed (88 classes)\nforgeserver: preflight and transformer registration passed (43 classes)\nSERVICE SPI discovery, Forge MOD metadata and isolated GAME class loading passed; Minecraft lifecycle not executed\n",
+  "stderr": "Oct 04, 2026 1:15:02 PM com.dricetea.vh3patch.transformer.TranslationTransformationService initialize\nINFO: Preflight passed; registered modules: [mob_names, sound_names, research_names, chest_names, card_text, talent_affixes, gear_affixes, quest_names, gear_rarity, bestiary_groups, overworld_names, room_names, theme_names, crystal_stats]\nOct 04, 2026 1:15:05 PM com.dricetea.vh3patch.transformer.TranslationTransformationService initialize\nINFO: Preflight passed; registered modules: [research_names, chest_names, card_text, talent_affixes, gear_affixes, quest_names, gear_rarity, theme_names]\n",
+  "gameLaunched": false
+}

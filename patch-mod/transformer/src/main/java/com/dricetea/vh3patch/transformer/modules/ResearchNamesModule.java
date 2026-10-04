@@ -81,7 +81,8 @@ public final class ResearchNamesModule implements PatchModule {
         return Set.of("GresearchName", "MgetName", "MrestrictedBy", "Vresearch", "MgetDeckResearchName")
                 .contains(target.get("local").getAsString());
     }
-    @Override public boolean ownsVpRule(JsonObject rule) { return targets(rule).stream().anyMatch(this::ownsTarget); }
+    @Override public boolean ownsVpRule(JsonObject rule) {
+        rule = VpCompatibility.normalizeRule(rule); return targets(rule).stream().anyMatch(this::ownsTarget); }
     @Override public void validateVpMigration(List<JsonObject> rules) {
         Set<String> groups = new HashSet<>();
         for (JsonObject rule : rules) {

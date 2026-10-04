@@ -77,6 +77,7 @@ public final class CardTextModule implements PatchModule {
     }
 
     @Override public boolean ownsVpRule(JsonObject rule) {
+        rule = VpCompatibility.normalizeRule(rule);
         if (rule.has("target_class") && rule.get("target_class").isJsonObject() && ownsTarget(rule.getAsJsonObject("target_class"))) return true;
         if (rule.has("target_classes")) for (JsonElement target : rule.getAsJsonArray("target_classes"))
             if (target.isJsonObject() && ownsTarget(target.getAsJsonObject())) return true;

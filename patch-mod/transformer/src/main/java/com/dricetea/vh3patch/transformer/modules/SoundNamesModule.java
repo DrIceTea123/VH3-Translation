@@ -33,8 +33,21 @@ public final class SoundNamesModule implements PatchModule {
     @Override public void apply(ClassNode node) { patch.apply(node); }
 
     @Override public boolean ownsVpRule(JsonObject rule) {
-        if (!rule.has("target_class") || !rule.get("target_class").isJsonObject()) return false;
-        JsonObject target = rule.getAsJsonObject("target_class");
+        rule = VpCompatibility.normalizeRule(rule);
+        if (rule.has("target_class") && rule.get("target_class").isJsonObject()
+                && ownsTarget(rule.getAsJsonObject("target_class"),rule)) return true;
+        if (rule.has("target_classes")) for (JsonElement target:rule.getAsJsonArray("target_classes"))
+            if (target.isJsonObject() && ownsTarget(target.getAsJsonObject(),rule)) return true;
+        return false;
+    }
+
+    @Override public void validateVpMigration(List<JsonObject> rules) {
+        PatchModule.super.validateVpMigration(rules);
+        if (rules.stream().anyMatch(rule->rule.has("target_classes")))
+            throw new IllegalStateException("Review mixed sound_names VP targets before removing the whole group");
+    }
+
+    private boolean ownsTarget(JsonObject target, JsonObject rule) {
         if (!target.has("name") || !target.get("name").getAsString().replace('.', '/').equals(spec.className())) return false;
         if (target.has("method")) {
             String method = target.get("method").getAsString();

@@ -27,7 +27,11 @@ tasks.register('distribution', Sync) {
     dependsOn ':transformer:jar', ':runtime:reobfJar', ':transformer:verifyTarget', ':transformer:prepareVpConfig'
     into layout.buildDirectory.dir('distribution')
     from(project(':transformer').tasks.named('jar'))
-    from(project(':transformer').layout.buildDirectory.dir('compat')) { into 'compat' }
+    from(project(':transformer').layout.buildDirectory.dir('compat')) {
+        into 'compat'
+        // 旧构建目录可能残留 1.4.4 兼容副本，不能将其继续带入新版交付。
+        include 'vaultpatcher/modules/**', 'vp-migration-report.json'
+    }
 }
 tasks.register('verifyBundle') {
     dependsOn ':transformer:jar', ':runtime:reobfJar'

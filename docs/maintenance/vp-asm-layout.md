@@ -1,40 +1,45 @@
-# VP ASM 分类与接管
+# VP 配置格式与接管
 
-配置在 `program/基础+硬编码汉化/config/vaultpatcher_asm/`。现行布局是 main / long / complex；旧 ulti 已整合。这里只维护分类规则与当前统计，历史迁移过程见项目 notes 和 Git。
+当前安装目标为 **VaultPatcher 1.5.3-hotfix**（官方文件名 `vaultpatcher-all-1.5.3-fix.jar`），VTP 为 1.0.18。详细来源、验证与升级步骤见 [格式升级报告](../../patch-mod/docs/vp-1.5.3-upgrade.md)。
 
-## 分类规则
+## 当前布局
 
-- 长列表：每组至少 **50 对**译文。
-- 关联按同一外部类及其内部类处理；多目标规则整组保留，并传递关联。
-- 同时检查内容关联，例如“刺客怪物 / Assassin”的正反替换；不能只按类名，也不因普通同词误合并无关内容。
-- 含 ordinal 的组及关联规则进入 complex；含长列表且关联组涉及 local 的内容也整体进入 complex。
-- 关联组完全不含 local/ordinal 的长列表及相关条目进入 long；其余进入 main。main 可以保留未归入提取组的短 local 规则。
-- main 保持包名顺序；提取文件按关联组最小完整类名排序，组内保留原相对顺序，注释随规则移动。
+相对于 `program/基础+硬编码汉化/`（安装时复制到游戏根目录）：
 
-交叉组 VaultAccessibilityScreen、VaultRulesScreen、祭坛任务相关类已按用户确认整体进入 complex。怪物图鉴、TextUtil、GroupUtils、GreedAssassinSpawnHandler 按内容合组；装备外观 Champion 不属于该依赖。
+- `config/vaultpatcher_asm/config.json`：总配置，`modules` 明确列出四个模块，`load_all_modules=false`。
+- `vaultpatcher/modules/the_vault-asm_main.json`：主要 ASM 规则。
+- `vaultpatcher/modules/the_vault-asm_ulti.json`：用户现有独立长表布局。
+- `vaultpatcher/modules/other_mods.json`：其他模组规则。
+- `vaultpatcher/modules/the_vault-dynamic.json`：动态替换规则。
 
-## 当前统计
+先前 main/long/complex 分类是历史布局，已被用户调整；本轮保持当前 main/ulti 分类和顺序，不再套用旧重排规则。接管注释全部保留，历史被接管规则仍在 `patch-mod/translations/vp/`，只供导入和回归，不能复制回游戏。
 
-截至 2026-10-03，怪物、声音、研究、宝箱名称和卡牌显示规则已经被 VTP 接管；下表按当前工程布局实数统计：
+## 条目格式
 
-| 文件 | 规则组 | 译文对 | ordinal 组 | local 组 |
+```json
+{
+    "target_class": ["iskallia.vault.client.data.ClientVaultXpTracker"],
+    "info": {"method": "handleDeltas", "local": "MformatOreName"},
+    "pairs": [{"key": "Example", "value": "示例"}]
+}
+```
+
+模块数组第一项仍为元数据，明确 `dynamic` 和 `i18n=false`。`target_class` 使用类名字符串数组；`method/local/ordinal` 放入 `info`；单条翻译也放入 `pairs` 数组。原多个目标若有独立定位条件，拆成单目标组，避免共用 `info` 后扩大范围。动态多类同样拆分，因为新版动态读取器只保留最后一个类名。通配动态项保持空类名数组。
+
+截至 2026-10-04，按拆分后的有效目标统计（注释不算规则）：
+
+| 文件 | 规则组 | 译文对 | local 组 | ordinal 组 |
 |---|---:|---:|---:|---:|
-| asm_main | 609 | 2766 | 0 | 35 |
-| asm_long | 20 | 1126 | 0 | 3 |
-| asm_complex | 12 | 288 | 4 | 7 |
-| 合计 | 641 | 4180 | 4 | 45 |
+| asm_main | 654 | 2819 | 36 | 1 |
+| asm_ulti | 22 | 1241 | 3 | 0 |
+| other_mods | 35 | 86 | 1 | 0 |
+| dynamic | 4 | 20 | 0 | 0 |
+| 合计 | 715 | 4166 | 40 | 1 |
 
-统计包含 pairs 数组和顶层单条 key/value，注释不算规则。动态配置与 other_mods 不计入此表。
+旧文件按未展开多目标组统计是 657 组 / 3915 对；展开后与新文件的 715 组 / 4166 对逐项一致。数量增长来自目标拆分复用 pairs，没有新增译文。
 
-## VTP 接管边界
+## 维护边界
 
-- 结算 formatMobName 原 237 对规则 → mob_names（历史导入 235 条，现与经验提示共用 246 条）。
-- 声音 collectSoundEntries 中 formatSoundName 返回值原 203 对规则 → sound_names；同类 6 条普通界面文案仍归 VP。
-- 研究列表 60 对与卡组研究名单条 → research_names（54 个唯一英文键），覆盖客户端显示及服务端研究通知；其他提示语仍归 VP。
-- 宝箱类型、实体标题、结算稀有度/桶、图标稀有度及辅助功能箱型，6 组 61 对 → chest_names（33 条基础映射与 20 条完整桶组合覆盖）。混合组只移走相关 pairs。
-- 卡牌名称、类型/套组、颜色/位置、条件、效果和物品提示，main 15 组 + complex 4 组 + dynamic_2 1 组，共 119 对 → card_text（101 项平面词条/句式）；界面及命令固定文案保留 VP，详见 [卡牌模块](../../patch-mod/docs/card-text.md)。
-- Tracker 矿石 20 对及固定标签 4 对新增于 asm_main，按 client.data 包名排序；矿石采用 handleDeltas 的 local=MformatOreName 调用结果规则。
-- 各原位置均留有内容和 VTP 接管注释。旧规则在 `patch-mod/translations/vp/`，供导入/冲突测试，不再装回运行配置。
-- 新接管必须同时更新冲突判定、配置和原位注释；版本/方法/旧 VP 冲突会阻止启动。
+普通界面标签、矿石提示与其余硬编码由 VP 负责；14 个 VTP 模块的显示接管边界见 [补丁 README](../../patch-mod/README.md)。例如 Tracker 的矿石调用结果与四个固定标签仍由 VP 处理；装备属性序列化保留的名称片段与 VTP 显示钩子分开。
 
-旧 main+ulti 一次性迁移已完成，当前输入不能再次使用旧脚本，因此删除 `tools/vp/reorganize-asm.mjs`。如需复查首次迁移的索引、哈希和脚本，可在整理前提交 `cd2c506` 中读取该脚本及本文历史版本；不应直接对现行配置执行。
+新接管应同步更新冲突判定、外部译表和原位注释。新旧格式可用于历史导入；正式发布只使用上述新目录和新格式。运行预检只检查新版 VP 实际启用的文件，详见 [兼容预检](../../patch-mod/docs/vp-compatibility.md)。更新配置后只清理 `vaultpatcher/cache/`，不能删除整个 `vaultpatcher/`。

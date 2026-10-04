@@ -74,7 +74,7 @@ public final class PatchTool {
                 for (PatchModule module : PatchModules.all()) {
                     migrated = VpCompatibility.prepareConfiguration(migrated, module);
                 }
-                write(output.resolve("config/vaultpatcher_asm/" + input.getFileName()),
+                write(output.resolve("vaultpatcher/modules/" + input.getFileName()),
                         migrated);
                 JsonObject report = new JsonObject();
                 report.addProperty("inputSha256", MethodFingerprint.sha256(Files.readAllBytes(input)));

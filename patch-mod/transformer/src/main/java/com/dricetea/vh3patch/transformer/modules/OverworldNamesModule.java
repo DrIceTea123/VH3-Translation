@@ -12,6 +12,7 @@ public final class OverworldNamesModule extends DisplayMethodPatch {
     public OverworldNamesModule() { super(ID,"com/dricetea/vh3patch/modules/OverworldNamesModule"); }
     public OverworldNamesModule(List<PatchSpec> specs) { super(specs); }
     @Override public boolean ownsVpRule(JsonObject rule) {
+        rule = VpCompatibility.normalizeRule(rule);
         for(JsonObject t:vpTargets(rule)) {
             if(!t.has("name") || !t.get("name").getAsString().replace('.','/').equals(spec().className())) continue;
             if(t.has("local") && t.get("local").getAsString().equals("MgetDisplayName")) return true;

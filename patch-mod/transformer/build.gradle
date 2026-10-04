@@ -1,5 +1,16 @@
 base.archivesName = 'vh3_translation_patch'
 
+def vpReference = rootProject.file('../local-deps/vp-1.5.3/vaultpatcher-all-1.5.3-fix.jar')
+tasks.register('verifyVpReference') {
+    doLast {
+        if (!vpReference.isFile()) throw new GradleException('Run tools/vp/fetch-reference.ps1 from the repository to obtain VP 1.5.3-hotfix.')
+        def sha = java.security.MessageDigest.getInstance('SHA-256').digest(vpReference.bytes).encodeHex().toString()
+        if (sha != 'd79668dd66f3edeffa347917ba10ff7930c9d09788aa86528d4af6514fc6af52')
+            throw new GradleException('VP 1.5.3-hotfix test reference SHA-256 mismatch')
+    }
+}
+tasks.named('compileTestJava') { dependsOn 'verifyVpReference' }
+
 dependencies {
     compileOnly 'cpw.mods:modlauncher:9.1.3'
     compileOnly('net.minecraftforge:fmlloader:1.18.2-40.3.11') { transitive = false }
@@ -10,12 +21,13 @@ dependencies {
     implementation 'org.ow2.asm:asm-util:9.7.1'
     implementation 'com.google.code.gson:gson:2.8.9'
     testImplementation 'cpw.mods:modlauncher:9.1.3'
+    testImplementation 'it.unimi.dsi:fastutil:8.5.9'
     // 仅离线回归调用 VP 的真实节点处理器；不打包或改写该原始输入。
-    testImplementation files(rootProject.file('../../必要文件/vaultpatcher-all-1.4.4+1.jar'))
+    testImplementation files(vpReference)
 }
 def targetJar = providers.gradleProperty('vaultJar').map { rootProject.file(it) }
         .getOrElse(rootProject.file('../../origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar'))
-def vpSource = rootProject.file('../program/基础+硬编码汉化/config/vaultpatcher_asm/the_vault-asm_main.json')
+def vpSource = rootProject.file('../program/基础+硬编码汉化/vaultpatcher/modules/the_vault-asm_main.json')
 // 工程已移除接管规则；旧规则仅用于导入及冲突回归测试，不再随汉化配置发布。
 def vpLegacySource = rootProject.file('translations/vp/mob_names.json')
 
@@ -53,11 +65,12 @@ tasks.named('jar') {
 tasks.named('test') {
     inputs.file targetJar
     inputs.dir vpSource.parentFile
+    inputs.dir rootProject.file('../program/基础+硬编码汉化/config/vaultpatcher_asm')
     inputs.file vpLegacySource
     inputs.dir rootProject.file('translations/vp')
     systemProperty 'vh3.test.targetJar', targetJar.absolutePath
     systemProperty 'vh3.test.vpSource', vpLegacySource.absolutePath
-    systemProperty 'vh3.test.programVpDirectory', vpSource.parentFile.absolutePath
+    systemProperty 'vh3.test.programVpDirectory', rootProject.file('../program/基础+硬编码汉化/config/vaultpatcher_asm').absolutePath
     systemProperty 'vh3.test.legacyVpDirectory', rootProject.file('translations/vp').absolutePath
 }
 tasks.register('verifyTarget', JavaExec) {

@@ -1,6 +1,6 @@
 # VH3 Translation Patch（VTP）
 
-独立的显示翻译补丁，目前有 14 个模块，接管怪物、宝箱、声音、研究、卡牌，以及水晶统计、主题、房间、主世界铭文预览、图鉴族类、装备稀有度、任务名和特殊词缀显示，其余硬编码翻译继续由 VP 处理。当前版本 **1.0.17**，目标 MC 1.18.2 / Forge 40.3.11 / the_vault 1.18.2-3.21.6.6884。217 项 Java 离线测试、单 JAR 结构检查及固定核心 109 个方法的字节码校验已通过，完整整合包尚未联测。
+独立的显示翻译补丁，目前有 14 个模块，接管怪物、宝箱、声音、研究、卡牌，以及水晶统计、主题、房间、主世界铭文预览、图鉴族类、装备稀有度、任务名和特殊词缀显示，其余硬编码翻译继续由 VP 处理。当前版本 **1.0.18**，目标 MC 1.18.2 / Forge 40.3.11 / the_vault 1.18.2-3.21.6.6884。222 项 Java 离线测试、单 JAR 结构检查及固定核心 109 个方法的字节码校验已通过，完整整合包尚未联测。
 
 ## 编辑翻译与安装
 
@@ -33,7 +33,7 @@
 
 安装时同时携带：
 
-- `mods/vh3_translation_patch-1.0.17.jar`，只安装这一个 VTP 文件。
+- `mods/vh3_translation_patch-1.0.18.jar`，只安装这一个 VTP 文件。
 - `config/vh3_translation_patch/` 下的 14 个 JSON（专用服务端需要下文列出的 8 个通用配置）。
 - 当前汉化工程的 VP 配置；已接管规则已移除并在原位置保留 VTP 注释，不能装回旧规则。分类见 [VP 维护说明](../docs/maintenance/vp-asm-layout.md)。
 
@@ -71,7 +71,7 @@
 
 构建不覆盖正式外部配置，不启动游戏、不修改游戏实例、不提交 Git。`check` 或 `distribution` 本身不导出到工程，`build` / `exportToProgram` 才导出。兼容输入已迁移时报告 `removedGroups=0` 正常。
 
-离线 VP 回归测试另需父工作区 `必要文件/vaultpatcher-all-1.4.4+1.jar`，仅作为测试依赖，不进入成品。默认核心输入为 `origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar`；其他位置用 `-PvaultJar=<路径>`，不会绕过摘要检查。首次构建需下载依赖；已具备缓存但 ForgeGradle 联网检查失败时，可单次执行：
+离线 VP 回归测试使用官方 1.5.3-hotfix。先在仓库根运行 `tools/vp/fetch-reference.ps1`，获取并校验到忽略的 `local-deps/vp-1.5.3/`；它仅是测试依赖，不进入成品。默认核心输入为 `origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar`；其他位置用 `-PvaultJar=<路径>`，不会绕过摘要检查。首次构建需下载依赖；已具备缓存但 ForgeGradle 联网检查失败时，可单次执行：
 
 ```powershell
 .\build.ps1 -GradleArgs 'build','--offline','-Dnet.minecraftforge.gradle.check.certs=false','--console=plain'
@@ -81,7 +81,7 @@
 
 只验证可传 `-GradleArgs 'check','--console=plain'`；核对目标用 `:transformer:inspectTarget` / `:transformer:verifyTarget`。旧 VP 导入只生成候选文件，见模块开发说明。
 
-1.0.15 修复 VP 冲突预检范围：只检查 `config/vaultpatcher_asm/config.json` 的 `mods`（别名 `m`）启用的文件，未启用的旧文件和备份不参与检查。详情见 [VP 兼容预检](docs/vp-compatibility.md)。
+1.0.18 对齐 VP 1.5.3-hotfix：总配置使用 `modules`，规则位于 `vaultpatcher/modules/`。预检同步显式启用列表、load-all 非递归扫描与旧文件迁移回退；未启用备份仍不参与检查。详见 [格式升级](docs/vp-1.5.3-upgrade.md) 和 [VP 兼容预检](docs/vp-compatibility.md)。
 
 ## 联测与回退
 

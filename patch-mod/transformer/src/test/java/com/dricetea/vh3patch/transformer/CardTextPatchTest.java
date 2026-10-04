@@ -61,6 +61,6 @@ class CardTextPatchTest {
         for(String cls:List.of("iskallia.vault.item.CardDeckItem$1","iskallia.vault.command.modify.ModifyCardSubcommand","iskallia.vault.client.gui.screen.CardBinderScreen")) {
             JsonObject target=new JsonObject();target.addProperty("name",cls);JsonObject rule=new JsonObject();rule.add("target_class",target);assertFalse(module.ownsVpRule(rule));
         }
-        String main=Files.readString(dir.resolve("the_vault-asm_main.json"));assertTrue(main.contains("iskallia.vault.item.CardDeckItem$1"));assertTrue(main.contains("iskallia.vault.command.modify.ModifyCardSubcommand"));
+        String main=Files.readString(VpCompatibility.moduleDirectory(dir).resolve("the_vault-asm_main.json"));assertTrue(main.contains("iskallia.vault.item.CardDeckItem$1"));assertTrue(main.contains("iskallia.vault.command.modify.ModifyCardSubcommand"));
     }
 }

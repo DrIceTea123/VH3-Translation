@@ -1,5 +1,7 @@
 package com.dricetea.vh3patch.transformer.modules;
 
+import com.dricetea.vh3patch.transformer.VpCompatibility;
+
 import com.dricetea.vh3patch.transformer.PatchModule;
 import com.dricetea.vh3patch.transformer.PatchSpec;
 import com.dricetea.vh3patch.transformer.StringReturnPatch;
@@ -113,6 +115,7 @@ public final class MobNamesModule implements PatchModule {
 
     @Override
     public boolean ownsVpRule(JsonObject rule) {
+        rule = VpCompatibility.normalizeRule(rule);
         if (rule.has("target_class") && rule.get("target_class").isJsonObject()
                 && ownsTarget(rule.getAsJsonObject("target_class"), rule)) return true;
         if (rule.has("target_classes") && rule.get("target_classes").isJsonArray())

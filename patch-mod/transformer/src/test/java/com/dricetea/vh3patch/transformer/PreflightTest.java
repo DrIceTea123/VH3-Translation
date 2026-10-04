@@ -55,7 +55,7 @@ class PreflightTest {
         companion(game, module.spec(), module.spec().patchVersion());
         Path config = game.resolve("config/vaultpatcher_asm/rules.json");
         Files.createDirectories(config.getParent());
-        Files.writeString(config.getParent().resolve("config.json"),"{\"mods\":[\"rules\"]}");
+        Files.writeString(config.getParent().resolve("config.json"),"{\"modules\":[\"rules\"]}");
         if(module.spec().moduleId().equals("theme_names"))
             Files.writeString(config,"[{\"target_class\":{\"name\":\"iskallia.vault.core.data.key.ThemeKey\",\"method\":\"getName\"},\"key\":\"Example\",\"value\":\"示例\"}]");
         else Files.copy(Path.of(System.getProperty("vh3.test.legacyVpDirectory"), module.spec().moduleId() + ".json"), config);
