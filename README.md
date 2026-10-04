@@ -7,6 +7,7 @@
 | 任务 | 入口 |
 |---|---|
 | 修改既有翻译、制作汉化包 | `program/`；打包方式见下文 |
+| 新安装器、界面文案、下载配置、一键打包 | [installer 使用说明](installer/README.md) |
 | 编辑 VTP 显示译表（14 个模块） | [补丁使用与构建](patch-mod/README.md) |
 | 新增补丁模块、修改 ASM | [模块开发](patch-mod/docs/modules.md) |
 | 理解原始文本与注入位置 | [文本获取分析](patch-mod/docs/text-capture.md)、[研究名覆盖](patch-mod/docs/research-names.md)、[经验提示](patch-mod/docs/vault-xp.md)、[宝箱名称模块](patch-mod/docs/chest-names.md) |
@@ -18,8 +19,8 @@
 
 ## 编辑与打包
 
-- 当前安装输入在 `program/`。其中 `基础+硬编码汉化/config/vh3_translation_patch/` 是 VTP 运行配置的唯一维护位置，`mods/` 放配套 JAR。
-- 使用 Inno Setup 打开 `program/package.iss`；保持原编码。脚本从父工作区 `必要文件/iss-plugin-7z/` 读取工具，输出到 `[发布文件]/`。尚未重新编译安装包。
+- 当前安装输入为 `program/汉化包内容/`，其中 `config/vh3_translation_patch/` 是 VTP 运行配置，`mods/` 放单个 VTP JAR。
+- 新安装器位于 `installer/`，用 Java 17 窗口向导替代 Inno Setup。Windows 双击 `installer/build.cmd`，Linux/macOS 执行 `sh installer/build.sh`，生成单个 JAR 到父工作区 `[发布文件]/VH3-installer/`；版本从 V2.7.0 起，每次成功生成后递增。说明和配置编辑入口见 [安装器 README](installer/README.md)。旧 `program/package.iss` 保留，不再作为新打包入口。
 - OpenLoader 的两个 ZIP 和工程 mods 中导出的单个 VTP JAR 是必需安装输入，受 Git 管理。其他第三方 JAR、7-Zip、构建缓存和发布成品不入库。克隆仓库不会自动获得父目录依赖。
 - 发布前按 [待办](project-memory/TODO.md) 完成整合包联测，并同步玩家说明；现有安装提示和说明书不能当作 VTP 已验收的证据。
 
