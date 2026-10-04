@@ -14,7 +14,7 @@
 
 总配置保持旧路径，`mods` 改为 `modules`，明确 `load_all_modules=false`、`default_language=zh_cn`。四个模块移动至游戏根目录 `vaultpatcher/modules/`；元数据保留并明确 `i18n=false`，译文继续作为文字值读取，不转为语言键。
 
-所有目标改为字符串数组，定位信息独立放入 `info`；顶层 key/value 改为 pairs。原多目标拆分后，715 组有效目标 / 4166 对翻译逐项一致，详见 [分类与统计](../../docs/maintenance/vp-asm-layout.md) 和 [机器可读迁移记录](evidence/vp-1.5.3-migration.json)。`local` 字母、方法名、ordinal、Unicode 控制字符及动态 `@` 标记均保留。
+所有目标改为字符串数组，定位信息独立放入 `info`；顶层 key/value 改为 pairs。原多目标拆分后，715 组有效目标 / 4166 对翻译逐项一致，详见 [分类与统计](../../wiki/translation.md) 和 [机器可读迁移记录](evidence/vp-1.5.3-migration.json)。`local` 字母、方法名、ordinal、Unicode 控制字符及动态 `@` 标记均保留。
 
 旧动态条目 `\'\'I got a rock\'\'` 使用 Gson 可接受但严格 JSON 不合法的单引号转义，现改为同一字符串内容 `''I got a rock''`。`hide_pairs` 改为新版 `pairs_hide_limit`；移除新版不读取的 `output_format` / `missing_warn`。缓存、调试开关等受支持值保留。
 

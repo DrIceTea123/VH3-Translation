@@ -25,35 +25,39 @@ class Build {
     }
 
     private static void run(Path project, Path build, boolean release) throws Exception {
-        Path versionFile = project.resolve("version.properties");
-        Properties versions = read(versionFile);
-        String version = versions.getProperty("next.version", "");
-        if (!version.matches("[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+")) throw new IOException("next.version 必须是4段数字");
-        String[] parts = version.split("\\.");
-        String nextVersion = parts[0] + "." + parts[1] + "." + parts[2] + "." + Math.addExact(Integer.parseInt(parts[3]), 1);
-        Path output = project.getParent().getParent().resolve("[发布文件]/宝藏猎人3汉化安装器-VM汉化组-V" + version + ".jar");
-        if (release && Files.exists(output)) throw new IOException("成品已存在，请检查 version.properties：" + output);
+        Path serialFile = project.resolve("export.properties");
+        Properties serials = read(serialFile);
+        String serial = serials.getProperty("next.serial", "");
+        if (!serial.matches("[1-9][0-9]*")) throw new IOException("next.serial 必须是正整数");
+        String nextSerial = Long.toString(Math.addExact(Long.parseLong(serial), 1));
+        Properties sourceConfig = read(project.resolve("resources/installer.properties"));
+        String filename = outputName(sourceConfig, serial);
+        Path output = project.getParent().getParent().resolve("[发布文件]").resolve(filename);
+        if (release && Files.exists(output)) throw new IOException("成品已存在，请检查 export.properties：" + output);
         Path work = Files.createTempDirectory(build, "run-");
         try {
             Path classes = Files.createDirectory(work.resolve("classes"));
             compile(project.resolve("src/main/java"), classes, null);
             copyTree(project.resolve("resources"), classes);
             Properties config = read(classes.resolve("installer.properties"));
-            config.setProperty("app.version", version);
+            config.setProperty("export.serial", serial);
             write(config, classes.resolve("installer.properties"));
-            Path source = project.getParent().resolve("program/汉化包内容");
+            Path source = project.getParent().resolve("translate-packs");
             packPayload(source, classes);
             Path tests = Files.createDirectory(work.resolve("tests"));
             compile(project.resolve("src/test/java"), tests, classes.toString());
+            compile(project.resolve("tools"), tests, classes.toString());
             String classpath = classes + File.pathSeparator + tests;
+            command(java(), "-Dfile.encoding=UTF-8", "-cp", classpath, "BuildTest");
             command(java(), "-Dfile.encoding=UTF-8", "-Djava.awt.headless=true", "-cp", classpath, "cn.vmct.installer.InstallerTest", project.toString());
 
-            if (!release) { System.out.println("检查通过；未生成发布成品，版本不递增。"); return; }
+            if (!release) { System.out.println("检查通过；未生成发布成品，序列号不递增。"); return; }
             Path candidate = work.resolve(output.getFileName());
             Manifest manifest = new Manifest();
             manifest.getMainAttributes().putValue("Manifest-Version", "1.0");
             manifest.getMainAttributes().putValue("Main-Class", "cn.vmct.installer.Main");
-            manifest.getMainAttributes().putValue("Implementation-Version", version);
+            manifest.getMainAttributes().putValue("Translation-Version", config.getProperty("translation.version"));
+            manifest.getMainAttributes().putValue("Export-Serial", serial);
             try (var jar = new JarOutputStream(Files.newOutputStream(candidate), manifest); var files = Files.walk(classes)) {
                 for (Path path : files.filter(Files::isRegularFile).sorted().toList()) {
                     String name = classes.relativize(path).toString().replace('\\', '/');
@@ -63,19 +67,33 @@ class Build {
             }
             command(java(), "-Dfile.encoding=UTF-8", "-Djava.awt.headless=true", "-jar", candidate.toString(), "--check");
             Files.createDirectories(output.getParent());
-            // 两个文件不能跨文件原子提交：版本保存失败时撤销本次新成品，保证重试语义清楚。
+            // 两个文件不能跨文件原子提交：序列号保存失败时撤销本次新成品。
             Files.copy(candidate, output);
             try {
-                Properties updated = new Properties(); updated.putAll(versions);
-                updated.setProperty("last.version", version); updated.setProperty("next.version", nextVersion);
-                Path temp = Files.createTempFile(project, "version-", ".tmp");
-                try { write(updated, temp); Files.move(temp, versionFile, StandardCopyOption.REPLACE_EXISTING); }
+                Properties updated = new Properties(); updated.putAll(serials);
+                updated.setProperty("last.serial", serial); updated.setProperty("next.serial", nextSerial);
+                Path temp = Files.createTempFile(project, "serial-", ".tmp");
+                try { write(updated, temp); Files.move(temp, serialFile, StandardCopyOption.REPLACE_EXISTING); }
                 finally { Files.deleteIfExists(temp); }
             } catch (Exception e) { Files.deleteIfExists(output); throw e; }
-            System.out.println("已生成 V" + version + "：" + output);
+            System.out.println("已生成，导出序列号 " + serial + "：" + output);
             System.out.println("SHA-256: " + sha256(output));
-            System.out.println("下次生成版本：V" + nextVersion);
+            System.out.println("下次导出序列号：" + nextSerial);
         } finally { delete(work, build); }
+    }
+
+    static String outputName(Properties config, String serial) throws IOException {
+        String name = config.getProperty("export.filename", "");
+        for (var entry : Map.of("modpackVersion", "pack.version", "translationVersion", "translation.version").entrySet()) {
+            String value = config.getProperty(entry.getValue(), "").trim();
+            if (value.isEmpty()) throw new IOException("缺少配置：" + entry.getValue());
+            name = name.replace("{" + entry.getKey() + "}", value);
+        }
+        name = name.replace("{exportSerial}", serial);
+        // 只接受单个跨平台文件名，模板不能逃逸发布目录。
+        if (name.isBlank() || !name.endsWith(".jar") || name.matches(".*[\\\\/:*?\"<>|{}\\p{Cntrl}].*") || name.endsWith(". "))
+            throw new IOException("export.filename 必须是带 .jar 后缀的单个文件名，且不能含未知占位符：" + name);
+        return name;
     }
 
     private static void compile(Path source, Path out, String classpath) throws IOException {
@@ -84,7 +102,7 @@ class Build {
         List<String> args = new ArrayList<>(List.of("--release", "17", "-encoding", "UTF-8", "-d", out.toString()));
         if (classpath != null) args.addAll(List.of("-classpath", classpath));
         try (var files = Files.walk(source)) { files.filter(p -> p.toString().endsWith(".java")).sorted().forEach(p -> args.add(p.toString())); }
-        if (compiler.run(null, null, null, args.toArray(String[]::new)) != 0) throw new IOException("编译失败，版本未递增。");
+        if (compiler.run(null, null, null, args.toArray(String[]::new)) != 0) throw new IOException("编译失败，序列号未递增。");
     }
 
     private static void packPayload(Path source, Path classes) throws Exception {
@@ -138,7 +156,7 @@ class Build {
     }
     private static String java() { return Path.of(System.getProperty("java.home"), "bin", System.getProperty("os.name").startsWith("Windows") ? "java.exe" : "java").toString(); }
     private static void command(String... command) throws Exception {
-        if (new ProcessBuilder(command).inheritIO().start().waitFor() != 0) throw new IOException("验证失败，版本未递增。");
+        if (new ProcessBuilder(command).inheritIO().start().waitFor() != 0) throw new IOException("验证失败，序列号未递增。");
     }
     private static void delete(Path directory, Path allowed) throws IOException {
         if (!directory.toAbsolutePath().normalize().startsWith(allowed.toAbsolutePath().normalize()) || directory.equals(allowed)) throw new IOException("清理目录越界");

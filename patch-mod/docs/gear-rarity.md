@@ -8,4 +8,4 @@ VaultGearTooltipItem 的问题规避方式：仅在 lambda$addTooltipRarity$12 �
 
 旧规则保存在 translations/vp/gear_rarity.json；混合幻化组只移走稀有度项，All 保留 VP。其他同类固定提示保持原状。更新运行 `python tools/source-audit.py gear_rarity`，读取原始 JAR 与 gear/gear_roll_type.json 重新比较，再审查新增调用点与池名。
 
-模块配置外置，两端首次加载失败阻止启动；客户端 F3+T、服务端重启。1.0.12 实施，1.0.14 统一构建和离线验证通过，详见 [成果报告](takeover-report.md)；未进行游戏验收。
+模块配置外置，两端首次加载失败阻止启动；客户端 F3+T、服务端重启。1.0.12 实施，1.0.14 统一构建和离线验证通过，详见 [成果报告](../../wiki/history.md)；未进行游戏验收。

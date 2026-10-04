@@ -7,7 +7,7 @@ minecraft {
 dependencies { minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}" }
 
 tasks.named('test') {
-    def configs = rootProject.file('../program/基础+硬编码汉化/config/vh3_translation_patch')
+    def configs = rootProject.file('../translate-packs/config/vh3_translation_patch')
     inputs.dir configs
     systemProperty 'vh3.test.configDirectory', configs.absolutePath
 }

@@ -2,7 +2,7 @@
 
 本目录及子目录的协作入口在 [仓库 AGENTS.md]([vh3-translation]/AGENTS.md)。每个新对话必须先读该入口，再依次读取仓库 project-memory 的 README、STATE、RULES、DECISIONS、TODO 及未归并 notes，不能只读本文件。
 
-- 主工程：[vh3-translation]/program/；共享记忆唯一位置：[vh3-translation]/project-memory/，日常记录授权继续有效。
+- 主工程：[vh3-translation]/translate-packs/；共享记忆唯一位置：[vh3-translation]/project-memory/，日常记录授权继续有效。
 - 需求不清晰或需要决策时，先提问并说明原因；新内容放在合适位置。
 - 仅用户明确要求时提交 Git，不因开发、修复、初始化或整理自行提交。
 - 原始输入、历史公告、表格、旧译文、checker、工具和成品留在本目录；TODO 不构成额外任务授权。

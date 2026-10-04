@@ -14,21 +14,21 @@ VTP **1.0.6** 已按用户要求拆除 `vault_xp`。`ClientVaultXpTracker` 的�
 
 ## 怪物名称合并
 
-正式配置为 [mob_names.json](../../program/基础+硬编码汉化/config/vh3_translation_patch/mob_names.json)，由 `combat_stats.json` 扩展。原 235 条与经验提示对应值完全一致，原样保留；另外依据基线 `vault_stats.json` 的真实实体 ID 合并 11 条有来源的译名，共 246 条。保持战斗牛与首领、各等级居民的区别。
+正式配置为 [mob_names.json](../../translate-packs/config/vh3_translation_patch/mob_names.json)，由 `combat_stats.json` 扩展。原 235 条与经验提示对应值完全一致，原样保留；另外依据基线 `vault_stats.json` 的真实实体 ID 合并 11 条有来源的译名，共 246 条。保持战斗牛与首领、各等级居民的区别。
 
 12 条原英文占位未强制写入实体表：Dead Beard、Soul Vulture、Rocky Roller、Tusklin、Mantis Shrimp、Bunfungus、Alligator Snapping Turtle、Undead Miner、Swampy、Burned、Glacial Hunter、Foxhound。缺项先尝试已注册实体的当前语言译名，再回退原格式化结果，避免英文占位遮住资源包已有译名。未注册 ID 不取注册表默认实体。新增译文只需添加实际路径键。
 
-此模块接管两个 formatter、三个返回点。BountyHud 僵尸预览仍为 VP；GroupUtils 的语言名称和分组、FighterEntity 的玩家/皮肤名称、宠物与装备外观未纳入本次映射。背景见 [拆分评估](name-modules-assessment.md)。
+此模块接管两个 formatter、三个返回点。BountyHud 僵尸预览仍为 VP；GroupUtils 的语言名称和分组、FighterEntity 的玩家/皮肤名称、宠物与装备外观未纳入本次映射。分组属于 bestiary_groups，不能与具体实体名称合并。
 
 ## 矿石和固定标签
 
-20 条矿石译文沿用 1.0.5：19 条有资源包来源，`Ore Funsoide` 保留英文。三个固定标签沿用已有中文，`Bonus` 保留英文。两组位于 `asm_main` 的 `iskallia.vault.client.data` 排序位置，均有用途与边界注释。未知名称保持原文回退；结算页矿石短名算法继续使用原来的 VP 与资源包逻辑。
+20 条矿石名称和四个固定标签由正式 VP 词表维护；例如 Ore Funsoide 已有“方索伊德矿石”，不再沿用早期英文占位结论。两组位于 `asm_main` 的 `iskallia.vault.client.data` 排序位置，均有用途与边界注释。未知名称保持原文回退；结算页矿石短名算法继续使用原来的 VP 与资源包逻辑。
 
-选择调用结果规则而非 `RformatOreName`：本地可用 VP 1.4.4+1 的 `InsnNodeHandler` 在 ARETURN 后插入调用，不能可靠替换方法返回值；`MethodNodeHandler` 能在调用之后、结果被使用之前插入。测试直接执行该 VP 处理器，验证一次矿石调用结果钩子、20 条映射和四个标签。两个 formatter 分支产生 `Ore Benitoite`、`Chromatic Iron Ore` 等完整键后再翻译，不触碰 ResourceLocation 和 XP 查找键。发布所用 VP 版本及整合包仍需游戏联测。
+选择调用结果规则而非 `RformatOreName`：早期检查的 VP 1.4.4+1 的 `InsnNodeHandler` 在 ARETURN 后插入调用，不能可靠替换方法返回值；`MethodNodeHandler` 能在调用之后、结果被使用之前插入。测试直接执行该 VP 处理器，验证一次矿石调用结果钩子、20 条映射和四个标签。两个 formatter 分支产生 `Ore Benitoite`、`Chromatic Iron Ore` 等完整键后再翻译，不触碰 ResourceLocation 和 XP 查找键。现行离线回归使用 VP 1.5.3-hotfix；完整整合包仍需游戏联测。
 
 ## 升级与验证
 
-安装 1.0.6 双 JAR 与当前四个 VTP JSON，同时更新 VP 配置并处理 VP 缓存。`combat_stats.json` 改名为 `mob_names.json`；旧 `vault_xp.json` 不再读取。工程内已知译文已迁移，个人自定义项需手动合并：怪物项按真实实体 ID 路径合入 `mob_names`，宝箱完整键直接合入 `chest_names`，矿石与四个标签改对应 VP 词条。不能由英文显示名猜测实体 ID。
+当前安装统一使用单 JAR、现行 14 份配置与配套 VP，见 [安装说明](../../wiki/install.md)。`combat_stats.json` 改名为 `mob_names.json`；旧 `vault_xp.json` 不再读取。工程内已知译文已迁移，个人自定义项需手动合并：怪物项按真实实体 ID 路径合入 `mob_names`，宝箱完整键直接合入 `chest_names`，矿石与四个标签改对应 VP 词条。不能由英文显示名猜测实体 ID。
 
 VTP 配置客户端 F3+T 生效，既有结算页需重开，已显示通知不追溯重译；VP 配置修改按其缓存/重启流程生效。专用服务端须新增 `chest_names.json`，参见 [宝箱模块](chest-names.md)。
 

@@ -1,6 +1,6 @@
 # 宝箱与储物桶名称：chest_names
 
-VTP 1.0.6 将宝箱名称、宝箱稀有度、储物桶和强化宝箱统一到 [chest_names.json](../../program/基础+硬编码汉化/config/vh3_translation_patch/chest_names.json)。运行侧为两端通用模块，不引用客户端 I18n。映射只在工程配置中维护，不打入 JAR。
+VTP 1.0.6 将宝箱名称、宝箱稀有度、储物桶和强化宝箱统一到 [chest_names.json](../../translate-packs/config/vh3_translation_patch/chest_names.json)。运行侧为两端通用模块，不引用客户端 I18n。映射只在工程配置中维护，不打入 JAR。
 
 ## 配置规则
 

@@ -9,7 +9,7 @@ patch=Path(__file__).resolve().parents[2]
 output=patch/'build/merge-assessment'
 output.mkdir(parents=True,exist_ok=True)
 version=next(line.split('=',1)[1] for line in (patch/'gradle.properties').read_text().splitlines() if line.startswith('mod_version='))
-installed=patch.parent/'program/基础+硬编码汉化/mods'
+installed=patch.parent/'translate-packs/mods'
 parser=argparse.ArgumentParser(description='Historical two-JAR assessment; supply archived pre-merge artifacts.')
 parser.add_argument('--runtime',type=Path,required=True)
 parser.add_argument('--transformer',type=Path,required=True)

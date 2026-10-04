@@ -6,7 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 /** 可编辑发布配置；运行侧拒绝未固定的下载或错误的文件名。 */
-public record Config(String version, String packVersion,
+public record Config(String exportSerial, String translationVersion, String packVersion,
                      String vaultVersion, String vaultFilename, String vaultHash, List<Mod> mods) {
     public record Mod(String id, String name, boolean required, String filename, URI url, String hash) {}
 
@@ -31,12 +31,14 @@ public record Config(String version, String packVersion,
             if (mods.stream().noneMatch(m -> m.id().equals(id) && m.required()))
                 throw new IOException(id + " 必须设为必装");
         }
-        return new Config(value(p, "app.version"), value(p, "pack.version"), value(p, "vault.version"),
+        String serial = value(p, "export.serial");
+        if (!serial.matches("[1-9][0-9]*")) throw new IOException("export.serial 必须是正整数");
+        return new Config(serial, value(p, "translation.version"), value(p, "pack.version"), value(p, "vault.version"),
                 filename(value(p, "vault.filename")), hash(value(p, "vault.sha256")), List.copyOf(mods));
     }
 
-    public List<Mod> selected(Set<String> optional) {
-        return mods.stream().filter(m -> m.required() || optional.contains(m.id())).toList();
+    public List<Mod> selected(Set<String> selected) {
+        return mods.stream().filter(m -> selected.contains(m.id())).toList();
     }
 
     static String filename(String name) throws IOException {

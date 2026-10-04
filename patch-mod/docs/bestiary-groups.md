@@ -1,13 +1,23 @@
-# 图鉴族类显示与查找分离
+# 图鉴族类：显示与查找分离
 
-`bestiary_groups.json` 有 14 个英文族类名称键，沿用旧译文。四个方法、五处修改：
+`bestiary_groups.json` 维护英文族类显示名称，模块仅在客户端使用。当前六个目标方法、八处修改；词表不参与查找键生成。
 
-- GroupUtils.getEntityGroupNames 的两个 stream mapper 改为 PartialEntityGroup.getId → 独立 lookupName；结果仍是原文查找名称，fighter 特例仍为 Dweller。不再通过 Component 的已翻译文字生成查找键。基线 loadEntityGroups 只向 ENTITY_GROUPS 放入 PartialEntityGroup。
-- GroupListElement 只在 TextComponent 构造时翻译标签；原 groupName 仍用于 getFilterByName 和点击回调。
-- TextUtil.formatLocationPathAsProperNoun 在组件构造时翻译族类，GroupUtils.getEntityName 的 Dweller 特例同样翻译。这保留原来悬赏等显示调用的族类中文；非族类悬赏种类/维度键仍由 VP 翻译。
+| 入口 | 处理 |
+|---|---|
+| `GroupUtils.getEntityGroupNames` | 两个 stream mapper 改为 PartialEntityGroup.getId → lookupName，保留原文查找键 |
+| `GroupListElement.<init>` | 只翻译 TextComponent 标签；原 groupName 用于筛选和回调 |
+| `GroupUtils.getEntityName`、`TextUtil.formatLocationPathAsProperNoun` | 翻译族类显示及 Dweller 特例；具体实体分支不变 |
+| `EntityDefinitionElement.lambda$new$0` | 详情返回直接用 group.getId → lookupName → selectGroup |
+| `BestiaryScreen.<init>(EntityPredicate)` | 在 selectGroup 前仅对真实 PartialEntityGroup 使用原始 ID；其他 predicate 保留原结果 |
 
-EntityGroupElement 继续用原文 groupName 查找，标题从 getEntityName 获取显示组件。旧 GroupListElement / EntityGroupElement 反向翻译组已删除；不会把任何中文字符串交给 ResourceLocation 反解析。没有反向词典，同名译文也不影响查找。未知族类显示回退原文，实体名称分支、隐藏组检查和 ID/存档不变。
+`lookupName` 按 ID 路径拆分下划线、首字母大写；fighter 特例为 Dweller。无中文反向词典，同名译文和重载均不改变查找。F3+T 后重开图鉴重建显示。
 
-此模块仅客户端。F3+T 重载词表，重开图鉴重建标签。来源为真实 GroupUtils、TextUtil、两处图鉴类与 translations/vp/bestiary_groups.json；执行 `python tools/source-audit.py bestiary_groups` 重新比对来源。核心变化须重新核对 ENTITY_GROUPS 的键类型及 formatter；不能仅更新摘要。
+## 1.0.19 崩溃修复
 
-1.0.11 实施，1.0.14 统一验证通过；测试执行了变换后 LambdaMetafactory 链路、独立 ID 查找键及失败原子性。中文同名不参与查找。详见 [成果报告](takeover-report.md)；尚未游戏验收。
+2026-10-04 用户报告详情页点击返回崩溃。报告链为 `EntityDefinitionElement.lambda$new$0 → BestiaryScreen.selectGroup → EntityGroupElement → GroupUtils.getFilterByName`，错误资源位置为 `the_vault:集群怪物`。旧补丁只隔离列表入口，漏掉返回和带 predicate 的构造入口。
+
+返回路径改用已持有的原始 ID；构造入口用 Class.isInstance 和受控方法引用区分族类，避免强转任意 predicate。标题仍可汉化，getFilterByName、ID、存档与筛选算法未改。不通过吞异常或中文反查掩盖问题。
+
+目标签名、固定核心摘要和命中数见 `transformer/src/main/resources/patches/bestiary_groups.properties`。来源审计补充详情页、族类页和主界面；`python tools/source-audit.py bestiary_groups` 可复核。
+
+测试执行真实变换后的列表 lambda 和详情返回回调，覆盖重复返回及不同 ID；运行侧检查原始键、Dweller、中文显示和非族类回退。还校验非目标指令还原、摘要/命中数失败、VP 冲突和两端过滤。未执行完整游戏 UI；返回、带族类直接打开和重载仍需游戏确认。

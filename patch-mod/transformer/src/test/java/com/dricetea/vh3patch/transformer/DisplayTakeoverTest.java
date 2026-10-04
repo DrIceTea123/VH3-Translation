@@ -28,10 +28,25 @@ class DisplayTakeoverTest {
                 var oldDynamics=Arrays.stream(before.instructions.toArray()).filter(i->i instanceof InvokeDynamicInsnNode).map(i->(InvokeDynamicInsnNode)i).toList();int dynamic=0;
                 for(var i:changed.instructions.toArray()) {
                     if(i instanceof InvokeDynamicInsnNode d) {
+                        if(changed.name.equals("<init>") && node.name.equals("iskallia/vault/client/gui/screen/bestiary/BestiaryScreen")
+                                && d.bsmArgs[1] instanceof Handle h && h.getName().equals("getId")) continue;
                         var old=oldDynamics.get(dynamic++);
                         if(!Arrays.equals(d.bsmArgs,old.bsmArgs)) { assertEquals("bestiary_groups",module.spec().moduleId());assertEquals("getEntityGroupNames",changed.name);d.bsmArgs=old.bsmArgs;total++; }
                     }
                     if(i instanceof MethodInsnNode call && call.owner.equals(module.spec().helperClass())) {
+                        if(call.name.equals("lookupGroup")) {
+                            var mapper=assertInstanceOf(InvokeDynamicInsnNode.class,i.getPrevious());
+                            var type=assertInstanceOf(LdcInsnNode.class,mapper.getPrevious());
+                            var predicate=assertInstanceOf(VarInsnNode.class,type.getPrevious());assertEquals(1,predicate.var);
+                            changed.instructions.remove(mapper);changed.instructions.remove(type);changed.instructions.remove(predicate);
+                        }
+                        if(call.name.equals("lookupName") && changed.name.equals("lambda$new$0")) {
+                            var id=assertInstanceOf(MethodInsnNode.class,i.getPrevious());
+                            assertEquals("getId",id.name);
+                            changed.instructions.set(id,new MethodInsnNode(Opcodes.INVOKESTATIC,"iskallia/vault/util/GroupUtils","getEntityName","(Liskallia/vault/core/world/data/entity/EntityPredicate;)Lnet/minecraft/network/chat/Component;",false));
+                            changed.instructions.set(i,new MethodInsnNode(Opcodes.INVOKEINTERFACE,"net/minecraft/network/chat/Component","getString","()Ljava/lang/String;",true));
+                            total+=2;continue;
+                        }
                         if(call.name.equals("translatePreview")) {
                             var field=assertInstanceOf(FieldInsnNode.class,i.getPrevious());assertEquals("currentStructureId",field.name);
                             var self=assertInstanceOf(VarInsnNode.class,field.getPrevious());assertEquals(0,self.var);

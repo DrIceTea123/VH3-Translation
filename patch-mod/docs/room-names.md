@@ -6,4 +6,4 @@
 
 数据来源：`origin-3.21.7/config/the_vault/gen/templates.json`。`translations/room-name-inputs.json` 保存 ID 与普通/详细显示键的对应，当前 139 个 ID。初始配置 131 项，其中 43 项缺乏已确认译文，按用户要求保留英文。旧 VP 两组保存于 `translations/vp/room_names.json`，原位置留接管注释。
 
-更新时运行 `python tools/source-audit.py room_names`，查看模板 ID 和目标 class 变化，再重新审查格式化算法、生成输入对应表和补充译名；不要只更新摘要。配置只在客户端读取，F3+T 后新悬浮文本使用新词表，缺项保留原文。统一构建与离线验证已通过，详见 [成果报告](takeover-report.md)；游戏未验收。
+更新时运行 `python tools/source-audit.py room_names`，查看模板 ID 和目标 class 变化，再重新审查格式化算法、生成输入对应表和补充译名；不要只更新摘要。配置只在客户端读取，F3+T 后新悬浮文本使用新词表，缺项保留原文。统一构建与离线验证已通过，详见 [成果报告](../../wiki/history.md)；游戏未验收。

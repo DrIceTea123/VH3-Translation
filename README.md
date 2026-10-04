@@ -1,27 +1,12 @@
-# Vault Hunters 3rd Edition 翻译工程
+# Vault Hunters 3 汉化包 · V2.7
 
-当前工程包含 VP 翻译、资源包、安装素材和独立补丁 VTP。当前 VTP 1.0.18 使用与修复说明见 [补丁 README](patch-mod/README.md)；1.0.14 接管成果见 [成果报告](patch-mod/docs/takeover-report.md)；历史快照与未归并增量见 [项目记忆](project-memory/README.md)；尚未完成整合包游戏联测。
+适配整合包 **3.21.7**，内含 **VTP 1.0.19**，配套 **VP 1.5.3-hotfix**。项目内容、安装方式、维护说明统一见 [项目 Wiki](wiki/README.md)。完整游戏联测尚未完成。
 
-## 从哪里开始
-
-| 任务 | 入口 |
+| 工作 | 入口 |
 |---|---|
-| 修改既有翻译、制作汉化包 | `program/`；打包方式见下文 |
-| 新安装器、界面文案、下载配置、一键打包 | [installer 使用说明](installer/README.md) |
-| 编辑 VTP 显示译表（14 个模块） | [补丁使用与构建](patch-mod/README.md) |
-| 新增补丁模块、修改 ASM | [模块开发](patch-mod/docs/modules.md) |
-| 理解原始文本与注入位置 | [文本获取分析](patch-mod/docs/text-capture.md)、[研究名覆盖](patch-mod/docs/research-names.md)、[经验提示](patch-mod/docs/vault-xp.md)、[宝箱名称模块](patch-mod/docs/chest-names.md) |
-| 维护 VP main / long / complex | [VP 分类规则](docs/maintenance/vp-asm-layout.md) |
-| 项目规则、决策与待办 | [共享记忆](project-memory/README.md)；协作从 [AGENTS.md](AGENTS.md) 开始 |
-| 同步父目录入口 | [工作区入口模板](docs/workspace-entry/README.md) |
+| 修改汉化内容 | [translate-packs](translate-packs/) · [翻译维护](wiki/translation.md) |
+| 生成安装器或修改向导 | [installer](installer/README.md) · [安装器配置](wiki/installer.md) |
+| 修改 VTP | [patch-mod](patch-mod/README.md) · [开发与验证](wiki/development.md) |
+| Codex 协作 | [AGENTS](AGENTS.md) · [项目记忆](project-memory/README.md) |
 
-玩家汉化说明书 DOCX 位于 `program/`；该目录下的许可证、安装前提示、覆盖版说明是独立发布入口，不能按重复维护文档删除。
-
-## 编辑与打包
-
-- 当前安装输入为 `program/汉化包内容/`，其中 `config/vh3_translation_patch/` 是 VTP 运行配置，`mods/` 放单个 VTP JAR。
-- 新安装器位于 `installer/`，用 Java 17 窗口向导替代 Inno Setup。Windows 双击 `installer/build.cmd`，Linux/macOS 执行 `sh installer/build.sh`，生成单个 JAR 到父工作区 `[发布文件]/VH3-installer/`；版本从 V2.7.0 起，每次成功生成后递增。说明和配置编辑入口见 [安装器 README](installer/README.md)。旧 `program/package.iss` 保留，不再作为新打包入口。
-- OpenLoader 的两个 ZIP 和工程 mods 中导出的单个 VTP JAR 是必需安装输入，受 Git 管理。其他第三方 JAR、7-Zip、构建缓存和发布成品不入库。克隆仓库不会自动获得父目录依赖。
-- 发布前按 [待办](project-memory/TODO.md) 完成整合包联测，并同步玩家说明；现有安装提示和说明书不能当作 VTP 已验收的证据。
-
-原始输入、旧译文、历史公告、参考表格、checker、工具和成品留在父工作区。日常从本仓库运行 `git status`、`git diff`；仅在用户明确要求时提交 Git。
+Windows 双击 `installer/build.cmd`；Linux/macOS 执行 `sh installer/build.sh`。成功成品输出到父工作区 `[发布文件]/`，每次导出序列号 +1。Git 提交须由用户明确要求。

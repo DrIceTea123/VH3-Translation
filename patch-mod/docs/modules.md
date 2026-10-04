@@ -25,7 +25,7 @@ modid 为 `vh3_translation_patch`，显示名 VH3 Translation Patch；包名前�
 
 1. 运行侧新增 `TranslationModule` 子类，定义唯一 ID（小写字母、数字、下划线），构造时 `super(ID)`；提供静态 `translate(String input, String fallback)`。
 2. 默认以输入英文原样查表。特殊输入才覆盖 `mappingKey`，并先确认格式；不要全局统一转换成实体键。命中返回译文，未命中使用明确的回退策略。
-3. 在 `program/基础+硬编码汉化/config/vh3_translation_patch/<ID>.json` 增加配置；客户端专属模块注册到 `ClientModules.MODULES`，两端模块注册到 `CommonModules`（客户端重载自动包含通用模块）。文件名由 ID 决定，不创建内置默认配置，不分语言；空模块用 `{}`。
+3. 在 `translate-packs/config/vh3_translation_patch/<ID>.json` 增加配置；客户端专属模块注册到 `ClientModules.MODULES`，两端模块注册到 `CommonModules`（客户端重载自动包含通用模块）。文件名由 ID 决定，不创建内置默认配置，不分语言；空模块用 `{}`。
 4. 早期侧实现 `PatchModule`，创建 `transformer/src/main/resources/patches/<ID>.properties`，注册到 `PatchModules`。清单记录补丁/核心版本、JAR 哈希、类/方法/描述符、规范化摘要及命中数/适用端；声明运行侧入口和 `ownsVpRule`。
 5. 实例 `(String)String` 方法可复用 `StringReturnPatch`；适用的模块保留原方法，在每个 ARETURN 前调用 helper。多个显示入口可用 `StringValuePatch` 在字段/getter/局部变量产生 String 后注入；有格式化回退时复制原文，传入双参数 helper。清单用 `target.count` 和 `target.<序号>.*` 描述多个方法，序号只标识清单项，不是字节码 ordinal。`CLIENT` 仅客户端，`BOTH` 包括专用与集成服务器。模块负责语义定位，`VerifiedMethodPatch` 统一核对摘要、命中数、重复注入及 ASM 验证。
 6. 审查真实 JAR、非目标方法和业务 ID 不变、映射与未命中、重载及失败行为。注册表拒绝重复 ID/目标；同类多个目标按注册顺序处理。方法变更必须重新审查，不能只更新摘要消除错误。
@@ -54,6 +54,6 @@ card_text 的历史片段另外保存在 `translations/vp/card_text.json`，仅�
 
 经验提示已拆分到 mob_names、chest_names 与 VP；`StringValuePatch.applyReturns` 支持任意参数布局的 String 显示返回值，宝箱钩子另传稳定枚举参数以避开已翻译的 getter 输出。`VerifiedMethodPatch` 可显式声明额外栈空间，默认仍为 1。
 
-地图房间、Quest、主题、图鉴和特殊词缀已接管，见 [本轮报告](takeover-report.md)；[箱子类型迁移评估](chest-types-assessment.md) 的 getter 已纳入 chest_names，未新建并存的 chest_types 模块。通用 VP 转换、多版本差异报告、彻底移除 VP 都未完成，具体任务见 [TODO](../../project-memory/TODO.md)。ASM 的选择不构成性能优于 Mixin 的结论；特殊位置是否使用 Mixin 仍待确认。
+地图房间、Quest、主题、图鉴和特殊词缀已接管，见 [变更摘要](../../wiki/history.md)；VaultChestType getter 已纳入 chest_names，未新建并存的 chest_types 模块。通用 VP 转换、多版本差异报告、彻底移除 VP 都未完成，具体任务见 [TODO](../../project-memory/TODO.md)。ASM 的选择不构成性能优于 Mixin 的结论；特殊位置是否使用 Mixin 仍待确认。
 
-本轮显示模块共用 `DisplayMethodPatch` 与 `TemplateModule`。`VerifiedMethodPatch` 深复制 invokedynamic 参数数组，保证修改 Lambda 引导参数时失败不影响原方法；图鉴用真实变换方法和最小依赖桩执行引导回归。铭文名称的 VP 所有权检查明确保留加载状态文案。
+显示模块共用 `DisplayMethodPatch` 与 `TemplateModule`。`VerifiedMethodPatch` 深复制 invokedynamic 参数数组，保证修改 Lambda 引导参数时失败不影响原方法；图鉴用真实变换方法和最小依赖桩执行引导回归。铭文名称的 VP 所有权检查明确保留加载状态文案。

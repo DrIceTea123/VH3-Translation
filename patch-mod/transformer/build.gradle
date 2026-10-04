@@ -27,7 +27,7 @@ dependencies {
 }
 def targetJar = providers.gradleProperty('vaultJar').map { rootProject.file(it) }
         .getOrElse(rootProject.file('../../origin-3.21.7/the_vault-1.18.2-3.21.6.6884.jar'))
-def vpSource = rootProject.file('../program/基础+硬编码汉化/vaultpatcher/modules/the_vault-asm_main.json')
+def vpSource = rootProject.file('../translate-packs/vaultpatcher/modules/the_vault-asm_main.json')
 // 工程已移除接管规则；旧规则仅用于导入及冲突回归测试，不再随汉化配置发布。
 def vpLegacySource = rootProject.file('translations/vp/mob_names.json')
 
@@ -65,12 +65,12 @@ tasks.named('jar') {
 tasks.named('test') {
     inputs.file targetJar
     inputs.dir vpSource.parentFile
-    inputs.dir rootProject.file('../program/基础+硬编码汉化/config/vaultpatcher_asm')
+    inputs.dir rootProject.file('../translate-packs/config/vaultpatcher_asm')
     inputs.file vpLegacySource
     inputs.dir rootProject.file('translations/vp')
     systemProperty 'vh3.test.targetJar', targetJar.absolutePath
     systemProperty 'vh3.test.vpSource', vpLegacySource.absolutePath
-    systemProperty 'vh3.test.programVpDirectory', rootProject.file('../program/基础+硬编码汉化/config/vaultpatcher_asm').absolutePath
+    systemProperty 'vh3.test.programVpDirectory', rootProject.file('../translate-packs/config/vaultpatcher_asm').absolutePath
     systemProperty 'vh3.test.legacyVpDirectory', rootProject.file('translations/vp').absolutePath
 }
 tasks.register('verifyTarget', JavaExec) {

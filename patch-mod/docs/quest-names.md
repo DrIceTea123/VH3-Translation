@@ -8,4 +8,4 @@ QuestState 入口两端启用，三个 UI/接收入口仅客户端；模块配�
 
 来源清单：translations/quest-name-inputs.json，旧规则 translations/vp/quest_names.json。更新运行 `python tools/source-audit.py quest_names`，重新读取两份原始任务文件及目标类；审核新增/删除/改名后更新配置，不由 ID 猜测译文。
 
-1.0.13 实施，1.0.14 统一构建和离线验证通过，详见 [成果报告](takeover-report.md)；未进行游戏验收。
+1.0.13 实施，1.0.14 统一构建和离线验证通过，详见 [成果报告](../../wiki/history.md)；未进行游戏验收。

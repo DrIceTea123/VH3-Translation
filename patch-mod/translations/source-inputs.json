@@ -92,7 +92,10 @@
       "classes": [
         "iskallia/vault/client/gui/screen/bestiary/element/GroupListElement",
         "iskallia/vault/util/GroupUtils",
-        "iskallia/vault/util/TextUtil"
+        "iskallia/vault/util/TextUtil",
+        "iskallia/vault/client/gui/screen/bestiary/element/EntityDefinitionElement",
+        "iskallia/vault/client/gui/screen/bestiary/element/EntityGroupElement",
+        "iskallia/vault/client/gui/screen/bestiary/BestiaryScreen"
       ]
     },
     {

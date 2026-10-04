@@ -14,7 +14,8 @@ public final class Texts {
     public String get(String key, String... replacements) {
         String text = values.getProperty(key);
         if (text == null) throw new IllegalArgumentException("缺少界面文案：" + key);
-        text = text.replace("{version}", config.version()).replace("{pack}", config.packVersion()).replace("{vault}", config.vaultVersion());
+        text = text.replace("{exportSerial}", config.exportSerial()).replace("{translationVersion}", config.translationVersion())
+                .replace("{modpackVersion}", config.packVersion()).replace("{pack}", config.packVersion()).replace("{vault}", config.vaultVersion());
         for (int i = 0; i < replacements.length; i += 2) text = text.replace("{" + replacements[i] + "}", replacements[i + 1]);
         return text;
     }

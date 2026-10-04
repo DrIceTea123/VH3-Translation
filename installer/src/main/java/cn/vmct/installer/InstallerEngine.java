@@ -51,6 +51,8 @@ public final class InstallerEngine {
                 FilesEx.target(root, "mods/" + mod.filename());
                 keepJars.add(mod.filename());
             }
+            // 跳过 VP 仅跳过下载；仍清理错误版本，保留配置指定版本。
+            config.mods().stream().filter(mod -> mod.id().equals("vp")).forEach(mod -> keepJars.add(mod.filename()));
             List<Path> obsolete = obsolete(root, keepJars);
 
             log.accept(texts.get("install.cache"));

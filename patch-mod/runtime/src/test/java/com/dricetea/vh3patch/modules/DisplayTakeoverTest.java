@@ -76,11 +76,15 @@ class DisplayTakeoverTest {
         // 子组件继承根节点的 bold；比较最终生效样式而不是未继承的局部声明。
         assertEquals("搜刮华丽宝箱时有10%概率恢复8点魔力",output.getString());assertEquals(chance,styles.get("10%"));assertEquals(mana.applyTo(chance),styles.get("8"));assertEquals(name.applyTo(chance),styles.get("华丽宝箱"));assertEquals(before,Component.Serializer.toJson(input));
     }
-    @Test void bestiaryLookupIgnoresTranslatedNamesAndReloadedDisplay() throws Exception {
+      @Test void bestiaryLookupIgnoresTranslatedNamesAndReloadedDisplay() throws Exception {
         BestiaryGroupsModule.INSTANCE.reload(shipped());assertEquals("Horde",BestiaryGroupsModule.lookupName(new ResourceLocation("the_vault","horde")));
         assertEquals("Dungeon Boss",BestiaryGroupsModule.lookupName(new ResourceLocation("the_vault","dungeon_boss")));
         assertEquals("Dweller",BestiaryGroupsModule.lookupName(new ResourceLocation("the_vault","fighter")));
-        assertNotEquals("Horde",BestiaryGroupsModule.translate("Horde"));
+          assertNotEquals("Horde",BestiaryGroupsModule.translate("Horde"));
+          var group=new ResourceLocation("the_vault","horde");
+          assertEquals("Horde",BestiaryGroupsModule.lookupGroup("集群怪物",group,ResourceLocation.class,o->(ResourceLocation)o));
+          assertEquals("unchanged",BestiaryGroupsModule.lookupGroup("unchanged",new Object(),ResourceLocation.class,o->{throw new AssertionError("非族类不可取 ID");}));
+          assertEquals("unchanged",BestiaryGroupsModule.lookupGroup("unchanged",null,ResourceLocation.class,o->{throw new AssertionError("空值不可取 ID");}));
     }
     @Test void previewDoesNotTranslateNonOverworldTemplates(@TempDir Path dir) throws Exception {
         Files.writeString(dir.resolve("overworld_names.json"),"{\"Same\":\"相同\"}");OverworldNamesModule.INSTANCE.reload(dir);

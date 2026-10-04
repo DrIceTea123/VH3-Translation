@@ -8,6 +8,11 @@ public final class BestiaryGroupsModule extends TemplateModule {
     public static String translate(String text) { return INSTANCE.translateText(text); }
     public static Object translateValue(Object value) { return value instanceof String s ? translate(s) : value; }
     public static net.minecraft.network.chat.Component translateComponent(net.minecraft.network.chat.Component text) { return INSTANCE.renderComponent(text); }
+    /** 构造器允许任意 predicate；仅真实族类使用原始 ID，其他类型保持上游回退。 */
+    public static String lookupGroup(String fallback, Object predicate, Class<?> groupType,
+                                     java.util.function.Function<Object, net.minecraft.resources.ResourceLocation> id) {
+        return groupType.isInstance(predicate) ? lookupName(id.apply(predicate)) : fallback;
+    }
     /** 与原 getFilterByName 配对；不查翻译表，不读取组件显示文本。 */
     public static String lookupName(net.minecraft.resources.ResourceLocation id) {
         String path=id.getPath();

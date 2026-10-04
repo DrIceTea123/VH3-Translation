@@ -1,6 +1,6 @@
 # 特殊装备词缀句式
 
-1.0.14 将完整显示组件交给 `gear_affixes`（29 个方法）和 `talent_affixes`（1 个方法）重排。技能和天赋的英文句式相同但中文类别不同，因此配置分离；两者共用 TemplateModule 的参数匹配与样式保留机制。所有配置都在 program 的 vh3_translation_patch 目录，不内置译表。
+1.0.14 将完整显示组件交给 `gear_affixes`（29 个方法）和 `talent_affixes`（1 个方法）重排。技能和天赋的英文句式相同但中文类别不同，因此配置分离；两者共用 TemplateModule 的参数匹配与样式保留机制。所有配置都在 translate-packs/config/vh3_translation_patch 目录，不内置译表。
 
 ## 范围
 
@@ -17,7 +17,7 @@
 
 目标签名、摘要、返回数和端位于 transformer 的 patches 清单；原核心类、旧规则及散列列在 translations/source-inputs.json 与 sources/。运行 tools/source-audit.py gear_affixes talent_affixes 重新比较来源；源码更新时先审阅差异，不直接刷新指纹。
 
-统一离线验证与游戏验收状态以 takeover-report.md 为准。
+历史变化见 [变更摘要](../../wiki/history.md)，当前验收见 [待办](../../project-memory/TODO.md)。
 
 ## 1.0.17 漏项修复
 

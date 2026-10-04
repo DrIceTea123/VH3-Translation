@@ -4,7 +4,10 @@
     "entries": {
       "iskallia/vault/client/gui/screen/bestiary/element/GroupListElement": "f01248a4fc7861e6a079a0989148371f3e42ed97e1f8fb111460cc3efdf7754f",
       "iskallia/vault/util/GroupUtils": "15cb51a1533067537d5b8c8cda70fca7886080df19f14a2b130883343b47374f",
-      "iskallia/vault/util/TextUtil": "1ddc64064a28b7b48b960a608e40f709bd262c178cf39196e697354928e51b73"
+      "iskallia/vault/util/TextUtil": "1ddc64064a28b7b48b960a608e40f709bd262c178cf39196e697354928e51b73",
+      "iskallia/vault/client/gui/screen/bestiary/element/EntityDefinitionElement": "6fe3f53727fd7761b07c90f935c31d981dc793a7bd567c23067a07f1b2dcfae3",
+      "iskallia/vault/client/gui/screen/bestiary/element/EntityGroupElement": "1f305951993c58d45a0bddc56d87fd5cfc17d52470ec8f5ff1d7780ba434f3fb",
+      "iskallia/vault/client/gui/screen/bestiary/BestiaryScreen": "268f2660a9fb227c3a61cbe05359da85e20bb55d509ae962a8fcc1013148d24c"
     },
     "texts": {
       "iskallia/vault/client/gui/screen/bestiary/element/GroupListElement": [],
@@ -30,6 +33,30 @@
         "Invalid hex color tag {}",
         "_",
         "§x"
+      ],
+      "iskallia/vault/client/gui/screen/bestiary/element/EntityDefinitionElement": [
+        "\u0001%",
+        " ",
+        "#,###",
+        "-\u0001",
+        "?",
+        "Missing 1",
+        "Missing 2",
+        "gui.back",
+        "screen.the_vault.bestiary.drop_amount",
+        "screen.the_vault.bestiary.drop_probability",
+        "screen.the_vault.bestiary.drops",
+        "screen.the_vault.bestiary.next_button",
+        "screen.the_vault.bestiary.previous_button",
+        "screen.the_vault.bestiary.themes",
+        "screen.the_vault.bestiary.vault_exp"
+      ],
+      "iskallia/vault/client/gui/screen/bestiary/element/EntityGroupElement": [],
+      "iskallia/vault/client/gui/screen/bestiary/BestiaryScreen": [
+        "screen.the_vault.bestiary.close",
+        "screen.the_vault.bestiary.title",
+        "screen.the_vault.bestiary.welcome",
+        "screen.the_vault.bestiary.welcome_desc"
       ]
     }
   },

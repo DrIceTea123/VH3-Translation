@@ -11,12 +11,13 @@ public final class RootValidator {
     }
 
     public static Result inspect(Path selected, Config config) throws IOException {
-        if (!Files.isDirectory(selected)) throw new IOException("请选择整合包根目录文件夹。");
+        Texts texts = new Texts(config);
+        if (!Files.isDirectory(selected)) throw new IOException(texts.get("validation.directory"));
         Path root = selected.toRealPath();
         Path mods = FilesEx.target(root, "mods");
         List<String> problems = new ArrayList<>();
         if (!Files.isDirectory(mods)) {
-            problems.add("根目录文件夹验证失败，选择的目录中未检测到宝藏猎人整合包。");
+            problems.add(texts.get("validation.mods"));
             return new Result(root, List.copyOf(problems));
         }
         List<Path> vaults;
@@ -24,12 +25,12 @@ public final class RootValidator {
             vaults = files.filter(p -> p.getFileName().toString().toLowerCase(Locale.ROOT).matches("the_vault.*\\.jar"))
                     .sorted().toList();
         }
-        if (vaults.size() != 1) problems.add("整合包校验失败，发现" + vaults.size() + "个不同的宝藏猎人核心模组文件。");
+        if (vaults.size() != 1) problems.add(texts.get("validation.count", "count", Integer.toString(vaults.size())));
         Path expected = FilesEx.target(root, "mods/" + config.vaultFilename());
         if (!Files.isRegularFile(expected)) {
-            problems.add("整合包校验失败，宝藏猎人核心模组版本应为" + config.vaultFilename() + "。可能是整合包版本与当前汉化包不符。");
+            problems.add(texts.get("validation.filename", "filename", config.vaultFilename()));
         } else if (!FilesEx.sha256(expected).equals(config.vaultHash())) {
-            problems.add("宝藏猎人核心模组校验失败，可能是模组文件损坏或已修改。");
+            problems.add(texts.get("validation.hash"));
         }
         return new Result(root, List.copyOf(problems));
     }

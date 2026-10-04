@@ -35,12 +35,41 @@ public final class InstallerTest {
                 mods.add(new Config.Mod(id, id, id.equals("i18n") || id.equals("vp"),
                         id.equals("vp") ? "vaultpatcher-all-1.5.3-fix.jar" : id + "-1.0.jar", URI.create("https://example.invalid/" + id), hash));
             }
-            fixture = new Config("2.7.0", "3.21.7", "1.18.2-3.21.6.6884", "the_vault-1.18.2-3.21.6.6884.jar", hash, mods);
+            fixture = new Config("1", "3.7", "3.21.7", "1.18.2-3.21.6.6884", "the_vault-1.18.2-3.21.6.6884.jar", hash, mods);
             test("发布配置固定版本、HTTPS 和哈希", () -> {
                 Config c = Config.load();
-                check(c.selected(Set.of()).size() == 2, "必须安装两个下载模组");
+                check(c.selected(Set.of()).isEmpty(), "全部取消则不下载");
+                check(c.selected(Set.of("vp")).size() == 1, "只下载明确选中项");
                 check(c.mods().stream().noneMatch(m -> m.id().equals("vmct")), "禁用 VMCT");
                 check(c.mods().stream().filter(m -> m.id().equals("jech")).findFirst().orElseThrow().filename().equals("jecharacters-1.18.2-4.3.11.jar"), "JECh 固定");
+            });
+            test("取消必装模组不下载，仍删除错误 VP 版本", () -> {
+                Path root = root(); seed(root); AtomicInteger downloads = new AtomicInteger();
+                write(root, "mods/vaultpatcher-all-1.5.3-fix.jar", "matching version");
+                engine((mod, dest, log) -> { downloads.incrementAndGet(); throw new IOException("不应下载"); })
+                        .install(root, Set.of(), false, text -> {});
+                check(downloads.get() == 0, "取消后不能强制下载");
+                check(!Files.exists(root.resolve("mods/vaultpatcher-all-1.0.jar")), "跳过下载仍删除错误版本");
+                check(Files.readString(root.resolve("mods/vaultpatcher-all-1.5.3-fix.jar")).equals("matching version"), "保留目标版本，不重新下载");
+                check(Files.exists(root.resolve(VTP)), "基础包继续安装");
+                check(!Files.exists(root.resolve("mods/vh3_translation_patch-1.0.1.jar")), "基础 VTP 仍正常升级");
+            });
+            test("强制安装需要两次明确确认", () -> {
+                for (int first : new int[]{-1, 0, 1}) for (int second : new int[]{-1, 0, 1}) {
+                    AtomicInteger calls = new AtomicInteger();
+                    boolean force = Wizard.confirmForce(() -> first, () -> { calls.incrementAndGet(); return second; });
+                    check(force == (first == 1 && second == 1), "关闭或取消不能强制安装");
+                    check(calls.get() == (first == 1 ? 1 : 0), "只在选择强制安装后显示风险框");
+                }
+            });
+            test("目录校验提示来自可编辑文案", () -> {
+                Texts text = new Texts(fixture);
+                Path root = Files.createTempDirectory(area, "missing-mods-");
+                check(RootValidator.inspect(root, fixture).message().equals(text.get("validation.mods")), "缺失 mods 提示");
+                Files.createDirectory(root.resolve("mods"));
+                String message = RootValidator.inspect(root, fixture).message();
+                check(message.contains(text.get("validation.count", "count", "0")), "核心数量占位符");
+                check(message.contains(text.get("validation.filename", "filename", fixture.vaultFilename())), "文件名占位符");
             });
             test("安装器默认目录与工作目录无关", () -> {
                 Path before = Main.defaultDirectory(); String old = System.getProperty("user.dir");
@@ -62,11 +91,11 @@ public final class InstallerTest {
             });
             test("拒绝不匹配目录且不写入", () -> {
                 Path root = Files.createTempDirectory(area, "invalid-");
-                fails(() -> engine(ok()).install(root, Set.of(), false, s -> {}));
+                fails(() -> engine(ok()).install(root, Set.of("vp", "i18n"), false, s -> {}));
                 try (var files = Files.list(root)) { check(files.count() == 0, "无写入"); }
             });
             test("强制安装可创建缺失 mods", () -> {
-                Path root = Files.createTempDirectory(area, "forced-"); engine(ok()).install(root, Set.of(), true, s -> {});
+                Path root = Files.createTempDirectory(area, "forced-"); engine(ok()).install(root, Set.of("vp", "i18n"), true, s -> {});
                 check(Files.exists(root.resolve(VTP)), "基础 VTP");
             });
             test("安装顺序、必装、完整覆盖、精确清理", () -> {
@@ -78,14 +107,14 @@ public final class InstallerTest {
                     check(Files.exists(root.resolve("mods/vh3_translation_patch-1.0.1.jar")), "下载完成前不删旧 VTP");
                     downloads.incrementAndGet(); Files.write(dest, jar);
                 };
-                engine(verifyOrder).install(root, Set.of(), false, s -> {});
+                engine(verifyOrder).install(root, Set.of("vp", "i18n"), false, s -> {});
                 check(downloads.get() == 2, "必装下载"); assertInstalled(root);
                 check(!Files.exists(root.resolve("mods/jech-1.0.jar")), "选装默认关闭");
                 check(Files.isDirectory(root.resolve("empty")), "保留空文件夹");
             });
             test("选装与重复安装", () -> {
-                Path root = root(); engine(ok()).install(root, Set.of("jech", "oculus"), false, s -> {});
-                engine(ok()).install(root, Set.of("jech", "oculus"), false, s -> {});
+                Path root = root(); engine(ok()).install(root, Set.of("vp", "i18n", "jech", "oculus"), false, s -> {});
+                engine(ok()).install(root, Set.of("vp", "i18n", "jech", "oculus"), false, s -> {});
                 check(Files.exists(root.resolve("mods/jech-1.0.jar")), "JECh");
                 check(Files.exists(root.resolve("mods/oculus-1.0.jar")), "Oculus");
                 check(Files.exists(root.resolve(VTP)), "重装保留当前 VTP");
@@ -96,7 +125,7 @@ public final class InstallerTest {
                 fails(() -> engine((mod, dest, log) -> {
                     if (calls.incrementAndGet() == 2) throw new IOException("network interrupted");
                     Files.write(dest, jar);
-                }).install(root, Set.of(), false, s -> {}));
+                }).install(root, Set.of("vp", "i18n"), false, s -> {}));
                 check(Files.readString(root.resolve("config/test.txt")).equals("old longer file"), "原配置还原");
                 check(Files.exists(root.resolve("mods/vaultpatcher-all-1.0.jar")), "旧 VP 保留");
                 check(Files.exists(root.resolve("mods/vh3_translation_patch-1.0.1.jar")), "旧 VTP 保留");
@@ -108,14 +137,14 @@ public final class InstallerTest {
                 Path root = root();
                 write(root, "mods/VAULTPATCHER-ALL-1.5.3-FIX.JAR", "old bytes");
                 write(root, "mods/VH3_TRANSLATION_PATCH-1.0.18.JAR", "old bytes");
-                engine(ok()).install(root, Set.of(), false, s -> {});
+                engine(ok()).install(root, Set.of("vp", "i18n"), false, s -> {});
                 check(Files.exists(root.resolve("mods/vaultpatcher-all-1.5.3-fix.jar")), "VP 不被大小写别名误删");
                 check(Files.exists(root.resolve(VTP)), "VTP 不被大小写别名误删");
                 check(FilesEx.sha256(root.resolve("mods/vaultpatcher-all-1.5.3-fix.jar")).equals(fixture.mods().get(1).hash()), "新内容确实覆盖");
             });
             test("坏下载不能替换有效文件", () -> {
                 Path root = root(); write(root, "mods/i18n-1.0.jar", "original");
-                fails(() -> engine((mod, dest, log) -> Files.writeString(dest, "truncated")).install(root, Set.of(), false, s -> {}));
+                fails(() -> engine((mod, dest, log) -> Files.writeString(dest, "truncated")).install(root, Set.of("vp", "i18n"), false, s -> {}));
                 check(Files.readString(root.resolve("mods/i18n-1.0.jar")).equals("original"), "不覆盖");
             });
             test("禁止安装 HTML 等非 JAR 内容", () -> {
@@ -133,7 +162,7 @@ public final class InstallerTest {
             test("内置内容损坏时不修改安装目标", () -> {
                 Path root = root(); seed(root);
                 Payload corrupt = payload(Map.of("config/test.txt", "bad"), Map.of("config/test.txt", "0".repeat(64)));
-                fails(() -> new InstallerEngine(fixture, corrupt, ok()).install(root, Set.of(), false, s -> {}));
+                fails(() -> new InstallerEngine(fixture, corrupt, ok()).install(root, Set.of("vp", "i18n"), false, s -> {}));
                 check(Files.readString(root.resolve("config/test.txt")).equals("old longer file"), "保留目标");
                 check(Files.exists(root.resolve("vaultpatcher/cache/old")), "损坏检查在清缓存前");
             });
@@ -142,25 +171,31 @@ public final class InstallerTest {
                 Path link = root.resolve("config");
                 try { Files.createSymbolicLink(link, outside); }
                 catch (IOException | UnsupportedOperationException e) { throw new Skip("当前系统不允许创建符号链接"); }
-                fails(() -> engine(ok()).install(root, Set.of(), false, s -> {}));
+                fails(() -> engine(ok()).install(root, Set.of("vp", "i18n"), false, s -> {}));
                 check(!Files.exists(outside.resolve("test.txt")), "外部目录没有写入"); Files.delete(link);
             });
             test("并发安装锁", () -> {
                 Path root = root();
                 try (var channel = java.nio.channels.FileChannel.open(root.resolve(".vh3-installer.lock"), StandardOpenOption.CREATE, StandardOpenOption.WRITE); var lock = channel.lock()) {
-                    fails(() -> engine(ok()).install(root, Set.of(), false, s -> {}));
+                    fails(() -> engine(ok()).install(root, Set.of("vp", "i18n"), false, s -> {}));
                     check(!Files.exists(root.resolve(VTP)), "并发任务无写入");
                 }
             });
             test("真实基础内容逐文件字节一致", () -> {
                 Path unpacked = Files.createTempDirectory(area, "real-payload-"); Payload payload = Payload.embedded(); payload.unpack(unpacked);
-                Path source = project.getParent().resolve("program/汉化包内容");
+                Path source = project.getParent().resolve("translate-packs");
                 for (String name : payload.paths()) check(Files.mismatch(source.resolve(name), unpacked.resolve(name)) == -1, "基础内容未原样打包：" + name);
             });
             test("界面说明必须确认、中文文案与离屏渲染", () -> SwingUtilities.invokeAndWait(() -> {
                 try {
                     Config actual = Config.load(); Wizard wizard = new Wizard(actual, new Texts(actual), Path.of("/整合包/Vault Hunters"));
                     check(!wizard.next.isEnabled(), "尚未同意不得下一步"); wizard.accept.doClick(); check(wizard.next.isEnabled(), "同意后继续");
+                    var choicesField = Wizard.class.getDeclaredField("choices"); choicesField.setAccessible(true);
+                    @SuppressWarnings("unchecked") Map<String, JCheckBox> choices = (Map<String, JCheckBox>) choicesField.get(wizard);
+                    for (String id : List.of("vp", "i18n")) {
+                        JCheckBox box = choices.get(id); check(box.isEnabled() && box.isSelected(), "必装默认勾选且允许取消");
+                        box.doClick(); check(!box.isSelected() && box.getText().contains("必装"), "取消仍保留必装字样");
+                    }
                     render(wizard, artifacts.resolve("01-notice.png")); wizard.next.doClick();
                     check(wizard.path.getText().equals(Path.of("/整合包/Vault Hunters").toString()), "默认路径");
                     render(wizard, artifacts.resolve("02-directory.png"));

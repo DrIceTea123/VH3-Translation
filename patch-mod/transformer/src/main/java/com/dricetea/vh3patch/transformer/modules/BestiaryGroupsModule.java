@@ -14,7 +14,28 @@ public final class BestiaryGroupsModule extends DisplayMethodPatch {
     @Override protected int patch(PatchSpec spec, MethodNode method) {
         int count=0;
         for(var i:method.instructions.toArray()) {
-            if(method.name.equals("getEntityGroupNames")) {
+            if(spec.className().equals("iskallia/vault/client/gui/screen/bestiary/BestiaryScreen")) {
+                if(call(i,spec.className(),"selectGroup","(Ljava/lang/String;)V")) {
+                    // 构造器也接受非族类 predicate，保留其原始行为；只给真实族类生成稳定键。
+                    InsnList args=new InsnList();args.add(new VarInsnNode(Opcodes.ALOAD,1));
+                    args.add(new LdcInsnNode(Type.getObjectType(GROUP)));
+                    args.add(new InvokeDynamicInsnNode("apply","()Ljava/util/function/Function;",
+                            new Handle(Opcodes.H_INVOKESTATIC,"java/lang/invoke/LambdaMetafactory","metafactory",
+                                    "(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;",false),
+                            Type.getMethodType("(Ljava/lang/Object;)Ljava/lang/Object;"),
+                            new Handle(Opcodes.H_INVOKEVIRTUAL,GROUP,"getId","()Lnet/minecraft/resources/ResourceLocation;",false),
+                            Type.getMethodType("(L"+GROUP+";)Lnet/minecraft/resources/ResourceLocation;")));
+                    method.instructions.insertBefore(i,args);
+                    hook(method,i,spec,true,"lookupGroup","(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Class;Ljava/util/function/Function;)Ljava/lang/String;");count++;
+                }
+            } else if(method.name.equals("lambda$new$0")) {
+                // 详情页返回必须沿用原始族类 ID，不能把已翻译标题反解析为资源位置。
+                if(call(i,"iskallia/vault/util/GroupUtils","getEntityName","(Liskallia/vault/core/world/data/entity/EntityPredicate;)Lnet/minecraft/network/chat/Component;")) {
+                    method.instructions.set(i,new MethodInsnNode(Opcodes.INVOKEVIRTUAL,GROUP,"getId","()Lnet/minecraft/resources/ResourceLocation;",false));count++;
+                } else if(call(i,"net/minecraft/network/chat/Component","getString","()Ljava/lang/String;")) {
+                    method.instructions.set(i,new MethodInsnNode(Opcodes.INVOKESTATIC,spec.helperClass(),"lookupName","(Lnet/minecraft/resources/ResourceLocation;)Ljava/lang/String;",false));count++;
+                }
+            } else if(method.name.equals("getEntityGroupNames")) {
                 if (!(i instanceof InvokeDynamicInsnNode d) || !d.bsm.getOwner().equals("java/lang/invoke/LambdaMetafactory")) continue;
                 if (!(d.bsmArgs[1] instanceof Handle h)) continue;
                 if(h.getOwner().equals("iskallia/vault/util/GroupUtils") && h.getName().equals("getEntityName")) {

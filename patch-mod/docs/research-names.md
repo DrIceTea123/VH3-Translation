@@ -1,6 +1,6 @@
 # 研究名称：覆盖与文本获取
 
-模块为 `research_names`，配置唯一维护于 [research_names.json](../../program/基础+硬编码汉化/config/vh3_translation_patch/research_names.json)。当前导入 54 个唯一键，形式为 `"Waystones": "传送石碑"`。键是 the_vault 使用的原始英文研究标识，例如 `Refined Storage`、`Vault Decks`；保留大小写、空格，不截取、不转成语言键。
+模块为 `research_names`，配置唯一维护于 [research_names.json](../../translate-packs/config/vh3_translation_patch/research_names.json)。当前导入 54 个唯一键，形式为 `"Waystones": "传送石碑"`。键是 the_vault 使用的原始英文研究标识，例如 `Refined Storage`、`Vault Decks`；保留大小写、空格，不截取、不转成语言键。
 
 ## 显示边界
 

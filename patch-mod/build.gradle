@@ -75,7 +75,7 @@ tasks.register('exportToProgram') {
         }
         def names = ["vh3_translation_patch-${project.version}.jar".toString()]
         def source = layout.buildDirectory.dir('distribution').get().asFile.toPath()
-        def destination = rootProject.file('../program/基础+硬编码汉化/mods').toPath().toAbsolutePath().normalize()
+        def destination = rootProject.file('../translate-packs/mods').toPath().toAbsolutePath().normalize()
         // 只处理本项目的单个安装 JAR；不能对整个 mods 使用 Sync，否则会删掉其他模组。
         names.each { name ->
             if (!java.nio.file.Files.isRegularFile(source.resolve(name))) {

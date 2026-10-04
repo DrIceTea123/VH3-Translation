@@ -33,12 +33,13 @@ public final class Wizard extends JPanel {
 
     public Wizard(Config config, Texts texts, Path defaultDirectory) throws IOException {
         super(new BorderLayout(0, 18));
+        configureFonts();
         this.config = config; this.texts = texts;
         setBorder(new EmptyBorder(24, 28, 20, 28));
         setPreferredSize(new Dimension(820, 630));
         JPanel header = new JPanel(new GridLayout(0, 1, 0, 9));
         JLabel title = new JLabel(texts.get("header.title"));
-        title.setFont(title.getFont().deriveFont(Font.BOLD, 25f));
+        title.setFont(title.getFont().deriveFont(Font.BOLD, 20f));
         header.add(title);
         header.add(new JLabel(texts.get("header.subtitle")));
         steps.setForeground(new Color(35, 104, 120));
@@ -81,7 +82,7 @@ public final class Wizard extends JPanel {
         JCheckBox basic = new JCheckBox(texts.get("components.basic"), true); basic.setEnabled(false); list.add(basic);
         for (Config.Mod mod : config.mods()) {
             JCheckBox box = new JCheckBox(mod.name() + " " + texts.get(mod.required() ? "components.required" : "components.optional"), mod.required());
-            box.setEnabled(!mod.required()); choices.put(mod.id(), box); list.add(box);
+            choices.put(mod.id(), box); list.add(box);
             list.add(Box.createVerticalStrut(8));
         }
         list.add(Box.createVerticalGlue());
@@ -89,7 +90,7 @@ public final class Wizard extends JPanel {
 
         JPanel installing = new JPanel(new BorderLayout(0, 12));
         JPanel progressHeader = new JPanel(new BorderLayout(0, 12));
-        progressTitle = new JLabel(texts.get("progress.title")); progressTitle.setFont(title.getFont().deriveFont(19f));
+        progressTitle = new JLabel(texts.get("progress.title")); progressTitle.setFont(title.getFont().deriveFont(18f));
         progressHeader.add(progressTitle, BorderLayout.NORTH);
         progressHeader.add(area(texts.get("progress.description")), BorderLayout.CENTER);
         progressHeader.add(progress, BorderLayout.SOUTH); installing.add(progressHeader, BorderLayout.NORTH);
@@ -102,21 +103,40 @@ public final class Wizard extends JPanel {
         next.addActionListener(e -> advance());
         close.addActionListener(e -> { Window window = SwingUtilities.getWindowAncestor(this); if (window != null) window.dispose(); });
         buttons.add(back); buttons.add(next); buttons.add(close); add(buttons, BorderLayout.SOUTH);
+        bodyFonts(this);
         refresh();
     }
 
     private JPanel page(String title) {
         JPanel result = new JPanel(new BorderLayout(0, 16));
-        JLabel heading = new JLabel(title); heading.setFont(heading.getFont().deriveFont(Font.BOLD, 19f));
+        JLabel heading = new JLabel(title); heading.setFont(heading.getFont().deriveFont(Font.BOLD, 18f));
         result.add(heading, BorderLayout.NORTH); return result;
     }
 
     private static JTextArea area(String value) {
         JTextArea result = new JTextArea(value);
         result.setEditable(false); result.setLineWrap(true); result.setWrapStyleWord(true);
-        result.setFont(UIManager.getFont("Label.font").deriveFont(14f));
+        result.setFont(UIManager.getFont("Label.font").deriveFont(16f));
         result.setOpaque(false); result.setBorder(new EmptyBorder(8, 8, 8, 8));
         return result;
+    }
+
+    static void configureFonts() {
+        for (Object key : Collections.list(UIManager.getDefaults().keys())) {
+            if (UIManager.get(key) instanceof Font font)
+                UIManager.put(key, new javax.swing.plaf.FontUIResource(font.deriveFont(16f)));
+        }
+    }
+    private static void bodyFonts(Container parent) {
+        for (Component child : parent.getComponents()) {
+            if (child.getFont() != null && child.getFont().getSize2D() < 16f) child.setFont(child.getFont().deriveFont(16f));
+            if (child instanceof Container container) bodyFonts(container);
+        }
+    }
+
+    /** 两个对话框都明确选择第二项才允许绕过兼容性校验；关闭窗口等同返回。 */
+    static boolean confirmForce(java.util.function.IntSupplier mismatch, java.util.function.IntSupplier risk) {
+        return mismatch.getAsInt() == 1 && risk.getAsInt() == 1;
     }
 
     private void refresh() {
@@ -149,11 +169,15 @@ public final class Wizard extends JPanel {
                 try {
                     var result = get(); force = false;
                     if (!result.valid()) {
-                        int answer = JOptionPane.showOptionDialog(Wizard.this,
+                        boolean confirmed = confirmForce(() -> JOptionPane.showOptionDialog(Wizard.this,
                                 texts.get("directory.mismatch.body", "problems", result.message()), texts.get("directory.mismatch.title"),
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null,
-                                new String[]{texts.get("directory.return"), texts.get("directory.force")}, texts.get("directory.return"));
-                        if (answer != 1) { refresh(); return; }
+                                new String[]{texts.get("directory.return"), texts.get("directory.force")}, texts.get("directory.return")),
+                                () -> JOptionPane.showOptionDialog(Wizard.this,
+                                        texts.get("directory.force.confirm.body"), texts.get("directory.force.confirm.title"),
+                                        JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null,
+                                        new String[]{texts.get("directory.return"), texts.get("directory.force.confirm.accept")}, texts.get("directory.return")));
+                        if (!confirmed) { refresh(); return; }
                         force = true;
                     }
                     selected = result.root();
