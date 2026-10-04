@@ -114,11 +114,48 @@ public final class InstallerTest {
             });
             test("选装与重复安装", () -> {
                 Path root = root(); engine(ok()).install(root, Set.of("vp", "i18n", "jech", "oculus"), false, s -> {});
-                engine(ok()).install(root, Set.of("vp", "i18n", "jech", "oculus"), false, s -> {});
+                var timestamp = java.nio.file.attribute.FileTime.fromMillis(1600000000000L);
+                for (Config.Mod mod : fixture.mods()) Files.setLastModifiedTime(root.resolve("mods/" + mod.filename()), timestamp);
+                write(root, "mods/vaultpatcher-all-1.0.jar", "old vp");
+                List<String> logs = new ArrayList<>();
+                engine((mod, dest, log) -> { throw new AssertionError("有效文件不应重新下载：" + mod.id()); })
+                        .install(root, Set.of("vp", "i18n", "jech", "oculus"), false, logs::add);
+                for (Config.Mod mod : fixture.mods()) {
+                    check(Files.getLastModifiedTime(root.resolve("mods/" + mod.filename())).equals(timestamp), "跳过时不重写模组");
+                    check(logs.contains(new Texts(fixture).get("install.mod.skip", "name", mod.name())), "显示跳过日志");
+                }
+                check(!Files.exists(root.resolve("mods/vaultpatcher-all-1.0.jar")), "复用当前 VP 仍清理旧版本");
                 check(Files.exists(root.resolve("mods/jech-1.0.jar")), "JECh");
                 check(Files.exists(root.resolve("mods/oculus-1.0.jar")), "Oculus");
                 check(Files.exists(root.resolve(VTP)), "重装保留当前 VTP");
                 check(Files.exists(root.resolve("mods/vaultpatcher-all-1.5.3-fix.jar")), "重装保留当前 VP");
+            });
+            test("仅复用同名且哈希正确的模组，旧版损坏和缺失仍下载", () -> {
+                Path root = root();
+                Files.write(root.resolve("mods/i18n-1.0.jar"), jar);
+                write(root, "mods/vaultpatcher-all-1.5.3-fix.jar", "corrupt");
+                Files.write(root.resolve("mods/jech-old.jar"), jar);
+                Set<String> downloaded = new HashSet<>();
+                engine((mod, dest, log) -> { downloaded.add(mod.id()); Files.write(dest, jar); })
+                        .install(root, Set.of("vp", "i18n", "jech", "oculus"), false, s -> {});
+                check(downloaded.equals(Set.of("vp", "jech", "oculus")), "不能凭其他文件名或损坏内容跳过");
+                for (Config.Mod mod : fixture.mods()) Downloader.verify(mod, root.resolve("mods/" + mod.filename()));
+                check(Files.exists(root.resolve("mods/jech-old.jar")), "不扩大原有模组清理范围");
+            });
+            test("复用模组后下载失败，原文件及还原行为保持", () -> {
+                Path root = root(); seed(root);
+                Path existing = root.resolve("mods/i18n-1.0.jar"); Files.write(existing, jar);
+                var timestamp = java.nio.file.attribute.FileTime.fromMillis(1600000000000L);
+                Files.setLastModifiedTime(existing, timestamp);
+                write(root, "mods/vaultpatcher-all-1.5.3-fix.jar", "corrupt");
+                fails(() -> engine((mod, dest, log) -> {
+                    check(mod.id().equals("vp"), "有效 i18n 不应下载"); throw new IOException("network interrupted");
+                }).install(root, Set.of("vp", "i18n"), false, s -> {}));
+                check(Arrays.equals(Files.readAllBytes(existing), jar), "保留复用文件");
+                check(Files.getLastModifiedTime(existing).equals(timestamp), "复用文件不进入还原写入");
+                check(Files.readString(root.resolve("mods/vaultpatcher-all-1.5.3-fix.jar")).equals("corrupt"), "下载失败不损坏原件");
+                check(Files.readString(root.resolve("config/test.txt")).equals("old longer file"), "基础配置还原");
+                check(Files.exists(root.resolve("mods/vaultpatcher-all-1.0.jar")), "失败时保留旧 VP");
             });
             test("下载中断还原原文件、保留旧模组", () -> {
                 Path root = root(); seed(root); AtomicInteger calls = new AtomicInteger();

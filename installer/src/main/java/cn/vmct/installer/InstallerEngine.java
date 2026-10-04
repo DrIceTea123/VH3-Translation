@@ -62,10 +62,15 @@ public final class InstallerEngine {
             for (String name : new TreeSet<>(payload.paths())) transaction.put(staged.resolve(name), FilesEx.target(root, name));
             log.accept(texts.get("install.download"));
             for (Config.Mod mod : mods) {
+                Path installed = FilesEx.target(root, "mods/" + mod.filename());
+                if (matchesInstalled(mod, installed)) {
+                    log.accept(texts.get("install.mod.skip", "name", mod.name()));
+                    continue;
+                }
                 Path file = work.resolve(mod.filename());
                 downloader.download(mod, file, log);
                 Downloader.verify(mod, file); // 不信任注入的下载实现；统一在写入 mods 前验证。
-                transaction.put(file, FilesEx.target(root, "mods/" + mod.filename()));
+                transaction.put(file, installed);
                 log.accept(texts.get("install.mod.done", "name", mod.name()));
             }
             log.accept(texts.get("install.cleanup"));
@@ -88,6 +93,17 @@ public final class InstallerEngine {
                 try { FilesEx.deleteTree(work); }
                 catch (IOException e) { log.accept(texts.get("install.temp", "path", work.toString())); }
             }
+        }
+    }
+
+    private static boolean matchesInstalled(Config.Mod mod, Path file) {
+        if (!Files.isRegularFile(file, LinkOption.NOFOLLOW_LINKS)) return false;
+        try {
+            Downloader.verify(mod, file);
+            return true;
+        } catch (IOException invalid) {
+            // 同名旧内容、损坏或不可读文件不能作为已安装凭据，继续正常下载/替换流程。
+            return false;
         }
     }
 
