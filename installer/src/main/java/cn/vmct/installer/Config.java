@@ -59,7 +59,21 @@ public record Config(String exportSerial, String translationVersion, String pack
 
     static InputStream resource(String name) throws IOException {
         InputStream in = Config.class.getResourceAsStream("/" + name);
-        if (in == null) throw new IOException("安装器缺少内置资源：" + name);
-        return in;
+        if (in != null) return in;
+        // 目录名以 ! 结尾时 jar: URL 的 !/ 分隔符可能截错位置；按真实代码来源读取同一 JAR。
+        try {
+            var location = java.nio.file.Path.of(Config.class.getProtectionDomain().getCodeSource().getLocation().toURI());
+            if (java.nio.file.Files.isRegularFile(location)) {
+                var jar = new java.util.jar.JarFile(location.toFile());
+                try {
+                    var entry = jar.getJarEntry(name);
+                    if (entry != null) return new FilterInputStream(jar.getInputStream(entry)) {
+                        @Override public void close() throws IOException { try { super.close(); } finally { jar.close(); } }
+                    };
+                } catch (IOException | RuntimeException failure) { jar.close(); throw failure; }
+                jar.close();
+            }
+        } catch (java.net.URISyntaxException invalid) { throw new IOException("安装器所在路径无效", invalid); }
+        throw new IOException("安装器缺少内置资源：" + name);
     }
 }

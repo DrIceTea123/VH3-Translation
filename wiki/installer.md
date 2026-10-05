@@ -6,15 +6,19 @@ Java 17 Swing 向导，无外部构建依赖。生成单个可执行 JAR，完�
 
 | 内容 | 位置 |
 |---|---|
-| 安装前说明正文 | [notice.txt](../installer/resources/notice.txt)，纯文本，保留原发布文案 |
+| 安装前说明正文 | [notice.md](../installer/resources/notice.md)，Markdown，保留原发布文案 |
+| 窗口与首页图标 | [icon.png](../translate-packs/icon.png)，构建时直接内置，不维护副本 |
 | 页面、校验错误、风险确认、进度和按钮文字 | [ui.properties](../installer/resources/ui.properties) |
 | 汉化包/整合包版本、核心文件及哈希 | [installer.properties](../installer/resources/installer.properties)，`translation.version` / `pack.*` / `vault.*` |
 | 导出文件名 | 同文件 `export.filename` |
 | 模组名称、直链、文件名、哈希和默认必装标注 | 同文件 `mods` 及各模组分组 |
 | 下一次导出序列号 | [export.properties](../installer/export.properties)，`next.serial` |
 | 全部基础文件与 VTP | [translate-packs](../translate-packs/)，打包时读取，不另存副本 |
+| 玩家启动入口 | [launchers](../installer/launchers/)，Windows/macOS/Linux 三个独立脚本 |
 
 properties 使用 UTF-8，`\n` 写作反斜杠加 n 表示换行。界面支持 `{translationVersion}`、`{exportSerial}`、`{modpackVersion}`（或 `{pack}`）、`{vault}`；特定提示还支持 `{path}`、`{count}`、`{filename}`、`{problems}` 等，见原键值。操作系统/网络异常继续保留详细诊断。
+
+首页由 Swing 渲染 Markdown，支持 `#` 标题、段落、换行、单层有序/无序列表、`**粗体**`、`*斜体*`、行内代码、三反引号代码块、引用、分隔线与 HTTP(S) 链接。链接点击后用系统浏览器打开。此为轻量子集，不解析原始 HTML、图片、表格或嵌套列表；终端模式显示 Markdown 原文。说明和图标修改后需重新构建。
 
 ## 文件名与导出
 
@@ -28,12 +32,20 @@ properties 使用 UTF-8，`\n` 写作反斜杠加 n 表示换行。界面支持 
 
 序列号是从 1 开始的正整数。成功编译、测试、成品自检和复制后，写入 `last.serial`，并将 `next.serial` +1；仅检查或失败不递增。已有同名文件不覆盖。汉化包版本不会自动递增；旧安装器语义版本文件及规则已移除。
 
+每次仅导出 `.jar`，并将 `windows系统点我启动.cmd`、`macOS系统点我启动.command`、`Linux系统点我启动.sh` 同步写入父工作区 `[发布文件]/`，不生成启动包 ZIP，也不附带辅助文件夹或配置。JAR 与脚本写入成功后才递增序列，失败恢复原启动文件。Unix 脚本使用 LF，POSIX 文件系统写入可执行权限；Windows 单文件 CMD 内置 PowerShell 内容并显式以 UTF-8 读取。
+
+脚本识别文件名末尾的 `-V汉化包版本-导出序列号.jar`，先逐段按数值比较汉化包版本（2.10 高于 2.9，2.7 与 2.7.0 等价），版本相等再比较序列号。整合包版本、文件时间和文件名字典序不作为优先级依据。最新版本及序列号均相同的多个文件会提示歧义；只有一个 JAR 时允许文件改名，没有可识别版本的多个 JAR 则提示保留标准名称。
+
+启动脚本检查 Java 17+，依次尝试用户自行提供的同目录 `runtime/bin/java`、JAVA_HOME、PATH，macOS 另查系统登记的 Java。启动脚本不内置/自动安装 Java，不依赖 JAR 文件关联，所有路径以脚本位置为准。错误保留退出码并提示；支持 `--check`、`--console`。不同桌面及解压工具可能要求授予脚本执行权限，也可使用 [安装说明](install.md) 中的 `sh` 命令。
+
 | 系统 | 构建 | 仅检查 |
 |---|---|---|
 | Windows | 双击 `installer/build.cmd` 或执行 `./installer/build.ps1` | `./installer/build.ps1 -Check` |
 | Linux/macOS | `sh installer/build.sh` | `sh installer/build.sh --check` |
 
 构建使用 JDK 17+，由 `JAVA_HOME` 或 PATH 中的 Java 提供；没有 Maven/Gradle/网络下载步骤。构建期间不要修改基础输入。修改任何文案、译文或下载配置后均须重新导出。
+
+Windows 构建统一使用 UTF-8：build.cmd 临时切换代码页 65001，结束后恢复；build.ps1 与 Java 构建、测试、自检子进程的标准输出和错误输出使用同一编码。失败退出码在暂停和恢复代码页后继续保留。
 
 ## 下载和安装行为
 

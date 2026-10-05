@@ -223,6 +223,42 @@ public final class InstallerTest {
                 Path source = project.getParent().resolve("translate-packs");
                 for (String name : payload.paths()) check(Files.mismatch(source.resolve(name), unpacked.resolve(name)) == -1, "基础内容未原样打包：" + name);
             });
+            test("图标与安装输入一致，说明使用 Markdown", () -> {
+                try (var icon = Config.resource("icon.png")) {
+                    check(Arrays.equals(icon.readAllBytes(), Files.readAllBytes(project.getParent().resolve("translate-packs/icon.png"))), "图标字节一致");
+                }
+                check(Main.icon().getWidth() > 0, "可解码图标");
+                check(new Texts(Config.load()).notice().equals(Files.readString(project.resolve("resources/notice.md"))), "内置 Markdown 正文一致");
+            });
+            test("感叹号目录中的 JAR 仍可读取内置资源", () -> {
+                Path folder = Files.createDirectory(area.resolve("中文 空格 & (test)!"));
+                Path sample = folder.resolve("resource.jar");
+                try (var out = new JarOutputStream(Files.newOutputStream(sample))) {
+                    for (String name : List.of("cn/vmct/installer/Config.class", "cn/vmct/installer/Config$Mod.class", "cn/vmct/installer/Config$1.class")) {
+                        out.putNextEntry(new JarEntry(name));
+                        try (var in = Config.class.getResourceAsStream("/" + name)) { in.transferTo(out); }
+                        out.closeEntry();
+                    }
+                    out.putNextEntry(new JarEntry("sample.txt")); out.write("内置资源".getBytes(StandardCharsets.UTF_8)); out.closeEntry();
+                }
+                try (var loader = new java.net.URLClassLoader(new java.net.URL[]{sample.toUri().toURL()}, null)) {
+                    var method = loader.loadClass("cn.vmct.installer.Config").getDeclaredMethod("resource", String.class); method.setAccessible(true);
+                    try (var in = (InputStream)method.invoke(null, "sample.txt")) {
+                        check(new String(in.readAllBytes(), StandardCharsets.UTF_8).equals("内置资源"), "特殊路径下资源内容不丢失");
+                    }
+                }
+                Files.delete(sample); // 流和 JAR 句柄必须正常关闭。
+            });
+            test("Markdown 排版、中文、代码转义与链接边界", () -> {
+                String html = NoticeMarkdown.html("# 中文标题\n\n**粗体**和*斜体*与`<code>`\n\n- 第一项\n- 第二项\n\n1. 条款\n\n> 引用\n\n---\n\n```text\n<script>**原样**</script>\n```\n\n[主页](https://example.org/?a=1&b=2)\n[本地](file:///C:/test)\n<img src=\"https://example.org/image.png\">");
+                for (String expected : List.of("<h1>中文标题</h1>", "<strong>粗体</strong>", "<em>斜体</em>",
+                        "<code>&lt;code&gt;</code>", "<ul><li>第一项</li><li>第二项</li></ul>", "<ol><li>条款</li></ol>",
+                        "<blockquote>引用</blockquote>", "<hr>", "&lt;script&gt;**原样**&lt;/script&gt;", "href=\"https://example.org/?a=1&amp;b=2\""))
+                    check(html.contains(expected), "缺少 Markdown 渲染结果：" + expected);
+                check(!html.contains("<img") && !html.contains("href=\"file:"), "不加载原始 HTML 或本地链接");
+                check(!NoticeMarkdown.webLink("javascript:alert(1)"), "拒绝脚本链接");
+                check(NoticeMarkdown.html("**未闭合 <tag>").contains("**未闭合 &lt;tag&gt;"), "未闭合标记作为正文");
+            });
             test("界面说明必须确认、中文文案与离屏渲染", () -> SwingUtilities.invokeAndWait(() -> {
                 try {
                     Config actual = Config.load(); Wizard wizard = new Wizard(actual, new Texts(actual), Path.of("/整合包/Vault Hunters"));

@@ -43,12 +43,14 @@ class Build {
             config.setProperty("export.serial", serial);
             write(config, classes.resolve("installer.properties"));
             Path source = project.getParent().resolve("translate-packs");
+            // 图标唯一来源；直接内置供窗口和首页使用，不维护第二份资源。
+            Files.copy(source.resolve("icon.png"), classes.resolve("icon.png"), StandardCopyOption.REPLACE_EXISTING);
             packPayload(source, classes);
             Path tests = Files.createDirectory(work.resolve("tests"));
             compile(project.resolve("src/test/java"), tests, classes.toString());
             compile(project.resolve("tools"), tests, classes.toString());
             String classpath = classes + File.pathSeparator + tests;
-            command(java(), "-Dfile.encoding=UTF-8", "-cp", classpath, "BuildTest");
+            command(java(), "-Dfile.encoding=UTF-8", "-cp", classpath, "BuildTest", project.toString());
             command(java(), "-Dfile.encoding=UTF-8", "-Djava.awt.headless=true", "-cp", classpath, "cn.vmct.installer.InstallerTest", project.toString());
 
             if (!release) { System.out.println("\u68c0\u67e5\u901a\u8fc7\uff1b\u672a\u751f\u6210\u53d1\u5e03\u6210\u54c1\uff0c\u5e8f\u5217\u53f7\u4e0d\u9012\u589e\u3002"); return; }
@@ -67,19 +69,48 @@ class Build {
             }
             command(java(), "-Dfile.encoding=UTF-8", "-Djava.awt.headless=true", "-jar", candidate.toString(), "--check");
             Files.createDirectories(output.getParent());
-            // 两个文件不能跨文件原子提交：序列号保存失败时撤销本次新成品。
-            Files.copy(candidate, output);
+            // 成品全部生成成功才更新序列；后续失败只撤销本轮新成品。
+            boolean copiedJar = false;
+            Map<Path, byte[]> previousLaunchers = new LinkedHashMap<>();
             try {
+                Files.copy(candidate, output); copiedJar = true;
+                for (var entry : launcherFiles(project.resolve("launchers")).entrySet()) {
+                    Path path = output.getParent().resolve(entry.getKey());
+                    previousLaunchers.put(path, Files.exists(path) ? Files.readAllBytes(path) : null);
+                    Files.write(path, entry.getValue());
+                    if (!entry.getKey().endsWith(".cmd") && Files.getFileStore(path).supportsFileAttributeView("posix"))
+                        Files.setPosixFilePermissions(path, java.nio.file.attribute.PosixFilePermissions.fromString("rwxr-xr-x"));
+                }
                 Properties updated = new Properties(); updated.putAll(serials);
                 updated.setProperty("last.serial", serial); updated.setProperty("next.serial", nextSerial);
                 Path temp = Files.createTempFile(project, "serial-", ".tmp");
                 try { write(updated, temp); Files.move(temp, serialFile, StandardCopyOption.REPLACE_EXISTING); }
                 finally { Files.deleteIfExists(temp); }
-            } catch (Exception e) { Files.deleteIfExists(output); throw e; }
+            } catch (Exception e) {
+                for (var entry : previousLaunchers.entrySet()) {
+                    try {
+                        if (entry.getValue() == null) Files.deleteIfExists(entry.getKey());
+                        else Files.write(entry.getKey(), entry.getValue());
+                    } catch (IOException restore) { e.addSuppressed(restore); }
+                }
+                if (copiedJar) Files.deleteIfExists(output);
+                throw e;
+            }
             System.out.println("\u5df2\u751f\u6210\uff0c\u5bfc\u51fa\u5e8f\u5217\u53f7 " + serial + "\uff1a" + output);
             System.out.println("SHA-256: " + sha256(output));
             System.out.println("\u4e0b\u6b21\u5bfc\u51fa\u5e8f\u5217\u53f7\uff1a" + nextSerial);
         } finally { delete(work, build); }
+    }
+
+    static Map<String, byte[]> launcherFiles(Path scripts) throws IOException {
+        Map<String, byte[]> result = new LinkedHashMap<>();
+        for (String name : List.of("windows系统点我启动.cmd", "macOS系统点我启动.command", "Linux系统点我启动.sh")) {
+            String source = name.endsWith(".cmd") ? name : "unix.sh";
+            String content = Files.readString(scripts.resolve(source), StandardCharsets.UTF_8).replace("\r\n", "\n").replace("\r", "\n");
+            if (name.endsWith(".cmd")) content = content.replace("\n", "\r\n");
+            result.put(name, content.getBytes(StandardCharsets.UTF_8));
+        }
+        return result;
     }
 
     static String outputName(Properties config, String serial) throws IOException {
@@ -156,7 +187,11 @@ class Build {
     }
     private static String java() { return Path.of(System.getProperty("java.home"), "bin", System.getProperty("os.name").startsWith("Windows") ? "java.exe" : "java").toString(); }
     private static void command(String... command) throws Exception {
-        if (new ProcessBuilder(command).inheritIO().start().waitFor() != 0) throw new IOException("\u9a8c\u8bc1\u5931\u8d25\uff0c\u5e8f\u5217\u53f7\u672a\u9012\u589e\u3002");
+        // JDK 17 的控制台编码可能覆盖 file.encoding；同时设置新旧 JDK 的标准流编码。
+        List<String> utf8 = new ArrayList<>(List.of(command));
+        utf8.addAll(1, List.of("-Dstdout.encoding=UTF-8", "-Dstderr.encoding=UTF-8",
+                "-Dsun.stdout.encoding=UTF-8", "-Dsun.stderr.encoding=UTF-8"));
+        if (new ProcessBuilder(utf8).inheritIO().start().waitFor() != 0) throw new IOException("\u9a8c\u8bc1\u5931\u8d25\uff0c\u5e8f\u5217\u53f7\u672a\u9012\u589e\u3002");
     }
     private static void delete(Path directory, Path allowed) throws IOException {
         if (!directory.toAbsolutePath().normalize().startsWith(allowed.toAbsolutePath().normalize()) || directory.equals(allowed)) throw new IOException("\u6e05\u7406\u76ee\u5f55\u8d8a\u754c");

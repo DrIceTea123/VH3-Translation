@@ -25,6 +25,7 @@ public final class Main {
                     UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
                     Wizard.configureFonts();
                     JFrame frame = new JFrame(texts.get("window.title"));
+                    frame.setIconImage(icon());
                     frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
                     Wizard wizard = new Wizard(config, texts, defaultDirectory());
                     frame.setContentPane(wizard);
@@ -36,8 +37,17 @@ public final class Main {
             });
         } catch (Exception e) {
             e.printStackTrace();
-            if (!GraphicsEnvironment.isHeadless()) JOptionPane.showMessageDialog(null, e.getMessage(), "VH3 Installer", JOptionPane.ERROR_MESSAGE);
+            if (!GraphicsEnvironment.isHeadless() && !Arrays.asList(args).contains("--check") && !Arrays.asList(args).contains("--console"))
+                JOptionPane.showMessageDialog(null, e.getMessage(), "VH3 Installer", JOptionPane.ERROR_MESSAGE);
             System.exit(1);
+        }
+    }
+
+    static java.awt.image.BufferedImage icon() throws IOException {
+        try (var in = Config.resource("icon.png")) {
+            var image = javax.imageio.ImageIO.read(in);
+            if (image == null) throw new IOException("安装器图标不是有效图片");
+            return image;
         }
     }
 

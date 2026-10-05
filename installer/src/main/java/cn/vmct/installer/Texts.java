@@ -20,7 +20,7 @@ public final class Texts {
         return text;
     }
     public String notice() throws IOException {
-        try (var in = Config.resource("notice.txt")) {
+        try (var in = Config.resource("notice.md")) {
             String text = new String(in.readAllBytes(), StandardCharsets.UTF_8);
             return text.isBlank() ? get("notice.empty") : text;
         }

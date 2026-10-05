@@ -39,6 +39,8 @@ public final class Wizard extends JPanel {
         setPreferredSize(new Dimension(820, 630));
         JPanel header = new JPanel(new GridLayout(0, 1, 0, 9));
         JLabel title = new JLabel(texts.get("header.title"));
+        title.setIcon(new ImageIcon(Main.icon().getScaledInstance(32, 32, Image.SCALE_SMOOTH)));
+        title.setIconTextGap(12);
         title.setFont(title.getFont().deriveFont(Font.BOLD, 20f));
         header.add(title);
         header.add(new JLabel(texts.get("header.subtitle")));
@@ -47,7 +49,20 @@ public final class Wizard extends JPanel {
         add(header, BorderLayout.NORTH);
 
         JPanel notice = page(texts.get("notice.title"));
-        JTextArea noticeText = area(texts.notice());
+        JEditorPane noticeText = new JEditorPane();
+        noticeText.putClientProperty(JEditorPane.HONOR_DISPLAY_PROPERTIES, Boolean.TRUE);
+        noticeText.setFont(UIManager.getFont("Label.font").deriveFont(16f));
+        noticeText.setContentType("text/html");
+        noticeText.setEditable(false);
+        noticeText.setText(NoticeMarkdown.html(texts.notice()));
+        noticeText.setCaretPosition(0);
+        noticeText.addHyperlinkListener(event -> {
+            if (event.getEventType() == javax.swing.event.HyperlinkEvent.EventType.ACTIVATED
+                    && NoticeMarkdown.webLink(event.getDescription())) {
+                try { Desktop.getDesktop().browse(java.net.URI.create(event.getDescription())); }
+                catch (Exception failure) { error(failure.getMessage()); }
+            }
+        });
         noticeText.setBackground(Color.WHITE);
         notice.add(new JScrollPane(noticeText), BorderLayout.CENTER);
         accept = new JCheckBox(texts.get("notice.accept"));

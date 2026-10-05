@@ -1,5 +1,7 @@
 import java.io.IOException;
 import java.util.Properties;
+import java.nio.file.*;
+import java.nio.charset.StandardCharsets;
 
 /** 文件名可编辑，但不得借模板写到发布目录之外。 */
 class BuildTest {
@@ -16,5 +18,15 @@ class BuildTest {
         p.setProperty("export.filename","ok-{translationVersion}.jar");p.setProperty("translation.version","../../bad");
         try { Build.outputName(p,"1");throw new AssertionError("版本值不可逃逸目录"); } catch(IOException expected) {}
         System.out.println("PASS: 8 项导出名称与路径校验");
+        Path project = Path.of(args[0]);
+        var launchers = Build.launcherFiles(project.resolve("launchers"));
+        if (launchers.size() != 3) throw new AssertionError("应只导出三个独立启动脚本");
+        for (String script : new String[]{"macOS系统点我启动.command", "Linux系统点我启动.sh"}) {
+            String text = new String(launchers.get(script), StandardCharsets.UTF_8);
+            if (!text.startsWith("#!/bin/sh\n") || text.contains("\r")) throw new AssertionError("Unix 脚本编码/换行错误");
+        }
+        String cmd = new String(launchers.get("windows系统点我启动.cmd"), StandardCharsets.UTF_8);
+        if (!cmd.startsWith("@echo off\r\n") || !cmd.contains("# POWERSHELL_BEGIN\r\n")) throw new AssertionError("Windows 独立脚本缺少内置启动逻辑");
+        System.out.println("PASS: 三个独立启动脚本的编码与换行");
     }
 }
