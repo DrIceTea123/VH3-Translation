@@ -13,6 +13,34 @@ public class MissingDisplaysPatchTest {
     public static Function<Object,String> translatedNames(Function<Object,String> original) { return value -> "translated:" + original.apply(value); }
     public static String translatedText(String original) { return "translated:" + original; }
 
+    @Test void bestiaryThemeRowTranslatesBeforePrefixAndPreservesOtherConstructorCode() throws Exception {
+        PatchModule module = PatchModules.find("theme_names");
+        PatchSpec spec = module.specs().stream().filter(s -> s.className().endsWith("/EntityDefinitionElement")).findFirst().orElseThrow();
+        ClassNode node = TargetJar.read(Path.of(System.getProperty("vh3.test.targetJar")), spec, true);
+        module.apply(node);
+        MethodNode method = VerifiedMethodPatch.target(node, spec);
+        var hooks = Arrays.stream(method.instructions.toArray()).filter(i -> i instanceof MethodInsnNode c && c.owner.equals(spec.helperClass())).toList();
+        assertEquals(1, hooks.size());
+        var hook = hooks.get(0);
+        var concat = assertInstanceOf(InvokeDynamicInsnNode.class, hook.getNext());
+        assertEquals("-\u0001", concat.bsmArgs[0]);
+        // 执行真实构造器中的翻译调用与字符串拼接，确保传入词表的是未带 '-' 的名称。
+        var host = writer(node.name, "java/lang/Object");
+        var formatter = host.visitMethod(Opcodes.ACC_PUBLIC|Opcodes.ACC_STATIC, "themeRow", "(Ljava/lang/String;)Ljava/lang/String;", null, null);
+        formatter.visitCode();formatter.visitVarInsn(Opcodes.ALOAD, 0);hook.accept(formatter);concat.accept(formatter);
+        formatter.visitInsn(Opcodes.ARETURN);formatter.visitMaxs(0,0);formatter.visitEnd();host.visitEnd();
+        ClassLoader loader = loader(Map.of(node.name, host.toByteArray(), spec.helperClass(),
+                helper(spec.helperClass(), "translate", "(Ljava/lang/String;)Ljava/lang/String;", "translatedText")));
+        var row = loader.loadClass(node.name.replace('/','.')).getMethod("themeRow", String.class);
+        for (String name : List.of("Easter", "Andersite Caves", "Unknown Theme"))
+            assertEquals("-translated:" + name, row.invoke(null, name));
+        // 删除唯一注入后须恢复原方法摘要：Missing 1/2 判断、颜色、掉落率、循环与原始名称均不改。
+        method.instructions.remove(hook);
+        assertEquals(spec.fingerprint(), MethodFingerprint.of(method));
+        assertTrue(module.ownsVpRule(rule(spec.className(), "<init>", "Easter")));
+        assertFalse(module.ownsVpRule(rule(spec.className(), "lambda$new$1", "gui.back")));
+    }
+
     @Test void bothCrucibleMethodReferenceHooksLinkAndExecute() throws Exception {
         PatchModule module = PatchModules.find("theme_names");
         for (PatchSpec spec : module.specs().stream().filter(s -> s.className().endsWith("VoidCrucibleScreen$ThemeSelect")).toList()) {

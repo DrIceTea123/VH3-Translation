@@ -25,7 +25,9 @@
         "iskallia/vault/core/vault/player/ClassicListenersLogic",
         "iskallia/vault/item/AugmentItem",
         "iskallia/vault/item/crystal/theme/ValueCrystalTheme",
-        "iskallia/vault/client/gui/screen/void_stone/VoidCrucibleScreen$ThemeSelect"
+        "iskallia/vault/client/gui/screen/void_stone/VoidCrucibleScreen$ThemeSelect",
+        "iskallia/vault/client/gui/screen/bestiary/element/EntityDefinitionElement",
+        "iskallia/vault/config/BestiaryConfig$EntityEntry"
       ]
     },
     {

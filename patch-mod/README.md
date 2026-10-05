@@ -1,6 +1,6 @@
 # VH3 Translation Patch
 
-当前 **1.0.19**，14 个显示翻译模块，面向 MC 1.18.2 / Forge 40.3.11 / the_vault 1.18.2-3.21.6.6884。分发一个 JAR；外部配置位于 `../translate-packs/config/vh3_translation_patch/`。
+当前 **1.0.20**，14 个显示翻译模块，面向 MC 1.18.2 / Forge 40.3.11 / the_vault 1.18.2-3.21.6.6884。分发一个 JAR；外部配置位于 `../translate-packs/config/vh3_translation_patch/`。
 
 | 内容 | 文档 |
 |---|---|

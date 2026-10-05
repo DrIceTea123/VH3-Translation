@@ -10,7 +10,7 @@ VM 汉化组的 Vault Hunters 3rd Edition 汉化工程，包含游戏资源、�
 | Vault Hunters 整合包 | **3.21.7** | 同文件 `pack.version` |
 | Minecraft / Forge | 1.18.2 / 40.3.11 | [gradle.properties](../patch-mod/gradle.properties) |
 | the_vault 核心 | 1.18.2-3.21.6.6884 | 安装器校验配置与 VTP 目标清单 |
-| VTP 定向补丁 | **1.0.19**，单 JAR | `patch-mod/gradle.properties` 的 `mod_version` |
+| VTP 定向补丁 | **1.0.20**，单 JAR | `patch-mod/gradle.properties` 的 `mod_version` |
 | VaultPatcher | **1.5.3-hotfix**（文件名 `1.5.3-fix`） | 安装器 `vp.*` |
 | 安装器导出 | 从 **1** 起的整数序列号 | [export.properties](../installer/export.properties) |
 | Java | 游戏/VTP 基线 JDK 17；安装器 Java 17+ | [构建说明](development.md) |

@@ -4,7 +4,7 @@
 
 ## VP 配置格式与接管
 
-当前安装目标为 **VaultPatcher 1.5.3-hotfix**（官方文件名 `vaultpatcher-all-1.5.3-fix.jar`），VTP 为 1.0.19。详细来源、验证与升级步骤见 [格式升级报告](../patch-mod/docs/vp-1.5.3-upgrade.md)。
+当前安装目标为 **VaultPatcher 1.5.3-hotfix**（官方文件名 `vaultpatcher-all-1.5.3-fix.jar`），VTP 为 1.0.20。详细来源、验证与升级步骤见 [格式升级报告](../patch-mod/docs/vp-1.5.3-upgrade.md)。
 
 ## 当前布局
 

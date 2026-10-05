@@ -8,7 +8,9 @@
       "iskallia/vault/core/vault/player/ClassicListenersLogic": "f5f10a103653f18b648fe3c50364cc890125f73b532aad9f986500ea6ff1919d",
       "iskallia/vault/item/AugmentItem": "b100fdfb435431308a38438d9d4e4ac3ab9363f7d9bd564550e55c6aff8ddfb6",
       "iskallia/vault/item/crystal/theme/ValueCrystalTheme": "bd1b43b33da05d40daeb1836358f432497e8d704502d63a72567ce8275fb746e",
-      "iskallia/vault/client/gui/screen/void_stone/VoidCrucibleScreen$ThemeSelect": "7f7b3211cb5746aeea80b740e762f8e451ce961b486e6a747be9b790e9d1a572"
+      "iskallia/vault/client/gui/screen/void_stone/VoidCrucibleScreen$ThemeSelect": "7f7b3211cb5746aeea80b740e762f8e451ce961b486e6a747be9b790e9d1a572",
+      "iskallia/vault/client/gui/screen/bestiary/element/EntityDefinitionElement": "6fe3f53727fd7761b07c90f935c31d981dc793a7bd567c23067a07f1b2dcfae3",
+      "iskallia/vault/config/BestiaryConfig$EntityEntry": "2d1a1ebd819ea87a3200e2197b5061bfb188943b1681135b6774c24b715fde6e"
     },
     "texts": {
       "iskallia/vault/client/gui/screen/summary/element/CrystalStatsContainerElement": [
@@ -147,6 +149,28 @@
         "Back",
         "Blacklist is full!",
         "Unknown Theme"
+      ],
+      "iskallia/vault/client/gui/screen/bestiary/element/EntityDefinitionElement": [
+        "\u0001%",
+        " ",
+        "#,###",
+        "-\u0001",
+        "?",
+        "Missing 1",
+        "Missing 2",
+        "gui.back",
+        "screen.the_vault.bestiary.drop_amount",
+        "screen.the_vault.bestiary.drop_probability",
+        "screen.the_vault.bestiary.drops",
+        "screen.the_vault.bestiary.next_button",
+        "screen.the_vault.bestiary.previous_button",
+        "screen.the_vault.bestiary.themes",
+        "screen.the_vault.bestiary.vault_exp"
+      ],
+      "iskallia/vault/config/BestiaryConfig$EntityEntry": [
+        "Missing 1",
+        "Missing 2",
+        "missing"
       ]
     }
   },

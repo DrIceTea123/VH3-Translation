@@ -10,7 +10,7 @@ VTP 在已审查的显示入口翻译，保留上游算法、业务 ID、存档�
 | `chest_names` | 宝箱/桶、稀有度、经验与预览 | 两端，UI 入口限客户端；[宝箱](../patch-mod/docs/chest-names.md) |
 | `card_text` | 卡牌名称、条件、效果与物品提示 | 两端，UI 入口限客户端；[卡牌](../patch-mod/docs/card-text.md) |
 | `crystal_stats` | 水晶结算统计句式 | 客户端；[水晶统计](../patch-mod/docs/crystal-stats.md) |
-| `theme_names` | 原始英文主题名；结算、物品与虚空坩埚 | 两端；[主题](../patch-mod/docs/crystal-stats.md) |
+| `theme_names` | 原始英文主题名；结算、物品、虚空坩埚与图鉴怪物详情 | 两端；[主题](../patch-mod/docs/crystal-stats.md) |
 | `room_names` | 普通/详细地图房间名称 | 客户端；[地图](../patch-mod/docs/room-names.md) |
 | `overworld_names` | 主世界铭文预览名称 | 客户端；[铭文](../patch-mod/docs/overworld-names.md) |
 | `bestiary_groups` | 图鉴族类显示名，查找仍使用原始 ID | 客户端；[图鉴](../patch-mod/docs/bestiary-groups.md) |

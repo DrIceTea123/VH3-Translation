@@ -15,11 +15,11 @@ class Build {
         int projectArg = options.indexOf("--project");
         Path project = (projectArg >= 0 ? Path.of(args[projectArg + 1]) : Path.of(".")).toAbsolutePath().normalize();
         boolean release = options.contains("--release");
-        if (!Files.isDirectory(project.resolve("src/main/java"))) throw new IOException("请从 installer 目录执行，或传入 --project。");
+        if (!Files.isDirectory(project.resolve("src/main/java"))) throw new IOException("\u8bf7\u4ece installer \u76ee\u5f55\u6267\u884c\uff0c\u6216\u4f20\u5165 --project\u3002");
         Path build = project.resolve("build"); Files.createDirectories(build);
         try (var channel = FileChannel.open(build.resolve("build.lock"), StandardOpenOption.CREATE, StandardOpenOption.WRITE);
              var lock = channel.tryLock()) {
-            if (lock == null) throw new IOException("另一个打包任务正在运行。");
+            if (lock == null) throw new IOException("\u53e6\u4e00\u4e2a\u6253\u5305\u4efb\u52a1\u6b63\u5728\u8fd0\u884c\u3002");
             run(project, build, release);
         }
     }
@@ -28,12 +28,12 @@ class Build {
         Path serialFile = project.resolve("export.properties");
         Properties serials = read(serialFile);
         String serial = serials.getProperty("next.serial", "");
-        if (!serial.matches("[1-9][0-9]*")) throw new IOException("next.serial 必须是正整数");
+        if (!serial.matches("[1-9][0-9]*")) throw new IOException("next.serial \u5fc5\u987b\u662f\u6b63\u6574\u6570");
         String nextSerial = Long.toString(Math.addExact(Long.parseLong(serial), 1));
         Properties sourceConfig = read(project.resolve("resources/installer.properties"));
         String filename = outputName(sourceConfig, serial);
-        Path output = project.getParent().getParent().resolve("[发布文件]").resolve(filename);
-        if (release && Files.exists(output)) throw new IOException("成品已存在，请检查 export.properties：" + output);
+        Path output = project.getParent().getParent().resolve("[\u53d1\u5e03\u6587\u4ef6]").resolve(filename);
+        if (release && Files.exists(output)) throw new IOException("\u6210\u54c1\u5df2\u5b58\u5728\uff0c\u8bf7\u68c0\u67e5 export.properties\uff1a" + output);
         Path work = Files.createTempDirectory(build, "run-");
         try {
             Path classes = Files.createDirectory(work.resolve("classes"));
@@ -51,7 +51,7 @@ class Build {
             command(java(), "-Dfile.encoding=UTF-8", "-cp", classpath, "BuildTest");
             command(java(), "-Dfile.encoding=UTF-8", "-Djava.awt.headless=true", "-cp", classpath, "cn.vmct.installer.InstallerTest", project.toString());
 
-            if (!release) { System.out.println("检查通过；未生成发布成品，序列号不递增。"); return; }
+            if (!release) { System.out.println("\u68c0\u67e5\u901a\u8fc7\uff1b\u672a\u751f\u6210\u53d1\u5e03\u6210\u54c1\uff0c\u5e8f\u5217\u53f7\u4e0d\u9012\u589e\u3002"); return; }
             Path candidate = work.resolve(output.getFileName());
             Manifest manifest = new Manifest();
             manifest.getMainAttributes().putValue("Manifest-Version", "1.0");
@@ -76,9 +76,9 @@ class Build {
                 try { write(updated, temp); Files.move(temp, serialFile, StandardCopyOption.REPLACE_EXISTING); }
                 finally { Files.deleteIfExists(temp); }
             } catch (Exception e) { Files.deleteIfExists(output); throw e; }
-            System.out.println("已生成，导出序列号 " + serial + "：" + output);
+            System.out.println("\u5df2\u751f\u6210\uff0c\u5bfc\u51fa\u5e8f\u5217\u53f7 " + serial + "\uff1a" + output);
             System.out.println("SHA-256: " + sha256(output));
-            System.out.println("下次导出序列号：" + nextSerial);
+            System.out.println("\u4e0b\u6b21\u5bfc\u51fa\u5e8f\u5217\u53f7\uff1a" + nextSerial);
         } finally { delete(work, build); }
     }
 
@@ -86,41 +86,41 @@ class Build {
         String name = config.getProperty("export.filename", "");
         for (var entry : Map.of("modpackVersion", "pack.version", "translationVersion", "translation.version").entrySet()) {
             String value = config.getProperty(entry.getValue(), "").trim();
-            if (value.isEmpty()) throw new IOException("缺少配置：" + entry.getValue());
+            if (value.isEmpty()) throw new IOException("\u7f3a\u5c11\u914d\u7f6e\uff1a" + entry.getValue());
             name = name.replace("{" + entry.getKey() + "}", value);
         }
         name = name.replace("{exportSerial}", serial);
         // 只接受单个跨平台文件名，模板不能逃逸发布目录。
         if (name.isBlank() || !name.endsWith(".jar") || name.matches(".*[\\\\/:*?\"<>|{}\\p{Cntrl}].*") || name.endsWith(". "))
-            throw new IOException("export.filename 必须是带 .jar 后缀的单个文件名，且不能含未知占位符：" + name);
+            throw new IOException("export.filename \u5fc5\u987b\u662f\u5e26 .jar \u540e\u7f00\u7684\u5355\u4e2a\u6587\u4ef6\u540d\uff0c\u4e14\u4e0d\u80fd\u542b\u672a\u77e5\u5360\u4f4d\u7b26\uff1a" + name);
         return name;
     }
 
     private static void compile(Path source, Path out, String classpath) throws IOException {
         var compiler = ToolProvider.getSystemJavaCompiler();
-        if (compiler == null) throw new IOException("需要 JDK 17 或更新版本，不能使用仅运行环境 JRE。");
+        if (compiler == null) throw new IOException("\u9700\u8981 JDK 17 \u6216\u66f4\u65b0\u7248\u672c\uff0c\u4e0d\u80fd\u4f7f\u7528\u4ec5\u8fd0\u884c\u73af\u5883 JRE\u3002");
         List<String> args = new ArrayList<>(List.of("--release", "17", "-encoding", "UTF-8", "-d", out.toString()));
         if (classpath != null) args.addAll(List.of("-classpath", classpath));
         try (var files = Files.walk(source)) { files.filter(p -> p.toString().endsWith(".java")).sorted().forEach(p -> args.add(p.toString())); }
-        if (compiler.run(null, null, null, args.toArray(String[]::new)) != 0) throw new IOException("编译失败，序列号未递增。");
+        if (compiler.run(null, null, null, args.toArray(String[]::new)) != 0) throw new IOException("\u7f16\u8bd1\u5931\u8d25\uff0c\u5e8f\u5217\u53f7\u672a\u9012\u589e\u3002");
     }
 
     private static void packPayload(Path source, Path classes) throws Exception {
-        if (!Files.isDirectory(source)) throw new IOException("缺少基础内容目录：" + source);
+        if (!Files.isDirectory(source)) throw new IOException("\u7f3a\u5c11\u57fa\u7840\u5185\u5bb9\u76ee\u5f55\uff1a" + source);
         List<Path> paths;
         try (var files = Files.walk(source)) { paths = files.sorted().toList(); }
         long vtps = paths.stream().filter(p -> p.getParent().equals(source.resolve("mods"))
                 && p.getFileName().toString().matches("vh3_translation_patch-[0-9]+\\.[0-9]+\\.[0-9]+\\.jar")).count();
-        if (vtps != 1) throw new IOException("基础内容 mods 必须包含一个正式 VTP 单包");
+        if (vtps != 1) throw new IOException("\u57fa\u7840\u5185\u5bb9 mods \u5fc5\u987b\u5305\u542b\u4e00\u4e2a\u6b63\u5f0f VTP \u5355\u5305");
         Properties hashes = new Properties();
         try (var zip = new ZipOutputStream(Files.newOutputStream(classes.resolve("payload.zip")), StandardCharsets.UTF_8)) {
             for (Path path : paths) {
                 if (path.equals(source)) continue;
                 var attrs = Files.readAttributes(path, java.nio.file.attribute.BasicFileAttributes.class, LinkOption.NOFOLLOW_LINKS);
-                if (attrs.isSymbolicLink() || attrs.isOther()) throw new IOException("基础内容中不允许链接：" + path);
+                if (attrs.isSymbolicLink() || attrs.isOther()) throw new IOException("\u57fa\u7840\u5185\u5bb9\u4e2d\u4e0d\u5141\u8bb8\u94fe\u63a5\uff1a" + path);
                 String name = source.relativize(path).toString().replace('\\', '/');
-                if (name.equals("vaultpatcher/cache") || name.startsWith("vaultpatcher/cache/")) throw new IOException("基础内容中不能打包 VP 缓存");
-                if (name.matches("mods/vh3_translation_patch-transformer-.*\\.jar")) throw new IOException("基础内容残留旧 VTP 双包");
+                if (name.equals("vaultpatcher/cache") || name.startsWith("vaultpatcher/cache/")) throw new IOException("\u57fa\u7840\u5185\u5bb9\u4e2d\u4e0d\u80fd\u6253\u5305 VP \u7f13\u5b58");
+                if (name.matches("mods/vh3_translation_patch-transformer-.*\\.jar")) throw new IOException("\u57fa\u7840\u5185\u5bb9\u6b8b\u7559\u65e7 VTP \u53cc\u5305");
                 if (attrs.isDirectory()) name += "/";
                 ZipEntry entry = new ZipEntry(name); entry.setTime(0); zip.putNextEntry(entry);
                 if (attrs.isRegularFile()) { Files.copy(path, zip); hashes.setProperty(name, sha256(path)); }
@@ -128,7 +128,7 @@ class Build {
             }
         }
         write(hashes, classes.resolve("payload.properties"));
-        System.out.println("内置基础文件：" + hashes.size());
+        System.out.println("\u5185\u7f6e\u57fa\u7840\u6587\u4ef6\uff1a" + hashes.size());
     }
 
     private static void copyTree(Path source, Path target) throws IOException {
@@ -156,10 +156,10 @@ class Build {
     }
     private static String java() { return Path.of(System.getProperty("java.home"), "bin", System.getProperty("os.name").startsWith("Windows") ? "java.exe" : "java").toString(); }
     private static void command(String... command) throws Exception {
-        if (new ProcessBuilder(command).inheritIO().start().waitFor() != 0) throw new IOException("验证失败，序列号未递增。");
+        if (new ProcessBuilder(command).inheritIO().start().waitFor() != 0) throw new IOException("\u9a8c\u8bc1\u5931\u8d25\uff0c\u5e8f\u5217\u53f7\u672a\u9012\u589e\u3002");
     }
     private static void delete(Path directory, Path allowed) throws IOException {
-        if (!directory.toAbsolutePath().normalize().startsWith(allowed.toAbsolutePath().normalize()) || directory.equals(allowed)) throw new IOException("清理目录越界");
+        if (!directory.toAbsolutePath().normalize().startsWith(allowed.toAbsolutePath().normalize()) || directory.equals(allowed)) throw new IOException("\u6e05\u7406\u76ee\u5f55\u8d8a\u754c");
         try (var paths = Files.walk(directory)) { for (Path p : paths.sorted(Comparator.reverseOrder()).toList()) Files.delete(p); }
     }
 }

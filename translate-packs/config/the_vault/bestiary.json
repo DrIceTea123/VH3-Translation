@@ -73,10 +73,10 @@
         ]
       },
       "themes": [
-        "\u6d1e\u7a74",
-        "\u8352\u5730\u6d1e\u7a74",
-        "\u6df1\u677f\u5ca9\u6d1e\u7a74",
-        "\u6676\u7c07\u6d1e\u7a74"
+        "Cave",
+        "Wasteland Caves",
+        "Deepslate Caves",
+        "Geode Caves"
       ],
       "minLevel": 0,
       "drops": [
@@ -93,10 +93,10 @@
         ]
       },
       "themes": [
-        "\u6d1e\u7a74",
-        "\u8352\u5730\u6d1e\u7a74",
-        "\u6df1\u677f\u5ca9\u6d1e\u7a74",
-        "\u6676\u7c07\u6d1e\u7a74"
+        "Cave",
+        "Wasteland Caves",
+        "Deepslate Caves",
+        "Geode Caves"
       ],
       "minLevel": 20,
       "drops": [
@@ -113,10 +113,10 @@
         ]
       },
       "themes": [
-        "\u6d1e\u7a74",
-        "\u8352\u5730\u6d1e\u7a74",
-        "\u6df1\u677f\u5ca9\u6d1e\u7a74",
-        "\u6676\u7c07\u6d1e\u7a74"
+        "Cave",
+        "Wasteland Caves",
+        "Deepslate Caves",
+        "Geode Caves"
       ],
       "minLevel": 50,
       "drops": [
@@ -133,10 +133,10 @@
         ]
       },
       "themes": [
-        "\u6d1e\u7a74",
-        "\u8352\u5730\u6d1e\u7a74",
-        "\u6df1\u677f\u5ca9\u6d1e\u7a74",
-        "\u6676\u7c07\u6d1e\u7a74"
+        "Cave",
+        "Wasteland Caves",
+        "Deepslate Caves",
+        "Geode Caves"
       ],
       "minLevel": 65,
       "drops": [
@@ -153,10 +153,10 @@
         ]
       },
       "themes": [
-        "\u6d1e\u7a74",
-        "\u8352\u5730\u6d1e\u7a74",
-        "\u6df1\u677f\u5ca9\u6d1e\u7a74",
-        "\u6676\u7c07\u6d1e\u7a74"
+        "Cave",
+        "Wasteland Caves",
+        "Deepslate Caves",
+        "Geode Caves"
       ],
       "minLevel": 80,
       "drops": [
@@ -173,10 +173,10 @@
         ]
       },
       "themes": [
-        "\u6d1e\u7a74",
-        "\u8352\u5730\u6d1e\u7a74",
-        "\u6df1\u677f\u5ca9\u6d1e\u7a74",
-        "\u6676\u7c07\u6d1e\u7a74"
+        "Cave",
+        "Wasteland Caves",
+        "Deepslate Caves",
+        "Geode Caves"
       ],
       "minLevel": 90,
       "drops": [
@@ -193,14 +193,14 @@
         ]
       },
       "themes": [
-        "\u6d1e\u7a74",
-        "\u8352\u5730\u6d1e\u7a74",
-        "\u6df1\u677f\u5ca9\u6d1e\u7a74",
-        "\u6676\u7c07\u6d1e\u7a74",
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Cave",
+        "Wasteland Caves",
+        "Deepslate Caves",
+        "Geode Caves",
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 0,
       "drops": [
@@ -217,14 +217,14 @@
         ]
       },
       "themes": [
-        "\u6d1e\u7a74",
-        "\u8352\u5730\u6d1e\u7a74",
-        "\u6df1\u677f\u5ca9\u6d1e\u7a74",
-        "\u6676\u7c07\u6d1e\u7a74",
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Cave",
+        "Wasteland Caves",
+        "Deepslate Caves",
+        "Geode Caves",
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 30,
       "drops": [
@@ -241,14 +241,14 @@
         ]
       },
       "themes": [
-        "\u6d1e\u7a74",
-        "\u8352\u5730\u6d1e\u7a74",
-        "\u6df1\u677f\u5ca9\u6d1e\u7a74",
-        "\u6676\u7c07\u6d1e\u7a74",
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Cave",
+        "Wasteland Caves",
+        "Deepslate Caves",
+        "Geode Caves",
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 50,
       "drops": [
@@ -265,14 +265,14 @@
         ]
       },
       "themes": [
-        "\u6d1e\u7a74",
-        "\u8352\u5730\u6d1e\u7a74",
-        "\u6df1\u677f\u5ca9\u6d1e\u7a74",
-        "\u6676\u7c07\u6d1e\u7a74",
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Cave",
+        "Wasteland Caves",
+        "Deepslate Caves",
+        "Geode Caves",
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 65,
       "drops": [
@@ -289,10 +289,10 @@
         ]
       },
       "themes": [
-        "\u6d1e\u7a74",
-        "\u8352\u5730\u6d1e\u7a74",
-        "\u6df1\u677f\u5ca9\u6d1e\u7a74",
-        "\u6676\u7c07\u6d1e\u7a74"
+        "Cave",
+        "Wasteland Caves",
+        "Deepslate Caves",
+        "Geode Caves"
       ],
       "minLevel": 0,
       "drops": [
@@ -309,10 +309,10 @@
         ]
       },
       "themes": [
-        "\u6d1e\u7a74",
-        "\u8352\u5730\u6d1e\u7a74",
-        "\u6df1\u677f\u5ca9\u6d1e\u7a74",
-        "\u6676\u7c07\u6d1e\u7a74"
+        "Cave",
+        "Wasteland Caves",
+        "Deepslate Caves",
+        "Geode Caves"
       ],
       "minLevel": 0,
       "drops": [
@@ -329,10 +329,10 @@
         ]
       },
       "themes": [
-        "\u6d1e\u7a74",
-        "\u8352\u5730\u6d1e\u7a74",
-        "\u6df1\u677f\u5ca9\u6d1e\u7a74",
-        "\u6676\u7c07\u6d1e\u7a74"
+        "Cave",
+        "Wasteland Caves",
+        "Deepslate Caves",
+        "Geode Caves"
       ],
       "minLevel": 65,
       "drops": [
@@ -349,10 +349,10 @@
         ]
       },
       "themes": [
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 0,
       "drops": [
@@ -369,10 +369,10 @@
         ]
       },
       "themes": [
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 20,
       "drops": [
@@ -389,10 +389,10 @@
         ]
       },
       "themes": [
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 50,
       "drops": [
@@ -409,10 +409,10 @@
         ]
       },
       "themes": [
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 20,
       "drops": [
@@ -429,10 +429,10 @@
         ]
       },
       "themes": [
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 0,
       "drops": [
@@ -449,10 +449,10 @@
         ]
       },
       "themes": [
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 20,
       "drops": [
@@ -469,10 +469,10 @@
         ]
       },
       "themes": [
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 50,
       "drops": [
@@ -489,10 +489,10 @@
         ]
       },
       "themes": [
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 65,
       "drops": [
@@ -509,10 +509,10 @@
         ]
       },
       "themes": [
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 65,
       "drops": [
@@ -529,10 +529,10 @@
         ]
       },
       "themes": [
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 65,
       "drops": [
@@ -549,10 +549,10 @@
         ]
       },
       "themes": [
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 80,
       "drops": [
@@ -569,10 +569,10 @@
         ]
       },
       "themes": [
-        "\u6c99\u6f20",
-        "\u6c99\u8d28\u6d1e\u7a74",
-        "\u6076\u5730",
-        "\u6df1\u5c42\u6076\u5730"
+        "Desert",
+        "Sandy Cave",
+        "Mesa",
+        "Deep Mesa"
       ],
       "minLevel": 90,
       "drops": [
@@ -589,11 +589,11 @@
         ]
       },
       "themes": [
-        "\u751c\u871c\u9886\u57df",
-        "\u59dc\u997c",
-        "\u8282\u65e5",
-        "\u590d\u6d3b\u8282\u5f69\u86cb",
-        "\u590d\u6d3b\u8282\u86cb\u7cd5"
+        "Sweet Domains",
+        "Gingerbread",
+        "Festive",
+        "Easter Egg",
+        "Easter Pastel"
       ],
       "minLevel": 0,
       "drops": [
@@ -610,11 +610,11 @@
         ]
       },
       "themes": [
-        "\u751c\u871c\u9886\u57df",
-        "\u59dc\u997c",
-        "\u8282\u65e5",
-        "\u590d\u6d3b\u8282\u5f69\u86cb",
-        "\u590d\u6d3b\u8282\u86cb\u7cd5"
+        "Sweet Domains",
+        "Gingerbread",
+        "Festive",
+        "Easter Egg",
+        "Easter Pastel"
       ],
       "minLevel": 0,
       "drops": [
@@ -631,11 +631,11 @@
         ]
       },
       "themes": [
-        "\u751c\u871c\u9886\u57df",
-        "\u59dc\u997c",
-        "\u8282\u65e5",
-        "\u590d\u6d3b\u8282\u5f69\u86cb",
-        "\u590d\u6d3b\u8282\u86cb\u7cd5"
+        "Sweet Domains",
+        "Gingerbread",
+        "Festive",
+        "Easter Egg",
+        "Easter Pastel"
       ],
       "minLevel": 0,
       "drops": [
@@ -652,11 +652,11 @@
         ]
       },
       "themes": [
-        "\u751c\u871c\u9886\u57df",
-        "\u59dc\u997c",
-        "\u8282\u65e5",
-        "\u590d\u6d3b\u8282\u5f69\u86cb",
-        "\u590d\u6d3b\u8282\u86cb\u7cd5"
+        "Sweet Domains",
+        "Gingerbread",
+        "Festive",
+        "Easter Egg",
+        "Easter Pastel"
       ],
       "minLevel": 0,
       "drops": [
@@ -673,11 +673,11 @@
         ]
       },
       "themes": [
-        "\u590d\u6d3b\u8282\u5f69\u86cb",
-        "\u590d\u6d3b\u8282\u86cb\u7cd5",
-        "\u7cbe\u7075\u6307\u73af",
-        "\u8611\u83c7",
-        "\u5267\u6bd2"
+        "Easter Egg",
+        "Easter Pastel",
+        "Fairy Ring",
+        "Mushroom",
+        "Poison"
       ],
       "minLevel": 0,
       "drops": [
@@ -694,8 +694,8 @@
         ]
       },
       "themes": [
-        "\u590d\u6d3b\u8282\u5f69\u86cb",
-        "\u590d\u6d3b\u8282\u86cb\u7cd5"
+        "Easter Egg",
+        "Easter Pastel"
       ],
       "minLevel": 0,
       "drops": [
@@ -712,8 +712,8 @@
         ]
       },
       "themes": [
-        "\u59dc\u997c",
-        "\u8282\u65e5"
+        "Gingerbread",
+        "Festive"
       ],
       "minLevel": 0,
       "drops": [
@@ -730,8 +730,8 @@
         ]
       },
       "themes": [
-        "\u59dc\u997c",
-        "\u8282\u65e5"
+        "Gingerbread",
+        "Festive"
       ],
       "minLevel": 0,
       "drops": [
@@ -748,8 +748,8 @@
         ]
       },
       "themes": [
-        "\u59dc\u997c",
-        "\u8282\u65e5"
+        "Gingerbread",
+        "Festive"
       ],
       "minLevel": 0,
       "drops": [
@@ -766,8 +766,8 @@
         ]
       },
       "themes": [
-        "\u7e41\u8302\u6d1e\u7a74",
-        "\u8702\u871c\u6d1e\u7a74"
+        "Lush Cave",
+        "Honey Cave"
       ],
       "minLevel": 0,
       "drops": [
@@ -784,8 +784,8 @@
         ]
       },
       "themes": [
-        "\u7e41\u8302\u6d1e\u7a74",
-        "\u8702\u871c\u6d1e\u7a74"
+        "Lush Cave",
+        "Honey Cave"
       ],
       "minLevel": 0,
       "drops": [
@@ -802,8 +802,8 @@
         ]
       },
       "themes": [
-        "\u7e41\u8302\u6d1e\u7a74",
-        "\u8702\u871c\u6d1e\u7a74"
+        "Lush Cave",
+        "Honey Cave"
       ],
       "minLevel": 20,
       "drops": [
@@ -820,8 +820,8 @@
         ]
       },
       "themes": [
-        "\u7e41\u8302\u6d1e\u7a74",
-        "\u8702\u871c\u6d1e\u7a74"
+        "Lush Cave",
+        "Honey Cave"
       ],
       "minLevel": 50,
       "drops": [
@@ -838,8 +838,8 @@
         ]
       },
       "themes": [
-        "\u7e41\u8302\u6d1e\u7a74",
-        "\u8702\u871c\u6d1e\u7a74"
+        "Lush Cave",
+        "Honey Cave"
       ],
       "minLevel": 65,
       "drops": [
@@ -856,8 +856,8 @@
         ]
       },
       "themes": [
-        "\u7e41\u8302\u6d1e\u7a74",
-        "\u8702\u871c\u6d1e\u7a74"
+        "Lush Cave",
+        "Honey Cave"
       ],
       "minLevel": 80,
       "drops": [
@@ -874,8 +874,8 @@
         ]
       },
       "themes": [
-        "\u7e41\u8302\u6d1e\u7a74",
-        "\u8702\u871c\u6d1e\u7a74"
+        "Lush Cave",
+        "Honey Cave"
       ],
       "minLevel": 90,
       "drops": [
@@ -892,8 +892,8 @@
         ]
       },
       "themes": [
-        "\u7e41\u8302\u6d1e\u7a74",
-        "\u8702\u871c\u6d1e\u7a74"
+        "Lush Cave",
+        "Honey Cave"
       ],
       "minLevel": 20,
       "drops": [
@@ -910,11 +910,11 @@
         ]
       },
       "themes": [
-        "\u7cbe\u7075\u6307\u73af",
-        "\u8611\u83c7",
-        "\u5267\u6bd2",
-        "\u7e41\u8302\u6d1e\u7a74",
-        "\u8702\u871c\u6d1e\u7a74"
+        "Fairy Ring",
+        "Mushroom",
+        "Poison",
+        "Lush Cave",
+        "Honey Cave"
       ],
       "minLevel": 0,
       "drops": [
@@ -931,9 +931,9 @@
         ]
       },
       "themes": [
-        "\u7cbe\u7075\u6307\u73af",
-        "\u8611\u83c7",
-        "\u5267\u6bd2"
+        "Fairy Ring",
+        "Mushroom",
+        "Poison"
       ],
       "minLevel": 0,
       "drops": [
@@ -950,9 +950,9 @@
         ]
       },
       "themes": [
-        "\u7cbe\u7075\u6307\u73af",
-        "\u8611\u83c7",
-        "\u5267\u6bd2"
+        "Fairy Ring",
+        "Mushroom",
+        "Poison"
       ],
       "minLevel": 0,
       "drops": [
@@ -969,9 +969,9 @@
         ]
       },
       "themes": [
-        "\u7cbe\u7075\u6307\u73af",
-        "\u8611\u83c7",
-        "\u5267\u6bd2"
+        "Fairy Ring",
+        "Mushroom",
+        "Poison"
       ],
       "minLevel": 20,
       "drops": [
@@ -988,9 +988,9 @@
         ]
       },
       "themes": [
-        "\u7cbe\u7075\u6307\u73af",
-        "\u8611\u83c7",
-        "\u5267\u6bd2"
+        "Fairy Ring",
+        "Mushroom",
+        "Poison"
       ],
       "minLevel": 50,
       "drops": [
@@ -1007,9 +1007,9 @@
         ]
       },
       "themes": [
-        "\u7cbe\u7075\u6307\u73af",
-        "\u8611\u83c7",
-        "\u5267\u6bd2"
+        "Fairy Ring",
+        "Mushroom",
+        "Poison"
       ],
       "minLevel": 65,
       "drops": [
@@ -1026,9 +1026,9 @@
         ]
       },
       "themes": [
-        "\u7cbe\u7075\u6307\u73af",
-        "\u8611\u83c7",
-        "\u5267\u6bd2"
+        "Fairy Ring",
+        "Mushroom",
+        "Poison"
       ],
       "minLevel": 80,
       "drops": [
@@ -1045,9 +1045,9 @@
         ]
       },
       "themes": [
-        "\u7cbe\u7075\u6307\u73af",
-        "\u8611\u83c7",
-        "\u5267\u6bd2"
+        "Fairy Ring",
+        "Mushroom",
+        "Poison"
       ],
       "minLevel": 90,
       "drops": [
@@ -1064,11 +1064,11 @@
         ]
       },
       "themes": [
-        "\u7cbe\u7075\u6307\u73af",
-        "\u8611\u83c7",
-        "\u5267\u6bd2",
-        "\u7e41\u8302\u6d1e\u7a74",
-        "\u8702\u871c\u6d1e\u7a74"
+        "Fairy Ring",
+        "Mushroom",
+        "Poison",
+        "Lush Cave",
+        "Honey Cave"
       ],
       "minLevel": 65,
       "drops": [
@@ -1085,9 +1085,9 @@
         ]
       },
       "themes": [
-        "\u7cbe\u7075\u6307\u73af",
-        "\u8611\u83c7",
-        "\u5267\u6bd2"
+        "Fairy Ring",
+        "Mushroom",
+        "Poison"
       ],
       "minLevel": 20,
       "drops": [
@@ -1104,9 +1104,9 @@
         ]
       },
       "themes": [
-        "\u7cbe\u7075\u6307\u73af",
-        "\u8611\u83c7",
-        "\u5267\u6bd2"
+        "Fairy Ring",
+        "Mushroom",
+        "Poison"
       ],
       "minLevel": 20,
       "drops": [
@@ -1123,9 +1123,9 @@
         ]
       },
       "themes": [
-        "\u672b\u5730\u865a\u7a7a",
-        "\u5de5\u5382\u865a\u7a7a",
-        "\u865a\u7a7a"
+        "End Void",
+        "Factory Void",
+        "Void"
       ],
       "minLevel": 0,
       "drops": [
@@ -1142,9 +1142,9 @@
         ]
       },
       "themes": [
-        "\u672b\u5730\u865a\u7a7a",
-        "\u5de5\u5382\u865a\u7a7a",
-        "\u865a\u7a7a"
+        "End Void",
+        "Factory Void",
+        "Void"
       ],
       "minLevel": 0,
       "drops": [
@@ -1161,9 +1161,9 @@
         ]
       },
       "themes": [
-        "\u672b\u5730\u865a\u7a7a",
-        "\u5de5\u5382\u865a\u7a7a",
-        "\u865a\u7a7a"
+        "End Void",
+        "Factory Void",
+        "Void"
       ],
       "minLevel": 0,
       "drops": [
@@ -1180,9 +1180,9 @@
         ]
       },
       "themes": [
-        "\u672b\u5730\u865a\u7a7a",
-        "\u5de5\u5382\u865a\u7a7a",
-        "\u865a\u7a7a"
+        "End Void",
+        "Factory Void",
+        "Void"
       ],
       "minLevel": 0,
       "drops": [
@@ -1199,9 +1199,9 @@
         ]
       },
       "themes": [
-        "\u672b\u5730\u865a\u7a7a",
-        "\u5de5\u5382\u865a\u7a7a",
-        "\u865a\u7a7a"
+        "End Void",
+        "Factory Void",
+        "Void"
       ],
       "minLevel": 0,
       "drops": [
@@ -1218,9 +1218,9 @@
         ]
       },
       "themes": [
-        "\u672b\u5730\u865a\u7a7a",
-        "\u5de5\u5382\u865a\u7a7a",
-        "\u865a\u7a7a"
+        "End Void",
+        "Factory Void",
+        "Void"
       ],
       "minLevel": 0,
       "drops": [
@@ -1237,9 +1237,9 @@
         ]
       },
       "themes": [
-        "\u672b\u5730\u865a\u7a7a",
-        "\u5de5\u5382\u865a\u7a7a",
-        "\u865a\u7a7a"
+        "End Void",
+        "Factory Void",
+        "Void"
       ],
       "minLevel": 20,
       "drops": [
@@ -1256,9 +1256,9 @@
         ]
       },
       "themes": [
-        "\u672b\u5730\u865a\u7a7a",
-        "\u5de5\u5382\u865a\u7a7a",
-        "\u865a\u7a7a"
+        "End Void",
+        "Factory Void",
+        "Void"
       ],
       "minLevel": 20,
       "drops": [
@@ -1275,8 +1275,8 @@
         ]
       },
       "themes": [
-        "\u51b0\u96ea",
-        "\u51b0\u96ea\u6d1e\u7a74"
+        "Ice",
+        "Ice Cave"
       ],
       "minLevel": 0,
       "drops": [
@@ -1293,8 +1293,8 @@
         ]
       },
       "themes": [
-        "\u51b0\u96ea",
-        "\u51b0\u96ea\u6d1e\u7a74"
+        "Ice",
+        "Ice Cave"
       ],
       "minLevel": 0,
       "drops": [
@@ -1311,8 +1311,8 @@
         ]
       },
       "themes": [
-        "\u51b0\u96ea",
-        "\u51b0\u96ea\u6d1e\u7a74"
+        "Ice",
+        "Ice Cave"
       ],
       "minLevel": 20,
       "drops": [
@@ -1329,8 +1329,8 @@
         ]
       },
       "themes": [
-        "\u51b0\u96ea",
-        "\u51b0\u96ea\u6d1e\u7a74"
+        "Ice",
+        "Ice Cave"
       ],
       "minLevel": 20,
       "drops": [
@@ -1347,8 +1347,8 @@
         ]
       },
       "themes": [
-        "\u51b0\u96ea",
-        "\u51b0\u96ea\u6d1e\u7a74"
+        "Ice",
+        "Ice Cave"
       ],
       "minLevel": 50,
       "drops": [
@@ -1365,8 +1365,8 @@
         ]
       },
       "themes": [
-        "\u51b0\u96ea",
-        "\u51b0\u96ea\u6d1e\u7a74"
+        "Ice",
+        "Ice Cave"
       ],
       "minLevel": 65,
       "drops": [
@@ -1383,8 +1383,8 @@
         ]
       },
       "themes": [
-        "\u51b0\u96ea",
-        "\u51b0\u96ea\u6d1e\u7a74"
+        "Ice",
+        "Ice Cave"
       ],
       "minLevel": 50,
       "drops": [
@@ -1401,8 +1401,8 @@
         ]
       },
       "themes": [
-        "\u51b0\u96ea",
-        "\u51b0\u96ea\u6d1e\u7a74"
+        "Ice",
+        "Ice Cave"
       ],
       "minLevel": 65,
       "drops": [
@@ -1419,8 +1419,8 @@
         ]
       },
       "themes": [
-        "\u51b0\u96ea",
-        "\u51b0\u96ea\u6d1e\u7a74"
+        "Ice",
+        "Ice Cave"
       ],
       "minLevel": 65,
       "drops": [
@@ -1437,8 +1437,8 @@
         ]
       },
       "themes": [
-        "\u51b0\u96ea",
-        "\u51b0\u96ea\u6d1e\u7a74"
+        "Ice",
+        "Ice Cave"
       ],
       "minLevel": 0,
       "drops": [
@@ -1455,8 +1455,8 @@
         ]
       },
       "themes": [
-        "\u51b0\u96ea",
-        "\u51b0\u96ea\u6d1e\u7a74"
+        "Ice",
+        "Ice Cave"
       ],
       "minLevel": 20,
       "drops": [
@@ -1473,8 +1473,8 @@
         ]
       },
       "themes": [
-        "\u51b0\u96ea",
-        "\u51b0\u96ea\u6d1e\u7a74"
+        "Ice",
+        "Ice Cave"
       ],
       "minLevel": 50,
       "drops": [
@@ -1491,8 +1491,8 @@
         ]
       },
       "themes": [
-        "\u51b0\u96ea",
-        "\u51b0\u96ea\u6d1e\u7a74"
+        "Ice",
+        "Ice Cave"
       ],
       "minLevel": 65,
       "drops": [
@@ -1509,8 +1509,8 @@
         ]
       },
       "themes": [
-        "\u51b0\u96ea",
-        "\u51b0\u96ea\u6d1e\u7a74"
+        "Ice",
+        "Ice Cave"
       ],
       "minLevel": 80,
       "drops": [
@@ -1527,8 +1527,8 @@
         ]
       },
       "themes": [
-        "\u51b0\u96ea",
-        "\u51b0\u96ea\u6d1e\u7a74"
+        "Ice",
+        "Ice Cave"
       ],
       "minLevel": 90,
       "drops": [
@@ -1545,10 +1545,10 @@
         ]
       },
       "themes": [
-        "\u7eef\u7ea2\u4e0b\u754c",
-        "\u7075\u9b42\u4e0b\u754c",
-        "\u8be1\u5f02\u4e0b\u754c",
-        "\u6697\u9ed1\u4e0b\u754c"
+        "Crimson Nether",
+        "Soul Nether",
+        "Warped Nether",
+        "Dark Nether"
       ],
       "minLevel": 0,
       "drops": [
@@ -1565,10 +1565,10 @@
         ]
       },
       "themes": [
-        "\u7eef\u7ea2\u4e0b\u754c",
-        "\u7075\u9b42\u4e0b\u754c",
-        "\u8be1\u5f02\u4e0b\u754c",
-        "\u6697\u9ed1\u4e0b\u754c"
+        "Crimson Nether",
+        "Soul Nether",
+        "Warped Nether",
+        "Dark Nether"
       ],
       "minLevel": 40,
       "drops": [
@@ -1585,10 +1585,10 @@
         ]
       },
       "themes": [
-        "\u7eef\u7ea2\u4e0b\u754c",
-        "\u7075\u9b42\u4e0b\u754c",
-        "\u8be1\u5f02\u4e0b\u754c",
-        "\u6697\u9ed1\u4e0b\u754c"
+        "Crimson Nether",
+        "Soul Nether",
+        "Warped Nether",
+        "Dark Nether"
       ],
       "minLevel": 65,
       "drops": [
@@ -1605,7 +1605,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 65,
       "drops": [
@@ -1622,7 +1622,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 0,
       "drops": [
@@ -1639,7 +1639,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 20,
       "drops": [
@@ -1656,7 +1656,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 50,
       "drops": [
@@ -1673,7 +1673,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 30,
       "drops": [
@@ -1690,7 +1690,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 65,
       "drops": [
@@ -1707,10 +1707,10 @@
         ]
       },
       "themes": [
-        "\u7eef\u7ea2\u4e0b\u754c",
-        "\u7075\u9b42\u4e0b\u754c",
-        "\u8be1\u5f02\u4e0b\u754c",
-        "\u6697\u9ed1\u4e0b\u754c"
+        "Crimson Nether",
+        "Soul Nether",
+        "Warped Nether",
+        "Dark Nether"
       ],
       "minLevel": 0,
       "drops": [
@@ -1727,10 +1727,10 @@
         ]
       },
       "themes": [
-        "\u7eef\u7ea2\u4e0b\u754c",
-        "\u7075\u9b42\u4e0b\u754c",
-        "\u8be1\u5f02\u4e0b\u754c",
-        "\u6697\u9ed1\u4e0b\u754c"
+        "Crimson Nether",
+        "Soul Nether",
+        "Warped Nether",
+        "Dark Nether"
       ],
       "minLevel": 20,
       "drops": [
@@ -1747,10 +1747,10 @@
         ]
       },
       "themes": [
-        "\u7eef\u7ea2\u4e0b\u754c",
-        "\u7075\u9b42\u4e0b\u754c",
-        "\u8be1\u5f02\u4e0b\u754c",
-        "\u6697\u9ed1\u4e0b\u754c"
+        "Crimson Nether",
+        "Soul Nether",
+        "Warped Nether",
+        "Dark Nether"
       ],
       "minLevel": 0,
       "drops": [
@@ -1767,10 +1767,10 @@
         ]
       },
       "themes": [
-        "\u7eef\u7ea2\u4e0b\u754c",
-        "\u7075\u9b42\u4e0b\u754c",
-        "\u8be1\u5f02\u4e0b\u754c",
-        "\u6697\u9ed1\u4e0b\u754c"
+        "Crimson Nether",
+        "Soul Nether",
+        "Warped Nether",
+        "Dark Nether"
       ],
       "minLevel": 30,
       "drops": [
@@ -1787,10 +1787,10 @@
         ]
       },
       "themes": [
-        "\u7eef\u7ea2\u4e0b\u754c",
-        "\u7075\u9b42\u4e0b\u754c",
-        "\u8be1\u5f02\u4e0b\u754c",
-        "\u6697\u9ed1\u4e0b\u754c"
+        "Crimson Nether",
+        "Soul Nether",
+        "Warped Nether",
+        "Dark Nether"
       ],
       "minLevel": 40,
       "drops": [
@@ -1807,10 +1807,10 @@
         ]
       },
       "themes": [
-        "\u7eef\u7ea2\u4e0b\u754c",
-        "\u7075\u9b42\u4e0b\u754c",
-        "\u8be1\u5f02\u4e0b\u754c",
-        "\u6697\u9ed1\u4e0b\u754c"
+        "Crimson Nether",
+        "Soul Nether",
+        "Warped Nether",
+        "Dark Nether"
       ],
       "minLevel": 50,
       "drops": [
@@ -1827,10 +1827,10 @@
         ]
       },
       "themes": [
-        "\u7eef\u7ea2\u4e0b\u754c",
-        "\u7075\u9b42\u4e0b\u754c",
-        "\u8be1\u5f02\u4e0b\u754c",
-        "\u6697\u9ed1\u4e0b\u754c"
+        "Crimson Nether",
+        "Soul Nether",
+        "Warped Nether",
+        "Dark Nether"
       ],
       "minLevel": 70,
       "drops": [
@@ -1847,10 +1847,10 @@
         ]
       },
       "themes": [
-        "\u7eef\u7ea2\u4e0b\u754c",
-        "\u7075\u9b42\u4e0b\u754c",
-        "\u8be1\u5f02\u4e0b\u754c",
-        "\u6697\u9ed1\u4e0b\u754c"
+        "Crimson Nether",
+        "Soul Nether",
+        "Warped Nether",
+        "Dark Nether"
       ],
       "minLevel": 80,
       "drops": [
@@ -1867,10 +1867,10 @@
         ]
       },
       "themes": [
-        "\u7eef\u7ea2\u4e0b\u754c",
-        "\u7075\u9b42\u4e0b\u754c",
-        "\u8be1\u5f02\u4e0b\u754c",
-        "\u6697\u9ed1\u4e0b\u754c"
+        "Crimson Nether",
+        "Soul Nether",
+        "Warped Nether",
+        "Dark Nether"
       ],
       "minLevel": 65,
       "drops": [
@@ -1887,11 +1887,11 @@
         ]
       },
       "themes": [
-        "\u7eff\u6d32",
-        "\u7f20\u9b42",
-        "\u6df9\u6ca1",
-        "\u6c89\u8239",
-        "\u6d77\u5e8a"
+        "Oasis",
+        "Haunted",
+        "Flooded",
+        "Shipwreck",
+        "Seafloor"
       ],
       "minLevel": 0,
       "drops": [
@@ -1908,11 +1908,11 @@
         ]
       },
       "themes": [
-        "\u7eff\u6d32",
-        "\u7f20\u9b42",
-        "\u6df9\u6ca1",
-        "\u6c89\u8239",
-        "\u6d77\u5e8a"
+        "Oasis",
+        "Haunted",
+        "Flooded",
+        "Shipwreck",
+        "Seafloor"
       ],
       "minLevel": 50,
       "drops": [
@@ -1929,11 +1929,11 @@
         ]
       },
       "themes": [
-        "\u7eff\u6d32",
-        "\u7f20\u9b42",
-        "\u6df9\u6ca1",
-        "\u6c89\u8239",
-        "\u6d77\u5e8a"
+        "Oasis",
+        "Haunted",
+        "Flooded",
+        "Shipwreck",
+        "Seafloor"
       ],
       "minLevel": 65,
       "drops": [
@@ -1950,11 +1950,11 @@
         ]
       },
       "themes": [
-        "\u7eff\u6d32",
-        "\u7f20\u9b42",
-        "\u6df9\u6ca1",
-        "\u6c89\u8239",
-        "\u6d77\u5e8a"
+        "Oasis",
+        "Haunted",
+        "Flooded",
+        "Shipwreck",
+        "Seafloor"
       ],
       "minLevel": 20,
       "drops": [
@@ -1971,11 +1971,11 @@
         ]
       },
       "themes": [
-        "\u7eff\u6d32",
-        "\u7f20\u9b42",
-        "\u6df9\u6ca1",
-        "\u6c89\u8239",
-        "\u6d77\u5e8a"
+        "Oasis",
+        "Haunted",
+        "Flooded",
+        "Shipwreck",
+        "Seafloor"
       ],
       "minLevel": 0,
       "drops": [
@@ -1992,11 +1992,11 @@
         ]
       },
       "themes": [
-        "\u7eff\u6d32",
-        "\u7f20\u9b42",
-        "\u6df9\u6ca1",
-        "\u6c89\u8239",
-        "\u6d77\u5e8a"
+        "Oasis",
+        "Haunted",
+        "Flooded",
+        "Shipwreck",
+        "Seafloor"
       ],
       "minLevel": 20,
       "drops": [
@@ -2013,11 +2013,11 @@
         ]
       },
       "themes": [
-        "\u7eff\u6d32",
-        "\u7f20\u9b42",
-        "\u6df9\u6ca1",
-        "\u6c89\u8239",
-        "\u6d77\u5e8a"
+        "Oasis",
+        "Haunted",
+        "Flooded",
+        "Shipwreck",
+        "Seafloor"
       ],
       "minLevel": 50,
       "drops": [
@@ -2034,11 +2034,11 @@
         ]
       },
       "themes": [
-        "\u7eff\u6d32",
-        "\u7f20\u9b42",
-        "\u6df9\u6ca1",
-        "\u6c89\u8239",
-        "\u6d77\u5e8a"
+        "Oasis",
+        "Haunted",
+        "Flooded",
+        "Shipwreck",
+        "Seafloor"
       ],
       "minLevel": 65,
       "drops": [
@@ -2055,11 +2055,11 @@
         ]
       },
       "themes": [
-        "\u7eff\u6d32",
-        "\u7f20\u9b42",
-        "\u6df9\u6ca1",
-        "\u6c89\u8239",
-        "\u6d77\u5e8a"
+        "Oasis",
+        "Haunted",
+        "Flooded",
+        "Shipwreck",
+        "Seafloor"
       ],
       "minLevel": 80,
       "drops": [
@@ -2076,11 +2076,11 @@
         ]
       },
       "themes": [
-        "\u7eff\u6d32",
-        "\u7f20\u9b42",
-        "\u6df9\u6ca1",
-        "\u6c89\u8239",
-        "\u6d77\u5e8a"
+        "Oasis",
+        "Haunted",
+        "Flooded",
+        "Shipwreck",
+        "Seafloor"
       ],
       "minLevel": 90,
       "drops": [
@@ -2097,11 +2097,11 @@
         ]
       },
       "themes": [
-        "\u7eff\u6d32",
-        "\u7f20\u9b42",
-        "\u6df9\u6ca1",
-        "\u6c89\u8239",
-        "\u6d77\u5e8a"
+        "Oasis",
+        "Haunted",
+        "Flooded",
+        "Shipwreck",
+        "Seafloor"
       ],
       "minLevel": 0,
       "drops": [
@@ -2118,11 +2118,11 @@
         ]
       },
       "themes": [
-        "\u7eff\u6d32",
-        "\u7f20\u9b42",
-        "\u6df9\u6ca1",
-        "\u6c89\u8239",
-        "\u6d77\u5e8a"
+        "Oasis",
+        "Haunted",
+        "Flooded",
+        "Shipwreck",
+        "Seafloor"
       ],
       "minLevel": 65,
       "drops": [
@@ -2139,11 +2139,11 @@
         ]
       },
       "themes": [
-        "\u7eff\u6d32",
-        "\u7f20\u9b42",
-        "\u6df9\u6ca1",
-        "\u6c89\u8239",
-        "\u6d77\u5e8a"
+        "Oasis",
+        "Haunted",
+        "Flooded",
+        "Shipwreck",
+        "Seafloor"
       ],
       "minLevel": 65,
       "drops": [
@@ -2160,7 +2160,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 0,
       "drops": [
@@ -2177,7 +2177,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 0,
       "drops": [
@@ -2194,7 +2194,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 0,
       "drops": [
@@ -2211,7 +2211,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 0,
       "drops": [
@@ -2228,7 +2228,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 0,
       "drops": [
@@ -2245,7 +2245,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 0,
       "drops": [
@@ -2262,7 +2262,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 0,
       "drops": [
@@ -2279,7 +2279,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 0,
       "drops": [
@@ -2296,7 +2296,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 0,
       "drops": [
@@ -2313,7 +2313,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 0,
       "drops": [
@@ -2330,7 +2330,7 @@
         ]
       },
       "themes": [
-        "\u4efb\u610f"
+        "Any"
       ],
       "minLevel": 0,
       "drops": [
@@ -2347,7 +2347,7 @@
         ]
       },
       "themes": [
-        "\u7e41\u8302\u6d1e\u7a74"
+        "Lush Cave"
       ],
       "minLevel": 0,
       "drops": [
